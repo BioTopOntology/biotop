@@ -3,12 +3,12 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
-    <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
+    <!ENTITY bfol "http://www.ifomis.org/bfo/1.1/light#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
-    <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
+    <!ENTITY snapl "http://www.ifomis.org/bfo/1.1/light/snap#" >
+    <!ENTITY spanl "http://www.ifomis.org/bfo/1.1/light/span#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rol "http://www.ifomis.org/obo/ro/1.0/light#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -24,15 +24,15 @@
      xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
-     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:snapl="http://www.ifomis.org/bfo/1.1/light/snap#"
+     xmlns:bfol="http://www.ifomis.org/bfo/1.1/light#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rol="http://www.ifomis.org/obo/ro/1.0/light#"
-     xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
+     xmlns:spanl="http://www.ifomis.org/bfo/1.1/light/span#">
     <owl:Ontology rdf:about="">
         <owl:versionInfo rdf:datatype="&xsd;string">1.0</owl:versionInfo>
         <dc:title rdf:datatype="&xsd;string">BioTop</dc:title>
@@ -58,7 +58,7 @@
             >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot;</dc:source>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/protege"/>
-        <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
+        <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1/light"/>
         <owl:imports rdf:resource="http://www.ifomis.org/obo/ro/1.0/light"/>
     </owl:Ontology>
     <owl:AllDifferent>
@@ -75,9 +75,9 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&rol;hasAgent"/>
-                        <owl:someValuesFrom rdf:resource="&snap;IndependentContinuant"/>
+                        <owl:someValuesFrom rdf:resource="&snapl;IndependentContinuant"/>
                     </owl:Restriction>
-                    <owl:Class rdf:about="&span;Process"/>
+                    <owl:Class rdf:about="&spanl;Process"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -242,7 +242,7 @@
             >Definition: Hydrocarbons which contain aromatic rings (benzene, naphtalin, toluene)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="ArtefactRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role an entity plays when it has been artificially produced. [steschu 20071010]</rdfs:comment>
     </owl:Class>
@@ -290,7 +290,6 @@
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cluster of bacteria , usually cultured from a single cell.</rdfs:comment>
     </owl:Class>
-    <rdf:Description rdf:about="&bfo;Entity"/>
     <owl:Class rdf:ID="BiologicalColony">
         <rdfs:subClassOf rdf:resource="#PluralityOfOrganisms"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -322,7 +321,7 @@
                             </owl:Class>
                         </owl:someValuesFrom>
                     </owl:Restriction>
-                    <owl:Class rdf:about="&span;Process"/>
+                    <owl:Class rdf:about="&spanl;Process"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -752,7 +751,7 @@
         <rdfs:subClassOf rdf:resource="#PolyatomicEntity"/>
         <rdfs:subClassOf>
             <owl:Class>
-                <owl:complementOf rdf:resource="&snap;ObjectAggregate"/>
+                <owl:complementOf rdf:resource="&snapl;ObjectAggregate"/>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en"
@@ -765,18 +764,18 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class rdf:about="#HomogenousCohesiveCollection"/>
-                    <owl:Class rdf:about="&snap;ObjectAggregate"/>
+                    <owl:Class rdf:about="&snapl;ObjectAggregate"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:label xml:lang="en"
             >collective object</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >CollectiveObjects are pluralities of uniform objects, regardless whether their &quot;grains&quot; are connected or not</rdfs:comment>
     </owl:Class>
     <owl:ObjectProperty rdf:ID="componentOf">
-        <rdfs:domain rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:domain rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:range rdf:resource="#ObjectOrFiatObjectPart"/>
         <rdfs:subPropertyOf rdf:resource="&rol;properPartOf"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -865,13 +864,13 @@
         <rdfs:label xml:lang="en">deoxyribose</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="DiagnosticRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >1. The role of a continuant participating in a process that provides insight into the functioning of a biological system.
 2 The role of a process that provides insight into the functioning of a biological system.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="DigitalEntity">
-        <rdfs:subClassOf rdf:resource="&snap;GenericallyDependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&snapl;GenericallyDependentContinuant"/>
         <rdfs:comment rdf:datatype="&xsd;string">(OBI 306)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="DNA">
@@ -980,7 +979,7 @@
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
-                    <owl:Class rdf:about="&snap;Object"/>
+                    <owl:Class rdf:about="&snapl;Object"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1168,12 +1167,12 @@
         </owl:equivalentClass>
     </owl:Class>
     <owl:Class rdf:ID="FindingRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role that may inhere in any biological structure, state, or process that is of reportable interest in a diagnostic process.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="FoodRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role of an entity components of which are used for supplying energy to a biological system</rdfs:comment>
     </owl:Class>
@@ -1214,14 +1213,14 @@
         <rdfs:label xml:lang="en">gene region</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="GeographicArea">
-        <rdfs:subClassOf rdf:resource="&snap;Site"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Site"/>
     </owl:Class>
     <owl:Class rdf:ID="Glucose">
         <rdfs:subClassOf rdf:resource="#Hexose"/>
         <rdfs:label xml:lang="en">glucose</rdfs:label>
     </owl:Class>
     <owl:ObjectProperty rdf:ID="grainOf">
-        <rdfs:domain rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:domain rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:range rdf:resource="#CollectiveObject"/>
         <rdfs:subPropertyOf rdf:resource="&rol;properPartOf"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -1241,20 +1240,20 @@
     </owl:Class>
     <owl:ObjectProperty rdf:ID="hasComponent">
         <rdfs:domain rdf:resource="#ObjectOrFiatObjectPart"/>
-        <rdfs:range rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:range rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:subPropertyOf rdf:resource="&rol;hasProperPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of componentOf.</rdfs:comment>
     </owl:ObjectProperty>
     <owl:ObjectProperty rdf:ID="hasGrain">
         <rdfs:domain rdf:resource="#CollectiveObject"/>
-        <rdfs:range rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:range rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:subPropertyOf rdf:resource="&rol;hasProperPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of grainOf.</rdfs:comment>
     </owl:ObjectProperty>
     <owl:ObjectProperty rdf:ID="hasInherence">
-        <rdfs:domain rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:domain rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Inverse relation of inheresIn. Relates an independent continuant to a dependent one (e.g. quality, state, function, or disposition)</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -1333,7 +1332,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGrain"/>
-                <owl:someValuesFrom rdf:resource="&snap;IndependentContinuant"/>
+                <owl:someValuesFrom rdf:resource="&snapl;IndependentContinuant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="#CohesiveCollection"/>
@@ -1441,14 +1440,14 @@
             >Comment: (QCR) hasComponent exactly 1 OxygenAtom and hasComponent exactly 1 HydrogenAtom and hasComponent only (OxygenAtom or HydrogenAtom)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="ImmaterialAnatomicalEntity">
-        <rdfs:subClassOf rdf:resource="&snap;Site"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Site"/>
         <rdfs:label xml:lang="en"
             >immaterial anatomical entity</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Superclass of  FMA &apos;immaterial anatomical entity&apos;. It subsumes canonical and non-canonical anatomical entities and is species independent.  It has spatial dimension(s) but no mass.</rdfs:comment>
     </owl:Class>
     <owl:ObjectProperty rdf:ID="inheresIn">
-        <rdfs:range rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:range rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inheresIn relates a dependent continuant (a state, quality, property, function, disposition) with the independent continuant it depends on.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -1589,7 +1588,7 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
                         <owl:onProperty rdf:resource="#inheresIn"/>
                         <owl:someValuesFrom rdf:resource="#MolecularEntity"/>
                     </owl:Restriction>
-                    <owl:Class rdf:about="&snap;Function"/>
+                    <owl:Class rdf:about="&snapl;Function"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1752,7 +1751,7 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
             >The condition of a physical entity considered ill-formed. [steschu 20071010]</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="NonRealizableInformationEntity">
-        <rdfs:subClassOf rdf:resource="&snap;GenericallyDependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&snapl;GenericallyDependentContinuant"/>
         <rdfs:comment rdf:datatype="&xsd;string">(OBI 295)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="NonSteroidLipid">
@@ -1819,15 +1818,15 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="&snap;FiatObjectPart"/>
-                    <owl:Class rdf:about="&snap;Object"/>
+                    <owl:Class rdf:about="&snapl;FiatObjectPart"/>
+                    <owl:Class rdf:about="&snapl;Object"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
-        <owl:disjointWith rdf:resource="&snap;ObjectBoundary"/>
-        <owl:disjointWith rdf:resource="&snap;Site"/>
-        <owl:disjointWith rdf:resource="&snap;ObjectAggregate"/>
+        <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
+        <owl:disjointWith rdf:resource="&snapl;ObjectBoundary"/>
+        <owl:disjointWith rdf:resource="&snapl;Site"/>
+        <owl:disjointWith rdf:resource="&snapl;ObjectAggregate"/>
         <rdfs:label xml:lang="en"
             >object or fiat object part</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -1835,7 +1834,7 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
 Of course, there are entities that can be classified beyond any doubt as &quot;snap:objects&quot;, such as free-floating cells, molecules in a gas, or independent organisms.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="OccupationalRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
     </owl:Class>
     <owl:Class rdf:ID="OligoOrPolymer">
         <owl:equivalentClass>
@@ -2067,7 +2066,7 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
             >Process occuring on organismal or cellular level. Has  subclasses of MolecularEntity as participants.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Plan">
-        <rdfs:subClassOf rdf:resource="&snap;GenericallyDependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&snapl;GenericallyDependentContinuant"/>
         <rdfs:comment rdf:datatype="&xsd;string">(OBI 344)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Plant">
@@ -2109,7 +2108,7 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
 Only one SpeciesQuality can inhere a population</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="PoisonRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role of an amount of matter to be toxic to (parts of) biological organisms</rdfs:comment>
     </owl:Class>
@@ -2135,7 +2134,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="&snap;IndependentContinuant"/>
+                <owl:someValuesFrom rdf:resource="&snapl;IndependentContinuant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="#PolyatomicEntity"/>
@@ -2180,7 +2179,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
+        <rdfs:subClassOf rdf:resource="&snapl;ObjectAggregate"/>
         <rdfs:label xml:lang="en">portion of gas</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Non-connected  Molecules in gaseous state</rdfs:comment>
@@ -2350,15 +2349,15 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#inheresIn"/>
-                        <owl:someValuesFrom rdf:resource="&snap;Continuant"/>
+                        <owl:someValuesFrom rdf:resource="&snapl;Continuant"/>
                     </owl:Restriction>
-                    <owl:Class rdf:about="&snap;Quality"/>
+                    <owl:Class rdf:about="&snapl;Quality"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
     <owl:Class rdf:ID="ResearchRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
     </owl:Class>
     <owl:Class rdf:ID="Ribonucleotide">
         <owl:equivalentClass>
@@ -2460,6 +2459,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
     <rdf:Description rdf:about="&rol;transformedInto">
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </rdf:Description>
     <owl:Class rdf:ID="rRNAMolecule">
         <rdfs:subClassOf rdf:resource="#EntireRNAMolecule"/>
@@ -2468,7 +2468,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <rdfs:label xml:lang="en">r RNA molecule</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="SignallingRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
@@ -2479,53 +2479,23 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
             >The role of a molecule that participates in a biological signalling process. These molecules are normally known as hormones.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="SignOrSymptomRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A role that can inhere in states, processes, or even in certain independent continuants (e.g. in a deformity). This a role is ascribed to an entity in a diagnostic process where the symptom is suspected to indicate a second state or process)</rdfs:comment>
     </owl:Class>
-    <rdf:Description rdf:about="&snap;Continuant"/>
-    <rdf:Description rdf:about="&snap;DependentContinuant"/>
-    <rdf:Description rdf:about="&snap;Disposition"/>
-    <rdf:Description rdf:about="&snap;FiatObjectPart"/>
-    <owl:Class rdf:about="&snap;Function"/>
-    <rdf:Description rdf:about="&snap;GenericallyDependentContinuant"/>
-    <rdf:Description rdf:about="&snap;IndependentContinuant"/>
-    <owl:Class rdf:about="&snap;Object"/>
-    <owl:Class rdf:about="&snap;ObjectAggregate">
+    <owl:Class rdf:about="&snapl;FiatObjectPart"/>
+    <owl:Class rdf:about="&snapl;Function"/>
+    <owl:Class rdf:about="&snapl;Object"/>
+    <owl:Class rdf:about="&snapl;ObjectAggregate">
         <owl:disjointWith rdf:resource="#ObjectOrFiatObjectPart"/>
         <rdfs:label rdf:datatype="&xsd;string"
             >object aggregate</rdfs:label>
     </owl:Class>
-    <rdf:Description rdf:about="&snap;ObjectBoundary">
+    <rdf:Description rdf:about="&snapl;ObjectBoundary">
         <rdfs:label rdf:datatype="&xsd;string">object boundary</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="&snap;OneDimensionalRegion"/>
-    <rdf:Description rdf:about="&snap;Quality"/>
-    <rdf:Description rdf:about="&snap;RealizableEntity"/>
-    <rdf:Description rdf:about="&snap;Role"/>
-    <rdf:Description rdf:about="&snap;Site"/>
-    <rdf:Description rdf:about="&snap;SpatialRegion"/>
-    <rdf:Description rdf:about="&snap;SpecificallyDependentContinuant"/>
-    <rdf:Description rdf:about="&snap;ThreeDimensionalRegion"/>
-    <rdf:Description rdf:about="&snap;TwoDimensionalRegion"/>
-    <rdf:Description rdf:about="&snap;ZeroDimensionalRegion"/>
-    <rdf:Description rdf:about="&span;ConnectedSpatiotemporalRegion"/>
-    <rdf:Description rdf:about="&span;ConnectedTemporalRegion"/>
-    <rdf:Description rdf:about="&span;FiatProcessPart"/>
-    <rdf:Description rdf:about="&span;Occurrent"/>
-    <rdf:Description rdf:about="&span;Process"/>
-    <rdf:Description rdf:about="&span;ProcessAggregate"/>
-    <rdf:Description rdf:about="&span;ProcessBoundary"/>
-    <rdf:Description rdf:about="&span;ProcessualContext"/>
-    <rdf:Description rdf:about="&span;ProcessualEntity"/>
-    <rdf:Description rdf:about="&span;ScatteredSpatiotemporalRegion"/>
-    <rdf:Description rdf:about="&span;ScatteredTemporalRegion"/>
-    <rdf:Description rdf:about="&span;SpatiotemporalInstant"/>
-    <rdf:Description rdf:about="&span;SpatiotemporalInterval"/>
-    <rdf:Description rdf:about="&span;SpatiotemporalRegion"/>
-    <rdf:Description rdf:about="&span;TemporalInstant"/>
-    <rdf:Description rdf:about="&span;TemporalInterval"/>
-    <rdf:Description rdf:about="&span;TemporalRegion"/>
+    <owl:Class rdf:about="&snapl;Quality"/>
+    <owl:Class rdf:about="&spanl;Process"/>
     <owl:Class rdf:ID="SpeciesQuality">
         <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
         <rdfs:subClassOf>
@@ -2582,7 +2552,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <rdfs:label xml:lang="en">sulphur atom</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="TherapeuticRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >1. The role of a continuant participating in a process with an expected positive impact on a dysfunctional biological system.
 2. The role of a process with an expected positive impact on a dysfunctional biological system.</rdfs:comment>
@@ -2703,7 +2673,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <rdfs:label xml:lang="en">virus</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="VitaminRole">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
