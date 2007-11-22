@@ -3,14 +3,14 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
-    <!ENTITY bfol "http://www.ifomis.org/bfo/1.1/light#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY snapl "http://www.ifomis.org/bfo/1.1/light/snap#" >
-    <!ENTITY spanl "http://www.ifomis.org/bfo/1.1/light/span#" >
+    <!ENTITY bfol "http://www.ifomis.org/bfo/1.1/light#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rol "http://www.ifomis.org/obo/ro/1.0/light#" >
+    <!ENTITY snapl "http://www.ifomis.org/bfo/1.1/light/snap#" >
+    <!ENTITY spanl "http://www.ifomis.org/bfo/1.1/light/span#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
     <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
@@ -24,15 +24,15 @@
      xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-     xmlns:snapl="http://www.ifomis.org/bfo/1.1/light/snap#"
      xmlns:bfol="http://www.ifomis.org/bfo/1.1/light#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:snapl="http://www.ifomis.org/bfo/1.1/light/snap#"
+     xmlns:spanl="http://www.ifomis.org/bfo/1.1/light/span#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:rol="http://www.ifomis.org/obo/ro/1.0/light#"
-     xmlns:spanl="http://www.ifomis.org/bfo/1.1/light/span#">
+     xmlns:rol="http://www.ifomis.org/obo/ro/1.0/light#">
     <owl:Ontology rdf:about="">
         <owl:versionInfo rdf:datatype="&xsd;string">1.0</owl:versionInfo>
         <dc:title rdf:datatype="&xsd;string">BioTop</dc:title>
@@ -1824,9 +1824,6 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
-        <owl:disjointWith rdf:resource="&snapl;ObjectBoundary"/>
-        <owl:disjointWith rdf:resource="&snapl;Site"/>
-        <owl:disjointWith rdf:resource="&snapl;ObjectAggregate"/>
         <rdfs:label xml:lang="en"
             >object or fiat object part</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -2460,6 +2457,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </rdf:Description>
     <owl:Class rdf:ID="rRNAMolecule">
         <rdfs:subClassOf rdf:resource="#EntireRNAMolecule"/>
@@ -2487,7 +2485,6 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
     <owl:Class rdf:about="&snapl;Function"/>
     <owl:Class rdf:about="&snapl;Object"/>
     <owl:Class rdf:about="&snapl;ObjectAggregate">
-        <owl:disjointWith rdf:resource="#ObjectOrFiatObjectPart"/>
         <rdfs:label rdf:datatype="&xsd;string"
             >object aggregate</rdfs:label>
     </owl:Class>
