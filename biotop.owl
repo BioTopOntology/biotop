@@ -57,8 +57,8 @@
         <dc:source rdf:datatype="&xsd;string"
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
         <dc:source rdf:datatype="&xsd;string"
-            >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>			
-		<dc:language rdf:datatype="&xsd;string">en</dc:language>
+            >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
+        <dc:language rdf:datatype="&xsd;string">en</dc:language>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/protege"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1/light"/>
         <owl:imports rdf:resource="http://www.ifomis.org/obo/ro/1.0/light"/>
@@ -68,6 +68,8 @@
     </owl:AllDifferent>
     <owl:Class rdf:ID="AcquiredPathologicalState">
         <rdfs:subClassOf rdf:resource="#PathologicalState"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >acquired pathological state</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Ill-formed state of a biological entity,acquired after birth [steschu 20071010]</rdfs:comment>
     </owl:Class>
@@ -90,9 +92,10 @@
         <rdfs:subClassOf rdf:resource="#HeterocyclicBase"/>
         <owl:disjointWith rdf:resource="#Cytosine"/>
         <owl:disjointWith rdf:resource="#Guanine"/>
-        <owl:disjointWith rdf:resource="#Thymin"/>
+        <owl:disjointWith rdf:resource="#Thymine"/>
         <owl:disjointWith rdf:resource="#Uracil"/>
         <rdfs:label xml:lang="en">adenine</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">C5H5N5</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="AliphaticChain">
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
@@ -223,16 +226,17 @@
         <owl:disjointWith rdf:resource="#Protist"/>
         <owl:disjointWith rdf:resource="#ModifiedCell"/>
         <rdfs:label xml:lang="en">animal</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Multicellular organisms of the kingdom Animalia</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="ArchaebacterialCell">
-        <rdfs:subClassOf rdf:resource="#ProkaryoticCell"/>
+        <rdfs:subClassOf rdf:resource="#Prokaryote"/>
         <owl:disjointWith rdf:resource="#BacterialCell"/>
         <rdfs:label xml:lang="en"
             >archaebacterial cell</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Synonym: Archaebacterium</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a monocellular organism and the cell it is made of.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="AromaticHydrocarbon">
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
@@ -245,11 +249,11 @@
     </owl:Class>
     <owl:Class rdf:ID="ArtefactRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string">artefact role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role an entity plays when it has been artificially produced. [steschu 20071010]</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Atom">
-        <rdfs:subClassOf rdf:resource="#ObjectOrFiatObjectPart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponent"/>
@@ -262,6 +266,7 @@
                 <owl:someValuesFrom rdf:resource="#SubatomicParticle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#MaterialIndependentContinuant"/>
         <owl:disjointWith rdf:resource="#SubatomicParticle"/>
         <owl:disjointWith rdf:resource="#MolecularEntity"/>
         <rdfs:label xml:lang="en">atom</rdfs:label>
@@ -269,13 +274,12 @@
             >Basic building block of molecules. Particle of discrete types. Biologically important atoms are C, N, H, O, P, S, Na, Ca, K, Mg, Cl, J, Fe, Co, Zn ,... Atoms may be electrically neutral or ionic.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="BacterialCell">
-        <rdfs:subClassOf rdf:resource="#ProkaryoticCell"/>
+        <rdfs:subClassOf rdf:resource="#Prokaryote"/>
         <owl:disjointWith rdf:resource="#ArchaebacterialCell"/>
         <rdfs:label xml:lang="en">bacterial cell</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Synonym: Bacterium</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a monocellular organism and the cell it is made of.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="BacterialColony">
         <owl:equivalentClass>
@@ -289,11 +293,15 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >bacterial colony</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cluster of bacteria , usually cultured from a single cell.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="BiologicalColony">
         <rdfs:subClassOf rdf:resource="#PluralityOfOrganisms"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >biological colony</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Plurality of several individual organisms living closely together, usually for mutual benefit</rdfs:comment>
     </owl:Class>
@@ -366,6 +374,10 @@
                 <owl:someValuesFrom rdf:resource="#BioMolecularSequenceInformation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >bio molecular sequence</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >chain (segment) of similar monomers such as proteins or nucleotides</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="BioMolecularSequenceInformation">
         <rdfs:subClassOf rdf:resource="#NonRealizableInformationEntity"/>
@@ -375,6 +387,8 @@
                 <owl:someValuesFrom rdf:resource="#BioMolecularSequence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >bio molecular sequence information</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Sequence as an entity of information. The same sequence can inhere in different biopolymers.</rdfs:comment>
     </owl:Class>
@@ -454,6 +468,9 @@
     </owl:Class>
     <owl:Class rdf:ID="CanonicalState">
         <rdfs:subClassOf rdf:resource="#StateOfBeing"/>
+        <rdfs:label rdf:datatype="&xsd;string">canonical state</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The condition of a physical entity considered well-formed. [steschu 20071126]</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Carbohydrate">
         <owl:equivalentClass>
@@ -636,14 +653,18 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasComponent"/>
-                        <owl:someValuesFrom rdf:resource="#CellMembrane"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasComponent"/>
-                        <owl:someValuesFrom rdf:resource="#CellularComponent"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&rol;hasProperPart"/>
                         <owl:allValuesFrom>
@@ -660,7 +681,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#PolyMolecularCompound"/>
-        <owl:disjointWith rdf:resource="#CellularComponent"/>
         <rdfs:label xml:lang="en">cell</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Constituting unit of an organism.</rdfs:comment>
@@ -672,7 +692,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class rdf:about="#Organism"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&rol;hasProperPart"/>
+                        <owl:onProperty rdf:resource="&rol;properPartOf"/>
                         <owl:someValuesFrom rdf:resource="#Organism"/>
                     </owl:Restriction>
                 </owl:unionOf>
@@ -680,10 +700,36 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#ModifiedCell"/>
         <rdfs:label xml:lang="en">cell in vivo</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Living cell that is not removed from a living system</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="CellMembrane">
         <rdfs:subClassOf rdf:resource="#CellularComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGrain"/>
+                        <owl:someValuesFrom rdf:resource="#Lipid"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGrain"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">cell membrane</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Semipermeable lipid bilayer found in all cells.[1] It contains a wide variety of biological molecules, primarily proteins and lipids, which are involved in a vast array of cellular processes, and also serves as the attachment point for both the intracellular cytoskeleton and, if present, the cell wall.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="CellularComponent">
         <rdfs:subClassOf rdf:resource="#PolyMolecularCompound"/>
@@ -692,16 +738,15 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&rol;derivesFrom"/>
-                        <owl:someValuesFrom rdf:resource="#Organism"/>
+                        <owl:someValuesFrom rdf:resource="#Cell"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&rol;properPartOf"/>
-                        <owl:someValuesFrom rdf:resource="#Organism"/>
+                        <owl:someValuesFrom rdf:resource="#Cell"/>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#Cell"/>
         <owl:disjointWith rdf:resource="#Organism"/>
         <rdfs:label xml:lang="en"
             >cellular component</rdfs:label>
@@ -740,45 +785,18 @@
     <owl:Class rdf:ID="Chromosome">
         <rdfs:subClassOf rdf:resource="#MoleculeComplex"/>
         <rdfs:label xml:lang="en">chromosome</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Organized form of DNA in cells, containing one very long, continuous piece of DNA, which contains many genes, regulatory elements and other intervening nucleotide sequences. Includes also the DNA-bound proteins which serve to package and manage the DNA.</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="CohesiveCollection">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="#HeterogenousCohesiveCollection"/>
-                    <owl:Class rdf:about="#HomogenousCohesiveCollection"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+    <owl:Class rdf:ID="CollectiveMaterialEntity">
         <rdfs:subClassOf rdf:resource="#PolyatomicEntity"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf rdf:resource="&snapl;ObjectAggregate"/>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en"
-            >cohesive collection</rdfs:label>
+            >collective material entity</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Aggregration of multiple components without clear identity and unity criteria. In contradistinction to ObjectAggregates they are not disconnected</rdfs:comment>
-    </owl:Class>
-    <owl:Class rdf:ID="CollectiveObject">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="#HomogenousCohesiveCollection"/>
-                    <owl:Class rdf:about="&snapl;ObjectAggregate"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
-        <rdfs:label xml:lang="en"
-            >collective object</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >CollectiveObjects are pluralities of uniform objects, regardless whether their &quot;grains&quot; are connected or not</rdfs:comment>
+            >Definition: Mereological Sum of multiple grains of the same sort without clear identity and unity criteria.</rdfs:comment>
     </owl:Class>
     <owl:ObjectProperty rdf:ID="componentOf">
         <rdfs:domain rdf:resource="&snapl;IndependentContinuant"/>
-        <rdfs:range rdf:resource="#ObjectOrFiatObjectPart"/>
         <rdfs:subPropertyOf rdf:resource="&rol;properPartOf"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</rdfs:comment>
@@ -787,8 +805,29 @@
         <rdfs:comment rdf:datatype="&xsd;string"
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
     </owl:ObjectProperty>
+    <owl:Class rdf:ID="CompoundOfCollections">
+        <rdfs:subClassOf rdf:resource="#PolyatomicEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en"
+            >compound of collections</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Composition of different kinds of collections without clear unity and identity criteria.</rdfs:comment>
+    </owl:Class>
     <owl:Class rdf:ID="CongenitalPathologicalState">
         <rdfs:subClassOf rdf:resource="#PathologicalState"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >congenital pathological state</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Ill-formed state of a biological entity, present from birth [steschu 20071010]</rdfs:comment>
     </owl:Class>
@@ -814,15 +853,29 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&rol;hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGrain"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">cytoplasm</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Gelatinous, semi-transparent fluid that fills most cells. E</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Cytosine">
         <rdfs:subClassOf rdf:resource="#HeterocyclicBase"/>
         <owl:disjointWith rdf:resource="#Adenine"/>
         <owl:disjointWith rdf:resource="#Guanine"/>
-        <owl:disjointWith rdf:resource="#Thymin"/>
+        <owl:disjointWith rdf:resource="#Thymine"/>
         <owl:disjointWith rdf:resource="#Uracil"/>
         <rdfs:label xml:lang="en">cytosine</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">C4H5N3O</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Deoxyribonucleotide">
         <owl:equivalentClass>
@@ -867,12 +920,14 @@
     </owl:Class>
     <owl:Class rdf:ID="DiagnosticRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string">diagnostic role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >1. The role of a continuant participating in a process that provides insight into the functioning of a biological system.
 2 The role of a process that provides insight into the functioning of a biological system.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="DigitalEntity">
         <rdfs:subClassOf rdf:resource="&snapl;GenericallyDependentContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string">digital entity</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string">(OBI 306)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="DNA">
@@ -932,6 +987,7 @@
     </owl:Class>
     <owl:Class rdf:ID="DrugRole">
         <rdfs:subClassOf rdf:resource="#TherapeuticRole"/>
+        <rdfs:label rdf:datatype="&xsd;string">drug role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role of a chemical of biological entity of being deliberately used in virtue of its expected positive impact on a dysfunctional biological system</rdfs:comment>
     </owl:Class>
@@ -981,7 +1037,6 @@
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
-                    <owl:Class rdf:about="&snapl;Object"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1095,46 +1150,19 @@
         </owl:equivalentClass>
     </owl:Class>
     <owl:Class rdf:ID="Eukaryote">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class rdf:about="#EukaryoticCell"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&rol;hasProperPart"/>
-                                <owl:someValuesFrom rdf:resource="#EukaryoticCell"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Class rdf:about="#Organism"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#ProkaryoticCell"/>
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+        <owl:disjointWith rdf:resource="#Prokaryote"/>
         <owl:disjointWith rdf:resource="#Virus"/>
         <rdfs:label xml:lang="en">eukaryote</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: An eukaryote is an organism with a complex cell or cells, in which the genetic material is organized into a membrane-bound nucleus or nuclei. Most Eukaryots are multicellular, haowever, there are some which are always unicellular (protists, some fungi) but there are also unicellular developmental stages (zygotes) of plants and animals.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="EukaryoticCell">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="#Cell"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Class rdf:about="#Eukaryote"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&rol;properPartOf"/>
-                                <owl:someValuesFrom rdf:resource="#Eukaryote"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Cell"/>
+        <owl:disjointWith rdf:resource="#Prokaryote"/>
         <rdfs:label xml:lang="en">eukaryotic cell</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Cell with membrane enclosed organells</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="FattyAcid">
         <owl:equivalentClass>
@@ -1167,14 +1195,19 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:label rdf:datatype="&xsd;string">fatty acid</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Carboxylic acid often with a long unbranched aliphatic tail.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="FindingRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string">finding role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role that may inhere in any biological structure, state, or process that is of reportable interest in a diagnostic process.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="FoodRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string">food role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role of an entity components of which are used for supplying energy to a biological system</rdfs:comment>
     </owl:Class>
@@ -1191,6 +1224,8 @@
         <owl:disjointWith rdf:resource="#Plant"/>
         <owl:disjointWith rdf:resource="#Protist"/>
         <rdfs:label xml:lang="en">fungus</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Heterotrophic organisms characterized by a chitinous cell wall.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Gene">
         <rdfs:subClassOf>
@@ -1215,7 +1250,8 @@
         <rdfs:label xml:lang="en">gene region</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="GeographicArea">
-        <rdfs:subClassOf rdf:resource="&snapl;Site"/>
+        <rdfs:subClassOf rdf:resource="#ImmaterialIndependentContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string">geographic area</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="Glucose">
         <rdfs:subClassOf rdf:resource="#Hexose"/>
@@ -1223,7 +1259,6 @@
     </owl:Class>
     <owl:ObjectProperty rdf:ID="grainOf">
         <rdfs:domain rdf:resource="&snapl;IndependentContinuant"/>
-        <rdfs:range rdf:resource="#CollectiveObject"/>
         <rdfs:subPropertyOf rdf:resource="&rol;properPartOf"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Grains are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</rdfs:comment>
@@ -1236,19 +1271,18 @@
         <rdfs:subClassOf rdf:resource="#HeterocyclicBase"/>
         <owl:disjointWith rdf:resource="#Adenine"/>
         <owl:disjointWith rdf:resource="#Cytosine"/>
-        <owl:disjointWith rdf:resource="#Thymin"/>
+        <owl:disjointWith rdf:resource="#Thymine"/>
         <owl:disjointWith rdf:resource="#Uracil"/>
         <rdfs:label xml:lang="en">guanine</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">C5H5N5O</rdfs:comment>
     </owl:Class>
     <owl:ObjectProperty rdf:ID="hasComponent">
-        <rdfs:domain rdf:resource="#ObjectOrFiatObjectPart"/>
         <rdfs:range rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:subPropertyOf rdf:resource="&rol;hasProperPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of componentOf.</rdfs:comment>
     </owl:ObjectProperty>
     <owl:ObjectProperty rdf:ID="hasGrain">
-        <rdfs:domain rdf:resource="#CollectiveObject"/>
         <rdfs:range rdf:resource="&snapl;IndependentContinuant"/>
         <rdfs:subPropertyOf rdf:resource="&rol;hasProperPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -1291,26 +1325,6 @@
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Organic compounds that contain a ring structure containing N as proton receptor. Important parts of DNA and RNA molecules.</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="HeterogenousCohesiveCollection">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="#CollectiveObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponent"/>
-                <owl:allValuesFrom rdf:resource="#CollectiveObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#CohesiveCollection"/>
-        <owl:disjointWith rdf:resource="#HomogenousCohesiveCollection"/>
-        <rdfs:label xml:lang="en"
-            >heterogenous cohesive collection</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Composed by components of different kinds of Collectives. These &quot;collective components&quot; may be cohesive (e.g. a solvent) of disconnected (e.g. the solute) in a chemical solution.</rdfs:comment>
-    </owl:Class>
     <owl:Class rdf:ID="Hexose">
         <rdfs:subClassOf rdf:resource="#Monosaccharide"/>
         <rdfs:subClassOf>
@@ -1330,22 +1344,10 @@
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment: (QCR) hasComponent exactly 1 C6Chain</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="HomogenousCohesiveCollection">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasGrain"/>
-                <owl:someValuesFrom rdf:resource="&snapl;IndependentContinuant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#CohesiveCollection"/>
-        <owl:disjointWith rdf:resource="#HeterogenousCohesiveCollection"/>
-        <rdfs:label xml:lang="en"
-            >homogenous cohesive collection</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Composition of connected granular components of the same kind.</rdfs:comment>
-    </owl:Class>
     <owl:Class rdf:ID="Human">
         <rdfs:subClassOf rdf:resource="#Animal"/>
+        <rdfs:label rdf:datatype="&xsd;string">human</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Homo Sapiens</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="HumanAction">
         <owl:equivalentClass>
@@ -1442,11 +1444,29 @@
             >Comment: (QCR) hasComponent exactly 1 OxygenAtom and hasComponent exactly 1 HydrogenAtom and hasComponent only (OxygenAtom or HydrogenAtom)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="ImmaterialAnatomicalEntity">
-        <rdfs:subClassOf rdf:resource="&snapl;Site"/>
+        <rdfs:subClassOf rdf:resource="#ImmaterialIndependentContinuant"/>
         <rdfs:label xml:lang="en"
             >immaterial anatomical entity</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Superclass of  FMA &apos;immaterial anatomical entity&apos;. It subsumes canonical and non-canonical anatomical entities and is species independent.  It has spatial dimension(s) but no mass.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:ID="ImmaterialIndependentContinuant">
+        <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInherence"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#PhysicalMass"/>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#MaterialIndependentContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >immaterial independent continuant</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A spatially relevant object in 0 - 3 dimensions without mass</rdfs:comment>
     </owl:Class>
     <owl:ObjectProperty rdf:ID="inheresIn">
         <rdfs:range rdf:resource="&snapl;IndependentContinuant"/>
@@ -1499,6 +1519,8 @@
     <owl:Class rdf:ID="Lipid">
         <rdfs:subClassOf rdf:resource="#MolecularEntity"/>
         <rdfs:label xml:lang="en">lipid</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Fat-soluble (lipophilic), naturally-occurring molecule.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="MachineAction">
         <owl:equivalentClass>
@@ -1543,6 +1565,30 @@
         <rdfs:comment rdf:datatype="&xsd;string"
             >From FMA
 Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitochondrion, hepatocyte, erythrocyte, heart, head, blood, urine.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:ID="MaterialIndependentContinuant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasInherence"/>
+                        <owl:cardinality rdf:datatype="&xsd;int">1</owl:cardinality>
+                        <owl:valuesFrom rdf:resource="#PhysicalMass"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasInherence"/>
+                        <owl:cardinality rdf:datatype="&xsd;int">1</owl:cardinality>
+                        <owl:valuesFrom rdf:resource="#PhysicalVolume"/>
+                    </owl:Restriction>
+                    <owl:Class rdf:about="&snapl;IndependentContinuant"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="#ImmaterialIndependentContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >material independent continuant</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A material object that has a mass and a volume.  Material Independent Continuants may have Immaterial Independent Continuants as parts (e.g. Heart and Heart Ventricle)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="ModifiedCell">
         <rdfs:subClassOf rdf:resource="#Cell"/>
@@ -1702,10 +1748,11 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#UniCellularOrganism"/>
         <owl:disjointWith rdf:resource="#Virus"/>
         <rdfs:label xml:lang="en"
             >multicellular organism</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Organisms that are composed by more than one cell.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="MultiCellularOrganismProcess">
         <owl:equivalentClass>
@@ -1749,11 +1796,15 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
     </owl:Class>
     <owl:Class rdf:ID="NoncanonicalState">
         <rdfs:subClassOf rdf:resource="#StateOfBeing"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >noncanonical state</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The condition of a physical entity considered ill-formed. [steschu 20071010]</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="NonRealizableInformationEntity">
         <rdfs:subClassOf rdf:resource="&snapl;GenericallyDependentContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >non realizable information entity</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string">(OBI 295)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="NonSteroidLipid">
@@ -1766,7 +1817,9 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#Steroid"/>
         <rdfs:label xml:lang="en"
-            >non streoid lipid</rdfs:label>
+            >non steroid lipid</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Lipids that have aliphatic chains and no steroid rings</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="NucleicAcid">
         <owl:equivalentClass>
@@ -1816,24 +1869,12 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment: (QCR) hasComponent exactly 1 HeterocyclicBase and hasComponent exactly 1 Phosphate and hasComponent only (Phosphate or Ribose or HeterocyclicBase) and hasComponent exactly 1 Pentose</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="ObjectOrFiatObjectPart">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="&snapl;FiatObjectPart"/>
-                    <owl:Class rdf:about="&snapl;Object"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
-        <rdfs:label xml:lang="en"
-            >object or fiat object part</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >This union class has been introduced because in many cases it is problematic to decide whether some IndependentContinuant fulfills the requirements of being completely delineated by fiat from its environment. It is also an issue of granularity. On an atomic level, for instance, the boundary between two atoms is a fiat one. In contrast, zooming out, a plausible standpoint could be that a functional group of an atom is not an fiat part, and in a very coarse grained view one could even subscribe the statement as given by BFO that a lung is not a fiat part (although its transitory structures (bronchi, vessels) can only delineated by fiat.
-Of course, there are entities that can be classified beyond any doubt as &quot;snap:objects&quot;, such as free-floating cells, molecules in a gas, or independent organisms.</rdfs:comment>
-    </owl:Class>
     <owl:Class rdf:ID="OccupationalRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >occupational role</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >todo: find a good definition. The class was included to support BioTop - UMLS SN mapping</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="OligoOrPolymer">
         <owl:equivalentClass>
@@ -1884,15 +1925,6 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
             >Definition: Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Organism">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="#MulticellularOrganism"/>
-                    <owl:Class rdf:about="#UniCellularOrganism"/>
-                    <owl:Class rdf:about="#Virus"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#PolyMolecularCompound"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1961,6 +1993,10 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >pathological state</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >state of an organism or an organism part requiring therapeutic or palliative intervention</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Pentose">
         <rdfs:subClassOf rdf:resource="#Monosaccharide"/>
@@ -2043,9 +2079,15 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
     </owl:Class>
     <owl:Class rdf:ID="PhysicalMass">
         <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string">physical mass</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Mass (gravity independent) - not weight. Measured in g, kg, ...</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="PhysicalVolume">
         <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string">physical volume</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Volume of three-dimensional objects</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="PhysiologicalProcess">
         <owl:equivalentClass>
@@ -2066,6 +2108,7 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
     </owl:Class>
     <owl:Class rdf:ID="Plan">
         <rdfs:subClassOf rdf:resource="&snapl;GenericallyDependentContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string">plan</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string">(OBI 344)</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Plant">
@@ -2074,12 +2117,14 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
         <owl:disjointWith rdf:resource="#Animal"/>
         <owl:disjointWith rdf:resource="#Fungus"/>
         <rdfs:label xml:lang="en">plant</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Organism of the kingdom Plantae.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="PluralityOfOrganisms">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="#CollectiveObject"/>
+                    <owl:Class rdf:about="#CollectiveMaterialEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGrain"/>
                         <owl:someValuesFrom rdf:resource="#Organism"/>
@@ -2087,6 +2132,8 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >plurality of organisms</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The mereological sum of two or more organisms.</rdfs:comment>
     </owl:Class>
@@ -2102,12 +2149,15 @@ Of course, there are entities that can be classified beyond any doubt as &quot;s
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >plurality of organisms of the same species</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >&quot;Species&quot; is defined as a group of organisms capable of interbreeding and producing fertile offspring. This definition leaves open whether this can only be applied to the whole set of organisms or also to subgroups. Additionally, &quot;species&quot; may be coneptualized as a kind of meta-class that is instantiated by classes. In BioTop we do not have a &quot;Species&quot; as a class of its own. Instead we distinguish between &quot;Pluralities of Organisms of the same species&quot; on the one hand, and &quot;SpeciesQuality&quot; on the other hand. We are aware that OWL-DL does not allow to formalize the &quot;sameness&quot; criterion. 
 Only one SpeciesQuality can inhere a population</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="PoisonRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string">poison role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role of an amount of matter to be toxic to (parts of) biological organisms</rdfs:comment>
     </owl:Class>
@@ -2115,7 +2165,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="#ObjectOrFiatObjectPart"/>
+                    <owl:Class rdf:about="#MaterialIndependentContinuant"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&rol;hasProperPart"/>
                         <owl:someValuesFrom rdf:resource="#Atom"/>
@@ -2161,10 +2211,25 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Population">
         <rdfs:subClassOf rdf:resource="#PluralityOfOrganisms"/>
+        <rdfs:label rdf:datatype="&xsd;string">population</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Collection of Organisms of a particular species living in a given geographic area.</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="PortionOfGas">
+    <owl:Class rdf:ID="PortionOfHeterogenousLiquid">
+        <rdfs:subClassOf rdf:resource="#CompoundOfCollections"/>
+        <rdfs:label xml:lang="en"
+            >portion of heterogenous liquid</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Liquid constituted by different kinds of collectives, e.g. aqueous NaCl solution</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:ID="PortionOfHeterogenousSolid">
+        <rdfs:subClassOf rdf:resource="#CompoundOfCollections"/>
+        <rdfs:label xml:lang="en"
+            >portion of heterogenous solid</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Solid constituted by different kinds of collectives, e.g. a NaCl crystal, granite</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:ID="PortionOfHomogenousGas">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGrain"/>
@@ -2178,57 +2243,65 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="&snapl;ObjectAggregate"/>
+        <rdfs:subClassOf rdf:resource="#PortionOfHomogenousMatter"/>
         <rdfs:label xml:lang="en">portion of gas</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Non-connected  Molecules in gaseous state</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="PortionOfHeterogenousLiquid">
-        <rdfs:subClassOf rdf:resource="#HeterogenousCohesiveCollection"/>
-        <rdfs:label xml:lang="en"
-            >portion of heterogenous liquid</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Liquid constituted by different kinds of collectives, e.g. aqueous NaCl solution</rdfs:comment>
-    </owl:Class>
-    <owl:Class rdf:ID="PortionOfHeterogenousSolid">
-        <rdfs:subClassOf rdf:resource="#HeterogenousCohesiveCollection"/>
-        <rdfs:label xml:lang="en"
-            >portion of heterogenous solid</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Solid constituted by different kinds of collectives, e.g. a NaCl crystal, granite</rdfs:comment>
-    </owl:Class>
     <owl:Class rdf:ID="PortionOfHomogenousLiquid">
-        <rdfs:subClassOf rdf:resource="#HomogenousCohesiveCollection"/>
+        <rdfs:subClassOf rdf:resource="#PortionOfHomogenousMatter"/>
         <rdfs:label xml:lang="en"
             >portion of homogenous liquid</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Pure liquid consisting only of one kind of particles, e.g. H2O, liquid Hg, ...</rdfs:comment>
     </owl:Class>
+    <owl:Class rdf:ID="PortionOfHomogenousMatter">
+        <rdfs:subClassOf rdf:resource="#CollectiveMaterialEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGrain"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#Atom"/>
+                            <owl:Class rdf:about="#MolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGrain"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class rdf:about="#Atom"/>
+                            <owl:Class rdf:about="#MolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en"
+            >homogenous cohesive collection</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Composition of granular components of the same kind.</rdfs:comment>
+    </owl:Class>
     <owl:Class rdf:ID="PortionOfHomogenousSolid">
-        <rdfs:subClassOf rdf:resource="#HomogenousCohesiveCollection"/>
+        <rdfs:subClassOf rdf:resource="#PortionOfHomogenousMatter"/>
         <rdfs:label xml:lang="en"
             >portion of homogenous solid</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Pure solid consisting only of one kind of particles, e.g. a piece of metal</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="ProkaryoticCell">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="#ArchaebacterialCell"/>
-                    <owl:Class rdf:about="#BacterialCell"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#UniCellularOrganism"/>
-        <owl:disjointWith rdf:resource="#YeastCell"/>
+    <owl:Class rdf:ID="Prokaryote">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
         <owl:disjointWith rdf:resource="#Eukaryote"/>
-        <rdfs:label xml:lang="en"
-            >prokaryotic cell</rdfs:label>
+        <owl:disjointWith rdf:resource="#EukaryoticCell"/>
+        <rdfs:label xml:lang="en">prokaryote</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >Synonym: Prokaryote</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a monocellular organism and the cell it is made of.</rdfs:comment>
+            >Cell lacking membrane enclosed organells</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="ProteinComplex">
         <owl:equivalentClass>
@@ -2333,6 +2406,8 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <owl:disjointWith rdf:resource="#Plant"/>
         <owl:disjointWith rdf:resource="#Animal"/>
         <rdfs:label xml:lang="en">protist</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Organisms of the kingdom Protista</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Proton">
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
@@ -2354,9 +2429,16 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >quality of continuant</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A quality that inheres in a continuant entity</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="ResearchRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string">research role</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >todo: find a good definition. The class was included to support BioTop - UMLS SN mapping</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Ribonucleotide">
         <owl:equivalentClass>
@@ -2460,6 +2542,16 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </rdf:Description>
     <owl:Class rdf:ID="rRNAMolecule">
         <rdfs:subClassOf rdf:resource="#EntireRNAMolecule"/>
@@ -2475,21 +2567,19 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#MolecularEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="&xsd;string">signalling role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role of a molecule that participates in a biological signalling process. These molecules are normally known as hormones.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="SignOrSymptomRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >sign or symptom role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A role that can inhere in states, processes, or even in certain independent continuants (e.g. in a deformity). This a role is ascribed to an entity in a diagnostic process where the symptom is suspected to indicate a second state or process)</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:about="&snapl;FiatObjectPart"/>
     <owl:Class rdf:about="&snapl;Function"/>
-    <owl:Class rdf:about="&snapl;Object"/>
-    <owl:Class rdf:about="&snapl;ObjectAggregate">
-        <rdfs:label rdf:datatype="&xsd;string"
-            >object aggregate</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="&snapl;IndependentContinuant"/>
     <rdf:Description rdf:about="&snapl;ObjectBoundary">
         <rdfs:label rdf:datatype="&xsd;string">object boundary</rdfs:label>
     </rdf:Description>
@@ -2510,20 +2600,28 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="&xsd;string">species quality</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The quality of one or more biological organisms of pertaining to a defined group of organisms capable of interbreeding and produce fertile offspring.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="StateOfAggregation">
         <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >state of aggregation</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Quality of being solid, liquid, gaseous, ...</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="StateOfBeing">
         <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:label rdf:datatype="&xsd;string">state of being</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Steroid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
         <owl:disjointWith rdf:resource="#NonSteroidLipid"/>
         <rdfs:label xml:lang="en">steroid</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Terpenoid lipid characterized by a carbon skeleton with four fused rings.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="StructuralGroup">
         <rdfs:subClassOf rdf:resource="#MolecularGroup"/>
@@ -2533,7 +2631,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
             >Definition: Structural groups are specific constellations of atoms within molecules which are relevant for the classification of those compounds, e.g. Pentoses have a 5-C-Chain, Hexoses have a 6-C-Chain.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="SubatomicParticle">
-        <rdfs:subClassOf rdf:resource="#ObjectOrFiatObjectPart"/>
+        <rdfs:subClassOf rdf:resource="#MaterialIndependentContinuant"/>
         <owl:disjointWith rdf:resource="#PolyatomicEntity"/>
         <owl:disjointWith rdf:resource="#Atom"/>
         <rdfs:label xml:lang="en"
@@ -2552,17 +2650,20 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="TherapeuticRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >therapeutic role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >1. The role of a continuant participating in a process with an expected positive impact on a dysfunctional biological system.
 2. The role of a process with an expected positive impact on a dysfunctional biological system.</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="Thymin">
+    <owl:Class rdf:ID="Thymine">
         <rdfs:subClassOf rdf:resource="#HeterocyclicBase"/>
         <owl:disjointWith rdf:resource="#Adenine"/>
         <owl:disjointWith rdf:resource="#Cytosine"/>
         <owl:disjointWith rdf:resource="#Guanine"/>
         <owl:disjointWith rdf:resource="#Uracil"/>
         <rdfs:label xml:lang="en">thymin</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">C5H6N2O2</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Tissue">
         <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousSolid"/>
@@ -2612,18 +2713,22 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <owl:disjointWith rdf:resource="#mRNAMolecule"/>
         <rdfs:label xml:lang="en">t RNA molecule</rdfs:label>
     </owl:Class>
-    <owl:Class rdf:ID="UniCellularOrganism">
+    <owl:Class rdf:ID="UnicellularOrganism">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasComponent"/>
-                        <owl:someValuesFrom rdf:resource="#CellMembrane"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasComponent"/>
-                        <owl:someValuesFrom rdf:resource="#CellularComponent"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
                     <owl:Class rdf:about="#Organism"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&rol;hasProperPart"/>
@@ -2640,16 +2745,19 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#MulticellularOrganism"/>
-        <rdfs:label rdf:datatype="&xsd;string"></rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >unicellular organism</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Organisms that (always or in certain initial stages) consist of a single cell. We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a monocellular organism and the cell it is made of.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Uracil">
         <rdfs:subClassOf rdf:resource="#HeterocyclicBase"/>
         <owl:disjointWith rdf:resource="#Adenine"/>
         <owl:disjointWith rdf:resource="#Cytosine"/>
         <owl:disjointWith rdf:resource="#Guanine"/>
-        <owl:disjointWith rdf:resource="#Thymin"/>
+        <owl:disjointWith rdf:resource="#Thymine"/>
         <rdfs:label xml:lang="en">uracil</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">C4H4N2O2</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="Virus">
         <owl:equivalentClass>
@@ -2670,6 +2778,8 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <owl:disjointWith rdf:resource="#Eukaryote"/>
         <owl:disjointWith rdf:resource="#MulticellularOrganism"/>
         <rdfs:label xml:lang="en">virus</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Sub-microscopic agent that reuires a host cell to grow and reproduce.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="VitaminRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
@@ -2691,6 +2801,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="&xsd;string">vitamin role</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The role a certain substance can play in an organism. Vitamins are organic compounds that are essential to an organism for metabolic reactions. They are not food. Vitamin does not include essential fatty acids or essential amino acids</rdfs:comment>
     </owl:Class>
@@ -2730,11 +2841,39 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
         <rdfs:label xml:lang="en">water molecule</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="YeastCell">
-        <rdfs:subClassOf rdf:resource="#Fungus"/>
-        <rdfs:subClassOf rdf:resource="#EukaryoticCell"/>
-        <owl:disjointWith rdf:resource="#ProkaryoticCell"/>
-        <rdfs:label xml:lang="en">yeast cell</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class rdf:about="#Fungus"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&rol;hasProperPart"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="#Cell"/>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&rol;hasProperPart"/>
+                        <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label rdf:datatype="&xsd;string">yeast cell</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a monocellular organism and the cell it is made of.</rdfs:comment>
+            >Unicellular Fungi.</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
