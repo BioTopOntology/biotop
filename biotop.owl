@@ -2078,13 +2078,13 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
         <rdfs:label xml:lang="en">phosphorus atom</rdfs:label>
     </owl:Class>
     <owl:Class rdf:ID="PhysicalMass">
-        <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:subClassOf rdf:resource="#ContinuantQuality"/>
         <rdfs:label rdf:datatype="&xsd;string">physical mass</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Mass (gravity independent) - not weight. Measured in g, kg, ...</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="PhysicalVolume">
-        <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:subClassOf rdf:resource="#ContinuantQuality"/>
         <rdfs:label rdf:datatype="&xsd;string">physical volume</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Volume of three-dimensional objects</rdfs:comment>
@@ -2417,7 +2417,7 @@ Only one TaxonQuality can inhere a population</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Positively Charged Particle</rdfs:comment>
     </owl:Class>
-    <owl:Class rdf:ID="QualityOfContinuant">
+    <owl:Class rdf:ID="ContinuantQuality">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2430,7 +2430,7 @@ Only one TaxonQuality can inhere a population</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:label rdf:datatype="&xsd;string"
-            >quality of continuant</rdfs:label>
+            >continuant quality</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A quality that inheres in a continuant entity</rdfs:comment>
     </owl:Class>
@@ -2586,7 +2586,7 @@ Only one TaxonQuality can inhere a population</rdfs:comment>
     <owl:Class rdf:about="&snapl;Quality"/>
     <owl:Class rdf:about="&spanl;Process"/>
     <owl:Class rdf:ID="TaxonQuality">
-        <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:subClassOf rdf:resource="#ContinuantQuality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
@@ -2605,14 +2605,14 @@ Only one TaxonQuality can inhere a population</rdfs:comment>
             >The quality of one or more biological organisms of pertaining to a defined group of organisms capable of interbreeding and produce fertile offspring.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="StateOfAggregation">
-        <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:subClassOf rdf:resource="#ContinuantQuality"/>
         <rdfs:label rdf:datatype="&xsd;string"
             >state of aggregation</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Quality of being solid, liquid, gaseous, ...</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="StateOfBeing">
-        <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
+        <rdfs:subClassOf rdf:resource="#ContinuantQuality"/>
         <rdfs:label rdf:datatype="&xsd;string">state of being</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </owl:Class>
