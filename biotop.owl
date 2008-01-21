@@ -1929,7 +1929,7 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasInherence"/>
-                <owl:someValuesFrom rdf:resource="#SpeciesQuality"/>
+                <owl:someValuesFrom rdf:resource="#TaxonQuality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#CellularComponent"/>
@@ -2143,7 +2143,7 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#SpeciesQuality"/>
+                        <owl:someValuesFrom rdf:resource="#TaxonQuality"/>
                     </owl:Restriction>
                     <owl:Class rdf:about="#PluralityOfOrganisms"/>
                 </owl:intersectionOf>
@@ -2152,8 +2152,8 @@ Physical anatomical entity which has mass. Examples: hemoglobin molecule, mitoch
         <rdfs:label rdf:datatype="&xsd;string"
             >plurality of organisms of the same species</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >&quot;Species&quot; is defined as a group of organisms capable of interbreeding and producing fertile offspring. This definition leaves open whether this can only be applied to the whole set of organisms or also to subgroups. Additionally, &quot;species&quot; may be coneptualized as a kind of meta-class that is instantiated by classes. In BioTop we do not have a &quot;Species&quot; as a class of its own. Instead we distinguish between &quot;Pluralities of Organisms of the same species&quot; on the one hand, and &quot;SpeciesQuality&quot; on the other hand. We are aware that OWL-DL does not allow to formalize the &quot;sameness&quot; criterion. 
-Only one SpeciesQuality can inhere a population</rdfs:comment>
+            >&quot;Species&quot; is defined as a group of organisms capable of interbreeding and producing fertile offspring. This definition leaves open whether this can only be applied to the whole set of organisms or also to subgroups. Additionally, &quot;species&quot; may be coneptualized as a kind of meta-class that is instantiated by classes. In BioTop we do not have a &quot;Species&quot; as a class of its own. Instead we distinguish between &quot;Pluralities of Organisms of the same species&quot; on the one hand, and &quot;TaxonQuality&quot; on the other hand. We are aware that OWL-DL does not allow to formalize the &quot;sameness&quot; criterion. 
+Only one TaxonQuality can inhere a population</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:ID="PoisonRole">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
@@ -2585,7 +2585,7 @@ Only one SpeciesQuality can inhere a population</rdfs:comment>
     </rdf:Description>
     <owl:Class rdf:about="&snapl;Quality"/>
     <owl:Class rdf:about="&spanl;Process"/>
-    <owl:Class rdf:ID="SpeciesQuality">
+    <owl:Class rdf:ID="TaxonQuality">
         <rdfs:subClassOf rdf:resource="#QualityOfContinuant"/>
         <rdfs:subClassOf>
             <owl:Restriction>
