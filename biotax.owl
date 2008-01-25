@@ -13,18 +13,18 @@
     xmlns:spanl="http://www.ifomis.org/bfo/1.1/light/span#"
     xmlns:rol="http://www.ifomis.org/obo/ro/1.0/light#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:biotop="http://purl.org/biotop/dev#"
     xmlns="http://purl.org/biotop/taxdemo/dev#"
+    xmlns:biotop="http://purl.org/biotop/dev#"
   xml:base="http://purl.org/biotop/taxdemo/dev">
   <owl:Ontology rdf:about="">
+    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Stefan Schulz, Martin Boeker and Holger Stenzhorn: "The Ontology of Biological Taxa"</dc:source>
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Stefan Schulz</dc:creator>
+    >Holger Stenzhorn</dc:creator>
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Martin Boeker</dc:creator>
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Holger Stenzhorn</dc:creator>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Stefan Schulz, Martin Boeker and Holger Stenzhorn: "The Ontology of Biological Taxa"</dc:source>
+    >Stefan Schulz</dc:creator>
     <owl:imports rdf:resource="http://purl.org/biotop/dev"/>
   </owl:Ontology>
   <owl:Class rdf:ID="SubphylumQuality">
@@ -34,25 +34,25 @@
   </owl:Class>
   <owl:Class rdf:ID="FamilyEnterobacteriaceaeQuality">
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="FamilyQuality"/>
+      <owl:Class rdf:ID="OrderEnterobacterialesQuality"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="OrderEnterobacterialesQuality"/>
+      <owl:Class rdf:ID="FamilyQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="SpeciesSaccharomycesCerevisiaeQuality">
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="SpeciesQuality"/>
+      <owl:Class rdf:ID="GenusSaccharomycesQuality"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="GenusSaccharomycesQuality"/>
+      <owl:Class rdf:ID="SpeciesQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="SubphylumVertebrataQuality">
-    <rdfs:subClassOf rdf:resource="#SubphylumQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="PhylumChordataQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#SubphylumQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="OrderQuality">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -60,24 +60,24 @@
     <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="PhylumQuality">
-    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Quality inherent to an organism, a population, or some organic matter that allows a taxonomic discrimination at PHYLUM level.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="FamilyElephantidaeQuality">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="#FamilyQuality"/>
+      <owl:Class rdf:ID="SuperfamilyElephantoideaQuality"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="SuperfamilyElephantoideaQuality"/>
+      <owl:Class rdf:about="#FamilyQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="SpeciesCandidaAlbicansQuality">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="#SpeciesQuality"/>
+      <owl:Class rdf:ID="GenusCandidaQuality"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="GenusCandidaQuality"/>
+      <owl:Class rdf:about="#SpeciesQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="KingdomChromistaQuality">
@@ -86,15 +86,15 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#PhylumChordataQuality">
-    <rdfs:subClassOf rdf:resource="#PhylumQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="KingdomAnimaliaQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PhylumQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="ClassQuality">
+    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Quality inherent to an organism, a population, or some organic matter that allows a taxonomic discrimination at (taxonomic) CLASS level.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="SubclassQuality">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -102,21 +102,23 @@
     <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="SuborderQuality">
-    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Quality inherent to an organism, a population, or some organic matter that allows a taxonomic discrimination at SUBORDER  level.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="Insect">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >one insect</rdfs:comment>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://purl.org/biotop/dev#Animal">
             <rdfs:subClassOf>
               <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
                 <owl:someValuesFrom>
                   <owl:Class rdf:about="#KingdomAnimaliaQuality"/>
                 </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
               </owl:Restriction>
             </rdfs:subClassOf>
           </rdf:Description>
@@ -129,8 +131,6 @@
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >one insect</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:ID="SuperfamilyQuality">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -138,14 +138,12 @@
     <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="OrderPrimatesQuality">
-    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="ClassMammaliaQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="GreatApe">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >one great ape</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#Animal"/>
     <owl:equivalentClass>
       <owl:Restriction>
@@ -155,30 +153,30 @@
         <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
       </owl:Restriction>
     </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >one great ape</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:ID="SubfamilyDrosophilinaeQuality">
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="SubfamilyQuality"/>
+      <owl:Class rdf:ID="FamilyDrosophilidaeQuality"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="FamilyDrosophilidaeQuality"/>
+      <owl:Class rdf:ID="SubfamilyQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="OrderProboscideaQuality">
-    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#ClassMammaliaQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="ClassGammaProteobacteriaQuality">
-    <rdfs:subClassOf rdf:resource="#ClassQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="PhylumProteobacteriaQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#ClassQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="SaccharomycesCerevisiaeCell">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >one saccharomyces cerevisiae cell</rdfs:comment>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
@@ -190,19 +188,21 @@
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >one saccharomyces cerevisiae cell</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:ID="PhylumArthropodaQuality">
-    <rdfs:subClassOf rdf:resource="#PhylumQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#KingdomAnimaliaQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PhylumQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#GenusCandidaQuality">
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="GenusQuality"/>
+      <owl:Class rdf:ID="FamilySaccharomycetaceaeQuality"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="FamilySaccharomycetaceaeQuality"/>
+      <owl:Class rdf:ID="GenusQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="EscherichiaColiCell">
@@ -235,9 +235,9 @@
     </owl:equivalentClass>
   </owl:Class>
   <owl:Class rdf:about="#GenusQuality">
+    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Quality inherent to an organism, a population, or some organic matter that allows a taxonomic discrimination at GENUS level.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="Chimpanzee">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -267,20 +267,22 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="GenusPanQuality">
-    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#FamilyHominidaeQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#FamilyDrosophilidaeQuality">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="#FamilyQuality"/>
+      <owl:Class rdf:ID="OrderDipteraQuality"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="OrderDipteraQuality"/>
+      <owl:Class rdf:about="#FamilyQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="Primate">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >one primate</rdfs:comment>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
@@ -292,8 +294,6 @@
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >one primate</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:ID="SubkingdomQuality">
     <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
@@ -301,8 +301,6 @@
     >Quality inherent to an organism, a population, or some organic matter that allows a taxonomic discrimination at SUBKINGDOM level.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:ID="Mammal">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >one mammal</rdfs:comment>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
@@ -316,16 +314,18 @@
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >one mammal</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:ID="ClassSaccharomycetesQuality">
-    <rdfs:subClassOf rdf:resource="#ClassQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="SubphylumSaccharomycotinaQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#ClassQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#SuperfamilyElephantoideaQuality">
-    <rdfs:subClassOf rdf:resource="#SuperfamilyQuality"/>
     <rdfs:subClassOf rdf:resource="#OrderProboscideaQuality"/>
+    <rdfs:subClassOf rdf:resource="#SuperfamilyQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="AnimalCell">
     <owl:equivalentClass>
@@ -339,43 +339,43 @@
             <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
           </owl:Restriction>
           <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
             <owl:someValuesFrom>
               <owl:Class rdf:about="#KingdomAnimaliaQuality"/>
             </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
           </owl:Restriction>
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
   </owl:Class>
   <owl:Class rdf:ID="GenusElephasQuality">
-    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
     <rdfs:subClassOf rdf:resource="#FamilyElephantidaeQuality"/>
+    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="PhylumAscomycotaQuality">
-    <rdfs:subClassOf rdf:resource="#PhylumQuality"/>
     <rdfs:subClassOf rdf:resource="#KingdomFungiQuality"/>
+    <rdfs:subClassOf rdf:resource="#PhylumQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#ClassMammaliaQuality">
-    <rdfs:subClassOf rdf:resource="#ClassQuality"/>
     <rdfs:subClassOf rdf:resource="#SubphylumVertebrataQuality"/>
+    <rdfs:subClassOf rdf:resource="#ClassQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#ClassInsectaQuality">
-    <rdfs:subClassOf rdf:resource="#ClassQuality"/>
     <rdfs:subClassOf rdf:resource="#PhylumArthropodaQuality"/>
+    <rdfs:subClassOf rdf:resource="#ClassQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#GenusSaccharomycesQuality">
-    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#FamilySaccharomycetaceaeQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="SpeciesDrosophilaMelanogasterQuality">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="#SpeciesQuality"/>
+      <owl:Class rdf:ID="GenusDrosophilaQuality"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="GenusDrosophilaQuality"/>
+      <owl:Class rdf:about="#SpeciesQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="Vertebrate">
@@ -394,16 +394,16 @@
     </owl:equivalentClass>
   </owl:Class>
   <owl:Class rdf:about="#GenusDrosophilaQuality">
-    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
     <rdfs:subClassOf rdf:resource="#SubfamilyDrosophilinaeQuality"/>
+    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="Elephant">
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
-            <owl:someValuesFrom rdf:resource="#FamilyElephantidaeQuality"/>
             <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
+            <owl:someValuesFrom rdf:resource="#FamilyElephantidaeQuality"/>
           </owl:Restriction>
           <rdf:Description rdf:about="http://purl.org/biotop/dev#Animal"/>
         </owl:intersectionOf>
@@ -413,14 +413,14 @@
     >one elephant</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:ID="GenusHomoQuality">
-    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#FamilyHominidaeQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="GenusEscherichiaQuality">
-    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
     <rdfs:subClassOf rdf:resource="#FamilyEnterobacteriaceaeQuality"/>
+    <rdfs:subClassOf rdf:resource="#GenusQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="DrosophilaMelanogaster">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -443,10 +443,10 @@
         <owl:intersectionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://purl.org/biotop/dev#Animal"/>
           <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
             <owl:someValuesFrom>
               <owl:Class rdf:ID="SpeciesElephasMaximusQuality"/>
             </owl:someValuesFrom>
-            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
           </owl:Restriction>
         </owl:intersectionOf>
       </owl:Class>
@@ -455,12 +455,12 @@
     >one asian elephant</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="#OrderDipteraQuality">
-    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
     <rdfs:subClassOf rdf:resource="#ClassInsectaQuality"/>
+    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#SubphylumSaccharomycotinaQuality">
-    <rdfs:subClassOf rdf:resource="#SubphylumQuality"/>
     <rdfs:subClassOf rdf:resource="#PhylumAscomycotaQuality"/>
+    <rdfs:subClassOf rdf:resource="#SubphylumQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="KingdomVirusesQuality">
     <rdfs:subClassOf>
@@ -468,26 +468,26 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#SpeciesElephasMaximusQuality">
+    <rdfs:subClassOf rdf:resource="#GenusElephasQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#SpeciesQuality"/>
     </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#GenusElephasQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="SpeciesHomoSapiensQuality">
+    <rdfs:subClassOf rdf:resource="#GenusHomoQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#SpeciesQuality"/>
     </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#GenusHomoQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#PhylumProteobacteriaQuality">
-    <rdfs:subClassOf rdf:resource="#PhylumQuality"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#KingdomBacteriaQuality"/>
     </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PhylumQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#OrderEnterobacterialesQuality">
-    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
     <rdfs:subClassOf rdf:resource="#ClassGammaProteobacteriaQuality"/>
+    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#SpeciesQuality">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -495,12 +495,12 @@
     <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#SpeciesSimiaTroglodytesQuality">
-    <rdfs:subClassOf rdf:resource="#SpeciesQuality"/>
     <rdfs:subClassOf rdf:resource="#GenusPanQuality"/>
+    <rdfs:subClassOf rdf:resource="#SpeciesQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="OrderSaccharomycetalesQuality">
-    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
     <rdfs:subClassOf rdf:resource="#ClassSaccharomycetesQuality"/>
+    <rdfs:subClassOf rdf:resource="#OrderQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="KingdomPlantaeQuality">
     <rdfs:subClassOf>
@@ -508,28 +508,28 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#FamilyQuality">
+    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Quality inherent to an organism, a population, or some organic matter that allows a taxonomic discrimination at FAMILY level.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#TaxonQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#FamilySaccharomycetaceaeQuality">
-    <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
     <rdfs:subClassOf rdf:resource="#OrderSaccharomycetalesQuality"/>
+    <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="Arthropod">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >one arthropod</rdfs:comment>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
             <owl:someValuesFrom rdf:resource="#PhylumArthropodaQuality"/>
+            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
           </owl:Restriction>
           <rdf:Description rdf:about="http://purl.org/biotop/dev#Animal"/>
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >one arthropod</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="#KingdomBacteriaQuality">
     <rdfs:subClassOf>
@@ -542,8 +542,8 @@
         <owl:intersectionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://purl.org/biotop/dev#YeastCell"/>
           <owl:Restriction>
-            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
             <owl:someValuesFrom rdf:resource="#SpeciesCandidaAlbicansQuality"/>
+            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
           </owl:Restriction>
         </owl:intersectionOf>
       </owl:Class>
@@ -579,15 +579,15 @@
     >Quality inherent to an organism, a population, or some organic matter that allows a taxonomic discrimination at KINGDOM level.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="#FamilyHominidaeQuality">
-    <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
     <rdfs:subClassOf rdf:resource="#OrderPrimatesQuality"/>
+    <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
   </owl:Class>
   <owl:Class rdf:ID="KingdomProtozoaQuality">
     <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#SpeciesEscherichiaColiQuality">
-    <rdfs:subClassOf rdf:resource="#SpeciesQuality"/>
     <rdfs:subClassOf rdf:resource="#GenusEscherichiaQuality"/>
+    <rdfs:subClassOf rdf:resource="#SpeciesQuality"/>
   </owl:Class>
   <owl:Class rdf:about="#SubfamilyQuality">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -646,8 +646,8 @@
         <owl:intersectionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://purl.org/biotop/dev#Prokaryote"/>
           <owl:Restriction>
-            <owl:someValuesFrom rdf:resource="#KingdomArchaeaQuality"/>
             <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
+            <owl:someValuesFrom rdf:resource="#KingdomArchaeaQuality"/>
           </owl:Restriction>
         </owl:intersectionOf>
       </owl:Class>
