@@ -153,8 +153,9 @@
     </owl:equivalentClass>
   </owl:Class>
   <owl:Class rdf:ID="CarbonChain">
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CarbonHydrogenHydroxySubstructure"/>
+    </owl:disjointWith>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
@@ -197,6 +198,12 @@
     </owl:equivalentClass>
   </owl:Class>
   <owl:Class rdf:ID="mRNAMolecule">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="tRNAMolecule"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="rRNAMolecule"/>
+    </owl:disjointWith>
     <rdfs:label xml:lang="en">m RNA molecule</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="EntireRNAMolecule"/>
@@ -602,9 +609,6 @@
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Definition: Backbone of Pentoses.</rdfs:comment>
     <owl:disjointWith>
-      <owl:Class rdf:ID="AminoGroup"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
       <owl:Class rdf:ID="C6Chain"/>
     </owl:disjointWith>
     <rdfs:label xml:lang="en">C5 chain</rdfs:label>
@@ -617,11 +621,6 @@
     <owl:disjointWith>
       <owl:Class rdf:ID="CarbonHydrogenSubstructure"/>
     </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="CarbonHydrogenHydroxySubstructure"/>
-    </owl:disjointWith>
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
     <owl:disjointWith>
       <owl:Class rdf:about="#CarboxyGroup"/>
     </owl:disjointWith>
@@ -872,15 +871,12 @@
       </owl:Restriction>
     </rdfs:subClassOf>
     <owl:disjointWith>
-      <owl:Class rdf:about="#AminoGroup"/>
+      <owl:Class rdf:ID="AminoGroup"/>
     </owl:disjointWith>
     <rdfs:label xml:lang="en">carboxy group</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="FunctionalGroup"/>
     </rdfs:subClassOf>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#CarbonHydrogenHydroxySubstructure"/>
-    </owl:disjointWith>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:someValuesFrom>
@@ -904,8 +900,6 @@
     </rdfs:subClassOf>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Comment: (QCR) hasComponent exactly 1 CarbonAtom and hasComponent exactly 2 OxygenAtom and hasComponent max 1 HydrogenAtom and hasComponent only (CarbonAtom or OxygenAtom or HydrogenAtom)</rdfs:comment>
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
     <owl:disjointWith>
       <owl:Class rdf:about="#C6Chain"/>
     </owl:disjointWith>
@@ -1140,7 +1134,11 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
       <owl:Class rdf:about="#EntireMolecularEntity"/>
     </owl:disjointWith>
   </owl:Class>
-  <owl:Class rdf:ID="rRNAMolecule">
+  <owl:Class rdf:about="#rRNAMolecule">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#tRNAMolecule"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#mRNAMolecule"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#EntireRNAMolecule"/>
     </rdfs:subClassOf>
@@ -1350,21 +1348,8 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <owl:disjointWith rdf:resource="#Monomer"/>
   </owl:Class>
   <owl:Class rdf:about="#CarbonHydrogenHydroxySubstructure">
-    <owl:disjointWith rdf:resource="#C5Chain"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#C6Chain"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#AminoGroup"/>
-    </owl:disjointWith>
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Comment: (QCR) hasComponent exactly 1 CarbonAtom and hasComponent exactly 2 HydrogenAtom and hasComponent exactly 1 OxygenAtom and hasComponent only (CarbonAtom or HydrogenAtom or OxygenAtom)</rdfs:comment>
-    <owl:disjointWith rdf:resource="#CarboxyGroup"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#HydroxyGroup"/>
-    </owl:disjointWith>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
@@ -1375,6 +1360,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         </owl:someValuesFrom>
       </owl:Restriction>
     </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#CarbonChain"/>
     <rdfs:label xml:lang="en">carbon hydrogen hydroxy substructure</rdfs:label>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -1427,8 +1413,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     >(OBI 344)</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="#StructuralGroup">
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Definition: Structural groups are specific constellations of atoms within molecules which are relevant for the classification of those compounds, e.g. Pentoses have a 5-C-Chain, Hexoses have a 6-C-Chain.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="#MolecularGroup"/>
@@ -1933,11 +1917,6 @@ Old name: anatomical structure</rdfs:comment>
     >Comment: (QCR) hasComponent exactly 1 CarbonAtom and hasComponent exactly 1 HydrogenAtom and hasComponent only (CarbonAtom or HydrogenAtom)</rdfs:comment>
     <owl:disjointWith>
       <owl:Class rdf:about="#HydroxyGroup"/>
-    </owl:disjointWith>
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#AminoGroup"/>
     </owl:disjointWith>
     <rdfs:subClassOf rdf:resource="#StructuralGroup"/>
     <rdfs:label xml:lang="en">carbon hydrogen substructure</rdfs:label>
@@ -2587,8 +2566,6 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     >acquired pathological state</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="#C10-24Chain">
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
     <owl:disjointWith>
       <owl:Class rdf:about="#C6Chain"/>
     </owl:disjointWith>
@@ -2665,12 +2642,9 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     >Definition: Hydrophobic Chain (length generally 10 - 24 C atoms), such as constituting the "tail" of a fatty acid. May contain unsaturated segments.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="#EntireRNAMolecule">
+    <rdfs:label xml:lang="en">entire RNA molecule</rdfs:label>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >TODO: Does not accept covering axioms (Protege Bug) . Retry in new Protege version</owl:versionInfo>
-    <rdfs:label xml:lang="en">entire RNA molecule</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#EntireNucleicAcidMolecule"/>
-    </rdfs:subClassOf>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
@@ -2692,9 +2666,6 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#EntireDNAMolecule"/>
-    </owl:disjointWith>
   </owl:Class>
   <owl:Class rdf:about="#HydroxyGroup">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2728,11 +2699,8 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
       <owl:Class rdf:about="#FunctionalGroup"/>
     </rdfs:subClassOf>
     <rdfs:label xml:lang="en">hydroxy group</rdfs:label>
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Comment: (QCR) hasComponent exactly 1 OxygenAtom and hasComponent exactly 1 HydrogenAtom and hasComponent only (OxygenAtom or HydrogenAtom)</rdfs:comment>
-    <owl:disjointWith rdf:resource="#CarbonHydrogenHydroxySubstructure"/>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:allValuesFrom>
@@ -3135,8 +3103,6 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     >Definition: Functional groups are specific groups of atoms within molecules that are responsible for the characteristic chemical reactions of those molecules.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="#MolecularGroup"/>
     <rdfs:label xml:lang="en">functional group</rdfs:label>
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
   </owl:Class>
   <owl:Class rdf:ID="Fungus">
     <rdfs:subClassOf>
@@ -3277,21 +3243,13 @@ Old name: immaterial anatomical entity</rdfs:comment>
         <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
       </owl:Restriction>
     </rdfs:subClassOf>
-    <owl:disjointWith rdf:resource="#CarbonHydrogenSubstructure"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Definition: Amines are organic compounds and a type of functional group that contain nitrogen as the key atom. Isolated neutral or kationic amino group or amino group forming a peptide bond. NH2 or NH3+</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Comment: (QCR) hasComponent exactly 1 NitrogenAtom and hasComponent max 3 HydrogenAtom and hasComponent min 1 HydrogenAtom and hasComponent only (NitrogenAtom or HydrogenAtom)</rdfs:comment>
-    <owl:disjointWith rdf:resource="#C5Chain"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#C6Chain"/>
-    </owl:disjointWith>
     <owl:disjointWith rdf:resource="#HydroxyGroup"/>
     <rdfs:label xml:lang="en">amino group</rdfs:label>
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
     <owl:disjointWith rdf:resource="#CarboxyGroup"/>
-    <owl:disjointWith rdf:resource="#CarbonHydrogenHydroxySubstructure"/>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:allValuesFrom>
@@ -3412,7 +3370,9 @@ Old name: molecular entity</rdfs:comment>
     <rdfs:label xml:lang="en">aliphatic chain</rdfs:label>
     <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
   </owl:Class>
-  <owl:Class rdf:ID="tRNAMolecule">
+  <owl:Class rdf:about="#tRNAMolecule">
+    <owl:disjointWith rdf:resource="#rRNAMolecule"/>
+    <owl:disjointWith rdf:resource="#mRNAMolecule"/>
     <rdfs:subClassOf rdf:resource="#EntireRNAMolecule"/>
     <rdfs:label xml:lang="en">t RNA molecule</rdfs:label>
   </owl:Class>
@@ -3524,13 +3484,9 @@ Old name: molecular entity</rdfs:comment>
     >Comment: (QCR) hasComponent exactly 6 CarbonAtom</rdfs:comment>
     <owl:disjointWith rdf:resource="#CarbonHydrogenSubstructure"/>
     <owl:disjointWith rdf:resource="#CarboxyGroup"/>
-    <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</protege:subclassesDisjoint>
     <owl:disjointWith rdf:resource="#HydroxyGroup"/>
-    <owl:disjointWith rdf:resource="#CarbonHydrogenHydroxySubstructure"/>
     <rdfs:subClassOf rdf:resource="#CarbonChain"/>
     <owl:disjointWith rdf:resource="#C10-24Chain"/>
-    <owl:disjointWith rdf:resource="#AminoGroup"/>
   </owl:Class>
   <owl:Class rdf:about="#ArchaebacterialCell">
     <owl:disjointWith rdf:resource="#BacterialCell"/>
@@ -3566,8 +3522,6 @@ Old name: molecular entity</rdfs:comment>
     </owl:equivalentClass>
   </owl:Class>
   <owl:Class rdf:about="#EntireDNAMolecule">
-    <owl:disjointWith rdf:resource="#EntireRNAMolecule"/>
-    <rdfs:label xml:lang="en">entire DNA molecule</rdfs:label>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
@@ -3589,7 +3543,7 @@ Old name: molecular entity</rdfs:comment>
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <rdfs:subClassOf rdf:resource="#EntireNucleicAcidMolecule"/>
+    <rdfs:label xml:lang="en">entire DNA molecule</rdfs:label>
   </owl:Class>
   <owl:ObjectProperty rdf:about="#inheresIn">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
