@@ -247,14 +247,6 @@
       <rdf:Description rdf:about="http://purl.org/biotop/dev#Human">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >One human being</rdfs:comment>
-        <rdfs:subClassOf>
-          <owl:Restriction>
-            <owl:someValuesFrom>
-              <owl:Class rdf:ID="SpeciesHomoSapiensQuality"/>
-            </owl:someValuesFrom>
-            <owl:onProperty rdf:resource="http://purl.org/biotop/dev#hasInherence"/>
-          </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/dev#Animal"/>
         <owl:disjointWith rdf:resource="#GreatApe"/>
       </rdf:Description>
@@ -795,7 +787,7 @@
       <owl:Class rdf:about="#SpeciesQuality"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="#SpeciesHomoSapiensQuality">
+  <owl:Class rdf:ID="SpeciesHomoSapiensQuality">
     <rdfs:subClassOf>
       <owl:Class rdf:ID="GenusHomoQuality"/>
     </rdfs:subClassOf>
