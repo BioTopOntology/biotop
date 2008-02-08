@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns:biotop="http://purl.org/biotop/core/dev#"
     xmlns="http://purl.org/biotop/bfo/dev#"
+    xmlns:biotop="http://purl.org/biotop/core/dev#"
     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
     xmlns:bfol="http://www.ifomis.org/bfo/1.1/light#"
     xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
@@ -51,11 +51,7 @@
     <owl:imports rdf:resource="http://purl.org/biotop/core/dev"/>
   </owl:Ontology>
   <rdf:Description rdf:about="http://purl.org/biotop/core/dev#Function">
-    <owl:equivalentClass>
-      <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/light/snap#Function">
-        <owl:equivalentClass rdf:resource="http://purl.org/biotop/core/dev#Function"/>
-      </rdf:Description>
-    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#Function"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/biotop/core/dev#Entity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/biotop/core/dev#GeographicArea">
