@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns="http://purl.org/biotop/bfo/dev#"
     xmlns:biotop="http://purl.org/biotop/core/dev#"
+    xmlns="http://purl.org/biotop/bfo/dev#"
     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
     xmlns:bfol="http://www.ifomis.org/bfo/1.1/light#"
     xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
@@ -50,31 +50,47 @@
     >application/rdf+xml</dc:format>
     <owl:imports rdf:resource="http://purl.org/biotop/core/dev"/>
   </owl:Ontology>
-  <rdf:Description rdf:about="http://purl.org/biotop/core/dev#Function">
-    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#Function"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/core/dev#Entity"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/biotop/core/dev#GeographicArea">
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#IndependentContinuant"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/biotop/core/dev#Process">
-    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/span#Process"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/biotop/core/dev#MaterialEntity">
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#IndependentContinuant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/biotop/core/dev#Process">
+    <owl:equivalentClass>
+      <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/light/span#Process">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/core/dev#Process"/>
+      </rdf:Description>
+    </owl:equivalentClass>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/light/snap#Role">
+    <owl:equivalentClass>
+      <rdf:Description rdf:about="http://purl.org/biotop/core/dev#Role">
+        <owl:equivalentClass rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#Role"/>
+      </rdf:Description>
+    </owl:equivalentClass>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/biotop/core/dev#Function">
+    <owl:equivalentClass>
+      <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/light/snap#Function">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/core/dev#Function"/>
+      </rdf:Description>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://purl.org/biotop/core/dev#Entity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/biotop/core/dev#ImmaterialEntity">
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#IndependentContinuant"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/biotop/core/dev#Quality">
-    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#Quality"/>
+    <owl:equivalentClass>
+      <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/light/snap#Quality">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/core/dev#Quality"/>
+      </rdf:Description>
+    </owl:equivalentClass>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/biotop/core/dev#InformationEntity">
     <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#GenericallyDependentContinuant"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/biotop/core/dev#Role">
-    <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/light/snap#Role"/>
-  </rdf:Description>
 </rdf:RDF>
 
-<!-- Created with Protege (with OWL Plugin 3.4, Build 125)  http://protege.stanford.edu -->
+<!-- Created with Protege (with OWL Plugin 3.4, Build 126)  http://protege.stanford.edu -->
