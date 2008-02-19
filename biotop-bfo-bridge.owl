@@ -4,25 +4,35 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY biotop "http://purl.org/biotop/core/dev#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY bfol "http://www.ifomis.org/bfo/1.1/light#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rol "http://www.ifomis.org/obo/ro/1.0/light#" >
+    <!ENTITY snapl "http://www.ifomis.org/bfo/1.1/light/snap#" >
+    <!ENTITY spanl "http://www.ifomis.org/bfo/1.1/light/span#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
     <!ENTITY protege-dc "http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/biotop/dev#"
-     xml:base="http://purl.org/biotop/dev"
+<rdf:RDF xmlns="http://purl.org/biotop/bfo-bridge/dev#"
+     xml:base="http://purl.org/biotop/bfo-bridge/dev"
+     xmlns:biotop="http://purl.org/biotop/core/dev#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:bfol="http://www.ifomis.org/bfo/1.1/light#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:snapl="http://www.ifomis.org/bfo/1.1/light/snap#"
+     xmlns:spanl="http://www.ifomis.org/bfo/1.1/light/span#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rol="http://www.ifomis.org/obo/ro/1.0/light#">
     <owl:Ontology rdf:about="">
         <owl:versionInfo rdf:datatype="&xsd;string">dev</owl:versionInfo>
         <dc:title rdf:datatype="&xsd;string">BioTop</dc:title>
@@ -41,7 +51,7 @@
         <dc:format rdf:datatype="&xsd;string"
             >application/rdf+xml</dc:format>
         <dc:identifier rdf:datatype="&xsd;string"
-            >http://purl.org/biotop/bfo/dev</dc:identifier>
+            >http://purl.org/biotop/bfo-bridge/dev</dc:identifier>
         <dc:source rdf:datatype="&xsd;string"
             >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
         <dc:source rdf:datatype="&xsd;string"
@@ -49,6 +59,45 @@
         <dc:source rdf:datatype="&xsd;string"
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <owl:imports rdf:resource="http://purl.org/biotop/bfo/dev"/>
+        <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1/light"/>
+        <owl:imports rdf:resource="http://www.ifomis.org/obo/ro/1.0/light"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/core/dev"/>
     </owl:Ontology>
+    <rdf:Description rdf:about="&biotop;Function">
+        <owl:equivalentClass rdf:resource="&snapl;Function"/>
+        <rdfs:subClassOf rdf:resource="&biotop;Entity"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&biotop;GeographicArea">
+        <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&biotop;ImmaterialEntity">
+        <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&biotop;InformationEntity">
+        <rdfs:subClassOf rdf:resource="&snapl;GenericallyDependentContinuant"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&biotop;MaterialEntity">
+        <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&biotop;Process">
+        <owl:equivalentClass rdf:resource="&spanl;Process"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&biotop;Quality">
+        <owl:equivalentClass rdf:resource="&snapl;Quality"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&biotop;Role">
+        <owl:equivalentClass rdf:resource="&snapl;Role"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&snapl;Function">
+        <owl:equivalentClass rdf:resource="&biotop;Function"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&snapl;Quality">
+        <owl:equivalentClass rdf:resource="&biotop;Quality"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&snapl;Role">
+        <owl:equivalentClass rdf:resource="&biotop;Role"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&spanl;Process">
+        <owl:equivalentClass rdf:resource="&biotop;Process"/>
+    </rdf:Description>
 </rdf:RDF>

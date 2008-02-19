@@ -4,6 +4,7 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY biotop "http://purl.org/biotop/core/dev#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -13,8 +14,9 @@
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/biotop/dev#"
-     xml:base="http://purl.org/biotop/dev"
+<rdf:RDF xmlns="http://purl.org/biotop/dolce-bridge/dev#"
+     xml:base="http://purl.org/biotop/dolce-bridge/dev"
+     xmlns:biotop="http://purl.org/biotop/core/dev#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
@@ -41,7 +43,7 @@
         <dc:format rdf:datatype="&xsd;string"
             >application/rdf+xml</dc:format>
         <dc:identifier rdf:datatype="&xsd;string"
-            >http://purl.org/biotop/dev</dc:identifier>
+            >http://purl.org/biotop/bfo-bridge/dev</dc:identifier>
         <dc:source rdf:datatype="&xsd;string"
             >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
         <dc:source rdf:datatype="&xsd;string"
@@ -49,7 +51,7 @@
         <dc:source rdf:datatype="&xsd;string"
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <owl:imports rdf:resource="http://purl.org/biotop/bfo-bridge/dev"/>
-        <owl:imports rdf:resource="http://purl.org/biotop/dolce-bridge/dev"/>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DLP_397.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/core/dev"/>
     </owl:Ontology>
 </rdf:RDF>
