@@ -286,7 +286,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:Class rdf:ID="Atom">
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <owl:disjointWith rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Atom"/>
         <owl:disjointWith rdf:resource="#PolyMolecularCompositeEntity"/>
         <owl:disjointWith rdf:resource="#SubatomicParticle"/>
         <rdfs:label xml:lang="en">atom</rdfs:label>
@@ -3291,7 +3290,6 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     <owl:Class rdf:ID="SubatomicParticle">
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <owl:disjointWith rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#SubatomicParticle"/>
         <owl:disjointWith rdf:resource="#Atom"/>
         <rdfs:label xml:lang="en"
             >subatomic particle</rdfs:label>
