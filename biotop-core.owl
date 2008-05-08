@@ -103,7 +103,7 @@
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#adjacentTo"/>
+        <owl:equivalentProperty rdf:resource="&rol;adjacentTo"/>
     </owl:ObjectProperty>
     
 
@@ -116,7 +116,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf hasAgent</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#participatesIn"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#agentIn"/>
+        <owl:equivalentProperty rdf:resource="&rol;agentIn"/>
     </owl:ObjectProperty>
     
 
@@ -175,7 +175,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf contains</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#containedIn"/>
+        <owl:equivalentProperty rdf:resource="&rol;containedIn"/>
     </owl:ObjectProperty>
     
 
@@ -190,7 +190,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf containedIn</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#locationOf"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#contains"/>
+        <owl:equivalentProperty rdf:resource="&rol;contains"/>
     </owl:ObjectProperty>
     
 
@@ -225,7 +225,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf derivesFrom</rdfs:comment>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#derivedInto"/>
+        <owl:equivalentProperty rdf:resource="&rol;derivedInto"/>
     </owl:ObjectProperty>
     
 
@@ -239,7 +239,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
             >Derivation is a relation holding between non-identicals. More precisely, it holds between distinct material continuants when one succeeds the other across a temporal divide in such a way that at least a biologically significant portion of the matter of the earlier continuant is inherited by the later. Thus we will have axioms to the effect that from c derivesFrom c1 we can infer that c and c1 are not identical and that there is some instant of time t such that c1 exists only prior to and c only subsequent to t. We will also be able to infer that the spatial region occupied by c as it begins to exist at t overlaps with the spatial region occupied by c1 as it ceases to exist in the same instant.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf derivedInto</rdfs:comment>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#derivesFrom"/>
+        <owl:equivalentProperty rdf:resource="&rol;derivesFrom"/>
     </owl:ObjectProperty>
     
 
@@ -280,7 +280,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf agentIn</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasParticipant"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#hasAgent"/>
+        <owl:equivalentProperty rdf:resource="&rol;hasAgent"/>
     </owl:ObjectProperty>
     
 
@@ -340,7 +340,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf partOf</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#locationOf"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#hasPart"/>
+        <owl:equivalentProperty rdf:resource="&rol;hasPart"/>
     </owl:ObjectProperty>
     
 
@@ -353,7 +353,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
             >HasParticipant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane hasParticipant this particular sample of hemoglobin at this particular time.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf participatesIn</rdfs:comment>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#hasParticipant"/>
+        <owl:equivalentProperty rdf:resource="&rol;hasParticipant"/>
     </owl:ObjectProperty>
     
 
@@ -375,7 +375,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf properPartOf</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasPart"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#hasProperPart"/>
+        <owl:equivalentProperty rdf:resource="&rol;hasProperPart"/>
     </owl:ObjectProperty>
     
 
@@ -422,7 +422,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf locationOf</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#locatedIn"/>
+        <owl:equivalentProperty rdf:resource="&rol;locatedIn"/>
     </owl:ObjectProperty>
     
 
@@ -438,7 +438,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf locatedIn</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#locationOf"/>
+        <owl:equivalentProperty rdf:resource="&rol;locationOf"/>
     </owl:ObjectProperty>
     
 
@@ -454,7 +454,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf hasPart</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#partOf"/>
+        <owl:equivalentProperty rdf:resource="&rol;partOf"/>
     </owl:ObjectProperty>
     
 
@@ -466,7 +466,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf hasParticipant</rdfs:comment>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#participatesIn"/>
+        <owl:equivalentProperty rdf:resource="&rol;participatesIn"/>
     </owl:ObjectProperty>
     
 
@@ -480,7 +480,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
             >inverseOf precedes</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >p precededBy p&#39; if and only if: given any process p at a time t, there is some process p&#39; at time t&#39;, and t&#39; is earlier than t.</rdfs:comment>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#precededBy"/>
+        <owl:equivalentProperty rdf:resource="&rol;precededBy"/>
     </owl:ObjectProperty>
     
 
@@ -493,7 +493,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf precededBy</rdfs:comment>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#precedes"/>
+        <owl:equivalentProperty rdf:resource="&rol;precedes"/>
     </owl:ObjectProperty>
     
 
@@ -508,7 +508,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf hasProperPart</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#partOf"/>
-        <owl:equivalentProperty rdf:resource="http://www.ifomis.org/obo/ro/1.0/light#properPartOf"/>
+        <owl:equivalentProperty rdf:resource="&rol;properPartOf"/>
     </owl:ObjectProperty>
     
 
@@ -600,103 +600,103 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#adjacentTo -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#adjacentTo"/>
+    <owl:ObjectProperty rdf:about="&rol;adjacentTo"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#agentIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#agentIn"/>
+    <owl:ObjectProperty rdf:about="&rol;agentIn"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#containedIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#containedIn"/>
+    <owl:ObjectProperty rdf:about="&rol;containedIn"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#contains -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#contains"/>
+    <owl:ObjectProperty rdf:about="&rol;contains"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#derivedInto -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#derivedInto"/>
+    <owl:ObjectProperty rdf:about="&rol;derivedInto"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#derivesFrom -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#derivesFrom"/>
+    <owl:ObjectProperty rdf:about="&rol;derivesFrom"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#hasAgent -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#hasAgent"/>
+    <owl:ObjectProperty rdf:about="&rol;hasAgent"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#hasPart -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#hasPart"/>
+    <owl:ObjectProperty rdf:about="&rol;hasPart"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#hasParticipant -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#hasParticipant"/>
+    <owl:ObjectProperty rdf:about="&rol;hasParticipant"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#hasProperPart -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#hasProperPart"/>
+    <owl:ObjectProperty rdf:about="&rol;hasProperPart"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#locatedIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#locatedIn"/>
+    <owl:ObjectProperty rdf:about="&rol;locatedIn"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#locationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#locationOf"/>
+    <owl:ObjectProperty rdf:about="&rol;locationOf"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#partOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#partOf"/>
+    <owl:ObjectProperty rdf:about="&rol;partOf"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#participatesIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#participatesIn"/>
+    <owl:ObjectProperty rdf:about="&rol;participatesIn"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#precededBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#precededBy"/>
+    <owl:ObjectProperty rdf:about="&rol;precededBy"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#precedes -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#precedes"/>
+    <owl:ObjectProperty rdf:about="&rol;precedes"/>
     
 
 
     <!-- http://www.ifomis.org/obo/ro/1.0/light#properPartOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.ifomis.org/obo/ro/1.0/light#properPartOf"/>
+    <owl:ObjectProperty rdf:about="&rol;properPartOf"/>
     
 
 
@@ -746,17 +746,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Action -->
 
     <owl:Class rdf:about="#Action">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasAgent"/>
-                        <owl:someValuesFrom rdf:resource="#Entity"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An action is a processual entity that that is promoted by an agent, having a clear role distinction between agent and patient</rdfs:comment>
     </owl:Class>
@@ -2140,7 +2129,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Disposition -->
 
     <owl:Class rdf:about="#Disposition">
-        <rdfs:subClassOf rdf:resource="#Entity"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#Function"/>
         <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
         <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
@@ -2388,12 +2377,6 @@ process) R under conditions C.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Entity -->
-
-    <owl:Class rdf:about="#Entity"/>
-    
-
-
     <!-- http://purl.org/biotop/core/dev#EnzymeRole -->
 
     <owl:Class rdf:about="#EnzymeRole">
@@ -2625,28 +2608,7 @@ process) R under conditions C.</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Function -->
 
     <owl:Class rdf:about="#Function">
-        <rdfs:subClassOf rdf:resource="#Entity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#Entity"/>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="#Disposition"/>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="#ProcessualEntity"/>
-                            </owl:Class>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="#Quality"/>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasRealization"/>
@@ -2997,23 +2959,13 @@ kinds of contexts that it is made for.</rdfs:comment>
         <rdfs:label rdf:datatype="&xsd;string"></rdfs:label>
         <rdfs:label rdf:datatype="&xsd;string"
             >not (hasInherence some PhysicalMass)</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Entity"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#PhysicalVolume"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#locatedIn"/>
-                        <owl:someValuesFrom rdf:resource="#Entity"/>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
@@ -3044,7 +2996,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     <owl:Class rdf:about="#ImmaterialPhysicalEntity">
         <rdfs:label xml:lang="en"
             >immaterial biological entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Entity"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
@@ -3511,7 +3463,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#Entity"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A material object that has a mass and a volume.  Material Independent Continuants may have Immaterial Independent Continuants as parts (e.g. Heart and Heart Ventricle)</rdfs:comment>
     </owl:Class>
@@ -4460,16 +4412,6 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#PreventionAction">
         <rdfs:subClassOf rdf:resource="#Action"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasPatient"/>
-                        <owl:someValuesFrom rdf:resource="#Entity"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasAgent"/>
                 <owl:allValuesFrom>
@@ -4533,15 +4475,10 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#ProcessualEntity">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#Entity"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasParticipant"/>
-                        <owl:someValuesFrom rdf:resource="#Entity"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An Occurrent entity consisting of a characteristic spatial shape inhering in some arrangement of other occurrent entities. Processual contexts are characteristically entities at or in which other occurrent entities can be located or occur.</rdfs:comment>
@@ -4702,7 +4639,7 @@ Old name: molecular entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Quality -->
 
     <owl:Class rdf:about="#Quality">
-        <rdfs:subClassOf rdf:resource="#Entity"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#Role"/>
         <owl:disjointWith rdf:resource="#SpatialRegion"/>
         <owl:disjointWith rdf:resource="#TemporalEntity"/>
@@ -4782,7 +4719,7 @@ Old name: molecular entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Role -->
 
     <owl:Class rdf:about="#Role">
-        <rdfs:subClassOf rdf:resource="#Entity"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#SpatialRegion"/>
         <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -4861,7 +4798,7 @@ contexts.</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#SpatialRegion -->
 
     <owl:Class rdf:about="#SpatialRegion">
-        <rdfs:subClassOf rdf:resource="#Entity"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An independent continuant entity that is neither a bearer of qualities nor ingeres in any other entity (snap:SpatialRegion)</rdfs:comment>
@@ -5060,7 +4997,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#TemporalEntity -->
 
     <owl:Class rdf:about="#TemporalEntity">
-        <rdfs:subClassOf rdf:resource="#Entity"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Occurrent that is not a processual entity. It corresponds to the disjunction of span:TemporalRegion and span:SpatiotemporalRegion</rdfs:comment>
     </owl:Class>
@@ -5423,4 +5360,10 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
 </rdf:RDF>
