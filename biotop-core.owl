@@ -746,6 +746,17 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Action -->
 
     <owl:Class rdf:about="#Action">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasAgent"/>
+                        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An action is a processual entity that that is promoted by an agent, having a clear role distinction between agent and patient</rdfs:comment>
     </owl:Class>
