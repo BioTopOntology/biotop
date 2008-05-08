@@ -2140,7 +2140,6 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Disposition -->
 
     <owl:Class rdf:about="#Disposition">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#Function"/>
         <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
         <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
@@ -2619,7 +2618,6 @@ process) R under conditions C.</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Function -->
 
     <owl:Class rdf:about="#Function">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasRealization"/>
@@ -2970,7 +2968,6 @@ kinds of contexts that it is made for.</rdfs:comment>
         <rdfs:label rdf:datatype="&xsd;string"></rdfs:label>
         <rdfs:label rdf:datatype="&xsd;string"
             >not (hasInherence some PhysicalMass)</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
@@ -3007,7 +3004,6 @@ kinds of contexts that it is made for.</rdfs:comment>
     <owl:Class rdf:about="#ImmaterialPhysicalEntity">
         <rdfs:label xml:lang="en"
             >immaterial biological entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
@@ -3474,7 +3470,6 @@ Old name: immaterial anatomical entity</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A material object that has a mass and a volume.  Material Independent Continuants may have Immaterial Independent Continuants as parts (e.g. Heart and Heart Ventricle)</rdfs:comment>
     </owl:Class>
@@ -4650,7 +4645,7 @@ Old name: molecular entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Quality -->
 
     <owl:Class rdf:about="#Quality">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Quality"/>
         <owl:disjointWith rdf:resource="#Role"/>
         <owl:disjointWith rdf:resource="#SpatialRegion"/>
         <owl:disjointWith rdf:resource="#TemporalEntity"/>
@@ -4730,7 +4725,7 @@ Old name: molecular entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Role -->
 
     <owl:Class rdf:about="#Role">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&snapl;Role"/>
         <owl:disjointWith rdf:resource="#SpatialRegion"/>
         <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -4809,7 +4804,6 @@ contexts.</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#SpatialRegion -->
 
     <owl:Class rdf:about="#SpatialRegion">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An independent continuant entity that is neither a bearer of qualities nor ingeres in any other entity (snap:SpatialRegion)</rdfs:comment>
@@ -5008,7 +5002,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#TemporalEntity -->
 
     <owl:Class rdf:about="#TemporalEntity">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Occurrent that is not a processual entity. It corresponds to the disjunction of span:TemporalRegion and span:SpatiotemporalRegion</rdfs:comment>
     </owl:Class>
@@ -5371,6 +5364,18 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/light/snap#Quality -->
+
+    <owl:Class rdf:about="&snapl;Quality"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/light/snap#Role -->
+
+    <owl:Class rdf:about="&snapl;Role"/>
     
 
 
