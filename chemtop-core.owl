@@ -1,19 +1,16 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns="http://purl.org/biotop/core/dev#"
+    xmlns="http://purl.org/chemtop/core/dev#"
     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-    xmlns:bfol="http://www.ifomis.org/bfo/1.1/light#"
+    xmlns:chemtop="http://purl.org/chemtop/core/dev#"
     xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:snapl="http://www.ifomis.org/bfo/1.1/light/snap#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:spanl="http://www.ifomis.org/bfo/1.1/light/span#"
-    xmlns:rol="http://www.ifomis.org/obo/ro/1.0/light#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="http://purl.org/biotop/core/dev">
+  xml:base="http://purl.org/chemtop/core/dev">
   <owl:Ontology rdf:about="">
     <dc:language rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >en</dc:language>
@@ -45,6 +42,7 @@
     >Elena Beisswanger</dc:creator>
     <dc:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >University Hospital Freiburg - Medical Informatics Department</dc:publisher>
+    <owl:imports rdf:resource="http://purl.org/biotop/core/dev"/>
   </owl:Ontology>
   <owl:Class rdf:ID="tRNAMolecule">
     <rdfs:label xml:lang="en">t RNA molecule</rdfs:label>
@@ -76,12 +74,12 @@
               </owl:Class>
             </owl:allValuesFrom>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:ID="hasComponent"/>
+              <owl:ObjectProperty rdf:ID="hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom>
               <owl:Class rdf:about="#Deoxyribose"/>
@@ -92,7 +90,7 @@
               <owl:Class rdf:about="#HeterocyclicBase"/>
             </owl:someValuesFrom>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
@@ -100,7 +98,7 @@
               <owl:Class rdf:about="#Phosphate"/>
             </owl:someValuesFrom>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
         </owl:intersectionOf>
@@ -211,7 +209,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:ID="hasGrain"/>
+          <owl:ObjectProperty rdf:ID="hasGranularPart"/>
         </owl:onProperty>
         <owl:someValuesFrom>
           <owl:Class>
@@ -244,11 +242,11 @@
       <owl:Class rdf:ID="AminoGroup"/>
     </owl:disjointWith>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 1 OxygenAtom and hasComponent exactly 1 HydrogenAtom and hasComponent only (OxygenAtom or HydrogenAtom)</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 1 OxygenAtom and hasComponentPart exactly 1 HydrogenAtom and hasComponentPart only (OxygenAtom or HydrogenAtom)</rdfs:comment>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom>
           <owl:Class rdf:ID="OxygenAtom"/>
@@ -261,7 +259,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom>
           <owl:Class rdf:ID="HydrogenAtom"/>
@@ -273,7 +271,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:allValuesFrom>
           <owl:Class>
@@ -328,7 +326,7 @@
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:allValuesFrom>
               <owl:Class rdf:about="#Atom"/>
@@ -383,7 +381,7 @@
       <owl:Class rdf:about="#C5Chain"/>
     </owl:disjointWith>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 1 CarbonAtom and hasComponent exactly 2 OxygenAtom and hasComponent max 1 HydrogenAtom and hasComponent only (CarbonAtom or OxygenAtom or HydrogenAtom)</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 1 CarbonAtom and hasComponentPart exactly 2 OxygenAtom and hasComponentPart max 1 HydrogenAtom and hasComponentPart only (CarbonAtom or OxygenAtom or HydrogenAtom)</rdfs:comment>
     <rdfs:label xml:lang="en">carboxy group</rdfs:label>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -391,7 +389,7 @@
           <owl:Class rdf:about="#OxygenAtom"/>
         </owl:someValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -406,7 +404,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:allValuesFrom>
           <owl:Class>
@@ -422,7 +420,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom>
           <owl:Class rdf:about="#CarbonAtom"/>
@@ -442,7 +440,7 @@
           <owl:Class rdf:about="#HydrogenAtom"/>
         </owl:someValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -456,7 +454,7 @@
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:allValuesFrom>
               <owl:Class rdf:ID="AminoAcidMonomer"/>
@@ -467,7 +465,7 @@
               <owl:Class rdf:about="#AminoAcidMonomer"/>
             </owl:someValuesFrom>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
         </owl:intersectionOf>
@@ -487,7 +485,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom>
           <owl:Class rdf:about="#NitrogenAtom"/>
@@ -496,7 +494,7 @@
     </rdfs:subClassOf>
     <owl:disjointWith rdf:resource="#HydroxyGroup"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 1 NitrogenAtom and hasComponent max 3 HydrogenAtom and hasComponent min 1 HydrogenAtom and hasComponent only (NitrogenAtom or HydrogenAtom)</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 1 NitrogenAtom and hasComponentPart max 3 HydrogenAtom and hasComponentPart min 1 HydrogenAtom and hasComponentPart only (NitrogenAtom or HydrogenAtom)</rdfs:comment>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:allValuesFrom>
@@ -508,7 +506,7 @@
           </owl:Class>
         </owl:allValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -524,7 +522,7 @@
           <owl:Class rdf:about="#HydrogenAtom"/>
         </owl:someValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -552,7 +550,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom rdf:resource="#AminoGroup"/>
       </owl:Restriction>
@@ -566,12 +564,12 @@
       <owl:Restriction>
         <owl:someValuesFrom rdf:resource="#CarboxyGroup"/>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) ro:hasPart some CarbonHydrogenSubstructure and ((hasComponent myx 2 CarboxyGroup) and (hasComponent min 1 CarboxyGroup) and (hasComponent exactly 1 AminoGroup)) or ((hasComponent max 2 AminoGroup) and (hasComponent min 1 AminoGroup) and (hasComponent exactly 1 CarboxyGroup))</rdfs:comment>
+    >Comment: (QCR) ro:hasPart some CarbonHydrogenSubstructure and ((hasComponentPart myx 2 CarboxyGroup) and (hasComponentPart min 1 CarboxyGroup) and (hasComponentPart exactly 1 AminoGroup)) or ((hasComponentPart max 2 AminoGroup) and (hasComponentPart min 1 AminoGroup) and (hasComponentPart exactly 1 CarboxyGroup))</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:ID="CarbonChain">
     <owl:disjointWith>
@@ -588,12 +586,12 @@
               <owl:Class rdf:about="#CarbonAtom"/>
             </owl:allValuesFrom>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom>
               <owl:Class rdf:about="#CarbonAtom"/>
@@ -612,7 +610,7 @@
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:allValuesFrom>
               <owl:Class>
@@ -654,7 +652,7 @@
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:allValuesFrom>
               <owl:Class rdf:about="#Nucleotide"/>
@@ -662,7 +660,7 @@
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom>
               <owl:Class rdf:about="#Nucleotide"/>
@@ -680,7 +678,7 @@
   </owl:Class>
   <owl:Class rdf:ID="Pentose">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 1 C5Chain</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 1 C5Chain</rdfs:comment>
     <owl:disjointWith>
       <owl:Class rdf:ID="Hexose"/>
     </owl:disjointWith>
@@ -722,12 +720,12 @@
               </owl:Class>
             </owl:allValuesFrom>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom>
               <owl:Class rdf:about="#OxygenAtom"/>
@@ -735,7 +733,7 @@
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom>
               <owl:Class rdf:about="#PhosphorusAtom"/>
@@ -874,14 +872,14 @@
           <owl:Class rdf:about="#SubatomicParticle"/>
         </owl:allValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom>
           <owl:Class rdf:about="#SubatomicParticle"/>
@@ -905,14 +903,14 @@
           </owl:Class>
         </owl:allValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasGrain"/>
+          <owl:ObjectProperty rdf:about="#hasGranularPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasGrain"/>
+          <owl:ObjectProperty rdf:about="#hasGranularPart"/>
         </owl:onProperty>
         <owl:someValuesFrom>
           <owl:Class>
@@ -961,12 +959,12 @@
           <owl:Restriction>
             <owl:allValuesFrom rdf:resource="#Deoxyribonucleotide"/>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom rdf:resource="#Deoxyribonucleotide"/>
           </owl:Restriction>
@@ -995,7 +993,7 @@
                   </owl:Class>
                 </owl:allValuesFrom>
                 <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#hasComponent"/>
+                  <owl:ObjectProperty rdf:about="#hasComponentPart"/>
                 </owl:onProperty>
               </owl:Restriction>
               <owl:Restriction>
@@ -1003,12 +1001,12 @@
                   <owl:Class rdf:about="#AliphaticMediumChainStructure"/>
                 </owl:someValuesFrom>
                 <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#hasComponent"/>
+                  <owl:ObjectProperty rdf:about="#hasComponentPart"/>
                 </owl:onProperty>
               </owl:Restriction>
               <owl:Restriction>
                 <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#hasComponent"/>
+                  <owl:ObjectProperty rdf:about="#hasComponentPart"/>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="#CarboxyGroup"/>
               </owl:Restriction>
@@ -1029,7 +1027,7 @@
     </rdfs:subClassOf>
     <rdfs:label xml:lang="en">nucleotide</rdfs:label>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 1 HeterocyclicBase and hasComponent exactly 1 Phosphate and hasComponent only (Phosphate or Ribose or HeterocyclicBase) and hasComponent exactly 1 Pentose</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 1 HeterocyclicBase and hasComponentPart exactly 1 Phosphate and hasComponentPart only (Phosphate or Ribose or HeterocyclicBase) and hasComponentPart exactly 1 Pentose</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="#HydrogenAtom">
     <owl:disjointWith>
@@ -1073,7 +1071,7 @@ Old name: molecular entity</rdfs:comment>
     >Definition: Mereological Sum of multiple grains of the same sort without clear identity and unity criteria.</rdfs:comment>
     <rdfs:label xml:lang="en">collective material entity</rdfs:label>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >removed for performance: hasGrain some MaterialIndependentContinuant</rdfs:label>
+    >removed for performance: hasGranularPart some MaterialIndependentContinuant</rdfs:label>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >The fuzzyness of this class is due to the "same sort" criterion.</rdfs:comment>
   </owl:Class>
@@ -1094,19 +1092,19 @@ Old name: molecular entity</rdfs:comment>
               </owl:Class>
             </owl:allValuesFrom>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
             <owl:someValuesFrom rdf:resource="#HeterocyclicBase"/>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
             <owl:someValuesFrom rdf:resource="#Phosphate"/>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
@@ -1114,7 +1112,7 @@ Old name: molecular entity</rdfs:comment>
               <owl:Class rdf:about="#Ribose"/>
             </owl:someValuesFrom>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
         </owl:intersectionOf>
@@ -1135,7 +1133,7 @@ Old name: molecular entity</rdfs:comment>
           </owl:Class>
         </owl:allValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -1150,7 +1148,7 @@ Old name: molecular entity</rdfs:comment>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom>
           <owl:Class rdf:about="#OxygenAtom"/>
@@ -1161,7 +1159,7 @@ Old name: molecular entity</rdfs:comment>
       <owl:Restriction>
         <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -1223,13 +1221,13 @@ Old name: molecular entity</rdfs:comment>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:allValuesFrom rdf:resource="#Ribonucleotide"/>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom rdf:resource="#Ribonucleotide"/>
           </owl:Restriction>
@@ -1249,7 +1247,7 @@ Old name: compound of collections</rdfs:comment>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
       </owl:Restriction>
@@ -1258,7 +1256,7 @@ Old name: compound of collections</rdfs:comment>
       <owl:Restriction>
         <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -1328,7 +1326,7 @@ Old name: compound of collections</rdfs:comment>
     <rdfs:subClassOf rdf:resource="#CarbonChain"/>
     <owl:disjointWith rdf:resource="#HydroxyGroup"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 5 CarbonAtom</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 5 CarbonAtom</rdfs:comment>
     <owl:disjointWith rdf:resource="#CarboxyGroup"/>
     <owl:disjointWith rdf:resource="#C10-24Chain"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1409,7 +1407,7 @@ Old name: compound of collections</rdfs:comment>
       <owl:Class rdf:about="#CarbonHydrogenSubstructure"/>
     </owl:disjointWith>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 1 CarbonAtom and hasComponent exactly 2 HydrogenAtom and hasComponent exactly 1 OxygenAtom and hasComponent only (CarbonAtom or HydrogenAtom or OxygenAtom)</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 1 CarbonAtom and hasComponentPart exactly 2 HydrogenAtom and hasComponentPart exactly 1 OxygenAtom and hasComponentPart only (CarbonAtom or HydrogenAtom or OxygenAtom)</rdfs:comment>
     <owl:disjointWith rdf:resource="#CarbonChain"/>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -1417,14 +1415,14 @@ Old name: compound of collections</rdfs:comment>
           <owl:Class rdf:about="#OxygenAtom"/>
         </owl:someValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom rdf:resource="#CarbonAtom"/>
       </owl:Restriction>
@@ -1432,7 +1430,7 @@ Old name: compound of collections</rdfs:comment>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
       </owl:Restriction>
@@ -1441,7 +1439,7 @@ Old name: compound of collections</rdfs:comment>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
         <owl:allValuesFrom>
           <owl:Class>
@@ -1472,7 +1470,7 @@ Old name: compound of collections</rdfs:comment>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:allValuesFrom>
               <owl:Class>
@@ -1485,7 +1483,7 @@ Old name: compound of collections</rdfs:comment>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom rdf:resource="#MolecularGroup"/>
           </owl:Restriction>
@@ -1548,7 +1546,7 @@ Old name: compound of collections</rdfs:comment>
   <owl:Class rdf:about="#Hexose">
     <rdfs:label xml:lang="en">hexose</rdfs:label>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 1 C6Chain</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 1 C6Chain</rdfs:comment>
     <owl:disjointWith rdf:resource="#Pentose"/>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -1604,7 +1602,7 @@ Old name: compound of collections</rdfs:comment>
       <owl:Class rdf:ID="EntirePolypeptideMolecule"/>
     </owl:disjointWith>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent max 10 AminoAcidMonomer</rdfs:comment>
+    >Comment: (QCR) hasComponentPart max 10 AminoAcidMonomer</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Definition: Amino Acid Polymer up to 10 monomers.</rdfs:comment>
     <rdfs:label xml:lang="en">entire oligopeptide molecule</rdfs:label>
@@ -1614,13 +1612,13 @@ Old name: compound of collections</rdfs:comment>
           <owl:Restriction>
             <owl:allValuesFrom rdf:resource="#AminoAcidMonomer"/>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
             <owl:someValuesFrom rdf:resource="#AminoAcidMonomer"/>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Class rdf:about="#Peptide"/>
@@ -1680,7 +1678,7 @@ Old name: compound of collections</rdfs:comment>
     </rdfs:subClassOf>
     <rdfs:label xml:lang="en">entire protein molecule</rdfs:label>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) Peptide and hasComponent min 101 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity)</rdfs:comment>
+    >Comment: (QCR) Peptide and hasComponentPart min 101 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity)</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Definition: Amino Acid Polymer longer than 100 monomers.</rdfs:comment>
   </owl:Class>
@@ -1705,13 +1703,13 @@ Old name: compound of collections</rdfs:comment>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:allValuesFrom rdf:resource="#Monomer"/>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom rdf:resource="#Monomer"/>
           </owl:Restriction>
@@ -1724,7 +1722,7 @@ Old name: compound of collections</rdfs:comment>
   <owl:Class rdf:about="#Oligosaccharide">
     <rdfs:label xml:lang="en">oligosaccharide</rdfs:label>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) Carbohydrate and hasComponent min 2 Monosaccharide and hasComponent max 9 Monosaccharide and hasComponent only Monomer</rdfs:comment>
+    >Comment: (QCR) Carbohydrate and hasComponentPart min 2 Monosaccharide and hasComponentPart max 9 Monosaccharide and hasComponentPart only Monomer</rdfs:comment>
     <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
     <owl:disjointWith rdf:resource="#Monosaccharide"/>
     <owl:disjointWith>
@@ -1773,7 +1771,7 @@ Old name: compound of collections</rdfs:comment>
     <owl:disjointWith rdf:resource="#EntireProteinMolecule"/>
     <owl:disjointWith rdf:resource="#EntireOligopeptideMolecule"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) Peptide and hasComponent min 11 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity) and hasComponent only AminoAcidMonomer and hasComponent max 100 AminoAcidMonomer</rdfs:comment>
+    >Comment: (QCR) Peptide and hasComponentPart min 11 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity) and hasComponentPart only AminoAcidMonomer and hasComponentPart max 100 AminoAcidMonomer</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Definition: Amino Acid Polymer from 11 to 100 monomers.</rdfs:comment>
     <rdfs:label xml:lang="en">entire polypeptide molecule</rdfs:label>
@@ -1784,7 +1782,7 @@ Old name: compound of collections</rdfs:comment>
       <owl:Restriction>
         <owl:someValuesFrom rdf:resource="#CarbonAtom"/>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -1792,7 +1790,7 @@ Old name: compound of collections</rdfs:comment>
       <owl:Restriction>
         <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -1811,14 +1809,14 @@ Old name: compound of collections</rdfs:comment>
           </owl:Class>
         </owl:allValuesFrom>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
+          <owl:ObjectProperty rdf:about="#hasComponentPart"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:label xml:lang="en">carbon hydrogen substructure</rdfs:label>
     <owl:disjointWith rdf:resource="#C5Chain"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 1 CarbonAtom and hasComponent exactly 1 HydrogenAtom and hasComponent only (CarbonAtom or HydrogenAtom)</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 1 CarbonAtom and hasComponentPart exactly 1 HydrogenAtom and hasComponentPart only (CarbonAtom or HydrogenAtom)</rdfs:comment>
     <owl:disjointWith rdf:resource="#CarboxyGroup"/>
     <owl:disjointWith>
       <owl:Class rdf:about="#C6Chain"/>
@@ -1917,7 +1915,7 @@ Old name: compound of collections</rdfs:comment>
     <rdfs:label xml:lang="en">C6 chain</rdfs:label>
     <owl:disjointWith rdf:resource="#HydroxyGroup"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) hasComponent exactly 6 CarbonAtom</rdfs:comment>
+    >Comment: (QCR) hasComponentPart exactly 6 CarbonAtom</rdfs:comment>
     <owl:disjointWith rdf:resource="#C10-24Chain"/>
     <owl:disjointWith rdf:resource="#C5Chain"/>
     <owl:disjointWith rdf:resource="#CarbonHydrogenSubstructure"/>
@@ -1936,13 +1934,13 @@ Old name: compound of collections</rdfs:comment>
         <owl:intersectionOf rdf:parseType="Collection">
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:allValuesFrom rdf:resource="#Deoxyribonucleotide"/>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom rdf:resource="#Deoxyribonucleotide"/>
           </owl:Restriction>
@@ -1991,12 +1989,12 @@ Old name: compound of collections</rdfs:comment>
           <owl:Restriction>
             <owl:allValuesFrom rdf:resource="#Ribonucleotide"/>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
           </owl:Restriction>
           <owl:Restriction>
             <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
+              <owl:ObjectProperty rdf:about="#hasComponentPart"/>
             </owl:onProperty>
             <owl:someValuesFrom rdf:resource="#Ribonucleotide"/>
           </owl:Restriction>
@@ -2016,7 +2014,7 @@ Old name: compound of collections</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="#Polysaccharide">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment: (QCR) Carbohydrate and hasComponent min 10 Monosaccharide and hasComponent only Monomer</rdfs:comment>
+    >Comment: (QCR) Carbohydrate and hasComponentPart min 10 Monosaccharide and hasComponentPart only Monomer</rdfs:comment>
     <rdfs:label xml:lang="en">polysaccharide</rdfs:label>
     <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
     <owl:disjointWith rdf:resource="#Oligosaccharide"/>
@@ -2037,41 +2035,41 @@ Old name: compound of collections</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Lipids that have aliphatic chains and no steroid rings</rdfs:comment>
   </owl:Class>
-  <owl:ObjectProperty rdf:ID="grainOf">
+  <owl:ObjectProperty rdf:ID="granularPart">
     <rdfs:subPropertyOf>
       <owl:TransitiveProperty rdf:about="#properPartOf"/>
     </rdfs:subPropertyOf>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Inverse relation to hasGrain.</rdfs:comment>
+    >Inverse relation to hasGranularPart.</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Definition: Grains are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</rdfs:comment>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="#hasGrain">
+  <owl:ObjectProperty rdf:about="#hasGranularPart">
     <rdfs:subPropertyOf>
       <owl:TransitiveProperty rdf:about="#hasProperPart"/>
     </rdfs:subPropertyOf>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment:  inverse of grainOf.</rdfs:comment>
+    >Comment:  inverse of granularPart.</rdfs:comment>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="componentOf">
+  <owl:ObjectProperty rdf:ID="componentPartOf">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >inverse of hasComponent.</rdfs:comment>
+    >inverse of hasComponentPart.</rdfs:comment>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Definition: Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</rdfs:comment>
     <rdfs:subPropertyOf>
       <owl:TransitiveProperty rdf:about="#properPartOf"/>
     </rdfs:subPropertyOf>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="#hasComponent">
+  <owl:ObjectProperty rdf:about="#hasComponentPart">
     <rdfs:subPropertyOf>
       <owl:TransitiveProperty rdf:about="#hasProperPart"/>
     </rdfs:subPropertyOf>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Comment:  inverse of componentOf.</rdfs:comment>
+    >Comment:  inverse of componentPartOf.</rdfs:comment>
   </owl:ObjectProperty>
   <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/creator"/>
   <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/language"/>
@@ -2122,5 +2120,3 @@ Old name: compound of collections</rdfs:comment>
     >part_of</rdfs:label>
   </owl:TransitiveProperty>
 </rdf:RDF>
-
-<!-- Created with Protege (with OWL Plugin 3.4, Build 120)  http://protege.stanford.edu -->

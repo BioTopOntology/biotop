@@ -5,6 +5,7 @@
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY biotop "http://purl.org/biotop/core/dev#" >
+    <!ENTITY chemtop "http://purl.org/chemtop/core/dev#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -21,6 +22,7 @@
      xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
      xmlns:biotop="http://purl.org/biotop/core/dev#"
+     xmlns:chemtop="http://purl.org/chemtop/core/dev#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -53,7 +55,9 @@ Stefan-Meier-Strasse 24
             >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
         <dc:publisher rdf:datatype="&xsd;string"
             >University Medical Center Freiburg - Department of Medical Biometry and Medical Informatics</dc:publisher>
+        <owl:imports rdf:resource="http://purl.org/chemtop/core/dev"/>
     </owl:Ontology>
+
     
 
 
@@ -156,6 +160,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
+        <owl:equivalentProperty rdf:resource="&chemtop;componentPartOf"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
@@ -324,6 +329,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#granularPartOf -->
 
     <owl:ObjectProperty rdf:about="#granularPartOf">
+        <owl:equivalentProperty rdf:resource="&chemtop;granularPartOf"/>
         <rdfs:label rdf:datatype="&xsd;string"
             >Formerly grainOf</rdfs:label>
         <rdfs:label rdf:datatype="&xsd;string"
@@ -365,6 +371,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="#hasComponentPart">
+        <owl:equivalentProperty rdf:resource="&chemtop;hasComponentPart"/>
         <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of componentOf.</rdfs:comment>
@@ -375,6 +382,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="#hasGranularPart">
+        <owl:equivalentProperty rdf:resource="&chemtop;hasGranularPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of granularPartOf.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
@@ -399,6 +407,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#hasPart">
         <owl:equivalentProperty rdf:resource="&ro;hasPart"/>
+        <owl:equivalentProperty rdf:resource="&chemtop;hasPart"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">has_part</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -436,6 +445,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#hasProperPart">
         <owl:equivalentProperty rdf:resource="&ro;hasProperPart"/>
+        <owl:equivalentProperty rdf:resource="&chemtop;hasProperPart"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">has_proper_part</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#hasPart"/>
@@ -571,6 +581,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#partOf">
         <owl:equivalentProperty rdf:resource="&ro;partOf"/>
+        <owl:equivalentProperty rdf:resource="&chemtop;partOf"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">part_of</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -626,6 +637,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#properPartOf">
         <owl:equivalentProperty rdf:resource="&ro;properPartOf"/>
+        <owl:equivalentProperty rdf:resource="&chemtop;properPartOf"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">proper_part_of</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -1094,6 +1106,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Atom -->
 
     <owl:Class rdf:about="#Atom">
+        <owl:equivalentClass rdf:resource="&chemtop;Atom"/>
         <rdfs:label xml:lang="en">atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <owl:disjointWith rdf:resource="#MonoMolecularEntity"/>
@@ -1971,10 +1984,11 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="#CollectiveMaterialEntity">
+        <owl:equivalentClass rdf:resource="&chemtop;CollectiveMaterialEntity"/>
         <rdfs:label xml:lang="en"
             >collective material entity</rdfs:label>
         <rdfs:label rdf:datatype="&xsd;string"
-            >removed for performance: hasGrain some MaterialIndependentContinuant</rdfs:label>
+            >removed for performance: hasGranularPart some MaterialIndependentContinuant</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2007,6 +2021,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="#CompoundOfCollectiveMaterialEntities">
+        <owl:equivalentClass rdf:resource="&chemtop;CompoundOfCollectiveMaterialEntities"/>
         <rdfs:label
             >compound of collective material entities</rdfs:label>
         <rdfs:subClassOf>
@@ -3526,6 +3541,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#MonoMolecularEntity -->
 
     <owl:Class rdf:about="#MonoMolecularEntity">
+        <owl:equivalentClass rdf:resource="&chemtop;MonoMolecularEntity"/>
         <rdfs:label xml:lang="en"
             >molecular entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
@@ -4944,6 +4960,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     <!-- http://purl.org/biotop/core/dev#SubatomicParticle -->
 
     <owl:Class rdf:about="#SubatomicParticle">
+        <owl:equivalentClass rdf:resource="&chemtop;SubatomicParticle"/>
         <rdfs:label xml:lang="en"
             >subatomic particle</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
