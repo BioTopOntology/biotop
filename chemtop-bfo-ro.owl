@@ -5,7 +5,7 @@
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
-    <!ENTITY biotop "http://purl.org/biotop/dev#" >
+    <!ENTITY chemtop "http://purl.org/chemtop/dev#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
@@ -20,10 +20,10 @@
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/biotop/bfo-ro/dev#"
-     xml:base="http://purl.org/biotop/bfo-ro/dev"
+<rdf:RDF xmlns="http://purl.org/chemtop/bfo-ro/dev#"
+     xml:base="http://purl.org/chemtop/bfo-ro/dev"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:biotop="http://purl.org/biotop/dev#"
+     xmlns:chemtop="http://purl.org/chemtop/dev#"
      xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
@@ -39,7 +39,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
-        <dc:title rdf:datatype="&xsd;string">BioTop</dc:title>
+        <dc:title rdf:datatype="&xsd;string">ChemTop</dc:title>
         <dc:creator rdf:datatype="&xsd;string"
             >Elena Beisswanger</dc:creator>
         <dc:creator rdf:datatype="&xsd;string"
@@ -54,7 +54,7 @@
         <dc:source rdf:datatype="&xsd;string"
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
         <dc:source rdf:datatype="&xsd;string"
-            >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
+            >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to chemtop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
         <dc:publisher rdf:datatype="&xsd;string"
             >University Hospital Freiburg - Medical Informatics Department</dc:publisher>
         <dc:format rdf:datatype="&xsd;string"
@@ -62,8 +62,8 @@
         <owl:versionInfo rdf:datatype="&xsd;string">dev</owl:versionInfo>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
         <dc:identifier rdf:datatype="&xsd;string"
-            >http://purl.org/biotop/bfo-ro/dev</dc:identifier>
-        <owl:imports rdf:resource="http://purl.org/biotop/dev"/>
+            >http://purl.org/chemtop/bfo-ro/dev</dc:identifier>
+        <owl:imports rdf:resource="http://purl.org/chemtop/dev"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1/light"/>
         <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
     </owl:Ontology>
@@ -100,137 +100,33 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#adjacentTo -->
+    <!-- http://purl.org/chemtop/dev#hasPart -->
 
-    <owl:ObjectProperty rdf:about="&biotop;adjacentTo">
-        <owl:equivalentProperty rdf:resource="&ro;adjacentTo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#agentIn -->
-
-    <owl:ObjectProperty rdf:about="&biotop;agentIn">
-        <owl:equivalentProperty rdf:resource="&ro;agentIn"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#containedIn -->
-
-    <owl:ObjectProperty rdf:about="&biotop;containedIn">
-        <owl:equivalentProperty rdf:resource="&ro;containedIn"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#contains -->
-
-    <owl:ObjectProperty rdf:about="&biotop;contains">
-        <owl:equivalentProperty rdf:resource="&ro;contains"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#derivedInto -->
-
-    <owl:ObjectProperty rdf:about="&biotop;derivedInto">
-        <owl:equivalentProperty rdf:resource="&ro;derivedInto"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#derivesFrom -->
-
-    <owl:ObjectProperty rdf:about="&biotop;derivesFrom">
-        <owl:equivalentProperty rdf:resource="&ro;derivesFrom"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#hasAgent -->
-
-    <owl:ObjectProperty rdf:about="&biotop;hasAgent">
-        <owl:equivalentProperty rdf:resource="&ro;hasAgent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#hasPart -->
-
-    <owl:ObjectProperty rdf:about="&biotop;hasPart">
+    <owl:ObjectProperty rdf:about="&chemtop;hasPart">
         <owl:equivalentProperty rdf:resource="&ro;hasPart"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasParticipant -->
+    <!-- http://purl.org/chemtop/dev#hasProperPart -->
 
-    <owl:ObjectProperty rdf:about="&biotop;hasParticipant">
-        <owl:equivalentProperty rdf:resource="&ro;hasParticipant"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#hasProperPart -->
-
-    <owl:ObjectProperty rdf:about="&biotop;hasProperPart">
+    <owl:ObjectProperty rdf:about="&chemtop;hasProperPart">
         <owl:equivalentProperty rdf:resource="&ro;hasProperPart"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#locatedIn -->
+    <!-- http://purl.org/chemtop/dev#partOf -->
 
-    <owl:ObjectProperty rdf:about="&biotop;locatedIn">
-        <owl:equivalentProperty rdf:resource="&ro;locatedIn"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#locationOf -->
-
-    <owl:ObjectProperty rdf:about="&biotop;locationOf">
-        <owl:equivalentProperty rdf:resource="&ro;locationOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#partOf -->
-
-    <owl:ObjectProperty rdf:about="&biotop;partOf">
+    <owl:ObjectProperty rdf:about="&chemtop;partOf">
         <owl:equivalentProperty rdf:resource="&ro;partOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#participatesIn -->
+    <!-- http://purl.org/chemtop/dev#properPartOf -->
 
-    <owl:ObjectProperty rdf:about="&biotop;participatesIn">
-        <owl:equivalentProperty rdf:resource="&ro;participatesIn"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#precededBy -->
-
-    <owl:ObjectProperty rdf:about="&biotop;precededBy">
-        <owl:equivalentProperty rdf:resource="&ro;precededBy"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#precedes -->
-
-    <owl:ObjectProperty rdf:about="&biotop;precedes">
-        <owl:equivalentProperty rdf:resource="&ro;precedes"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/dev#properPartOf -->
-
-    <owl:ObjectProperty rdf:about="&biotop;properPartOf">
+    <owl:ObjectProperty rdf:about="&chemtop;properPartOf">
         <owl:equivalentProperty rdf:resource="&ro;properPartOf"/>
     </owl:ObjectProperty>
     
@@ -247,57 +143,57 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#Disposition -->
+    <!-- http://purl.org/chemtop/dev#Disposition -->
 
-    <owl:Class rdf:about="&biotop;Disposition">
+    <owl:Class rdf:about="&chemtop;Disposition">
         <rdfs:subClassOf rdf:resource="&snapl;Disposition"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#Function -->
+    <!-- http://purl.org/chemtop/dev#Function -->
 
-    <owl:Class rdf:about="&biotop;Function">
+    <owl:Class rdf:about="&chemtop;Function">
         <rdfs:subClassOf rdf:resource="&snapl;Function"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#ImmaterialNonphysicalEntity -->
+    <!-- http://purl.org/chemtop/dev#ImmaterialNonphysicalEntity -->
 
-    <owl:Class rdf:about="&biotop;ImmaterialNonphysicalEntity">
+    <owl:Class rdf:about="&chemtop;ImmaterialNonphysicalEntity">
         <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#ImmaterialPhysicalEntity -->
+    <!-- http://purl.org/chemtop/dev#ImmaterialPhysicalEntity -->
 
-    <owl:Class rdf:about="&biotop;ImmaterialPhysicalEntity">
+    <owl:Class rdf:about="&chemtop;ImmaterialPhysicalEntity">
         <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#InformationEntity -->
+    <!-- http://purl.org/chemtop/dev#InformationEntity -->
 
-    <owl:Class rdf:about="&biotop;InformationEntity">
+    <owl:Class rdf:about="&chemtop;InformationEntity">
         <rdfs:subClassOf rdf:resource="&snapl;GenericallyDependentContinuant"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#MaterialEntity -->
+    <!-- http://purl.org/chemtop/dev#MaterialEntity -->
 
-    <owl:Class rdf:about="&biotop;MaterialEntity">
+    <owl:Class rdf:about="&chemtop;MaterialEntity">
         <rdfs:subClassOf rdf:resource="&snapl;IndependentContinuant"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#ProcessualEntity -->
+    <!-- http://purl.org/chemtop/dev#ProcessualEntity -->
 
-    <owl:Class rdf:about="&biotop;ProcessualEntity">
+    <owl:Class rdf:about="&chemtop;ProcessualEntity">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -314,25 +210,25 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#Quality -->
+    <!-- http://purl.org/chemtop/dev#Quality -->
 
-    <owl:Class rdf:about="&biotop;Quality">
+    <owl:Class rdf:about="&chemtop;Quality">
         <rdfs:subClassOf rdf:resource="&snapl;Quality"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#Role -->
+    <!-- http://purl.org/chemtop/dev#Role -->
 
-    <owl:Class rdf:about="&biotop;Role">
+    <owl:Class rdf:about="&chemtop;Role">
         <rdfs:subClassOf rdf:resource="&snapl;Role"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#SpatialRegion -->
+    <!-- http://purl.org/chemtop/dev#SpatialRegion -->
 
-    <owl:Class rdf:about="&biotop;SpatialRegion">
+    <owl:Class rdf:about="&chemtop;SpatialRegion">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -348,9 +244,9 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#TemporalEntity -->
+    <!-- http://purl.org/chemtop/dev#TemporalEntity -->
 
-    <owl:Class rdf:about="&biotop;TemporalEntity">
+    <owl:Class rdf:about="&chemtop;TemporalEntity">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
