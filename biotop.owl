@@ -5,7 +5,7 @@
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
-    <!ENTITY biotop "http://purl.org/biotop/core/dev#" >
+    <!ENTITY biotop "http://purl.org/biotop/dev#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
@@ -16,9 +16,9 @@
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/biotop/core/dev#"
-     xml:base="http://purl.org/biotop/core/dev"
-     xmlns:biotop="http://purl.org/biotop/core/dev#"
+<rdf:RDF xmlns="http://purl.org/biotop/dev#"
+     xml:base="http://purl.org/biotop/dev"
+     xmlns:biotop="http://purl.org/biotop/dev#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -54,7 +54,7 @@ Stefan-Meier-Strasse 26
         <owl:versionInfo rdf:datatype="&xsd;string">dev</owl:versionInfo>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
         <dc:identifier rdf:datatype="&xsd;string"
-            >http://purl.org/biotop/core/dev</dc:identifier>
+            >http://purl.org/biotop/dev</dc:identifier>
     </owl:Ontology>
     
 
@@ -89,7 +89,7 @@ Stefan-Meier-Strasse 26
     
 
 
-    <!-- http://purl.org/biotop/core/dev#adjacentTo -->
+    <!-- http://purl.org/biotop/dev#adjacentTo -->
 
     <owl:ObjectProperty rdf:about="#adjacentTo">
         <rdfs:label rdf:datatype="&xsd;string">adjacent_to</rdfs:label>
@@ -119,7 +119,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#agentIn -->
+    <!-- http://purl.org/biotop/dev#agentIn -->
 
     <owl:ObjectProperty rdf:about="#agentIn">
         <rdfs:label rdf:datatype="&xsd;string">agent_in</rdfs:label>
@@ -131,7 +131,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#attachedTo -->
+    <!-- http://purl.org/biotop/dev#attachedTo -->
 
     <owl:ObjectProperty rdf:about="#attachedTo">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -142,7 +142,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#branchOf -->
+    <!-- http://purl.org/biotop/dev#branchOf -->
 
     <owl:ObjectProperty rdf:about="#branchOf">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -153,7 +153,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#componentPartOf -->
+    <!-- http://purl.org/biotop/dev#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -167,7 +167,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#connectedTo -->
+    <!-- http://purl.org/biotop/dev#connectedTo -->
 
     <owl:ObjectProperty rdf:about="#connectedTo">
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
@@ -195,7 +195,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#containedIn -->
+    <!-- http://purl.org/biotop/dev#containedIn -->
 
     <owl:ObjectProperty rdf:about="#containedIn">
         <rdfs:label rdf:datatype="&xsd;string">contained_in</rdfs:label>
@@ -209,7 +209,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#contains -->
+    <!-- http://purl.org/biotop/dev#contains -->
 
     <owl:ObjectProperty rdf:about="#contains">
         <rdfs:label rdf:datatype="&xsd;string">contains</rdfs:label>
@@ -223,7 +223,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#contiguousWith -->
+    <!-- http://purl.org/biotop/dev#contiguousWith -->
 
     <owl:ObjectProperty rdf:about="#contiguousWith">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -252,7 +252,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#continuousWith -->
+    <!-- http://purl.org/biotop/dev#continuousWith -->
 
     <owl:ObjectProperty rdf:about="#continuousWith">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -263,7 +263,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#derivedInto -->
+    <!-- http://purl.org/biotop/dev#derivedInto -->
 
     <owl:ObjectProperty rdf:about="#derivedInto">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -275,7 +275,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#derivesFrom -->
+    <!-- http://purl.org/biotop/dev#derivesFrom -->
 
     <owl:ObjectProperty rdf:about="#derivesFrom">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -288,7 +288,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#disconnectedFrom -->
+    <!-- http://purl.org/biotop/dev#disconnectedFrom -->
 
     <owl:ObjectProperty rdf:about="#disconnectedFrom">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -317,7 +317,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#granularPartOf -->
+    <!-- http://purl.org/biotop/dev#granularPartOf -->
 
     <owl:ObjectProperty rdf:about="#granularPartOf">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -333,7 +333,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasAgent -->
+    <!-- http://purl.org/biotop/dev#hasAgent -->
 
     <owl:ObjectProperty rdf:about="#hasAgent">
         <rdfs:label rdf:datatype="&xsd;string">has_agent</rdfs:label>
@@ -346,7 +346,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasBranch -->
+    <!-- http://purl.org/biotop/dev#hasBranch -->
 
     <owl:ObjectProperty rdf:about="#hasBranch">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -357,7 +357,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasComponentPart -->
+    <!-- http://purl.org/biotop/dev#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="#hasComponentPart">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -367,7 +367,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasGranularPart -->
+    <!-- http://purl.org/biotop/dev#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="#hasGranularPart">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -379,7 +379,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasInherence -->
+    <!-- http://purl.org/biotop/dev#hasInherence -->
 
     <owl:ObjectProperty rdf:about="#hasInherence">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -390,7 +390,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasPart -->
+    <!-- http://purl.org/biotop/dev#hasPart -->
 
     <owl:ObjectProperty rdf:about="#hasPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -405,7 +405,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasParticipant -->
+    <!-- http://purl.org/biotop/dev#hasParticipant -->
 
     <owl:ObjectProperty rdf:about="#hasParticipant">
         <rdfs:label rdf:datatype="&xsd;string">has_participant</rdfs:label>
@@ -417,7 +417,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasPatient -->
+    <!-- http://purl.org/biotop/dev#hasPatient -->
 
     <owl:ObjectProperty rdf:about="#hasPatient">
         <rdfs:subPropertyOf rdf:resource="#hasParticipant"/>
@@ -425,7 +425,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasProperPart -->
+    <!-- http://purl.org/biotop/dev#hasProperPart -->
 
     <owl:ObjectProperty rdf:about="#hasProperPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -438,7 +438,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#hasRealization -->
+    <!-- http://purl.org/biotop/dev#hasRealization -->
 
     <owl:ObjectProperty rdf:about="#hasRealization">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -447,7 +447,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#inheresIn -->
+    <!-- http://purl.org/biotop/dev#inheresIn -->
 
     <owl:ObjectProperty rdf:about="#inheresIn">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -460,7 +460,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#interconnects -->
+    <!-- http://purl.org/biotop/dev#interconnects -->
 
     <owl:ObjectProperty rdf:about="#interconnects">
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
@@ -487,7 +487,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#locatedIn -->
+    <!-- http://purl.org/biotop/dev#locatedIn -->
 
     <owl:ObjectProperty rdf:about="#locatedIn">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -522,7 +522,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#locationOf -->
+    <!-- http://purl.org/biotop/dev#locationOf -->
 
     <owl:ObjectProperty rdf:about="#locationOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -557,7 +557,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#partOf -->
+    <!-- http://purl.org/biotop/dev#partOf -->
 
     <owl:ObjectProperty rdf:about="#partOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -572,7 +572,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#participatesIn -->
+    <!-- http://purl.org/biotop/dev#participatesIn -->
 
     <owl:ObjectProperty rdf:about="#participatesIn">
         <rdfs:label rdf:datatype="&xsd;string">participates_in</rdfs:label>
@@ -583,7 +583,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#precededBy -->
+    <!-- http://purl.org/biotop/dev#precededBy -->
 
     <owl:ObjectProperty rdf:about="#precededBy">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -596,7 +596,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#precedes -->
+    <!-- http://purl.org/biotop/dev#precedes -->
 
     <owl:ObjectProperty rdf:about="#precedes">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -608,7 +608,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#properPartOf -->
+    <!-- http://purl.org/biotop/dev#properPartOf -->
 
     <owl:ObjectProperty rdf:about="#properPartOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -622,7 +622,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ramificationOf -->
+    <!-- http://purl.org/biotop/dev#ramificationOf -->
 
     <owl:ObjectProperty rdf:about="#ramificationOf">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -633,7 +633,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ramifies -->
+    <!-- http://purl.org/biotop/dev#ramifies -->
 
     <owl:ObjectProperty rdf:about="#ramifies">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -644,7 +644,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#realizationOf -->
+    <!-- http://purl.org/biotop/dev#realizationOf -->
 
     <owl:ObjectProperty rdf:about="#realizationOf">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -653,13 +653,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#spatiallyRelated -->
+    <!-- http://purl.org/biotop/dev#spatiallyRelated -->
 
     <owl:ObjectProperty rdf:about="#spatiallyRelated"/>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#surrounds -->
+    <!-- http://purl.org/biotop/dev#surrounds -->
 
     <owl:ObjectProperty rdf:about="#surrounds">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -687,7 +687,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#touches -->
+    <!-- http://purl.org/biotop/dev#touches -->
 
     <owl:ObjectProperty rdf:about="#touches">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -716,7 +716,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#traverses -->
+    <!-- http://purl.org/biotop/dev#traverses -->
 
     <owl:ObjectProperty rdf:about="#traverses">
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -755,7 +755,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AcquiredPathologicalCondition -->
+    <!-- http://purl.org/biotop/dev#AcquiredPathologicalCondition -->
 
     <owl:Class rdf:about="#AcquiredPathologicalCondition">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -768,7 +768,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AcquiredPathologicalState -->
+    <!-- http://purl.org/biotop/dev#AcquiredPathologicalState -->
 
     <owl:Class rdf:about="#AcquiredPathologicalState">
         <owl:equivalentClass>
@@ -787,7 +787,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Action -->
+    <!-- http://purl.org/biotop/dev#Action -->
 
     <owl:Class rdf:about="#Action">
         <owl:equivalentClass>
@@ -807,7 +807,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AdultOrganism -->
+    <!-- http://purl.org/biotop/dev#AdultOrganism -->
 
     <owl:Class rdf:about="#AdultOrganism">
         <owl:equivalentClass>
@@ -827,7 +827,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AdultQuality -->
+    <!-- http://purl.org/biotop/dev#AdultQuality -->
 
     <owl:Class rdf:about="#AdultQuality">
         <rdfs:subClassOf rdf:resource="#DevelopmentalQuality"/>
@@ -837,7 +837,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Affecting -->
+    <!-- http://purl.org/biotop/dev#Affecting -->
 
     <owl:Class rdf:about="#Affecting">
         <rdfs:subClassOf rdf:resource="#Action"/>
@@ -847,7 +847,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AgeQuality -->
+    <!-- http://purl.org/biotop/dev#AgeQuality -->
 
     <owl:Class rdf:about="#AgeQuality">
         <rdfs:subClassOf rdf:resource="#Quality"/>
@@ -863,7 +863,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Alga -->
+    <!-- http://purl.org/biotop/dev#Alga -->
 
     <owl:Class rdf:about="#Alga">
         <rdfs:subClassOf rdf:resource="#Organism"/>
@@ -871,7 +871,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AminoAcidMonomer -->
+    <!-- http://purl.org/biotop/dev#AminoAcidMonomer -->
 
     <owl:Class rdf:about="#AminoAcidMonomer">
         <rdfs:label xml:lang="en"
@@ -902,7 +902,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AminoAcidSequenceInformation -->
+    <!-- http://purl.org/biotop/dev#AminoAcidSequenceInformation -->
 
     <owl:Class rdf:about="#AminoAcidSequenceInformation">
         <owl:equivalentClass>
@@ -922,7 +922,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AnimalCell -->
+    <!-- http://purl.org/biotop/dev#AnimalCell -->
 
     <owl:Class rdf:about="#AnimalCell">
         <owl:equivalentClass>
@@ -940,7 +940,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AnimalExcludingHuman -->
+    <!-- http://purl.org/biotop/dev#AnimalExcludingHuman -->
 
     <owl:Class rdf:about="#AnimalExcludingHuman">
         <owl:equivalentClass>
@@ -957,7 +957,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AnimalIncludingHuman -->
+    <!-- http://purl.org/biotop/dev#AnimalIncludingHuman -->
 
     <owl:Class rdf:about="#AnimalIncludingHuman">
         <rdfs:label xml:lang="en">animal</rdfs:label>
@@ -975,7 +975,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AnimalPopulation -->
+    <!-- http://purl.org/biotop/dev#AnimalPopulation -->
 
     <owl:Class rdf:about="#AnimalPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1006,7 +1006,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#AntibioticRole -->
+    <!-- http://purl.org/biotop/dev#AntibioticRole -->
 
     <owl:Class rdf:about="#AntibioticRole">
         <rdfs:subClassOf rdf:resource="#DrugRole"/>
@@ -1014,7 +1014,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ArchaebacterialCell -->
+    <!-- http://purl.org/biotop/dev#ArchaebacterialCell -->
 
     <owl:Class rdf:about="#ArchaebacterialCell">
         <rdfs:label xml:lang="en"
@@ -1038,7 +1038,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ArtefactRole -->
+    <!-- http://purl.org/biotop/dev#ArtefactRole -->
 
     <owl:Class rdf:about="#ArtefactRole">
         <rdfs:label rdf:datatype="&xsd;string">artefact role</rdfs:label>
@@ -1049,7 +1049,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Arthropod -->
+    <!-- http://purl.org/biotop/dev#Arthropod -->
 
     <owl:Class rdf:about="#Arthropod">
         <owl:equivalentClass>
@@ -1068,7 +1068,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ArthropodPopulation -->
+    <!-- http://purl.org/biotop/dev#ArthropodPopulation -->
 
     <owl:Class rdf:about="#ArthropodPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1098,7 +1098,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Atom -->
+    <!-- http://purl.org/biotop/dev#Atom -->
 
     <owl:Class rdf:about="#Atom">
         <rdfs:label xml:lang="en">atom</rdfs:label>
@@ -1112,7 +1112,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BacteriaPopulation -->
+    <!-- http://purl.org/biotop/dev#BacteriaPopulation -->
 
     <owl:Class rdf:about="#BacteriaPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1141,7 +1141,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BacterialCell -->
+    <!-- http://purl.org/biotop/dev#BacterialCell -->
 
     <owl:Class rdf:about="#BacterialCell">
         <rdfs:label xml:lang="en">bacterial cell</rdfs:label>
@@ -1163,7 +1163,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BacterialColony -->
+    <!-- http://purl.org/biotop/dev#BacterialColony -->
 
     <owl:Class rdf:about="#BacterialColony">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -1189,7 +1189,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BakersYeastCell -->
+    <!-- http://purl.org/biotop/dev#BakersYeastCell -->
 
     <owl:Class rdf:about="#BakersYeastCell">
         <owl:equivalentClass>
@@ -1209,7 +1209,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BakersYeastPopulation -->
+    <!-- http://purl.org/biotop/dev#BakersYeastPopulation -->
 
     <owl:Class rdf:about="#BakersYeastPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1237,7 +1237,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Behavior -->
+    <!-- http://purl.org/biotop/dev#Behavior -->
 
     <owl:Class rdf:about="#Behavior">
         <rdfs:subClassOf rdf:resource="#OrganismAction"/>
@@ -1247,7 +1247,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BioMolecularProcess -->
+    <!-- http://purl.org/biotop/dev#BioMolecularProcess -->
 
     <owl:Class rdf:about="#BioMolecularProcess">
         <rdfs:label xml:lang="en"
@@ -1269,7 +1269,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BioMolecularSequenceInformation -->
+    <!-- http://purl.org/biotop/dev#BioMolecularSequenceInformation -->
 
     <owl:Class rdf:about="#BioMolecularSequenceInformation">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -1295,7 +1295,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BioMolecularSequenceStructure -->
+    <!-- http://purl.org/biotop/dev#BioMolecularSequenceStructure -->
 
     <owl:Class rdf:about="#BioMolecularSequenceStructure">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -1322,7 +1322,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BiologicalAction -->
+    <!-- http://purl.org/biotop/dev#BiologicalAction -->
 
     <owl:Class rdf:about="#BiologicalAction">
         <owl:equivalentClass>
@@ -1348,7 +1348,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BiologicalBoundary -->
+    <!-- http://purl.org/biotop/dev#BiologicalBoundary -->
 
     <owl:Class rdf:about="#BiologicalBoundary">
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
@@ -1370,7 +1370,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BiologicalColony -->
+    <!-- http://purl.org/biotop/dev#BiologicalColony -->
 
     <owl:Class rdf:about="#BiologicalColony">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -1382,7 +1382,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BiologicalFunction -->
+    <!-- http://purl.org/biotop/dev#BiologicalFunction -->
 
     <owl:Class rdf:about="#BiologicalFunction">
         <owl:equivalentClass>
@@ -1400,7 +1400,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BiologicalProcessualEntity -->
+    <!-- http://purl.org/biotop/dev#BiologicalProcessualEntity -->
 
     <owl:Class rdf:about="#BiologicalProcessualEntity">
         <rdfs:label xml:lang="en"
@@ -1440,7 +1440,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BiologicalSpace -->
+    <!-- http://purl.org/biotop/dev#BiologicalSpace -->
 
     <owl:Class rdf:about="#BiologicalSpace">
         <owl:equivalentClass>
@@ -1458,7 +1458,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BiologicalSystemRole -->
+    <!-- http://purl.org/biotop/dev#BiologicalSystemRole -->
 
     <owl:Class rdf:about="#BiologicalSystemRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
@@ -1468,7 +1468,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BiomedicalMaterialRole -->
+    <!-- http://purl.org/biotop/dev#BiomedicalMaterialRole -->
 
     <owl:Class rdf:about="#BiomedicalMaterialRole">
         <rdfs:subClassOf rdf:resource="#TherapeuticRole"/>
@@ -1478,7 +1478,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Biomolecule -->
+    <!-- http://purl.org/biotop/dev#Biomolecule -->
 
     <owl:Class rdf:about="#Biomolecule">
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
@@ -1513,7 +1513,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Bird -->
+    <!-- http://purl.org/biotop/dev#Bird -->
 
     <owl:Class rdf:about="#Bird">
         <rdfs:subClassOf rdf:resource="#Vertebrate"/>
@@ -1521,7 +1521,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BodyLiquid -->
+    <!-- http://purl.org/biotop/dev#BodyLiquid -->
 
     <owl:Class rdf:about="#BodyLiquid">
         <rdfs:label xml:lang="en">body fluid</rdfs:label>
@@ -1568,7 +1568,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#BodySystem -->
+    <!-- http://purl.org/biotop/dev#BodySystem -->
 
     <owl:Class rdf:about="#BodySystem">
         <rdfs:subClassOf rdf:resource="#OrganismPart"/>
@@ -1579,7 +1579,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CandidaAlbicansCell -->
+    <!-- http://purl.org/biotop/dev#CandidaAlbicansCell -->
 
     <owl:Class rdf:about="#CandidaAlbicansCell">
         <owl:equivalentClass>
@@ -1599,7 +1599,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CandidaAlbicansPopulation -->
+    <!-- http://purl.org/biotop/dev#CandidaAlbicansPopulation -->
 
     <owl:Class rdf:about="#CandidaAlbicansPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1626,7 +1626,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CanonicalCondition -->
+    <!-- http://purl.org/biotop/dev#CanonicalCondition -->
 
     <owl:Class rdf:about="#CanonicalCondition">
         <rdfs:subClassOf rdf:resource="#Canonicity"/>
@@ -1637,7 +1637,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CanonicalProcessualEntity -->
+    <!-- http://purl.org/biotop/dev#CanonicalProcessualEntity -->
 
     <owl:Class rdf:about="#CanonicalProcessualEntity">
         <owl:equivalentClass>
@@ -1656,7 +1656,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CanonicalState -->
+    <!-- http://purl.org/biotop/dev#CanonicalState -->
 
     <owl:Class rdf:about="#CanonicalState">
         <rdfs:label rdf:datatype="&xsd;string">canonical state</rdfs:label>
@@ -1677,7 +1677,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Canonicity -->
+    <!-- http://purl.org/biotop/dev#Canonicity -->
 
     <owl:Class rdf:about="#Canonicity">
         <rdfs:subClassOf rdf:resource="#Quality"/>
@@ -1694,7 +1694,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Carbohydrate -->
+    <!-- http://purl.org/biotop/dev#Carbohydrate -->
 
     <owl:Class rdf:about="#Carbohydrate">
         <rdfs:label xml:lang="en">carbohydrate</rdfs:label>
@@ -1715,7 +1715,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CarbohydrateSequenceInformation -->
+    <!-- http://purl.org/biotop/dev#CarbohydrateSequenceInformation -->
 
     <owl:Class rdf:about="#CarbohydrateSequenceInformation">
         <owl:equivalentClass>
@@ -1734,7 +1734,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CatalyticRole -->
+    <!-- http://purl.org/biotop/dev#CatalyticRole -->
 
     <owl:Class rdf:about="#CatalyticRole">
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
@@ -1744,7 +1744,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CategorizationSystem -->
+    <!-- http://purl.org/biotop/dev#CategorizationSystem -->
 
     <owl:Class rdf:about="#CategorizationSystem">
         <rdfs:subClassOf rdf:resource="#IntellectualProduct"/>
@@ -1752,7 +1752,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Cell -->
+    <!-- http://purl.org/biotop/dev#Cell -->
 
     <owl:Class rdf:about="#Cell">
         <rdfs:label xml:lang="en">cell</rdfs:label>
@@ -1794,7 +1794,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CellInVivo -->
+    <!-- http://purl.org/biotop/dev#CellInVivo -->
 
     <owl:Class rdf:about="#CellInVivo">
         <rdfs:label xml:lang="en">cell in vivo</rdfs:label>
@@ -1816,7 +1816,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CellMembrane -->
+    <!-- http://purl.org/biotop/dev#CellMembrane -->
 
     <owl:Class rdf:about="#CellMembrane">
         <rdfs:label xml:lang="en">cell membrane</rdfs:label>
@@ -1849,7 +1849,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CellNucleus -->
+    <!-- http://purl.org/biotop/dev#CellNucleus -->
 
     <owl:Class rdf:about="#CellNucleus">
         <rdfs:subClassOf rdf:resource="#CellularComponent"/>
@@ -1857,7 +1857,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CellularComponent -->
+    <!-- http://purl.org/biotop/dev#CellularComponent -->
 
     <owl:Class rdf:about="#CellularComponent">
         <rdfs:label xml:lang="en"
@@ -1885,7 +1885,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ChainOfAminoAcidMonomers -->
+    <!-- http://purl.org/biotop/dev#ChainOfAminoAcidMonomers -->
 
     <owl:Class rdf:about="#ChainOfAminoAcidMonomers">
         <rdfs:label xml:lang="en"
@@ -1899,7 +1899,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ChainOfCarbohydrateMonomers -->
+    <!-- http://purl.org/biotop/dev#ChainOfCarbohydrateMonomers -->
 
     <owl:Class rdf:about="#ChainOfCarbohydrateMonomers">
         <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
@@ -1913,7 +1913,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ChainOfNucleotideMonomers -->
+    <!-- http://purl.org/biotop/dev#ChainOfNucleotideMonomers -->
 
     <owl:Class rdf:about="#ChainOfNucleotideMonomers">
         <rdfs:subClassOf rdf:resource="#NucleicAcid"/>
@@ -1927,7 +1927,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ChemicalRole -->
+    <!-- http://purl.org/biotop/dev#ChemicalRole -->
 
     <owl:Class rdf:about="#ChemicalRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
@@ -1937,7 +1937,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ChlamydiaCell -->
+    <!-- http://purl.org/biotop/dev#ChlamydiaCell -->
 
     <owl:Class rdf:about="#ChlamydiaCell">
         <rdfs:subClassOf rdf:resource="#Prokaryote"/>
@@ -1945,7 +1945,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Chromosome -->
+    <!-- http://purl.org/biotop/dev#Chromosome -->
 
     <owl:Class rdf:about="#Chromosome">
         <rdfs:label xml:lang="en">chromosome</rdfs:label>
@@ -1957,7 +1957,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ClassGammaProteobacteriaQuality -->
+    <!-- http://purl.org/biotop/dev#ClassGammaProteobacteriaQuality -->
 
     <owl:Class rdf:about="#ClassGammaProteobacteriaQuality">
         <rdfs:subClassOf rdf:resource="#PhylumProteobacteriaQuality"/>
@@ -1965,7 +1965,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ClassInsectaQuality -->
+    <!-- http://purl.org/biotop/dev#ClassInsectaQuality -->
 
     <owl:Class rdf:about="#ClassInsectaQuality">
         <rdfs:subClassOf rdf:resource="#PhylumArthropodaQuality"/>
@@ -1973,7 +1973,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ClassMammaliaQuality -->
+    <!-- http://purl.org/biotop/dev#ClassMammaliaQuality -->
 
     <owl:Class rdf:about="#ClassMammaliaQuality">
         <rdfs:subClassOf rdf:resource="#SubphylumVertebrataQuality"/>
@@ -1981,7 +1981,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ClassSaccharomycetesQuality -->
+    <!-- http://purl.org/biotop/dev#ClassSaccharomycetesQuality -->
 
     <owl:Class rdf:about="#ClassSaccharomycetesQuality">
         <rdfs:subClassOf rdf:resource="#SubphylumSaccharomycotinaQuality"/>
@@ -1989,7 +1989,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CollectiveMaterialEntity -->
+    <!-- http://purl.org/biotop/dev#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="#CollectiveMaterialEntity">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -2015,7 +2015,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Complicating -->
+    <!-- http://purl.org/biotop/dev#Complicating -->
 
     <owl:Class rdf:about="#Complicating">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -2025,7 +2025,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CompoundOfCollectiveMaterialEntities -->
+    <!-- http://purl.org/biotop/dev#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="#CompoundOfCollectiveMaterialEntities">
         <rdfs:label
@@ -2050,7 +2050,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CongenitalPathologicalCondition -->
+    <!-- http://purl.org/biotop/dev#CongenitalPathologicalCondition -->
 
     <owl:Class rdf:about="#CongenitalPathologicalCondition">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -2062,7 +2062,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#CongenitalPathologicalState -->
+    <!-- http://purl.org/biotop/dev#CongenitalPathologicalState -->
 
     <owl:Class rdf:about="#CongenitalPathologicalState">
         <owl:equivalentClass>
@@ -2080,7 +2080,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Cytoplasm -->
+    <!-- http://purl.org/biotop/dev#Cytoplasm -->
 
     <owl:Class rdf:about="#Cytoplasm">
         <rdfs:label xml:lang="en">cytoplasm</rdfs:label>
@@ -2113,7 +2113,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#DNA -->
+    <!-- http://purl.org/biotop/dev#DNA -->
 
     <owl:Class rdf:about="#DNA">
         <rdfs:label rdf:datatype="&xsd;string">DNA sequence</rdfs:label>
@@ -2126,7 +2126,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#DevelopmentalQuality -->
+    <!-- http://purl.org/biotop/dev#DevelopmentalQuality -->
 
     <owl:Class rdf:about="#DevelopmentalQuality">
         <rdfs:subClassOf rdf:resource="#Quality"/>
@@ -2142,7 +2142,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#DiagnosticRole -->
+    <!-- http://purl.org/biotop/dev#DiagnosticRole -->
 
     <owl:Class rdf:about="#DiagnosticRole">
         <rdfs:label rdf:datatype="&xsd;string">diagnostic role</rdfs:label>
@@ -2154,7 +2154,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#DigitalEntity -->
+    <!-- http://purl.org/biotop/dev#DigitalEntity -->
 
     <owl:Class rdf:about="#DigitalEntity">
         <rdfs:label rdf:datatype="&xsd;string">digital entity</rdfs:label>
@@ -2164,7 +2164,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Disrupting -->
+    <!-- http://purl.org/biotop/dev#Disrupting -->
 
     <owl:Class rdf:about="#Disrupting">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -2188,7 +2188,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#DrugRole -->
+    <!-- http://purl.org/biotop/dev#DrugRole -->
 
     <owl:Class rdf:about="#DrugRole">
         <rdfs:label rdf:datatype="&xsd;string">drug role</rdfs:label>
@@ -2199,7 +2199,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Dysfunction -->
+    <!-- http://purl.org/biotop/dev#Dysfunction -->
 
     <owl:Class rdf:about="#Dysfunction">
         <owl:equivalentClass>
@@ -2217,7 +2217,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EColiPopulation -->
+    <!-- http://purl.org/biotop/dev#EColiPopulation -->
 
     <owl:Class rdf:about="#EColiPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2243,7 +2243,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EducatorRole -->
+    <!-- http://purl.org/biotop/dev#EducatorRole -->
 
     <owl:Class rdf:about="#EducatorRole">
         <rdfs:subClassOf rdf:resource="#OccupationalRole"/>
@@ -2253,7 +2253,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Eicosanoid -->
+    <!-- http://purl.org/biotop/dev#Eicosanoid -->
 
     <owl:Class rdf:about="#Eicosanoid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
@@ -2263,7 +2263,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Electron -->
+    <!-- http://purl.org/biotop/dev#Electron -->
 
     <owl:Class rdf:about="#Electron">
         <rdfs:label xml:lang="en">electron</rdfs:label>
@@ -2276,7 +2276,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EmbryonicOrganism -->
+    <!-- http://purl.org/biotop/dev#EmbryonicOrganism -->
 
     <owl:Class rdf:about="#EmbryonicOrganism">
         <owl:equivalentClass>
@@ -2295,7 +2295,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EmbryonicQuality -->
+    <!-- http://purl.org/biotop/dev#EmbryonicQuality -->
 
     <owl:Class rdf:about="#EmbryonicQuality">
         <rdfs:subClassOf rdf:resource="#DevelopmentalQuality"/>
@@ -2304,7 +2304,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EmbryonicStructure -->
+    <!-- http://purl.org/biotop/dev#EmbryonicStructure -->
 
     <owl:Class rdf:about="#EmbryonicStructure">
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
@@ -2335,7 +2335,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EntireMolecularEntity -->
+    <!-- http://purl.org/biotop/dev#EntireMolecularEntity -->
 
     <owl:Class rdf:about="#EntireMolecularEntity">
         <rdfs:label xml:lang="en"
@@ -2369,7 +2369,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EntireNucleicAcidMolecule -->
+    <!-- http://purl.org/biotop/dev#EntireNucleicAcidMolecule -->
 
     <owl:Class rdf:about="#EntireNucleicAcidMolecule">
         <rdfs:label xml:lang="en"
@@ -2381,7 +2381,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EntireProteinMolecule -->
+    <!-- http://purl.org/biotop/dev#EntireProteinMolecule -->
 
     <owl:Class rdf:about="#EntireProteinMolecule">
         <rdfs:label xml:lang="en"
@@ -2395,7 +2395,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EnzymeRole -->
+    <!-- http://purl.org/biotop/dev#EnzymeRole -->
 
     <owl:Class rdf:about="#EnzymeRole">
         <owl:equivalentClass>
@@ -2415,7 +2415,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EscherichiaColiCell -->
+    <!-- http://purl.org/biotop/dev#EscherichiaColiCell -->
 
     <owl:Class rdf:about="#EscherichiaColiCell">
         <owl:equivalentClass>
@@ -2433,7 +2433,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Eukaryote -->
+    <!-- http://purl.org/biotop/dev#Eukaryote -->
 
     <owl:Class rdf:about="#Eukaryote">
         <rdfs:label xml:lang="en">eukaryote</rdfs:label>
@@ -2446,7 +2446,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EukaryotePopulation -->
+    <!-- http://purl.org/biotop/dev#EukaryotePopulation -->
 
     <owl:Class rdf:about="#EukaryotePopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2472,7 +2472,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#EukaryoticCell -->
+    <!-- http://purl.org/biotop/dev#EukaryoticCell -->
 
     <owl:Class rdf:about="#EukaryoticCell">
         <rdfs:label xml:lang="en">eukaryotic cell</rdfs:label>
@@ -2494,7 +2494,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ExaminationResultRole -->
+    <!-- http://purl.org/biotop/dev#ExaminationResultRole -->
 
     <owl:Class rdf:about="#ExaminationResultRole">
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
@@ -2504,7 +2504,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FamilyDrosophilidaeQuality -->
+    <!-- http://purl.org/biotop/dev#FamilyDrosophilidaeQuality -->
 
     <owl:Class rdf:about="#FamilyDrosophilidaeQuality">
         <rdfs:subClassOf rdf:resource="#OrderDipteraQuality"/>
@@ -2512,7 +2512,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FamilyEnterobacteriaceaeQuality -->
+    <!-- http://purl.org/biotop/dev#FamilyEnterobacteriaceaeQuality -->
 
     <owl:Class rdf:about="#FamilyEnterobacteriaceaeQuality">
         <rdfs:subClassOf rdf:resource="#OrderEnterobacterialesQuality"/>
@@ -2520,7 +2520,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FamilyHominidaeQuality -->
+    <!-- http://purl.org/biotop/dev#FamilyHominidaeQuality -->
 
     <owl:Class rdf:about="#FamilyHominidaeQuality">
         <rdfs:subClassOf rdf:resource="#OrderPrimatesQuality"/>
@@ -2528,7 +2528,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FamilySaccharomycetaceaeQuality -->
+    <!-- http://purl.org/biotop/dev#FamilySaccharomycetaceaeQuality -->
 
     <owl:Class rdf:about="#FamilySaccharomycetaceaeQuality">
         <rdfs:subClassOf rdf:resource="#OrderSaccharomycetalesQuality"/>
@@ -2536,7 +2536,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FattyAcid -->
+    <!-- http://purl.org/biotop/dev#FattyAcid -->
 
     <owl:Class rdf:about="#FattyAcid">
         <rdfs:label rdf:datatype="&xsd;string">fatty acid</rdfs:label>
@@ -2557,7 +2557,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FindingRole -->
+    <!-- http://purl.org/biotop/dev#FindingRole -->
 
     <owl:Class rdf:about="#FindingRole">
         <rdfs:label rdf:datatype="&xsd;string">finding role</rdfs:label>
@@ -2568,7 +2568,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Fish -->
+    <!-- http://purl.org/biotop/dev#Fish -->
 
     <owl:Class rdf:about="#Fish">
         <rdfs:subClassOf rdf:resource="#Vertebrate"/>
@@ -2576,7 +2576,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FoodRole -->
+    <!-- http://purl.org/biotop/dev#FoodRole -->
 
     <owl:Class rdf:about="#FoodRole">
         <rdfs:label rdf:datatype="&xsd;string">food role</rdfs:label>
@@ -2587,7 +2587,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FruitFly -->
+    <!-- http://purl.org/biotop/dev#FruitFly -->
 
     <owl:Class rdf:about="#FruitFly">
         <owl:equivalentClass>
@@ -2603,7 +2603,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FruitFlyPopulation -->
+    <!-- http://purl.org/biotop/dev#FruitFlyPopulation -->
 
     <owl:Class rdf:about="#FruitFlyPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2627,7 +2627,7 @@ Old name: compound of collections</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Function -->
+    <!-- http://purl.org/biotop/dev#Function -->
 
     <owl:Class rdf:about="#Function">
         <rdfs:label>function</rdfs:label>
@@ -2652,7 +2652,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Fungus -->
+    <!-- http://purl.org/biotop/dev#Fungus -->
 
     <owl:Class rdf:about="#Fungus">
         <rdfs:label xml:lang="en">fungus</rdfs:label>
@@ -2675,7 +2675,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#FungusPopulation -->
+    <!-- http://purl.org/biotop/dev#FungusPopulation -->
 
     <owl:Class rdf:about="#FungusPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2698,7 +2698,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Gene -->
+    <!-- http://purl.org/biotop/dev#Gene -->
 
     <owl:Class rdf:about="#Gene">
         <rdfs:label xml:lang="en">gene</rdfs:label>
@@ -2709,7 +2709,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GeneInformation -->
+    <!-- http://purl.org/biotop/dev#GeneInformation -->
 
     <owl:Class rdf:about="#GeneInformation">
         <rdfs:subClassOf rdf:resource="#NucleotideSequenceInformation"/>
@@ -2719,7 +2719,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GeneRegion -->
+    <!-- http://purl.org/biotop/dev#GeneRegion -->
 
     <owl:Class rdf:about="#GeneRegion">
         <rdfs:label xml:lang="en">gene region</rdfs:label>
@@ -2734,7 +2734,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Genome -->
+    <!-- http://purl.org/biotop/dev#Genome -->
 
     <owl:Class rdf:about="#Genome">
         <rdfs:subClassOf rdf:resource="#NucleotideSequenceInformation"/>
@@ -2744,7 +2744,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GenusCandidaQuality -->
+    <!-- http://purl.org/biotop/dev#GenusCandidaQuality -->
 
     <owl:Class rdf:about="#GenusCandidaQuality">
         <rdfs:subClassOf rdf:resource="#FamilySaccharomycetaceaeQuality"/>
@@ -2752,7 +2752,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GenusDrosophilaQuality -->
+    <!-- http://purl.org/biotop/dev#GenusDrosophilaQuality -->
 
     <owl:Class rdf:about="#GenusDrosophilaQuality">
         <rdfs:subClassOf rdf:resource="#SubfamilyDrosophilinaeQuality"/>
@@ -2760,7 +2760,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GenusEscherichiaQuality -->
+    <!-- http://purl.org/biotop/dev#GenusEscherichiaQuality -->
 
     <owl:Class rdf:about="#GenusEscherichiaQuality">
         <rdfs:subClassOf rdf:resource="#FamilyEnterobacteriaceaeQuality"/>
@@ -2768,7 +2768,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GenusHomoQuality -->
+    <!-- http://purl.org/biotop/dev#GenusHomoQuality -->
 
     <owl:Class rdf:about="#GenusHomoQuality">
         <rdfs:subClassOf rdf:resource="#FamilyHominidaeQuality"/>
@@ -2776,7 +2776,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GenusSaccharomycesQuality -->
+    <!-- http://purl.org/biotop/dev#GenusSaccharomycesQuality -->
 
     <owl:Class rdf:about="#GenusSaccharomycesQuality">
         <rdfs:subClassOf rdf:resource="#FamilySaccharomycetaceaeQuality"/>
@@ -2784,7 +2784,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GeographicEntity -->
+    <!-- http://purl.org/biotop/dev#GeographicEntity -->
 
     <owl:Class rdf:about="#GeographicEntity">
         <rdfs:subClassOf rdf:resource="#TwoDimensionalPhysicalEntity"/>
@@ -2792,7 +2792,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GreatApe -->
+    <!-- http://purl.org/biotop/dev#GreatApe -->
 
     <owl:Class rdf:about="#GreatApe">
         <owl:equivalentClass>
@@ -2807,7 +2807,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GreatApePopulation -->
+    <!-- http://purl.org/biotop/dev#GreatApePopulation -->
 
     <owl:Class rdf:about="#GreatApePopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2829,7 +2829,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GroupInteraction -->
+    <!-- http://purl.org/biotop/dev#GroupInteraction -->
 
     <owl:Class rdf:about="#GroupInteraction">
         <rdfs:subClassOf rdf:resource="#Interacting"/>
@@ -2855,7 +2855,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#GrowingProcess -->
+    <!-- http://purl.org/biotop/dev#GrowingProcess -->
 
     <owl:Class rdf:about="#GrowingProcess">
         <rdfs:subClassOf rdf:resource="#TissueProcess"/>
@@ -2863,7 +2863,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#HealthRelatedRole -->
+    <!-- http://purl.org/biotop/dev#HealthRelatedRole -->
 
     <owl:Class rdf:about="#HealthRelatedRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
@@ -2873,7 +2873,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#HeterocyclicBase -->
+    <!-- http://purl.org/biotop/dev#HeterocyclicBase -->
 
     <owl:Class rdf:about="#HeterocyclicBase">
         <rdfs:label xml:lang="en"
@@ -2894,7 +2894,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#HormoneRole -->
+    <!-- http://purl.org/biotop/dev#HormoneRole -->
 
     <owl:Class rdf:about="#HormoneRole">
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
@@ -2904,7 +2904,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Human -->
+    <!-- http://purl.org/biotop/dev#Human -->
 
     <owl:Class rdf:about="#Human">
         <owl:equivalentClass>
@@ -2918,7 +2918,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#HumanAction -->
+    <!-- http://purl.org/biotop/dev#HumanAction -->
 
     <owl:Class rdf:about="#HumanAction">
         <rdfs:subClassOf rdf:resource="#OrganismAction"/>
@@ -2943,7 +2943,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#HumanLeukocyte -->
+    <!-- http://purl.org/biotop/dev#HumanLeukocyte -->
 
     <owl:Class rdf:about="#HumanLeukocyte">
         <owl:equivalentClass>
@@ -2966,7 +2966,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#HumanPopulation -->
+    <!-- http://purl.org/biotop/dev#HumanPopulation -->
 
     <owl:Class rdf:about="#HumanPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2980,7 +2980,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ImmaterialNonphysicalEntity -->
+    <!-- http://purl.org/biotop/dev#ImmaterialNonphysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialNonphysicalEntity">
         <rdfs:label
@@ -3017,7 +3017,7 @@ kinds of contexts that it is made for.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ImmaterialPhysicalEntity -->
+    <!-- http://purl.org/biotop/dev#ImmaterialPhysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialPhysicalEntity">
         <rdfs:label
@@ -3044,7 +3044,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ImmaterialThreeDimensionalPhysicalEntity -->
+    <!-- http://purl.org/biotop/dev#ImmaterialThreeDimensionalPhysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialThreeDimensionalPhysicalEntity">
         <owl:equivalentClass>
@@ -3062,7 +3062,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ImmunologicRole -->
+    <!-- http://purl.org/biotop/dev#ImmunologicRole -->
 
     <owl:Class rdf:about="#ImmunologicRole">
         <rdfs:subClassOf rdf:resource="#BiologicalSystemRole"/>
@@ -3072,7 +3072,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#IndicatorRole -->
+    <!-- http://purl.org/biotop/dev#IndicatorRole -->
 
     <owl:Class rdf:about="#IndicatorRole">
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
@@ -3082,7 +3082,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#IndividualBehavior -->
+    <!-- http://purl.org/biotop/dev#IndividualBehavior -->
 
     <owl:Class rdf:about="#IndividualBehavior">
         <owl:equivalentClass>
@@ -3102,7 +3102,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#InformationEntity -->
+    <!-- http://purl.org/biotop/dev#InformationEntity -->
 
     <owl:Class rdf:about="#InformationEntity">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -3116,7 +3116,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#InorganicMolecularEntity -->
+    <!-- http://purl.org/biotop/dev#InorganicMolecularEntity -->
 
     <owl:Class rdf:about="#InorganicMolecularEntity">
         <rdfs:label xml:lang="en"
@@ -3136,7 +3136,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Insect -->
+    <!-- http://purl.org/biotop/dev#Insect -->
 
     <owl:Class rdf:about="#Insect">
         <owl:equivalentClass>
@@ -3151,7 +3151,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#InsectPopulation -->
+    <!-- http://purl.org/biotop/dev#InsectPopulation -->
 
     <owl:Class rdf:about="#InsectPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -3172,7 +3172,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#IntellectualProduct -->
+    <!-- http://purl.org/biotop/dev#IntellectualProduct -->
 
     <owl:Class rdf:about="#IntellectualProduct">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -3183,7 +3183,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Interacting -->
+    <!-- http://purl.org/biotop/dev#Interacting -->
 
     <owl:Class rdf:about="#Interacting">
         <owl:equivalentClass>
@@ -3200,7 +3200,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#IntraCellularProcess -->
+    <!-- http://purl.org/biotop/dev#IntraCellularProcess -->
 
     <owl:Class rdf:about="#IntraCellularProcess">
         <rdfs:label xml:lang="en"
@@ -3222,7 +3222,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Invertebrate -->
+    <!-- http://purl.org/biotop/dev#Invertebrate -->
 
     <owl:Class rdf:about="#Invertebrate">
         <rdfs:subClassOf rdf:resource="#AnimalIncludingHuman"/>
@@ -3230,7 +3230,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#JuvenileOrganism -->
+    <!-- http://purl.org/biotop/dev#JuvenileOrganism -->
 
     <owl:Class rdf:about="#JuvenileOrganism">
         <owl:equivalentClass>
@@ -3248,7 +3248,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#JuvenileQuality -->
+    <!-- http://purl.org/biotop/dev#JuvenileQuality -->
 
     <owl:Class rdf:about="#JuvenileQuality">
         <rdfs:subClassOf rdf:resource="#DevelopmentalQuality"/>
@@ -3256,7 +3256,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#KingdomAnimaliaQuality -->
+    <!-- http://purl.org/biotop/dev#KingdomAnimaliaQuality -->
 
     <owl:Class rdf:about="#KingdomAnimaliaQuality">
         <rdfs:subClassOf rdf:resource="#TaxonQuality"/>
@@ -3264,7 +3264,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#KingdomArchaeaQuality -->
+    <!-- http://purl.org/biotop/dev#KingdomArchaeaQuality -->
 
     <owl:Class rdf:about="#KingdomArchaeaQuality">
         <rdfs:subClassOf rdf:resource="#TaxonQuality"/>
@@ -3272,7 +3272,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#KingdomBacteriaQuality -->
+    <!-- http://purl.org/biotop/dev#KingdomBacteriaQuality -->
 
     <owl:Class rdf:about="#KingdomBacteriaQuality">
         <rdfs:subClassOf rdf:resource="#TaxonQuality"/>
@@ -3280,7 +3280,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#KingdomChromistaQuality -->
+    <!-- http://purl.org/biotop/dev#KingdomChromistaQuality -->
 
     <owl:Class rdf:about="#KingdomChromistaQuality">
         <rdfs:subClassOf rdf:resource="#TaxonQuality"/>
@@ -3288,7 +3288,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#KingdomFungiQuality -->
+    <!-- http://purl.org/biotop/dev#KingdomFungiQuality -->
 
     <owl:Class rdf:about="#KingdomFungiQuality">
         <rdfs:subClassOf rdf:resource="#TaxonQuality"/>
@@ -3296,7 +3296,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#KingdomPlantaeQuality -->
+    <!-- http://purl.org/biotop/dev#KingdomPlantaeQuality -->
 
     <owl:Class rdf:about="#KingdomPlantaeQuality">
         <rdfs:subClassOf rdf:resource="#TaxonQuality"/>
@@ -3304,7 +3304,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#KingdomProtozoaQuality -->
+    <!-- http://purl.org/biotop/dev#KingdomProtozoaQuality -->
 
     <owl:Class rdf:about="#KingdomProtozoaQuality">
         <rdfs:subClassOf rdf:resource="#TaxonQuality"/>
@@ -3312,7 +3312,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#KingdomVirusesQuality -->
+    <!-- http://purl.org/biotop/dev#KingdomVirusesQuality -->
 
     <owl:Class rdf:about="#KingdomVirusesQuality">
         <rdfs:subClassOf rdf:resource="#TaxonQuality"/>
@@ -3320,7 +3320,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Language -->
+    <!-- http://purl.org/biotop/dev#Language -->
 
     <owl:Class rdf:about="#Language">
         <rdfs:subClassOf rdf:resource="#IntellectualProduct"/>
@@ -3328,7 +3328,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#LegalEntity -->
+    <!-- http://purl.org/biotop/dev#LegalEntity -->
 
     <owl:Class rdf:about="#LegalEntity">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -3338,7 +3338,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Leukocyte -->
+    <!-- http://purl.org/biotop/dev#Leukocyte -->
 
     <owl:Class rdf:about="#Leukocyte">
         <rdfs:subClassOf rdf:resource="#Cell"/>
@@ -3346,7 +3346,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Lipid -->
+    <!-- http://purl.org/biotop/dev#Lipid -->
 
     <owl:Class rdf:about="#Lipid">
         <rdfs:label xml:lang="en">lipid</rdfs:label>
@@ -3364,7 +3364,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#MachineAction -->
+    <!-- http://purl.org/biotop/dev#MachineAction -->
 
     <owl:Class rdf:about="#MachineAction">
         <owl:equivalentClass>
@@ -3412,7 +3412,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Mammal -->
+    <!-- http://purl.org/biotop/dev#Mammal -->
 
     <owl:Class rdf:about="#Mammal">
         <owl:equivalentClass>
@@ -3427,7 +3427,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#MammalPopulation -->
+    <!-- http://purl.org/biotop/dev#MammalPopulation -->
 
     <owl:Class rdf:about="#MammalPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -3447,7 +3447,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ManagingCare -->
+    <!-- http://purl.org/biotop/dev#ManagingCare -->
 
     <owl:Class rdf:about="#ManagingCare">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -3472,7 +3472,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#MaterialEntity -->
+    <!-- http://purl.org/biotop/dev#MaterialEntity -->
 
     <owl:Class rdf:about="#MaterialEntity">
         <rdfs:label rdf:datatype="&xsd;string">material entity</rdfs:label>
@@ -3496,7 +3496,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Measure -->
+    <!-- http://purl.org/biotop/dev#Measure -->
 
     <owl:Class rdf:about="#Measure">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -3505,7 +3505,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Mind -->
+    <!-- http://purl.org/biotop/dev#Mind -->
 
     <owl:Class rdf:about="#Mind">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -3513,7 +3513,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ModifiedCell -->
+    <!-- http://purl.org/biotop/dev#ModifiedCell -->
 
     <owl:Class rdf:about="#ModifiedCell">
         <rdfs:label xml:lang="en">modified cell</rdfs:label>
@@ -3540,7 +3540,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#MolecularFunction -->
+    <!-- http://purl.org/biotop/dev#MolecularFunction -->
 
     <owl:Class rdf:about="#MolecularFunction">
         <rdfs:label xml:lang="en"
@@ -3562,7 +3562,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#MoleculeComplex -->
+    <!-- http://purl.org/biotop/dev#MoleculeComplex -->
 
     <owl:Class rdf:about="#MoleculeComplex">
         <rdfs:label xml:lang="en"
@@ -3582,7 +3582,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#MonoMolecularEntity -->
+    <!-- http://purl.org/biotop/dev#MonoMolecularEntity -->
 
     <owl:Class rdf:about="#MonoMolecularEntity">
         <rdfs:label xml:lang="en"
@@ -3604,7 +3604,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Monomer -->
+    <!-- http://purl.org/biotop/dev#Monomer -->
 
     <owl:Class rdf:about="#Monomer">
         <rdfs:label xml:lang="en">monomer</rdfs:label>
@@ -3622,7 +3622,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#MulticellularOrganism -->
+    <!-- http://purl.org/biotop/dev#MulticellularOrganism -->
 
     <owl:Class rdf:about="#MulticellularOrganism">
         <rdfs:label xml:lang="en"
@@ -3649,7 +3649,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NeoplasticProcess -->
+    <!-- http://purl.org/biotop/dev#NeoplasticProcess -->
 
     <owl:Class rdf:about="#NeoplasticProcess">
         <owl:equivalentClass>
@@ -3667,7 +3667,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NeuroreactiveRole -->
+    <!-- http://purl.org/biotop/dev#NeuroreactiveRole -->
 
     <owl:Class rdf:about="#NeuroreactiveRole">
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
@@ -3677,7 +3677,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Neutron -->
+    <!-- http://purl.org/biotop/dev#Neutron -->
 
     <owl:Class rdf:about="#Neutron">
         <rdfs:label xml:lang="en">neutron</rdfs:label>
@@ -3689,7 +3689,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NoncanonicalCondition -->
+    <!-- http://purl.org/biotop/dev#NoncanonicalCondition -->
 
     <owl:Class rdf:about="#NoncanonicalCondition">
         <rdfs:subClassOf rdf:resource="#Canonicity"/>
@@ -3699,7 +3699,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NoncanonicalProcessualEntity -->
+    <!-- http://purl.org/biotop/dev#NoncanonicalProcessualEntity -->
 
     <owl:Class rdf:about="#NoncanonicalProcessualEntity">
         <owl:equivalentClass>
@@ -3717,7 +3717,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NoncanonicalState -->
+    <!-- http://purl.org/biotop/dev#NoncanonicalState -->
 
     <owl:Class rdf:about="#NoncanonicalState">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -3738,7 +3738,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NucleicAcid -->
+    <!-- http://purl.org/biotop/dev#NucleicAcid -->
 
     <owl:Class rdf:about="#NucleicAcid">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -3772,7 +3772,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NucleicAcidRegion -->
+    <!-- http://purl.org/biotop/dev#NucleicAcidRegion -->
 
     <owl:Class rdf:about="#NucleicAcidRegion">
         <rdfs:label xml:lang="en"
@@ -3792,7 +3792,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Nucleoside -->
+    <!-- http://purl.org/biotop/dev#Nucleoside -->
 
     <owl:Class rdf:about="#Nucleoside">
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
@@ -3804,7 +3804,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Nucleotide -->
+    <!-- http://purl.org/biotop/dev#Nucleotide -->
 
     <owl:Class rdf:about="#Nucleotide">
         <rdfs:label xml:lang="en">nucleotide</rdfs:label>
@@ -3818,7 +3818,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NucleotideSequenceInformation -->
+    <!-- http://purl.org/biotop/dev#NucleotideSequenceInformation -->
 
     <owl:Class rdf:about="#NucleotideSequenceInformation">
         <owl:equivalentClass>
@@ -3836,7 +3836,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#NurseRole -->
+    <!-- http://purl.org/biotop/dev#NurseRole -->
 
     <owl:Class rdf:about="#NurseRole">
         <rdfs:subClassOf rdf:resource="#OccupationalRole"/>
@@ -3846,7 +3846,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OccupationalRole -->
+    <!-- http://purl.org/biotop/dev#OccupationalRole -->
 
     <owl:Class rdf:about="#OccupationalRole">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -3858,7 +3858,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OligoOrPolymer -->
+    <!-- http://purl.org/biotop/dev#OligoOrPolymer -->
 
     <owl:Class rdf:about="#OligoOrPolymer">
         <rdfs:label xml:lang="en"
@@ -3884,7 +3884,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OrderDipteraQuality -->
+    <!-- http://purl.org/biotop/dev#OrderDipteraQuality -->
 
     <owl:Class rdf:about="#OrderDipteraQuality">
         <rdfs:subClassOf rdf:resource="#ClassInsectaQuality"/>
@@ -3892,7 +3892,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OrderEnterobacterialesQuality -->
+    <!-- http://purl.org/biotop/dev#OrderEnterobacterialesQuality -->
 
     <owl:Class rdf:about="#OrderEnterobacterialesQuality">
         <rdfs:subClassOf rdf:resource="#ClassGammaProteobacteriaQuality"/>
@@ -3900,7 +3900,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OrderPrimatesQuality -->
+    <!-- http://purl.org/biotop/dev#OrderPrimatesQuality -->
 
     <owl:Class rdf:about="#OrderPrimatesQuality">
         <rdfs:subClassOf rdf:resource="#ClassMammaliaQuality"/>
@@ -3908,7 +3908,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OrderSaccharomycetalesQuality -->
+    <!-- http://purl.org/biotop/dev#OrderSaccharomycetalesQuality -->
 
     <owl:Class rdf:about="#OrderSaccharomycetalesQuality">
         <rdfs:subClassOf rdf:resource="#ClassSaccharomycetesQuality"/>
@@ -3916,7 +3916,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Organ -->
+    <!-- http://purl.org/biotop/dev#Organ -->
 
     <owl:Class rdf:about="#Organ">
         <rdfs:subClassOf rdf:resource="#OrganismPart"/>
@@ -3926,7 +3926,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OrganicMolecularEntity -->
+    <!-- http://purl.org/biotop/dev#OrganicMolecularEntity -->
 
     <owl:Class rdf:about="#OrganicMolecularEntity">
         <rdfs:label xml:lang="en"
@@ -3939,7 +3939,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Organism -->
+    <!-- http://purl.org/biotop/dev#Organism -->
 
     <owl:Class rdf:about="#Organism">
         <rdfs:label xml:lang="en">organism</rdfs:label>
@@ -3951,7 +3951,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OrganismAction -->
+    <!-- http://purl.org/biotop/dev#OrganismAction -->
 
     <owl:Class rdf:about="#OrganismAction">
         <owl:equivalentClass>
@@ -3975,7 +3975,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OrganismInteraction -->
+    <!-- http://purl.org/biotop/dev#OrganismInteraction -->
 
     <owl:Class rdf:about="#OrganismInteraction">
         <rdfs:subClassOf rdf:resource="#Interacting"/>
@@ -3990,7 +3990,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#OrganismPart -->
+    <!-- http://purl.org/biotop/dev#OrganismPart -->
 
     <owl:Class rdf:about="#OrganismPart">
         <rdfs:label xml:lang="en">organism part</rdfs:label>
@@ -4021,7 +4021,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Organization -->
+    <!-- http://purl.org/biotop/dev#Organization -->
 
     <owl:Class rdf:about="#Organization">
         <rdfs:subClassOf rdf:resource="#LegalEntity"/>
@@ -4029,7 +4029,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PathologicalCondition -->
+    <!-- http://purl.org/biotop/dev#PathologicalCondition -->
 
     <owl:Class rdf:about="#PathologicalCondition">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -4054,7 +4054,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PathologicalState -->
+    <!-- http://purl.org/biotop/dev#PathologicalState -->
 
     <owl:Class rdf:about="#PathologicalState">
         <owl:equivalentClass>
@@ -4088,7 +4088,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Peptide -->
+    <!-- http://purl.org/biotop/dev#Peptide -->
 
     <owl:Class rdf:about="#Peptide">
         <rdfs:label xml:lang="en">peptide</rdfs:label>
@@ -4106,7 +4106,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Phosphate -->
+    <!-- http://purl.org/biotop/dev#Phosphate -->
 
     <owl:Class rdf:about="#Phosphate">
         <rdfs:label xml:lang="en">phosphate</rdfs:label>
@@ -4117,7 +4117,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhylumArthropodaQuality -->
+    <!-- http://purl.org/biotop/dev#PhylumArthropodaQuality -->
 
     <owl:Class rdf:about="#PhylumArthropodaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomAnimaliaQuality"/>
@@ -4125,7 +4125,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhylumAscomycotaQuality -->
+    <!-- http://purl.org/biotop/dev#PhylumAscomycotaQuality -->
 
     <owl:Class rdf:about="#PhylumAscomycotaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomFungiQuality"/>
@@ -4133,7 +4133,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhylumChordataQuality -->
+    <!-- http://purl.org/biotop/dev#PhylumChordataQuality -->
 
     <owl:Class rdf:about="#PhylumChordataQuality">
         <rdfs:subClassOf rdf:resource="#KingdomAnimaliaQuality"/>
@@ -4141,7 +4141,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhylumProteobacteriaQuality -->
+    <!-- http://purl.org/biotop/dev#PhylumProteobacteriaQuality -->
 
     <owl:Class rdf:about="#PhylumProteobacteriaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomBacteriaQuality"/>
@@ -4149,7 +4149,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhysicalBoundary -->
+    <!-- http://purl.org/biotop/dev#PhysicalBoundary -->
 
     <owl:Class rdf:about="#PhysicalBoundary">
         <rdfs:subClassOf rdf:resource="#ImmaterialPhysicalEntity"/>
@@ -4159,7 +4159,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhysicalForce -->
+    <!-- http://purl.org/biotop/dev#PhysicalForce -->
 
     <owl:Class rdf:about="#PhysicalForce">
         <rdfs:subClassOf rdf:resource="#Quality"/>
@@ -4172,7 +4172,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhysicalMass -->
+    <!-- http://purl.org/biotop/dev#PhysicalMass -->
 
     <owl:Class rdf:about="#PhysicalMass">
         <rdfs:label rdf:datatype="&xsd;string">physical mass</rdfs:label>
@@ -4199,7 +4199,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhysicalState -->
+    <!-- http://purl.org/biotop/dev#PhysicalState -->
 
     <owl:Class rdf:about="#PhysicalState">
         <rdfs:label rdf:datatype="&xsd;string">physical state</rdfs:label>
@@ -4227,7 +4227,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhysicalVolume -->
+    <!-- http://purl.org/biotop/dev#PhysicalVolume -->
 
     <owl:Class rdf:about="#PhysicalVolume">
         <rdfs:label rdf:datatype="&xsd;string">physical volume</rdfs:label>
@@ -4240,7 +4240,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PhysicianRole -->
+    <!-- http://purl.org/biotop/dev#PhysicianRole -->
 
     <owl:Class rdf:about="#PhysicianRole">
         <rdfs:subClassOf rdf:resource="#OccupationalRole"/>
@@ -4250,7 +4250,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Plan -->
+    <!-- http://purl.org/biotop/dev#Plan -->
 
     <owl:Class rdf:about="#Plan">
         <rdfs:label rdf:datatype="&xsd;string">plan</rdfs:label>
@@ -4260,7 +4260,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Plant -->
+    <!-- http://purl.org/biotop/dev#Plant -->
 
     <owl:Class rdf:about="#Plant">
         <rdfs:label xml:lang="en">plant</rdfs:label>
@@ -4281,7 +4281,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PlantPopulation -->
+    <!-- http://purl.org/biotop/dev#PlantPopulation -->
 
     <owl:Class rdf:about="#PlantPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -4300,7 +4300,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PluralityOfOrganisms -->
+    <!-- http://purl.org/biotop/dev#PluralityOfOrganisms -->
 
     <owl:Class rdf:about="#PluralityOfOrganisms">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -4332,7 +4332,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PoisonRole -->
+    <!-- http://purl.org/biotop/dev#PoisonRole -->
 
     <owl:Class rdf:about="#PoisonRole">
         <rdfs:label rdf:datatype="&xsd;string">poison role</rdfs:label>
@@ -4343,7 +4343,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PolyMolecularCompositeEntity -->
+    <!-- http://purl.org/biotop/dev#PolyMolecularCompositeEntity -->
 
     <owl:Class rdf:about="#PolyMolecularCompositeEntity">
         <rdfs:label xml:lang="en"
@@ -4362,7 +4362,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Population -->
+    <!-- http://purl.org/biotop/dev#Population -->
 
     <owl:Class rdf:about="#Population">
         <rdfs:label rdf:datatype="&xsd;string">population</rdfs:label>
@@ -4373,7 +4373,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PortionOfHeterogenousLiquid -->
+    <!-- http://purl.org/biotop/dev#PortionOfHeterogenousLiquid -->
 
     <owl:Class rdf:about="#PortionOfHeterogenousLiquid">
         <rdfs:label xml:lang="en"
@@ -4385,7 +4385,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PortionOfHeterogenousSolid -->
+    <!-- http://purl.org/biotop/dev#PortionOfHeterogenousSolid -->
 
     <owl:Class rdf:about="#PortionOfHeterogenousSolid">
         <rdfs:label xml:lang="en"
@@ -4397,7 +4397,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PortionOfHomogenousMatter -->
+    <!-- http://purl.org/biotop/dev#PortionOfHomogenousMatter -->
 
     <owl:Class rdf:about="#PortionOfHomogenousMatter">
         <rdfs:label
@@ -4435,7 +4435,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PreventionAction -->
+    <!-- http://purl.org/biotop/dev#PreventionAction -->
 
     <owl:Class rdf:about="#PreventionAction">
         <rdfs:subClassOf rdf:resource="#Action"/>
@@ -4458,7 +4458,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PreventiveRole -->
+    <!-- http://purl.org/biotop/dev#PreventiveRole -->
 
     <owl:Class rdf:about="#PreventiveRole">
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
@@ -4468,7 +4468,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Primate -->
+    <!-- http://purl.org/biotop/dev#Primate -->
 
     <owl:Class rdf:about="#Primate">
         <owl:equivalentClass>
@@ -4483,7 +4483,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#PrimatePopulation -->
+    <!-- http://purl.org/biotop/dev#PrimatePopulation -->
 
     <owl:Class rdf:about="#PrimatePopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -4501,7 +4501,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ProcessualEntity -->
+    <!-- http://purl.org/biotop/dev#ProcessualEntity -->
 
     <owl:Class rdf:about="#ProcessualEntity">
         <rdfs:label
@@ -4521,7 +4521,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Prokaryote -->
+    <!-- http://purl.org/biotop/dev#Prokaryote -->
 
     <owl:Class rdf:about="#Prokaryote">
         <rdfs:label xml:lang="en">prokaryote</rdfs:label>
@@ -4532,7 +4532,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ProteinComplex -->
+    <!-- http://purl.org/biotop/dev#ProteinComplex -->
 
     <owl:Class rdf:about="#ProteinComplex">
         <rdfs:label xml:lang="en">protein complex</rdfs:label>
@@ -4564,7 +4564,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ProteinDomain -->
+    <!-- http://purl.org/biotop/dev#ProteinDomain -->
 
     <owl:Class rdf:about="#ProteinDomain">
         <rdfs:label xml:lang="en">protein domain</rdfs:label>
@@ -4581,7 +4581,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ProteinFunction -->
+    <!-- http://purl.org/biotop/dev#ProteinFunction -->
 
     <owl:Class rdf:about="#ProteinFunction">
         <rdfs:label xml:lang="en"
@@ -4603,7 +4603,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ProteinSubstructure -->
+    <!-- http://purl.org/biotop/dev#ProteinSubstructure -->
 
     <owl:Class rdf:about="#ProteinSubstructure">
         <rdfs:label xml:lang="en"
@@ -4621,7 +4621,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ProteinSubunit -->
+    <!-- http://purl.org/biotop/dev#ProteinSubunit -->
 
     <owl:Class rdf:about="#ProteinSubunit">
         <rdfs:label xml:lang="en">protein subunit</rdfs:label>
@@ -4632,7 +4632,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Protist -->
+    <!-- http://purl.org/biotop/dev#Protist -->
 
     <owl:Class rdf:about="#Protist">
         <rdfs:label xml:lang="en">protist</rdfs:label>
@@ -4643,7 +4643,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ProtistPopulation -->
+    <!-- http://purl.org/biotop/dev#ProtistPopulation -->
 
     <owl:Class rdf:about="#ProtistPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -4660,7 +4660,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Proton -->
+    <!-- http://purl.org/biotop/dev#Proton -->
 
     <owl:Class rdf:about="#Proton">
         <rdfs:label xml:lang="en">proton</rdfs:label>
@@ -4671,7 +4671,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Quality -->
+    <!-- http://purl.org/biotop/dev#Quality -->
 
     <owl:Class rdf:about="#Quality">
         <rdfs:label>quality</rdfs:label>
@@ -4686,7 +4686,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#RNA -->
+    <!-- http://purl.org/biotop/dev#RNA -->
 
     <owl:Class rdf:about="#RNA">
         <rdfs:label rdf:datatype="&xsd;string">RNA sequence</rdfs:label>
@@ -4698,7 +4698,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ReagentRole -->
+    <!-- http://purl.org/biotop/dev#ReagentRole -->
 
     <owl:Class rdf:about="#ReagentRole">
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
@@ -4708,7 +4708,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ReceptorRole -->
+    <!-- http://purl.org/biotop/dev#ReceptorRole -->
 
     <owl:Class rdf:about="#ReceptorRole">
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
@@ -4718,7 +4718,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#RegulationOrLaw -->
+    <!-- http://purl.org/biotop/dev#RegulationOrLaw -->
 
     <owl:Class rdf:about="#RegulationOrLaw">
         <rdfs:subClassOf rdf:resource="#IntellectualProduct"/>
@@ -4726,7 +4726,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Reptile -->
+    <!-- http://purl.org/biotop/dev#Reptile -->
 
     <owl:Class rdf:about="#Reptile">
         <rdfs:subClassOf rdf:resource="#Vertebrate"/>
@@ -4734,7 +4734,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#ResearchRole -->
+    <!-- http://purl.org/biotop/dev#ResearchRole -->
 
     <owl:Class rdf:about="#ResearchRole">
         <rdfs:label rdf:datatype="&xsd;string">research role</rdfs:label>
@@ -4745,7 +4745,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#RickettsiaCell -->
+    <!-- http://purl.org/biotop/dev#RickettsiaCell -->
 
     <owl:Class rdf:about="#RickettsiaCell">
         <rdfs:subClassOf rdf:resource="#Prokaryote"/>
@@ -4753,7 +4753,7 @@ Old name: molecular entity</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Role -->
+    <!-- http://purl.org/biotop/dev#Role -->
 
     <owl:Class rdf:about="#Role">
         <rdfs:label>role</rdfs:label>
@@ -4768,7 +4768,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SignOrSymptomRole -->
+    <!-- http://purl.org/biotop/dev#SignOrSymptomRole -->
 
     <owl:Class rdf:about="#SignOrSymptomRole">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -4780,7 +4780,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SignallingRole -->
+    <!-- http://purl.org/biotop/dev#SignallingRole -->
 
     <owl:Class rdf:about="#SignallingRole">
         <rdfs:label rdf:datatype="&xsd;string">signalling role</rdfs:label>
@@ -4797,7 +4797,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SocialBehavior -->
+    <!-- http://purl.org/biotop/dev#SocialBehavior -->
 
     <owl:Class rdf:about="#SocialBehavior">
         <owl:equivalentClass>
@@ -4822,7 +4822,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SpatialReferenceRole -->
+    <!-- http://purl.org/biotop/dev#SpatialReferenceRole -->
 
     <owl:Class rdf:about="#SpatialReferenceRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
@@ -4832,7 +4832,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SpatialRegion -->
+    <!-- http://purl.org/biotop/dev#SpatialRegion -->
 
     <owl:Class rdf:about="#SpatialRegion">
         <rdfs:label>spatial region</rdfs:label>
@@ -4843,7 +4843,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SpeciesCandidaAlbicansQuality -->
+    <!-- http://purl.org/biotop/dev#SpeciesCandidaAlbicansQuality -->
 
     <owl:Class rdf:about="#SpeciesCandidaAlbicansQuality">
         <rdfs:subClassOf rdf:resource="#GenusCandidaQuality"/>
@@ -4851,7 +4851,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SpeciesDrosophilaMelanogasterQuality -->
+    <!-- http://purl.org/biotop/dev#SpeciesDrosophilaMelanogasterQuality -->
 
     <owl:Class rdf:about="#SpeciesDrosophilaMelanogasterQuality">
         <rdfs:subClassOf rdf:resource="#GenusDrosophilaQuality"/>
@@ -4859,7 +4859,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SpeciesEscherichiaColiQuality -->
+    <!-- http://purl.org/biotop/dev#SpeciesEscherichiaColiQuality -->
 
     <owl:Class rdf:about="#SpeciesEscherichiaColiQuality">
         <rdfs:subClassOf rdf:resource="#GenusEscherichiaQuality"/>
@@ -4867,7 +4867,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SpeciesHomoSapiensQuality -->
+    <!-- http://purl.org/biotop/dev#SpeciesHomoSapiensQuality -->
 
     <owl:Class rdf:about="#SpeciesHomoSapiensQuality">
         <rdfs:subClassOf rdf:resource="#GenusHomoQuality"/>
@@ -4875,7 +4875,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SpeciesSaccharomycesCerevisiaeQuality -->
+    <!-- http://purl.org/biotop/dev#SpeciesSaccharomycesCerevisiaeQuality -->
 
     <owl:Class rdf:about="#SpeciesSaccharomycesCerevisiaeQuality">
         <rdfs:subClassOf rdf:resource="#GenusSaccharomycesQuality"/>
@@ -4883,7 +4883,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#StateOfBeing -->
+    <!-- http://purl.org/biotop/dev#StateOfBeing -->
 
     <owl:Class rdf:about="#StateOfBeing">
         <rdfs:label rdf:datatype="&xsd;string">state of being</rdfs:label>
@@ -4895,7 +4895,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Steroid -->
+    <!-- http://purl.org/biotop/dev#Steroid -->
 
     <owl:Class rdf:about="#Steroid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
@@ -4905,7 +4905,7 @@ contexts.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#StructuredBiologicalEntity -->
+    <!-- http://purl.org/biotop/dev#StructuredBiologicalEntity -->
 
     <owl:Class rdf:about="#StructuredBiologicalEntity">
         <rdfs:label xml:lang="en"
@@ -4925,7 +4925,7 @@ Old name: anatomical structure</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#StructuredNonbiologicalEntity -->
+    <!-- http://purl.org/biotop/dev#StructuredNonbiologicalEntity -->
 
     <owl:Class rdf:about="#StructuredNonbiologicalEntity">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -4948,7 +4948,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SubatomicParticle -->
+    <!-- http://purl.org/biotop/dev#SubatomicParticle -->
 
     <owl:Class rdf:about="#SubatomicParticle">
         <rdfs:label xml:lang="en"
@@ -4960,7 +4960,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SubfamilyDrosophilinaeQuality -->
+    <!-- http://purl.org/biotop/dev#SubfamilyDrosophilinaeQuality -->
 
     <owl:Class rdf:about="#SubfamilyDrosophilinaeQuality">
         <rdfs:subClassOf rdf:resource="#FamilyDrosophilidaeQuality"/>
@@ -4968,7 +4968,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SubphylumSaccharomycotinaQuality -->
+    <!-- http://purl.org/biotop/dev#SubphylumSaccharomycotinaQuality -->
 
     <owl:Class rdf:about="#SubphylumSaccharomycotinaQuality">
         <rdfs:subClassOf rdf:resource="#PhylumAscomycotaQuality"/>
@@ -4976,7 +4976,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SubphylumVertebrataQuality -->
+    <!-- http://purl.org/biotop/dev#SubphylumVertebrataQuality -->
 
     <owl:Class rdf:about="#SubphylumVertebrataQuality">
         <rdfs:subClassOf rdf:resource="#PhylumChordataQuality"/>
@@ -4984,7 +4984,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/core/dev#SubstanceInteraction -->
+    <!-- http://purl.org/biotop/dev#SubstanceInteraction -->
 
     <owl:Class rdf:about="#SubstanceInteraction">
         <rdfs:subClassOf rdf:resource="#Interacting"/>
@@ -5016,7 +5016,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/core/dev#TaxonQuality -->
+    <!-- http://purl.org/biotop/dev#TaxonQuality -->
 
     <owl:Class rdf:about="#TaxonQuality">
         <rdfs:label rdf:datatype="&xsd;string">taxon quality</rdfs:label>
@@ -5031,7 +5031,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#TemporalEntity -->
+    <!-- http://purl.org/biotop/dev#TemporalEntity -->
 
     <owl:Class rdf:about="#TemporalEntity">
         <rdfs:label>temporal entity</rdfs:label>
@@ -5041,7 +5041,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#TherapeuticRole -->
+    <!-- http://purl.org/biotop/dev#TherapeuticRole -->
 
     <owl:Class rdf:about="#TherapeuticRole">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -5054,7 +5054,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Tissue -->
+    <!-- http://purl.org/biotop/dev#Tissue -->
 
     <owl:Class rdf:about="#Tissue">
         <rdfs:label xml:lang="en">tissue</rdfs:label>
@@ -5101,7 +5101,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#TissueProcess -->
+    <!-- http://purl.org/biotop/dev#TissueProcess -->
 
     <owl:Class rdf:about="#TissueProcess">
         <owl:equivalentClass>
@@ -5119,7 +5119,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Treating -->
+    <!-- http://purl.org/biotop/dev#Treating -->
 
     <owl:Class rdf:about="#Treating">
         <owl:equivalentClass>
@@ -5135,7 +5135,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#TreatingCondition -->
+    <!-- http://purl.org/biotop/dev#TreatingCondition -->
 
     <owl:Class rdf:about="#TreatingCondition">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -5165,7 +5165,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#TreatingPerson -->
+    <!-- http://purl.org/biotop/dev#TreatingPerson -->
 
     <owl:Class rdf:about="#TreatingPerson">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -5200,7 +5200,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#TwoDimensionalPhysicalEntity -->
+    <!-- http://purl.org/biotop/dev#TwoDimensionalPhysicalEntity -->
 
     <owl:Class rdf:about="#TwoDimensionalPhysicalEntity">
         <rdfs:subClassOf rdf:resource="#ImmaterialPhysicalEntity"/>
@@ -5208,7 +5208,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#UnicellularOrganism -->
+    <!-- http://purl.org/biotop/dev#UnicellularOrganism -->
 
     <owl:Class rdf:about="#UnicellularOrganism">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -5250,7 +5250,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Vertebrate -->
+    <!-- http://purl.org/biotop/dev#Vertebrate -->
 
     <owl:Class rdf:about="#Vertebrate">
         <owl:equivalentClass>
@@ -5269,7 +5269,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#VertebratePopulation -->
+    <!-- http://purl.org/biotop/dev#VertebratePopulation -->
 
     <owl:Class rdf:about="#VertebratePopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -5285,7 +5285,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#Virus -->
+    <!-- http://purl.org/biotop/dev#Virus -->
 
     <owl:Class rdf:about="#Virus">
         <rdfs:label xml:lang="en">virus</rdfs:label>
@@ -5310,7 +5310,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#VirusPopulation -->
+    <!-- http://purl.org/biotop/dev#VirusPopulation -->
 
     <owl:Class rdf:about="#VirusPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -5325,7 +5325,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#VitaminRole -->
+    <!-- http://purl.org/biotop/dev#VitaminRole -->
 
     <owl:Class rdf:about="#VitaminRole">
         <rdfs:label rdf:datatype="&xsd;string">vitamin role</rdfs:label>
@@ -5336,7 +5336,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#WaterMolecule -->
+    <!-- http://purl.org/biotop/dev#WaterMolecule -->
 
     <owl:Class rdf:about="#WaterMolecule">
         <rdfs:label xml:lang="en">water molecule</rdfs:label>
@@ -5345,7 +5345,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#YeastCell -->
+    <!-- http://purl.org/biotop/dev#YeastCell -->
 
     <owl:Class rdf:about="#YeastCell">
         <rdfs:label rdf:datatype="&xsd;string">yeast cell</rdfs:label>
@@ -5386,7 +5386,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/core/dev#YeastPopulation -->
+    <!-- http://purl.org/biotop/dev#YeastPopulation -->
 
     <owl:Class rdf:about="#YeastPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
