@@ -11,7 +11,7 @@
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY bfol "http://www.ifomis.org/bfo/1.1/light#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rol "http://www.ifomis.org/obo/ro/1.0/light#" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY snapl "http://www.ifomis.org/bfo/1.1/light/snap#" >
     <!ENTITY spanl "http://www.ifomis.org/bfo/1.1/light/span#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -36,7 +36,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:snapl="http://www.ifomis.org/bfo/1.1/light/snap#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:rol="http://www.ifomis.org/obo/ro/1.0/light#">
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
         <dc:title rdf:datatype="&xsd;string">BioTop</dc:title>
@@ -86,6 +86,153 @@
     <owl:AnnotationProperty rdf:about="&dc;language"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#adjacentTo -->
+
+    <owl:ObjectProperty rdf:about="&biotop;adjacentTo">
+        <owl:equivalentProperty rdf:resource="&ro;adjacentTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#agentIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;agentIn">
+        <owl:equivalentProperty rdf:resource="&ro;agentIn"/>
+    </owl:ObjectProperty>
+
+	
+	
+    <!-- http://purl.org/biotop/core/dev#containedIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;containedIn">
+        <owl:equivalentProperty rdf:resource="&ro;containedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#contains -->
+
+    <owl:ObjectProperty rdf:about="&biotop;contains">
+        <owl:equivalentProperty rdf:resource="&ro;contains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#derivedInto -->
+
+    <owl:ObjectProperty rdf:about="&biotop;derivedInto">
+        <owl:equivalentProperty rdf:resource="&ro;derivedInto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#derivesFrom -->
+
+    <owl:ObjectProperty rdf:about="&biotop;derivesFrom">
+        <owl:equivalentProperty rdf:resource="&ro;derivesFrom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasAgent">
+        <owl:equivalentProperty rdf:resource="&ro;hasAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#hasPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasPart">
+        <owl:equivalentProperty rdf:resource="&ro;hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasParticipant">
+        <owl:equivalentProperty rdf:resource="&ro;hasParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#hasProperPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasProperPart">
+        <owl:equivalentProperty rdf:resource="&ro;hasProperPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;locatedIn">
+        <owl:equivalentProperty rdf:resource="&ro;locatedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#locationOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;locationOf">
+        <owl:equivalentProperty rdf:resource="&ro;locationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#partOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;partOf">
+        <owl:equivalentProperty rdf:resource="&ro;partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;participatesIn">
+        <owl:equivalentProperty rdf:resource="&ro;participatesIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#precededBy -->
+
+    <owl:ObjectProperty rdf:about="&biotop;precededBy">
+        <owl:equivalentProperty rdf:resource="&ro;precededBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#precedes -->
+
+    <owl:ObjectProperty rdf:about="&biotop;precedes">
+        <owl:equivalentProperty rdf:resource="&ro;precedes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#properPartOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;properPartOf">
+        <owl:equivalentProperty rdf:resource="&ro;properPartOf"/>
+    </owl:ObjectProperty>
     
 
 

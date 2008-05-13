@@ -9,7 +9,6 @@
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
     <!ENTITY protege-dc "http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#" >
@@ -27,8 +26,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="">
         <dc:format rdf:datatype="&xsd;string"
             >application/rdf+xml</dc:format>
@@ -94,7 +92,6 @@ Stefan-Meier-Strasse 24
     <!-- http://purl.org/biotop/core/dev#adjacentTo -->
 
     <owl:ObjectProperty rdf:about="#adjacentTo">
-        <owl:equivalentProperty rdf:resource="&ro;adjacentTo"/>
         <rdfs:label rdf:datatype="&xsd;string">adjacent_to</rdfs:label>
         <rdfs:domain>
             <owl:Class>
@@ -125,7 +122,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#agentIn -->
 
     <owl:ObjectProperty rdf:about="#agentIn">
-        <owl:equivalentProperty rdf:resource="&ro;agentIn"/>
         <rdfs:label rdf:datatype="&xsd;string">agent_in</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf hasAgent</rdfs:comment>
@@ -160,7 +156,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
-        <owl:equivalentProperty rdf:resource="&chemtop;componentPartOf"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
@@ -203,7 +198,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#containedIn -->
 
     <owl:ObjectProperty rdf:about="#containedIn">
-        <owl:equivalentProperty rdf:resource="&ro;containedIn"/>
         <rdfs:label rdf:datatype="&xsd;string">contained_in</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -218,7 +212,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#contains -->
 
     <owl:ObjectProperty rdf:about="#contains">
-        <owl:equivalentProperty rdf:resource="&ro;contains"/>
         <rdfs:label rdf:datatype="&xsd;string">contains</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#locationOf"/>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -273,7 +266,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#derivedInto -->
 
     <owl:ObjectProperty rdf:about="#derivedInto">
-        <owl:equivalentProperty rdf:resource="&ro;derivedInto"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">derived_into</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
@@ -286,7 +278,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#derivesFrom -->
 
     <owl:ObjectProperty rdf:about="#derivesFrom">
-        <owl:equivalentProperty rdf:resource="&ro;derivesFrom"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">derives_from</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -329,7 +320,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#granularPartOf -->
 
     <owl:ObjectProperty rdf:about="#granularPartOf">
-        <owl:equivalentProperty rdf:resource="&chemtop;granularPartOf"/>
         <rdfs:label rdf:datatype="&xsd;string"
             >Formerly grainOf</rdfs:label>
         <rdfs:label rdf:datatype="&xsd;string"
@@ -346,7 +336,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasAgent -->
 
     <owl:ObjectProperty rdf:about="#hasAgent">
-        <owl:equivalentProperty rdf:resource="&ro;hasAgent"/>
         <rdfs:label rdf:datatype="&xsd;string">has_agent</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >As for hasParticipant, but with the additional condition that the component instance is causally active in the relevant process</rdfs:comment>
@@ -371,7 +360,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="#hasComponentPart">
-        <owl:equivalentProperty rdf:resource="&chemtop;hasComponentPart"/>
         <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of componentOf.</rdfs:comment>
@@ -382,7 +370,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="#hasGranularPart">
-        <owl:equivalentProperty rdf:resource="&chemtop;hasGranularPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of granularPartOf.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
@@ -406,8 +393,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasPart -->
 
     <owl:ObjectProperty rdf:about="#hasPart">
-        <owl:equivalentProperty rdf:resource="&ro;hasPart"/>
-        <owl:equivalentProperty rdf:resource="&chemtop;hasPart"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">has_part</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -423,7 +408,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasParticipant -->
 
     <owl:ObjectProperty rdf:about="#hasParticipant">
-        <owl:equivalentProperty rdf:resource="&ro;hasParticipant"/>
         <rdfs:label rdf:datatype="&xsd;string">has_participant</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >HasParticipant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane hasParticipant this particular sample of hemoglobin at this particular time.</rdfs:comment>
@@ -444,8 +428,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasProperPart -->
 
     <owl:ObjectProperty rdf:about="#hasProperPart">
-        <owl:equivalentProperty rdf:resource="&ro;hasProperPart"/>
-        <owl:equivalentProperty rdf:resource="&chemtop;hasProperPart"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">has_proper_part</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#hasPart"/>
@@ -508,7 +490,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#locatedIn -->
 
     <owl:ObjectProperty rdf:about="#locatedIn">
-        <owl:equivalentProperty rdf:resource="&ro;locatedIn"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">located_in</rdfs:label>
         <rdfs:domain>
@@ -544,7 +525,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#locationOf -->
 
     <owl:ObjectProperty rdf:about="#locationOf">
-        <owl:equivalentProperty rdf:resource="&ro;locationOf"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">location_of</rdfs:label>
         <rdfs:domain>
@@ -580,8 +560,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#partOf -->
 
     <owl:ObjectProperty rdf:about="#partOf">
-        <owl:equivalentProperty rdf:resource="&ro;partOf"/>
-        <owl:equivalentProperty rdf:resource="&chemtop;partOf"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">part_of</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -597,7 +575,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#participatesIn -->
 
     <owl:ObjectProperty rdf:about="#participatesIn">
-        <owl:equivalentProperty rdf:resource="&ro;participatesIn"/>
         <rdfs:label rdf:datatype="&xsd;string">participates_in</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -609,7 +586,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#precededBy -->
 
     <owl:ObjectProperty rdf:about="#precededBy">
-        <owl:equivalentProperty rdf:resource="&ro;precededBy"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">preceded_by</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -623,7 +599,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#precedes -->
 
     <owl:ObjectProperty rdf:about="#precedes">
-        <owl:equivalentProperty rdf:resource="&ro;precedes"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">precedes</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
@@ -636,8 +611,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#properPartOf -->
 
     <owl:ObjectProperty rdf:about="#properPartOf">
-        <owl:equivalentProperty rdf:resource="&ro;properPartOf"/>
-        <owl:equivalentProperty rdf:resource="&chemtop;properPartOf"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">proper_part_of</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
