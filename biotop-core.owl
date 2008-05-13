@@ -4,9 +4,11 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
     <!ENTITY biotop "http://purl.org/biotop/core/dev#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
@@ -16,43 +18,44 @@
 
 <rdf:RDF xmlns="http://purl.org/biotop/core/dev#"
      xml:base="http://purl.org/biotop/core/dev"
+     xmlns:biotop="http://purl.org/biotop/core/dev#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
-     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-     xmlns:biotop="http://purl.org/biotop/core/dev#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="">
-        <dc:format rdf:datatype="&xsd;string"
-            >application/rdf+xml</dc:format>
-        <dc:publisher rdf:datatype="&xsd;string"
-            >Jena University Language and Information Engineering (JULIE) Lab</dc:publisher>
-        <owl:versionInfo rdf:datatype="&xsd;string">dev</owl:versionInfo>
+        <dc:date rdf:datatype="&xsd;date"></dc:date>
         <dc:title rdf:datatype="&xsd;string">BioTop</dc:title>
         <dc:source rdf:datatype="&xsd;string"
             >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
-        <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <dc:source rdf:datatype="&xsd;string"
-            >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
-        <dc:creator rdf:datatype="&xsd;string"
-            >Stefan Schulz, Holger Stenzhorn, Elena Beisswanger, Martin Boeker</dc:creator>
-        <dc:date rdf:datatype="&xsd;date"></dc:date>
-        <dc:identifier rdf:datatype="&xsd;string"
-            >http://purl.org/biotop/core/dev</dc:identifier>
         <dc:publisher rdf:datatype="&xsd;string"
             >Institute for Medical Biometry and Medical Informatics
 University Medical Center Freiburg
 Stefan-Meier-Strasse 26
 79106 Freiburg</dc:publisher>
+        <dc:publisher rdf:datatype="&xsd;string"
+            >Jena University Language and Information Engineering (JULIE) Lab</dc:publisher>
+        <dc:source rdf:datatype="&xsd;string"
+            >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
         <dc:source rdf:datatype="&xsd;string"
             >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
+        <dc:creator rdf:datatype="&xsd;string"
+            >Stefan Schulz, Holger Stenzhorn, Elena Beisswanger, Martin Boeker</dc:creator>
         <dc:publisher rdf:datatype="&xsd;string"
             >University Medical Center Freiburg - Department of Medical Biometry and Medical Informatics</dc:publisher>
+        <dc:format rdf:datatype="&xsd;string"
+            >application/rdf+xml</dc:format>
+        <owl:versionInfo rdf:datatype="&xsd;string">dev</owl:versionInfo>
+        <dc:language rdf:datatype="&xsd;string">en</dc:language>
+        <dc:identifier rdf:datatype="&xsd;string"
+            >http://purl.org/biotop/core/dev</dc:identifier>
     </owl:Ontology>
-
     
 
 
@@ -90,28 +93,28 @@ Stefan-Meier-Strasse 26
 
     <owl:ObjectProperty rdf:about="#adjacentTo">
         <rdfs:label rdf:datatype="&xsd;string">adjacent_to</rdfs:label>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -120,9 +123,9 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#agentIn">
         <rdfs:label rdf:datatype="&xsd;string">agent_in</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf hasAgent</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#participatesIn"/>
     </owl:ObjectProperty>
     
@@ -154,12 +157,12 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
         <rdfs:comment rdf:datatype="&xsd;string"
-            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
+            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
             >inverse of hasComponent.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
     </owl:ObjectProperty>
     
 
@@ -167,27 +170,27 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#connectedTo -->
 
     <owl:ObjectProperty rdf:about="#connectedTo">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ProcessualEntity"/>
                     <rdf:Description rdf:about="#SpatialRegion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -196,12 +199,12 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#containedIn">
         <rdfs:label rdf:datatype="&xsd;string">contained_in</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >inverseOf contains</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >inverseOf contains</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
     </owl:ObjectProperty>
     
 
@@ -210,12 +213,12 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#contains">
         <rdfs:label rdf:datatype="&xsd;string">contains</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="#locationOf"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >inverseOf containedIn</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >inverseOf containedIn</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#locationOf"/>
     </owl:ObjectProperty>
     
 
@@ -223,28 +226,28 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#contiguousWith -->
 
     <owl:ObjectProperty rdf:about="#contiguousWith">
-        <rdfs:subPropertyOf rdf:resource="#adjacentTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#adjacentTo"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -252,10 +255,10 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#continuousWith -->
 
     <owl:ObjectProperty rdf:about="#continuousWith">
-        <rdfs:subPropertyOf rdf:resource="#contiguousWith"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#contiguousWith"/>
     </owl:ObjectProperty>
     
 
@@ -278,9 +281,9 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">derives_from</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >inverseOf derivedInto</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
             >Derivation is a relation holding between non-identicals. More precisely, it holds between distinct material continuants when one succeeds the other across a temporal divide in such a way that at least a biologically significant portion of the matter of the earlier continuant is inherited by the later. Thus we will have axioms to the effect that from c derivesFrom c1 we can infer that c and c1 are not identical and that there is some instant of time t such that c1 exists only prior to and c only subsequent to t. We will also be able to infer that the spatial region occupied by c as it begins to exist at t overlaps with the spatial region occupied by c1 as it ceases to exist in the same instant.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >inverseOf derivedInto</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -288,28 +291,28 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#disconnectedFrom -->
 
     <owl:ObjectProperty rdf:about="#disconnectedFrom">
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -318,14 +321,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#granularPartOf">
         <rdfs:label rdf:datatype="&xsd;string"
-            >Formerly grainOf</rdfs:label>
-        <rdfs:label rdf:datatype="&xsd;string"
             >Definition: Granular parts are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string"
+            >Formerly grainOf</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Inverse relation to hasGranularPart</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
     </owl:ObjectProperty>
     
 
@@ -357,9 +360,9 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="#hasComponentPart">
-        <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of componentOf.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
     </owl:ObjectProperty>
     
 
@@ -369,9 +372,9 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:ObjectProperty rdf:about="#hasGranularPart">
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment:  inverse of granularPartOf.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Previous label: hasGrain</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
     </owl:ObjectProperty>
     
 
@@ -393,11 +396,11 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">has_part</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >inverseOf partOf</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#locationOf"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >inverseOf partOf</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#locationOf"/>
     </owl:ObjectProperty>
     
 
@@ -427,10 +430,10 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:ObjectProperty rdf:about="#hasProperPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">has_proper_part</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="#hasPart"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf properPartOf</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#hasPart"/>
     </owl:ObjectProperty>
     
 
@@ -448,9 +451,9 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="#inheresIn">
         <rdfs:comment rdf:datatype="&xsd;string"
-            >inheresIn relates a dependent continuant (a state, quality, property, function, disposition) with the independent continuant it depends on.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >inheresIn relates a dependent continuant (a state, quality, property, function, disposition) with the independent continuant it depends on.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverse of hasInherent</rdfs:comment>
     </owl:ObjectProperty>
@@ -460,26 +463,26 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#interconnects -->
 
     <owl:ObjectProperty rdf:about="#interconnects">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -489,32 +492,32 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:ObjectProperty rdf:about="#locatedIn">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">located_in</rdfs:label>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf locationOf</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ProcessualEntity"/>
                     <rdf:Description rdf:about="#SpatialRegion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -524,32 +527,32 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:ObjectProperty rdf:about="#locationOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">location_of</rdfs:label>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf locatedIn</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -562,9 +565,9 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf hasPart</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
     </owl:ObjectProperty>
     
 
@@ -588,7 +591,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf precedes</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >p precededBy p&apos; if and only if: given any process p at a time t, there is some process p&apos; at time t&apos;, and t&apos; is earlier than t.</rdfs:comment>
+            >p precededBy p&#39; if and only if: given any process p at a time t, there is some process p&#39; at time t&#39;, and t&#39; is earlier than t.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -611,10 +614,10 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">proper_part_of</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string"
+            >As for partOf, with the additional constraint that subject and object are distinct</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
             >inverseOf hasProperPart</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#partOf"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >As for partOf, with the additional constraint that subject and object are distinct</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -633,10 +636,10 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#ramifies -->
 
     <owl:ObjectProperty rdf:about="#ramifies">
-        <rdfs:subPropertyOf rdf:resource="#attachedTo"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#attachedTo"/>
     </owl:ObjectProperty>
     
 
@@ -659,27 +662,27 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#surrounds -->
 
     <owl:ObjectProperty rdf:about="#surrounds">
-        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:comment rdf:datatype="&xsd;string"
             >loosely defined relation: establishing boundaries, enclosing, confining, enclosing, circumscribing</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -691,24 +694,24 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#adjacentTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -719,24 +722,24 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >crossing over and crossing through</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -779,6 +782,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="#CongenitalPathologicalState"/>
     </owl:Class>
     
 
@@ -817,6 +821,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="#EmbryonicOrganism"/>
         <owl:disjointWith rdf:resource="#JuvenileOrganism"/>
     </owl:Class>
     
@@ -826,6 +831,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:Class rdf:about="#AdultQuality">
         <rdfs:subClassOf rdf:resource="#DevelopmentalQuality"/>
+        <owl:disjointWith rdf:resource="#EmbryonicQuality"/>
         <owl:disjointWith rdf:resource="#JuvenileQuality"/>
     </owl:Class>
     
@@ -845,14 +851,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:Class rdf:about="#AgeQuality">
         <rdfs:subClassOf rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#PhysicalMass"/>
-        <owl:disjointWith rdf:resource="#PhysicalVolume"/>
-        <owl:disjointWith rdf:resource="#PhysicalForce"/>
-        <owl:disjointWith rdf:resource="#PhysicalState"/>
-        <owl:disjointWith rdf:resource="#StateOfBeing"/>
-        <owl:disjointWith rdf:resource="#TaxonQuality"/>
         <owl:disjointWith rdf:resource="#Canonicity"/>
         <owl:disjointWith rdf:resource="#DevelopmentalQuality"/>
+        <owl:disjointWith rdf:resource="#PhysicalForce"/>
+        <owl:disjointWith rdf:resource="#PhysicalMass"/>
+        <owl:disjointWith rdf:resource="#PhysicalState"/>
+        <owl:disjointWith rdf:resource="#PhysicalVolume"/>
+        <owl:disjointWith rdf:resource="#StateOfBeing"/>
+        <owl:disjointWith rdf:resource="#TaxonQuality"/>
     </owl:Class>
     
 
@@ -871,20 +877,27 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <rdfs:label xml:lang="en"
             >amino acid monomer</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#BioMolecularSequenceStructure"/>
+        <owl:disjointWith rdf:resource="#Biomolecule"/>
+        <owl:disjointWith rdf:resource="#Carbohydrate"/>
+        <owl:disjointWith rdf:resource="#EntireMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#FattyAcid"/>
+        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
         <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
         <owl:disjointWith rdf:resource="#Lipid"/>
-        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
-        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
         <owl:disjointWith rdf:resource="#Monomer"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
         <owl:disjointWith rdf:resource="#NucleicAcid"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment: (QCR) ro:hasPart some CarbonHydrogenSubstructure and ((hasComponent myx 2 CarboxyGroup) and (hasComponent min 1 CarboxyGroup) and (hasComponent exactly 1 AminoGroup)) or ((hasComponent max 2 AminoGroup) and (hasComponent min 1 AminoGroup) and (hasComponent exactly 1 CarboxyGroup))</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Amino Acids molecules or residues (residues as in peptide bonds)</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
             >Comment: In chemistry, an amino acid is any molecule that contains both amine and carboxyl functional groups. However, in biochemistry, this more general term is frequently used to refer to alpha amino acids (amino acids in which the amino and carboxylate functionalities are attached to the same carbon, called &#945;&#8211;carbon). Amino Acids have at least one amino and one carboxy group. Those having two carboxy groups have only one amino group and vice versa.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Definition: Amino Acids molecules or residues (residues as in peptide bonds)</rdfs:comment>
     </owl:Class>
     
 
@@ -903,6 +916,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="#CarbohydrateSequenceInformation"/>
         <owl:disjointWith rdf:resource="#NucleotideSequenceInformation"/>
     </owl:Class>
     
@@ -932,10 +946,10 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AnimalIncludingHuman"/>
                     <owl:Class>
                         <owl:complementOf rdf:resource="#Human"/>
                     </owl:Class>
-                    <rdf:Description rdf:about="#AnimalIncludingHuman"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -954,6 +968,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#KingdomAnimaliaQuality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ModifiedCell"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Multicellular organisms of the kingdom Animalia</rdfs:comment>
     </owl:Class>
@@ -963,29 +978,30 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#AnimalPopulation -->
 
     <owl:Class rdf:about="#AnimalPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#AnimalIncludingHuman"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
-        <owl:disjointWith rdf:resource="#YeastPopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#InsectPopulation"/>
         <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
+        <owl:disjointWith rdf:resource="#BacteriaPopulation"/>
         <owl:disjointWith rdf:resource="#BakersYeastPopulation"/>
+        <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
+        <owl:disjointWith rdf:resource="#EColiPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
-        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
-        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
         <owl:disjointWith rdf:resource="#FungusPopulation"/>
+        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
+        <owl:disjointWith rdf:resource="#MammalPopulation"/>
+        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -1006,17 +1022,18 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Prokaryote"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#KingdomArchaeaQuality"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#Prokaryote"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="#BacterialCell"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Synonym: Archaebacterium</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </owl:Class>
     
 
@@ -1061,14 +1078,22 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#Arthropod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#BacteriaPopulation"/>
+        <owl:disjointWith rdf:resource="#BakersYeastPopulation"/>
+        <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
         <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
+        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
         <owl:disjointWith rdf:resource="#FungusPopulation"/>
+        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
+        <owl:disjointWith rdf:resource="#MammalPopulation"/>
+        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -1076,11 +1101,11 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#Atom -->
 
     <owl:Class rdf:about="#Atom">
-
         <rdfs:label xml:lang="en">atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <owl:disjointWith rdf:resource="#MonoMolecularEntity"/>
         <owl:disjointWith rdf:resource="#PolyMolecularCompositeEntity"/>
+        <owl:disjointWith rdf:resource="#SubatomicParticle"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Basic building block of molecules. Particle of discrete types. Biologically important atoms are C, N, H, O, P, S, Na, Ca, K, Mg, Cl, J, Fe, Co, Zn ,... Atoms may be electrically neutral or ionic.</rdfs:comment>
     </owl:Class>
@@ -1090,30 +1115,28 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#BacteriaPopulation -->
 
     <owl:Class rdf:about="#BacteriaPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#BacterialCell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-        <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
-        <owl:disjointWith rdf:resource="#YeastPopulation"/>
-        <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#AnimalPopulation"/>
         <owl:disjointWith rdf:resource="#BakersYeastPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
         <owl:disjointWith rdf:resource="#EColiPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
-        <owl:disjointWith rdf:resource="#InsectPopulation"/>
+        <owl:disjointWith rdf:resource="#FungusPopulation"/>
         <owl:disjointWith rdf:resource="#GreatApePopulation"/>
-        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
         <owl:disjointWith rdf:resource="#MammalPopulation"/>
+        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -1125,18 +1148,17 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Prokaryote"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#KingdomBacteriaQuality"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#Prokaryote"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#ArchaebacterialCell"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Synonym: Bacterium</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </owl:Class>
     
 
@@ -1149,15 +1171,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:allValuesFrom rdf:resource="#BacterialCell"/>
-                    </owl:Restriction>
+                    <rdf:Description rdf:about="#BiologicalColony"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
                         <owl:someValuesFrom rdf:resource="#BacterialCell"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#BiologicalColony"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:allValuesFrom rdf:resource="#BacterialCell"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1197,21 +1219,20 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#BakersYeastCell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
         <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
-        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
         <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
+        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
         <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
-        <owl:disjointWith rdf:resource="#YeastPopulation"/>
+        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
+        <owl:disjointWith rdf:resource="#MammalPopulation"/>
         <owl:disjointWith rdf:resource="#PlantPopulation"/>
         <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
-        <owl:disjointWith rdf:resource="#InsectPopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -1286,15 +1307,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#BioMolecularSequenceInformation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
-        <owl:disjointWith rdf:resource="#AminoAcidMonomer"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
-        <owl:disjointWith rdf:resource="#Monomer"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
         <owl:disjointWith rdf:resource="#Carbohydrate"/>
+        <owl:disjointWith rdf:resource="#FattyAcid"/>
+        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
+        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#Monomer"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
         <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >chain (segment) of similar monomers such as proteins or nucleotides</rdfs:comment>
     </owl:Class>
@@ -1387,13 +1408,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasParticipant"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="#OrganismPart"/>
                                     <rdf:Description rdf:about="#Organism"/>
+                                    <rdf:Description rdf:about="#OrganismPart"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -1403,13 +1425,12 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="#OrganismPart"/>
                                     <rdf:Description rdf:about="#Organism"/>
+                                    <rdf:Description rdf:about="#OrganismPart"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1442,7 +1463,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:Class rdf:about="#BiologicalSystemRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
         <rdfs:comment
-            >A role specific to biological processes </rdfs:comment>
+            >A role specific to biological processes</rdfs:comment>
     </owl:Class>
     
 
@@ -1475,16 +1496,17 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
-        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
-        <owl:disjointWith rdf:resource="#Nucleotide"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Monomer"/>
         <owl:disjointWith rdf:resource="#Carbohydrate"/>
-        <owl:disjointWith rdf:resource="#AminoAcidMonomer"/>
+        <owl:disjointWith rdf:resource="#FattyAcid"/>
+        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
+        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#Monomer"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
         <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Monomolecular entity that stems from some organism</rdfs:comment>
     </owl:Class>
@@ -1503,6 +1525,29 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:Class rdf:about="#BodyLiquid">
         <rdfs:label xml:lang="en">body fluid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousLiquid"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#MonoMolecularEntity"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1517,29 +1562,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#MonoMolecularEntity"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousLiquid"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Suspension and / or solution of biomolecules, ions, bigger particles in Water.</rdfs:comment>
     </owl:Class>
@@ -1580,24 +1602,26 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#CandidaAlbicansPopulation -->
 
     <owl:Class rdf:about="#CandidaAlbicansPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#CandidaAlbicansCell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
-        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
-        <owl:disjointWith rdf:resource="#InsectPopulation"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
         <owl:disjointWith rdf:resource="#EColiPopulation"/>
+        <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
+        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
+        <owl:disjointWith rdf:resource="#FungusPopulation"/>
+        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
+        <owl:disjointWith rdf:resource="#MammalPopulation"/>
+        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
         <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -1619,14 +1643,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#CanonicalCondition"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="#NoncanonicalProcessualEntity"/>
     </owl:Class>
     
 
@@ -1638,11 +1663,11 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#StateOfBeing"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#CanonicalCondition"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#StateOfBeing"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1656,6 +1681,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:Class rdf:about="#Canonicity">
         <rdfs:subClassOf rdf:resource="#Quality"/>
+        <owl:disjointWith rdf:resource="#DevelopmentalQuality"/>
+        <owl:disjointWith rdf:resource="#PhysicalForce"/>
+        <owl:disjointWith rdf:resource="#PhysicalMass"/>
+        <owl:disjointWith rdf:resource="#PhysicalState"/>
+        <owl:disjointWith rdf:resource="#PhysicalVolume"/>
+        <owl:disjointWith rdf:resource="#StateOfBeing"/>
+        <owl:disjointWith rdf:resource="#TaxonQuality"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The condition of an entity (state, process, function, object) in terms of being well or ill-formed or behaving</rdfs:comment>
     </owl:Class>
@@ -1667,15 +1699,18 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:Class rdf:about="#Carbohydrate">
         <rdfs:label xml:lang="en">carbohydrate</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
-        <owl:disjointWith rdf:resource="#NucleicAcid"/>
-        <owl:disjointWith rdf:resource="#AminoAcidMonomer"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#EntireMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#FattyAcid"/>
         <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
-        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Lipid"/>
         <owl:disjointWith rdf:resource="#Monomer"/>
+        <owl:disjointWith rdf:resource="#NucleicAcid"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
     </owl:Class>
     
 
@@ -1686,15 +1721,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BioMolecularSequenceInformation"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#inheresIn"/>
                         <owl:someValuesFrom rdf:resource="#Carbohydrate"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#BioMolecularSequenceInformation"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#AminoAcidSequenceInformation"/>
         <owl:disjointWith rdf:resource="#NucleotideSequenceInformation"/>
     </owl:Class>
     
@@ -1722,17 +1756,11 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:Class rdf:about="#Cell">
         <rdfs:label xml:lang="en">cell</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+                <owl:onProperty rdf:resource="#hasProperPart"/>
+                <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1747,12 +1775,19 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasProperPart"/>
-                <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#OrganismPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#CellularComponent"/>
+        <owl:disjointWith rdf:resource="#Organism"/>
+        <owl:disjointWith rdf:resource="#OrganismPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Constituting unit of an organism. The boundary between cell, syncytium and subcellular fragments such as platelets is problematic. Hence no full definition possible.</rdfs:comment>
     </owl:Class>
@@ -1763,18 +1798,18 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:Class rdf:about="#CellInVivo">
         <rdfs:label xml:lang="en">cell in vivo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Organism"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#properPartOf"/>
                         <owl:someValuesFrom rdf:resource="#Organism"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#Organism"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Living cell that is not removed from a living system</rdfs:comment>
     </owl:Class>
@@ -1785,17 +1820,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
 
     <owl:Class rdf:about="#CellMembrane">
         <rdfs:label xml:lang="en">cell membrane</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Peptide"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="#CellularComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1804,6 +1828,17 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
                         <owl:someValuesFrom rdf:resource="#Lipid"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -1842,6 +1877,8 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Organism"/>
+        <owl:disjointWith rdf:resource="#OrganismPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Components which only can be formed inside living cells but which may survive their host cell.</rdfs:comment>
     </owl:Class>
@@ -1855,9 +1892,9 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
             >amino acid sequence</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Peptide"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >Synonym: AminoAcidSequence</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Chain of amino acids, joined by peptide bonds. Folded or unfolded.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Synonym: AminoAcidSequence</rdfs:comment>
     </owl:Class>
     
 
@@ -1865,13 +1902,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#ChainOfCarbohydrateMonomers -->
 
     <owl:Class rdf:about="#ChainOfCarbohydrateMonomers">
+        <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasInherence"/>
                 <owl:someValuesFrom rdf:resource="#CarbohydrateSequenceInformation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
     </owl:Class>
     
 
@@ -1913,6 +1950,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:Class rdf:about="#Chromosome">
         <rdfs:label xml:lang="en">chromosome</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MoleculeComplex"/>
+        <owl:disjointWith rdf:resource="#ProteinComplex"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Organized form of DNA in cells, containing one very long, continuous piece of DNA, which contains many genes, regulatory elements and other intervening nucleotide sequences. Includes also the DNA-bound proteins which serve to package and manage the DNA.</rdfs:comment>
     </owl:Class>
@@ -1954,18 +1992,18 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="#CollectiveMaterialEntity">
-        <rdfs:label xml:lang="en"
-            >collective material entity</rdfs:label>
         <rdfs:label rdf:datatype="&xsd;string"
             >removed for performance: hasGranularPart some MaterialIndependentContinuant</rdfs:label>
+        <rdfs:label xml:lang="en"
+            >collective material entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MaterialEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
                         <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1992,17 +2030,17 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     <owl:Class rdf:about="#CompoundOfCollectiveMaterialEntities">
         <rdfs:label
             >compound of collective material entities</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -2030,15 +2068,14 @@ Old name: compound of collections</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#PathologicalState"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#CongenitalPathologicalCondition"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#PathologicalState"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#AcquiredPathologicalState"/>
     </owl:Class>
     
 
@@ -2047,17 +2084,7 @@ Old name: compound of collections</rdfs:comment>
 
     <owl:Class rdf:about="#Cytoplasm">
         <rdfs:label xml:lang="en">cytoplasm</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Peptide"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#CellularComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPart"/>
@@ -2069,7 +2096,17 @@ Old name: compound of collections</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#CellularComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Gelatinous, semi-transparent fluid that fills most cells. E</rdfs:comment>
     </owl:Class>
@@ -2082,6 +2119,7 @@ Old name: compound of collections</rdfs:comment>
         <rdfs:label rdf:datatype="&xsd;string">DNA sequence</rdfs:label>
         <rdfs:label xml:lang="en">DNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChainOfNucleotideMonomers"/>
+        <owl:disjointWith rdf:resource="#RNA"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A DNA is a complex, high-molecular-weight biochemical macromolecule composed of deoxyribonumcleotide chains that convey genetic information. Any kind of NucleicAcid that is composed of Deoxyribonucleotides is here defined as DNA.</rdfs:comment>
     </owl:Class>
@@ -2092,9 +2130,12 @@ Old name: compound of collections</rdfs:comment>
 
     <owl:Class rdf:about="#DevelopmentalQuality">
         <rdfs:subClassOf rdf:resource="#Quality"/>
+        <owl:disjointWith rdf:resource="#PhysicalForce"/>
+        <owl:disjointWith rdf:resource="#PhysicalMass"/>
         <owl:disjointWith rdf:resource="#PhysicalState"/>
         <owl:disjointWith rdf:resource="#PhysicalVolume"/>
-        <owl:disjointWith rdf:resource="#Canonicity"/>
+        <owl:disjointWith rdf:resource="#StateOfBeing"/>
+        <owl:disjointWith rdf:resource="#TaxonQuality"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Ontogenetic stage</rdfs:comment>
     </owl:Class>
@@ -2133,9 +2174,9 @@ Old name: compound of collections</rdfs:comment>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#ProcessualEntity"/>
                             <rdf:Description rdf:about="#Function"/>
                             <rdf:Description rdf:about="#MaterialEntity"/>
+                            <rdf:Description rdf:about="#ProcessualEntity"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -2164,11 +2205,11 @@ Old name: compound of collections</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Function"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#NoncanonicalCondition"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#Function"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -2179,17 +2220,25 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#EColiPopulation -->
 
     <owl:Class rdf:about="#EColiPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#EscherichiaColiCell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
+        <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
+        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
+        <owl:disjointWith rdf:resource="#FungusPopulation"/>
+        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
         <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
         <owl:disjointWith rdf:resource="#PlantPopulation"/>
         <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -2219,6 +2268,8 @@ Old name: compound of collections</rdfs:comment>
     <owl:Class rdf:about="#Electron">
         <rdfs:label xml:lang="en">electron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+        <owl:disjointWith rdf:resource="#Neutron"/>
+        <owl:disjointWith rdf:resource="#Proton"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Negatively Charged Particle</rdfs:comment>
     </owl:Class>
@@ -2240,7 +2291,6 @@ Old name: compound of collections</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="#JuvenileOrganism"/>
-        <owl:disjointWith rdf:resource="#AdultOrganism"/>
     </owl:Class>
     
 
@@ -2249,7 +2299,6 @@ Old name: compound of collections</rdfs:comment>
 
     <owl:Class rdf:about="#EmbryonicQuality">
         <rdfs:subClassOf rdf:resource="#DevelopmentalQuality"/>
-        <owl:disjointWith rdf:resource="#AdultQuality"/>
         <owl:disjointWith rdf:resource="#JuvenileQuality"/>
     </owl:Class>
     
@@ -2260,25 +2309,25 @@ Old name: compound of collections</rdfs:comment>
     <owl:Class rdf:about="#EmbryonicStructure">
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#partOf"/>
-                        <owl:someValuesFrom rdf:resource="#EmbryonicOrganism"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#derivesFrom"/>
-                        <owl:someValuesFrom rdf:resource="#EmbryonicOrganism"/>
-                    </owl:Restriction>
-                    <rdf:Description rdf:about="#EmbryonicOrganism"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasInherence"/>
                 <owl:someValuesFrom rdf:resource="#EmbryonicQuality"/>
             </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#EmbryonicOrganism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#derivesFrom"/>
+                        <owl:someValuesFrom rdf:resource="#EmbryonicOrganism"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#partOf"/>
+                        <owl:someValuesFrom rdf:resource="#EmbryonicOrganism"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An embryo or any structure derived from it. There may be structures derived from an embryo that are no longer considered embryonic ones, hence no full definition.</rdfs:comment>
@@ -2294,6 +2343,7 @@ Old name: compound of collections</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MonoMolecularEntity"/>
                     <owl:Class>
                         <owl:complementOf>
                             <owl:Restriction>
@@ -2302,19 +2352,17 @@ Old name: compound of collections</rdfs:comment>
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
-                    <rdf:Description rdf:about="#MonoMolecularEntity"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Nucleotide"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
-        <owl:disjointWith rdf:resource="#Carbohydrate"/>
-        <owl:disjointWith rdf:resource="#AminoAcidMonomer"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#FattyAcid"/>
         <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
+        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Separately distinguishable molecular structure, neither part of nor attached to any other molecular structure. Atoms are not considered molecular structures. The hierarchy of entire entities mirrors the hierarchy of structures.</rdfs:comment>
     </owl:Class>
@@ -2340,9 +2388,9 @@ Old name: compound of collections</rdfs:comment>
             >entire protein molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Peptide"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Amino Acid Polymer longer than 100 monomers.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
             >Comment: (QCR) Peptide and hasComponent min 101 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity)</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Definition: Amino Acid Polymer longer than 100 monomers.</rdfs:comment>
     </owl:Class>
     
 
@@ -2373,11 +2421,11 @@ Old name: compound of collections</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BacterialCell"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#SpeciesEscherichiaColiQuality"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#BacterialCell"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -2390,6 +2438,7 @@ Old name: compound of collections</rdfs:comment>
     <owl:Class rdf:about="#Eukaryote">
         <rdfs:label xml:lang="en">eukaryote</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Organism"/>
+        <owl:disjointWith rdf:resource="#Prokaryote"/>
         <owl:disjointWith rdf:resource="#Virus"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: An eukaryote is an organism with a complex cell or cells, in which the genetic material is organized into a membrane-bound nucleus or nuclei. Most Eukaryots are multicellular, haowever, there are some which are always unicellular (protists, some fungi) but there are also unicellular developmental stages (zygotes) of plants and animals.</rdfs:comment>
@@ -2407,19 +2456,17 @@ Old name: compound of collections</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#Eukaryote"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
-        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
-        <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#InsectPopulation"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
+        <owl:disjointWith rdf:resource="#FungusPopulation"/>
+        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
         <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
+        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
     </owl:Class>
     
@@ -2429,6 +2476,7 @@ Old name: compound of collections</rdfs:comment>
 
     <owl:Class rdf:about="#EukaryoticCell">
         <rdfs:label xml:lang="en">eukaryotic cell</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2440,7 +2488,6 @@ Old name: compound of collections</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cell with membrane enclosed organells</rdfs:comment>
     </owl:Class>
@@ -2494,21 +2541,16 @@ Old name: compound of collections</rdfs:comment>
     <owl:Class rdf:about="#FattyAcid">
         <rdfs:label rdf:datatype="&xsd;string">fatty acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
+        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
         <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
         <owl:disjointWith rdf:resource="#Lipid"/>
-        <owl:disjointWith rdf:resource="#Peptide"/>
-        <owl:disjointWith rdf:resource="#Nucleotide"/>
-        <owl:disjointWith rdf:resource="#AminoAcidMonomer"/>
-        <owl:disjointWith rdf:resource="#Carbohydrate"/>
         <owl:disjointWith rdf:resource="#Monomer"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
         <owl:disjointWith rdf:resource="#NucleicAcid"/>
-        <owl:disjointWith rdf:resource="#BioMolecularSequenceStructure"/>
-        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
         <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#EntireMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Biomolecule"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Carboxylic acid often with a long unbranched aliphatic tail.</rdfs:comment>
     </owl:Class>
@@ -2564,22 +2606,23 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#FruitFlyPopulation -->
 
     <owl:Class rdf:about="#FruitFlyPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#FruitFly"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
         <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
+        <owl:disjointWith rdf:resource="#MammalPopulation"/>
+        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
         <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -2588,13 +2631,19 @@ Old name: compound of collections</rdfs:comment>
 
     <owl:Class rdf:about="#Function">
         <rdfs:label>function</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasRealization"/>
                 <owl:allValuesFrom rdf:resource="#ProcessualEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
+        <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
+        <owl:disjointWith rdf:resource="#ProcessualEntity"/>
+        <owl:disjointWith rdf:resource="#Quality"/>
+        <owl:disjointWith rdf:resource="#Role"/>
+        <owl:disjointWith rdf:resource="#SpatialRegion"/>
+        <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A realizable entity the manifestation of which is an essentialy end-directed activity of a
 continuant entity in virtue of that continuant entity being a specific kind of entity in the kind or
@@ -2610,18 +2659,18 @@ kinds of contexts that it is made for.</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Eukaryote"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#KingdomFungiQuality"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#Eukaryote"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >On fungus organisms</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
             >Heterotrophic organisms characterized by a chitinous cell wall.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >On fungus organisms</rdfs:comment>
     </owl:Class>
     
 
@@ -2636,11 +2685,15 @@ kinds of contexts that it is made for.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#Fungus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
+        <owl:disjointWith rdf:resource="#InsectPopulation"/>
         <owl:disjointWith rdf:resource="#MammalPopulation"/>
         <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -2764,18 +2817,14 @@ kinds of contexts that it is made for.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#GreatApe"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
         <owl:disjointWith rdf:resource="#InsectPopulation"/>
-        <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
         <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
-        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
+        <owl:disjointWith rdf:resource="#PlantPopulation"/>
         <owl:disjointWith rdf:resource="#PrimatePopulation"/>
         <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -2790,16 +2839,18 @@ kinds of contexts that it is made for.</rdfs:comment>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#LegalEntity"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                                 <owl:someValuesFrom rdf:resource="#Organism"/>
                             </owl:Restriction>
-                            <rdf:Description rdf:about="#LegalEntity"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#OrganismInteraction"/>
+        <owl:disjointWith rdf:resource="#SubstanceInteraction"/>
     </owl:Class>
     
 
@@ -2829,10 +2880,14 @@ kinds of contexts that it is made for.</rdfs:comment>
             >heterocyclic base</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
         <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
-        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
         <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#Monomer"/>
+        <owl:disjointWith rdf:resource="#NucleicAcid"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Organic compounds that contain a ring structure containing N as proton receptor. Important parts of DNA and RNA molecules.</rdfs:comment>
     </owl:Class>
@@ -2873,16 +2928,17 @@ kinds of contexts that it is made for.</rdfs:comment>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Human"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                                 <owl:someValuesFrom rdf:resource="#Human"/>
                             </owl:Restriction>
-                            <rdf:Description rdf:about="#Human"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#MachineAction"/>
     </owl:Class>
     
 
@@ -2893,6 +2949,7 @@ kinds of contexts that it is made for.</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Leukocyte"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#derivesFrom"/>
                         <owl:someValuesFrom>
@@ -2902,7 +2959,6 @@ kinds of contexts that it is made for.</rdfs:comment>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#Leukocyte"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -2913,13 +2969,13 @@ kinds of contexts that it is made for.</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#HumanPopulation -->
 
     <owl:Class rdf:about="#HumanPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#Human"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
     </owl:Class>
     
 
@@ -2929,17 +2985,6 @@ kinds of contexts that it is made for.</rdfs:comment>
     <owl:Class rdf:about="#ImmaterialNonphysicalEntity">
         <rdfs:label
             >immaterial nonphysical entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#PhysicalMass"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
@@ -2950,7 +2995,22 @@ kinds of contexts that it is made for.</rdfs:comment>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#Function"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasInherence"/>
+                        <owl:someValuesFrom rdf:resource="#PhysicalMass"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
+        <owl:disjointWith rdf:resource="#ProcessualEntity"/>
+        <owl:disjointWith rdf:resource="#Quality"/>
+        <owl:disjointWith rdf:resource="#Role"/>
+        <owl:disjointWith rdf:resource="#SpatialRegion"/>
+        <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Continuant entity that has neither a mass nor a volume and which do not inhere in other entities</rdfs:comment>
     </owl:Class>
@@ -2962,7 +3022,6 @@ kinds of contexts that it is made for.</rdfs:comment>
     <owl:Class rdf:about="#ImmaterialPhysicalEntity">
         <rdfs:label
             >immaterial physical entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
@@ -2973,8 +3032,11 @@ kinds of contexts that it is made for.</rdfs:comment>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#Function"/>
-        <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
+        <owl:disjointWith rdf:resource="#ProcessualEntity"/>
+        <owl:disjointWith rdf:resource="#Quality"/>
+        <owl:disjointWith rdf:resource="#Role"/>
+        <owl:disjointWith rdf:resource="#SpatialRegion"/>
+        <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Physical spaces that have a threedimensional spatial dimension but no mass.
 Old name: immaterial anatomical entity</rdfs:comment>
@@ -2988,11 +3050,11 @@ Old name: immaterial anatomical entity</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#PhysicalVolume"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -3044,8 +3106,10 @@ Old name: immaterial anatomical entity</rdfs:comment>
 
     <owl:Class rdf:about="#InformationEntity">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
-        <owl:disjointWith rdf:resource="#Measure"/>
+        <owl:disjointWith rdf:resource="#IntellectualProduct"/>
         <owl:disjointWith rdf:resource="#LegalEntity"/>
+        <owl:disjointWith rdf:resource="#Measure"/>
+        <owl:disjointWith rdf:resource="#Mind"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Piece of information (not necessarily human) , as it exists independently of any potential material carrier.</rdfs:comment>
     </owl:Class>
@@ -3058,9 +3122,14 @@ Old name: immaterial anatomical entity</rdfs:comment>
         <rdfs:label xml:lang="en"
             >inorganic molecular entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
         <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#Monomer"/>
+        <owl:disjointWith rdf:resource="#NucleicAcid"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Substances which do not include carbon and its derivatives as their principal elements. However, carbides, carbonates, cyanides, cyanates and carbon disulfide are included in this class.</rdfs:comment>
     </owl:Class>
@@ -3085,23 +3154,20 @@ Old name: immaterial anatomical entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#InsectPopulation -->
 
     <owl:Class rdf:about="#InsectPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#Insect"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
         <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
-        <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
         <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -3110,10 +3176,9 @@ Old name: immaterial anatomical entity</rdfs:comment>
 
     <owl:Class rdf:about="#IntellectualProduct">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
-        <owl:disjointWith rdf:resource="#InformationEntity"/>
+        <owl:disjointWith rdf:resource="#LegalEntity"/>
         <owl:disjointWith rdf:resource="#Measure"/>
         <owl:disjointWith rdf:resource="#Mind"/>
-        <owl:disjointWith rdf:resource="#LegalEntity"/>
     </owl:Class>
     
 
@@ -3267,6 +3332,8 @@ Old name: immaterial anatomical entity</rdfs:comment>
 
     <owl:Class rdf:about="#LegalEntity">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
+        <owl:disjointWith rdf:resource="#Measure"/>
+        <owl:disjointWith rdf:resource="#Mind"/>
     </owl:Class>
     
 
@@ -3284,6 +3351,13 @@ Old name: immaterial anatomical entity</rdfs:comment>
     <owl:Class rdf:about="#Lipid">
         <rdfs:label xml:lang="en">lipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Monomer"/>
+        <owl:disjointWith rdf:resource="#NucleicAcid"/>
+        <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Fat-soluble (lipophilic), naturally-occurring molecule.</rdfs:comment>
     </owl:Class>
@@ -3296,6 +3370,21 @@ Old name: immaterial anatomical entity</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Action"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasAgent"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#MaterialEntity"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#hasInherence"/>
+                                        <owl:someValuesFrom rdf:resource="#ArtefactRole"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasAgent"/>
                         <owl:allValuesFrom>
@@ -3314,25 +3403,9 @@ Old name: immaterial anatomical entity</rdfs:comment>
                             </owl:Class>
                         </owl:allValuesFrom>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#Action"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasAgent"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="#MaterialEntity"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="#hasInherence"/>
-                                        <owl:someValuesFrom rdf:resource="#ArtefactRole"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#HumanAction"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An action performed by a machine. A machine is here seen as a non-biological artifact.</rdfs:comment>
     </owl:Class>
@@ -3357,13 +3430,19 @@ Old name: immaterial anatomical entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#MammalPopulation -->
 
     <owl:Class rdf:about="#MammalPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#Mammal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
+        <owl:disjointWith rdf:resource="#PlantPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -3371,24 +3450,24 @@ Old name: immaterial anatomical entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#ManagingCare -->
 
     <owl:Class rdf:about="#ManagingCare">
+        <rdfs:subClassOf rdf:resource="#Affecting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasParticipant"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Human"/>
+                            <rdf:Description rdf:about="#LegalEntity"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                                 <owl:someValuesFrom rdf:resource="#Human"/>
                             </owl:Restriction>
-                            <rdf:Description rdf:about="#LegalEntity"/>
-                            <rdf:Description rdf:about="#Human"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Affecting"/>
     </owl:Class>
     
 
@@ -3411,7 +3490,6 @@ Old name: immaterial anatomical entity</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A material object that has a mass and a volume.  Material Independent Continuants may have Immaterial Independent Continuants as parts (e.g. Heart and Heart Ventricle)</rdfs:comment>
     </owl:Class>
@@ -3422,7 +3500,7 @@ Old name: immaterial anatomical entity</rdfs:comment>
 
     <owl:Class rdf:about="#Measure">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
-        <owl:disjointWith rdf:resource="#LegalEntity"/>
+        <owl:disjointWith rdf:resource="#Mind"/>
     </owl:Class>
     
 
@@ -3431,9 +3509,6 @@ Old name: immaterial anatomical entity</rdfs:comment>
 
     <owl:Class rdf:about="#Mind">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
-        <owl:disjointWith rdf:resource="#InformationEntity"/>
-        <owl:disjointWith rdf:resource="#Measure"/>
-        <owl:disjointWith rdf:resource="#LegalEntity"/>
     </owl:Class>
     
 
@@ -3444,12 +3519,6 @@ Old name: immaterial anatomical entity</rdfs:comment>
         <rdfs:label xml:lang="en">modified cell</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#derivesFrom"/>
-                <owl:someValuesFrom rdf:resource="#CellInVivo"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -3459,7 +3528,12 @@ Old name: immaterial anatomical entity</rdfs:comment>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#AnimalIncludingHuman"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#derivesFrom"/>
+                <owl:someValuesFrom rdf:resource="#CellInVivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Cells that grow and replicate continuously outside the living organism.</rdfs:comment>
     </owl:Class>
@@ -3493,13 +3567,15 @@ Old name: immaterial anatomical entity</rdfs:comment>
     <owl:Class rdf:about="#MoleculeComplex">
         <rdfs:label xml:lang="en"
             >molecule complex</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PolyMolecularCompositeEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:someValuesFrom rdf:resource="#EntireMolecularEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#PolyMolecularCompositeEntity"/>
+        <owl:disjointWith rdf:resource="#StructuredBiologicalEntity"/>
+        <owl:disjointWith rdf:resource="#StructuredNonbiologicalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Particle that consists of entire molecules.</rdfs:comment>
     </owl:Class>
@@ -3509,7 +3585,6 @@ Old name: immaterial anatomical entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#MonoMolecularEntity -->
 
     <owl:Class rdf:about="#MonoMolecularEntity">
-        
         <rdfs:label xml:lang="en"
             >molecular entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
@@ -3519,6 +3594,8 @@ Old name: immaterial anatomical entity</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#Atom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#PolyMolecularCompositeEntity"/>
+        <owl:disjointWith rdf:resource="#SubatomicParticle"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A molecular entity is a self connected compound of two atoms or more which exhibit at least one covalent bound. Molecular entities can be isolated molecules or parts of molecules (groups, residue). They may be electrically neutral or not.
  In biological systems molecular  entities generally occur in very high quantities. In text, references to chemicals are often ambiguous. When we state &quot;water has a molecular weight of 18&quot; we refer to single water molecules. However, saying that &quot;water has a density of 1kg/dm&#179;&quot; under certain conditions then we make a statement about pluralities of water molecules each of which has water molecules as &quot;grains&quot;
@@ -3532,12 +3609,13 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#Monomer">
         <rdfs:label xml:lang="en">monomer</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
+        <owl:disjointWith rdf:resource="#NucleicAcid"/>
         <owl:disjointWith rdf:resource="#Nucleoside"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OligoOrPolymer"/>
         <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Monomers can be described as constituted by molecularl groups. They are not repetitive and can constitute the building blocks of Polymers.</rdfs:comment>
     </owl:Class>
@@ -3552,15 +3630,15 @@ Old name: molecular entity</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasProperPart"/>
-                        <owl:someValuesFrom rdf:resource="#Cell"/>
-                    </owl:Restriction>
+                    <rdf:Description rdf:about="#Organism"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#DevelopmentalQuality"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#Organism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasProperPart"/>
+                        <owl:someValuesFrom rdf:resource="#Cell"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -3605,7 +3683,6 @@ Old name: molecular entity</rdfs:comment>
         <rdfs:label xml:lang="en">neutron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
         <owl:disjointWith rdf:resource="#Proton"/>
-        <owl:disjointWith rdf:resource="#Electron"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Neutral Particle</rdfs:comment>
     </owl:Class>
@@ -3628,15 +3705,14 @@ Old name: molecular entity</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#NoncanonicalCondition"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#CanonicalProcessualEntity"/>
     </owl:Class>
     
 
@@ -3667,31 +3743,29 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#NucleicAcid">
         <rdfs:label rdf:datatype="&xsd;string"
             >nucleotide sequence</rdfs:label>
-        <rdfs:label xml:lang="en">nucleic acid</rdfs:label>
         <rdfs:label rdf:datatype="&xsd;string"
             >sequence of nucleotides</rdfs:label>
+        <rdfs:label xml:lang="en">nucleic acid</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasComponentPart"/>
-                        <owl:allValuesFrom rdf:resource="#Nucleotide"/>
-                    </owl:Restriction>
                     <rdf:Description rdf:about="#MonoMolecularEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasComponentPart"/>
                         <owl:someValuesFrom rdf:resource="#Nucleotide"/>
                     </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasComponentPart"/>
+                        <owl:allValuesFrom rdf:resource="#Nucleotide"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
-        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
-        <owl:disjointWith rdf:resource="#Monomer"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
-        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
         <owl:disjointWith rdf:resource="#Nucleoside"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A nucleic acid is a complex, high-molecular-weight biochemical macromolecule composed of nucleotide chains that convey genetic information.</rdfs:comment>
     </owl:Class>
@@ -3706,11 +3780,11 @@ Old name: molecular entity</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#NucleicAcid"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#properPartOf"/>
                         <owl:someValuesFrom rdf:resource="#EntireNucleicAcidMolecule"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#NucleicAcid"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -3722,7 +3796,10 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#Nucleoside">
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#Nucleotide"/>
+        <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
     </owl:Class>
     
 
@@ -3732,16 +3809,9 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#Nucleotide">
         <rdfs:label xml:lang="en">nucleotide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Phosphate"/>
-        <owl:disjointWith rdf:resource="#NucleicAcid"/>
-        <owl:disjointWith rdf:resource="#Carbohydrate"/>
-        <owl:disjointWith rdf:resource="#Monomer"/>
-        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
-        <owl:disjointWith rdf:resource="#AminoAcidMonomer"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
         <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
+        <owl:disjointWith rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment: (QCR) hasComponent exactly 1 HeterocyclicBase and hasComponent exactly 1 Phosphate and hasComponent only (Phosphate or Ribose or HeterocyclicBase) and hasComponent exactly 1 Pentose</rdfs:comment>
     </owl:Class>
@@ -3754,11 +3824,11 @@ Old name: molecular entity</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BioMolecularSequenceInformation"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#inheresIn"/>
                         <owl:someValuesFrom rdf:resource="#NucleicAcid"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#BioMolecularSequenceInformation"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -3796,6 +3866,7 @@ Old name: molecular entity</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#MonoMolecularEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasComponentPart"/>
                         <owl:someValuesFrom rdf:resource="#Monomer"/>
@@ -3804,11 +3875,9 @@ Old name: molecular entity</rdfs:comment>
                         <owl:onProperty rdf:resource="#hasComponentPart"/>
                         <owl:allValuesFrom rdf:resource="#Monomer"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#MonoMolecularEntity"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="#Monomer"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A OligoOrPolymer macromolecular structure is a molecule of moderate to high relative molecular mass, the structure of which essentially comprises the multiple repetition (n &gt;= 2) of units derived from molecules of low relative molecular mass.</rdfs:comment>
     </owl:Class>
@@ -3863,10 +3932,7 @@ Old name: molecular entity</rdfs:comment>
         <rdfs:label xml:lang="en"
             >organic molecular entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
         <owl:disjointWith rdf:resource="#Phosphate"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</rdfs:comment>
     </owl:Class>
@@ -3878,8 +3944,6 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#Organism">
         <rdfs:label xml:lang="en">organism</rdfs:label>
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
-        <owl:disjointWith rdf:resource="#Cell"/>
-        <owl:disjointWith rdf:resource="#CellularComponent"/>
         <owl:disjointWith rdf:resource="#OrganismPart"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Living complex biological system which functions as a stable whole. In contrast to colonial organisms their components generally cannot survive on their own. We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a unicellular organism and the cell it is made of. &quot;Colonial Organism&quot; are not considered Organisms. We here include viruses into the category of organisms.</rdfs:comment>
@@ -3914,14 +3978,14 @@ Old name: molecular entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#OrganismInteraction -->
 
     <owl:Class rdf:about="#OrganismInteraction">
+        <rdfs:subClassOf rdf:resource="#Interacting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasParticipant"/>
                 <owl:allValuesFrom rdf:resource="#Organism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Interacting"/>
-        <owl:disjointWith rdf:resource="#GroupInteraction"/>
+        <owl:disjointWith rdf:resource="#SubstanceInteraction"/>
     </owl:Class>
     
 
@@ -3930,28 +3994,27 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#OrganismPart">
         <rdfs:label xml:lang="en">organism part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#derivesFrom"/>
+                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#properPartOf"/>
+                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
                 <owl:someValuesFrom rdf:resource="#Tissue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#properPartOf"/>
-                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#derivesFrom"/>
-                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#CellularComponent"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A well defined and circumscribed subdivision of an organism, not any arbitrary part. Macroscopic organism parts may be delimited mainly by natural boundaries but always exhibit at least small regions of fiat boundaries. An organism part may derive from an organism, i.e. it may continue to exist even when the organism does not exist any longer.</rdfs:comment>
     </owl:Class>
@@ -3977,8 +4040,8 @@ Old name: molecular entity</rdfs:comment>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#OrganismPart"/>
                             <rdf:Description rdf:about="#Organism"/>
+                            <rdf:Description rdf:about="#OrganismPart"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -3997,11 +4060,11 @@ Old name: molecular entity</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#NoncanonicalState"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#PathologicalCondition"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#NoncanonicalState"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4029,23 +4092,13 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#Peptide">
         <rdfs:label xml:lang="en">peptide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
                 <owl:someValuesFrom rdf:resource="#AminoAcidMonomer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Monomer"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
-        <owl:disjointWith rdf:resource="#Biomolecule"/>
-        <owl:disjointWith rdf:resource="#NucleicAcid"/>
-        <owl:disjointWith rdf:resource="#Nucleotide"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
-        <owl:disjointWith rdf:resource="#Carbohydrate"/>
-        <owl:disjointWith rdf:resource="#InorganicMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#AminoAcidMonomer"/>
-        <owl:disjointWith rdf:resource="#HeterocyclicBase"/>
         <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Comment: We here use the term peptide in the most general sense, viz. a oligo or polymer made out of amino acids.</rdfs:comment>
@@ -4058,8 +4111,6 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#Phosphate">
         <rdfs:label xml:lang="en">phosphate</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Lipid"/>
-        <owl:disjointWith rdf:resource="#Nucleoside"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Phosphate is a salt of phosphoric acid or a functional group on organic compounds.</rdfs:comment>
     </owl:Class>
@@ -4112,13 +4163,11 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#PhysicalForce">
         <rdfs:subClassOf rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#DevelopmentalQuality"/>
         <owl:disjointWith rdf:resource="#PhysicalMass"/>
+        <owl:disjointWith rdf:resource="#PhysicalState"/>
         <owl:disjointWith rdf:resource="#PhysicalVolume"/>
         <owl:disjointWith rdf:resource="#StateOfBeing"/>
-        <owl:disjointWith rdf:resource="#PhysicalState"/>
         <owl:disjointWith rdf:resource="#TaxonQuality"/>
-        <owl:disjointWith rdf:resource="#Canonicity"/>
     </owl:Class>
     
 
@@ -4127,25 +4176,23 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#PhysicalMass">
         <rdfs:label rdf:datatype="&xsd;string">physical mass</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
                 <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#StateOfBeing"/>
-        <owl:disjointWith rdf:resource="#Canonicity"/>
-        <owl:disjointWith rdf:resource="#DevelopmentalQuality"/>
-        <owl:disjointWith rdf:resource="#TaxonQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#PhysicalState"/>
         <owl:disjointWith rdf:resource="#PhysicalVolume"/>
+        <owl:disjointWith rdf:resource="#StateOfBeing"/>
+        <owl:disjointWith rdf:resource="#TaxonQuality"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Mass (gravity independent) - not weight. Measured in g, kg, ...</rdfs:comment>
     </owl:Class>
@@ -4160,17 +4207,18 @@ Old name: molecular entity</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#PhysicalVolume"/>
-        <owl:disjointWith rdf:resource="#Canonicity"/>
+        <owl:disjointWith rdf:resource="#StateOfBeing"/>
+        <owl:disjointWith rdf:resource="#TaxonQuality"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Quality of being solid, liquid, gaseous, ...  [steschu20080127]</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -4184,7 +4232,8 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#PhysicalVolume">
         <rdfs:label rdf:datatype="&xsd;string">physical volume</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#Canonicity"/>
+        <owl:disjointWith rdf:resource="#StateOfBeing"/>
+        <owl:disjointWith rdf:resource="#TaxonQuality"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Volume of three-dimensional objects</rdfs:comment>
     </owl:Class>
@@ -4235,14 +4284,18 @@ Old name: molecular entity</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#PlantPopulation -->
 
     <owl:Class rdf:about="#PlantPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#Plant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
+        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -4302,7 +4355,6 @@ Old name: molecular entity</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#EntireMolecularEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#MonoMolecularEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: An object which contains several molecules, has direct parts (components) of different types and which changes its ontological nature if subdivided. It must have clear unity and identity criteria.</rdfs:comment>
@@ -4350,33 +4402,33 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#PortionOfHomogenousMatter">
         <rdfs:label
             >homogenous cohesive collection</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasGranularPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
-                            <rdf:Description rdf:about="#Atom"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#CollectiveMaterialEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
                             <rdf:Description rdf:about="#Atom"/>
+                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#CollectiveMaterialEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGranularPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Atom"/>
+                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Composition of granular components of the same kind.</rdfs:comment>
     </owl:Class>
@@ -4441,8 +4493,10 @@ Old name: molecular entity</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#Primate"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
+        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
+        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -4453,20 +4507,14 @@ Old name: molecular entity</rdfs:comment>
         <rdfs:label
             >processual entity</rdfs:label>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&owl;Thing"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasParticipant"/>
-                        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
-        <owl:disjointWith rdf:resource="#Function"/>
         <owl:disjointWith rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
+        <owl:disjointWith rdf:resource="#Role"/>
+        <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An Occurrent entity consisting of a characteristic spatial shape inhering in some arrangement of other occurrent entities. Processual contexts are characteristically entities at or in which other occurrent entities can be located or occur.</rdfs:comment>
     </owl:Class>
@@ -4478,7 +4526,6 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#Prokaryote">
         <rdfs:label xml:lang="en">prokaryote</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Organism"/>
-        <owl:disjointWith rdf:resource="#Eukaryote"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Cell lacking membrane enclosed organells</rdfs:comment>
     </owl:Class>
@@ -4494,6 +4541,10 @@ Old name: molecular entity</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasComponentPart"/>
+                        <owl:someValuesFrom rdf:resource="#EntireProteinMolecule"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasComponentPart"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
@@ -4503,15 +4554,10 @@ Old name: molecular entity</rdfs:comment>
                             </owl:Class>
                         </owl:allValuesFrom>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasComponentPart"/>
-                        <owl:someValuesFrom rdf:resource="#EntireProteinMolecule"/>
-                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#MoleculeComplex"/>
-        <owl:disjointWith rdf:resource="#Chromosome"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Mostly only proteins but composition with other molecules possible (e.g. Fe -&gt; Hemoglobin)</rdfs:comment>
     </owl:Class>
@@ -4522,13 +4568,13 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#ProteinDomain">
         <rdfs:label xml:lang="en">protein domain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Peptide"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#partOf"/>
                 <owl:someValuesFrom rdf:resource="#EntireProteinMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Peptide"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Structural domain is the smallest element of protein tertiary structure that is self-stabilizing and often folds independently of the rest of the amino acid chain. It may contain one or more structural motives (ProteinSubstructure). A protein domain typically has its own function, the overall function of the protein results from the composition of the functions of all of its structural domains.</rdfs:comment>
     </owl:Class>
@@ -4562,13 +4608,13 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#ProteinSubstructure">
         <rdfs:label xml:lang="en"
             >protein substructure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Peptide"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#partOf"/>
                 <owl:someValuesFrom rdf:resource="#EntireProteinMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Peptide"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A secondary substructure of a protein (protein Motif)</rdfs:comment>
     </owl:Class>
@@ -4608,12 +4654,8 @@ Old name: molecular entity</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
         <owl:disjointWith rdf:resource="#VirusPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -4623,7 +4665,6 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#Proton">
         <rdfs:label xml:lang="en">proton</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
-        <owl:disjointWith rdf:resource="#Electron"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Positively Charged Particle</rdfs:comment>
     </owl:Class>
@@ -4634,10 +4675,9 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#Quality">
         <rdfs:label>quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
-        <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
-        <owl:disjointWith rdf:resource="#Function"/>
+        <owl:disjointWith rdf:resource="#Role"/>
+        <owl:disjointWith rdf:resource="#SpatialRegion"/>
+        <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A specifically dependent continuant 
     [snap:SpecificallyDependentContinuant] that is exhibited if it inheres in 
@@ -4652,7 +4692,6 @@ Old name: molecular entity</rdfs:comment>
         <rdfs:label rdf:datatype="&xsd;string">RNA sequence</rdfs:label>
         <rdfs:label xml:lang="en">RNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChainOfNucleotideMonomers"/>
-        <owl:disjointWith rdf:resource="#DNA"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >any kind of NucleicAcid that is composed of Ribonucleotides which are not Deoxyribonucleotides</rdfs:comment>
     </owl:Class>
@@ -4718,12 +4757,8 @@ Old name: molecular entity</rdfs:comment>
 
     <owl:Class rdf:about="#Role">
         <rdfs:label>role</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <owl:disjointWith rdf:resource="#ProcessualEntity"/>
-        <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
-        <owl:disjointWith rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
-        <owl:disjointWith rdf:resource="#Function"/>
+        <owl:disjointWith rdf:resource="#SpatialRegion"/>
+        <owl:disjointWith rdf:resource="#TemporalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >A realizable entity the manifestation of which brings about some result or end that is not
 essential to a continuant entity in virtue of the kind of thing that it is, but that can be served or
@@ -4757,7 +4792,7 @@ contexts.</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >The role of a biological entity that participates in a biological signalling process.  </rdfs:comment>
+            >The role of a biological entity that participates in a biological signalling process.</rdfs:comment>
     </owl:Class>
     
 
@@ -4801,13 +4836,7 @@ contexts.</rdfs:comment>
 
     <owl:Class rdf:about="#SpatialRegion">
         <rdfs:label>spatial region</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <owl:disjointWith rdf:resource="#TemporalEntity"/>
-        <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
-        <owl:disjointWith rdf:resource="#Function"/>
-        <owl:disjointWith rdf:resource="#Role"/>
-        <owl:disjointWith rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >An independent continuant entity that is neither a bearer of qualities nor inheres in any other entity (snap:SpatialRegion)</rdfs:comment>
     </owl:Class>
@@ -4860,10 +4889,6 @@ contexts.</rdfs:comment>
         <rdfs:label rdf:datatype="&xsd;string">state of being</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Quality"/>
         <owl:disjointWith rdf:resource="#TaxonQuality"/>
-        <owl:disjointWith rdf:resource="#PhysicalState"/>
-        <owl:disjointWith rdf:resource="#DevelopmentalQuality"/>
-        <owl:disjointWith rdf:resource="#Canonicity"/>
-        <owl:disjointWith rdf:resource="#PhysicalVolume"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Static condition that inheres in a continuant</rdfs:comment>
     </owl:Class>
@@ -4892,9 +4917,9 @@ contexts.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#TaxonQuality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#MoleculeComplex"/>
+        <owl:disjointWith rdf:resource="#StructuredNonbiologicalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
-            >Corresponds to FMA anatomical structure but extends to any kind of orgnaism: Material anatomical entity which is generated by coordinated expression of the organism&apos;s own genes that guide its morphogenesis; has inherent 3D shape; its parts are connected and spatially related to one another in patterns determined by coordinated gene expression. Examples: heart, right ventricle, mitral valve, myocardium, endothelium, lymphocyte, fibroblast, thorax, cardiovascular system, hemoglobin, T cell receptor.
+            >Corresponds to FMA anatomical structure but extends to any kind of orgnaism: Material anatomical entity which is generated by coordinated expression of the organism&#39;s own genes that guide its morphogenesis; has inherent 3D shape; its parts are connected and spatially related to one another in patterns determined by coordinated gene expression. Examples: heart, right ventricle, mitral valve, myocardium, endothelium, lymphocyte, fibroblast, thorax, cardiovascular system, hemoglobin, T cell receptor.
 Old name: anatomical structure</rdfs:comment>
     </owl:Class>
     
@@ -4916,8 +4941,6 @@ Old name: anatomical structure</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#StructuredBiologicalEntity"/>
-        <owl:disjointWith rdf:resource="#MoleculeComplex"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >All those things that are not identified by belonging to any biological species
 Borderline cases are artifacts that use biological substance (a table, a cloth, a house, a meal ...) A criterion to draw the boundary is whether or not the species affiliation has some structural or functional implication.</rdfs:comment>
@@ -4931,8 +4954,6 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
         <rdfs:label xml:lang="en"
             >subatomic particle</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
-        <owl:disjointWith rdf:resource="#MonoMolecularEntity"/>
-        <owl:disjointWith rdf:resource="#Atom"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Parts of Atoms.</rdfs:comment>
     </owl:Class>
@@ -4966,21 +4987,22 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     <!-- http://purl.org/biotop/core/dev#SubstanceInteraction -->
 
     <owl:Class rdf:about="#SubstanceInteraction">
+        <rdfs:subClassOf rdf:resource="#Interacting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasParticipant"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
                             <rdf:Description rdf:about="#MoleculeComplex"/>
+                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
                                             <rdf:Description rdf:about="#MoleculeComplex"/>
+                                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
                                         </owl:unionOf>
                                     </owl:Class>
                                 </owl:someValuesFrom>
@@ -4990,9 +5012,6 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Interacting"/>
-        <owl:disjointWith rdf:resource="#OrganismInteraction"/>
-        <owl:disjointWith rdf:resource="#GroupInteraction"/>
     </owl:Class>
     
 
@@ -5002,10 +5021,6 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     <owl:Class rdf:about="#TaxonQuality">
         <rdfs:label rdf:datatype="&xsd;string">taxon quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#Canonicity"/>
-        <owl:disjointWith rdf:resource="#PhysicalState"/>
-        <owl:disjointWith rdf:resource="#DevelopmentalQuality"/>
-        <owl:disjointWith rdf:resource="#PhysicalVolume"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The quality of one or more biological organisms, as well as of parts of organism of partaining to a biological taxon. [steschu20080127]</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -5020,13 +5035,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
 
     <owl:Class rdf:about="#TemporalEntity">
         <rdfs:label>temporal entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <owl:disjointWith rdf:resource="#Quality"/>
-        <owl:disjointWith rdf:resource="#ImmaterialPhysicalEntity"/>
-        <owl:disjointWith rdf:resource="#ProcessualEntity"/>
-        <owl:disjointWith rdf:resource="#Function"/>
-        <owl:disjointWith rdf:resource="#Role"/>
-        <owl:disjointWith rdf:resource="#ImmaterialNonphysicalEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Occurrent that is not a processual entity. It corresponds to the disjunction of span:TemporalRegion and span:SpatiotemporalRegion</rdfs:comment>
     </owl:Class>
@@ -5050,31 +5058,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
 
     <owl:Class rdf:about="#Tissue">
         <rdfs:label xml:lang="en">tissue</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Cell"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#properPartOf"/>
-                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#derivesFrom"/>
-                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousSolid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
@@ -5086,7 +5070,31 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousSolid"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#derivesFrom"/>
+                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#properPartOf"/>
+                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#Cell"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Aggregate of an arbitrary number of congeneric cells (cells with identical specialized characteristics), embedded into an amount of matter (matrix) that work together to perform a specific function.</rdfs:comment>
     </owl:Class>
@@ -5117,8 +5125,8 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#TreatingPerson"/>
                     <rdf:Description rdf:about="#TreatingCondition"/>
+                    <rdf:Description rdf:about="#TreatingPerson"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -5130,17 +5138,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#TreatingCondition -->
 
     <owl:Class rdf:about="#TreatingCondition">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasAgent"/>
-                <owl:allValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#TherapeuticRole"/>
-                    </owl:Restriction>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf rdf:resource="#Affecting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5153,6 +5150,17 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAgent"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasInherence"/>
+                        <owl:someValuesFrom rdf:resource="#TherapeuticRole"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -5160,6 +5168,18 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#TreatingPerson -->
 
     <owl:Class rdf:about="#TreatingPerson">
+        <rdfs:subClassOf rdf:resource="#Affecting"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAgent"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasInherence"/>
+                        <owl:someValuesFrom rdf:resource="#OccupationalRole"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPatient"/>
@@ -5173,18 +5193,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Affecting"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasAgent"/>
-                <owl:allValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#OccupationalRole"/>
-                    </owl:Restriction>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5208,18 +5216,23 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Organism"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+                                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
+                                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasProperPart"/>
+                        <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasProperPart"/>
                         <owl:allValuesFrom>
@@ -5228,11 +5241,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                             </owl:Class>
                         </owl:allValuesFrom>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasProperPart"/>
-                        <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
-                    </owl:Restriction>
-                    <rdf:Description rdf:about="#Organism"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -5248,11 +5256,11 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AnimalIncludingHuman"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
                         <owl:someValuesFrom rdf:resource="#SubphylumVertebrataQuality"/>
                     </owl:Restriction>
-                    <rdf:Description rdf:about="#AnimalIncludingHuman"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -5264,16 +5272,15 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#VertebratePopulation -->
 
     <owl:Class rdf:about="#VertebratePopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#Vertebrate"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
+        <owl:disjointWith rdf:resource="#VirusPopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -5285,6 +5292,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Organism"/>
                     <owl:Class>
                         <owl:complementOf>
                             <owl:Restriction>
@@ -5293,7 +5301,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
-                    <rdf:Description rdf:about="#Organism"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -5313,12 +5320,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#Virus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
-        <owl:disjointWith rdf:resource="#FungusPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
+        <owl:disjointWith rdf:resource="#YeastPopulation"/>
     </owl:Class>
     
 
@@ -5350,19 +5352,23 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Fungus"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+                                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
+                                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
-                    <rdf:Description rdf:about="#Fungus"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasProperPart"/>
+                        <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasProperPart"/>
                         <owl:allValuesFrom>
@@ -5370,10 +5376,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                                 <owl:complementOf rdf:resource="#Cell"/>
                             </owl:Class>
                         </owl:allValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasProperPart"/>
-                        <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -5387,27 +5389,13 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <!-- http://purl.org/biotop/core/dev#YeastPopulation -->
 
     <owl:Class rdf:about="#YeastPopulation">
+        <rdfs:subClassOf rdf:resource="#Population"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="#YeastCell"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Population"/>
-        <owl:disjointWith rdf:resource="#ArthropodPopulation"/>
-        <owl:disjointWith rdf:resource="#VirusPopulation"/>
-        <owl:disjointWith rdf:resource="#VertebratePopulation"/>
-        <owl:disjointWith rdf:resource="#InsectPopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
-        <owl:disjointWith rdf:resource="#GreatApePopulation"/>
-        <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
-        <owl:disjointWith rdf:resource="#PlantPopulation"/>
-        <owl:disjointWith rdf:resource="#PrimatePopulation"/>
-        <owl:disjointWith rdf:resource="#MammalPopulation"/>
-        <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
-        <owl:disjointWith rdf:resource="#ProtistPopulation"/>
-        <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
-        <owl:disjointWith rdf:resource="#FungusPopulation"/>
     </owl:Class>
     
 
