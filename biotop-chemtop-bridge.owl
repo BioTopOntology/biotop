@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY biotop "http://purl.org/biotop/core/dev#" >
+    <!ENTITY chemtop "http://purl.org/chemtop/core/dev#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+    <!ENTITY protege-dc "http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/biotop/chemtop-bridge/dev#"
+     xml:base="http://purl.org/biotop/chemtop-bridge/dev"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:biotop="http://purl.org/biotop/core/dev#"
+     xmlns:chemtop="http://purl.org/chemtop/core/dev#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <dc:format rdf:datatype="&xsd;string"
+            >application/rdf+xml</dc:format>
+        <dc:publisher rdf:datatype="&xsd;string"
+            >Jena University Language and Information Engineering (JULIE) Lab</dc:publisher>
+        <owl:versionInfo rdf:datatype="&xsd;string">dev</owl:versionInfo>
+        <dc:title rdf:datatype="&xsd;string">BioTop</dc:title>
+        <dc:source rdf:datatype="&xsd;string"
+            >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
+        <dc:language rdf:datatype="&xsd;string">en</dc:language>
+        <dc:source rdf:datatype="&xsd;string"
+            >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
+        <dc:creator rdf:datatype="&xsd;string"
+            >Stefan Schulz, Holger Stenzhorn, Elena Beisswanger, Martin Boeker</dc:creator>
+        <dc:date rdf:datatype="&xsd;date"></dc:date>
+        <dc:identifier rdf:datatype="&xsd;string"
+            >http://purl.org/biotop/core/dev</dc:identifier>
+        <dc:publisher rdf:datatype="&xsd;string"
+            >Institute for Medical Biometry and Medical Informatics
+University Medical Center Freiburg
+Stefan-Meier-Strasse 26
+79106 Freiburg</dc:publisher>
+        <dc:source rdf:datatype="&xsd;string"
+            >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
+        <dc:publisher rdf:datatype="&xsd;string"
+            >University Medical Center Freiburg - Department of Medical Biometry and Medical Informatics</dc:publisher>
+        <owl:imports rdf:resource="http://purl.org/biotop/core/dev"/>
+        <owl:imports rdf:resource="http://purl.org/chemtop/core/dev"/>
+    </owl:Ontology>
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
+    <owl:AnnotationProperty rdf:about="&dc;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#componentPartOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;componentPartOf">
+        <owl:equivalentProperty rdf:resource="&chemtop;componentPartOf"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/biotop/core/dev#granularPartOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;granularPartOf">
+        <owl:equivalentProperty rdf:resource="&chemtop;granularPartOf"/>
+    </owl:ObjectProperty>    
+
+
+
+    <!-- http://purl.org/biotop/core/dev#hasComponentPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasComponentPart">
+        <owl:equivalentProperty rdf:resource="&chemtop;hasComponentPart"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/biotop/core/dev#hasGranularPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasGranularPart">
+        <owl:equivalentProperty rdf:resource="&chemtop;hasGranularPart"/>
+    </owl:ObjectProperty> 
+
+
+
+    <!-- http://purl.org/biotop/core/dev#hasPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasPart">
+        <owl:equivalentProperty rdf:resource="&chemtop;hasPart"/>
+    </owl:ObjectProperty>
+	
+
+
+    <!-- http://purl.org/biotop/core/dev#hasProperPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasProperPart">
+        <owl:equivalentProperty rdf:resource="&chemtop;hasProperPart"/>
+    </owl:ObjectProperty>    
+	
+	
+
+    <!-- http://purl.org/biotop/core/dev#partOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;partOf">
+        <owl:equivalentProperty rdf:resource="&chemtop;partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#properPartOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;properPartOf">
+        <owl:equivalentProperty rdf:resource="&chemtop;properPartOf"/>
+    </owl:ObjectProperty>    
+
+	
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#Atom -->
+
+    <owl:Class rdf:about="&biotop;Atom">
+        <owl:equivalentClass rdf:resource="&chemtop;Atom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#CollectiveMaterialEntity -->
+
+    <owl:Class rdf:about="&biotop;CollectiveMaterialEntity">
+        <owl:equivalentClass rdf:resource="&chemtop;CollectiveMaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#CompoundOfCollectiveMaterialEntities -->
+
+    <owl:Class rdf:about="&biotop;CompoundOfCollectiveMaterialEntities">
+        <owl:equivalentClass rdf:resource="&chemtop;CompoundOfCollectiveMaterialEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#Lipid -->
+
+    <owl:Class rdf:about="&biotop;Lipid">
+        <owl:equivalentClass rdf:resource="&chemtop;Lipid"/>
+    </owl:Class>
+
+    
+
+    <!-- http://purl.org/biotop/core/dev#MonoMolecularEntity -->
+
+    <owl:Class rdf:about="&biotop;MonoMolecularEntity">
+        <owl:equivalentClass rdf:resource="&chemtop;MonoMolecularEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#Nucleoside -->
+
+    <owl:Class rdf:about="&biotop;Nucleoside">
+        <owl:equivalentClass rdf:resource="&chemtop;Nucleoside"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#OrganicMolecularEntity -->
+
+    <owl:Class rdf:about="&biotop;OrganicMolecularEntity">
+        <owl:equivalentClass rdf:resource="&chemtop;OrganicMolecularEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#PortionOfHeterogenousLiquid -->
+
+    <owl:Class rdf:about="&biotop;PortionOfHeterogenousLiquid">
+        <owl:equivalentClass rdf:resource="&chemtop;PortionOfHeterogenousLiquid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#PortionOfHeterogenousSolid -->
+
+    <owl:Class rdf:about="&biotop;PortionOfHeterogenousSolid">
+        <owl:equivalentClass rdf:resource="&chemtop;PortionOfHeterogenousLiquid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#PortionOfHomogenousMatter -->
+
+    <owl:Class rdf:about="&biotop;PortionOfHomogenousMatter">
+        <owl:equivalentClass rdf:resource="&chemtop;PortionOfHomogenousMatter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/core/dev#SubatomicParticle -->
+
+    <owl:Class rdf:about="&biotop;SubatomicParticle">
+        <owl:equivalentClass rdf:resource="&chemtop;SubatomicParticle"/>
+    </owl:Class>
+        
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
