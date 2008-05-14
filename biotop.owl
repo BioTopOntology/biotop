@@ -902,6 +902,35 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
+    <!-- http://purl.org/chemtop/dev#AminoAcidSequence -->
+
+    <owl:Class rdf:about="#AminoAcidSequence">
+        <rdfs:label xml:lang="en"
+            >amino acid sequence</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasComponentPart"/>
+                        <owl:someValuesFrom rdf:resource="#AminoAcidMonomer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasComponentPart"/>
+                        <owl:allValuesFrom rdf:resource="#AminoAcidMonomer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Peptide"/>
+        <owl:disjointWith rdf:resource="#Carbohydrate"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Definition: Chain of amino acids, joined by peptide bonds. Folded or unfolded.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Synonym: AminoAcidSequence</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/biotop/dev#AminoAcidSequenceInformation -->
 
     <owl:Class rdf:about="#AminoAcidSequenceInformation">
@@ -3765,12 +3794,6 @@ Old name: molecular entity</rdfs:comment>
         <rdfs:label xml:lang="en"
             >non steroid lipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasProperPart"/>
-                <owl:someValuesFrom rdf:resource="#AliphaticMediumChainStructure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#Steroid"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Lipids that have aliphatic chains and no steroid rings</rdfs:comment>
