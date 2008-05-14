@@ -1269,6 +1269,27 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</rdfs:comment>
     
 
 
+    <!-- http://purl.org/chemtop/dev#BioMolecularSequence -->
+
+    <owl:Class rdf:about="#BioMolecularSequence">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >bio molecular sequence</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AminoAcidSequence"/>
+                    <rdf:Description rdf:about="#DNA"/>
+                    <rdf:Description rdf:about="#RNA"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >chain (segment) of similar monomers such as proteins or nucleotides</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/biotop/dev#BioMolecularSequenceInformation -->
 
     <owl:Class rdf:about="#BioMolecularSequenceInformation">
@@ -3734,6 +3755,25 @@ Old name: molecular entity</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/chemtop/dev#NonSteroidLipid -->
+
+    <owl:Class rdf:about="#NonSteroidLipid">
+        <rdfs:label xml:lang="en"
+            >non steroid lipid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Lipid"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperPart"/>
+                <owl:someValuesFrom rdf:resource="#AliphaticMediumChainStructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Steroid"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Lipids that have aliphatic chains and no steroid rings</rdfs:comment>
     </owl:Class>
     
 
