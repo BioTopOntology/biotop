@@ -1545,17 +1545,13 @@ Old name: molecular entity</rdfs:comment>
     <owl:Class rdf:about="#OrganicMolecularEntity">
         <rdfs:label xml:lang="en"
             >organic molecular entity</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#MonoMolecularEntity"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasPart"/>
-                        <owl:someValuesFrom rdf:resource="#CarbonHydrogenSubstructure"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="#hasPart"/>
+            <owl:someValuesFrom rdf:resource="#CarbonHydrogenSubstructure"/>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</rdfs:comment>
     </owl:Class>
