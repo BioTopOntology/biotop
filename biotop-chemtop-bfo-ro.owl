@@ -2,16 +2,9 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY dcterms "http://purl.org/dc/terms/" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY biotop "http://purl.org/biotop/dev#" >
-    <!ENTITY chemtop "http://purl.org/chemtop/dev#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
-    <!ENTITY protege-dc "http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#" >
+    <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
 ]>
 
 
@@ -26,35 +19,81 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2008/05/skos#">
     <owl:Ontology rdf:about="">
-        <owl:versionInfo rdf:datatype="&xsd;string">dev</owl:versionInfo>
-        <dc:title rdf:datatype="&xsd;string">BioTop</dc:title>
-        <dc:creator rdf:datatype="&xsd;string"
+        <owl:versionInfo>dev</owl:versionInfo>
+        <dc:title>BioTop ChemTop BFO RO</dc:title>
+        <dc:creator
             >Holger Stenzhorn</dc:creator>
-        <dc:creator rdf:datatype="&xsd;string"
+        <dc:creator
             >Elena Beisswanger</dc:creator>
-        <dc:creator rdf:datatype="&xsd;string">Stefan Schulz</dc:creator>
-        <dc:publisher rdf:datatype="&xsd;string"
-            >Jena University Language and Information Engineering (JULIE) Lab</dc:publisher>
-        <dc:publisher rdf:datatype="&xsd;string"
-            >Institute for Formal Ontology and Medical Information Science (IFOMIS)</dc:publisher>
-        <dc:publisher rdf:datatype="&xsd;string"
-            >University Hospital Freiburg - Medical Informatics Department</dc:publisher>
+        <dc:creator>Stefan Schulz</dc:creator>
+        <dc:publisher
+            >Institute for Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
         <dc:date rdf:datatype="&xsd;date"></dc:date>
-        <dc:format rdf:datatype="&xsd;string"
+        <dc:format
             >application/rdf+xml</dc:format>
-        <dc:identifier rdf:datatype="&xsd;string"
+        <dc:identifier
             >http://purl.org/biotop/chemtop-bfo-ro/dev</dc:identifier>
-        <dc:source rdf:datatype="&xsd;string"
+        <dc:source
             >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
-        <dc:source rdf:datatype="&xsd;string"
+        <dc:source
             >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
-        <dc:source rdf:datatype="&xsd;string"
+        <dc:source
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
-        <dc:language rdf:datatype="&xsd;string">en</dc:language>
+        <dc:language>en</dc:language>
+        <dc:coverage/>
+        <dc:description/>
+        <dc:relation/>
+        <dc:rights/>
+        <dc:subject/>
+        <dc:type/>
+        <skos:altLabel/>
+        <skos:changeNote/>
+        <skos:definition/>
+        <skos:editorialNote/>
+        <skos:example/>
+        <skos:hiddenLabel/>
+        <skos:historyNote/>
+        <skos:note/>
+        <skos:prefLabel/>
+        <skos:scopeNote/>
         <owl:imports rdf:resource="http://purl.org/biotop/chemtop/dev"/>
         <owl:imports rdf:resource="http://purl.org/biotop/bfo-ro/dev"/>
-   
     </owl:Ontology>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&dc;coverage"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&dc;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dc;relation"/>
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    <owl:AnnotationProperty rdf:about="&dc;subject"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;type"/>
+    <owl:AnnotationProperty rdf:about="&skos;altLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;changeNote"/>
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&skos;editorialNote"/>
+    <owl:AnnotationProperty rdf:about="&skos;example"/>
+    <owl:AnnotationProperty rdf:about="&skos;hiddenLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;historyNote"/>
+    <owl:AnnotationProperty rdf:about="&skos;note"/>
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;scopeNote"/>
 </rdf:RDF>
