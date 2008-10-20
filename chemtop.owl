@@ -2,61 +2,63 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY dev "http://purl.org/chemtop/dev#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
-    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
-    <!ENTITY protege-dc "http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="http://purl.org/chemtop/dev#"
      xml:base="http://purl.org/chemtop/dev"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:protege-dc="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl#"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-     xmlns:dev="http://purl.org/chemtop/dev#"
-     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:dev="http://purl.org/chemtop/dev#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2008/05/skos#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
-        <dc:title rdf:datatype="&xsd;string">ChemTop</dc:title>
-        <dc:creator rdf:datatype="&xsd;string"
+        <skos:scopeNote></skos:scopeNote>
+        <dc:creator
             >Elena Beisswanger</dc:creator>
-        <dc:creator rdf:datatype="&xsd;string"
+        <dc:title>ChemTop</dc:title>
+        <dc:description></dc:description>
+        <dc:creator
             >Holger Stenzhorn</dc:creator>
-        <dc:source rdf:datatype="&xsd;string"
-            >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
-        <dc:publisher rdf:datatype="&xsd;string"
-            >Institute for Formal Ontology and Medical Information Science (IFOMIS)</dc:publisher>
-        <dc:publisher rdf:datatype="&xsd;string"
-            >Jena University Language and Information Engineering (JULIE) Lab</dc:publisher>
-        <dc:creator rdf:datatype="&xsd;string">Stefan Schulz</dc:creator>
-        <dc:source rdf:datatype="&xsd;string"
+        <dc:source
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
-        <dc:source rdf:datatype="&xsd;string"
+        <skos:historyNote></skos:historyNote>
+        <dc:rights></dc:rights>
+        <dc:source
             >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
-        <dc:publisher rdf:datatype="&xsd;string"
-            >University Hospital Freiburg - Medical Informatics Department</dc:publisher>
-        <dc:format rdf:datatype="&xsd;string"
-            >application/rdf+xml</dc:format>
-        <owl:versionInfo rdf:datatype="&xsd;string">dev</owl:versionInfo>
-        <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <dc:identifier rdf:datatype="&xsd;string"
+        <skos:note></skos:note>
+        <dc:publisher
+            >Institute for Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
+        <dc:subject></dc:subject>
+        <skos:hiddenLabel></skos:hiddenLabel>
+        <skos:altLabel></skos:altLabel>
+        <skos:prefLabel></skos:prefLabel>
+        <dc:identifier
             >http://purl.org/chemtop/dev</dc:identifier>
+        <skos:example></skos:example>
+        <dc:type></dc:type>
+        <dc:creator>Stefan Schulz</dc:creator>
+        <skos:changeNote></skos:changeNote>
+        <owl:versionInfo>dev</owl:versionInfo>
+        <skos:editorialNote></skos:editorialNote>
+        <dc:format
+            >application/rdf+xml</dc:format>
+        <dc:source
+            >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
+        <dc:relation></dc:relation>
+        <dc:language>en</dc:language>
     </owl:Ontology>
     
 
@@ -69,14 +71,29 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&skos;scopeNote"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&skos;hiddenLabel"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
     <owl:AnnotationProperty rdf:about="&dc;source"/>
+    <owl:AnnotationProperty rdf:about="&skos;historyNote"/>
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;type"/>
+    <owl:AnnotationProperty rdf:about="&skos;changeNote"/>
+    <owl:AnnotationProperty rdf:about="&skos;editorialNote"/>
+    <owl:AnnotationProperty rdf:about="&skos;altLabel"/>
+    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    <owl:AnnotationProperty rdf:about="&skos;note"/>
+    <owl:AnnotationProperty rdf:about="&dc;relation"/>
+    <owl:AnnotationProperty rdf:about="&skos;example"/>
     <owl:AnnotationProperty rdf:about="&dc;publisher"/>
     <owl:AnnotationProperty rdf:about="&dc;identifier"/>
-    <owl:AnnotationProperty rdf:about="&dc;title"/>
-    <owl:AnnotationProperty rdf:about="&dc;language"/>
-    <owl:AnnotationProperty rdf:about="&dc;creator"/>
-    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;subject"/>
     
 
 
@@ -109,12 +126,12 @@
     <!-- http://purl.org/chemtop/dev#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <skos:definition
+            >Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</skos:definition>
+        <rdfs:comment
             >inverse of hasComponentPart.</rdfs:comment>
+        <rdfs:comment
+            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
     </owl:ObjectProperty>
     
@@ -129,12 +146,12 @@
     <!-- http://purl.org/chemtop/dev#granularPart -->
 
     <owl:ObjectProperty rdf:about="#granularPart">
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Grains are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <rdfs:comment
             >Inverse relation to hasGranularPart.</rdfs:comment>
+        <skos:definition
+            >Grains are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</skos:definition>
+        <rdfs:comment
+            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
     </owl:ObjectProperty>
     
@@ -143,8 +160,8 @@
     <!-- http://purl.org/chemtop/dev#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="#hasComponentPart">
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment:  inverse of componentPartOf.</rdfs:comment>
+        <rdfs:comment
+            >inverse of componentPartOf.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
     </owl:ObjectProperty>
     
@@ -153,8 +170,8 @@
     <!-- http://purl.org/chemtop/dev#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="#hasGranularPart">
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment:  inverse of granularPart.</rdfs:comment>
+        <rdfs:comment
+            >inverse of granularPart.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
     </owl:ObjectProperty>
     
@@ -164,9 +181,8 @@
 
     <owl:ObjectProperty rdf:about="#hasPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label rdf:datatype="&xsd;string">has_part</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <rdfs:label>has_part</rdfs:label>
+        <rdfs:comment
             >inverseOf partOf</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -176,9 +192,8 @@
 
     <owl:ObjectProperty rdf:about="#hasProperPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label rdf:datatype="&xsd;string">has_proper_part</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <rdfs:label>has_proper_part</rdfs:label>
+        <rdfs:comment
             >inverseOf properPartOf</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasPart"/>
     </owl:ObjectProperty>
@@ -189,11 +204,11 @@
 
     <owl:ObjectProperty rdf:about="#partOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label rdf:datatype="&xsd;string">part_of</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The primitive instance-level relation p partOf p1 is illustrated in assertions such as: this instance of rhodopsin mediated phototransduction partOf this instance of visual perception. This relation satisfies at least the following standard axioms of mereology: reflexivity (for all p, p partOf p); anti-symmetry (for all p, p1, if p partOf p1 and p1 partOf p then p and p1 are identical); and transitivity (for all p, p1, p2, if p partOf p1 and p1 partOf p2, then p partOf p2). Analogous axioms hold also for parthood as a relation between spatial regions. For parthood as a relation between continuants, these axioms need to be modified to take account of the incorporation of a temporal argument. Thus for example the axiom of transitivity for continuants will assert that if c partOf c1 at t and c1 partOf c2 at t, then also c partOf c2 at t.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <rdfs:label>part_of</rdfs:label>
+        <rdfs:comment
             >inverseOf hasPart</rdfs:comment>
+        <rdfs:comment
+            >The primitive instance-level relation p partOf p1 is illustrated in assertions such as: this instance of rhodopsin mediated phototransduction partOf this instance of visual perception. This relation satisfies at least the following standard axioms of mereology: reflexivity (for all p, p partOf p); anti-symmetry (for all p, p1, if p partOf p1 and p1 partOf p then p and p1 are identical); and transitivity (for all p, p1, p2, if p partOf p1 and p1 partOf p2, then p partOf p2). Analogous axioms hold also for parthood as a relation between spatial regions. For parthood as a relation between continuants, these axioms need to be modified to take account of the incorporation of a temporal argument. Thus for example the axiom of transitivity for continuants will assert that if c partOf c1 at t and c1 partOf c2 at t, then also c partOf c2 at t.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -202,13 +217,30 @@
 
     <owl:ObjectProperty rdf:about="#properPartOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label rdf:datatype="&xsd;string">proper_part_of</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >As for partOf, with the additional constraint that subject and object are distinct</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <rdfs:label>proper_part_of</rdfs:label>
+        <rdfs:comment
             >inverseOf hasProperPart</rdfs:comment>
+        <rdfs:comment
+            >As for partOf, with the additional constraint that subject and object are distinct</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#partOf"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#synonym -->
+
+    <owl:DatatypeProperty rdf:about="&skos;synonym"/>
     
 
 
@@ -226,10 +258,10 @@
     <!-- http://purl.org/chemtop/dev#AcyclicAliphaticHydrocarbon -->
 
     <owl:Class rdf:about="#AcyclicAliphaticHydrocarbon">
-        <rdfs:label xml:lang="en">aliphatic chain</rdfs:label>
+        <rdfs:label>aliphatic chain</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Hydrocarbon without rings.</rdfs:comment>
+        <skos:definition
+            >Hydrocarbon without rings.</skos:definition>
     </owl:Class>
     
 
@@ -237,9 +269,9 @@
     <!-- http://purl.org/chemtop/dev#Adenin-9-yl_group -->
 
     <owl:Class rdf:about="#Adenin-9-yl_group">
-        <rdfs:label xml:lang="en">adenine</rdfs:label>
+        <rdfs:label>adenine</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PurineGroup"/>
-        <rdfs:comment rdf:datatype="&xsd;string">C5H5N5</rdfs:comment>
+        <rdfs:comment>C5H5N5</rdfs:comment>
     </owl:Class>
     
 
@@ -247,7 +279,7 @@
     <!-- http://purl.org/chemtop/dev#AminoAcidChain -->
 
     <owl:Class rdf:about="#AminoAcidChain">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >amino acid sequence</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -264,10 +296,8 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Chain of amino acids, joined by peptide bonds. Folded or unfolded.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Synonym: AminoAcidSequence</rdfs:comment>
+        <skos:definition
+            >Chain of amino acids, joined by peptide bonds. Folded or unfolded.</skos:definition>
     </owl:Class>
     
 
@@ -275,19 +305,19 @@
     <!-- http://purl.org/chemtop/dev#AminoAcidMolecule -->
 
     <owl:Class rdf:about="#AminoAcidMolecule">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >amino acid monomer</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CarboxyGroup"/>
+                <owl:someValuesFrom rdf:resource="#AminoGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#AminoGroup"/>
+                <owl:someValuesFrom rdf:resource="#CarboxyGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -302,10 +332,10 @@
                 <owl:someValuesFrom rdf:resource="#CarbonHydrogenSubstructure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) ro:hasPart some CarbonHydrogenSubstructure and ((hasComponentPart myx 2 CarboxyGroup) and (hasComponentPart min 1 CarboxyGroup) and (hasComponentPart exactly 1 AminoGroup)) or ((hasComponentPart max 2 AminoGroup) and (hasComponentPart min 1 AminoGroup) and (hasComponentPart exactly 1 CarboxyGroup))</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definitions: In chemistry, an amino acid is any molecule that contains both amine and carboxyl functional groups. However, in biochemistry, this more general term is frequently used to refer to alpha amino acids (amino acids in which the amino and carboxylate functionalities are attached to the same carbon, called &#945;&#8211;carbon). Amino Acids have at least one amino and one carboxy group. Those having two carboxy groups have only one amino group and vice versa.</rdfs:comment>
+        <rdfs:comment
+            >(QCR) ro:hasPart some CarbonHydrogenSubstructure and ((hasComponentPart myx 2 CarboxyGroup) and (hasComponentPart min 1 CarboxyGroup) and (hasComponentPart exactly 1 AminoGroup)) or ((hasComponentPart max 2 AminoGroup) and (hasComponentPart min 1 AminoGroup) and (hasComponentPart exactly 1 CarboxyGroup))</rdfs:comment>
+        <skos:definition
+            >In chemistry, an amino acid is any molecule that contains both amine and carboxyl functional groups. However, in biochemistry, this more general term is frequently used to refer to alpha amino acids (amino acids in which the amino and carboxylate functionalities are attached to the same carbon, called &#945;&#8211;carbon). Amino Acids have at least one amino and one carboxy group. Those having two carboxy groups have only one amino group and vice versa.</skos:definition>
     </owl:Class>
     
 
@@ -327,8 +357,14 @@
     <!-- http://purl.org/chemtop/dev#AminoGroup -->
 
     <owl:Class rdf:about="#AminoGroup">
-        <rdfs:label xml:lang="en">amino group</rdfs:label>
+        <rdfs:label>amino group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#FunctionalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
@@ -345,19 +381,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:someValuesFrom rdf:resource="#NitrogenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 1 NitrogenAtom and hasComponentPart max 3 HydrogenAtom and hasComponentPart min 1 HydrogenAtom and hasComponentPart only (NitrogenAtom or HydrogenAtom)</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Amines are organic compounds and a type of functional group that contain nitrogen as the key atom. Isolated neutral or kationic amino group or amino group forming a peptide bond. NH2 or NH3+</rdfs:comment>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 1 NitrogenAtom and hasComponentPart max 3 HydrogenAtom and hasComponentPart min 1 HydrogenAtom and hasComponentPart only (NitrogenAtom or HydrogenAtom)</rdfs:comment>
+        <skos:definition
+            >Amines are organic compounds and a type of functional group that contain nitrogen as the key atom. Isolated neutral or kationic amino group or amino group forming a peptide bond. NH2 or NH3+</skos:definition>
     </owl:Class>
     
 
@@ -365,11 +395,11 @@
     <!-- http://purl.org/chemtop/dev#AromaticHydrocarbon -->
 
     <owl:Class rdf:about="#AromaticHydrocarbon">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >aromatic hydrocarbon</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Hydrocarbons which contain aromatic rings (benzene, naphtalin, toluene)</rdfs:comment>
+        <skos:definition
+            >Hydrocarbons which contain aromatic rings (benzene, naphtalin, toluene)</skos:definition>
     </owl:Class>
     
 
@@ -377,7 +407,7 @@
     <!-- http://purl.org/chemtop/dev#Atom -->
 
     <owl:Class rdf:about="#Atom">
-        <rdfs:label xml:lang="en">atom</rdfs:label>
+        <rdfs:label>atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -391,8 +421,8 @@
                 <owl:someValuesFrom rdf:resource="#SubatomicParticle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Basic building block of molecules. Particle of discrete types. Biologically important atoms are C, N, H, O, P, S, Na, Ca, K, Mg, Cl, J, Fe, Co, Zn ,... Atoms may be electrically neutral or ionic.</rdfs:comment>
+        <skos:definition
+            >Basic building block of molecules. Particle of discrete types. Biologically important atoms are C, N, H, O, P, S, Na, Ca, K, Mg, Cl, J, Fe, Co, Zn ,... Atoms may be electrically neutral or ionic.</skos:definition>
     </owl:Class>
     
 
@@ -400,7 +430,7 @@
     <!-- http://purl.org/chemtop/dev#BackbonePhosphateUnit -->
 
     <owl:Class rdf:about="#BackbonePhosphateUnit">
-        <rdfs:label xml:lang="en">phosphate</rdfs:label>
+        <rdfs:label>phosphate</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -427,8 +457,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: A backbone phosphate unit consists of a phosphorus atom bound to two oxygene atoms +++</rdfs:comment>
+        <skos:definition
+            >A backbone phosphate unit consists of a phosphorus atom bound to two oxygene atoms +++</skos:definition>
     </owl:Class>
     
 
@@ -444,7 +474,7 @@
     <!-- http://purl.org/chemtop/dev#C10-24Chain -->
 
     <owl:Class rdf:about="#C10-24Chain">
-        <rdfs:label xml:lang="en">C10-24 chain</rdfs:label>
+        <rdfs:label>C10-24 chain</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CarbonChain"/>
     </owl:Class>
     
@@ -453,12 +483,12 @@
     <!-- http://purl.org/chemtop/dev#C5Chain -->
 
     <owl:Class rdf:about="#C5Chain">
-        <rdfs:label xml:lang="en">C5 chain</rdfs:label>
+        <rdfs:label>C5 chain</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CarbonChain"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 5 CarbonAtom</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Backbone of Pentoses.</rdfs:comment>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 5 CarbonAtom</rdfs:comment>
+        <skos:definition
+            >Backbone of Pentoses.</skos:definition>
     </owl:Class>
     
 
@@ -466,12 +496,12 @@
     <!-- http://purl.org/chemtop/dev#C6Chain -->
 
     <owl:Class rdf:about="#C6Chain">
-        <rdfs:label xml:lang="en">C6 chain</rdfs:label>
+        <rdfs:label>C6 chain</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CarbonChain"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 6 CarbonAtom</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Backbone of Hexoses.</rdfs:comment>
+        <skos:definition
+            >Backbone of Hexoses.</skos:definition>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 6 CarbonAtom</rdfs:comment>
     </owl:Class>
     
 
@@ -479,7 +509,7 @@
     <!-- http://purl.org/chemtop/dev#Carbohydrate -->
 
     <owl:Class rdf:about="#Carbohydrate">
-        <rdfs:label xml:lang="en">carbohydrate</rdfs:label>
+        <rdfs:label>carbohydrate</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -497,7 +527,7 @@
     <!-- http://purl.org/chemtop/dev#CarbonAtom -->
 
     <owl:Class rdf:about="#CarbonAtom">
-        <rdfs:label xml:lang="en">carbon atom</rdfs:label>
+        <rdfs:label>carbon atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Atom"/>
     </owl:Class>
     
@@ -506,7 +536,7 @@
     <!-- http://purl.org/chemtop/dev#CarbonChain -->
 
     <owl:Class rdf:about="#CarbonChain">
-        <rdfs:label xml:lang="en">carbon chain</rdfs:label>
+        <rdfs:label>carbon chain</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -529,19 +559,19 @@
     <!-- http://purl.org/chemtop/dev#CarbonHydrogenSubstructure -->
 
     <owl:Class rdf:about="#CarbonHydrogenSubstructure">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >carbon hydrogen substructure</rdfs:label>
         <rdfs:subClassOf rdf:resource="#StructuralGroup"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CarbonAtom"/>
+                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
+                <owl:someValuesFrom rdf:resource="#CarbonAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -557,10 +587,10 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 1 CarbonAtom and hasComponentPart exactly 1 HydrogenAtom and hasComponentPart only (CarbonAtom or HydrogenAtom)</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Part of a molecule constituted by a (1-3 valued) carbon hydrogen bound. Traditional (fiat) criterion for distinguishing organic from inorganic compounds. Excludes certain carbon compounds such as HCN, CO2, traditionally considered inorganic. (Could be enhanced by carbon tetrahalogen, traditionally considered organic compounds but irrelevant for biology)</rdfs:comment>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 1 CarbonAtom and hasComponentPart exactly 1 HydrogenAtom and hasComponentPart only (CarbonAtom or HydrogenAtom)</rdfs:comment>
+        <skos:definition
+            >Part of a molecule constituted by a (1-3 valued) carbon hydrogen bound. Traditional (fiat) criterion for distinguishing organic from inorganic compounds. Excludes certain carbon compounds such as HCN, CO2, traditionally considered inorganic. (Could be enhanced by carbon tetrahalogen, traditionally considered organic compounds but irrelevant for biology)</skos:definition>
     </owl:Class>
     
 
@@ -576,8 +606,14 @@
     <!-- http://purl.org/chemtop/dev#CarboxyGroup -->
 
     <owl:Class rdf:about="#CarboxyGroup">
-        <rdfs:label xml:lang="en">carboxy group</rdfs:label>
+        <rdfs:label>carboxy group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#FunctionalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
@@ -604,16 +640,9 @@
                 <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 1 CarbonAtom and hasComponentPart exactly 2 OxygenAtom and hasComponentPart max 1 HydrogenAtom and hasComponentPart only (CarbonAtom or OxygenAtom or HydrogenAtom)</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: COOH or COO-</rdfs:comment>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 1 CarbonAtom and hasComponentPart exactly 2 OxygenAtom and hasComponentPart max 1 HydrogenAtom and hasComponentPart only (CarbonAtom or OxygenAtom or HydrogenAtom)</rdfs:comment>
+        <skos:definition>COOH or COO-</skos:definition>
     </owl:Class>
     
 
@@ -621,11 +650,11 @@
     <!-- http://purl.org/chemtop/dev#ChromosomalDNA -->
 
     <owl:Class rdf:about="#ChromosomalDNA">
-        <rdfs:label xml:lang="en">chromosomal DNA</rdfs:label>
+        <rdfs:label>chromosomal DNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#DNAMolecule"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Single large macromolecule of DNA that in its coiled form represents a chromosome</rdfs:comment>
-        <owl:versionInfo rdf:datatype="&xsd;string"
+        <skos:definition
+            >Single large macromolecule of DNA that in its coiled form represents a chromosome</skos:definition>
+        <owl:versionInfo
             >TODO: Discuss whether only complete DNA molecules can be ChromosomalDNA.</owl:versionInfo>
     </owl:Class>
     
@@ -634,15 +663,15 @@
     <!-- http://purl.org/chemtop/dev#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="#CollectiveMaterialEntity">
-        <rdfs:label rdf:datatype="&xsd;string"
+        <rdfs:label
             >removed for performance: hasGranularPart some MaterialIndependentContinuant</rdfs:label>
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >collective material entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Mereological Sum of multiple grains of the same sort without clear identity and unity criteria.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <rdfs:comment
             >The fuzzyness of this class is due to the &quot;same sort&quot; criterion.</rdfs:comment>
+        <skos:definition
+            >Mereological Sum of multiple grains of the same sort without clear identity and unity criteria.</skos:definition>
     </owl:Class>
     
 
@@ -650,24 +679,24 @@
     <!-- http://purl.org/chemtop/dev#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="#CompoundOfCollectiveMaterialEntities">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >compound of collective material entities</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition
             >Composition of different kinds of collections without clear unity and identity criteria.
-Old name: compound of collections</rdfs:comment>
+Old name: compound of collections</skos:definition>
     </owl:Class>
     
 
@@ -675,11 +704,11 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#CyclicAliphaticHydrocarbon -->
 
     <owl:Class rdf:about="#CyclicAliphaticHydrocarbon">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >cyclic aliphatic</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Hydrocarbon with rings which are not aromatic rings (Cyclohexan)</rdfs:comment>
+        <skos:definition
+            >Hydrocarbon with rings which are not aromatic rings (Cyclohexan)</skos:definition>
     </owl:Class>
     
 
@@ -687,9 +716,9 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#Cytosin-1-yl_group -->
 
     <owl:Class rdf:about="#Cytosin-1-yl_group">
-        <rdfs:label xml:lang="en">cytosine</rdfs:label>
+        <rdfs:label>cytosine</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
-        <rdfs:comment rdf:datatype="&xsd;string">C4H5N3O</rdfs:comment>
+        <skos:synonym>C4H5N3O</skos:synonym>
     </owl:Class>
     
 
@@ -697,10 +726,10 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#DNAFragment -->
 
     <owl:Class rdf:about="#DNAFragment">
-        <rdfs:label xml:lang="en">DNA fragment</rdfs:label>
+        <rdfs:label>DNA fragment</rdfs:label>
         <rdfs:subClassOf rdf:resource="#DNAMolecule"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Any other kind of DNA that is a whole Molecule, i.e. not part of a larger piece of DNA</rdfs:comment>
+        <skos:definition
+            >Any other kind of DNA that is a whole Molecule, i.e. not part of a larger piece of DNA</skos:definition>
     </owl:Class>
     
 
@@ -708,8 +737,8 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#DNAMolecule -->
 
     <owl:Class rdf:about="#DNAMolecule">
-        <rdfs:label rdf:datatype="&xsd;string">DNA sequence</rdfs:label>
-        <rdfs:label xml:lang="en">DNA</rdfs:label>
+        <rdfs:label>DNA sequence</rdfs:label>
+        <rdfs:label>DNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#NucleicAcidMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -717,8 +746,8 @@ Old name: compound of collections</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#DeoxyribonucleotideResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: A DNA is a complex, high-molecular-weight biochemical macromolecule composed of deoxyribonumcleotide chains that convey genetic information. Any kind of NucleicAcid that is composed of Deoxyribonucleotides is here defined as DNA.</rdfs:comment>
+        <skos:definition
+            >A DNA is a complex, high-molecular-weight biochemical macromolecule composed of deoxyribonumcleotide chains that convey genetic information. Any kind of NucleicAcid that is composed of Deoxyribonucleotides is here defined as DNA.</skos:definition>
     </owl:Class>
     
 
@@ -726,10 +755,10 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#DNARegion -->
 
     <owl:Class rdf:about="#DNARegion">
-        <rdfs:label xml:lang="en">DNA region</rdfs:label>
+        <rdfs:label>DNA region</rdfs:label>
         <rdfs:subClassOf rdf:resource="#NucleicAcidRegion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Any properPartOf an EntireDNAMolecule that as only desoxyribonucleotides as components.</rdfs:comment>
+        <skos:definition
+            >Any properPartOf an EntireDNAMolecule that as only desoxyribonucleotides as components.</skos:definition>
     </owl:Class>
     
 
@@ -751,7 +780,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#DeoxyribonucleotideResidue -->
 
     <owl:Class rdf:about="#DeoxyribonucleotideResidue">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >deoxyribonucleotide</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -799,7 +828,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#DeoxyriboseRing -->
 
     <owl:Class rdf:about="#DeoxyriboseRing">
-        <rdfs:label xml:lang="en">deoxyribose</rdfs:label>
+        <rdfs:label>deoxyribose</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SugarRing"/>
     </owl:Class>
     
@@ -809,8 +838,8 @@ Old name: compound of collections</rdfs:comment>
 
     <owl:Class rdf:about="#Eicosanoid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >An oxygenated metabolite from polyunsaturated 20 carbon fatty acids including lipoxygenase and cyclooxygenase products and their synthetic analogs. This includes the prostaglandins and thromboxanes. (UMLS SN)</rdfs:comment>
+        <skos:definition
+            >An oxygenated metabolite from polyunsaturated 20 carbon fatty acids including lipoxygenase and cyclooxygenase products and their synthetic analogs. This includes the prostaglandins and thromboxanes. (UMLS SN)</skos:definition>
     </owl:Class>
     
 
@@ -818,10 +847,10 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#Electron -->
 
     <owl:Class rdf:about="#Electron">
-        <rdfs:label xml:lang="en">electron</rdfs:label>
+        <rdfs:label>electron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Negatively Charged Particle</rdfs:comment>
+        <skos:definition
+            >Negatively Charged Particle</skos:definition>
     </owl:Class>
     
 
@@ -829,7 +858,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#FattyAcid -->
 
     <owl:Class rdf:about="#FattyAcid">
-        <rdfs:label rdf:datatype="&xsd;string">fatty acid</rdfs:label>
+        <rdfs:label>fatty acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -858,8 +887,8 @@ Old name: compound of collections</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Carboxylic acid often with a long unbranched aliphatic tail.</rdfs:comment>
+        <skos:definition
+            >Carboxylic acid often with a long unbranched aliphatic tail.</skos:definition>
     </owl:Class>
     
 
@@ -867,11 +896,11 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#FunctionalGroup -->
 
     <owl:Class rdf:about="#FunctionalGroup">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >functional group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularGroup"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Functional groups are specific groups of atoms within molecules that are responsible for the characteristic chemical reactions of those molecules.</rdfs:comment>
+        <skos:definition
+            >Functional groups are specific groups of atoms within molecules that are responsible for the characteristic chemical reactions of those molecules.</skos:definition>
     </owl:Class>
     
 
@@ -879,7 +908,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#Glucose -->
 
     <owl:Class rdf:about="#Glucose">
-        <rdfs:label xml:lang="en">glucose</rdfs:label>
+        <rdfs:label>glucose</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hexose"/>
     </owl:Class>
     
@@ -904,9 +933,9 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#Guanin-9-yl_group -->
 
     <owl:Class rdf:about="#Guanin-9-yl_group">
-        <rdfs:label xml:lang="en">guanine</rdfs:label>
+        <rdfs:label>guanine</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PurineGroup"/>
-        <rdfs:comment rdf:datatype="&xsd;string">C5H5N5O</rdfs:comment>
+        <skos:synonym>C5H5N5O</skos:synonym>
     </owl:Class>
     
 
@@ -914,7 +943,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#HeterocyclicBaseGroup -->
 
     <owl:Class rdf:about="#HeterocyclicBaseGroup">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >heterocyclic base</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
         <rdfs:subClassOf>
@@ -935,8 +964,8 @@ Old name: compound of collections</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Organic compounds that contain a ring structure containing N as proton receptor. Important parts of DNA and RNA molecules.</rdfs:comment>
+        <skos:definition
+            >Organic compounds that contain a ring structure containing N as proton receptor. Important parts of DNA and RNA molecules.</skos:definition>
     </owl:Class>
     
 
@@ -944,7 +973,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#Hexose -->
 
     <owl:Class rdf:about="#Hexose">
-        <rdfs:label xml:lang="en">hexose</rdfs:label>
+        <rdfs:label>hexose</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Monosaccharide"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -958,8 +987,8 @@ Old name: compound of collections</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#HydroxyGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 1 C6Chain</rdfs:comment>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 1 C6Chain</rdfs:comment>
     </owl:Class>
     
 
@@ -967,7 +996,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#Hydrocarbon -->
 
     <owl:Class rdf:about="#Hydrocarbon">
-        <rdfs:label xml:lang="en">hydrocarbon</rdfs:label>
+        <rdfs:label>hydrocarbon</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -995,8 +1024,8 @@ Old name: compound of collections</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Compounds consisting of carbon and hydrogen only.</rdfs:comment>
+        <skos:definition
+            >Compounds consisting of carbon and hydrogen only.</skos:definition>
     </owl:Class>
     
 
@@ -1004,7 +1033,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#HydrogenAtom -->
 
     <owl:Class rdf:about="#HydrogenAtom">
-        <rdfs:label xml:lang="en">hydrogen atom</rdfs:label>
+        <rdfs:label>hydrogen atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Atom"/>
     </owl:Class>
     
@@ -1013,12 +1042,12 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#HydroxyGroup -->
 
     <owl:Class rdf:about="#HydroxyGroup">
-        <rdfs:label xml:lang="en">hydroxy group</rdfs:label>
+        <rdfs:label>hydroxy group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#FunctionalGroup"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
+                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1037,13 +1066,12 @@ Old name: compound of collections</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
+                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 1 OxygenAtom and hasComponentPart exactly 1 HydrogenAtom and hasComponentPart only (OxygenAtom or HydrogenAtom)</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: OH or OH2+</rdfs:comment>
+        <skos:definition>OH or OH2+</skos:definition>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 1 OxygenAtom and hasComponentPart exactly 1 HydrogenAtom and hasComponentPart only (OxygenAtom or HydrogenAtom)</rdfs:comment>
     </owl:Class>
     
 
@@ -1051,7 +1079,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#InorganicMolecule -->
 
     <owl:Class rdf:about="#InorganicMolecule">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >inorganic molecular entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -1068,8 +1096,8 @@ Old name: compound of collections</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Substances which do not include carbon and its derivatives as their principal elements. However, carbides, carbonates, cyanides, cyanates and carbon disulfide are included in this class.</rdfs:comment>
+        <skos:definition
+            >Substances which do not include carbon and its derivatives as their principal elements. However, carbides, carbonates, cyanides, cyanates and carbon disulfide are included in this class.</skos:definition>
     </owl:Class>
     
 
@@ -1077,10 +1105,10 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#Lipid -->
 
     <owl:Class rdf:about="#Lipid">
-        <rdfs:label xml:lang="en">lipid</rdfs:label>
+        <rdfs:label>lipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Fat-soluble (lipophilic), naturally-occurring molecule.</rdfs:comment>
+        <skos:definition
+            >Fat-soluble (lipophilic), naturally-occurring molecule.</skos:definition>
     </owl:Class>
     
 
@@ -1094,10 +1122,10 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#MolecularGroup -->
 
     <owl:Class rdf:about="#MolecularGroup">
-        <rdfs:label xml:lang="en">molecular group</rdfs:label>
+        <rdfs:label>molecular group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Linked collection of atoms within a molcular entity. They cannot exist by themselves.</rdfs:comment>
+        <skos:definition
+            >Linked collection of atoms within a molcular entity. They cannot exist by themselves.</skos:definition>
     </owl:Class>
     
 
@@ -1114,8 +1142,6 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#MolecularPartBoundary -->
 
     <owl:Class rdf:about="#MolecularPartBoundary">
-        <rdfs:label rdf:datatype="&xsd;string"
-            >definition:  An independent continuant [snap:IndependentContinuant] that is a lower dimensional part of a molecule, normally a closed two-dimensional surface. Boundaries are those privileged parts of molecular parts that exist where two molecular parts meet. Typically molecular part boundaries are located between bound atoms .</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1123,6 +1149,8 @@ Old name: compound of collections</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#MolecularPart"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <skos:definition
+            >An independent continuant [snap:IndependentContinuant] that is a lower dimensional part of a molecule, normally a closed two-dimensional surface. Boundaries are those privileged parts of molecular parts that exist where two molecular parts meet. Typically molecular part boundaries are located between bound atoms .</skos:definition>
     </owl:Class>
     
 
@@ -1130,7 +1158,7 @@ Old name: compound of collections</rdfs:comment>
     <!-- http://purl.org/chemtop/dev#Molecule -->
 
     <owl:Class rdf:about="#Molecule">
-        <rdfs:label xml:lang="en">molecular</rdfs:label>
+        <rdfs:label>molecular</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1139,10 +1167,10 @@ Old name: compound of collections</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#MoleculeComplex"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
+        <skos:definition
             >A molecular entity is a self connected compound of two atoms or more which exhibit at least one covalent bound. Molecular entities can be 
 
-Definition: Separately distinguishable molecular structure, neither part of nor attached to any other molecular structure. Atoms are not considered molecular structures.</rdfs:comment>
+ Separately distinguishable molecular structure, neither part of nor attached to any other molecular structure. Atoms are not considered molecular structures.</skos:definition>
     </owl:Class>
     
 
@@ -1170,8 +1198,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: An object which contains several molecules, has direct parts (components) of different types and which changes its ontological nature if subdivided. It must have clear unity and identity criteria.</rdfs:comment>
+        <skos:definition
+            >An object which contains several molecules, has direct parts (components) of different types and which changes its ontological nature if subdivided. It must have clear unity and identity criteria.</skos:definition>
     </owl:Class>
     
 
@@ -1179,7 +1207,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Monosaccharide -->
 
     <owl:Class rdf:about="#Monosaccharide">
-        <rdfs:label xml:lang="en">monosaccharide</rdfs:label>
+        <rdfs:label>monosaccharide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1194,10 +1222,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Neutron -->
 
     <owl:Class rdf:about="#Neutron">
-        <rdfs:label xml:lang="en">neutron</rdfs:label>
+        <rdfs:label>neutron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Neutral Particle</rdfs:comment>
+        <skos:definition
+            >Neutral Particle</rdfs:skos:definition>
     </owl:Class>
     
 
@@ -1205,7 +1233,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#NitrogenAtom -->
 
     <owl:Class rdf:about="#NitrogenAtom">
-        <rdfs:label xml:lang="en">nitrogen atom</rdfs:label>
+        <rdfs:label>nitrogen atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Atom"/>
     </owl:Class>
     
@@ -1214,11 +1242,11 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#NonSteroidLipid -->
 
     <owl:Class rdf:about="#NonSteroidLipid">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >non steroid lipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Lipids that have aliphatic chains and no steroid rings</rdfs:comment>
+        <skos:definition
+            >Lipids that have aliphatic chains and no steroid rings</skos:definition>
     </owl:Class>
     
 
@@ -1226,11 +1254,11 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#NucleicAcidMolecule -->
 
     <owl:Class rdf:about="#NucleicAcidMolecule">
-        <rdfs:label rdf:datatype="&xsd;string"
+        <rdfs:label
             >nucleotide sequence</rdfs:label>
-        <rdfs:label rdf:datatype="&xsd;string"
+        <rdfs:label
             >sequence of nucleotides</rdfs:label>
-        <rdfs:label xml:lang="en">nucleic acid</rdfs:label>
+        <rdfs:label>nucleic acid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1238,8 +1266,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 <owl:someValuesFrom rdf:resource="#NucleotideResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: A nucleic acid is a complex, high-molecular-weight biochemical macromolecule composed of nucleotide chains that convey genetic information.</rdfs:comment>
+        <skos:definition
+            >A nucleic acid is a complex, high-molecular-weight biochemical macromolecule composed of nucleotide chains that convey genetic information.</skos:definition>
     </owl:Class>
     
 
@@ -1247,7 +1275,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#NucleicAcidRegion -->
 
     <owl:Class rdf:about="#NucleicAcidRegion">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >nucleic acid region</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
     </owl:Class>
@@ -1261,13 +1289,13 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#HeterocyclicBaseGroup"/>
+                <owl:someValuesFrom rdf:resource="#SugarRing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#SugarRing"/>
+                <owl:someValuesFrom rdf:resource="#HeterocyclicBaseGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1280,14 +1308,14 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#condensesTo"/>
-                <owl:someValuesFrom rdf:resource="#NucleotideResidue"/>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#PhosphateGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#PhosphateGroup"/>
+                <owl:someValuesFrom rdf:resource="#SugarRing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1298,8 +1326,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#SugarRing"/>
+                <owl:onProperty rdf:resource="#condensesTo"/>
+                <owl:someValuesFrom rdf:resource="#NucleotideResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1309,7 +1337,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#NucleotideResidue -->
 
     <owl:Class rdf:about="#NucleotideResidue">
-        <rdfs:label xml:lang="en">nucleotide</rdfs:label>
+        <rdfs:label>nucleotide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Residue"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1325,8 +1353,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 1 HeterocyclicBase and hasComponentPart exactly 1 Phosphate and hasComponentPart only (Phosphate or Ribose or HeterocyclicBase) and hasComponentPart exactly 1 Pentose</rdfs:comment>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 1 HeterocyclicBase and hasComponentPart exactly 1 Phosphate and hasComponentPart only (Phosphate or Ribose or HeterocyclicBase) and hasComponentPart exactly 1 Pentose</rdfs:comment>
     </owl:Class>
     
 
@@ -1334,7 +1362,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Oligomer -->
 
     <owl:Class rdf:about="#Oligomer">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >oligo or polymer</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -1352,8 +1380,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: A Oligomer is a molecule of low relative molecular mass of which the components can be fully specified. The components are all of the same kind, e.g. amino acid residues or nucleotide residues.</rdfs:comment>
+        <skos:definition
+            >A Oligomer is a molecule of low relative molecular mass of which the components can be fully specified. The components are all of the same kind, e.g. amino acid residues or nucleotide residues.</skos:definition>
     </owl:Class>
     
 
@@ -1361,15 +1389,9 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#OligopeptideMolecule -->
 
     <owl:Class rdf:about="#OligopeptideMolecule">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >entire oligopeptide molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Peptide"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:allValuesFrom rdf:resource="#AminoAcidResidue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
@@ -1377,10 +1399,16 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart max 10 AminoAcidMonomer</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Amino Acid Polymer up to 10 monomers.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:allValuesFrom rdf:resource="#AminoAcidResidue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition
+            >Amino Acid Polymer up to 10 monomers.</skos:definition>
+        <rdfs:comment
+            >(QCR) hasComponentPart max 10 AminoAcidMonomer</rdfs:comment>
     </owl:Class>
     
 
@@ -1388,10 +1416,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Oligosaccharide -->
 
     <owl:Class rdf:about="#Oligosaccharide">
-        <rdfs:label xml:lang="en">oligosaccharide</rdfs:label>
+        <rdfs:label>oligosaccharide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) Carbohydrate and hasComponentPart min 2 Monosaccharide and hasComponentPart max 9 Monosaccharide and hasComponentPart only Monomer</rdfs:comment>
+        <rdfs:comment
+            >(QCR) Carbohydrate and hasComponentPart min 2 Monosaccharide and hasComponentPart max 9 Monosaccharide and hasComponentPart only Monomer</rdfs:comment>
     </owl:Class>
     
 
@@ -1399,7 +1427,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#OrganicMolecule -->
 
     <owl:Class rdf:about="#OrganicMolecule">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >organic molecular entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -1412,8 +1440,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</rdfs:comment>
+        <skos:definition
+            >Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</skos:definition>
     </owl:Class>
     
 
@@ -1421,7 +1449,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#OxygenAtom -->
 
     <owl:Class rdf:about="#OxygenAtom">
-        <rdfs:label xml:lang="en">oxygen atom</rdfs:label>
+        <rdfs:label>oxygen atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Atom"/>
     </owl:Class>
     
@@ -1430,22 +1458,22 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Pentose -->
 
     <owl:Class rdf:about="#Pentose">
-        <rdfs:label xml:lang="en">pentose</rdfs:label>
+        <rdfs:label>pentose</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Monosaccharide"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasProperPart"/>
-                <owl:someValuesFrom rdf:resource="#HydroxyGroup"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
                 <owl:someValuesFrom rdf:resource="#CarbonHydrogenSubstructure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) hasComponentPart exactly 1 C5Chain</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperPart"/>
+                <owl:someValuesFrom rdf:resource="#HydroxyGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >(QCR) hasComponentPart exactly 1 C5Chain</rdfs:comment>
     </owl:Class>
     
 
@@ -1453,7 +1481,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Peptide -->
 
     <owl:Class rdf:about="#Peptide">
-        <rdfs:label xml:lang="en">peptide</rdfs:label>
+        <rdfs:label>peptide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1461,8 +1489,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 <owl:someValuesFrom rdf:resource="#AminoAcidResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: We here use the term peptide in the most general sense, viz. a oligo or polymer made out of amino acids.</rdfs:comment>
+        <rdfs:comment
+            >We here use the term peptide in the most general sense, viz. a oligo or polymer made out of amino acids.</rdfs:comment>
     </owl:Class>
     
 
@@ -1494,7 +1522,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PhosphorusAtom -->
 
     <owl:Class rdf:about="#PhosphorusAtom">
-        <rdfs:label xml:lang="en">phosphorus atom</rdfs:label>
+        <rdfs:label>phosphorus atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Atom"/>
     </owl:Class>
     
@@ -1503,8 +1531,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PhysicalBoundary -->
 
     <owl:Class rdf:about="#PhysicalBoundary">
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >A independent continuant entity that bounds or demarcates some other continuant entity. Commonly viewed as a lower-dimensional part, the the notion of physical boundary here also encompasses ill-delimited spaces that fulfill the same function, e.g. biological joints.</rdfs:comment>
+        <skos:definition
+            >A independent continuant entity that bounds or demarcates some other continuant entity. Commonly viewed as a lower-dimensional part, the the notion of physical boundary here also encompasses ill-delimited spaces that fulfill the same function, e.g. biological joints.</skos:definition>
     </owl:Class>
     
 
@@ -1535,7 +1563,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PolypeptideMolecule -->
 
     <owl:Class rdf:about="#PolypeptideMolecule">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >entire polypeptide molecule</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -1553,10 +1581,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) Peptide and hasComponentPart min 11 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity) and hasComponentPart only AminoAcidMonomer and hasComponentPart max 100 AminoAcidMonomer</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Amino Acid Polymer from 11 to 100 monomers.</rdfs:comment>
+        <rdfs:comment
+            >(QCR) Peptide and hasComponentPart min 11 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity) and hasComponentPart only AminoAcidMonomer and hasComponentPart max 100 AminoAcidMonomer</rdfs:comment>
+        <skos:definition
+            >Amino Acid Polymer from 11 to 100 monomers.</skos:definition>
     </owl:Class>
     
 
@@ -1564,10 +1592,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Polysaccharide -->
 
     <owl:Class rdf:about="#Polysaccharide">
-        <rdfs:label xml:lang="en">polysaccharide</rdfs:label>
+        <rdfs:label>polysaccharide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) Carbohydrate and hasComponentPart min 10 Monosaccharide and hasComponentPart only Monomer</rdfs:comment>
+        <rdfs:comment
+            >(QCR) Carbohydrate and hasComponentPart min 10 Monosaccharide and hasComponentPart only Monomer</rdfs:comment>
     </owl:Class>
     
 
@@ -1575,11 +1603,11 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PortionOfHeterogeneousLiquid -->
 
     <owl:Class rdf:about="#PortionOfHeterogeneousLiquid">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >portion of heterogenous liquid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CompoundOfCollectiveMaterialEntities"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Liquid constituted by different kinds of collectives, e.g. aqueous NaCl solution</rdfs:comment>
+        <skos:definition
+            >Liquid constituted by different kinds of collectives, e.g. aqueous NaCl solution</skos:definition>
     </owl:Class>
     
 
@@ -1587,11 +1615,11 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PortionOfHeterogeneousSolid -->
 
     <owl:Class rdf:about="#PortionOfHeterogeneousSolid">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >portion of heterogenous solid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CompoundOfCollectiveMaterialEntities"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Solid constituted by different kinds of collectives, e.g. a NaCl crystal, granite</rdfs:comment>
+        <skos:definition
+            >Solid constituted by different kinds of collectives, e.g. a NaCl crystal, granite</skos:definition>
     </owl:Class>
     
 
@@ -1599,10 +1627,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PortionOfHomogeneousGas -->
 
     <owl:Class rdf:about="#PortionOfHomogeneousGas">
-        <rdfs:label xml:lang="en">portion of gas</rdfs:label>
+        <rdfs:label>portion of gas</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHomogeneousMatter"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Non-connected  Molecules in gaseous state</rdfs:comment>
+        <skos:definition
+            >Non-connected Molecules in gaseous state</skos:definition>
     </owl:Class>
     
 
@@ -1610,11 +1638,11 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PortionOfHomogeneousLiquid -->
 
     <owl:Class rdf:about="#PortionOfHomogeneousLiquid">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >portion of homogenous liquid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHomogeneousMatter"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Pure liquid consisting only of one kind of particles, e.g. H2O, liquid Hg, ...</rdfs:comment>
+        <skos:definition
+            >Pure liquid consisting only of one kind of particles, e.g. H2O, liquid Hg, ...</skos:definition>
     </owl:Class>
     
 
@@ -1622,7 +1650,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PortionOfHomogeneousMatter -->
 
     <owl:Class rdf:about="#PortionOfHomogeneousMatter">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >homogenous cohesive collection</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CollectiveMaterialEntity"/>
         <rdfs:subClassOf>
@@ -1651,8 +1679,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Composition of granular components of the same kind.</rdfs:comment>
+        <skos:definition
+            >Composition of granular components of the same kind.</skos:definition>
     </owl:Class>
     
 
@@ -1660,11 +1688,11 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#PortionOfHomogeneousSolid -->
 
     <owl:Class rdf:about="#PortionOfHomogeneousSolid">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >portion of homogenous solid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHomogeneousMatter"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Pure solid consisting only of one kind of particles, e.g. a piece of metal</rdfs:comment>
+        <skos:definition
+            >Pure solid consisting only of one kind of particles, e.g. a piece of metal</skos:definition>
     </owl:Class>
     
 
@@ -1672,7 +1700,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#ProteinComplex -->
 
     <owl:Class rdf:about="#ProteinComplex">
-        <rdfs:label xml:lang="en">protein complex</rdfs:label>
+        <rdfs:label>protein complex</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1685,8 +1713,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Mostly only proteins but composition with other molecules possible (e.g. Fe -&gt; Hemoglobin)</rdfs:comment>
+        <skos:definition
+            >Mostly only proteins but composition with other molecules possible (e.g. Fe -&gt; Hemoglobin)</skos:definition>
     </owl:Class>
     
 
@@ -1694,22 +1722,22 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#ProteinDomain -->
 
     <owl:Class rdf:about="#ProteinDomain">
-        <rdfs:label xml:lang="en">protein domain</rdfs:label>
+        <rdfs:label>protein domain</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPart"/>
-                <owl:someValuesFrom rdf:resource="#AminoAcidChain"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#partOf"/>
                 <owl:someValuesFrom rdf:resource="#ProteinMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Structural domain is the smallest element of protein tertiary structure that is self-stabilizing and often folds independently of the rest of the amino acid chain. It may contain one or more structural motives (ProteinSubstructure). A protein domain typically has its own function, the overall function of the protein results from the composition of the functions of all of its structural domains.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPart"/>
+                <owl:someValuesFrom rdf:resource="#AminoAcidChain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition
+            >Structural domain is the smallest element of protein tertiary structure that is self-stabilizing and often folds independently of the rest of the amino acid chain. It may contain one or more structural motives (ProteinSubstructure). A protein domain typically has its own function, the overall function of the protein results from the composition of the functions of all of its structural domains.</skos:definition>
     </owl:Class>
     
 
@@ -1717,13 +1745,13 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#ProteinMolecule -->
 
     <owl:Class rdf:about="#ProteinMolecule">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >entire protein molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PolypeptideMolecule"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Comment: (QCR) Peptide and hasComponentPart min 101 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity)</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Amino Acid Polymer longer than 100 monomers.</rdfs:comment>
+        <rdfs:comment
+            >(QCR) Peptide and hasComponentPart min 101 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity)</rdfs:comment>
+        <skos:definition
+            >Amino Acid Polymer longer than 100 monomers.</skos:definition>
     </owl:Class>
     
 
@@ -1731,23 +1759,23 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#ProteinSubstructure -->
 
     <owl:Class rdf:about="#ProteinSubstructure">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >protein substructure</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#partOf"/>
-                <owl:someValuesFrom rdf:resource="#ProteinMolecule"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPart"/>
                 <owl:someValuesFrom rdf:resource="#AminoAcidChain"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: A secondary substructure of a protein (protein Motif)</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#partOf"/>
+                <owl:someValuesFrom rdf:resource="#ProteinMolecule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition
+            >A secondary substructure of a protein (protein Motif)</skos:definition>
     </owl:Class>
     
 
@@ -1755,10 +1783,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#ProteinSubunit -->
 
     <owl:Class rdf:about="#ProteinSubunit">
-        <rdfs:label xml:lang="en">protein subunit</rdfs:label>
+        <rdfs:label>protein subunit</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ProteinMolecule"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: A protein molecule that assembles with other protein molecules to form a protein complex. May have its own function. However, most proteinsubunits do not gain functionality until associated with the other subunits.</rdfs:comment>
+        <skos:definition
+            >A protein molecule that assembles with other protein molecules to form a protein complex. May have its own function. However, most proteinsubunits do not gain functionality until associated with the other subunits.</skos:definition>
     </owl:Class>
     
 
@@ -1766,10 +1794,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Proton -->
 
     <owl:Class rdf:about="#Proton">
-        <rdfs:label xml:lang="en">proton</rdfs:label>
+        <rdfs:label>proton</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Positively Charged Particle</rdfs:comment>
+        <skos:definition
+            >Positively Charged Particle</skos:definition>
     </owl:Class>
     
 
@@ -1793,8 +1821,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#RNAMolecule -->
 
     <owl:Class rdf:about="#RNAMolecule">
-        <rdfs:label rdf:datatype="&xsd;string">RNA sequence</rdfs:label>
-        <rdfs:label xml:lang="en">RNA</rdfs:label>
+        <rdfs:label>RNA sequence</rdfs:label>
+        <rdfs:label>RNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#NucleicAcidMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1802,8 +1830,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
                 <owl:someValuesFrom rdf:resource="#RibonucleotideResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >any kind of NucleicAcid that is composed of Ribonucleotides which are not Deoxyribonucleotides</rdfs:comment>
+        <skos:definition
+            >Any kind of NucleicAcid that is composed of Ribonucleotides which are not Deoxyribonucleotides</skos:definition>
     </owl:Class>
     
 
@@ -1811,7 +1839,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#RNARegion -->
 
     <owl:Class rdf:about="#RNARegion">
-        <rdfs:label xml:lang="en">RNA region</rdfs:label>
+        <rdfs:label>RNA region</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1831,8 +1859,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#NucleicAcidRegion"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Any properPartOf an EntireRNAMolecule that as only ribonucleotides as components.</rdfs:comment>
+        <skos:definition
+            >Any properPartOf an EntireRNAMolecule that as only ribonucleotides as components.</skos:definition>
     </owl:Class>
     
 
@@ -1862,7 +1890,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#RibonucleotideResidue -->
 
     <owl:Class rdf:about="#RibonucleotideResidue">
-        <rdfs:label xml:lang="en">ribonucleotide</rdfs:label>
+        <rdfs:label>ribonucleotide</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1909,7 +1937,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#RiboseRing -->
 
     <owl:Class rdf:about="#RiboseRing">
-        <rdfs:label xml:lang="en">ribose</rdfs:label>
+        <rdfs:label>ribose</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SugarRing"/>
     </owl:Class>
     
@@ -1926,10 +1954,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Steroid -->
 
     <owl:Class rdf:about="#Steroid">
-        <rdfs:label xml:lang="en">steroid</rdfs:label>
+        <rdfs:label>steroid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Terpenoid lipid characterized by a carbon skeleton with four fused rings.</rdfs:comment>
+        <skos:definition
+            >Terpenoid lipid characterized by a carbon skeleton with four fused rings.</skos:definition>
     </owl:Class>
     
 
@@ -1937,11 +1965,11 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#StructuralGroup -->
 
     <owl:Class rdf:about="#StructuralGroup">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >structural group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularGroup"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Structural groups are specific constellations of atoms within molecules which are relevant for the classification of those compounds, e.g. Pentoses have a 5-C-Chain, Hexoses have a 6-C-Chain.</rdfs:comment>
+        <skos:definition
+            >Structural groups are specific constellations of atoms within molecules which are relevant for the classification of those compounds, e.g. Pentoses have a 5-C-Chain, Hexoses have a 6-C-Chain.</skos:definition>
     </owl:Class>
     
 
@@ -1949,11 +1977,10 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#SubatomicParticle -->
 
     <owl:Class rdf:about="#SubatomicParticle">
-        <rdfs:label xml:lang="en"
+        <rdfs:label
             >subatomic particle</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >Definition: Parts of Atoms.</rdfs:comment>
+        <skos:definition>Parts of Atoms.</skos:definition>
     </owl:Class>
     
 
@@ -1969,7 +1996,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#SulphurAtom -->
 
     <owl:Class rdf:about="#SulphurAtom">
-        <rdfs:label xml:lang="en">sulphur atom</rdfs:label>
+        <rdfs:label>sulphur atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Atom"/>
     </owl:Class>
     
@@ -1978,9 +2005,9 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Thymin-1-yl_group -->
 
     <owl:Class rdf:about="#Thymin-1-yl_group">
-        <rdfs:label xml:lang="en">thymin</rdfs:label>
+        <rdfs:label>thymin</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
-        <rdfs:comment rdf:datatype="&xsd;string">C5H6N2O2</rdfs:comment>
+        <skos:synonym>C5H6N2O2</skos:synonym>
     </owl:Class>
     
 
@@ -1988,9 +2015,9 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#Uracil-1-yl_group -->
 
     <owl:Class rdf:about="#Uracil-1-yl_group">
-        <rdfs:label xml:lang="en">uracil</rdfs:label>
+        <rdfs:label>uracil</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
-        <rdfs:comment rdf:datatype="&xsd;string">C4H4N2O2</rdfs:comment>
+        <skos:synonym>C4H4N2O2</skos:synonym>
     </owl:Class>
     
 
@@ -1998,12 +2025,12 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#WaterMolecule -->
 
     <owl:Class rdf:about="#WaterMolecule">
-        <rdfs:label xml:lang="en">water molecule</rdfs:label>
+        <rdfs:label>water molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#InorganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasProperPart"/>
-                <owl:someValuesFrom rdf:resource="#HydroxyGroup"/>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2021,8 +2048,8 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
+                <owl:onProperty rdf:resource="#hasProperPart"/>
+                <owl:someValuesFrom rdf:resource="#HydroxyGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2038,7 +2065,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#mRNAMolecule -->
 
     <owl:Class rdf:about="#mRNAMolecule">
-        <rdfs:label xml:lang="en">m RNA molecule</rdfs:label>
+        <rdfs:label>m RNA molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#RNAMolecule"/>
     </owl:Class>
     
@@ -2047,7 +2074,7 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#rRNAMolecule -->
 
     <owl:Class rdf:about="#rRNAMolecule">
-        <rdfs:label xml:lang="en">r RNA molecule</rdfs:label>
+        <rdfs:label>r RNA molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#RNAMolecule"/>
     </owl:Class>
     
@@ -2056,9 +2083,29 @@ Definition: Separately distinguishable molecular structure, neither part of nor 
     <!-- http://purl.org/chemtop/dev#tRNAMolecule -->
 
     <owl:Class rdf:about="#tRNAMolecule">
-        <rdfs:label xml:lang="en">t RNA molecule</rdfs:label>
+        <rdfs:label>t RNA molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#RNAMolecule"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/chemtop/dev#AminoAcidChain -->
+
+    <rdf:Description rdf:about="#AminoAcidChain">
+        <skos:synonym
+            >AminoAcidSequence</skos:synonym>
+    </rdf:Description>
 </rdf:RDF>
 
 
