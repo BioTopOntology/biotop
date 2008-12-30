@@ -2,7 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY biotop "http://purl.org/biotop/dev#" >
+    <!ENTITY dev "http://purl.org/biotop/dev#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -16,9 +16,9 @@
 <rdf:RDF xmlns="http://purl.org/biotop/dev#"
      xml:base="http://purl.org/biotop/dev"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:biotop="http://purl.org/biotop/dev#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:dev="http://purl.org/biotop/dev#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -85,6 +85,7 @@ by Stefan Schulz</skos:historyNote>
     <owl:AnnotationProperty rdf:about="&dc;source"/>
     <owl:AnnotationProperty rdf:about="&skos;historyNote"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&skos;synonym"/>
     <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
     <owl:AnnotationProperty rdf:about="&dc;date"/>
     <owl:AnnotationProperty rdf:about="&dc;type"/>
@@ -119,15 +120,6 @@ by Stefan Schulz</skos:historyNote>
     <owl:ObjectProperty rdf:about="#adjacentTo">
         <rdfs:label>adjacent to</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -137,6 +129,15 @@ by Stefan Schulz</skos:historyNote>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -195,15 +196,6 @@ by Stefan Schulz</skos:historyNote>
     <owl:ObjectProperty rdf:about="#connectedTo">
         <rdfs:label>connected to</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -213,6 +205,15 @@ by Stefan Schulz</skos:historyNote>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -555,15 +556,6 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     <owl:ObjectProperty rdf:about="#interconnects">
         <rdfs:label>interconnects</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -573,6 +565,15 @@ Formerly &quot;has inherence&quot;.</skos:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -920,23 +921,6 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2008/05/skos#synonym -->
-
-    <owl:DatatypeProperty rdf:about="&skos;synonym"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1119,6 +1103,8 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Peptide"/>
         <owl:disjointWith rdf:resource="#Carbohydrate"/>
+        <skos:synonym
+            >AminoAcidSequence</skos:synonym>
         <skos:definition
             >Chain of amino acids, joined by peptide bonds. Folded or unfolded.</skos:definition>
     </owl:Class>
@@ -1262,6 +1248,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
             </owl:Class>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="#BacterialCell"/>
+        <skos:synonym>Archaebacterium</skos:synonym>
     </owl:Class>
     
 
@@ -1389,6 +1376,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <skos:synonym>Bacterium</skos:synonym>
     </owl:Class>
     
 
@@ -1795,18 +1783,15 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:label>body fluid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousLiquid"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="#derivesFrom"/>
-                        <owl:someValuesFrom rdf:resource="#Organism"/>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#partOf"/>
-                        <owl:someValuesFrom rdf:resource="#Organism"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1820,15 +1805,18 @@ Formerly &quot;has inherence&quot;.</skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
+                        <owl:onProperty rdf:resource="#derivesFrom"/>
+                        <owl:someValuesFrom rdf:resource="#Organism"/>
                     </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#partOf"/>
+                        <owl:someValuesFrom rdf:resource="#Organism"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <skos:definition
             >Suspension and / or solution of biomolecules, ions, bigger particles in Water.</skos:definition>
@@ -2045,18 +2033,18 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:complementOf rdf:resource="#Cell"/>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2174,6 +2162,8 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:subClassOf rdf:resource="#Peptide"/>
         <skos:definition
             >Chain of amino acids, joined by peptide bonds. Folded or unfolded.</skos:definition>
+        <skos:synonym
+            >AminoAcidSequence</skos:synonym>
     </owl:Class>
     
 
@@ -2326,13 +2316,13 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition
@@ -2614,6 +2604,12 @@ Formerly &quot;has inherence&quot;.</skos:definition>
             >embryonic structure</rdfs:label>
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInherence"/>
+                <owl:someValuesFrom rdf:resource="#EmbryonicQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#EmbryonicOrganism"/>
@@ -2627,12 +2623,6 @@ Formerly &quot;has inherence&quot;.</skos:definition>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasInherence"/>
-                <owl:someValuesFrom rdf:resource="#EmbryonicQuality"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition
             >An embryo or any structure derived from it. There may be structures derived from an embryo that are no longer considered embryonic ones, hence no full definition.</skos:definition>
@@ -4085,6 +4075,8 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:label>neutron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
         <owl:disjointWith rdf:resource="#Proton"/>
+        <skos:synonym
+            >Neutral Particle</skos:synonym>
     </owl:Class>
     
 
@@ -4651,13 +4643,13 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#PhysicalVolume"/>
@@ -4852,19 +4844,6 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#Atom"/>
-                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -4873,6 +4852,19 @@ Formerly &quot;has inherence&quot;.</skos:definition>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGranularPart"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Atom"/>
+                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition
@@ -5540,6 +5532,20 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:label>tissue</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousSolid"/>
         <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#derivesFrom"/>
+                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#properPartOf"/>
+                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:someValuesFrom>
@@ -5560,20 +5566,6 @@ Formerly &quot;has inherence&quot;.</skos:definition>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#derivesFrom"/>
-                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#properPartOf"/>
-                        <owl:someValuesFrom rdf:resource="#MulticellularOrganism"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
         </rdfs:subClassOf>
         <skos:definition
             >Aggregate of an arbitrary number of congeneric cells (cells with identical specialized characteristics), embedded into an amount of matter (matrix) that work together to perform a specific function.</skos:definition>
@@ -5625,22 +5617,22 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:subClassOf rdf:resource="#Affecting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasAgent"/>
+                <owl:onProperty rdf:resource="#hasPatient"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#TherapeuticRole"/>
+                        <owl:someValuesFrom rdf:resource="#NoncanonicalCondition"/>
                     </owl:Restriction>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPatient"/>
+                <owl:onProperty rdf:resource="#hasAgent"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#NoncanonicalCondition"/>
+                        <owl:someValuesFrom rdf:resource="#TherapeuticRole"/>
                     </owl:Restriction>
                 </owl:allValuesFrom>
             </owl:Restriction>
@@ -5656,17 +5648,6 @@ Formerly &quot;has inherence&quot;.</skos:definition>
         <rdfs:subClassOf rdf:resource="#Affecting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasAgent"/>
-                <owl:allValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#OccupationalRole"/>
-                    </owl:Restriction>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPatient"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -5678,6 +5659,17 @@ Formerly &quot;has inherence&quot;.</skos:definition>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAgent"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasInherence"/>
+                        <owl:someValuesFrom rdf:resource="#OccupationalRole"/>
+                    </owl:Restriction>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5897,63 +5889,9 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <owl:Class rdf:about="&owl;Thing"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/biotop/dev#AminoAcidSequence -->
-
-    <rdf:Description rdf:about="#AminoAcidSequence">
-        <skos:synonym
-            >AminoAcidSequence</skos:synonym>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/dev#ArchaebacterialCell -->
-
-    <rdf:Description rdf:about="#ArchaebacterialCell">
-        <skos:synonym>Archaebacterium</skos:synonym>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/dev#BacterialCell -->
-
-    <rdf:Description rdf:about="#BacterialCell">
-        <skos:synonym>Bacterium</skos:synonym>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/dev#ChainOfAminoAcidMonomers -->
-
-    <rdf:Description rdf:about="#ChainOfAminoAcidMonomers">
-        <skos:synonym
-            >AminoAcidSequence</skos:synonym>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/dev#Neutron -->
-
-    <rdf:Description rdf:about="#Neutron">
-        <skos:synonym
-            >Neutral Particle</skos:synonym>
-    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.914) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.972) http://owlapi.sourceforge.net -->
 
