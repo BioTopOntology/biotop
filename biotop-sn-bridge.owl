@@ -97,12 +97,6 @@
     
 
 
-    <!-- http://localhost/umls-biotop/local/biotop.owl#hasParticipant -->
-
-    <owl:ObjectProperty rdf:about="&biotop;hasParticipant"/>
-    
-
-
     <!-- http://localhost/umls-biotop/local/biotop.owl#hasPatient -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasPatient">
@@ -2049,8 +2043,13 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Organization"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="&biotop;HealthRelatedRole"/>
+                        <owl:onProperty rdf:resource="&biotop;hasMember"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;HealthRelatedRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2314,7 +2313,11 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&biotop;ProcessualEntity"/>
+                    <rdf:Description rdf:about="&biotop;Function"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;featureOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Mind"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&biotop;hasInherence"/>
                         <owl:someValuesFrom>
@@ -2328,10 +2331,6 @@
                                 </owl:intersectionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasParticipant"/>
-                        <owl:someValuesFrom rdf:resource="&biotop;Mind"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2354,6 +2353,10 @@
                         </owl:unionOf>
                     </owl:Class>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;featureOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Mind"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&biotop;hasInherence"/>
                         <owl:someValuesFrom>
                             <owl:Class>
@@ -2366,10 +2369,6 @@
                                 </owl:intersectionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;inheresIn"/>
-                        <owl:someValuesFrom rdf:resource="&biotop;Mind"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&biotop;inheresIn"/>
@@ -2818,8 +2817,13 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Organization"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="&biotop;OccupationalRole"/>
+                        <owl:onProperty rdf:resource="&biotop;hasMember"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;OccupationalRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
