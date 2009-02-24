@@ -2,11 +2,13 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY biotop "http://purl.org/biotop/dev#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY dev "http://purl.org/biotop/dolce-ro/dev#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -17,54 +19,56 @@
 <rdf:RDF xmlns="http://purl.org/biotop/dolce-ro/dev#"
      xml:base="http://purl.org/biotop/dolce-ro/dev"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:biotop="http://purl.org/biotop/dev#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:biotop="http://purl.org/biotop/dev#"
+     xmlns:dev="http://purl.org/biotop/dolce-ro/dev#"
+     xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2008/05/skos#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
-        <skos:prefLabel></skos:prefLabel>
+        <dc:creator
+            >Holger Stenzhorn</dc:creator>
         <skos:hiddenLabel></skos:hiddenLabel>
-        <dc:title>BioTop DOLCE RO</dc:title>
-        <dc:source
-            >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
-        <dc:description></dc:description>
-        <dc:identifier
-            >http://purl.org/biotop/dolce-ro/dev</dc:identifier>
-        <skos:altLabel></skos:altLabel>
+        <skos:scopeNote></skos:scopeNote>
+        <dc:format
+            >application/rdf+xml</dc:format>
+        <skos:historyNote></skos:historyNote>
         <dc:creator>Stefan Schulz</dc:creator>
+        <dc:description></dc:description>
+        <dc:language>en</dc:language>
+        <dc:creator>Martin Boeker</dc:creator>
         <dc:subject></dc:subject>
         <dc:source
+            >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
+        <owl:versionInfo>dev</owl:versionInfo>
+        <skos:altLabel></skos:altLabel>
+        <skos:changeNote></skos:changeNote>
+        <dc:identifier
+            >http://purl.org/biotop/dolce-ro/dev</dc:identifier>
+        <dc:source
             >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
+        <dc:title>BioTop DOLCE RO</dc:title>
+        <dc:creator
+            >Elena Beisswanger</dc:creator>
         <dc:type></dc:type>
-        <dc:relation></dc:relation>
-        <skos:example></skos:example>
-        <dc:language>en</dc:language>
         <dc:coverage></dc:coverage>
         <dc:publisher
             >Institute for Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
-        <dc:creator
-            >Holger Stenzhorn</dc:creator>
-        <dc:creator>Martin Boeker</dc:creator>
+        <skos:example></skos:example>
         <skos:note></skos:note>
-        <dc:format
-            >application/rdf+xml</dc:format>
-        <owl:versionInfo>dev</owl:versionInfo>
-        <skos:changeNote></skos:changeNote>
-        <dc:creator
-            >Elena Beisswanger</dc:creator>
-        <skos:historyNote></skos:historyNote>
-        <dc:source
-            >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
         <skos:editorialNote></skos:editorialNote>
+        <dc:source
+            >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
+        <skos:prefLabel></skos:prefLabel>
+        <dc:relation></dc:relation>
         <dc:rights></dc:rights>
-        <skos:scopeNote></skos:scopeNote>
-        <owl:imports rdf:resource="http://www.obofoundry.org/ro/ro.owl"/>
+        <owl:imports rdf:resource="http://localhost/umls-biotop/local/biotop.owl"/>
+        <owl:imports rdf:resource="http://purl.org/obo/owl/ro"/>
         <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl"/>
     </owl:Ontology>
     
@@ -116,7 +120,7 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#adjacentTo -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#adjacentTo -->
 
     <owl:ObjectProperty rdf:about="#adjacentTo">
         <rdfs:label>adjacent_to</rdfs:label>
@@ -125,15 +129,6 @@
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <owl:equivalentProperty rdf:resource="&ro;adjacent_to"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -143,11 +138,20 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#agentIn -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#agentIn -->
 
     <owl:ObjectProperty rdf:about="#agentIn">
         <rdfs:label>agent_in</rdfs:label>
@@ -158,7 +162,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#attachedTo -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#attachedTo -->
 
     <owl:ObjectProperty rdf:about="#attachedTo">
         <dc:source
@@ -169,7 +173,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#branchOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#branchOf -->
 
     <owl:ObjectProperty rdf:about="#branchOf">
         <dc:source
@@ -180,7 +184,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#componentPartOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
         <rdfs:comment
@@ -194,20 +198,10 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#connectedTo -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#connectedTo -->
 
     <owl:ObjectProperty rdf:about="#connectedTo">
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -218,11 +212,21 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#containedIn -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#containedIn -->
 
     <owl:ObjectProperty rdf:about="#containedIn">
         <rdfs:label>contained_in</rdfs:label>
@@ -237,7 +241,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#contains -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#contains -->
 
     <owl:ObjectProperty rdf:about="#contains">
         <rdfs:label>contains</rdfs:label>
@@ -252,7 +256,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#contiguousWith -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#contiguousWith -->
 
     <owl:ObjectProperty rdf:about="#contiguousWith">
         <dc:source
@@ -281,7 +285,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#continuousWith -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#continuousWith -->
 
     <owl:ObjectProperty rdf:about="#continuousWith">
         <dc:source
@@ -292,7 +296,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#derivedInto -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#derivedInto -->
 
     <owl:ObjectProperty rdf:about="#derivedInto">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -304,7 +308,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#derivesFrom -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#derivesFrom -->
 
     <owl:ObjectProperty rdf:about="#derivesFrom">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -318,7 +322,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#disconnectedFrom -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#disconnectedFrom -->
 
     <owl:ObjectProperty rdf:about="#disconnectedFrom">
         <dc:source
@@ -347,19 +351,19 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#encodedBy -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#encodedBy -->
 
     <owl:ObjectProperty rdf:about="#encodedBy"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#encodes -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#encodes -->
 
     <owl:ObjectProperty rdf:about="#encodes"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#granularPartOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#granularPartOf -->
 
     <owl:ObjectProperty rdf:about="#granularPartOf">
         <rdfs:label
@@ -375,20 +379,20 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasAgent -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasAgent -->
 
     <owl:ObjectProperty rdf:about="#hasAgent">
         <rdfs:label>has_agent</rdfs:label>
         <rdfs:comment
-            >As for hasParticipant, but with the additional condition that the component instance is causally active in the relevant process</rdfs:comment>
-        <rdfs:comment
             >inverseOf agentIn</rdfs:comment>
+        <rdfs:comment
+            >As for hasParticipant, but with the additional condition that the component instance is causally active in the relevant process</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasParticipant"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasBranch -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasBranch -->
 
     <owl:ObjectProperty rdf:about="#hasBranch">
         <dc:source
@@ -399,7 +403,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasComponentPart -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="#hasComponentPart">
         <rdfs:comment
@@ -409,40 +413,40 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasGranularPart -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="#hasGranularPart">
         <rdfs:comment
-            >Previous label: hasGrain</rdfs:comment>
-        <rdfs:comment
             >inverse of granularPartOf.</rdfs:comment>
+        <rdfs:comment
+            >Previous label: hasGrain</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasInherence -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasInherence -->
 
     <owl:ObjectProperty rdf:about="#hasInherence">
-        <rdfs:comment
-            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
         <skos:definition
             >Inverse relation of inheresIn. Relates an independent continuant to a dependent one (e.g. quality, state, function, or disposition)</skos:definition>
+        <rdfs:comment
+            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
         <owl:equivalentProperty rdf:resource="&dolce;has-quality"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasPart -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasPart -->
 
     <owl:ObjectProperty rdf:about="#hasPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label>has_part</rdfs:label>
-        <rdfs:comment
-            >inverseOf partOf</rdfs:comment>
         <dc:source
             >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
+        <rdfs:comment
+            >inverseOf partOf</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#locationOf"/>
         <owl:equivalentProperty rdf:resource="&dolce;part"/>
         <owl:equivalentProperty rdf:resource="&ro;has_part"/>
@@ -450,7 +454,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasParticipant -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasParticipant -->
 
     <owl:ObjectProperty rdf:about="#hasParticipant">
         <rdfs:label>has_participant</rdfs:label>
@@ -464,7 +468,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasPatient -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasPatient -->
 
     <owl:ObjectProperty rdf:about="#hasPatient">
         <rdfs:subPropertyOf rdf:resource="#hasParticipant"/>
@@ -472,7 +476,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasProperPart -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasProperPart -->
 
     <owl:ObjectProperty rdf:about="#hasProperPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -486,7 +490,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasRealization -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#hasRealization -->
 
     <owl:ObjectProperty rdf:about="#hasRealization">
         <rdfs:comment
@@ -495,7 +499,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#inheresIn -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#inheresIn -->
 
     <owl:ObjectProperty rdf:about="#inheresIn">
         <rdfs:comment
@@ -509,19 +513,10 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#interconnects -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#interconnects -->
 
     <owl:ObjectProperty rdf:about="#interconnects">
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -531,11 +526,20 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#locatedIn -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#locatedIn -->
 
     <owl:ObjectProperty rdf:about="#locatedIn">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -572,16 +576,16 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#locationOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#locationOf -->
 
     <owl:ObjectProperty rdf:about="#locationOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label>location_of</rdfs:label>
+        <rdfs:comment
+            >inverseOf locatedIn</rdfs:comment>
         <dc:source
             >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:comment
-            >inverseOf locatedIn</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <owl:equivalentProperty rdf:resource="&dolce;generic-location-of"/>
         <owl:equivalentProperty rdf:resource="&ro;location_of"/>
@@ -609,7 +613,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#partOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#partOf -->
 
     <owl:ObjectProperty rdf:about="#partOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -626,7 +630,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#participatesIn -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#participatesIn -->
 
     <owl:ObjectProperty rdf:about="#participatesIn">
         <rdfs:label>participates_in</rdfs:label>
@@ -638,7 +642,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#precededBy -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#precededBy -->
 
     <owl:ObjectProperty rdf:about="#precededBy">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -652,7 +656,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#precedes -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#precedes -->
 
     <owl:ObjectProperty rdf:about="#precedes">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -664,15 +668,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#properPartOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#properPartOf -->
 
     <owl:ObjectProperty rdf:about="#properPartOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label>proper_part_of</rdfs:label>
         <rdfs:comment
-            >As for partOf, with the additional constraint that subject and object are distinct</rdfs:comment>
-        <rdfs:comment
             >inverseOf hasProperPart</rdfs:comment>
+        <rdfs:comment
+            >As for partOf, with the additional constraint that subject and object are distinct</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#partOf"/>
         <owl:equivalentProperty rdf:resource="&dolce;proper-part-of"/>
         <owl:equivalentProperty rdf:resource="&ro;proper_part_of"/>
@@ -680,7 +684,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#qualityLocated -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#qualityLocated -->
 
     <owl:ObjectProperty rdf:about="#qualityLocated">
         <owl:equivalentProperty rdf:resource="&dolce;q-location"/>
@@ -688,7 +692,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#qualityLocationOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#qualityLocationOf -->
 
     <owl:ObjectProperty rdf:about="#qualityLocationOf">
         <owl:equivalentProperty rdf:resource="&dolce;q-location-of"/>
@@ -696,7 +700,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ramificationOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ramificationOf -->
 
     <owl:ObjectProperty rdf:about="#ramificationOf">
         <dc:source
@@ -707,7 +711,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ramifies -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ramifies -->
 
     <owl:ObjectProperty rdf:about="#ramifies">
         <dc:source
@@ -718,7 +722,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#realizationOf -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#realizationOf -->
 
     <owl:ObjectProperty rdf:about="#realizationOf">
         <skos:definition
@@ -727,13 +731,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#spatiallyRelated -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#spatiallyRelated -->
 
     <owl:ObjectProperty rdf:about="#spatiallyRelated"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#surrounds -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#surrounds -->
 
     <owl:ObjectProperty rdf:about="#surrounds">
         <skos:definition
@@ -761,22 +765,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#touches -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#touches -->
 
     <owl:ObjectProperty rdf:about="#touches">
         <dc:source
             >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="#adjacentTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -786,25 +781,25 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/dev#traverses -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#traverses -->
 
     <owl:ObjectProperty rdf:about="#traverses">
         <skos:definition
             >crossing over and crossing through</skos:definition>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -814,6 +809,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1031,7 +1035,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AcquiredPathologicalRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AcquiredPathologicalRegion -->
 
     <owl:Class rdf:about="#AcquiredPathologicalRegion">
         <rdfs:label
@@ -1044,7 +1048,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AcquiredPathologicalState -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AcquiredPathologicalState -->
 
     <owl:Class rdf:about="#AcquiredPathologicalState">
         <owl:equivalentClass>
@@ -1073,7 +1077,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Action -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Action -->
 
     <owl:Class rdf:about="#Action">
         <owl:equivalentClass>
@@ -1093,7 +1097,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AdultOrganism -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AdultOrganism -->
 
     <owl:Class rdf:about="#AdultOrganism">
         <owl:equivalentClass>
@@ -1123,7 +1127,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AdultRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AdultRegion -->
 
     <owl:Class rdf:about="#AdultRegion">
         <rdfs:subClassOf rdf:resource="#DevelopmentalRegion"/>
@@ -1133,7 +1137,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Affecting -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Affecting -->
 
     <owl:Class rdf:about="#Affecting">
         <rdfs:subClassOf rdf:resource="#Action"/>
@@ -1143,7 +1147,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AgeQuality -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AgeQuality -->
 
     <owl:Class rdf:about="#AgeQuality">
         <rdfs:subClassOf rdf:resource="#Quality"/>
@@ -1158,7 +1162,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Alga -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Alga -->
 
     <owl:Class rdf:about="#Alga">
         <rdfs:subClassOf rdf:resource="#Organism"/>
@@ -1166,7 +1170,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AminoAcidMonomer -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AminoAcidMonomer -->
 
     <owl:Class rdf:about="#AminoAcidMonomer">
         <rdfs:label xml:lang="en"
@@ -1189,15 +1193,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <owl:disjointWith rdf:resource="#Phosphate"/>
         <rdfs:comment
             >(QCR) ro:hasPart some CarbonHydrogenSubstructure and ((hasComponent myx 2 CarboxyGroup) and (hasComponent min 1 CarboxyGroup) and (hasComponent exactly 1 AminoGroup)) or ((hasComponent max 2 AminoGroup) and (hasComponent min 1 AminoGroup) and (hasComponent exactly 1 CarboxyGroup))</rdfs:comment>
-        <rdfs:comment
-            >In chemistry, an amino acid is any molecule that contains both amine and carboxyl functional groups. However, in biochemistry, this more general term is frequently used to refer to alpha amino acids (amino acids in which the amino and carboxylate functionalities are attached to the same carbon, called &#945;&#8211;carbon). Amino Acids have at least one amino and one carboxy group. Those having two carboxy groups have only one amino group and vice versa.</rdfs:comment>
         <skos:definition
             >Amino Acids molecules or residues (residues as in peptide bonds)</skos:definition>
+        <rdfs:comment
+            >In chemistry, an amino acid is any molecule that contains both amine and carboxyl functional groups. However, in biochemistry, this more general term is frequently used to refer to alpha amino acids (amino acids in which the amino and carboxylate functionalities are attached to the same carbon, called &#945;&#8211;carbon). Amino Acids have at least one amino and one carboxy group. Those having two carboxy groups have only one amino group and vice versa.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#AminoAcidSequence -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AminoAcidSequence -->
 
     <owl:Class rdf:about="#AminoAcidSequence">
         <rdfs:label xml:lang="en"
@@ -1224,7 +1228,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AminoAcidSequenceInformation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AminoAcidSequenceInformation -->
 
     <owl:Class rdf:about="#AminoAcidSequenceInformation">
         <owl:equivalentClass>
@@ -1244,7 +1248,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AnimalCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AnimalCell -->
 
     <owl:Class rdf:about="#AnimalCell">
         <owl:equivalentClass>
@@ -1272,7 +1276,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AnimalExcludingHuman -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AnimalExcludingHuman -->
 
     <owl:Class rdf:about="#AnimalExcludingHuman">
         <owl:equivalentClass>
@@ -1289,7 +1293,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AnimalIncludingHuman -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AnimalIncludingHuman -->
 
     <owl:Class rdf:about="#AnimalIncludingHuman">
         <rdfs:label xml:lang="en">animal</rdfs:label>
@@ -1317,7 +1321,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AnimalPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AnimalPopulation -->
 
     <owl:Class rdf:about="#AnimalPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1348,7 +1352,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#AntibioticRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AntibioticRole -->
 
     <owl:Class rdf:about="#AntibioticRole">
         <rdfs:subClassOf rdf:resource="#DrugRole"/>
@@ -1356,7 +1360,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ArchaebacterialCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ArchaebacterialCell -->
 
     <owl:Class rdf:about="#ArchaebacterialCell">
         <rdfs:label xml:lang="en"
@@ -1387,7 +1391,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ArtefactRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ArtefactRole -->
 
     <owl:Class rdf:about="#ArtefactRole">
         <rdfs:label>artefact role</rdfs:label>
@@ -1398,7 +1402,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Arthropod -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Arthropod -->
 
     <owl:Class rdf:about="#Arthropod">
         <owl:equivalentClass>
@@ -1427,7 +1431,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ArthropodPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ArthropodPopulation -->
 
     <owl:Class rdf:about="#ArthropodPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1457,7 +1461,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Atom -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Atom -->
 
     <owl:Class rdf:about="#Atom">
         <rdfs:label xml:lang="en">atom</rdfs:label>
@@ -1471,7 +1475,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BacteriaPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BacteriaPopulation -->
 
     <owl:Class rdf:about="#BacteriaPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1500,7 +1504,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BacterialCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BacterialCell -->
 
     <owl:Class rdf:about="#BacterialCell">
         <rdfs:label xml:lang="en">bacterial cell</rdfs:label>
@@ -1529,7 +1533,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BacterialColony -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BacterialColony -->
 
     <owl:Class rdf:about="#BacterialColony">
         <rdfs:label
@@ -1555,7 +1559,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BakersYeastCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BakersYeastCell -->
 
     <owl:Class rdf:about="#BakersYeastCell">
         <owl:equivalentClass>
@@ -1585,7 +1589,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BakersYeastPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BakersYeastPopulation -->
 
     <owl:Class rdf:about="#BakersYeastPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -1613,7 +1617,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Behavior -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Behavior -->
 
     <owl:Class rdf:about="#Behavior">
         <rdfs:subClassOf rdf:resource="#OrganismAction"/>
@@ -1623,7 +1627,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BioMolecularProcess -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BioMolecularProcess -->
 
     <owl:Class rdf:about="#BioMolecularProcess">
         <rdfs:label xml:lang="en"
@@ -1645,7 +1649,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BioMolecularSequence -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BioMolecularSequence -->
 
     <owl:Class rdf:about="#BioMolecularSequence">
         <rdfs:label
@@ -1666,7 +1670,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BioMolecularSequenceInformation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BioMolecularSequenceInformation -->
 
     <owl:Class rdf:about="#BioMolecularSequenceInformation">
         <rdfs:label
@@ -1692,7 +1696,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BioMolecularSequenceStructure -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BioMolecularSequenceStructure -->
 
     <owl:Class rdf:about="#BioMolecularSequenceStructure">
         <rdfs:label
@@ -1719,7 +1723,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BiologicalAction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BiologicalAction -->
 
     <owl:Class rdf:about="#BiologicalAction">
         <owl:equivalentClass>
@@ -1745,7 +1749,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BiologicalBoundary -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BiologicalBoundary -->
 
     <owl:Class rdf:about="#BiologicalBoundary">
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
@@ -1767,7 +1771,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BiologicalColony -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BiologicalColony -->
 
     <owl:Class rdf:about="#BiologicalColony">
         <rdfs:label
@@ -1779,7 +1783,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BiologicalFunction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BiologicalFunction -->
 
     <owl:Class rdf:about="#BiologicalFunction">
         <owl:equivalentClass>
@@ -1797,7 +1801,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BiologicalProcessualEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BiologicalProcessualEntity -->
 
     <owl:Class rdf:about="#BiologicalProcessualEntity">
         <rdfs:label xml:lang="en"
@@ -1837,7 +1841,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BiologicalSpace -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BiologicalSpace -->
 
     <owl:Class rdf:about="#BiologicalSpace">
         <owl:equivalentClass>
@@ -1855,7 +1859,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BiologicalSystemRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BiologicalSystemRole -->
 
     <owl:Class rdf:about="#BiologicalSystemRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
@@ -1865,7 +1869,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BiomedicalMaterialRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BiomedicalMaterialRole -->
 
     <owl:Class rdf:about="#BiomedicalMaterialRole">
         <rdfs:subClassOf rdf:resource="#TherapeuticRole"/>
@@ -1875,7 +1879,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Biomolecule -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Biomolecule -->
 
     <owl:Class rdf:about="#Biomolecule">
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
@@ -1910,7 +1914,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Bird -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Bird -->
 
     <owl:Class rdf:about="#Bird">
         <rdfs:subClassOf rdf:resource="#Vertebrate"/>
@@ -1918,22 +1922,11 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BodyLiquid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BodyLiquid -->
 
     <owl:Class rdf:about="#BodyLiquid">
         <rdfs:label xml:lang="en">body fluid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousLiquid"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1954,6 +1947,17 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
                         <owl:someValuesFrom rdf:resource="#MonoMolecularEntity"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
@@ -1965,7 +1969,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#BodySystem -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BodySystem -->
 
     <owl:Class rdf:about="#BodySystem">
         <rdfs:subClassOf rdf:resource="#OrganismPart"/>
@@ -1976,7 +1980,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CandidaAlbicansCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CandidaAlbicansCell -->
 
     <owl:Class rdf:about="#CandidaAlbicansCell">
         <owl:equivalentClass>
@@ -2006,7 +2010,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CandidaAlbicansPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CandidaAlbicansPopulation -->
 
     <owl:Class rdf:about="#CandidaAlbicansPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2033,7 +2037,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CanonicalProcessualEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CanonicalProcessualEntity -->
 
     <owl:Class rdf:about="#CanonicalProcessualEntity">
         <owl:equivalentClass>
@@ -2062,7 +2066,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CanonicalRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CanonicalRegion -->
 
     <owl:Class rdf:about="#CanonicalRegion">
         <rdfs:subClassOf rdf:resource="#CanonicityRegion"/>
@@ -2073,7 +2077,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CanonicalState -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CanonicalState -->
 
     <owl:Class rdf:about="#CanonicalState">
         <rdfs:label>canonical state</rdfs:label>
@@ -2103,7 +2107,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Canonicity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Canonicity -->
 
     <owl:Class rdf:about="#Canonicity">
         <owl:equivalentClass>
@@ -2125,7 +2129,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CanonicityRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CanonicityRegion -->
 
     <owl:Class rdf:about="#CanonicityRegion">
         <rdfs:subClassOf rdf:resource="#QualityRegion"/>
@@ -2133,7 +2137,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Carbohydrate -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Carbohydrate -->
 
     <owl:Class rdf:about="#Carbohydrate">
         <rdfs:label xml:lang="en">carbohydrate</rdfs:label>
@@ -2154,7 +2158,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CarbohydrateSequenceInformation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CarbohydrateSequenceInformation -->
 
     <owl:Class rdf:about="#CarbohydrateSequenceInformation">
         <owl:equivalentClass>
@@ -2173,7 +2177,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CatalyticRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CatalyticRole -->
 
     <owl:Class rdf:about="#CatalyticRole">
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
@@ -2183,7 +2187,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CategorizationSystem -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CategorizationSystem -->
 
     <owl:Class rdf:about="#CategorizationSystem">
         <rdfs:subClassOf rdf:resource="#IntellectualProduct"/>
@@ -2191,17 +2195,11 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Cell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Cell -->
 
     <owl:Class rdf:about="#Cell">
         <rdfs:label xml:lang="en">cell</rdfs:label>
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
@@ -2221,6 +2219,12 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:someValuesFrom rdf:resource="#CellMembrane"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2233,7 +2237,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CellInVivo -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CellInVivo -->
 
     <owl:Class rdf:about="#CellInVivo">
         <rdfs:label xml:lang="en">cell in vivo</rdfs:label>
@@ -2255,22 +2259,11 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CellMembrane -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CellMembrane -->
 
     <owl:Class rdf:about="#CellMembrane">
         <rdfs:label xml:lang="en">cell membrane</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CellularComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Peptide"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
@@ -2282,13 +2275,24 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition
             >Semipermeable lipid bilayer found in all cells.[1] It contains a wide variety of biological molecules, primarily proteins and lipids, which are involved in a vast array of cellular processes, and also serves as the attachment point for both the intracellular cytoskeleton and, if present, the cell wall.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#CellNucleus -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CellNucleus -->
 
     <owl:Class rdf:about="#CellNucleus">
         <rdfs:subClassOf rdf:resource="#CellularComponent"/>
@@ -2296,7 +2300,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CellularComponent -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CellularComponent -->
 
     <owl:Class rdf:about="#CellularComponent">
         <rdfs:label xml:lang="en"
@@ -2324,7 +2328,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ChainOfAminoAcidMonomers -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ChainOfAminoAcidMonomers -->
 
     <owl:Class rdf:about="#ChainOfAminoAcidMonomers">
         <rdfs:label xml:lang="en"
@@ -2336,7 +2340,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ChainOfCarbohydrateMonomers -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ChainOfCarbohydrateMonomers -->
 
     <owl:Class rdf:about="#ChainOfCarbohydrateMonomers">
         <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
@@ -2350,7 +2354,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ChainOfNucleotideMonomers -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ChainOfNucleotideMonomers -->
 
     <owl:Class rdf:about="#ChainOfNucleotideMonomers">
         <rdfs:subClassOf rdf:resource="#NucleicAcid"/>
@@ -2364,7 +2368,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ChemicalRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ChemicalRole -->
 
     <owl:Class rdf:about="#ChemicalRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
@@ -2374,7 +2378,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ChlamydiaCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ChlamydiaCell -->
 
     <owl:Class rdf:about="#ChlamydiaCell">
         <rdfs:subClassOf rdf:resource="#Prokaryote"/>
@@ -2382,7 +2386,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Chromosome -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Chromosome -->
 
     <owl:Class rdf:about="#Chromosome">
         <rdfs:label xml:lang="en">chromosome</rdfs:label>
@@ -2394,7 +2398,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ClassGammaProteobacteriaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ClassGammaProteobacteriaRegion -->
 
     <owl:Class rdf:about="#ClassGammaProteobacteriaRegion">
         <rdfs:subClassOf rdf:resource="#PhylumProteobacteriaRegion"/>
@@ -2402,7 +2406,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ClassInsectaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ClassInsectaRegion -->
 
     <owl:Class rdf:about="#ClassInsectaRegion">
         <rdfs:subClassOf rdf:resource="#PhylumArthropodaRegion"/>
@@ -2410,7 +2414,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ClassMammaliaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ClassMammaliaRegion -->
 
     <owl:Class rdf:about="#ClassMammaliaRegion">
         <rdfs:subClassOf rdf:resource="#SubphylumVertebrataRegion"/>
@@ -2418,7 +2422,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#ClassSaccharomycetesRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ClassSaccharomycetesRegion -->
 
     <owl:Class rdf:about="#ClassSaccharomycetesRegion">
         <rdfs:subClassOf rdf:resource="#SubphylumSaccharomycotinaRegion"/>
@@ -2426,7 +2430,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CollectiveMaterialEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="#CollectiveMaterialEntity">
         <rdfs:label
@@ -2452,7 +2456,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#Complicating -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Complicating -->
 
     <owl:Class rdf:about="#Complicating">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -2462,7 +2466,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/dev#CompoundOfCollectiveMaterialEntities -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="#CompoundOfCollectiveMaterialEntities">
         <rdfs:label
@@ -2471,13 +2475,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition
@@ -2487,7 +2491,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#CongenitalPathologicalRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CongenitalPathologicalRegion -->
 
     <owl:Class rdf:about="#CongenitalPathologicalRegion">
         <rdfs:label
@@ -2499,7 +2503,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#CongenitalPathologicalState -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#CongenitalPathologicalState -->
 
     <owl:Class rdf:about="#CongenitalPathologicalState">
         <owl:equivalentClass>
@@ -2527,22 +2531,11 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Cytoplasm -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Cytoplasm -->
 
     <owl:Class rdf:about="#Cytoplasm">
         <rdfs:label xml:lang="en">cytoplasm</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CellularComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Peptide"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPart"/>
@@ -2554,13 +2547,24 @@ Old name: compound of collections</skos:definition>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition
             >Gelatinous, semi-transparent fluid that fills most cells. E</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#DNA -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#DNA -->
 
     <owl:Class rdf:about="#DNA">
         <rdfs:label>DNA sequence</rdfs:label>
@@ -2573,7 +2577,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#DevelopmentalQuality -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#DevelopmentalQuality -->
 
     <owl:Class rdf:about="#DevelopmentalQuality">
         <rdfs:subClassOf rdf:resource="#Quality"/>
@@ -2588,7 +2592,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#DevelopmentalRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#DevelopmentalRegion -->
 
     <owl:Class rdf:about="#DevelopmentalRegion">
         <rdfs:subClassOf rdf:resource="#QualityRegion"/>
@@ -2596,7 +2600,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#DiagnosticRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#DiagnosticRole -->
 
     <owl:Class rdf:about="#DiagnosticRole">
         <rdfs:label>diagnostic role</rdfs:label>
@@ -2608,7 +2612,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#DigitalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#DigitalEntity -->
 
     <owl:Class rdf:about="#DigitalEntity">
         <rdfs:label>digital entity</rdfs:label>
@@ -2618,7 +2622,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Disrupting -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Disrupting -->
 
     <owl:Class rdf:about="#Disrupting">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -2642,7 +2646,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#DrugRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#DrugRole -->
 
     <owl:Class rdf:about="#DrugRole">
         <rdfs:label>drug role</rdfs:label>
@@ -2653,7 +2657,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Dysfunction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Dysfunction -->
 
     <owl:Class rdf:about="#Dysfunction">
         <owl:equivalentClass>
@@ -2681,7 +2685,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EColiPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EColiPopulation -->
 
     <owl:Class rdf:about="#EColiPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2707,7 +2711,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EducatorRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EducatorRole -->
 
     <owl:Class rdf:about="#EducatorRole">
         <rdfs:subClassOf rdf:resource="#OccupationalRole"/>
@@ -2717,7 +2721,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Eicosanoid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Eicosanoid -->
 
     <owl:Class rdf:about="#Eicosanoid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
@@ -2727,7 +2731,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Electron -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Electron -->
 
     <owl:Class rdf:about="#Electron">
         <rdfs:label xml:lang="en">electron</rdfs:label>
@@ -2740,7 +2744,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EmbryonicOrganism -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EmbryonicOrganism -->
 
     <owl:Class rdf:about="#EmbryonicOrganism">
         <owl:equivalentClass>
@@ -2769,7 +2773,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EmbryonicRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EmbryonicRegion -->
 
     <owl:Class rdf:about="#EmbryonicRegion">
         <rdfs:subClassOf rdf:resource="#DevelopmentalRegion"/>
@@ -2778,7 +2782,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EmbryonicStructure -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EmbryonicStructure -->
 
     <owl:Class rdf:about="#EmbryonicStructure">
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
@@ -2819,7 +2823,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EntireMolecularEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EntireMolecularEntity -->
 
     <owl:Class rdf:about="#EntireMolecularEntity">
         <rdfs:label xml:lang="en"
@@ -2853,7 +2857,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EntireNucleicAcidMolecule -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EntireNucleicAcidMolecule -->
 
     <owl:Class rdf:about="#EntireNucleicAcidMolecule">
         <rdfs:label xml:lang="en"
@@ -2865,7 +2869,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EntireProteinMolecule -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EntireProteinMolecule -->
 
     <owl:Class rdf:about="#EntireProteinMolecule">
         <rdfs:label xml:lang="en"
@@ -2879,7 +2883,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EnzymeRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EnzymeRole -->
 
     <owl:Class rdf:about="#EnzymeRole">
         <owl:equivalentClass>
@@ -2899,7 +2903,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EscherichiaColiCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EscherichiaColiCell -->
 
     <owl:Class rdf:about="#EscherichiaColiCell">
         <owl:equivalentClass>
@@ -2927,7 +2931,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Eukaryote -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Eukaryote -->
 
     <owl:Class rdf:about="#Eukaryote">
         <rdfs:label xml:lang="en">eukaryote</rdfs:label>
@@ -2940,7 +2944,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EukaryotePopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EukaryotePopulation -->
 
     <owl:Class rdf:about="#EukaryotePopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -2965,7 +2969,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#EukaryoticCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#EukaryoticCell -->
 
     <owl:Class rdf:about="#EukaryoticCell">
         <rdfs:label xml:lang="en">eukaryotic cell</rdfs:label>
@@ -2987,7 +2991,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ExaminationResultRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ExaminationResultRole -->
 
     <owl:Class rdf:about="#ExaminationResultRole">
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
@@ -2997,7 +3001,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FamilyDrosophilidaeRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FamilyDrosophilidaeRegion -->
 
     <owl:Class rdf:about="#FamilyDrosophilidaeRegion">
         <rdfs:subClassOf rdf:resource="#OrderDipteraRegion"/>
@@ -3005,7 +3009,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FamilyEnterobacteriaceaeRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FamilyEnterobacteriaceaeRegion -->
 
     <owl:Class rdf:about="#FamilyEnterobacteriaceaeRegion">
         <rdfs:subClassOf rdf:resource="#OrderEnterobacterialesRegion"/>
@@ -3013,7 +3017,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FamilyHominidaeRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FamilyHominidaeRegion -->
 
     <owl:Class rdf:about="#FamilyHominidaeRegion">
         <rdfs:subClassOf rdf:resource="#OrderPrimatesRegion"/>
@@ -3021,7 +3025,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FamilySaccharomycetaceaeRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FamilySaccharomycetaceaeRegion -->
 
     <owl:Class rdf:about="#FamilySaccharomycetaceaeRegion">
         <rdfs:subClassOf rdf:resource="#OrderSaccharomycetalesRegion"/>
@@ -3029,7 +3033,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FattyAcid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FattyAcid -->
 
     <owl:Class rdf:about="#FattyAcid">
         <rdfs:label>fatty acid</rdfs:label>
@@ -3050,7 +3054,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FindingRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FindingRole -->
 
     <owl:Class rdf:about="#FindingRole">
         <rdfs:label>finding role</rdfs:label>
@@ -3061,7 +3065,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Fish -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Fish -->
 
     <owl:Class rdf:about="#Fish">
         <rdfs:subClassOf rdf:resource="#Vertebrate"/>
@@ -3069,7 +3073,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FoodRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FoodRole -->
 
     <owl:Class rdf:about="#FoodRole">
         <rdfs:label>food role</rdfs:label>
@@ -3080,7 +3084,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FruitFly -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FruitFly -->
 
     <owl:Class rdf:about="#FruitFly">
         <owl:equivalentClass>
@@ -3106,7 +3110,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FruitFlyPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FruitFlyPopulation -->
 
     <owl:Class rdf:about="#FruitFlyPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -3130,7 +3134,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Function -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Function -->
 
     <owl:Class rdf:about="#Function">
         <rdfs:label>function</rdfs:label>
@@ -3156,7 +3160,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Fungus -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Fungus -->
 
     <owl:Class rdf:about="#Fungus">
         <rdfs:label xml:lang="en">fungus</rdfs:label>
@@ -3189,7 +3193,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#FungusPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#FungusPopulation -->
 
     <owl:Class rdf:about="#FungusPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -3212,7 +3216,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Gene -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Gene -->
 
     <owl:Class rdf:about="#Gene">
         <rdfs:label xml:lang="en">gene</rdfs:label>
@@ -3223,7 +3227,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GeneInformation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GeneInformation -->
 
     <owl:Class rdf:about="#GeneInformation">
         <rdfs:subClassOf rdf:resource="#NucleotideSequenceInformation"/>
@@ -3233,7 +3237,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GeneRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GeneRegion -->
 
     <owl:Class rdf:about="#GeneRegion">
         <rdfs:label xml:lang="en">gene region</rdfs:label>
@@ -3248,7 +3252,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Genome -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Genome -->
 
     <owl:Class rdf:about="#Genome">
         <rdfs:subClassOf rdf:resource="#NucleotideSequenceInformation"/>
@@ -3258,7 +3262,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GenusCandidaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GenusCandidaRegion -->
 
     <owl:Class rdf:about="#GenusCandidaRegion">
         <rdfs:subClassOf rdf:resource="#FamilySaccharomycetaceaeRegion"/>
@@ -3266,7 +3270,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GenusDrosophilaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GenusDrosophilaRegion -->
 
     <owl:Class rdf:about="#GenusDrosophilaRegion">
         <rdfs:subClassOf rdf:resource="#SubfamilyDrosophilinaeRegion"/>
@@ -3274,7 +3278,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GenusEscherichiaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GenusEscherichiaRegion -->
 
     <owl:Class rdf:about="#GenusEscherichiaRegion">
         <rdfs:subClassOf rdf:resource="#FamilyEnterobacteriaceaeRegion"/>
@@ -3282,7 +3286,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GenusHomoRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GenusHomoRegion -->
 
     <owl:Class rdf:about="#GenusHomoRegion">
         <rdfs:subClassOf rdf:resource="#FamilyHominidaeRegion"/>
@@ -3290,7 +3294,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GenusSaccharomycesRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GenusSaccharomycesRegion -->
 
     <owl:Class rdf:about="#GenusSaccharomycesRegion">
         <rdfs:subClassOf rdf:resource="#FamilySaccharomycetaceaeRegion"/>
@@ -3298,7 +3302,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GeographicEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GeographicEntity -->
 
     <owl:Class rdf:about="#GeographicEntity">
         <rdfs:subClassOf rdf:resource="#TwoDimensionalPhysicalEntity"/>
@@ -3306,7 +3310,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GreatApe -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GreatApe -->
 
     <owl:Class rdf:about="#GreatApe">
         <owl:equivalentClass>
@@ -3331,7 +3335,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GreatApePopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GreatApePopulation -->
 
     <owl:Class rdf:about="#GreatApePopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -3353,7 +3357,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GroupInteraction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GroupInteraction -->
 
     <owl:Class rdf:about="#GroupInteraction">
         <rdfs:subClassOf rdf:resource="#Interacting"/>
@@ -3379,7 +3383,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#GrowingProcess -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#GrowingProcess -->
 
     <owl:Class rdf:about="#GrowingProcess">
         <rdfs:subClassOf rdf:resource="#TissueProcess"/>
@@ -3387,7 +3391,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#HealthRelatedRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#HealthRelatedRole -->
 
     <owl:Class rdf:about="#HealthRelatedRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
@@ -3397,7 +3401,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#HeterocyclicBase -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#HeterocyclicBase -->
 
     <owl:Class rdf:about="#HeterocyclicBase">
         <rdfs:label xml:lang="en"
@@ -3418,7 +3422,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#HormoneRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#HormoneRole -->
 
     <owl:Class rdf:about="#HormoneRole">
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
@@ -3428,7 +3432,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Human -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Human -->
 
     <owl:Class rdf:about="#Human">
         <owl:equivalentClass>
@@ -3452,7 +3456,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#HumanAction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#HumanAction -->
 
     <owl:Class rdf:about="#HumanAction">
         <rdfs:subClassOf rdf:resource="#OrganismAction"/>
@@ -3477,7 +3481,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#HumanLeukocyte -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#HumanLeukocyte -->
 
     <owl:Class rdf:about="#HumanLeukocyte">
         <owl:equivalentClass>
@@ -3510,7 +3514,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#HumanPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#HumanPopulation -->
 
     <owl:Class rdf:about="#HumanPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -3524,7 +3528,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ImmaterialNonphysicalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ImmaterialNonphysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialNonphysicalEntity">
         <rdfs:label
@@ -3562,7 +3566,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ImmaterialPhysicalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ImmaterialPhysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialPhysicalEntity">
         <rdfs:label
@@ -3590,7 +3594,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ImmaterialThreeDimensionalPhysicalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ImmaterialThreeDimensionalPhysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialThreeDimensionalPhysicalEntity">
         <owl:equivalentClass>
@@ -3608,7 +3612,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ImmunologicRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ImmunologicRole -->
 
     <owl:Class rdf:about="#ImmunologicRole">
         <rdfs:subClassOf rdf:resource="#BiologicalSystemRole"/>
@@ -3618,7 +3622,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#IndicatorRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#IndicatorRole -->
 
     <owl:Class rdf:about="#IndicatorRole">
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
@@ -3628,7 +3632,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#IndividualBehavior -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#IndividualBehavior -->
 
     <owl:Class rdf:about="#IndividualBehavior">
         <owl:equivalentClass>
@@ -3648,7 +3652,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#InformationEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#InformationEntity -->
 
     <owl:Class rdf:about="#InformationEntity">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -3662,7 +3666,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#InorganicMolecularEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#InorganicMolecularEntity -->
 
     <owl:Class rdf:about="#InorganicMolecularEntity">
         <rdfs:label xml:lang="en"
@@ -3682,7 +3686,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Insect -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Insect -->
 
     <owl:Class rdf:about="#Insect">
         <owl:equivalentClass>
@@ -3707,7 +3711,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#InsectPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#InsectPopulation -->
 
     <owl:Class rdf:about="#InsectPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -3728,7 +3732,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#IntellectualProduct -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#IntellectualProduct -->
 
     <owl:Class rdf:about="#IntellectualProduct">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -3739,7 +3743,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Interacting -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Interacting -->
 
     <owl:Class rdf:about="#Interacting">
         <owl:equivalentClass>
@@ -3756,7 +3760,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#IntraCellularProcess -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#IntraCellularProcess -->
 
     <owl:Class rdf:about="#IntraCellularProcess">
         <rdfs:label xml:lang="en"
@@ -3778,7 +3782,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Invertebrate -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Invertebrate -->
 
     <owl:Class rdf:about="#Invertebrate">
         <rdfs:subClassOf rdf:resource="#AnimalIncludingHuman"/>
@@ -3786,7 +3790,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#JuvenileOrganism -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#JuvenileOrganism -->
 
     <owl:Class rdf:about="#JuvenileOrganism">
         <owl:equivalentClass>
@@ -3814,7 +3818,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#JuvenileRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#JuvenileRegion -->
 
     <owl:Class rdf:about="#JuvenileRegion">
         <rdfs:subClassOf rdf:resource="#DevelopmentalRegion"/>
@@ -3822,7 +3826,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#KingdomAnimaliaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#KingdomAnimaliaRegion -->
 
     <owl:Class rdf:about="#KingdomAnimaliaRegion">
         <rdfs:subClassOf rdf:resource="#TaxonRegion"/>
@@ -3830,7 +3834,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#KingdomArchaeaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#KingdomArchaeaRegion -->
 
     <owl:Class rdf:about="#KingdomArchaeaRegion">
         <rdfs:subClassOf rdf:resource="#TaxonRegion"/>
@@ -3838,7 +3842,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#KingdomBacteriaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#KingdomBacteriaRegion -->
 
     <owl:Class rdf:about="#KingdomBacteriaRegion">
         <rdfs:subClassOf rdf:resource="#TaxonRegion"/>
@@ -3846,7 +3850,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#KingdomChromistaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#KingdomChromistaRegion -->
 
     <owl:Class rdf:about="#KingdomChromistaRegion">
         <rdfs:subClassOf rdf:resource="#TaxonRegion"/>
@@ -3854,7 +3858,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#KingdomFungiRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#KingdomFungiRegion -->
 
     <owl:Class rdf:about="#KingdomFungiRegion">
         <rdfs:subClassOf rdf:resource="#TaxonRegion"/>
@@ -3862,7 +3866,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#KingdomPlantaeRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#KingdomPlantaeRegion -->
 
     <owl:Class rdf:about="#KingdomPlantaeRegion">
         <rdfs:subClassOf rdf:resource="#TaxonRegion"/>
@@ -3870,7 +3874,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#KingdomProtozoaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#KingdomProtozoaRegion -->
 
     <owl:Class rdf:about="#KingdomProtozoaRegion">
         <rdfs:subClassOf rdf:resource="#TaxonRegion"/>
@@ -3878,7 +3882,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#KingdomVirusesRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#KingdomVirusesRegion -->
 
     <owl:Class rdf:about="#KingdomVirusesRegion">
         <rdfs:subClassOf rdf:resource="#TaxonRegion"/>
@@ -3886,7 +3890,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Language -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Language -->
 
     <owl:Class rdf:about="#Language">
         <rdfs:subClassOf rdf:resource="#IntellectualProduct"/>
@@ -3894,7 +3898,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#LegalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#LegalEntity -->
 
     <owl:Class rdf:about="#LegalEntity">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -3904,7 +3908,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Leukocyte -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Leukocyte -->
 
     <owl:Class rdf:about="#Leukocyte">
         <rdfs:subClassOf rdf:resource="#Cell"/>
@@ -3912,7 +3916,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Lipid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Lipid -->
 
     <owl:Class rdf:about="#Lipid">
         <rdfs:label xml:lang="en">lipid</rdfs:label>
@@ -3930,7 +3934,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#MachineAction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#MachineAction -->
 
     <owl:Class rdf:about="#MachineAction">
         <owl:equivalentClass>
@@ -3978,7 +3982,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Mammal -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Mammal -->
 
     <owl:Class rdf:about="#Mammal">
         <owl:equivalentClass>
@@ -4003,7 +4007,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#MammalPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#MammalPopulation -->
 
     <owl:Class rdf:about="#MammalPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -4023,7 +4027,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ManagingCare -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ManagingCare -->
 
     <owl:Class rdf:about="#ManagingCare">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -4048,7 +4052,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#MaterialEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#MaterialEntity -->
 
     <owl:Class rdf:about="#MaterialEntity">
         <rdfs:label>material entity</rdfs:label>
@@ -4073,7 +4077,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Measure -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Measure -->
 
     <owl:Class rdf:about="#Measure">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -4082,7 +4086,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Mind -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Mind -->
 
     <owl:Class rdf:about="#Mind">
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
@@ -4090,17 +4094,11 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ModifiedCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ModifiedCell -->
 
     <owl:Class rdf:about="#ModifiedCell">
         <rdfs:label xml:lang="en">modified cell</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Cell"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#derivesFrom"/>
-                <owl:someValuesFrom rdf:resource="#CellInVivo"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
@@ -4111,13 +4109,19 @@ Old name: immaterial anatomical entity</skos:definition>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#derivesFrom"/>
+                <owl:someValuesFrom rdf:resource="#CellInVivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition
             >Cells that grow and replicate continuously outside the living organism.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#MolecularFunction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#MolecularFunction -->
 
     <owl:Class rdf:about="#MolecularFunction">
         <rdfs:label xml:lang="en"
@@ -4139,7 +4143,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#MoleculeComplex -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#MoleculeComplex -->
 
     <owl:Class rdf:about="#MoleculeComplex">
         <rdfs:label xml:lang="en"
@@ -4159,7 +4163,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#MonoMolecularEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#MonoMolecularEntity -->
 
     <owl:Class rdf:about="#MonoMolecularEntity">
         <rdfs:label xml:lang="en"
@@ -4181,7 +4185,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Monomer -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Monomer -->
 
     <owl:Class rdf:about="#Monomer">
         <rdfs:label xml:lang="en">monomer</rdfs:label>
@@ -4199,7 +4203,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#MulticellularOrganism -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#MulticellularOrganism -->
 
     <owl:Class rdf:about="#MulticellularOrganism">
         <rdfs:label xml:lang="en"
@@ -4226,7 +4230,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NeoplasticProcess -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NeoplasticProcess -->
 
     <owl:Class rdf:about="#NeoplasticProcess">
         <owl:equivalentClass>
@@ -4254,7 +4258,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NeuroreactiveRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NeuroreactiveRole -->
 
     <owl:Class rdf:about="#NeuroreactiveRole">
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
@@ -4264,7 +4268,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Neutron -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Neutron -->
 
     <owl:Class rdf:about="#Neutron">
         <rdfs:label xml:lang="en">neutron</rdfs:label>
@@ -4274,7 +4278,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NonSteroidLipid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NonSteroidLipid -->
 
     <owl:Class rdf:about="#NonSteroidLipid">
         <rdfs:label xml:lang="en"
@@ -4287,7 +4291,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NoncanonicalProcessualEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NoncanonicalProcessualEntity -->
 
     <owl:Class rdf:about="#NoncanonicalProcessualEntity">
         <owl:equivalentClass>
@@ -4315,7 +4319,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NoncanonicalRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NoncanonicalRegion -->
 
     <owl:Class rdf:about="#NoncanonicalRegion">
         <rdfs:subClassOf rdf:resource="#CanonicityRegion"/>
@@ -4325,7 +4329,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NoncanonicalState -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NoncanonicalState -->
 
     <owl:Class rdf:about="#NoncanonicalState">
         <rdfs:label
@@ -4355,14 +4359,14 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NucleicAcid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NucleicAcid -->
 
     <owl:Class rdf:about="#NucleicAcid">
-        <rdfs:label
-            >nucleotide sequence</rdfs:label>
+        <rdfs:label xml:lang="en">nucleic acid</rdfs:label>
         <rdfs:label
             >sequence of nucleotides</rdfs:label>
-        <rdfs:label xml:lang="en">nucleic acid</rdfs:label>
+        <rdfs:label
+            >nucleotide sequence</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -4389,7 +4393,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NucleicAcidRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NucleicAcidRegion -->
 
     <owl:Class rdf:about="#NucleicAcidRegion">
         <rdfs:label xml:lang="en"
@@ -4409,7 +4413,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Nucleoside -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Nucleoside -->
 
     <owl:Class rdf:about="#Nucleoside">
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
@@ -4421,7 +4425,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Nucleotide -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Nucleotide -->
 
     <owl:Class rdf:about="#Nucleotide">
         <rdfs:label xml:lang="en">nucleotide</rdfs:label>
@@ -4435,7 +4439,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NucleotideSequenceInformation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NucleotideSequenceInformation -->
 
     <owl:Class rdf:about="#NucleotideSequenceInformation">
         <owl:equivalentClass>
@@ -4453,7 +4457,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#NurseRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#NurseRole -->
 
     <owl:Class rdf:about="#NurseRole">
         <rdfs:subClassOf rdf:resource="#OccupationalRole"/>
@@ -4463,7 +4467,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OccupationalRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OccupationalRole -->
 
     <owl:Class rdf:about="#OccupationalRole">
         <rdfs:label
@@ -4475,7 +4479,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OligoOrPolymer -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OligoOrPolymer -->
 
     <owl:Class rdf:about="#OligoOrPolymer">
         <rdfs:label xml:lang="en"
@@ -4501,7 +4505,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OrderDipteraRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OrderDipteraRegion -->
 
     <owl:Class rdf:about="#OrderDipteraRegion">
         <rdfs:subClassOf rdf:resource="#ClassInsectaRegion"/>
@@ -4509,7 +4513,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OrderEnterobacterialesRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OrderEnterobacterialesRegion -->
 
     <owl:Class rdf:about="#OrderEnterobacterialesRegion">
         <rdfs:subClassOf rdf:resource="#ClassGammaProteobacteriaRegion"/>
@@ -4517,7 +4521,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OrderPrimatesRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OrderPrimatesRegion -->
 
     <owl:Class rdf:about="#OrderPrimatesRegion">
         <rdfs:subClassOf rdf:resource="#ClassMammaliaRegion"/>
@@ -4525,7 +4529,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OrderSaccharomycetalesRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OrderSaccharomycetalesRegion -->
 
     <owl:Class rdf:about="#OrderSaccharomycetalesRegion">
         <rdfs:subClassOf rdf:resource="#ClassSaccharomycetesRegion"/>
@@ -4533,7 +4537,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Organ -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Organ -->
 
     <owl:Class rdf:about="#Organ">
         <rdfs:subClassOf rdf:resource="#OrganismPart"/>
@@ -4543,7 +4547,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OrganicMolecularEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OrganicMolecularEntity -->
 
     <owl:Class rdf:about="#OrganicMolecularEntity">
         <rdfs:label xml:lang="en"
@@ -4556,7 +4560,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Organism -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Organism -->
 
     <owl:Class rdf:about="#Organism">
         <rdfs:label xml:lang="en">organism</rdfs:label>
@@ -4568,7 +4572,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OrganismAction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OrganismAction -->
 
     <owl:Class rdf:about="#OrganismAction">
         <owl:equivalentClass>
@@ -4592,7 +4596,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OrganismInteraction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OrganismInteraction -->
 
     <owl:Class rdf:about="#OrganismInteraction">
         <rdfs:subClassOf rdf:resource="#Interacting"/>
@@ -4607,7 +4611,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#OrganismPart -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#OrganismPart -->
 
     <owl:Class rdf:about="#OrganismPart">
         <rdfs:label xml:lang="en">organism part</rdfs:label>
@@ -4638,7 +4642,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Organization -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Organization -->
 
     <owl:Class rdf:about="#Organization">
         <rdfs:subClassOf rdf:resource="#LegalEntity"/>
@@ -4646,7 +4650,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PathologicalRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PathologicalRegion -->
 
     <owl:Class rdf:about="#PathologicalRegion">
         <rdfs:label
@@ -4686,7 +4690,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PathologicalState -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PathologicalState -->
 
     <owl:Class rdf:about="#PathologicalState">
         <owl:equivalentClass>
@@ -4730,7 +4734,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Peptide -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Peptide -->
 
     <owl:Class rdf:about="#Peptide">
         <rdfs:label xml:lang="en">peptide</rdfs:label>
@@ -4748,7 +4752,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Phosphate -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Phosphate -->
 
     <owl:Class rdf:about="#Phosphate">
         <rdfs:label xml:lang="en">phosphate</rdfs:label>
@@ -4759,7 +4763,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhylumArthropodaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhylumArthropodaRegion -->
 
     <owl:Class rdf:about="#PhylumArthropodaRegion">
         <rdfs:subClassOf rdf:resource="#KingdomAnimaliaRegion"/>
@@ -4767,7 +4771,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhylumAscomycotaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhylumAscomycotaRegion -->
 
     <owl:Class rdf:about="#PhylumAscomycotaRegion">
         <rdfs:subClassOf rdf:resource="#KingdomFungiRegion"/>
@@ -4775,7 +4779,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhylumChordataRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhylumChordataRegion -->
 
     <owl:Class rdf:about="#PhylumChordataRegion">
         <rdfs:subClassOf rdf:resource="#KingdomAnimaliaRegion"/>
@@ -4783,7 +4787,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhylumProteobacteriaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhylumProteobacteriaRegion -->
 
     <owl:Class rdf:about="#PhylumProteobacteriaRegion">
         <rdfs:subClassOf rdf:resource="#KingdomBacteriaRegion"/>
@@ -4791,7 +4795,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhysicalBoundary -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhysicalBoundary -->
 
     <owl:Class rdf:about="#PhysicalBoundary">
         <rdfs:subClassOf rdf:resource="&dolce;feature"/>
@@ -4801,7 +4805,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhysicalForce -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhysicalForce -->
 
     <owl:Class rdf:about="#PhysicalForce">
         <rdfs:subClassOf rdf:resource="#Quality"/>
@@ -4813,7 +4817,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhysicalMass -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhysicalMass -->
 
     <owl:Class rdf:about="#PhysicalMass">
         <rdfs:label>physical mass</rdfs:label>
@@ -4839,7 +4843,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhysicalState -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhysicalState -->
 
     <owl:Class rdf:about="#PhysicalState">
         <rdfs:label>physical state</rdfs:label>
@@ -4847,13 +4851,13 @@ Old name: molecular entity</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#PhysicalVolume"/>
@@ -4866,7 +4870,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhysicalVolume -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhysicalVolume -->
 
     <owl:Class rdf:about="#PhysicalVolume">
         <rdfs:label>physical volume</rdfs:label>
@@ -4878,7 +4882,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PhysicianRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PhysicianRole -->
 
     <owl:Class rdf:about="#PhysicianRole">
         <rdfs:subClassOf rdf:resource="#OccupationalRole"/>
@@ -4888,7 +4892,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Plan -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Plan -->
 
     <owl:Class rdf:about="#Plan">
         <rdfs:label>plan</rdfs:label>
@@ -4898,7 +4902,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Plant -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Plant -->
 
     <owl:Class rdf:about="#Plant">
         <rdfs:label xml:lang="en">plant</rdfs:label>
@@ -4929,7 +4933,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PlantPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PlantPopulation -->
 
     <owl:Class rdf:about="#PlantPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -4948,7 +4952,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PluralityOfOrganisms -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PluralityOfOrganisms -->
 
     <owl:Class rdf:about="#PluralityOfOrganisms">
         <rdfs:label
@@ -4980,7 +4984,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PoisonRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PoisonRole -->
 
     <owl:Class rdf:about="#PoisonRole">
         <rdfs:label>poison role</rdfs:label>
@@ -4991,7 +4995,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PolyMolecularCompositeEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PolyMolecularCompositeEntity -->
 
     <owl:Class rdf:about="#PolyMolecularCompositeEntity">
         <rdfs:label xml:lang="en"
@@ -5009,7 +5013,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Population -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Population -->
 
     <owl:Class rdf:about="#Population">
         <rdfs:label>population</rdfs:label>
@@ -5020,7 +5024,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PortionOfHeterogenousLiquid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PortionOfHeterogenousLiquid -->
 
     <owl:Class rdf:about="#PortionOfHeterogenousLiquid">
         <rdfs:label xml:lang="en"
@@ -5032,7 +5036,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PortionOfHeterogenousSolid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PortionOfHeterogenousSolid -->
 
     <owl:Class rdf:about="#PortionOfHeterogenousSolid">
         <rdfs:label xml:lang="en"
@@ -5044,25 +5048,12 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PortionOfHomogenousMatter -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PortionOfHomogenousMatter -->
 
     <owl:Class rdf:about="#PortionOfHomogenousMatter">
         <rdfs:label
             >homogenous cohesive collection</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CollectiveMaterialEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasGranularPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#Atom"/>
-                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
@@ -5076,13 +5067,26 @@ Old name: molecular entity</skos:definition>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGranularPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Atom"/>
+                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition
             >Composition of granular components of the same kind.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#PreventionAction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PreventionAction -->
 
     <owl:Class rdf:about="#PreventionAction">
         <rdfs:subClassOf rdf:resource="#Action"/>
@@ -5105,7 +5109,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PreventiveRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PreventiveRole -->
 
     <owl:Class rdf:about="#PreventiveRole">
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
@@ -5115,7 +5119,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Primate -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Primate -->
 
     <owl:Class rdf:about="#Primate">
         <owl:equivalentClass>
@@ -5140,7 +5144,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#PrimatePopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#PrimatePopulation -->
 
     <owl:Class rdf:about="#PrimatePopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -5158,7 +5162,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ProcessualEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ProcessualEntity -->
 
     <owl:Class rdf:about="#ProcessualEntity">
         <rdfs:label
@@ -5179,7 +5183,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Prokaryote -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Prokaryote -->
 
     <owl:Class rdf:about="#Prokaryote">
         <rdfs:label xml:lang="en">prokaryote</rdfs:label>
@@ -5190,7 +5194,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ProteinComplex -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ProteinComplex -->
 
     <owl:Class rdf:about="#ProteinComplex">
         <rdfs:label xml:lang="en">protein complex</rdfs:label>
@@ -5222,7 +5226,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ProteinDomain -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ProteinDomain -->
 
     <owl:Class rdf:about="#ProteinDomain">
         <rdfs:label xml:lang="en">protein domain</rdfs:label>
@@ -5239,7 +5243,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ProteinFunction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ProteinFunction -->
 
     <owl:Class rdf:about="#ProteinFunction">
         <rdfs:label xml:lang="en"
@@ -5261,7 +5265,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ProteinSubstructure -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ProteinSubstructure -->
 
     <owl:Class rdf:about="#ProteinSubstructure">
         <rdfs:label xml:lang="en"
@@ -5279,7 +5283,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ProteinSubunit -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ProteinSubunit -->
 
     <owl:Class rdf:about="#ProteinSubunit">
         <rdfs:label xml:lang="en">protein subunit</rdfs:label>
@@ -5290,7 +5294,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Protist -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Protist -->
 
     <owl:Class rdf:about="#Protist">
         <rdfs:label xml:lang="en">protist</rdfs:label>
@@ -5301,7 +5305,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ProtistPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ProtistPopulation -->
 
     <owl:Class rdf:about="#ProtistPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -5318,7 +5322,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Proton -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Proton -->
 
     <owl:Class rdf:about="#Proton">
         <rdfs:label xml:lang="en">proton</rdfs:label>
@@ -5329,7 +5333,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Quality -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Quality -->
 
     <owl:Class rdf:about="#Quality">
         <rdfs:label>quality</rdfs:label>
@@ -5353,7 +5357,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#QualityRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#QualityRegion -->
 
     <owl:Class rdf:about="#QualityRegion">
         <rdfs:subClassOf>
@@ -5369,7 +5373,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#RNA -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#RNA -->
 
     <owl:Class rdf:about="#RNA">
         <rdfs:label>RNA sequence</rdfs:label>
@@ -5381,7 +5385,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ReagentRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ReagentRole -->
 
     <owl:Class rdf:about="#ReagentRole">
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
@@ -5391,7 +5395,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ReceptorRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ReceptorRole -->
 
     <owl:Class rdf:about="#ReceptorRole">
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
@@ -5401,7 +5405,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#RegulationOrLaw -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#RegulationOrLaw -->
 
     <owl:Class rdf:about="#RegulationOrLaw">
         <rdfs:subClassOf rdf:resource="#IntellectualProduct"/>
@@ -5409,7 +5413,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Reptile -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Reptile -->
 
     <owl:Class rdf:about="#Reptile">
         <rdfs:subClassOf rdf:resource="#Vertebrate"/>
@@ -5417,7 +5421,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#ResearchRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ResearchRole -->
 
     <owl:Class rdf:about="#ResearchRole">
         <rdfs:label>research role</rdfs:label>
@@ -5428,7 +5432,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#RickettsiaCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#RickettsiaCell -->
 
     <owl:Class rdf:about="#RickettsiaCell">
         <rdfs:subClassOf rdf:resource="#Prokaryote"/>
@@ -5436,7 +5440,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Role -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Role -->
 
     <owl:Class rdf:about="#Role">
         <rdfs:label>role</rdfs:label>
@@ -5452,7 +5456,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SignOrSymptomRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SignOrSymptomRole -->
 
     <owl:Class rdf:about="#SignOrSymptomRole">
         <rdfs:label
@@ -5464,7 +5468,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SignallingRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SignallingRole -->
 
     <owl:Class rdf:about="#SignallingRole">
         <rdfs:label>signalling role</rdfs:label>
@@ -5481,7 +5485,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SocialBehavior -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SocialBehavior -->
 
     <owl:Class rdf:about="#SocialBehavior">
         <owl:equivalentClass>
@@ -5506,7 +5510,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SpatialReferenceRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SpatialReferenceRole -->
 
     <owl:Class rdf:about="#SpatialReferenceRole">
         <rdfs:subClassOf rdf:resource="#Role"/>
@@ -5516,7 +5520,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SpatialRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SpatialRegion -->
 
     <owl:Class rdf:about="#SpatialRegion">
         <rdfs:label>spatial region</rdfs:label>
@@ -5528,7 +5532,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SpeciesCandidaAlbicansRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SpeciesCandidaAlbicansRegion -->
 
     <owl:Class rdf:about="#SpeciesCandidaAlbicansRegion">
         <rdfs:subClassOf rdf:resource="#GenusCandidaRegion"/>
@@ -5536,7 +5540,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SpeciesDrosophilaMelanogasterRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SpeciesDrosophilaMelanogasterRegion -->
 
     <owl:Class rdf:about="#SpeciesDrosophilaMelanogasterRegion">
         <rdfs:subClassOf rdf:resource="#GenusDrosophilaRegion"/>
@@ -5544,7 +5548,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SpeciesEscherichiaColiRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SpeciesEscherichiaColiRegion -->
 
     <owl:Class rdf:about="#SpeciesEscherichiaColiRegion">
         <rdfs:subClassOf rdf:resource="#GenusEscherichiaRegion"/>
@@ -5552,7 +5556,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SpeciesHomoSapiensRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SpeciesHomoSapiensRegion -->
 
     <owl:Class rdf:about="#SpeciesHomoSapiensRegion">
         <rdfs:subClassOf rdf:resource="#GenusHomoRegion"/>
@@ -5560,7 +5564,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#SpeciesSaccharomycesCerevisiaeRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SpeciesSaccharomycesCerevisiaeRegion -->
 
     <owl:Class rdf:about="#SpeciesSaccharomycesCerevisiaeRegion">
         <rdfs:subClassOf rdf:resource="#GenusSaccharomycesRegion"/>
@@ -5568,7 +5572,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#StateOfBeing -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#StateOfBeing -->
 
     <owl:Class rdf:about="#StateOfBeing">
         <rdfs:label>state of being</rdfs:label>
@@ -5579,7 +5583,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#Steroid -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Steroid -->
 
     <owl:Class rdf:about="#Steroid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
@@ -5589,7 +5593,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#StructuredBiologicalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#StructuredBiologicalEntity -->
 
     <owl:Class rdf:about="#StructuredBiologicalEntity">
         <rdfs:label xml:lang="en"
@@ -5609,7 +5613,7 @@ Old name: anatomical structure</skos:definition>
     
 
 
-    <!-- http://purl.org/biotop/dev#StructuredNonbiologicalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#StructuredNonbiologicalEntity -->
 
     <owl:Class rdf:about="#StructuredNonbiologicalEntity">
         <rdfs:label
@@ -5632,7 +5636,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/dev#SubatomicParticle -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SubatomicParticle -->
 
     <owl:Class rdf:about="#SubatomicParticle">
         <rdfs:label xml:lang="en"
@@ -5643,7 +5647,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/dev#SubfamilyDrosophilinaeRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SubfamilyDrosophilinaeRegion -->
 
     <owl:Class rdf:about="#SubfamilyDrosophilinaeRegion">
         <rdfs:subClassOf rdf:resource="#FamilyDrosophilidaeRegion"/>
@@ -5651,7 +5655,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/dev#SubphylumSaccharomycotinaRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SubphylumSaccharomycotinaRegion -->
 
     <owl:Class rdf:about="#SubphylumSaccharomycotinaRegion">
         <rdfs:subClassOf rdf:resource="#PhylumAscomycotaRegion"/>
@@ -5659,7 +5663,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/dev#SubphylumVertebrataRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SubphylumVertebrataRegion -->
 
     <owl:Class rdf:about="#SubphylumVertebrataRegion">
         <rdfs:subClassOf rdf:resource="#PhylumChordataRegion"/>
@@ -5667,7 +5671,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/dev#SubstanceInteraction -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#SubstanceInteraction -->
 
     <owl:Class rdf:about="#SubstanceInteraction">
         <rdfs:subClassOf rdf:resource="#Interacting"/>
@@ -5699,22 +5703,22 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://purl.org/biotop/dev#TaxonQuality -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#TaxonQuality -->
 
     <owl:Class rdf:about="#TaxonQuality">
         <rdfs:label>taxon quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Quality"/>
-        <skos:definition
-            >The quality of one or more biological organisms, as well as of parts of organism of partaining to a biological taxon. [steschu20080127]</skos:definition>
         <rdfs:comment
             >removed for performance reasons:
 inheresIn some (rol:hasPart some NucleicAcid)
 inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
+        <skos:definition
+            >The quality of one or more biological organisms, as well as of parts of organism of partaining to a biological taxon. [steschu20080127]</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/dev#TaxonRegion -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#TaxonRegion -->
 
     <owl:Class rdf:about="#TaxonRegion">
         <rdfs:subClassOf rdf:resource="#QualityRegion"/>
@@ -5722,7 +5726,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#TemporalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#TemporalEntity -->
 
     <owl:Class rdf:about="#TemporalEntity">
         <rdfs:label>temporal entity</rdfs:label>
@@ -5733,7 +5737,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#TherapeuticRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#TherapeuticRole -->
 
     <owl:Class rdf:about="#TherapeuticRole">
         <rdfs:label
@@ -5746,7 +5750,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#Tissue -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Tissue -->
 
     <owl:Class rdf:about="#Tissue">
         <rdfs:label xml:lang="en">tissue</rdfs:label>
@@ -5757,7 +5761,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#EntireMolecularEntity"/>
+                        <owl:someValuesFrom rdf:resource="#Cell"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -5768,7 +5772,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Cell"/>
+                        <owl:someValuesFrom rdf:resource="#EntireMolecularEntity"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -5793,7 +5797,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#TissueProcess -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#TissueProcess -->
 
     <owl:Class rdf:about="#TissueProcess">
         <owl:equivalentClass>
@@ -5811,7 +5815,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#Treating -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Treating -->
 
     <owl:Class rdf:about="#Treating">
         <owl:equivalentClass>
@@ -5827,7 +5831,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#TreatingCondition -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#TreatingCondition -->
 
     <owl:Class rdf:about="#TreatingCondition">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -5857,7 +5861,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#TreatingPerson -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#TreatingPerson -->
 
     <owl:Class rdf:about="#TreatingPerson">
         <rdfs:subClassOf rdf:resource="#Affecting"/>
@@ -5892,7 +5896,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#TwoDimensionalPhysicalEntity -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#TwoDimensionalPhysicalEntity -->
 
     <owl:Class rdf:about="#TwoDimensionalPhysicalEntity">
         <rdfs:subClassOf rdf:resource="#ImmaterialPhysicalEntity"/>
@@ -5900,7 +5904,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#UnicellularOrganism -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#UnicellularOrganism -->
 
     <owl:Class rdf:about="#UnicellularOrganism">
         <rdfs:label
@@ -5942,7 +5946,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#Vertebrate -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Vertebrate -->
 
     <owl:Class rdf:about="#Vertebrate">
         <owl:equivalentClass>
@@ -5971,7 +5975,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#VertebratePopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#VertebratePopulation -->
 
     <owl:Class rdf:about="#VertebratePopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -5987,7 +5991,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#Virus -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Virus -->
 
     <owl:Class rdf:about="#Virus">
         <rdfs:label xml:lang="en">virus</rdfs:label>
@@ -6012,7 +6016,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#VirusPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#VirusPopulation -->
 
     <owl:Class rdf:about="#VirusPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -6027,7 +6031,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#VitaminRole -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#VitaminRole -->
 
     <owl:Class rdf:about="#VitaminRole">
         <rdfs:label>vitamin role</rdfs:label>
@@ -6038,7 +6042,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#WaterMolecule -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#WaterMolecule -->
 
     <owl:Class rdf:about="#WaterMolecule">
         <rdfs:label xml:lang="en">water molecule</rdfs:label>
@@ -6047,7 +6051,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#YeastCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#YeastCell -->
 
     <owl:Class rdf:about="#YeastCell">
         <rdfs:label>yeast cell</rdfs:label>
@@ -6088,7 +6092,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#YeastPopulation -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#YeastPopulation -->
 
     <owl:Class rdf:about="#YeastPopulation">
         <rdfs:subClassOf rdf:resource="#Population"/>
@@ -6209,7 +6213,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#AminoAcidSequence -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#AminoAcidSequence -->
 
     <rdf:Description rdf:about="#AminoAcidSequence">
         <skos:synonym
@@ -6218,7 +6222,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#ArchaebacterialCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ArchaebacterialCell -->
 
     <rdf:Description rdf:about="#ArchaebacterialCell">
         <skos:synonym>Archaebacterium</skos:synonym>
@@ -6226,7 +6230,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#BacterialCell -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#BacterialCell -->
 
     <rdf:Description rdf:about="#BacterialCell">
         <skos:synonym>Bacterium</skos:synonym>
@@ -6234,7 +6238,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#ChainOfAminoAcidMonomers -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#ChainOfAminoAcidMonomers -->
 
     <rdf:Description rdf:about="#ChainOfAminoAcidMonomers">
         <skos:synonym
@@ -6243,7 +6247,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/biotop/dev#Neutron -->
+    <!-- http://purl.org/biotop/dolce-ro/dev#Neutron -->
 
     <rdf:Description rdf:about="#Neutron">
         <skos:synonym
@@ -6253,5 +6257,5 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.941) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.974) http://owlapi.sourceforge.net -->
 
