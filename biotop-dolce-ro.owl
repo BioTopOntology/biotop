@@ -38,8 +38,8 @@
         <dc:format
             >application/rdf+xml</dc:format>
         <skos:historyNote></skos:historyNote>
-        <dc:description></dc:description>
         <dc:creator>Stefan Schulz</dc:creator>
+        <dc:description></dc:description>
         <dc:language>en</dc:language>
         <dc:creator>Martin Boeker</dc:creator>
         <dc:subject></dc:subject>
@@ -67,7 +67,7 @@
         <skos:prefLabel></skos:prefLabel>
         <dc:relation></dc:relation>
         <dc:rights></dc:rights>
-        <owl:imports rdf:resource="http://localhost/umls-biotop/local/biotop.owl"/>
+        <owl:imports rdf:resource="http://localhost/biotop.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/obo/ro/1.0/light"/>
         <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl"/>
     </owl:Ontology>
@@ -203,16 +203,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
 
     <owl:ObjectProperty rdf:about="#connectedTo">
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -223,6 +213,16 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -330,15 +330,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
             >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -348,6 +339,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -518,15 +518,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
 
     <owl:ObjectProperty rdf:about="#interconnects">
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -536,6 +527,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -553,16 +553,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <owl:equivalentProperty rdf:resource="&dolce;generic-location"/>
         <owl:equivalentProperty rdf:resource="&ro;located_in"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -573,6 +563,16 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -590,16 +590,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <owl:equivalentProperty rdf:resource="&dolce;generic-location-of"/>
         <owl:equivalentProperty rdf:resource="&ro;location_of"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -610,6 +600,16 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -744,15 +744,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <skos:definition
             >loosely defined relation: establishing boundaries, enclosing, confining, enclosing, circumscribing</skos:definition>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -762,6 +753,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1935,6 +1935,17 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:label xml:lang="en">body fluid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousLiquid"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#MonoMolecularEntity"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -1955,17 +1966,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
                         <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#MonoMolecularEntity"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -2210,6 +2210,12 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
+                <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:complementOf rdf:resource="#Cell"/>
@@ -2220,19 +2226,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasProperPart"/>
-                <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
+                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+                <owl:someValuesFrom rdf:resource="#CellMembrane"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#CellularComponent"/>
@@ -2484,13 +2484,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
+                <owl:allValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition
@@ -2551,7 +2551,7 @@ Old name: compound of collections</skos:definition>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Peptide"/>
+                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -2562,7 +2562,7 @@ Old name: compound of collections</skos:definition>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -3548,7 +3548,7 @@ kinds of contexts that it is made for.</skos:definition>
                 <owl:complementOf>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#PhysicalMass"/>
+                        <owl:someValuesFrom rdf:resource="#PhysicalVolume"/>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
@@ -3558,7 +3558,7 @@ kinds of contexts that it is made for.</skos:definition>
                 <owl:complementOf>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#PhysicalVolume"/>
+                        <owl:someValuesFrom rdf:resource="#PhysicalMass"/>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
@@ -4109,6 +4109,12 @@ Old name: immaterial anatomical entity</skos:definition>
         <rdfs:label xml:lang="en">modified cell</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#derivesFrom"/>
+                <owl:someValuesFrom rdf:resource="#CellInVivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -4117,12 +4123,6 @@ Old name: immaterial anatomical entity</skos:definition>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#derivesFrom"/>
-                <owl:someValuesFrom rdf:resource="#CellInVivo"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition
             >Cells that grow and replicate continuously outside the living organism.</skos:definition>
@@ -5778,17 +5778,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#EntireMolecularEntity"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -5801,6 +5790,17 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#EntireMolecularEntity"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition
             >Aggregate of an arbitrary number of congeneric cells (cells with identical specialized characteristics), embedded into an amount of matter (matrix) that work together to perform a specific function.</skos:definition>
