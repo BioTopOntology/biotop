@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
- 
+
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
@@ -207,7 +207,6 @@
     <owl:Class rdf:about="#Biologic_Function">
         <rdfs:label
             >Biologic_Function</rdfs:label>
-        <rdfs:subClassOf rdf:resource="#Natural_Phenomenon_or_Process"/>
     </owl:Class>
     
 
@@ -4423,27 +4422,6 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasDomain"/>
-                        <owl:allValuesFrom rdf:resource="#Behavior"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasRange"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="#Mental_Process"/>
-                                    <rdf:Description rdf:about="#Mental_or_Behavioral_Dysfunction"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasDomain"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
@@ -4465,6 +4443,27 @@
                                     <rdf:Description rdf:about="#Organism_Attribute"/>
                                     <rdf:Description rdf:about="#Quantitative_Concept"/>
                                     <rdf:Description rdf:about="#Temporal_Concept"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasDomain"/>
+                        <owl:allValuesFrom rdf:resource="#Behavior"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasRange"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#Mental_Process"/>
+                                    <rdf:Description rdf:about="#Mental_or_Behavioral_Dysfunction"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:allValuesFrom>
@@ -5256,20 +5255,6 @@
                     <rdf:Description rdf:about="#exhibits"/>
                     <rdf:Description rdf:about="#practices"/>
                 </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasDomain"/>
-                        <owl:allValuesFrom rdf:resource="#Group"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasRange"/>
-                        <owl:allValuesFrom rdf:resource="#Activity"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
