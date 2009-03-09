@@ -2,30 +2,30 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY biotop "http://localhost/biotop.owl#" >
+    <!ENTITY biotop "http://purl.org/biotop/1.0/biotop.owl#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY sn "http://localhost/umlssn.owl#" >
-    <!ENTITY biotop-umlssn "http://localhost/biotop-umlssn.owl#" >
+    <!ENTITY sn "http://purl.org/biotop/1.0/umlssn.owl#" >
+    <!ENTITY biotop-umlssn "http://purl.org/biotop/1.0/biotop-umlssn.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://localhost/biotop-umlssn.owl"
-     xml:base="http://localhost/biotop-umlssn.owl"
-     xmlns:biotop="http://localhost/biotop.owl#"
+<rdf:RDF xmlns="http://purl.org/biotop/1.0/biotop-umlssn.owl"
+     xml:base="http://purl.org/biotop/1.0/biotop-umlssn.owl"
+     xmlns:biotop="http://purl.org/biotop/1.0/biotop.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:sn="http://localhost/umlssn.owl#"
+     xmlns:sn="http://purl.org/biotop/1.0/umlssn.owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:biotop-umlssn="http://localhost/biotop-umlssn.owl#">
+     xmlns:biotop-umlssn="http://purl.org/biotop/1.0/biotop-umlssn.owl#">
     <owl:Ontology rdf:about="">
-        <owl:imports rdf:resource="http://localhost/biotop.owl"/>
-        <owl:imports rdf:resource="http://localhost/umlssn.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/1.0/biotop.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/1.0/umlssn.owl"/>
     </owl:Ontology>
     
 
@@ -41,25 +41,25 @@
     
 
 
-    <!-- http://localhost/biotop.owl#contains -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#contains -->
 
     <owl:ObjectProperty rdf:about="&biotop;contains"/>
     
 
 
-    <!-- http://localhost/biotop.owl#derivesFrom -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#derivesFrom -->
 
     <owl:ObjectProperty rdf:about="&biotop;derivesFrom"/>
     
 
 
-    <!-- http://localhost/biotop.owl#featureOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#featureOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;featureOf"/>
     
 
 
-    <!-- http://localhost/biotop.owl#hasAgent -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasAgent -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasAgent">
         <owl:equivalentProperty rdf:resource="&sn;hasDomain"/>
@@ -67,43 +67,43 @@
     
 
 
-    <!-- http://localhost/biotop.owl#hasComponentPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasComponentPart"/>
     
 
 
-    <!-- http://localhost/biotop.owl#hasGranularPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasGranularPart"/>
     
 
 
-    <!-- http://localhost/biotop.owl#hasInherence -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasInherence -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasInherence"/>
     
 
 
-    <!-- http://localhost/biotop.owl#hasLocus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasLocus -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasLocus"/>
     
 
 
-    <!-- http://localhost/biotop.owl#hasMember -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasMember -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasMember"/>
     
 
 
-    <!-- http://localhost/biotop.owl#hasParticipant -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasParticipant -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasParticipant"/>
     
 
 
-    <!-- http://localhost/biotop.owl#hasPatient -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPatient -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasPatient">
         <owl:equivalentProperty rdf:resource="&sn;hasRange"/>
@@ -111,55 +111,55 @@
     
 
 
-    <!-- http://localhost/biotop.owl#inheresIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#inheresIn -->
 
     <owl:ObjectProperty rdf:about="&biotop;inheresIn"/>
     
 
 
-    <!-- http://localhost/biotop.owl#locatedIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#locatedIn -->
 
     <owl:ObjectProperty rdf:about="&biotop;locatedIn"/>
     
 
 
-    <!-- http://localhost/biotop.owl#partOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#partOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;partOf"/>
     
 
 
-    <!-- http://localhost/biotop.owl#patientIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#patientIn -->
 
     <owl:ObjectProperty rdf:about="&biotop;patientIn"/>
     
 
 
-    <!-- http://localhost/biotop.owl#properPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#properPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;properPartOf"/>
     
 
 
-    <!-- http://localhost/biotop.owl#qualityLocated -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#qualityLocated -->
 
     <owl:ObjectProperty rdf:about="&biotop;qualityLocated"/>
     
 
 
-    <!-- http://localhost/biotop.owl#resultsIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#resultsIn -->
 
     <owl:ObjectProperty rdf:about="&biotop;resultsIn"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#hasDomain -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#hasDomain -->
 
     <owl:ObjectProperty rdf:about="&sn;hasDomain"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#hasRange -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#hasRange -->
 
     <owl:ObjectProperty rdf:about="&sn;hasRange"/>
     
@@ -176,7 +176,7 @@
     
 
 
-    <!-- http://localhost/biotop-umlssn.owl#CausingbyHuman -->
+    <!-- http://purl.org/biotop/1.0/biotop-umlssn.owl#CausingbyHuman -->
 
     <owl:Class rdf:about="#CausingbyHuman">
         <owl:equivalentClass>
@@ -194,7 +194,7 @@
     
 
 
-    <!-- http://localhost/biotop-umlssn.owl#ProcessOrStateOrFunction -->
+    <!-- http://purl.org/biotop/1.0/biotop-umlssn.owl#ProcessOrStateOrFunction -->
 
     <owl:Class rdf:about="#ProcessOrStateOrFunction">
         <owl:equivalentClass rdf:resource="&sn;Event"/>
@@ -212,19 +212,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#AcquiredAbnormalStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AcquiredAbnormalStructure -->
 
     <owl:Class rdf:about="&biotop;AcquiredAbnormalStructure"/>
     
 
 
-    <!-- http://localhost/biotop.owl#AcquiredPathologicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AcquiredPathologicalState -->
 
     <owl:Class rdf:about="&biotop;AcquiredPathologicalState"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Action -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Action -->
 
     <owl:Class rdf:about="&biotop;Action">
         <owl:equivalentClass rdf:resource="&sn;Activity"/>
@@ -233,7 +233,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Affecting -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Affecting -->
 
     <owl:Class rdf:about="&biotop;Affecting">
         <owl:equivalentClass rdf:resource="&sn;affects"/>
@@ -241,13 +241,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#AgeQuality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AgeQuality -->
 
     <owl:Class rdf:about="&biotop;AgeQuality"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Alga -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Alga -->
 
     <owl:Class rdf:about="&biotop;Alga">
         <owl:equivalentClass rdf:resource="&sn;Alga"/>
@@ -255,13 +255,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#AminoAcidMonomer -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidMonomer -->
 
     <owl:Class rdf:about="&biotop;AminoAcidMonomer"/>
     
 
 
-    <!-- http://localhost/biotop.owl#AminoAcidSequenceInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidSequenceInformation -->
 
     <owl:Class rdf:about="&biotop;AminoAcidSequenceInformation">
         <owl:equivalentClass rdf:resource="&sn;Amino_Acid_Sequence"/>
@@ -269,7 +269,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Amphibian -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Amphibian -->
 
     <owl:Class rdf:about="&biotop;Amphibian">
         <owl:equivalentClass rdf:resource="&sn;Amphibian"/>
@@ -277,7 +277,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#AnimalIncludingHuman -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AnimalIncludingHuman -->
 
     <owl:Class rdf:about="&biotop;AnimalIncludingHuman">
         <owl:equivalentClass rdf:resource="&sn;Animal"/>
@@ -285,13 +285,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#AntibioticRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AntibioticRole -->
 
     <owl:Class rdf:about="&biotop;AntibioticRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#ArchaebacterialCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ArchaebacterialCell -->
 
     <owl:Class rdf:about="&biotop;ArchaebacterialCell">
         <owl:equivalentClass rdf:resource="&sn;Archaeon"/>
@@ -299,13 +299,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ArtefactRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ArtefactRole -->
 
     <owl:Class rdf:about="&biotop;ArtefactRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Atom -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Atom -->
 
     <owl:Class rdf:about="&biotop;Atom">
         <owl:equivalentClass rdf:resource="&sn;Element__Ion__or_Isotope"/>
@@ -313,7 +313,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#BacterialCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BacterialCell -->
 
     <owl:Class rdf:about="&biotop;BacterialCell">
         <owl:equivalentClass rdf:resource="&sn;Bacterium"/>
@@ -321,7 +321,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Behavior -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Behavior -->
 
     <owl:Class rdf:about="&biotop;Behavior">
         <owl:equivalentClass rdf:resource="&sn;Behavior"/>
@@ -329,7 +329,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#BioMolecularSequenceInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BioMolecularSequenceInformation -->
 
     <owl:Class rdf:about="&biotop;BioMolecularSequenceInformation">
         <owl:equivalentClass rdf:resource="&sn;Molecular_Sequence"/>
@@ -337,37 +337,37 @@
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalBoundary  -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalBoundary  -->
 
     <owl:Class rdf:about="&biotop;BiologicalBoundary"/>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalSpace -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalSpace -->
 
     <owl:Class rdf:about="&biotop;BiologicalSpace"/>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalSystemRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalSystemRole -->
 
     <owl:Class rdf:about="&biotop;BiologicalSystemRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#BiomedicalMaterialRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiomedicalMaterialRole -->
 
     <owl:Class rdf:about="&biotop;BiomedicalMaterialRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Biomolecule -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Biomolecule -->
 
     <owl:Class rdf:about="&biotop;Biomolecule"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Bird -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Bird -->
 
     <owl:Class rdf:about="&biotop;Bird">
         <owl:equivalentClass rdf:resource="&sn;Bird"/>
@@ -375,31 +375,31 @@
     
 
 
-    <!-- http://localhost/biotop.owl#BodyLiquid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BodyLiquid -->
 
     <owl:Class rdf:about="&biotop;BodyLiquid"/>
     
 
 
-    <!-- http://localhost/biotop.owl#BodySystem -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BodySystem -->
 
     <owl:Class rdf:about="&biotop;BodySystem"/>
     
 
 
-    <!-- http://localhost/biotop.owl#CanonicalRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CanonicalRegion -->
 
     <owl:Class rdf:about="&biotop;CanonicalRegion"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Canonicity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Canonicity -->
 
     <owl:Class rdf:about="&biotop;Canonicity"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Carbohydrate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Carbohydrate -->
 
     <owl:Class rdf:about="&biotop;Carbohydrate">
         <owl:equivalentClass rdf:resource="&sn;Carbohydrate"/>
@@ -407,7 +407,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#CarbohydrateSequenceInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CarbohydrateSequenceInformation -->
 
     <owl:Class rdf:about="&biotop;CarbohydrateSequenceInformation">
         <owl:equivalentClass rdf:resource="&sn;Carbohydrate_Sequence"/>
@@ -415,7 +415,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#CategorizationSystem -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CategorizationSystem -->
 
     <owl:Class rdf:about="&biotop;CategorizationSystem">
         <owl:equivalentClass rdf:resource="&sn;Classification"/>
@@ -423,7 +423,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Causing -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Causing -->
 
     <owl:Class rdf:about="&biotop;Causing">
         <owl:equivalentClass rdf:resource="&sn;causes"/>
@@ -431,7 +431,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Cell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Cell -->
 
     <owl:Class rdf:about="&biotop;Cell">
         <owl:equivalentClass rdf:resource="&sn;Cell"/>
@@ -439,7 +439,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#CellularComponent -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CellularComponent -->
 
     <owl:Class rdf:about="&biotop;CellularComponent">
         <owl:equivalentClass rdf:resource="&sn;Cell_Component"/>
@@ -447,13 +447,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ChlamydiaCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ChlamydiaCell -->
 
     <owl:Class rdf:about="&biotop;ChlamydiaCell"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Complicating -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Complicating -->
 
     <owl:Class rdf:about="&biotop;Complicating">
         <owl:equivalentClass rdf:resource="&sn;complicates"/>
@@ -461,25 +461,25 @@
     
 
 
-    <!-- http://localhost/biotop.owl#CompoundOfCollectiveMaterialEntities -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="&biotop;CompoundOfCollectiveMaterialEntities"/>
     
 
 
-    <!-- http://localhost/biotop.owl#CongenitalAbnormalStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CongenitalAbnormalStructure -->
 
     <owl:Class rdf:about="&biotop;CongenitalAbnormalStructure"/>
     
 
 
-    <!-- http://localhost/biotop.owl#CongenitalPathologicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CongenitalPathologicalState -->
 
     <owl:Class rdf:about="&biotop;CongenitalPathologicalState"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Disrupting -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Disrupting -->
 
     <owl:Class rdf:about="&biotop;Disrupting">
         <owl:equivalentClass rdf:resource="&sn;disrupts"/>
@@ -487,19 +487,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#DrugRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#DrugRole -->
 
     <owl:Class rdf:about="&biotop;DrugRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#EducatorRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EducatorRole -->
 
     <owl:Class rdf:about="&biotop;EducatorRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Eicosanoid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Eicosanoid -->
 
     <owl:Class rdf:about="&biotop;Eicosanoid">
         <owl:equivalentClass rdf:resource="&sn;Eicosanoid"/>
@@ -507,7 +507,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#EmbryonicStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EmbryonicStructure -->
 
     <owl:Class rdf:about="&biotop;EmbryonicStructure">
         <owl:equivalentClass rdf:resource="&sn;Embryonic_Structure"/>
@@ -515,25 +515,25 @@
     
 
 
-    <!-- http://localhost/biotop.owl#EnzymeRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EnzymeRole -->
 
     <owl:Class rdf:about="&biotop;EnzymeRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#FamilyRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FamilyRole -->
 
     <owl:Class rdf:about="&biotop;FamilyRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#FindingRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FindingRole -->
 
     <owl:Class rdf:about="&biotop;FindingRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Fish -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Fish -->
 
     <owl:Class rdf:about="&biotop;Fish">
         <owl:equivalentClass rdf:resource="&sn;Fish"/>
@@ -541,19 +541,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#FoodRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FoodRole -->
 
     <owl:Class rdf:about="&biotop;FoodRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Function -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Function -->
 
     <owl:Class rdf:about="&biotop;Function"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Fungus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Fungus -->
 
     <owl:Class rdf:about="&biotop;Fungus">
         <owl:equivalentClass rdf:resource="&sn;Fungus"/>
@@ -561,19 +561,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Gene -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Gene -->
 
     <owl:Class rdf:about="&biotop;Gene"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Genome -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Genome -->
 
     <owl:Class rdf:about="&biotop;Genome"/>
     
 
 
-    <!-- http://localhost/biotop.owl#GeographicEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GeographicEntity -->
 
     <owl:Class rdf:about="&biotop;GeographicEntity">
         <owl:equivalentClass rdf:resource="&sn;Geographic_Area"/>
@@ -581,13 +581,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Government -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Government -->
 
     <owl:Class rdf:about="&biotop;Government"/>
     
 
 
-    <!-- http://localhost/biotop.owl#HealthProfessionalRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HealthProfessionalRole -->
 
     <owl:Class rdf:about="&biotop;HealthProfessionalRole">
         <owl:equivalentClass rdf:resource="&sn;Biomedical_Occupation_or_Discipline"/>
@@ -595,19 +595,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#HealthRelatedRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HealthRelatedRole -->
 
     <owl:Class rdf:about="&biotop;HealthRelatedRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#HormoneRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HormoneRole -->
 
     <owl:Class rdf:about="&biotop;HormoneRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Human -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Human -->
 
     <owl:Class rdf:about="&biotop;Human">
         <owl:equivalentClass rdf:resource="&sn;Human"/>
@@ -615,7 +615,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#HumanLanguage -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HumanLanguage -->
 
     <owl:Class rdf:about="&biotop;HumanLanguage">
         <owl:equivalentClass rdf:resource="&sn;Language"/>
@@ -623,19 +623,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#IllFormedBiologicalStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#IllFormedBiologicalStructure -->
 
     <owl:Class rdf:about="&biotop;IllFormedBiologicalStructure"/>
     
 
 
-    <!-- http://localhost/biotop.owl#ImmunologicRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmunologicRole -->
 
     <owl:Class rdf:about="&biotop;ImmunologicRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Indicating -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Indicating -->
 
     <owl:Class rdf:about="&biotop;Indicating">
         <owl:equivalentClass rdf:resource="&sn;indicates"/>
@@ -643,7 +643,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#IndividualBehavior -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#IndividualBehavior -->
 
     <owl:Class rdf:about="&biotop;IndividualBehavior">
         <owl:equivalentClass rdf:resource="&sn;Individual_Behavior"/>
@@ -651,13 +651,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#InformationEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#InformationEntity -->
 
     <owl:Class rdf:about="&biotop;InformationEntity"/>
     
 
 
-    <!-- http://localhost/biotop.owl#InorganicMolecularEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#InorganicMolecularEntity -->
 
     <owl:Class rdf:about="&biotop;InorganicMolecularEntity">
         <owl:equivalentClass rdf:resource="&sn;Inorganic_Chemical"/>
@@ -665,7 +665,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#IntellectualProduct -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#IntellectualProduct -->
 
     <owl:Class rdf:about="&biotop;IntellectualProduct">
         <owl:equivalentClass rdf:resource="&sn;Intellectual_Product"/>
@@ -673,7 +673,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Interacting -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Interacting -->
 
     <owl:Class rdf:about="&biotop;Interacting">
         <owl:equivalentClass rdf:resource="&sn;interacts"/>
@@ -681,7 +681,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Invertebrate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Invertebrate -->
 
     <owl:Class rdf:about="&biotop;Invertebrate">
         <owl:equivalentClass rdf:resource="&sn;Invertebrate"/>
@@ -689,7 +689,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Lipid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Lipid -->
 
     <owl:Class rdf:about="&biotop;Lipid">
         <owl:equivalentClass rdf:resource="&sn;Lipid"/>
@@ -697,7 +697,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#MachineAction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MachineAction -->
 
     <owl:Class rdf:about="&biotop;MachineAction">
         <owl:equivalentClass rdf:resource="&sn;Machine_Activity"/>
@@ -705,7 +705,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Mammal -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Mammal -->
 
     <owl:Class rdf:about="&biotop;Mammal">
         <owl:equivalentClass rdf:resource="&sn;Mammal"/>
@@ -713,7 +713,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ManagingCare -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ManagingCare -->
 
     <owl:Class rdf:about="&biotop;ManagingCare">
         <owl:equivalentClass rdf:resource="&sn;manages"/>
@@ -721,7 +721,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Measure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Measure -->
 
     <owl:Class rdf:about="&biotop;Measure">
         <owl:equivalentClass rdf:resource="&sn;Quantitative_Concept"/>
@@ -729,7 +729,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Measuring -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Measuring -->
 
     <owl:Class rdf:about="&biotop;Measuring">
         <owl:equivalentClass rdf:resource="&sn;measures"/>
@@ -737,61 +737,61 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Mind -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Mind -->
 
     <owl:Class rdf:about="&biotop;Mind"/>
     
 
 
-    <!-- http://localhost/biotop.owl#MonoMolecularEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MonoMolecularEntity -->
 
     <owl:Class rdf:about="&biotop;MonoMolecularEntity"/>
     
 
 
-    <!-- http://localhost/biotop.owl#MulticellularOrganism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MulticellularOrganism -->
 
     <owl:Class rdf:about="&biotop;MulticellularOrganism"/>
     
 
 
-    <!-- http://localhost/biotop.owl#NeuroreactiveRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NeuroreactiveRole -->
 
     <owl:Class rdf:about="&biotop;NeuroreactiveRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#NoncanonicalRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NoncanonicalRegion -->
 
     <owl:Class rdf:about="&biotop;NoncanonicalRegion"/>
     
 
 
-    <!-- http://localhost/biotop.owl#NoncanonicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NoncanonicalState -->
 
     <owl:Class rdf:about="&biotop;NoncanonicalState"/>
     
 
 
-    <!-- http://localhost/biotop.owl#NucleicAcid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcid -->
 
     <owl:Class rdf:about="&biotop;NucleicAcid"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Nucleoside -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Nucleoside -->
 
     <owl:Class rdf:about="&biotop;Nucleoside"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Nucleotide -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Nucleotide -->
 
     <owl:Class rdf:about="&biotop;Nucleotide"/>
     
 
 
-    <!-- http://localhost/biotop.owl#NucleotideSequenceInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleotideSequenceInformation -->
 
     <owl:Class rdf:about="&biotop;NucleotideSequenceInformation">
         <owl:equivalentClass rdf:resource="&sn;Nucleotide_Sequence"/>
@@ -799,7 +799,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#OccupationalRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OccupationalRole -->
 
     <owl:Class rdf:about="&biotop;OccupationalRole">
         <owl:equivalentClass rdf:resource="&sn;Occupation_or_Discipline"/>
@@ -807,13 +807,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Organ -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Organ -->
 
     <owl:Class rdf:about="&biotop;Organ"/>
     
 
 
-    <!-- http://localhost/biotop.owl#OrganicMolecularEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganicMolecularEntity -->
 
     <owl:Class rdf:about="&biotop;OrganicMolecularEntity">
         <owl:equivalentClass rdf:resource="&sn;Organic_Chemical"/>
@@ -821,7 +821,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Organism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Organism -->
 
     <owl:Class rdf:about="&biotop;Organism">
         <owl:equivalentClass rdf:resource="&sn;Organism"/>
@@ -829,13 +829,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#OrganismPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganismPart -->
 
     <owl:Class rdf:about="&biotop;OrganismPart"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Organization -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Organization -->
 
     <owl:Class rdf:about="&biotop;Organization">
         <owl:equivalentClass rdf:resource="&sn;Organization"/>
@@ -843,25 +843,25 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Peptide -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Peptide -->
 
     <owl:Class rdf:about="&biotop;Peptide"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Phosphate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Phosphate -->
 
     <owl:Class rdf:about="&biotop;Phosphate"/>
     
 
 
-    <!-- http://localhost/biotop.owl#PhysicalForce -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicalForce -->
 
     <owl:Class rdf:about="&biotop;PhysicalForce"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Plant -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Plant -->
 
     <owl:Class rdf:about="&biotop;Plant">
         <owl:equivalentClass rdf:resource="&sn;Plant"/>
@@ -869,19 +869,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#PoisonRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PoisonRole -->
 
     <owl:Class rdf:about="&biotop;PoisonRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#PolyMolecularCompositeEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PolyMolecularCompositeEntity -->
 
     <owl:Class rdf:about="&biotop;PolyMolecularCompositeEntity"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Population -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Population -->
 
     <owl:Class rdf:about="&biotop;Population">
         <owl:equivalentClass rdf:resource="&sn;Population_Group"/>
@@ -889,19 +889,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#PortionOfHeterogenousSolid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PortionOfHeterogenousSolid -->
 
     <owl:Class rdf:about="&biotop;PortionOfHeterogenousSolid"/>
     
 
 
-    <!-- http://localhost/biotop.owl#PortionOfHomogenousMatter -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PortionOfHomogenousMatter -->
 
     <owl:Class rdf:about="&biotop;PortionOfHomogenousMatter"/>
     
 
 
-    <!-- http://localhost/biotop.owl#PreventionAction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PreventionAction -->
 
     <owl:Class rdf:about="&biotop;PreventionAction">
         <owl:equivalentClass rdf:resource="&sn;prevents"/>
@@ -909,13 +909,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ProcessualEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProcessualEntity -->
 
     <owl:Class rdf:about="&biotop;ProcessualEntity"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Producing -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Producing -->
 
     <owl:Class rdf:about="&biotop;Producing">
         <owl:equivalentClass rdf:resource="&sn;produces"/>
@@ -923,7 +923,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Quality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Quality -->
 
     <owl:Class rdf:about="&biotop;Quality">
         <owl:equivalentClass rdf:resource="&sn;Qualitative_Concept"/>
@@ -931,13 +931,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ReceptorRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ReceptorRole -->
 
     <owl:Class rdf:about="&biotop;ReceptorRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#RegulationOrLaw -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#RegulationOrLaw -->
 
     <owl:Class rdf:about="&biotop;RegulationOrLaw">
         <owl:equivalentClass rdf:resource="&sn;Regulation_or_Law"/>
@@ -945,13 +945,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#RegulatoryBody -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#RegulatoryBody -->
 
     <owl:Class rdf:about="&biotop;RegulatoryBody"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Reptile -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Reptile -->
 
     <owl:Class rdf:about="&biotop;Reptile">
         <owl:equivalentClass rdf:resource="&sn;Reptile"/>
@@ -959,31 +959,31 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ResearchRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ResearchRole -->
 
     <owl:Class rdf:about="&biotop;ResearchRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#ResearcherRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ResearcherRole -->
 
     <owl:Class rdf:about="&biotop;ResearcherRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#RickettsiaCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#RickettsiaCell -->
 
     <owl:Class rdf:about="&biotop;RickettsiaCell"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Role -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Role -->
 
     <owl:Class rdf:about="&biotop;Role"/>
     
 
 
-    <!-- http://localhost/biotop.owl#SignOrSymptomRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SignOrSymptomRole -->
 
     <owl:Class rdf:about="&biotop;SignOrSymptomRole">
         <rdfs:subClassOf rdf:resource="&biotop;FindingRole"/>
@@ -991,7 +991,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#SocialBehavior -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SocialBehavior -->
 
     <owl:Class rdf:about="&biotop;SocialBehavior">
         <owl:equivalentClass rdf:resource="&sn;Social_Behavior"/>
@@ -999,7 +999,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#SpatialRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpatialRegion -->
 
     <owl:Class rdf:about="&biotop;SpatialRegion">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1007,13 +1007,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#State -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#State -->
 
     <owl:Class rdf:about="&biotop;State"/>
     
 
 
-    <!-- http://localhost/biotop.owl#Steroid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Steroid -->
 
     <owl:Class rdf:about="&biotop;Steroid">
         <owl:equivalentClass rdf:resource="&sn;Steroid"/>
@@ -1021,19 +1021,19 @@
     
 
 
-    <!-- http://localhost/biotop.owl#StructuredBiologicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#StructuredBiologicalEntity -->
 
     <owl:Class rdf:about="&biotop;StructuredBiologicalEntity"/>
     
 
 
-    <!-- http://localhost/biotop.owl#SubjectOfCareRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubjectOfCareRole -->
 
     <owl:Class rdf:about="&biotop;SubjectOfCareRole"/>
     
 
 
-    <!-- http://localhost/biotop.owl#TemporalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TemporalEntity -->
 
     <owl:Class rdf:about="&biotop;TemporalEntity">
         <owl:equivalentClass rdf:resource="&sn;Temporal_Concept"/>
@@ -1041,7 +1041,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Tissue -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Tissue -->
 
     <owl:Class rdf:about="&biotop;Tissue">
         <owl:equivalentClass rdf:resource="&sn;Tissue"/>
@@ -1049,7 +1049,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Treating -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Treating -->
 
     <owl:Class rdf:about="&biotop;Treating">
         <owl:equivalentClass rdf:resource="&sn;treats"/>
@@ -1057,7 +1057,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Using -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Using -->
 
     <owl:Class rdf:about="&biotop;Using">
         <owl:equivalentClass rdf:resource="&sn;uses"/>
@@ -1065,7 +1065,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Vertebrate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Vertebrate -->
 
     <owl:Class rdf:about="&biotop;Vertebrate">
         <owl:equivalentClass rdf:resource="&sn;Vertebrate"/>
@@ -1073,7 +1073,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Virus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Virus -->
 
     <owl:Class rdf:about="&biotop;Virus">
         <owl:equivalentClass rdf:resource="&sn;Virus"/>
@@ -1081,13 +1081,13 @@
     
 
 
-    <!-- http://localhost/biotop.owl#VitaminRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#VitaminRole -->
 
     <owl:Class rdf:about="&biotop;VitaminRole"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#Acquired_Abnormality -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Acquired_Abnormality -->
 
     <owl:Class rdf:about="&sn;Acquired_Abnormality">
         <owl:equivalentClass rdf:resource="&sn;T020"/>
@@ -1103,7 +1103,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Activity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Activity -->
 
     <owl:Class rdf:about="&sn;Activity">
         <owl:equivalentClass rdf:resource="&sn;T052"/>
@@ -1111,7 +1111,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Age_Group -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Age_Group -->
 
     <owl:Class rdf:about="&sn;Age_Group">
         <owl:equivalentClass rdf:resource="&sn;T100"/>
@@ -1130,7 +1130,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Alga -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Alga -->
 
     <owl:Class rdf:about="&sn;Alga">
         <owl:equivalentClass rdf:resource="&sn;T003"/>
@@ -1138,7 +1138,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Amino_Acid_Sequence -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Amino_Acid_Sequence -->
 
     <owl:Class rdf:about="&sn;Amino_Acid_Sequence">
         <owl:equivalentClass rdf:resource="&sn;T087"/>
@@ -1146,7 +1146,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Amino_Acid__Peptide__or_Protein -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Amino_Acid__Peptide__or_Protein -->
 
     <owl:Class rdf:about="&sn;Amino_Acid__Peptide__or_Protein">
         <owl:equivalentClass rdf:resource="&sn;T116"/>
@@ -1162,7 +1162,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Amphibian -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Amphibian -->
 
     <owl:Class rdf:about="&sn;Amphibian">
         <owl:equivalentClass rdf:resource="&sn;T011"/>
@@ -1170,7 +1170,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Anatomical_Abnormality -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Anatomical_Abnormality -->
 
     <owl:Class rdf:about="&sn;Anatomical_Abnormality">
         <owl:equivalentClass rdf:resource="&sn;T190"/>
@@ -1186,7 +1186,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Anatomical_Structure -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Anatomical_Structure -->
 
     <owl:Class rdf:about="&sn;Anatomical_Structure">
         <owl:equivalentClass rdf:resource="&sn;T017"/>
@@ -1204,7 +1204,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Animal -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Animal -->
 
     <owl:Class rdf:about="&sn;Animal">
         <owl:equivalentClass rdf:resource="&sn;T008"/>
@@ -1212,7 +1212,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Antibiotic -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Antibiotic -->
 
     <owl:Class rdf:about="&sn;Antibiotic">
         <owl:equivalentClass rdf:resource="&sn;T195"/>
@@ -1226,7 +1226,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Archaeon -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Archaeon -->
 
     <owl:Class rdf:about="&sn;Archaeon">
         <owl:equivalentClass rdf:resource="&sn;T194"/>
@@ -1234,7 +1234,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Bacterium -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Bacterium -->
 
     <owl:Class rdf:about="&sn;Bacterium">
         <owl:equivalentClass rdf:resource="&sn;T007"/>
@@ -1242,7 +1242,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Behavior -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Behavior -->
 
     <owl:Class rdf:about="&sn;Behavior">
         <owl:equivalentClass rdf:resource="&sn;T053"/>
@@ -1250,7 +1250,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Biologic_Function -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Biologic_Function -->
 
     <owl:Class rdf:about="&sn;Biologic_Function">
         <owl:equivalentClass rdf:resource="&sn;T038"/>
@@ -1277,7 +1277,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Biologically_Active_Substance -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Biologically_Active_Substance -->
 
     <owl:Class rdf:about="&sn;Biologically_Active_Substance">
         <owl:equivalentClass rdf:resource="&sn;T123"/>
@@ -1291,7 +1291,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Biomedical_Occupation_or_Discipline -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Biomedical_Occupation_or_Discipline -->
 
     <owl:Class rdf:about="&sn;Biomedical_Occupation_or_Discipline">
         <owl:equivalentClass rdf:resource="&sn;T091"/>
@@ -1299,7 +1299,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Biomedical_or_Dental_Material -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Biomedical_or_Dental_Material -->
 
     <owl:Class rdf:about="&sn;Biomedical_or_Dental_Material">
         <owl:equivalentClass rdf:resource="&sn;T122"/>
@@ -1313,7 +1313,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Bird -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Bird -->
 
     <owl:Class rdf:about="&sn;Bird">
         <owl:equivalentClass rdf:resource="&sn;T012"/>
@@ -1321,7 +1321,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Body_Location_or_Region -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Body_Location_or_Region -->
 
     <owl:Class rdf:about="&sn;Body_Location_or_Region">
         <owl:equivalentClass rdf:resource="&sn;T029"/>
@@ -1343,7 +1343,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Body_Part__Organ__or_Organ_Component -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Body_Part__Organ__or_Organ_Component -->
 
     <owl:Class rdf:about="&sn;Body_Part__Organ__or_Organ_Component">
         <owl:equivalentClass rdf:resource="&sn;T023"/>
@@ -1361,7 +1361,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Body_Space_or_Junction -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Body_Space_or_Junction -->
 
     <owl:Class rdf:about="&sn;Body_Space_or_Junction">
         <owl:equivalentClass rdf:resource="&sn;T030"/>
@@ -1377,7 +1377,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Body_Substance -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Body_Substance -->
 
     <owl:Class rdf:about="&sn;Body_Substance">
         <owl:equivalentClass rdf:resource="&sn;T031"/>
@@ -1409,7 +1409,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Body_System -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Body_System -->
 
     <owl:Class rdf:about="&sn;Body_System">
         <owl:equivalentClass rdf:resource="&sn;T022"/>
@@ -1418,7 +1418,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Carbohydrate -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Carbohydrate -->
 
     <owl:Class rdf:about="&sn;Carbohydrate">
         <owl:equivalentClass rdf:resource="&sn;T118"/>
@@ -1426,7 +1426,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Carbohydrate_Sequence -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Carbohydrate_Sequence -->
 
     <owl:Class rdf:about="&sn;Carbohydrate_Sequence">
         <owl:equivalentClass rdf:resource="&sn;T088"/>
@@ -1434,7 +1434,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Cell -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Cell -->
 
     <owl:Class rdf:about="&sn;Cell">
         <owl:equivalentClass rdf:resource="&sn;T025"/>
@@ -1442,7 +1442,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Cell_Component -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Cell_Component -->
 
     <owl:Class rdf:about="&sn;Cell_Component">
         <owl:equivalentClass rdf:resource="&sn;T026"/>
@@ -1450,7 +1450,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Cell_Function -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Cell_Function -->
 
     <owl:Class rdf:about="&sn;Cell_Function">
         <owl:equivalentClass rdf:resource="&sn;T043"/>
@@ -1491,7 +1491,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Cell_or_Molecular_Dysfunction -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Cell_or_Molecular_Dysfunction -->
 
     <owl:Class rdf:about="&sn;Cell_or_Molecular_Dysfunction">
         <owl:equivalentClass rdf:resource="&sn;T049"/>
@@ -1546,7 +1546,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Chemical -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Chemical -->
 
     <owl:Class rdf:about="&sn;Chemical">
         <owl:equivalentClass rdf:resource="&sn;T103"/>
@@ -1562,7 +1562,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Chemical_Viewed_Functionally -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Chemical_Viewed_Functionally -->
 
     <owl:Class rdf:about="&sn;Chemical_Viewed_Functionally">
         <owl:equivalentClass rdf:resource="&sn;T120"/>
@@ -1570,7 +1570,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Chemical_Viewed_Structurally -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Chemical_Viewed_Structurally -->
 
     <owl:Class rdf:about="&sn;Chemical_Viewed_Structurally">
         <owl:equivalentClass rdf:resource="&sn;T104"/>
@@ -1578,13 +1578,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Classification -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Classification -->
 
     <owl:Class rdf:about="&sn;Classification"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#Clinical_Attribute -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Clinical_Attribute -->
 
     <owl:Class rdf:about="&sn;Clinical_Attribute">
         <owl:equivalentClass rdf:resource="&sn;T201"/>
@@ -1626,7 +1626,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Clinical_Drug -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Clinical_Drug -->
 
     <owl:Class rdf:about="&sn;Clinical_Drug">
         <owl:equivalentClass rdf:resource="&sn;T200"/>
@@ -1649,7 +1649,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Conceptual_Entity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Conceptual_Entity -->
 
     <owl:Class rdf:about="&sn;Conceptual_Entity">
         <owl:equivalentClass rdf:resource="&sn;T077"/>
@@ -1657,7 +1657,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Congenital_Abnormality -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Congenital_Abnormality -->
 
     <owl:Class rdf:about="&sn;Congenital_Abnormality">
         <owl:equivalentClass rdf:resource="&sn;T019"/>
@@ -1673,7 +1673,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Daily_or_Recreational_Activity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Daily_or_Recreational_Activity -->
 
     <owl:Class rdf:about="&sn;Daily_or_Recreational_Activity">
         <owl:equivalentClass rdf:resource="&sn;T056"/>
@@ -1681,7 +1681,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Diagnostic_Procedure -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Diagnostic_Procedure -->
 
     <owl:Class rdf:about="&sn;Diagnostic_Procedure">
         <owl:equivalentClass rdf:resource="&sn;T060"/>
@@ -1689,7 +1689,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Disease_or_Syndrome -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Disease_or_Syndrome -->
 
     <owl:Class rdf:about="&sn;Disease_or_Syndrome">
         <owl:equivalentClass rdf:resource="&sn;T047"/>
@@ -1730,7 +1730,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Drug_Delivery_Device -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Drug_Delivery_Device -->
 
     <owl:Class rdf:about="&sn;Drug_Delivery_Device">
         <owl:equivalentClass rdf:resource="&sn;T203"/>
@@ -1749,7 +1749,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Educational_Activity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Educational_Activity -->
 
     <owl:Class rdf:about="&sn;Educational_Activity">
         <owl:equivalentClass rdf:resource="&sn;T065"/>
@@ -1773,7 +1773,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Eicosanoid -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Eicosanoid -->
 
     <owl:Class rdf:about="&sn;Eicosanoid">
         <owl:equivalentClass rdf:resource="&sn;T111"/>
@@ -1781,7 +1781,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Element__Ion__or_Isotope -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Element__Ion__or_Isotope -->
 
     <owl:Class rdf:about="&sn;Element__Ion__or_Isotope">
         <owl:equivalentClass rdf:resource="&sn;T196"/>
@@ -1789,7 +1789,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Embryonic_Structure -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Embryonic_Structure -->
 
     <owl:Class rdf:about="&sn;Embryonic_Structure">
         <owl:equivalentClass rdf:resource="&sn;T018"/>
@@ -1797,7 +1797,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Entity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Entity -->
 
     <owl:Class rdf:about="&sn;Entity">
         <owl:equivalentClass rdf:resource="&sn;T071"/>
@@ -1805,7 +1805,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Environmental_Effect_of_Humans -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Environmental_Effect_of_Humans -->
 
     <owl:Class rdf:about="&sn;Environmental_Effect_of_Humans">
         <owl:equivalentClass rdf:resource="&sn;T069"/>
@@ -1838,7 +1838,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Enzyme -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Enzyme -->
 
     <owl:Class rdf:about="&sn;Enzyme">
         <owl:equivalentClass rdf:resource="&sn;T126"/>
@@ -1852,7 +1852,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Event -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Event -->
 
     <owl:Class rdf:about="&sn;Event">
         <owl:equivalentClass rdf:resource="&sn;T051"/>
@@ -1860,7 +1860,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Experimental_Model_of_Disease -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Experimental_Model_of_Disease -->
 
     <owl:Class rdf:about="&sn;Experimental_Model_of_Disease">
         <owl:equivalentClass rdf:resource="&sn;T050"/>
@@ -1868,7 +1868,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Family_Group -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Family_Group -->
 
     <owl:Class rdf:about="&sn;Family_Group">
         <owl:equivalentClass rdf:resource="&sn;T099"/>
@@ -1882,7 +1882,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Finding -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Finding -->
 
     <owl:Class rdf:about="&sn;Finding">
         <owl:equivalentClass rdf:resource="&sn;T033"/>
@@ -1896,7 +1896,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Fish -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Fish -->
 
     <owl:Class rdf:about="&sn;Fish">
         <owl:equivalentClass rdf:resource="&sn;T013"/>
@@ -1904,7 +1904,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Food -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Food -->
 
     <owl:Class rdf:about="&sn;Food">
         <owl:equivalentClass rdf:resource="&sn;T168"/>
@@ -1918,7 +1918,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Fully_Formed_Anatomical_Structure -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Fully_Formed_Anatomical_Structure -->
 
     <owl:Class rdf:about="&sn;Fully_Formed_Anatomical_Structure">
         <owl:equivalentClass rdf:resource="&sn;T021"/>
@@ -1945,7 +1945,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Functional_Concept -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Functional_Concept -->
 
     <owl:Class rdf:about="&sn;Functional_Concept">
         <owl:equivalentClass rdf:resource="&sn;T169"/>
@@ -1953,7 +1953,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Fungus -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Fungus -->
 
     <owl:Class rdf:about="&sn;Fungus">
         <owl:equivalentClass rdf:resource="&sn;T004"/>
@@ -1961,7 +1961,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Gene_or_Genome -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Gene_or_Genome -->
 
     <owl:Class rdf:about="&sn;Gene_or_Genome">
         <owl:equivalentClass rdf:resource="&sn;T028"/>
@@ -1977,7 +1977,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Genetic_Function -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Genetic_Function -->
 
     <owl:Class rdf:about="&sn;Genetic_Function">
         <owl:equivalentClass rdf:resource="&sn;T045"/>
@@ -2028,7 +2028,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Geographic_Area -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Geographic_Area -->
 
     <owl:Class rdf:about="&sn;Geographic_Area">
         <owl:equivalentClass rdf:resource="&sn;T083"/>
@@ -2036,7 +2036,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Governmental_or_Regulatory_Activity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Governmental_or_Regulatory_Activity -->
 
     <owl:Class rdf:about="&sn;Governmental_or_Regulatory_Activity">
         <owl:equivalentClass rdf:resource="&sn;T064"/>
@@ -2062,7 +2062,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Group -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Group -->
 
     <owl:Class rdf:about="&sn;Group">
         <owl:equivalentClass rdf:resource="&sn;T096"/>
@@ -2070,7 +2070,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Group_Attribute -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Group_Attribute -->
 
     <owl:Class rdf:about="&sn;Group_Attribute">
         <owl:equivalentClass rdf:resource="&sn;T102"/>
@@ -2086,7 +2086,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Hazardous_or_Poisonous_Substance -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Hazardous_or_Poisonous_Substance -->
 
     <owl:Class rdf:about="&sn;Hazardous_or_Poisonous_Substance">
         <owl:equivalentClass rdf:resource="&sn;T131"/>
@@ -2100,7 +2100,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Health_Care_Activity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Health_Care_Activity -->
 
     <owl:Class rdf:about="&sn;Health_Care_Activity">
         <owl:equivalentClass rdf:resource="&sn;T058"/>
@@ -2108,7 +2108,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Health_Care_Related_Organization -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Health_Care_Related_Organization -->
 
     <owl:Class rdf:about="&sn;Health_Care_Related_Organization">
         <owl:equivalentClass rdf:resource="&sn;T093"/>
@@ -2132,7 +2132,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Hormone -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Hormone -->
 
     <owl:Class rdf:about="&sn;Hormone">
         <owl:equivalentClass rdf:resource="&sn;T125"/>
@@ -2146,7 +2146,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Human -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Human -->
 
     <owl:Class rdf:about="&sn;Human">
         <owl:equivalentClass rdf:resource="&sn;T016"/>
@@ -2154,7 +2154,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Human-caused_Phenomenon_or_Process -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Human-caused_Phenomenon_or_Process -->
 
     <owl:Class rdf:about="&sn;Human-caused_Phenomenon_or_Process">
         <owl:equivalentClass rdf:resource="&sn;T068"/>
@@ -2183,7 +2183,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Idea_or_Concept -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Idea_or_Concept -->
 
     <owl:Class rdf:about="&sn;Idea_or_Concept">
         <owl:equivalentClass rdf:resource="&sn;T078"/>
@@ -2191,7 +2191,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Immunologic_Factor -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Immunologic_Factor -->
 
     <owl:Class rdf:about="&sn;Immunologic_Factor">
         <owl:equivalentClass rdf:resource="&sn;T129"/>
@@ -2205,7 +2205,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Indicator__Reagent__or_Diagnostic_Aid -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Indicator__Reagent__or_Diagnostic_Aid -->
 
     <owl:Class rdf:about="&sn;Indicator__Reagent__or_Diagnostic_Aid">
         <owl:equivalentClass rdf:resource="&sn;T130"/>
@@ -2213,7 +2213,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Individual_Behavior -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Individual_Behavior -->
 
     <owl:Class rdf:about="&sn;Individual_Behavior">
         <owl:equivalentClass rdf:resource="&sn;T055"/>
@@ -2221,7 +2221,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Injury_or_Poisoning -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Injury_or_Poisoning -->
 
     <owl:Class rdf:about="&sn;Injury_or_Poisoning">
         <owl:equivalentClass rdf:resource="&sn;T037"/>
@@ -2260,7 +2260,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Inorganic_Chemical -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Inorganic_Chemical -->
 
     <owl:Class rdf:about="&sn;Inorganic_Chemical">
         <owl:equivalentClass rdf:resource="&sn;T197"/>
@@ -2268,7 +2268,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Intellectual_Product -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Intellectual_Product -->
 
     <owl:Class rdf:about="&sn;Intellectual_Product">
         <owl:equivalentClass rdf:resource="&sn;T170"/>
@@ -2276,7 +2276,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Invertebrate -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Invertebrate -->
 
     <owl:Class rdf:about="&sn;Invertebrate">
         <owl:equivalentClass rdf:resource="&sn;T009"/>
@@ -2284,7 +2284,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Laboratory_Procedure -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Laboratory_Procedure -->
 
     <owl:Class rdf:about="&sn;Laboratory_Procedure">
         <owl:equivalentClass rdf:resource="&sn;T059"/>
@@ -2292,7 +2292,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Laboratory_or_Test_Result -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Laboratory_or_Test_Result -->
 
     <owl:Class rdf:about="&sn;Laboratory_or_Test_Result">
         <owl:equivalentClass rdf:resource="&sn;T034"/>
@@ -2321,7 +2321,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Language -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Language -->
 
     <owl:Class rdf:about="&sn;Language">
         <owl:equivalentClass rdf:resource="&sn;T171"/>
@@ -2329,7 +2329,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Lipid -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Lipid -->
 
     <owl:Class rdf:about="&sn;Lipid">
         <owl:equivalentClass rdf:resource="&sn;T119"/>
@@ -2337,7 +2337,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Machine_Activity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Machine_Activity -->
 
     <owl:Class rdf:about="&sn;Machine_Activity">
         <owl:equivalentClass rdf:resource="&sn;T066"/>
@@ -2345,7 +2345,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Mammal -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Mammal -->
 
     <owl:Class rdf:about="&sn;Mammal">
         <owl:equivalentClass rdf:resource="&sn;T015"/>
@@ -2353,7 +2353,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Manufactured_Object -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Manufactured_Object -->
 
     <owl:Class rdf:about="&sn;Manufactured_Object">
         <owl:equivalentClass rdf:resource="&sn;T073"/>
@@ -2372,7 +2372,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Medical_Device -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Medical_Device -->
 
     <owl:Class rdf:about="&sn;Medical_Device">
         <owl:equivalentClass rdf:resource="&sn;T074"/>
@@ -2380,7 +2380,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Mental_Process -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Mental_Process -->
 
     <owl:Class rdf:about="&sn;Mental_Process">
         <owl:equivalentClass rdf:resource="&sn;T041"/>
@@ -2425,7 +2425,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Mental_or_Behavioral_Dysfunction -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Mental_or_Behavioral_Dysfunction -->
 
     <owl:Class rdf:about="&sn;Mental_or_Behavioral_Dysfunction">
         <owl:equivalentClass rdf:resource="&sn;T048"/>
@@ -2458,7 +2458,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Molecular_Biology_Research_Technique -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Molecular_Biology_Research_Technique -->
 
     <owl:Class rdf:about="&sn;Molecular_Biology_Research_Technique">
         <owl:equivalentClass rdf:resource="&sn;T063"/>
@@ -2466,7 +2466,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Molecular_Function -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Molecular_Function -->
 
     <owl:Class rdf:about="&sn;Molecular_Function">
         <owl:equivalentClass rdf:resource="&sn;T044"/>
@@ -2507,7 +2507,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Molecular_Sequence -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Molecular_Sequence -->
 
     <owl:Class rdf:about="&sn;Molecular_Sequence">
         <owl:equivalentClass rdf:resource="&sn;T085"/>
@@ -2515,7 +2515,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Natural_Phenomenon_or_Process -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Natural_Phenomenon_or_Process -->
 
     <owl:Class rdf:about="&sn;Natural_Phenomenon_or_Process">
         <owl:equivalentClass rdf:resource="&sn;T070"/>
@@ -2523,7 +2523,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Neoplastic_Process -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Neoplastic_Process -->
 
     <owl:Class rdf:about="&sn;Neoplastic_Process">
         <owl:equivalentClass rdf:resource="&sn;T191"/>
@@ -2531,7 +2531,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Neuroreactive_Substance_or_Biogenic_Amine -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Neuroreactive_Substance_or_Biogenic_Amine -->
 
     <owl:Class rdf:about="&sn;Neuroreactive_Substance_or_Biogenic_Amine">
         <owl:equivalentClass rdf:resource="&sn;T124"/>
@@ -2545,7 +2545,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Nucleic_Acid__Nucleoside__or_Nucleotide -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Nucleic_Acid__Nucleoside__or_Nucleotide -->
 
     <owl:Class rdf:about="&sn;Nucleic_Acid__Nucleoside__or_Nucleotide">
         <owl:equivalentClass rdf:resource="&sn;T114"/>
@@ -2562,7 +2562,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Nucleotide_Sequence -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Nucleotide_Sequence -->
 
     <owl:Class rdf:about="&sn;Nucleotide_Sequence">
         <owl:equivalentClass rdf:resource="&sn;T086"/>
@@ -2570,7 +2570,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Occupation_or_Discipline -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Occupation_or_Discipline -->
 
     <owl:Class rdf:about="&sn;Occupation_or_Discipline">
         <owl:equivalentClass rdf:resource="&sn;T090"/>
@@ -2578,7 +2578,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Occupational_Activity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Occupational_Activity -->
 
     <owl:Class rdf:about="&sn;Occupational_Activity">
         <owl:equivalentClass rdf:resource="&sn;T057"/>
@@ -2602,7 +2602,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Organ_or_Tissue_Function -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Organ_or_Tissue_Function -->
 
     <owl:Class rdf:about="&sn;Organ_or_Tissue_Function">
         <owl:equivalentClass rdf:resource="&sn;T042"/>
@@ -2657,7 +2657,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Organic_Chemical -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Organic_Chemical -->
 
     <owl:Class rdf:about="&sn;Organic_Chemical">
         <owl:equivalentClass rdf:resource="&sn;T109"/>
@@ -2665,7 +2665,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Organism -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Organism -->
 
     <owl:Class rdf:about="&sn;Organism">
         <owl:equivalentClass rdf:resource="&sn;T001"/>
@@ -2673,7 +2673,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Organism_Attribute -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Organism_Attribute -->
 
     <owl:Class rdf:about="&sn;Organism_Attribute">
         <owl:equivalentClass rdf:resource="&sn;T032"/>
@@ -2715,7 +2715,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Organism_Function -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Organism_Function -->
 
     <owl:Class rdf:about="&sn;Organism_Function">
         <owl:equivalentClass rdf:resource="&sn;T040"/>
@@ -2756,7 +2756,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Organization -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Organization -->
 
     <owl:Class rdf:about="&sn;Organization">
         <owl:equivalentClass rdf:resource="&sn;T092"/>
@@ -2764,7 +2764,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Organophosphorus_Compound -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Organophosphorus_Compound -->
 
     <owl:Class rdf:about="&sn;Organophosphorus_Compound">
         <owl:equivalentClass rdf:resource="&sn;T115"/>
@@ -2783,7 +2783,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Pathologic_Function -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Pathologic_Function -->
 
     <owl:Class rdf:about="&sn;Pathologic_Function">
         <owl:equivalentClass rdf:resource="&sn;T046"/>
@@ -2824,7 +2824,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Patient_or_Disabled_Group -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Patient_or_Disabled_Group -->
 
     <owl:Class rdf:about="&sn;Patient_or_Disabled_Group">
         <owl:equivalentClass rdf:resource="&sn;T101"/>
@@ -2848,7 +2848,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Pharmacologic_Substance -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Pharmacologic_Substance -->
 
     <owl:Class rdf:about="&sn;Pharmacologic_Substance">
         <owl:equivalentClass rdf:resource="&sn;T121"/>
@@ -2862,7 +2862,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Phenomenon_or_Process -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Phenomenon_or_Process -->
 
     <owl:Class rdf:about="&sn;Phenomenon_or_Process">
         <owl:equivalentClass rdf:resource="&sn;T067"/>
@@ -2880,7 +2880,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Physical_Object -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Physical_Object -->
 
     <owl:Class rdf:about="&sn;Physical_Object">
         <owl:equivalentClass rdf:resource="&sn;T072"/>
@@ -2888,7 +2888,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Physiologic_Function -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Physiologic_Function -->
 
     <owl:Class rdf:about="&sn;Physiologic_Function">
         <owl:equivalentClass rdf:resource="&sn;T039"/>
@@ -2929,7 +2929,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Plant -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Plant -->
 
     <owl:Class rdf:about="&sn;Plant">
         <owl:equivalentClass rdf:resource="&sn;T002"/>
@@ -2937,7 +2937,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Population_Group -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Population_Group -->
 
     <owl:Class rdf:about="&sn;Population_Group">
         <owl:equivalentClass rdf:resource="&sn;T098"/>
@@ -2945,7 +2945,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Professional_Society -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Professional_Society -->
 
     <owl:Class rdf:about="&sn;Professional_Society">
         <owl:equivalentClass rdf:resource="&sn;T094"/>
@@ -2969,7 +2969,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Professional_or_Occupational_Group -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Professional_or_Occupational_Group -->
 
     <owl:Class rdf:about="&sn;Professional_or_Occupational_Group">
         <owl:equivalentClass rdf:resource="&sn;T097"/>
@@ -2998,7 +2998,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Qualitative_Concept -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Qualitative_Concept -->
 
     <owl:Class rdf:about="&sn;Qualitative_Concept">
         <owl:equivalentClass rdf:resource="&sn;T080"/>
@@ -3006,7 +3006,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Quantitative_Concept -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Quantitative_Concept -->
 
     <owl:Class rdf:about="&sn;Quantitative_Concept">
         <owl:equivalentClass rdf:resource="&sn;T081"/>
@@ -3014,7 +3014,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Receptor -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Receptor -->
 
     <owl:Class rdf:about="&sn;Receptor">
         <owl:equivalentClass rdf:resource="&sn;T192"/>
@@ -3028,7 +3028,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Regulation_or_Law -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Regulation_or_Law -->
 
     <owl:Class rdf:about="&sn;Regulation_or_Law">
         <owl:equivalentClass rdf:resource="&sn;T089"/>
@@ -3036,7 +3036,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Reptile -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Reptile -->
 
     <owl:Class rdf:about="&sn;Reptile">
         <owl:equivalentClass rdf:resource="&sn;T014"/>
@@ -3044,7 +3044,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Research_Activity -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Research_Activity -->
 
     <owl:Class rdf:about="&sn;Research_Activity">
         <owl:equivalentClass rdf:resource="&sn;T062"/>
@@ -3068,7 +3068,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Research_Device -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Research_Device -->
 
     <owl:Class rdf:about="&sn;Research_Device">
         <owl:equivalentClass rdf:resource="&sn;T075"/>
@@ -3091,7 +3091,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Rickettsia_or_Chlamydia -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Rickettsia_or_Chlamydia -->
 
     <owl:Class rdf:about="&sn;Rickettsia_or_Chlamydia">
         <owl:equivalentClass rdf:resource="&sn;T006"/>
@@ -3107,7 +3107,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Self-help_or_Relief_Organization -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Self-help_or_Relief_Organization -->
 
     <owl:Class rdf:about="&sn;Self-help_or_Relief_Organization">
         <owl:equivalentClass rdf:resource="&sn;T095"/>
@@ -3140,7 +3140,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Sign_or_Symptom -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Sign_or_Symptom -->
 
     <owl:Class rdf:about="&sn;Sign_or_Symptom">
         <owl:equivalentClass rdf:resource="&sn;T184"/>
@@ -3154,7 +3154,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Social_Behavior -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Social_Behavior -->
 
     <owl:Class rdf:about="&sn;Social_Behavior">
         <owl:equivalentClass rdf:resource="&sn;T054"/>
@@ -3162,7 +3162,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Spatial_Concept -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Spatial_Concept -->
 
     <owl:Class rdf:about="&sn;Spatial_Concept">
         <owl:equivalentClass rdf:resource="&sn;T082"/>
@@ -3170,7 +3170,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Steroid -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Steroid -->
 
     <owl:Class rdf:about="&sn;Steroid">
         <owl:equivalentClass rdf:resource="&sn;T110"/>
@@ -3178,7 +3178,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#Substance -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Substance -->
 
     <owl:Class rdf:about="&sn;Substance">
         <owl:equivalentClass rdf:resource="&sn;T167"/>
@@ -3195,31 +3195,31 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T001 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T001 -->
 
     <owl:Class rdf:about="&sn;T001"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T002 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T002 -->
 
     <owl:Class rdf:about="&sn;T002"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T003 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T003 -->
 
     <owl:Class rdf:about="&sn;T003"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T004 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T004 -->
 
     <owl:Class rdf:about="&sn;T004"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T005 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T005 -->
 
     <owl:Class rdf:about="&sn;T005">
         <owl:equivalentClass rdf:resource="&sn;Virus"/>
@@ -3227,31 +3227,31 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T006 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T006 -->
 
     <owl:Class rdf:about="&sn;T006"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T007 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T007 -->
 
     <owl:Class rdf:about="&sn;T007"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T008 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T008 -->
 
     <owl:Class rdf:about="&sn;T008"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T009 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T009 -->
 
     <owl:Class rdf:about="&sn;T009"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T010 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T010 -->
 
     <owl:Class rdf:about="&sn;T010">
         <owl:equivalentClass rdf:resource="&sn;Vertebrate"/>
@@ -3259,61 +3259,61 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T011 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T011 -->
 
     <owl:Class rdf:about="&sn;T011"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T012 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T012 -->
 
     <owl:Class rdf:about="&sn;T012"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T013 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T013 -->
 
     <owl:Class rdf:about="&sn;T013"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T014 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T014 -->
 
     <owl:Class rdf:about="&sn;T014"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T015 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T015 -->
 
     <owl:Class rdf:about="&sn;T015"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T016 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T016 -->
 
     <owl:Class rdf:about="&sn;T016"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T017 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T017 -->
 
     <owl:Class rdf:about="&sn;T017"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T018 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T018 -->
 
     <owl:Class rdf:about="&sn;T018"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T019 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T019 -->
 
     <owl:Class rdf:about="&sn;T019"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T019_T047 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T019_T047 -->
 
     <owl:Class rdf:about="&sn;T019_T047">
         <owl:equivalentClass>
@@ -3328,13 +3328,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T020 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T020 -->
 
     <owl:Class rdf:about="&sn;T020"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T020_T047 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T020_T047 -->
 
     <owl:Class rdf:about="&sn;T020_T047">
         <owl:equivalentClass>
@@ -3349,25 +3349,25 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T021 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T021 -->
 
     <owl:Class rdf:about="&sn;T021"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T022 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T022 -->
 
     <owl:Class rdf:about="&sn;T022"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T023 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T023 -->
 
     <owl:Class rdf:about="&sn;T023"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T023_T024 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T023_T024 -->
 
     <owl:Class rdf:about="&sn;T023_T024">
         <owl:equivalentClass>
@@ -3382,7 +3382,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T024 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T024 -->
 
     <owl:Class rdf:about="&sn;T024">
         <owl:equivalentClass rdf:resource="&sn;Tissue"/>
@@ -3390,7 +3390,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T024_T031 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T024_T031 -->
 
     <owl:Class rdf:about="&sn;T024_T031">
         <owl:equivalentClass>
@@ -3405,13 +3405,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T025 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T025 -->
 
     <owl:Class rdf:about="&sn;T025"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T025_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T025_T121 -->
 
     <owl:Class rdf:about="&sn;T025_T121">
         <owl:equivalentClass>
@@ -3426,7 +3426,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T025_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T025_T129 -->
 
     <owl:Class rdf:about="&sn;T025_T129">
         <owl:equivalentClass>
@@ -3441,19 +3441,19 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T026 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T026 -->
 
     <owl:Class rdf:about="&sn;T026"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T028 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T028 -->
 
     <owl:Class rdf:about="&sn;T028"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T028_T114 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T028_T114 -->
 
     <owl:Class rdf:about="&sn;T028_T114">
         <owl:equivalentClass>
@@ -3468,31 +3468,31 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T029 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T029 -->
 
     <owl:Class rdf:about="&sn;T029"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T030 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T030 -->
 
     <owl:Class rdf:about="&sn;T030"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T031 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T031 -->
 
     <owl:Class rdf:about="&sn;T031"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T032 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T032 -->
 
     <owl:Class rdf:about="&sn;T032"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T032_T079 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T032_T079 -->
 
     <owl:Class rdf:about="&sn;T032_T079">
         <owl:equivalentClass>
@@ -3507,7 +3507,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T032_T081 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T032_T081 -->
 
     <owl:Class rdf:about="&sn;T032_T081">
         <owl:equivalentClass>
@@ -3522,7 +3522,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T032_T082 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T032_T082 -->
 
     <owl:Class rdf:about="&sn;T032_T082">
         <owl:equivalentClass>
@@ -3537,13 +3537,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T033 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T033 -->
 
     <owl:Class rdf:about="&sn;T033"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T033_T047 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T033_T047 -->
 
     <owl:Class rdf:about="&sn;T033_T047">
         <owl:equivalentClass>
@@ -3558,37 +3558,37 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T034 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T034 -->
 
     <owl:Class rdf:about="&sn;T034"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T037 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T037 -->
 
     <owl:Class rdf:about="&sn;T037"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T038 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T038 -->
 
     <owl:Class rdf:about="&sn;T038"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T039 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T039 -->
 
     <owl:Class rdf:about="&sn;T039"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T040 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T040 -->
 
     <owl:Class rdf:about="&sn;T040"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T040_T043 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T040_T043 -->
 
     <owl:Class rdf:about="&sn;T040_T043">
         <owl:equivalentClass>
@@ -3603,19 +3603,19 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T041 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T041 -->
 
     <owl:Class rdf:about="&sn;T041"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T042 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T042 -->
 
     <owl:Class rdf:about="&sn;T042"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T042_T043 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T042_T043 -->
 
     <owl:Class rdf:about="&sn;T042_T043">
         <owl:equivalentClass>
@@ -3630,13 +3630,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T043 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T043 -->
 
     <owl:Class rdf:about="&sn;T043"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T043_T044 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T043_T044 -->
 
     <owl:Class rdf:about="&sn;T043_T044">
         <owl:equivalentClass>
@@ -3651,13 +3651,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T044 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T044 -->
 
     <owl:Class rdf:about="&sn;T044"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T044_T082 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T044_T082 -->
 
     <owl:Class rdf:about="&sn;T044_T082">
         <owl:equivalentClass>
@@ -3672,25 +3672,25 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T045 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T045 -->
 
     <owl:Class rdf:about="&sn;T045"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T046 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T046 -->
 
     <owl:Class rdf:about="&sn;T046"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T047 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T047 -->
 
     <owl:Class rdf:about="&sn;T047"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T047_T184 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T047_T184 -->
 
     <owl:Class rdf:about="&sn;T047_T184">
         <owl:equivalentClass>
@@ -3705,7 +3705,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T047_T190 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T047_T190 -->
 
     <owl:Class rdf:about="&sn;T047_T190">
         <owl:equivalentClass>
@@ -3720,13 +3720,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T048 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T048 -->
 
     <owl:Class rdf:about="&sn;T048"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T048_T184 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T048_T184 -->
 
     <owl:Class rdf:about="&sn;T048_T184">
         <owl:equivalentClass>
@@ -3741,19 +3741,19 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T049 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T049 -->
 
     <owl:Class rdf:about="&sn;T049"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T050 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T050 -->
 
     <owl:Class rdf:about="&sn;T050"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T050_T191 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T050_T191 -->
 
     <owl:Class rdf:about="&sn;T050_T191">
         <owl:equivalentClass>
@@ -3768,49 +3768,49 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T051 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T051 -->
 
     <owl:Class rdf:about="&sn;T051"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T052 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T052 -->
 
     <owl:Class rdf:about="&sn;T052"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T053 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T053 -->
 
     <owl:Class rdf:about="&sn;T053"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T054 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T054 -->
 
     <owl:Class rdf:about="&sn;T054"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T055 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T055 -->
 
     <owl:Class rdf:about="&sn;T055"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T056 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T056 -->
 
     <owl:Class rdf:about="&sn;T056"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T057 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T057 -->
 
     <owl:Class rdf:about="&sn;T057"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T057_T066 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T057_T066 -->
 
     <owl:Class rdf:about="&sn;T057_T066">
         <owl:equivalentClass>
@@ -3825,13 +3825,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T058 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T058 -->
 
     <owl:Class rdf:about="&sn;T058"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T058_T062 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T058_T062 -->
 
     <owl:Class rdf:about="&sn;T058_T062">
         <owl:equivalentClass>
@@ -3846,7 +3846,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T058_T065 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T058_T065 -->
 
     <owl:Class rdf:about="&sn;T058_T065">
         <owl:equivalentClass>
@@ -3861,13 +3861,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T059 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T059 -->
 
     <owl:Class rdf:about="&sn;T059"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T059_T062 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T059_T062 -->
 
     <owl:Class rdf:about="&sn;T059_T062">
         <owl:equivalentClass>
@@ -3882,7 +3882,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T059_T063 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T059_T063 -->
 
     <owl:Class rdf:about="&sn;T059_T063">
         <owl:equivalentClass>
@@ -3897,13 +3897,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T060 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T060 -->
 
     <owl:Class rdf:about="&sn;T060"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T060_T061 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T060_T061 -->
 
     <owl:Class rdf:about="&sn;T060_T061">
         <owl:equivalentClass>
@@ -3918,7 +3918,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T060_T062 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T060_T062 -->
 
     <owl:Class rdf:about="&sn;T060_T062">
         <owl:equivalentClass>
@@ -3933,7 +3933,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T061 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T061 -->
 
     <owl:Class rdf:about="&sn;T061">
         <owl:equivalentClass rdf:resource="&sn;Therapeutic_or_Preventive_Procedure"/>
@@ -3941,7 +3941,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T061_T063 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T061_T063 -->
 
     <owl:Class rdf:about="&sn;T061_T063">
         <owl:equivalentClass>
@@ -3956,7 +3956,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T061_T065 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T061_T065 -->
 
     <owl:Class rdf:about="&sn;T061_T065">
         <owl:equivalentClass>
@@ -3971,13 +3971,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T062 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T062 -->
 
     <owl:Class rdf:about="&sn;T062"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T062_T078 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T062_T078 -->
 
     <owl:Class rdf:about="&sn;T062_T078">
         <owl:equivalentClass>
@@ -3992,25 +3992,25 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T063 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T063 -->
 
     <owl:Class rdf:about="&sn;T063"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T064 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T064 -->
 
     <owl:Class rdf:about="&sn;T064"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T065 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T065 -->
 
     <owl:Class rdf:about="&sn;T065"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T065_T066 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T065_T066 -->
 
     <owl:Class rdf:about="&sn;T065_T066">
         <owl:equivalentClass>
@@ -4025,25 +4025,25 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T066 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T066 -->
 
     <owl:Class rdf:about="&sn;T066"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T067 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T067 -->
 
     <owl:Class rdf:about="&sn;T067"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T068 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T068 -->
 
     <owl:Class rdf:about="&sn;T068"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T068_T070 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T068_T070 -->
 
     <owl:Class rdf:about="&sn;T068_T070">
         <owl:equivalentClass>
@@ -4058,7 +4058,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T068_T073 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T068_T073 -->
 
     <owl:Class rdf:about="&sn;T068_T073">
         <owl:equivalentClass>
@@ -4073,13 +4073,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T069 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T069 -->
 
     <owl:Class rdf:about="&sn;T069"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T069_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T069_T131 -->
 
     <owl:Class rdf:about="&sn;T069_T131">
         <owl:equivalentClass>
@@ -4094,31 +4094,31 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T070 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T070 -->
 
     <owl:Class rdf:about="&sn;T070"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T071 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T071 -->
 
     <owl:Class rdf:about="&sn;T071"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T072 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T072 -->
 
     <owl:Class rdf:about="&sn;T072"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T073 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T073 -->
 
     <owl:Class rdf:about="&sn;T073"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T073_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T073_T131 -->
 
     <owl:Class rdf:about="&sn;T073_T131">
         <owl:equivalentClass>
@@ -4133,13 +4133,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T074 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T074 -->
 
     <owl:Class rdf:about="&sn;T074"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T074_T075 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T074_T075 -->
 
     <owl:Class rdf:about="&sn;T074_T075">
         <owl:equivalentClass>
@@ -4154,25 +4154,25 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T075 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T075 -->
 
     <owl:Class rdf:about="&sn;T075"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T077 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T077 -->
 
     <owl:Class rdf:about="&sn;T077"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T078 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T078 -->
 
     <owl:Class rdf:about="&sn;T078"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T079 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T079 -->
 
     <owl:Class rdf:about="&sn;T079">
         <owl:equivalentClass rdf:resource="&sn;Temporal_Concept"/>
@@ -4180,25 +4180,25 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T080 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T080 -->
 
     <owl:Class rdf:about="&sn;T080"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T081 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T081 -->
 
     <owl:Class rdf:about="&sn;T081"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T082 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T082 -->
 
     <owl:Class rdf:about="&sn;T082"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T082_T114 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T082_T114 -->
 
     <owl:Class rdf:about="&sn;T082_T114">
         <owl:equivalentClass>
@@ -4213,133 +4213,133 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T083 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T083 -->
 
     <owl:Class rdf:about="&sn;T083"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T085 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T085 -->
 
     <owl:Class rdf:about="&sn;T085"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T086 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T086 -->
 
     <owl:Class rdf:about="&sn;T086"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T087 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T087 -->
 
     <owl:Class rdf:about="&sn;T087"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T088 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T088 -->
 
     <owl:Class rdf:about="&sn;T088"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T089 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T089 -->
 
     <owl:Class rdf:about="&sn;T089"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T090 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T090 -->
 
     <owl:Class rdf:about="&sn;T090"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T091 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T091 -->
 
     <owl:Class rdf:about="&sn;T091"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T092 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T092 -->
 
     <owl:Class rdf:about="&sn;T092"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T093 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T093 -->
 
     <owl:Class rdf:about="&sn;T093"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T094 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T094 -->
 
     <owl:Class rdf:about="&sn;T094"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T095 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T095 -->
 
     <owl:Class rdf:about="&sn;T095"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T096 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T096 -->
 
     <owl:Class rdf:about="&sn;T096"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T097 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T097 -->
 
     <owl:Class rdf:about="&sn;T097"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T098 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T098 -->
 
     <owl:Class rdf:about="&sn;T098"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T099 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T099 -->
 
     <owl:Class rdf:about="&sn;T099"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T100 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T100 -->
 
     <owl:Class rdf:about="&sn;T100"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T101 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T101 -->
 
     <owl:Class rdf:about="&sn;T101"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T102 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T102 -->
 
     <owl:Class rdf:about="&sn;T102"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T103 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T103 -->
 
     <owl:Class rdf:about="&sn;T103"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T104 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T104 -->
 
     <owl:Class rdf:about="&sn;T104"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T104_T120 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T104_T120 -->
 
     <owl:Class rdf:about="&sn;T104_T120">
         <owl:equivalentClass>
@@ -4354,7 +4354,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T104_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T104_T121 -->
 
     <owl:Class rdf:about="&sn;T104_T121">
         <owl:equivalentClass>
@@ -4369,7 +4369,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T104_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T104_T122 -->
 
     <owl:Class rdf:about="&sn;T104_T122">
         <owl:equivalentClass>
@@ -4384,7 +4384,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T104_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T104_T123 -->
 
     <owl:Class rdf:about="&sn;T104_T123">
         <owl:equivalentClass>
@@ -4399,7 +4399,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T104_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T104_T130 -->
 
     <owl:Class rdf:about="&sn;T104_T130">
         <owl:equivalentClass>
@@ -4414,7 +4414,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T104_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T104_T131 -->
 
     <owl:Class rdf:about="&sn;T104_T131">
         <owl:equivalentClass>
@@ -4429,13 +4429,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109 -->
 
     <owl:Class rdf:about="&sn;T109"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T120 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T120 -->
 
     <owl:Class rdf:about="&sn;T109_T120">
         <owl:equivalentClass>
@@ -4450,7 +4450,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121 -->
 
     <owl:Class rdf:about="&sn;T109_T121">
         <owl:equivalentClass>
@@ -4465,7 +4465,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T122 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T122">
         <owl:equivalentClass>
@@ -4481,7 +4481,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T123 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T123">
         <owl:equivalentClass>
@@ -4497,7 +4497,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T123_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T123_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T123_T130">
         <owl:equivalentClass>
@@ -4514,7 +4514,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T123_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T123_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T123_T131">
         <owl:equivalentClass>
@@ -4531,7 +4531,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T124 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T124">
         <owl:equivalentClass>
@@ -4547,7 +4547,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T124_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T124_T125 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T124_T125">
         <owl:equivalentClass>
@@ -4564,7 +4564,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T125 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T125">
         <owl:equivalentClass>
@@ -4580,7 +4580,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T126 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T126">
         <owl:equivalentClass>
@@ -4596,7 +4596,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T127 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T127">
         <owl:equivalentClass>
@@ -4612,7 +4612,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T127_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T127_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T127_T131">
         <owl:equivalentClass>
@@ -4629,7 +4629,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T129 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T129">
         <owl:equivalentClass>
@@ -4645,7 +4645,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T129_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T129_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T129_T131">
         <owl:equivalentClass>
@@ -4662,7 +4662,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T130">
         <owl:equivalentClass>
@@ -4678,7 +4678,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T130_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T130_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T130_T131">
         <owl:equivalentClass>
@@ -4695,7 +4695,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T121_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T121_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T121_T131">
         <owl:equivalentClass>
@@ -4711,7 +4711,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T122 -->
 
     <owl:Class rdf:about="&sn;T109_T122">
         <owl:equivalentClass>
@@ -4726,7 +4726,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T122_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T122_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T122_T130">
         <owl:equivalentClass>
@@ -4742,7 +4742,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T122_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T122_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T122_T131">
         <owl:equivalentClass>
@@ -4758,7 +4758,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T123 -->
 
     <owl:Class rdf:about="&sn;T109_T123">
         <owl:equivalentClass>
@@ -4773,7 +4773,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T123_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T123_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T123_T130">
         <owl:equivalentClass>
@@ -4789,7 +4789,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T123_T130_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T123_T130_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T123_T130_T131">
         <owl:equivalentClass>
@@ -4806,7 +4806,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T123_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T123_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T123_T131">
         <owl:equivalentClass>
@@ -4822,7 +4822,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T123_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T123_T195 -->
 
     <owl:Class rdf:about="&sn;T109_T123_T195">
         <owl:equivalentClass>
@@ -4838,7 +4838,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T124 -->
 
     <owl:Class rdf:about="&sn;T109_T124">
         <owl:equivalentClass>
@@ -4853,7 +4853,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T124_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T124_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T124_T131">
         <owl:equivalentClass>
@@ -4869,7 +4869,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T125 -->
 
     <owl:Class rdf:about="&sn;T109_T125">
         <owl:equivalentClass>
@@ -4884,7 +4884,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T125_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T125_T129 -->
 
     <owl:Class rdf:about="&sn;T109_T125_T129">
         <owl:equivalentClass>
@@ -4900,7 +4900,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T125_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T125_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T125_T130">
         <owl:equivalentClass>
@@ -4916,7 +4916,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T125_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T125_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T125_T131">
         <owl:equivalentClass>
@@ -4932,7 +4932,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T126 -->
 
     <owl:Class rdf:about="&sn;T109_T126">
         <owl:equivalentClass>
@@ -4947,7 +4947,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T126_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T126_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T126_T130">
         <owl:equivalentClass>
@@ -4963,7 +4963,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T127 -->
 
     <owl:Class rdf:about="&sn;T109_T127">
         <owl:equivalentClass>
@@ -4978,7 +4978,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T127_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T127_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T127_T130">
         <owl:equivalentClass>
@@ -4994,7 +4994,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T129 -->
 
     <owl:Class rdf:about="&sn;T109_T129">
         <owl:equivalentClass>
@@ -5009,7 +5009,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T129_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T129_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T129_T130">
         <owl:equivalentClass>
@@ -5025,7 +5025,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T129_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T129_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T129_T131">
         <owl:equivalentClass>
@@ -5041,7 +5041,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T130 -->
 
     <owl:Class rdf:about="&sn;T109_T130">
         <owl:equivalentClass>
@@ -5056,7 +5056,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T130_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T130_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T130_T131">
         <owl:equivalentClass>
@@ -5072,7 +5072,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T130_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T130_T195 -->
 
     <owl:Class rdf:about="&sn;T109_T130_T195">
         <owl:equivalentClass>
@@ -5088,7 +5088,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T131 -->
 
     <owl:Class rdf:about="&sn;T109_T131">
         <owl:equivalentClass>
@@ -5103,7 +5103,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T131_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T131_T195 -->
 
     <owl:Class rdf:about="&sn;T109_T131_T195">
         <owl:equivalentClass>
@@ -5119,7 +5119,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T109_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T109_T195 -->
 
     <owl:Class rdf:about="&sn;T109_T195">
         <owl:equivalentClass>
@@ -5134,13 +5134,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110 -->
 
     <owl:Class rdf:about="&sn;T110"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T115 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T115 -->
 
     <owl:Class rdf:about="&sn;T110_T115">
         <owl:equivalentClass>
@@ -5155,7 +5155,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T115_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T115_T121 -->
 
     <owl:Class rdf:about="&sn;T110_T115_T121">
         <owl:equivalentClass>
@@ -5171,7 +5171,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T121 -->
 
     <owl:Class rdf:about="&sn;T110_T121">
         <owl:equivalentClass>
@@ -5186,7 +5186,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T121_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T121_T123 -->
 
     <owl:Class rdf:about="&sn;T110_T121_T123">
         <owl:equivalentClass>
@@ -5202,7 +5202,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T121_T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T121_T124 -->
 
     <owl:Class rdf:about="&sn;T110_T121_T124">
         <owl:equivalentClass>
@@ -5218,7 +5218,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T121_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T121_T125 -->
 
     <owl:Class rdf:about="&sn;T110_T121_T125">
         <owl:equivalentClass>
@@ -5234,7 +5234,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T121_T125_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T121_T125_T127 -->
 
     <owl:Class rdf:about="&sn;T110_T121_T125_T127">
         <owl:equivalentClass>
@@ -5251,7 +5251,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T121_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T121_T127 -->
 
     <owl:Class rdf:about="&sn;T110_T121_T127">
         <owl:equivalentClass>
@@ -5267,7 +5267,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T121_T130 -->
 
     <owl:Class rdf:about="&sn;T110_T121_T130">
         <owl:equivalentClass>
@@ -5283,7 +5283,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T121_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T121_T131 -->
 
     <owl:Class rdf:about="&sn;T110_T121_T131">
         <owl:equivalentClass>
@@ -5299,7 +5299,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T122 -->
 
     <owl:Class rdf:about="&sn;T110_T122">
         <owl:equivalentClass>
@@ -5314,7 +5314,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T123 -->
 
     <owl:Class rdf:about="&sn;T110_T123">
         <owl:equivalentClass>
@@ -5329,7 +5329,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T123_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T123_T131 -->
 
     <owl:Class rdf:about="&sn;T110_T123_T131">
         <owl:equivalentClass>
@@ -5345,7 +5345,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T124 -->
 
     <owl:Class rdf:about="&sn;T110_T124">
         <owl:equivalentClass>
@@ -5360,7 +5360,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T125 -->
 
     <owl:Class rdf:about="&sn;T110_T125">
         <owl:equivalentClass>
@@ -5375,7 +5375,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T125_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T125_T130 -->
 
     <owl:Class rdf:about="&sn;T110_T125_T130">
         <owl:equivalentClass>
@@ -5391,7 +5391,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T127 -->
 
     <owl:Class rdf:about="&sn;T110_T127">
         <owl:equivalentClass>
@@ -5406,7 +5406,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T127_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T127_T130 -->
 
     <owl:Class rdf:about="&sn;T110_T127_T130">
         <owl:equivalentClass>
@@ -5422,7 +5422,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T130 -->
 
     <owl:Class rdf:about="&sn;T110_T130">
         <owl:equivalentClass>
@@ -5437,7 +5437,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T131 -->
 
     <owl:Class rdf:about="&sn;T110_T131">
         <owl:equivalentClass>
@@ -5452,7 +5452,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T110_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T110_T195 -->
 
     <owl:Class rdf:about="&sn;T110_T195">
         <owl:equivalentClass>
@@ -5467,13 +5467,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T111 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111 -->
 
     <owl:Class rdf:about="&sn;T111"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T111_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111_T121 -->
 
     <owl:Class rdf:about="&sn;T111_T121">
         <owl:equivalentClass>
@@ -5488,7 +5488,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T111_T121_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111_T121_T123 -->
 
     <owl:Class rdf:about="&sn;T111_T121_T123">
         <owl:equivalentClass>
@@ -5504,7 +5504,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T111_T121_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111_T121_T125 -->
 
     <owl:Class rdf:about="&sn;T111_T121_T125">
         <owl:equivalentClass>
@@ -5520,7 +5520,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T111_T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111_T121_T130 -->
 
     <owl:Class rdf:about="&sn;T111_T121_T130">
         <owl:equivalentClass>
@@ -5536,7 +5536,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T111_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111_T123 -->
 
     <owl:Class rdf:about="&sn;T111_T123">
         <owl:equivalentClass>
@@ -5551,7 +5551,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T111_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111_T125 -->
 
     <owl:Class rdf:about="&sn;T111_T125">
         <owl:equivalentClass>
@@ -5566,7 +5566,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T111_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111_T129 -->
 
     <owl:Class rdf:about="&sn;T111_T129">
         <owl:equivalentClass>
@@ -5581,7 +5581,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T111_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T111_T130 -->
 
     <owl:Class rdf:about="&sn;T111_T130">
         <owl:equivalentClass>
@@ -5596,13 +5596,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114 -->
 
     <owl:Class rdf:about="&sn;T114"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T115 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T115 -->
 
     <owl:Class rdf:about="&sn;T114_T115">
         <owl:equivalentClass>
@@ -5617,7 +5617,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T115_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T115_T121 -->
 
     <owl:Class rdf:about="&sn;T114_T115_T121">
         <owl:equivalentClass>
@@ -5633,7 +5633,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T121 -->
 
     <owl:Class rdf:about="&sn;T114_T121">
         <owl:equivalentClass>
@@ -5648,7 +5648,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T121_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T121_T123 -->
 
     <owl:Class rdf:about="&sn;T114_T121_T123">
         <owl:equivalentClass>
@@ -5664,7 +5664,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T121_T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T121_T124 -->
 
     <owl:Class rdf:about="&sn;T114_T121_T124">
         <owl:equivalentClass>
@@ -5680,7 +5680,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T121_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T121_T127 -->
 
     <owl:Class rdf:about="&sn;T114_T121_T127">
         <owl:equivalentClass>
@@ -5696,7 +5696,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T121_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T121_T129 -->
 
     <owl:Class rdf:about="&sn;T114_T121_T129">
         <owl:equivalentClass>
@@ -5712,7 +5712,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T121_T130 -->
 
     <owl:Class rdf:about="&sn;T114_T121_T130">
         <owl:equivalentClass>
@@ -5728,7 +5728,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T121_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T121_T131 -->
 
     <owl:Class rdf:about="&sn;T114_T121_T131">
         <owl:equivalentClass>
@@ -5744,7 +5744,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T123 -->
 
     <owl:Class rdf:about="&sn;T114_T123">
         <owl:equivalentClass>
@@ -5759,7 +5759,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T123_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T123_T130 -->
 
     <owl:Class rdf:about="&sn;T114_T123_T130">
         <owl:equivalentClass>
@@ -5775,7 +5775,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T126 -->
 
     <owl:Class rdf:about="&sn;T114_T126">
         <owl:equivalentClass>
@@ -5790,7 +5790,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T127 -->
 
     <owl:Class rdf:about="&sn;T114_T127">
         <owl:equivalentClass>
@@ -5805,7 +5805,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T129 -->
 
     <owl:Class rdf:about="&sn;T114_T129">
         <owl:equivalentClass>
@@ -5820,7 +5820,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T130 -->
 
     <owl:Class rdf:about="&sn;T114_T130">
         <owl:equivalentClass>
@@ -5835,7 +5835,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T131 -->
 
     <owl:Class rdf:about="&sn;T114_T131">
         <owl:equivalentClass>
@@ -5850,7 +5850,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T114_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T114_T195 -->
 
     <owl:Class rdf:about="&sn;T114_T195">
         <owl:equivalentClass>
@@ -5865,13 +5865,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115 -->
 
     <owl:Class rdf:about="&sn;T115"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T116 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T116 -->
 
     <owl:Class rdf:about="&sn;T115_T116">
         <owl:equivalentClass>
@@ -5886,7 +5886,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T116_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T116_T121 -->
 
     <owl:Class rdf:about="&sn;T115_T116_T121">
         <owl:equivalentClass>
@@ -5902,7 +5902,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T116_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T116_T123 -->
 
     <owl:Class rdf:about="&sn;T115_T116_T123">
         <owl:equivalentClass>
@@ -5918,7 +5918,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T116_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T116_T195 -->
 
     <owl:Class rdf:about="&sn;T115_T116_T195">
         <owl:equivalentClass>
@@ -5934,7 +5934,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T118 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T118 -->
 
     <owl:Class rdf:about="&sn;T115_T118">
         <owl:equivalentClass>
@@ -5949,7 +5949,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T118_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T118_T121 -->
 
     <owl:Class rdf:about="&sn;T115_T118_T121">
         <owl:equivalentClass>
@@ -5965,7 +5965,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T119 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T119 -->
 
     <owl:Class rdf:about="&sn;T115_T119">
         <owl:equivalentClass>
@@ -5980,7 +5980,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T119_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T119_T121 -->
 
     <owl:Class rdf:about="&sn;T115_T119_T121">
         <owl:equivalentClass>
@@ -5996,7 +5996,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T119_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T119_T123 -->
 
     <owl:Class rdf:about="&sn;T115_T119_T123">
         <owl:equivalentClass>
@@ -6012,7 +6012,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T121 -->
 
     <owl:Class rdf:about="&sn;T115_T121">
         <owl:equivalentClass>
@@ -6027,7 +6027,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T121_T130 -->
 
     <owl:Class rdf:about="&sn;T115_T121_T130">
         <owl:equivalentClass>
@@ -6043,7 +6043,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T121_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T121_T131 -->
 
     <owl:Class rdf:about="&sn;T115_T121_T131">
         <owl:equivalentClass>
@@ -6059,7 +6059,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T122 -->
 
     <owl:Class rdf:about="&sn;T115_T122">
         <owl:equivalentClass>
@@ -6074,7 +6074,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T123 -->
 
     <owl:Class rdf:about="&sn;T115_T123">
         <owl:equivalentClass>
@@ -6089,7 +6089,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T127 -->
 
     <owl:Class rdf:about="&sn;T115_T127">
         <owl:equivalentClass>
@@ -6104,7 +6104,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T130 -->
 
     <owl:Class rdf:about="&sn;T115_T130">
         <owl:equivalentClass>
@@ -6119,7 +6119,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T131 -->
 
     <owl:Class rdf:about="&sn;T115_T131">
         <owl:equivalentClass>
@@ -6134,7 +6134,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T131_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T131_T195 -->
 
     <owl:Class rdf:about="&sn;T115_T131_T195">
         <owl:equivalentClass>
@@ -6150,7 +6150,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T115_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T115_T195 -->
 
     <owl:Class rdf:about="&sn;T115_T195">
         <owl:equivalentClass>
@@ -6165,13 +6165,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116 -->
 
     <owl:Class rdf:about="&sn;T116"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T120 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T120 -->
 
     <owl:Class rdf:about="&sn;T116_T120">
         <owl:equivalentClass>
@@ -6186,7 +6186,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121 -->
 
     <owl:Class rdf:about="&sn;T116_T121">
         <owl:equivalentClass>
@@ -6201,7 +6201,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T122 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T122">
         <owl:equivalentClass>
@@ -6217,7 +6217,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T123 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T123">
         <owl:equivalentClass>
@@ -6233,7 +6233,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T123_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T123_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T123_T131">
         <owl:equivalentClass>
@@ -6250,7 +6250,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T124 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T124">
         <owl:equivalentClass>
@@ -6266,7 +6266,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T124_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T124_T125 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T124_T125">
         <owl:equivalentClass>
@@ -6283,7 +6283,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T124_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T124_T126 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T124_T126">
         <owl:equivalentClass>
@@ -6300,7 +6300,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T125 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T125">
         <owl:equivalentClass>
@@ -6316,7 +6316,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T125_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T125_T129 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T125_T129">
         <owl:equivalentClass>
@@ -6333,7 +6333,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T126 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T126">
         <owl:equivalentClass>
@@ -6349,7 +6349,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T126_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T126_T127 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T126_T127">
         <owl:equivalentClass>
@@ -6366,7 +6366,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T126_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T126_T129 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T126_T129">
         <owl:equivalentClass>
@@ -6383,7 +6383,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T127 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T127">
         <owl:equivalentClass>
@@ -6399,7 +6399,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T129 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T129">
         <owl:equivalentClass>
@@ -6415,7 +6415,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T129_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T129_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T129_T130">
         <owl:equivalentClass>
@@ -6432,7 +6432,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T129_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T129_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T129_T131">
         <owl:equivalentClass>
@@ -6449,7 +6449,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T129_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T129_T192 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T129_T192">
         <owl:equivalentClass>
@@ -6466,7 +6466,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T130">
         <owl:equivalentClass>
@@ -6482,7 +6482,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T131">
         <owl:equivalentClass>
@@ -6498,7 +6498,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T121_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T121_T192 -->
 
     <owl:Class rdf:about="&sn;T116_T121_T192">
         <owl:equivalentClass>
@@ -6514,7 +6514,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T122 -->
 
     <owl:Class rdf:about="&sn;T116_T122">
         <owl:equivalentClass>
@@ -6529,7 +6529,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T122_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T122_T123 -->
 
     <owl:Class rdf:about="&sn;T116_T122_T123">
         <owl:equivalentClass>
@@ -6545,7 +6545,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T123 -->
 
     <owl:Class rdf:about="&sn;T116_T123">
         <owl:equivalentClass>
@@ -6560,7 +6560,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T123_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T123_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T123_T130">
         <owl:equivalentClass>
@@ -6576,7 +6576,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T123_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T123_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T123_T131">
         <owl:equivalentClass>
@@ -6592,7 +6592,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T123_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T123_T195 -->
 
     <owl:Class rdf:about="&sn;T116_T123_T195">
         <owl:equivalentClass>
@@ -6608,7 +6608,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T124 -->
 
     <owl:Class rdf:about="&sn;T116_T124">
         <owl:equivalentClass>
@@ -6623,7 +6623,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T124_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T124_T125 -->
 
     <owl:Class rdf:about="&sn;T116_T124_T125">
         <owl:equivalentClass>
@@ -6639,7 +6639,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T124_T125_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T124_T125_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T124_T125_T130">
         <owl:equivalentClass>
@@ -6656,7 +6656,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T124_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T124_T126 -->
 
     <owl:Class rdf:about="&sn;T116_T124_T126">
         <owl:equivalentClass>
@@ -6672,7 +6672,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T124_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T124_T129 -->
 
     <owl:Class rdf:about="&sn;T116_T124_T129">
         <owl:equivalentClass>
@@ -6688,7 +6688,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T124_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T124_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T124_T130">
         <owl:equivalentClass>
@@ -6704,7 +6704,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T124_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T124_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T124_T131">
         <owl:equivalentClass>
@@ -6720,7 +6720,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T125 -->
 
     <owl:Class rdf:about="&sn;T116_T125">
         <owl:equivalentClass>
@@ -6735,7 +6735,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T125_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T125_T129 -->
 
     <owl:Class rdf:about="&sn;T116_T125_T129">
         <owl:equivalentClass>
@@ -6751,7 +6751,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T125_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T125_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T125_T130">
         <owl:equivalentClass>
@@ -6767,7 +6767,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T126 -->
 
     <owl:Class rdf:about="&sn;T116_T126">
         <owl:equivalentClass>
@@ -6782,7 +6782,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T126_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T126_T129 -->
 
     <owl:Class rdf:about="&sn;T116_T126_T129">
         <owl:equivalentClass>
@@ -6798,7 +6798,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T126_T129_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T126_T129_T192 -->
 
     <owl:Class rdf:about="&sn;T116_T126_T129_T192">
         <owl:equivalentClass>
@@ -6815,7 +6815,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T126_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T126_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T126_T130">
         <owl:equivalentClass>
@@ -6831,7 +6831,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T126_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T126_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T126_T131">
         <owl:equivalentClass>
@@ -6847,7 +6847,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T126_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T126_T192 -->
 
     <owl:Class rdf:about="&sn;T116_T126_T192">
         <owl:equivalentClass>
@@ -6863,7 +6863,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T127 -->
 
     <owl:Class rdf:about="&sn;T116_T127">
         <owl:equivalentClass>
@@ -6878,7 +6878,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T127_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T127_T195 -->
 
     <owl:Class rdf:about="&sn;T116_T127_T195">
         <owl:equivalentClass>
@@ -6894,7 +6894,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T129 -->
 
     <owl:Class rdf:about="&sn;T116_T129">
         <owl:equivalentClass>
@@ -6909,7 +6909,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T129_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T129_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T129_T130">
         <owl:equivalentClass>
@@ -6925,7 +6925,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T129_T130_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T129_T130_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T129_T130_T131">
         <owl:equivalentClass>
@@ -6942,7 +6942,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T129_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T129_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T129_T131">
         <owl:equivalentClass>
@@ -6958,7 +6958,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T129_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T129_T192 -->
 
     <owl:Class rdf:about="&sn;T116_T129_T192">
         <owl:equivalentClass>
@@ -6974,7 +6974,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T130 -->
 
     <owl:Class rdf:about="&sn;T116_T130">
         <owl:equivalentClass>
@@ -6989,7 +6989,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T131 -->
 
     <owl:Class rdf:about="&sn;T116_T131">
         <owl:equivalentClass>
@@ -7004,7 +7004,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T192 -->
 
     <owl:Class rdf:about="&sn;T116_T192">
         <owl:equivalentClass>
@@ -7019,7 +7019,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T116_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T116_T195 -->
 
     <owl:Class rdf:about="&sn;T116_T195">
         <owl:equivalentClass>
@@ -7034,13 +7034,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118 -->
 
     <owl:Class rdf:about="&sn;T118"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T121 -->
 
     <owl:Class rdf:about="&sn;T118_T121">
         <owl:equivalentClass>
@@ -7055,7 +7055,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T121_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T121_T122 -->
 
     <owl:Class rdf:about="&sn;T118_T121_T122">
         <owl:equivalentClass>
@@ -7071,7 +7071,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T121_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T121_T123 -->
 
     <owl:Class rdf:about="&sn;T118_T121_T123">
         <owl:equivalentClass>
@@ -7087,7 +7087,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T121_T123_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T121_T123_T130 -->
 
     <owl:Class rdf:about="&sn;T118_T121_T123_T130">
         <owl:equivalentClass>
@@ -7104,7 +7104,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T121_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T121_T127 -->
 
     <owl:Class rdf:about="&sn;T118_T121_T127">
         <owl:equivalentClass>
@@ -7120,7 +7120,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T121_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T121_T129 -->
 
     <owl:Class rdf:about="&sn;T118_T121_T129">
         <owl:equivalentClass>
@@ -7136,7 +7136,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T121_T130 -->
 
     <owl:Class rdf:about="&sn;T118_T121_T130">
         <owl:equivalentClass>
@@ -7152,7 +7152,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T121_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T121_T131 -->
 
     <owl:Class rdf:about="&sn;T118_T121_T131">
         <owl:equivalentClass>
@@ -7168,7 +7168,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T122 -->
 
     <owl:Class rdf:about="&sn;T118_T122">
         <owl:equivalentClass>
@@ -7183,7 +7183,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T122_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T122_T123 -->
 
     <owl:Class rdf:about="&sn;T118_T122_T123">
         <owl:equivalentClass>
@@ -7199,7 +7199,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T122_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T122_T130 -->
 
     <owl:Class rdf:about="&sn;T118_T122_T130">
         <owl:equivalentClass>
@@ -7215,7 +7215,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T123 -->
 
     <owl:Class rdf:about="&sn;T118_T123">
         <owl:equivalentClass>
@@ -7230,7 +7230,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T123_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T123_T130 -->
 
     <owl:Class rdf:about="&sn;T118_T123_T130">
         <owl:equivalentClass>
@@ -7246,7 +7246,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T123_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T123_T195 -->
 
     <owl:Class rdf:about="&sn;T118_T123_T195">
         <owl:equivalentClass>
@@ -7262,7 +7262,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T127 -->
 
     <owl:Class rdf:about="&sn;T118_T127">
         <owl:equivalentClass>
@@ -7277,7 +7277,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T129 -->
 
     <owl:Class rdf:about="&sn;T118_T129">
         <owl:equivalentClass>
@@ -7292,7 +7292,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T130 -->
 
     <owl:Class rdf:about="&sn;T118_T130">
         <owl:equivalentClass>
@@ -7307,7 +7307,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T130_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T130_T195 -->
 
     <owl:Class rdf:about="&sn;T118_T130_T195">
         <owl:equivalentClass>
@@ -7323,7 +7323,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T131 -->
 
     <owl:Class rdf:about="&sn;T118_T131">
         <owl:equivalentClass>
@@ -7338,7 +7338,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T168 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T168 -->
 
     <owl:Class rdf:about="&sn;T118_T168">
         <owl:equivalentClass>
@@ -7353,7 +7353,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T192 -->
 
     <owl:Class rdf:about="&sn;T118_T192">
         <owl:equivalentClass>
@@ -7368,7 +7368,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T118_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T118_T195 -->
 
     <owl:Class rdf:about="&sn;T118_T195">
         <owl:equivalentClass>
@@ -7383,13 +7383,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119 -->
 
     <owl:Class rdf:about="&sn;T119"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T121 -->
 
     <owl:Class rdf:about="&sn;T119_T121">
         <owl:equivalentClass>
@@ -7404,7 +7404,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T121_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T121_T122 -->
 
     <owl:Class rdf:about="&sn;T119_T121_T122">
         <owl:equivalentClass>
@@ -7420,7 +7420,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T121_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T121_T123 -->
 
     <owl:Class rdf:about="&sn;T119_T121_T123">
         <owl:equivalentClass>
@@ -7436,7 +7436,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T121_T123_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T121_T123_T130 -->
 
     <owl:Class rdf:about="&sn;T119_T121_T123_T130">
         <owl:equivalentClass>
@@ -7453,7 +7453,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T121_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T121_T127 -->
 
     <owl:Class rdf:about="&sn;T119_T121_T127">
         <owl:equivalentClass>
@@ -7469,7 +7469,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T121_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T121_T129 -->
 
     <owl:Class rdf:about="&sn;T119_T121_T129">
         <owl:equivalentClass>
@@ -7485,7 +7485,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T121_T130 -->
 
     <owl:Class rdf:about="&sn;T119_T121_T130">
         <owl:equivalentClass>
@@ -7501,7 +7501,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T122 -->
 
     <owl:Class rdf:about="&sn;T119_T122">
         <owl:equivalentClass>
@@ -7516,7 +7516,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T122_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T122_T123 -->
 
     <owl:Class rdf:about="&sn;T119_T122_T123">
         <owl:equivalentClass>
@@ -7532,7 +7532,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T123 -->
 
     <owl:Class rdf:about="&sn;T119_T123">
         <owl:equivalentClass>
@@ -7547,7 +7547,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T125 -->
 
     <owl:Class rdf:about="&sn;T119_T125">
         <owl:equivalentClass>
@@ -7562,7 +7562,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T126 -->
 
     <owl:Class rdf:about="&sn;T119_T126">
         <owl:equivalentClass>
@@ -7577,7 +7577,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T127 -->
 
     <owl:Class rdf:about="&sn;T119_T127">
         <owl:equivalentClass>
@@ -7592,7 +7592,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T129 -->
 
     <owl:Class rdf:about="&sn;T119_T129">
         <owl:equivalentClass>
@@ -7607,7 +7607,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T129_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T129_T192 -->
 
     <owl:Class rdf:about="&sn;T119_T129_T192">
         <owl:equivalentClass>
@@ -7623,7 +7623,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T130 -->
 
     <owl:Class rdf:about="&sn;T119_T130">
         <owl:equivalentClass>
@@ -7638,7 +7638,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T131 -->
 
     <owl:Class rdf:about="&sn;T119_T131">
         <owl:equivalentClass>
@@ -7653,7 +7653,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T168 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T168 -->
 
     <owl:Class rdf:about="&sn;T119_T168">
         <owl:equivalentClass>
@@ -7668,7 +7668,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T192 -->
 
     <owl:Class rdf:about="&sn;T119_T192">
         <owl:equivalentClass>
@@ -7683,7 +7683,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T119_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T119_T195 -->
 
     <owl:Class rdf:about="&sn;T119_T195">
         <owl:equivalentClass>
@@ -7698,19 +7698,19 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T120 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T120 -->
 
     <owl:Class rdf:about="&sn;T120"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T121 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121 -->
 
     <owl:Class rdf:about="&sn;T121"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T122 -->
 
     <owl:Class rdf:about="&sn;T121_T122">
         <owl:equivalentClass>
@@ -7725,7 +7725,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T122_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T122_T130 -->
 
     <owl:Class rdf:about="&sn;T121_T122_T130">
         <owl:equivalentClass>
@@ -7741,7 +7741,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T122_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T122_T196 -->
 
     <owl:Class rdf:about="&sn;T121_T122_T196">
         <owl:equivalentClass>
@@ -7757,7 +7757,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T122_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T122_T197 -->
 
     <owl:Class rdf:about="&sn;T121_T122_T197">
         <owl:equivalentClass>
@@ -7773,7 +7773,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T123 -->
 
     <owl:Class rdf:about="&sn;T121_T123">
         <owl:equivalentClass>
@@ -7788,7 +7788,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T123_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T123_T131 -->
 
     <owl:Class rdf:about="&sn;T121_T123_T131">
         <owl:equivalentClass>
@@ -7804,7 +7804,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T123_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T123_T196 -->
 
     <owl:Class rdf:about="&sn;T121_T123_T196">
         <owl:equivalentClass>
@@ -7820,7 +7820,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T123_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T123_T197 -->
 
     <owl:Class rdf:about="&sn;T121_T123_T197">
         <owl:equivalentClass>
@@ -7836,7 +7836,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T124 -->
 
     <owl:Class rdf:about="&sn;T121_T124">
         <owl:equivalentClass>
@@ -7851,7 +7851,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T124_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T124_T125 -->
 
     <owl:Class rdf:about="&sn;T121_T124_T125">
         <owl:equivalentClass>
@@ -7867,7 +7867,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T125 -->
 
     <owl:Class rdf:about="&sn;T121_T125">
         <owl:equivalentClass>
@@ -7882,7 +7882,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T125_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T125_T127 -->
 
     <owl:Class rdf:about="&sn;T121_T125_T127">
         <owl:equivalentClass>
@@ -7898,7 +7898,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T126 -->
 
     <owl:Class rdf:about="&sn;T121_T126">
         <owl:equivalentClass>
@@ -7913,7 +7913,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T126_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T126_T131 -->
 
     <owl:Class rdf:about="&sn;T121_T126_T131">
         <owl:equivalentClass>
@@ -7929,7 +7929,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T127 -->
 
     <owl:Class rdf:about="&sn;T121_T127">
         <owl:equivalentClass>
@@ -7944,7 +7944,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T129 -->
 
     <owl:Class rdf:about="&sn;T121_T129">
         <owl:equivalentClass>
@@ -7959,7 +7959,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T129_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T129_T130 -->
 
     <owl:Class rdf:about="&sn;T121_T129_T130">
         <owl:equivalentClass>
@@ -7975,7 +7975,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T129_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T129_T131 -->
 
     <owl:Class rdf:about="&sn;T121_T129_T131">
         <owl:equivalentClass>
@@ -7991,7 +7991,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T130 -->
 
     <owl:Class rdf:about="&sn;T121_T130">
         <owl:equivalentClass>
@@ -8006,7 +8006,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T130_T131_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T130_T131_T196 -->
 
     <owl:Class rdf:about="&sn;T121_T130_T131_T196">
         <owl:equivalentClass>
@@ -8023,7 +8023,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T130_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T130_T196 -->
 
     <owl:Class rdf:about="&sn;T121_T130_T196">
         <owl:equivalentClass>
@@ -8039,7 +8039,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T130_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T130_T197 -->
 
     <owl:Class rdf:about="&sn;T121_T130_T197">
         <owl:equivalentClass>
@@ -8055,7 +8055,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T131 -->
 
     <owl:Class rdf:about="&sn;T121_T131">
         <owl:equivalentClass>
@@ -8070,7 +8070,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T131_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T131_T197 -->
 
     <owl:Class rdf:about="&sn;T121_T131_T197">
         <owl:equivalentClass>
@@ -8086,7 +8086,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T196 -->
 
     <owl:Class rdf:about="&sn;T121_T196">
         <owl:equivalentClass>
@@ -8101,7 +8101,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T121_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T121_T197 -->
 
     <owl:Class rdf:about="&sn;T121_T197">
         <owl:equivalentClass>
@@ -8116,13 +8116,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T122 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T122 -->
 
     <owl:Class rdf:about="&sn;T122"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T122_T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T122_T123 -->
 
     <owl:Class rdf:about="&sn;T122_T123">
         <owl:equivalentClass>
@@ -8137,7 +8137,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T122_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T122_T130 -->
 
     <owl:Class rdf:about="&sn;T122_T130">
         <owl:equivalentClass>
@@ -8152,7 +8152,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T122_T130_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T122_T130_T197 -->
 
     <owl:Class rdf:about="&sn;T122_T130_T197">
         <owl:equivalentClass>
@@ -8168,7 +8168,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T122_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T122_T131 -->
 
     <owl:Class rdf:about="&sn;T122_T131">
         <owl:equivalentClass>
@@ -8183,7 +8183,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T122_T131_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T122_T131_T196 -->
 
     <owl:Class rdf:about="&sn;T122_T131_T196">
         <owl:equivalentClass>
@@ -8199,7 +8199,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T122_T131_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T122_T131_T197 -->
 
     <owl:Class rdf:about="&sn;T122_T131_T197">
         <owl:equivalentClass>
@@ -8215,7 +8215,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T122_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T122_T197 -->
 
     <owl:Class rdf:about="&sn;T122_T197">
         <owl:equivalentClass>
@@ -8230,13 +8230,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T123 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123 -->
 
     <owl:Class rdf:about="&sn;T123"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T123_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123_T130 -->
 
     <owl:Class rdf:about="&sn;T123_T130">
         <owl:equivalentClass>
@@ -8251,7 +8251,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T123_T130_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123_T130_T196 -->
 
     <owl:Class rdf:about="&sn;T123_T130_T196">
         <owl:equivalentClass>
@@ -8267,7 +8267,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T123_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123_T131 -->
 
     <owl:Class rdf:about="&sn;T123_T131">
         <owl:equivalentClass>
@@ -8282,7 +8282,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T123_T131_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123_T131_T196 -->
 
     <owl:Class rdf:about="&sn;T123_T131_T196">
         <owl:equivalentClass>
@@ -8298,7 +8298,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T123_T168 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123_T168 -->
 
     <owl:Class rdf:about="&sn;T123_T168">
         <owl:equivalentClass>
@@ -8313,7 +8313,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T123_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123_T195 -->
 
     <owl:Class rdf:about="&sn;T123_T195">
         <owl:equivalentClass>
@@ -8328,7 +8328,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T123_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123_T196 -->
 
     <owl:Class rdf:about="&sn;T123_T196">
         <owl:equivalentClass>
@@ -8343,7 +8343,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T123_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T123_T197 -->
 
     <owl:Class rdf:about="&sn;T123_T197">
         <owl:equivalentClass>
@@ -8358,13 +8358,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T124 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T124 -->
 
     <owl:Class rdf:about="&sn;T124"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T124_T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T124_T125 -->
 
     <owl:Class rdf:about="&sn;T124_T125">
         <owl:equivalentClass>
@@ -8379,13 +8379,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T125 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T125 -->
 
     <owl:Class rdf:about="&sn;T125"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T125_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T125_T192 -->
 
     <owl:Class rdf:about="&sn;T125_T192">
         <owl:equivalentClass>
@@ -8400,13 +8400,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T126 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T126 -->
 
     <owl:Class rdf:about="&sn;T126"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T126_T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T126_T129 -->
 
     <owl:Class rdf:about="&sn;T126_T129">
         <owl:equivalentClass>
@@ -8421,7 +8421,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T126_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T126_T130 -->
 
     <owl:Class rdf:about="&sn;T126_T130">
         <owl:equivalentClass>
@@ -8436,7 +8436,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T126_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T126_T131 -->
 
     <owl:Class rdf:about="&sn;T126_T131">
         <owl:equivalentClass>
@@ -8451,7 +8451,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T126_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T126_T192 -->
 
     <owl:Class rdf:about="&sn;T126_T192">
         <owl:equivalentClass>
@@ -8466,7 +8466,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T127 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T127 -->
 
     <owl:Class rdf:about="&sn;T127">
         <owl:equivalentClass rdf:resource="&sn;Vitamin"/>
@@ -8474,13 +8474,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T129 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T129 -->
 
     <owl:Class rdf:about="&sn;T129"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T129_T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T129_T130 -->
 
     <owl:Class rdf:about="&sn;T129_T130">
         <owl:equivalentClass>
@@ -8495,7 +8495,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T129_T130_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T129_T130_T131 -->
 
     <owl:Class rdf:about="&sn;T129_T130_T131">
         <owl:equivalentClass>
@@ -8511,7 +8511,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T129_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T129_T131 -->
 
     <owl:Class rdf:about="&sn;T129_T131">
         <owl:equivalentClass>
@@ -8526,7 +8526,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T129_T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T129_T192 -->
 
     <owl:Class rdf:about="&sn;T129_T192">
         <owl:equivalentClass>
@@ -8541,13 +8541,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T130 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T130 -->
 
     <owl:Class rdf:about="&sn;T130"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T130_T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T130_T131 -->
 
     <owl:Class rdf:about="&sn;T130_T131">
         <owl:equivalentClass>
@@ -8562,7 +8562,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T130_T131_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T130_T131_T196 -->
 
     <owl:Class rdf:about="&sn;T130_T131_T196">
         <owl:equivalentClass>
@@ -8578,7 +8578,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T130_T131_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T130_T131_T197 -->
 
     <owl:Class rdf:about="&sn;T130_T131_T197">
         <owl:equivalentClass>
@@ -8594,7 +8594,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T130_T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T130_T195 -->
 
     <owl:Class rdf:about="&sn;T130_T195">
         <owl:equivalentClass>
@@ -8609,7 +8609,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T130_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T130_T196 -->
 
     <owl:Class rdf:about="&sn;T130_T196">
         <owl:equivalentClass>
@@ -8624,7 +8624,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T130_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T130_T197 -->
 
     <owl:Class rdf:about="&sn;T130_T197">
         <owl:equivalentClass>
@@ -8639,13 +8639,13 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T131 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T131 -->
 
     <owl:Class rdf:about="&sn;T131"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T131_T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T131_T196 -->
 
     <owl:Class rdf:about="&sn;T131_T196">
         <owl:equivalentClass>
@@ -8660,7 +8660,7 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T131_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T131_T197 -->
 
     <owl:Class rdf:about="&sn;T131_T197">
         <owl:equivalentClass>
@@ -8675,19 +8675,19 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T167 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T167 -->
 
     <owl:Class rdf:about="&sn;T167"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T168 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T168 -->
 
     <owl:Class rdf:about="&sn;T168"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T168_T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T168_T197 -->
 
     <owl:Class rdf:about="&sn;T168_T197">
         <owl:equivalentClass>
@@ -8702,79 +8702,79 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T169 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T169 -->
 
     <owl:Class rdf:about="&sn;T169"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T170 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T170 -->
 
     <owl:Class rdf:about="&sn;T170"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T171 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T171 -->
 
     <owl:Class rdf:about="&sn;T171"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T184 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T184 -->
 
     <owl:Class rdf:about="&sn;T184"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T190 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T190 -->
 
     <owl:Class rdf:about="&sn;T190"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T191 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T191 -->
 
     <owl:Class rdf:about="&sn;T191"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T192 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T192 -->
 
     <owl:Class rdf:about="&sn;T192"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T194 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T194 -->
 
     <owl:Class rdf:about="&sn;T194"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T195 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T195 -->
 
     <owl:Class rdf:about="&sn;T195"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T196 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T196 -->
 
     <owl:Class rdf:about="&sn;T196"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T197 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T197 -->
 
     <owl:Class rdf:about="&sn;T197"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T200 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T200 -->
 
     <owl:Class rdf:about="&sn;T200"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T200_T203 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T200_T203 -->
 
     <owl:Class rdf:about="&sn;T200_T203">
         <owl:equivalentClass>
@@ -8789,49 +8789,49 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#T201 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T201 -->
 
     <owl:Class rdf:about="&sn;T201"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#T203 -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#T203 -->
 
     <owl:Class rdf:about="&sn;T203"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#Temporal_Concept -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Temporal_Concept -->
 
     <owl:Class rdf:about="&sn;Temporal_Concept"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#Therapeutic_or_Preventive_Procedure -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Therapeutic_or_Preventive_Procedure -->
 
     <owl:Class rdf:about="&sn;Therapeutic_or_Preventive_Procedure"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#Tissue -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Tissue -->
 
     <owl:Class rdf:about="&sn;Tissue"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#Vertebrate -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Vertebrate -->
 
     <owl:Class rdf:about="&sn;Vertebrate"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#Virus -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Virus -->
 
     <owl:Class rdf:about="&sn;Virus"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#Vitamin -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Vitamin -->
 
     <owl:Class rdf:about="&sn;Vitamin">
         <owl:equivalentClass>
@@ -8844,79 +8844,79 @@
     
 
 
-    <!-- http://localhost/umlssn.owl#affects -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#affects -->
 
     <owl:Class rdf:about="&sn;affects"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#causes -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#causes -->
 
     <owl:Class rdf:about="&sn;causes"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#complicates -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#complicates -->
 
     <owl:Class rdf:about="&sn;complicates"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#disrupts -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#disrupts -->
 
     <owl:Class rdf:about="&sn;disrupts"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#indicates -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#indicates -->
 
     <owl:Class rdf:about="&sn;indicates"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#interacts -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#interacts -->
 
     <owl:Class rdf:about="&sn;interacts"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#manages -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#manages -->
 
     <owl:Class rdf:about="&sn;manages"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#measures -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#measures -->
 
     <owl:Class rdf:about="&sn;measures"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#performs -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#performs -->
 
     <owl:Class rdf:about="&sn;performs"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#prevents -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#prevents -->
 
     <owl:Class rdf:about="&sn;prevents"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#produces -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#produces -->
 
     <owl:Class rdf:about="&sn;produces"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#treats -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#treats -->
 
     <owl:Class rdf:about="&sn;treats"/>
     
 
 
-    <!-- http://localhost/umlssn.owl#uses -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#uses -->
 
     <owl:Class rdf:about="&sn;uses"/>
     

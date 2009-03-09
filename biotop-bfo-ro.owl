@@ -2,7 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY bt "http://localhost/biotop.owl#" >
+    <!ENTITY bt "http://purl.org/biotop/1.0/biotop.owl#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -16,8 +16,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://localhost/biotop-bfo-ro.owl#"
-     xml:base="http://localhost/biotop-bfo-ro.owl"
+<rdf:RDF xmlns="http://purl.org/biotop/1.0/biotop-bfo-ro.owl#"
+     xml:base="http://purl.org/biotop/1.0/biotop-bfo-ro.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
@@ -27,7 +27,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2008/05/skos#"
-     xmlns:bt="http://localhost/biotop.owl#"
+     xmlns:bt="http://purl.org/biotop/1.0/biotop.owl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
@@ -57,7 +57,7 @@
             >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
         <owl:versionInfo>dev</owl:versionInfo>
         <dc:identifier
-            >http://localhost/biotop-bfo-ro.owl</dc:identifier>
+            >http://purl.org/biotop/1.0/biotop-bfo-ro.owl</dc:identifier>
         <dc:language>en</dc:language>
         <skos:prefLabel></skos:prefLabel>
         <skos:altLabel></skos:altLabel>
@@ -68,7 +68,7 @@
         <skos:example></skos:example>
         <dc:source
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
-        <owl:imports rdf:resource="http://localhost/biotop.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/1.0/biotop.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
     
@@ -120,7 +120,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#adjacentTo -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#adjacentTo -->
 
     <owl:ObjectProperty rdf:about="&bt;adjacentTo">
         <owl:equivalentProperty rdf:resource="&ro;adjacent_to"/>
@@ -128,7 +128,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#agentIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#agentIn -->
 
     <owl:ObjectProperty rdf:about="&bt;agentIn">
         <owl:equivalentProperty rdf:resource="&ro;agent_in"/>
@@ -136,7 +136,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#containedIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#containedIn -->
 
     <owl:ObjectProperty rdf:about="&bt;containedIn">
         <owl:equivalentProperty rdf:resource="&ro;contained_in"/>
@@ -144,7 +144,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#contains -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#contains -->
 
     <owl:ObjectProperty rdf:about="&bt;contains">
         <owl:equivalentProperty rdf:resource="&ro;contains"/>
@@ -152,7 +152,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#derivedInto -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#derivedInto -->
 
     <owl:ObjectProperty rdf:about="&bt;derivedInto">
         <owl:equivalentProperty rdf:resource="&ro;derived_into"/>
@@ -160,7 +160,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#derivesFrom -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#derivesFrom -->
 
     <owl:ObjectProperty rdf:about="&bt;derivesFrom">
         <owl:equivalentProperty rdf:resource="&ro;derives_from"/>
@@ -168,7 +168,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#hasAgent -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasAgent -->
 
     <owl:ObjectProperty rdf:about="&bt;hasAgent">
         <owl:equivalentProperty rdf:resource="&ro;has_agent"/>
@@ -176,7 +176,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#hasPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPart -->
 
     <owl:ObjectProperty rdf:about="&bt;hasPart">
         <owl:equivalentProperty rdf:resource="&ro;has_part"/>
@@ -184,7 +184,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#hasParticipant -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasParticipant -->
 
     <owl:ObjectProperty rdf:about="&bt;hasParticipant">
         <owl:equivalentProperty rdf:resource="&ro;has_participant"/>
@@ -192,7 +192,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#hasProperPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProperPart -->
 
     <owl:ObjectProperty rdf:about="&bt;hasProperPart">
         <owl:equivalentProperty rdf:resource="&ro;has_proper_part"/>
@@ -200,7 +200,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#locatedIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#locatedIn -->
 
     <owl:ObjectProperty rdf:about="&bt;locatedIn">
         <owl:equivalentProperty rdf:resource="&ro;located_in"/>
@@ -208,7 +208,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#locationOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#locationOf -->
 
     <owl:ObjectProperty rdf:about="&bt;locationOf">
         <owl:equivalentProperty rdf:resource="&ro;location_of"/>
@@ -216,7 +216,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#partOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#partOf -->
 
     <owl:ObjectProperty rdf:about="&bt;partOf">
         <owl:equivalentProperty rdf:resource="&ro;part_of"/>
@@ -224,7 +224,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#participatesIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#participatesIn -->
 
     <owl:ObjectProperty rdf:about="&bt;participatesIn">
         <owl:equivalentProperty rdf:resource="&ro;participates_in"/>
@@ -232,7 +232,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#precededBy -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#precededBy -->
 
     <owl:ObjectProperty rdf:about="&bt;precededBy">
         <owl:equivalentProperty rdf:resource="&ro;preceded_by"/>
@@ -240,7 +240,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#precedes -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#precedes -->
 
     <owl:ObjectProperty rdf:about="&bt;precedes">
         <owl:equivalentProperty rdf:resource="&ro;precedes"/>
@@ -248,7 +248,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#properPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#properPartOf -->
 
     <owl:ObjectProperty rdf:about="&bt;properPartOf">
         <owl:equivalentProperty rdf:resource="&ro;proper_part_of"/>
@@ -369,7 +369,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Disposition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Disposition -->
 
     <owl:Class rdf:about="&bt;Disposition">
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
@@ -377,7 +377,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Function -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Function -->
 
     <owl:Class rdf:about="&bt;Function">
         <rdfs:subClassOf rdf:resource="&snap;Function"/>
@@ -385,7 +385,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ImmaterialNonphysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmaterialNonphysicalEntity -->
 
     <owl:Class rdf:about="&bt;ImmaterialNonphysicalEntity">
         <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
@@ -393,7 +393,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ImmaterialPhysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmaterialPhysicalEntity -->
 
     <owl:Class rdf:about="&bt;ImmaterialPhysicalEntity">
         <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
@@ -401,7 +401,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#MaterialEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MaterialEntity -->
 
     <owl:Class rdf:about="&bt;MaterialEntity">
         <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
@@ -409,7 +409,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#ProcessualEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProcessualEntity -->
 
     <owl:Class rdf:about="&bt;ProcessualEntity">
         <owl:equivalentClass>
@@ -428,7 +428,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Quality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Quality -->
 
     <owl:Class rdf:about="&bt;Quality">
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
@@ -436,7 +436,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#QualityRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#QualityRegion -->
 
     <owl:Class rdf:about="&bt;QualityRegion">
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
@@ -444,7 +444,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#Role -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Role -->
 
     <owl:Class rdf:about="&bt;Role">
         <rdfs:subClassOf rdf:resource="&snap;Role"/>
@@ -452,7 +452,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#SpatialRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpatialRegion -->
 
     <owl:Class rdf:about="&bt;SpatialRegion">
         <owl:equivalentClass>
@@ -470,7 +470,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#State -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#State -->
 
     <owl:Class rdf:about="&bt;State">
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
@@ -478,7 +478,7 @@
     
 
 
-    <!-- http://localhost/biotop.owl#TemporalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TemporalEntity -->
 
     <owl:Class rdf:about="&bt;TemporalEntity">
         <owl:equivalentClass>

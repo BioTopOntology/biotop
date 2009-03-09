@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY ct "http://localhost/chemtop.owl#" >
+    <!ENTITY ct "http://purl.org/biotop/1.0/chemtop.owl#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -12,12 +12,12 @@
 ]>
 
 
-<rdf:RDF xmlns="http://localhost/chemtop.owl#"
-     xml:base="http://localhost/chemtop.owl"
+<rdf:RDF xmlns="http://purl.org/biotop/1.0/chemtop.owl#"
+     xml:base="http://purl.org/biotop/1.0/chemtop.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:ct="http://localhost/chemtop.owl#"
+     xmlns:ct="http://purl.org/biotop/1.0/chemtop.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -45,7 +45,7 @@
         <skos:altLabel></skos:altLabel>
         <skos:prefLabel></skos:prefLabel>
         <dc:identifier
-            >http://localhost/chemtop.owl</dc:identifier>
+            >http://purl.org/biotop/1.0/chemtop.owl</dc:identifier>
         <skos:example></skos:example>
         <dc:type></dc:type>
         <dc:creator>Stefan Schulz</dc:creator>
@@ -107,13 +107,13 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#boundaryOf -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#boundaryOf -->
 
     <owl:ObjectProperty rdf:about="#boundaryOf"/>
     
 
 
-    <!-- http://localhost/chemtop.owl#boundedBy -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#boundedBy -->
 
     <owl:ObjectProperty rdf:about="#boundedBy">
         <rdfs:domain rdf:resource="#MolecularPart"/>
@@ -122,7 +122,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#componentPartOf -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
         <skos:definition
@@ -136,13 +136,13 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#condensesTo -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#condensesTo -->
 
     <owl:ObjectProperty rdf:about="#condensesTo"/>
     
 
 
-    <!-- http://localhost/chemtop.owl#granularPart -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#granularPart -->
 
     <owl:ObjectProperty rdf:about="#granularPart">
         <rdfs:comment
@@ -156,7 +156,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#hasComponentPart -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="#hasComponentPart">
         <rdfs:comment
@@ -166,7 +166,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#hasGranularPart -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="#hasGranularPart">
         <rdfs:comment
@@ -176,7 +176,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#hasPart -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#hasPart -->
 
     <owl:ObjectProperty rdf:about="#hasPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -187,7 +187,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#hasProperPart -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#hasProperPart -->
 
     <owl:ObjectProperty rdf:about="#hasProperPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -199,7 +199,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#partOf -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#partOf -->
 
     <owl:ObjectProperty rdf:about="#partOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -212,7 +212,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#properPartOf -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#properPartOf -->
 
     <owl:ObjectProperty rdf:about="#properPartOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -254,7 +254,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#AcyclicAliphaticHydrocarbon -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#AcyclicAliphaticHydrocarbon -->
 
     <owl:Class rdf:about="#AcyclicAliphaticHydrocarbon">
         <rdfs:label>aliphatic chain</rdfs:label>
@@ -265,7 +265,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#Adenin-9-yl_group -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Adenin-9-yl_group -->
 
     <owl:Class rdf:about="#Adenin-9-yl_group">
         <rdfs:label>adenine</rdfs:label>
@@ -275,7 +275,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#AminoAcidChain -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#AminoAcidChain -->
 
     <owl:Class rdf:about="#AminoAcidChain">
         <rdfs:label
@@ -301,7 +301,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#AminoAcidMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#AminoAcidMolecule -->
 
     <owl:Class rdf:about="#AminoAcidMolecule">
         <rdfs:label
@@ -339,7 +339,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#AminoAcidResidue -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#AminoAcidResidue -->
 
     <owl:Class rdf:about="#AminoAcidResidue">
         <rdfs:subClassOf rdf:resource="#Residue"/>
@@ -353,7 +353,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#AminoGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#AminoGroup -->
 
     <owl:Class rdf:about="#AminoGroup">
         <rdfs:label>amino group</rdfs:label>
@@ -391,7 +391,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#AromaticHydrocarbon -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#AromaticHydrocarbon -->
 
     <owl:Class rdf:about="#AromaticHydrocarbon">
         <rdfs:label
@@ -403,7 +403,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#Atom -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Atom -->
 
     <owl:Class rdf:about="#Atom">
         <rdfs:label>atom</rdfs:label>
@@ -426,7 +426,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#BackbonePhosphateUnit -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#BackbonePhosphateUnit -->
 
     <owl:Class rdf:about="#BackbonePhosphateUnit">
         <rdfs:label>phosphate</rdfs:label>
@@ -462,7 +462,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#BackbonePhosphateUnitBoundary -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#BackbonePhosphateUnitBoundary -->
 
     <owl:Class rdf:about="#BackbonePhosphateUnitBoundary">
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
@@ -470,7 +470,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#C10-24Chain -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#C10-24Chain -->
 
     <owl:Class rdf:about="#C10-24Chain">
         <rdfs:label>C10-24 chain</rdfs:label>
@@ -479,7 +479,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#C5Chain -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#C5Chain -->
 
     <owl:Class rdf:about="#C5Chain">
         <rdfs:label>C5 chain</rdfs:label>
@@ -492,7 +492,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#C6Chain -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#C6Chain -->
 
     <owl:Class rdf:about="#C6Chain">
         <rdfs:label>C6 chain</rdfs:label>
@@ -505,7 +505,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#Carbohydrate -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Carbohydrate -->
 
     <owl:Class rdf:about="#Carbohydrate">
         <rdfs:label>carbohydrate</rdfs:label>
@@ -523,7 +523,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#CarbonAtom -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#CarbonAtom -->
 
     <owl:Class rdf:about="#CarbonAtom">
         <rdfs:label>carbon atom</rdfs:label>
@@ -532,7 +532,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#CarbonChain -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#CarbonChain -->
 
     <owl:Class rdf:about="#CarbonChain">
         <rdfs:label>carbon chain</rdfs:label>
@@ -555,7 +555,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#CarbonHydrogenSubstructure -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#CarbonHydrogenSubstructure -->
 
     <owl:Class rdf:about="#CarbonHydrogenSubstructure">
         <rdfs:label
@@ -594,7 +594,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#CarbonylGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#CarbonylGroup -->
 
     <owl:Class rdf:about="#CarbonylGroup">
         <rdfs:subClassOf rdf:resource="#FunctionalGroup"/>
@@ -602,7 +602,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#CarboxyGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#CarboxyGroup -->
 
     <owl:Class rdf:about="#CarboxyGroup">
         <rdfs:label>carboxy group</rdfs:label>
@@ -646,7 +646,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#ChromosomalDNA -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#ChromosomalDNA -->
 
     <owl:Class rdf:about="#ChromosomalDNA">
         <rdfs:label>chromosomal DNA</rdfs:label>
@@ -659,7 +659,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#CollectiveMaterialEntity -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="#CollectiveMaterialEntity">
         <rdfs:label
@@ -675,7 +675,7 @@
     
 
 
-    <!-- http://localhost/chemtop.owl#CompoundOfCollectiveMaterialEntities -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="#CompoundOfCollectiveMaterialEntities">
         <rdfs:label
@@ -700,7 +700,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#CyclicAliphaticHydrocarbon -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#CyclicAliphaticHydrocarbon -->
 
     <owl:Class rdf:about="#CyclicAliphaticHydrocarbon">
         <rdfs:label
@@ -712,7 +712,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Cytosin-1-yl_group -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Cytosin-1-yl_group -->
 
     <owl:Class rdf:about="#Cytosin-1-yl_group">
         <rdfs:label>cytosine</rdfs:label>
@@ -722,7 +722,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#DNAFragment -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#DNAFragment -->
 
     <owl:Class rdf:about="#DNAFragment">
         <rdfs:label>DNA fragment</rdfs:label>
@@ -733,7 +733,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#DNAMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#DNAMolecule -->
 
     <owl:Class rdf:about="#DNAMolecule">
         <rdfs:label>DNA sequence</rdfs:label>
@@ -751,7 +751,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#DNARegion -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#DNARegion -->
 
     <owl:Class rdf:about="#DNARegion">
         <rdfs:label>DNA region</rdfs:label>
@@ -762,7 +762,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Deoxyribonucleotide -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Deoxyribonucleotide -->
 
     <owl:Class rdf:about="#Deoxyribonucleotide">
         <rdfs:subClassOf rdf:resource="#Nucleotide"/>
@@ -776,7 +776,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#DeoxyribonucleotideResidue -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#DeoxyribonucleotideResidue -->
 
     <owl:Class rdf:about="#DeoxyribonucleotideResidue">
         <rdfs:label
@@ -816,7 +816,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Deoxyribose -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Deoxyribose -->
 
     <owl:Class rdf:about="#Deoxyribose">
         <rdfs:subClassOf rdf:resource="#Pentose"/>
@@ -824,7 +824,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#DeoxyriboseRing -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#DeoxyriboseRing -->
 
     <owl:Class rdf:about="#DeoxyriboseRing">
         <rdfs:label>deoxyribose</rdfs:label>
@@ -833,7 +833,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Eicosanoid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Eicosanoid -->
 
     <owl:Class rdf:about="#Eicosanoid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
@@ -843,7 +843,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Electron -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Electron -->
 
     <owl:Class rdf:about="#Electron">
         <rdfs:label>electron</rdfs:label>
@@ -854,7 +854,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#FattyAcid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#FattyAcid -->
 
     <owl:Class rdf:about="#FattyAcid">
         <rdfs:label>fatty acid</rdfs:label>
@@ -892,7 +892,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#FunctionalGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#FunctionalGroup -->
 
     <owl:Class rdf:about="#FunctionalGroup">
         <rdfs:label
@@ -904,7 +904,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Glucose -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Glucose -->
 
     <owl:Class rdf:about="#Glucose">
         <rdfs:label>glucose</rdfs:label>
@@ -913,7 +913,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Glycolipid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Glycolipid -->
 
     <owl:Class rdf:about="#Glycolipid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
@@ -921,7 +921,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#GlycosideBoundary -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#GlycosideBoundary -->
 
     <owl:Class rdf:about="#GlycosideBoundary">
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
@@ -929,7 +929,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Guanin-9-yl_group -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Guanin-9-yl_group -->
 
     <owl:Class rdf:about="#Guanin-9-yl_group">
         <rdfs:label>guanine</rdfs:label>
@@ -939,7 +939,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#HeterocyclicBaseGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#HeterocyclicBaseGroup -->
 
     <owl:Class rdf:about="#HeterocyclicBaseGroup">
         <rdfs:label
@@ -969,7 +969,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Hexose -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Hexose -->
 
     <owl:Class rdf:about="#Hexose">
         <rdfs:label>hexose</rdfs:label>
@@ -992,7 +992,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Hydrocarbon -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Hydrocarbon -->
 
     <owl:Class rdf:about="#Hydrocarbon">
         <rdfs:label>hydrocarbon</rdfs:label>
@@ -1029,7 +1029,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#HydrogenAtom -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#HydrogenAtom -->
 
     <owl:Class rdf:about="#HydrogenAtom">
         <rdfs:label>hydrogen atom</rdfs:label>
@@ -1038,7 +1038,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#HydroxyGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#HydroxyGroup -->
 
     <owl:Class rdf:about="#HydroxyGroup">
         <rdfs:label>hydroxy group</rdfs:label>
@@ -1075,7 +1075,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#InorganicMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#InorganicMolecule -->
 
     <owl:Class rdf:about="#InorganicMolecule">
         <rdfs:label
@@ -1101,7 +1101,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Lipid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Lipid -->
 
     <owl:Class rdf:about="#Lipid">
         <rdfs:label>lipid</rdfs:label>
@@ -1112,13 +1112,13 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#MaterialEntity -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#MaterialEntity -->
 
     <owl:Class rdf:about="#MaterialEntity"/>
     
 
 
-    <!-- http://localhost/chemtop.owl#MolecularGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#MolecularGroup -->
 
     <owl:Class rdf:about="#MolecularGroup">
         <rdfs:label>molecular group</rdfs:label>
@@ -1129,7 +1129,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#MolecularPart -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#MolecularPart -->
 
     <owl:Class rdf:about="#MolecularPart">
         <rdfs:label>molecular part</rdfs:label>
@@ -1138,7 +1138,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#MolecularPartBoundary -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#MolecularPartBoundary -->
 
     <owl:Class rdf:about="#MolecularPartBoundary">
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
@@ -1154,7 +1154,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Molecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Molecule -->
 
     <owl:Class rdf:about="#Molecule">
         <rdfs:label>molecular</rdfs:label>
@@ -1174,7 +1174,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#MoleculeBoundary -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#MoleculeBoundary -->
 
     <owl:Class rdf:about="#MoleculeBoundary">
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
@@ -1182,7 +1182,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#MoleculeComplex -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#MoleculeComplex -->
 
     <owl:Class rdf:about="#MoleculeComplex">
         <owl:equivalentClass>
@@ -1203,7 +1203,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Monosaccharide -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Monosaccharide -->
 
     <owl:Class rdf:about="#Monosaccharide">
         <rdfs:label>monosaccharide</rdfs:label>
@@ -1218,7 +1218,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Neutron -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Neutron -->
 
     <owl:Class rdf:about="#Neutron">
         <rdfs:label>neutron</rdfs:label>
@@ -1229,7 +1229,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#NitrogenAtom -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#NitrogenAtom -->
 
     <owl:Class rdf:about="#NitrogenAtom">
         <rdfs:label>nitrogen atom</rdfs:label>
@@ -1238,7 +1238,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#NonSteroidLipid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#NonSteroidLipid -->
 
     <owl:Class rdf:about="#NonSteroidLipid">
         <rdfs:label
@@ -1250,7 +1250,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#NucleicAcidMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleicAcidMolecule -->
 
     <owl:Class rdf:about="#NucleicAcidMolecule">
         <rdfs:label
@@ -1271,7 +1271,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#NucleicAcidRegion -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleicAcidRegion -->
 
     <owl:Class rdf:about="#NucleicAcidRegion">
         <rdfs:label
@@ -1281,7 +1281,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#NucleosidylGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleosidylGroup -->
 
     <owl:Class rdf:about="#NucleosidylGroup">
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
@@ -1301,7 +1301,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Nucleotide -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Nucleotide -->
 
     <owl:Class rdf:about="#Nucleotide">
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
@@ -1333,7 +1333,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#NucleotideResidue -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleotideResidue -->
 
     <owl:Class rdf:about="#NucleotideResidue">
         <rdfs:label>nucleotide</rdfs:label>
@@ -1358,7 +1358,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Oligomer -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Oligomer -->
 
     <owl:Class rdf:about="#Oligomer">
         <rdfs:label
@@ -1385,7 +1385,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#OligopeptideMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#OligopeptideMolecule -->
 
     <owl:Class rdf:about="#OligopeptideMolecule">
         <rdfs:label
@@ -1412,7 +1412,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Oligosaccharide -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Oligosaccharide -->
 
     <owl:Class rdf:about="#Oligosaccharide">
         <rdfs:label>oligosaccharide</rdfs:label>
@@ -1423,7 +1423,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#OrganicMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#OrganicMolecule -->
 
     <owl:Class rdf:about="#OrganicMolecule">
         <rdfs:label
@@ -1445,7 +1445,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#OxygenAtom -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#OxygenAtom -->
 
     <owl:Class rdf:about="#OxygenAtom">
         <rdfs:label>oxygen atom</rdfs:label>
@@ -1454,7 +1454,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Pentose -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Pentose -->
 
     <owl:Class rdf:about="#Pentose">
         <rdfs:label>pentose</rdfs:label>
@@ -1477,7 +1477,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Peptide -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Peptide -->
 
     <owl:Class rdf:about="#Peptide">
         <rdfs:label>peptide</rdfs:label>
@@ -1494,7 +1494,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PeptideBoundary -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PeptideBoundary -->
 
     <owl:Class rdf:about="#PeptideBoundary">
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
@@ -1502,7 +1502,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PhosphateGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PhosphateGroup -->
 
     <owl:Class rdf:about="#PhosphateGroup">
         <rdfs:subClassOf rdf:resource="#FunctionalGroup"/>
@@ -1510,7 +1510,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Phospholipid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Phospholipid -->
 
     <owl:Class rdf:about="#Phospholipid">
         <rdfs:subClassOf rdf:resource="#Lipid"/>
@@ -1518,7 +1518,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PhosphorusAtom -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PhosphorusAtom -->
 
     <owl:Class rdf:about="#PhosphorusAtom">
         <rdfs:label>phosphorus atom</rdfs:label>
@@ -1527,7 +1527,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PhysicalBoundary -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PhysicalBoundary -->
 
     <owl:Class rdf:about="#PhysicalBoundary">
         <skos:definition
@@ -1536,7 +1536,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Polymer -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Polymer -->
 
     <owl:Class rdf:about="#Polymer">
         <owl:equivalentClass>
@@ -1559,7 +1559,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PolypeptideMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PolypeptideMolecule -->
 
     <owl:Class rdf:about="#PolypeptideMolecule">
         <rdfs:label
@@ -1588,7 +1588,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Polysaccharide -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Polysaccharide -->
 
     <owl:Class rdf:about="#Polysaccharide">
         <rdfs:label>polysaccharide</rdfs:label>
@@ -1599,7 +1599,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PortionOfHeterogeneousLiquid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHeterogeneousLiquid -->
 
     <owl:Class rdf:about="#PortionOfHeterogeneousLiquid">
         <rdfs:label
@@ -1611,7 +1611,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PortionOfHeterogeneousSolid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHeterogeneousSolid -->
 
     <owl:Class rdf:about="#PortionOfHeterogeneousSolid">
         <rdfs:label
@@ -1623,7 +1623,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PortionOfHomogeneousGas -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHomogeneousGas -->
 
     <owl:Class rdf:about="#PortionOfHomogeneousGas">
         <rdfs:label>portion of gas</rdfs:label>
@@ -1634,7 +1634,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PortionOfHomogeneousLiquid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHomogeneousLiquid -->
 
     <owl:Class rdf:about="#PortionOfHomogeneousLiquid">
         <rdfs:label
@@ -1646,7 +1646,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PortionOfHomogeneousMatter -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHomogeneousMatter -->
 
     <owl:Class rdf:about="#PortionOfHomogeneousMatter">
         <rdfs:label
@@ -1684,7 +1684,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PortionOfHomogeneousSolid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHomogeneousSolid -->
 
     <owl:Class rdf:about="#PortionOfHomogeneousSolid">
         <rdfs:label
@@ -1696,7 +1696,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#ProteinComplex -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#ProteinComplex -->
 
     <owl:Class rdf:about="#ProteinComplex">
         <rdfs:label>protein complex</rdfs:label>
@@ -1718,7 +1718,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#ProteinDomain -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#ProteinDomain -->
 
     <owl:Class rdf:about="#ProteinDomain">
         <rdfs:label>protein domain</rdfs:label>
@@ -1741,7 +1741,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#ProteinMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#ProteinMolecule -->
 
     <owl:Class rdf:about="#ProteinMolecule">
         <rdfs:label
@@ -1755,7 +1755,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#ProteinSubstructure -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#ProteinSubstructure -->
 
     <owl:Class rdf:about="#ProteinSubstructure">
         <rdfs:label
@@ -1779,7 +1779,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#ProteinSubunit -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#ProteinSubunit -->
 
     <owl:Class rdf:about="#ProteinSubunit">
         <rdfs:label>protein subunit</rdfs:label>
@@ -1790,7 +1790,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Proton -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Proton -->
 
     <owl:Class rdf:about="#Proton">
         <rdfs:label>proton</rdfs:label>
@@ -1801,7 +1801,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PurineGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PurineGroup -->
 
     <owl:Class rdf:about="#PurineGroup">
         <rdfs:subClassOf rdf:resource="#HeterocyclicBaseGroup"/>
@@ -1809,7 +1809,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#PyrimidineGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#PyrimidineGroup -->
 
     <owl:Class rdf:about="#PyrimidineGroup">
         <rdfs:subClassOf rdf:resource="#HeterocyclicBaseGroup"/>
@@ -1817,7 +1817,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#RNAMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#RNAMolecule -->
 
     <owl:Class rdf:about="#RNAMolecule">
         <rdfs:label>RNA sequence</rdfs:label>
@@ -1835,7 +1835,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#RNARegion -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#RNARegion -->
 
     <owl:Class rdf:about="#RNARegion">
         <rdfs:label>RNA region</rdfs:label>
@@ -1864,7 +1864,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Residue -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Residue -->
 
     <owl:Class rdf:about="#Residue">
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
@@ -1872,7 +1872,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Ribonucleotide -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Ribonucleotide -->
 
     <owl:Class rdf:about="#Ribonucleotide">
         <rdfs:subClassOf rdf:resource="#Nucleotide"/>
@@ -1886,7 +1886,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#RibonucleotideResidue -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#RibonucleotideResidue -->
 
     <owl:Class rdf:about="#RibonucleotideResidue">
         <rdfs:label>ribonucleotide</rdfs:label>
@@ -1925,7 +1925,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Ribose -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Ribose -->
 
     <owl:Class rdf:about="#Ribose">
         <rdfs:subClassOf rdf:resource="#Pentose"/>
@@ -1933,7 +1933,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#RiboseRing -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#RiboseRing -->
 
     <owl:Class rdf:about="#RiboseRing">
         <rdfs:label>ribose</rdfs:label>
@@ -1942,7 +1942,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#SaccharideResidue -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#SaccharideResidue -->
 
     <owl:Class rdf:about="#SaccharideResidue">
         <rdfs:subClassOf rdf:resource="#Residue"/>
@@ -1950,7 +1950,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Steroid -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Steroid -->
 
     <owl:Class rdf:about="#Steroid">
         <rdfs:label>steroid</rdfs:label>
@@ -1961,7 +1961,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#StructuralGroup -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#StructuralGroup -->
 
     <owl:Class rdf:about="#StructuralGroup">
         <rdfs:label
@@ -1973,7 +1973,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#SubatomicParticle -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#SubatomicParticle -->
 
     <owl:Class rdf:about="#SubatomicParticle">
         <rdfs:label
@@ -1984,7 +1984,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#SugarRing -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#SugarRing -->
 
     <owl:Class rdf:about="#SugarRing">
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
@@ -1992,7 +1992,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#SulphurAtom -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#SulphurAtom -->
 
     <owl:Class rdf:about="#SulphurAtom">
         <rdfs:label>sulphur atom</rdfs:label>
@@ -2001,7 +2001,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Thymin-1-yl_group -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Thymin-1-yl_group -->
 
     <owl:Class rdf:about="#Thymin-1-yl_group">
         <rdfs:label>thymin</rdfs:label>
@@ -2011,7 +2011,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#Uracil-1-yl_group -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#Uracil-1-yl_group -->
 
     <owl:Class rdf:about="#Uracil-1-yl_group">
         <rdfs:label>uracil</rdfs:label>
@@ -2021,7 +2021,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#WaterMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#WaterMolecule -->
 
     <owl:Class rdf:about="#WaterMolecule">
         <rdfs:label>water molecule</rdfs:label>
@@ -2061,7 +2061,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#mRNAMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#mRNAMolecule -->
 
     <owl:Class rdf:about="#mRNAMolecule">
         <rdfs:label>m RNA molecule</rdfs:label>
@@ -2070,7 +2070,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#rRNAMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#rRNAMolecule -->
 
     <owl:Class rdf:about="#rRNAMolecule">
         <rdfs:label>r RNA molecule</rdfs:label>
@@ -2079,7 +2079,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#tRNAMolecule -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#tRNAMolecule -->
 
     <owl:Class rdf:about="#tRNAMolecule">
         <rdfs:label>t RNA molecule</rdfs:label>
@@ -2099,7 +2099,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/chemtop.owl#AminoAcidChain -->
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#AminoAcidChain -->
 
     <rdf:Description rdf:about="#AminoAcidChain">
         <skos:synonym

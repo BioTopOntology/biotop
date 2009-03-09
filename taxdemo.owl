@@ -2,29 +2,29 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY biotop "http://purl.org/biotop/dev#" >
+    <!ENTITY biotop "http://purl.org/biotop/1.0/biotop.owl#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
-    <!ENTITY taxdemo "http://purl.org/biotop/taxdemo/dev#" >
+    <!ENTITY taxdemo "http://purl.org/biotop/1.0/taxdemo.owl#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/biotop/taxdemo/dev#"
-     xml:base="http://purl.org/biotop/taxdemo/dev"
+<rdf:RDF xmlns="http://purl.org/biotop/1.0/taxdemo.owl#"
+     xml:base="http://purl.org/biotop/1.0/taxdemo.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:taxdemo="http://purl.org/biotop/taxdemo/dev#"
+     xmlns:taxdemo="http://purl.org/biotop/1.0/taxdemo.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2008/05/skos#"
-     xmlns:biotop="http://purl.org/biotop/dev#">
+     xmlns:biotop="http://purl.org/biotop/1.0/biotop.owl#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
         <dc:publisher
@@ -56,8 +56,8 @@
         <dc:type></dc:type>
         <skos:editorialNote></skos:editorialNote>
         <dc:identifier
-            >http://purl.org/biotop/taxdemo/dev</dc:identifier>
-        <owl:imports rdf:resource="http://purl.org/biotop/dev"/>
+            >http://purl.org/biotop/1.0/taxdemo.owl</dc:identifier>
+        <owl:imports rdf:resource="http://purl.org/biotop/1.0/biotop.owl"/>
     </owl:Ontology>
     
 
@@ -108,13 +108,13 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#hasGrain -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasGrain -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasGrain"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#hasInherence -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasInherence -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasInherence"/>
     
@@ -131,7 +131,7 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#Animal -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Animal -->
 
     <owl:Class rdf:about="&biotop;Animal">
         <rdfs:subClassOf>
@@ -144,7 +144,7 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#ArchaebacterialCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ArchaebacterialCell -->
 
     <owl:Class rdf:about="&biotop;ArchaebacterialCell">
         <owl:equivalentClass>
@@ -162,7 +162,7 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#BacterialCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BacterialCell -->
 
     <owl:Class rdf:about="&biotop;BacterialCell">
         <owl:equivalentClass>
@@ -180,19 +180,19 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#Cell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Cell -->
 
     <owl:Class rdf:about="&biotop;Cell"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#Eukaryote -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Eukaryote -->
 
     <owl:Class rdf:about="&biotop;Eukaryote"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#Fungus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Fungus -->
 
     <owl:Class rdf:about="&biotop;Fungus">
         <owl:equivalentClass>
@@ -212,7 +212,7 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#Human -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Human -->
 
     <owl:Class rdf:about="&biotop;Human">
         <rdfs:subClassOf rdf:resource="&biotop;Animal"/>
@@ -222,13 +222,13 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#Organism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Organism -->
 
     <owl:Class rdf:about="&biotop;Organism"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#Plant -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Plant -->
 
     <owl:Class rdf:about="&biotop;Plant">
         <owl:equivalentClass>
@@ -246,43 +246,43 @@
     
 
 
-    <!-- http://purl.org/biotop/dev#Population -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Population -->
 
     <owl:Class rdf:about="&biotop;Population"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#Prokaryote -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Prokaryote -->
 
     <owl:Class rdf:about="&biotop;Prokaryote"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#Protist -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Protist -->
 
     <owl:Class rdf:about="&biotop;Protist"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#TaxonQuality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TaxonQuality -->
 
     <owl:Class rdf:about="&biotop;TaxonQuality"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#Virus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Virus -->
 
     <owl:Class rdf:about="&biotop;Virus"/>
     
 
 
-    <!-- http://purl.org/biotop/dev#YeastCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#YeastCell -->
 
     <owl:Class rdf:about="&biotop;YeastCell"/>
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#AnimalCell -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#AnimalCell -->
 
     <owl:Class rdf:about="#AnimalCell">
         <owl:equivalentClass>
@@ -300,7 +300,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#AnimalPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#AnimalPopulation -->
 
     <owl:Class rdf:about="#AnimalPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -335,7 +335,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#Arthropod -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Arthropod -->
 
     <owl:Class rdf:about="#Arthropod">
         <owl:equivalentClass>
@@ -354,7 +354,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ArthropodPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ArthropodPopulation -->
 
     <owl:Class rdf:about="#ArthropodPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -388,7 +388,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#AsianElephant -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#AsianElephant -->
 
     <owl:Class rdf:about="#AsianElephant">
         <owl:equivalentClass>
@@ -408,7 +408,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#AsianElephantPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#AsianElephantPopulation -->
 
     <owl:Class rdf:about="#AsianElephantPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -441,7 +441,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#BacteriaPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#BacteriaPopulation -->
 
     <owl:Class rdf:about="#BacteriaPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -473,7 +473,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#BakersYeastCell -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#BakersYeastCell -->
 
     <owl:Class rdf:about="#BakersYeastCell">
         <owl:equivalentClass>
@@ -493,7 +493,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#BakersYeastPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#BakersYeastPopulation -->
 
     <owl:Class rdf:about="#BakersYeastPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -524,7 +524,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#CandidaAlbicansCell -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#CandidaAlbicansCell -->
 
     <owl:Class rdf:about="#CandidaAlbicansCell">
         <owl:equivalentClass>
@@ -544,7 +544,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#CandidaAlbicansPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#CandidaAlbicansPopulation -->
 
     <owl:Class rdf:about="#CandidaAlbicansPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -574,7 +574,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#Chimpanzee -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Chimpanzee -->
 
     <owl:Class rdf:about="#Chimpanzee">
         <owl:equivalentClass>
@@ -593,7 +593,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ChimpanzeePopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ChimpanzeePopulation -->
 
     <owl:Class rdf:about="#ChimpanzeePopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -622,7 +622,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ClassGammaProteobacteriaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassGammaProteobacteriaQuality -->
 
     <owl:Class rdf:about="#ClassGammaProteobacteriaQuality">
         <rdfs:subClassOf rdf:resource="#ClassQuality"/>
@@ -631,7 +631,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ClassInsectaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassInsectaQuality -->
 
     <owl:Class rdf:about="#ClassInsectaQuality">
         <rdfs:subClassOf rdf:resource="#ClassQuality"/>
@@ -640,7 +640,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ClassMammaliaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassMammaliaQuality -->
 
     <owl:Class rdf:about="#ClassMammaliaQuality">
         <rdfs:subClassOf rdf:resource="#ClassQuality"/>
@@ -649,7 +649,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ClassQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassQuality -->
 
     <owl:Class rdf:about="#ClassQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -659,7 +659,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ClassSaccharomycetesQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassSaccharomycetesQuality -->
 
     <owl:Class rdf:about="#ClassSaccharomycetesQuality">
         <rdfs:subClassOf rdf:resource="#ClassQuality"/>
@@ -668,7 +668,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#EColiPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#EColiPopulation -->
 
     <owl:Class rdf:about="#EColiPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -696,7 +696,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#Elephant -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Elephant -->
 
     <owl:Class rdf:about="#Elephant">
         <owl:equivalentClass>
@@ -715,7 +715,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ElephantPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ElephantPopulation -->
 
     <owl:Class rdf:about="#ElephantPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -742,7 +742,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#EscherichiaColiCell -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#EscherichiaColiCell -->
 
     <owl:Class rdf:about="#EscherichiaColiCell">
         <owl:equivalentClass>
@@ -760,7 +760,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#EukaryotePopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#EukaryotePopulation -->
 
     <owl:Class rdf:about="#EukaryotePopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -786,7 +786,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FamilyDrosophilidaeQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyDrosophilidaeQuality -->
 
     <owl:Class rdf:about="#FamilyDrosophilidaeQuality">
         <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
@@ -795,7 +795,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FamilyElephantidaeQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyElephantidaeQuality -->
 
     <owl:Class rdf:about="#FamilyElephantidaeQuality">
         <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
@@ -804,7 +804,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FamilyEnterobacteriaceaeQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyEnterobacteriaceaeQuality -->
 
     <owl:Class rdf:about="#FamilyEnterobacteriaceaeQuality">
         <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
@@ -813,7 +813,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FamilyHominidaeQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyHominidaeQuality -->
 
     <owl:Class rdf:about="#FamilyHominidaeQuality">
         <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
@@ -822,7 +822,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FamilyQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyQuality -->
 
     <owl:Class rdf:about="#FamilyQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -832,7 +832,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FamilySaccharomycetaceaeQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilySaccharomycetaceaeQuality -->
 
     <owl:Class rdf:about="#FamilySaccharomycetaceaeQuality">
         <rdfs:subClassOf rdf:resource="#FamilyQuality"/>
@@ -841,7 +841,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FruitFly -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FruitFly -->
 
     <owl:Class rdf:about="#FruitFly">
         <owl:equivalentClass>
@@ -861,7 +861,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FruitFlyPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FruitFlyPopulation -->
 
     <owl:Class rdf:about="#FruitFlyPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -886,7 +886,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#FungusPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FungusPopulation -->
 
     <owl:Class rdf:about="#FungusPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -910,7 +910,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GenusCandidaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusCandidaQuality -->
 
     <owl:Class rdf:about="#GenusCandidaQuality">
         <rdfs:subClassOf rdf:resource="#FamilySaccharomycetaceaeQuality"/>
@@ -919,7 +919,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GenusDrosophilaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusDrosophilaQuality -->
 
     <owl:Class rdf:about="#GenusDrosophilaQuality">
         <rdfs:subClassOf rdf:resource="#GenusQuality"/>
@@ -928,7 +928,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GenusElephasQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusElephasQuality -->
 
     <owl:Class rdf:about="#GenusElephasQuality">
         <rdfs:subClassOf rdf:resource="#FamilyElephantidaeQuality"/>
@@ -937,7 +937,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GenusEscherichiaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusEscherichiaQuality -->
 
     <owl:Class rdf:about="#GenusEscherichiaQuality">
         <rdfs:subClassOf rdf:resource="#FamilyEnterobacteriaceaeQuality"/>
@@ -946,7 +946,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GenusHomoQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusHomoQuality -->
 
     <owl:Class rdf:about="#GenusHomoQuality">
         <rdfs:subClassOf rdf:resource="#FamilyHominidaeQuality"/>
@@ -955,7 +955,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GenusPanQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusPanQuality -->
 
     <owl:Class rdf:about="#GenusPanQuality">
         <rdfs:subClassOf rdf:resource="#FamilyHominidaeQuality"/>
@@ -964,7 +964,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GenusQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusQuality -->
 
     <owl:Class rdf:about="#GenusQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -974,7 +974,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GenusSaccharomycesQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusSaccharomycesQuality -->
 
     <owl:Class rdf:about="#GenusSaccharomycesQuality">
         <rdfs:subClassOf rdf:resource="#FamilySaccharomycetaceaeQuality"/>
@@ -983,7 +983,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GreatApe -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GreatApe -->
 
     <owl:Class rdf:about="#GreatApe">
         <owl:equivalentClass>
@@ -1002,7 +1002,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#GreatApePopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GreatApePopulation -->
 
     <owl:Class rdf:about="#GreatApePopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1025,7 +1025,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#HumanLeukocyte -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#HumanLeukocyte -->
 
     <owl:Class rdf:about="#HumanLeukocyte">
         <owl:equivalentClass>
@@ -1043,7 +1043,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#HumanPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#HumanPopulation -->
 
     <owl:Class rdf:about="#HumanPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1065,7 +1065,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#Insect -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Insect -->
 
     <owl:Class rdf:about="#Insect">
         <owl:equivalentClass>
@@ -1084,7 +1084,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#InsectPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#InsectPopulation -->
 
     <owl:Class rdf:about="#InsectPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1105,7 +1105,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomAnimaliaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomAnimaliaQuality -->
 
     <owl:Class rdf:about="#KingdomAnimaliaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
@@ -1113,7 +1113,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomArchaeaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomArchaeaQuality -->
 
     <owl:Class rdf:about="#KingdomArchaeaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
@@ -1121,7 +1121,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomBacteriaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomBacteriaQuality -->
 
     <owl:Class rdf:about="#KingdomBacteriaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
@@ -1129,7 +1129,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomChromistaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomChromistaQuality -->
 
     <owl:Class rdf:about="#KingdomChromistaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
@@ -1137,7 +1137,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomFungiQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomFungiQuality -->
 
     <owl:Class rdf:about="#KingdomFungiQuality">
         <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
@@ -1145,7 +1145,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomPlantaeQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomPlantaeQuality -->
 
     <owl:Class rdf:about="#KingdomPlantaeQuality">
         <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
@@ -1153,7 +1153,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomProtozoaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomProtozoaQuality -->
 
     <owl:Class rdf:about="#KingdomProtozoaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
@@ -1161,7 +1161,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomQuality -->
 
     <owl:Class rdf:about="#KingdomQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1171,7 +1171,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#KingdomVirusesQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomVirusesQuality -->
 
     <owl:Class rdf:about="#KingdomVirusesQuality">
         <rdfs:subClassOf rdf:resource="#KingdomQuality"/>
@@ -1179,7 +1179,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#Leukocyte -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Leukocyte -->
 
     <owl:Class rdf:about="#Leukocyte">
         <rdfs:subClassOf rdf:resource="&biotop;Cell"/>
@@ -1187,7 +1187,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#Mammal -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Mammal -->
 
     <owl:Class rdf:about="#Mammal">
         <owl:equivalentClass>
@@ -1206,7 +1206,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#MammalPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#MammalPopulation -->
 
     <owl:Class rdf:about="#MammalPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1226,7 +1226,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#OrderDipteraQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderDipteraQuality -->
 
     <owl:Class rdf:about="#OrderDipteraQuality">
         <rdfs:subClassOf rdf:resource="#ClassInsectaQuality"/>
@@ -1235,7 +1235,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#OrderEnterobacterialesQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderEnterobacterialesQuality -->
 
     <owl:Class rdf:about="#OrderEnterobacterialesQuality">
         <rdfs:subClassOf rdf:resource="#ClassGammaProteobacteriaQuality"/>
@@ -1244,7 +1244,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#OrderPrimatesQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderPrimatesQuality -->
 
     <owl:Class rdf:about="#OrderPrimatesQuality">
         <rdfs:subClassOf rdf:resource="#ClassMammaliaQuality"/>
@@ -1253,7 +1253,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#OrderProboscideaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderProboscideaQuality -->
 
     <owl:Class rdf:about="#OrderProboscideaQuality">
         <rdfs:subClassOf rdf:resource="#ClassMammaliaQuality"/>
@@ -1262,7 +1262,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#OrderQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderQuality -->
 
     <owl:Class rdf:about="#OrderQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1272,7 +1272,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#OrderSaccharomycetalesQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderSaccharomycetalesQuality -->
 
     <owl:Class rdf:about="#OrderSaccharomycetalesQuality">
         <rdfs:subClassOf rdf:resource="#ClassSaccharomycetesQuality"/>
@@ -1281,7 +1281,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#PhylumArthropodaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumArthropodaQuality -->
 
     <owl:Class rdf:about="#PhylumArthropodaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomAnimaliaQuality"/>
@@ -1290,7 +1290,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#PhylumAscomycotaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumAscomycotaQuality -->
 
     <owl:Class rdf:about="#PhylumAscomycotaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomFungiQuality"/>
@@ -1299,7 +1299,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#PhylumChordataQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumChordataQuality -->
 
     <owl:Class rdf:about="#PhylumChordataQuality">
         <rdfs:subClassOf rdf:resource="#KingdomAnimaliaQuality"/>
@@ -1308,7 +1308,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#PhylumProteobacteriaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumProteobacteriaQuality -->
 
     <owl:Class rdf:about="#PhylumProteobacteriaQuality">
         <rdfs:subClassOf rdf:resource="#KingdomBacteriaQuality"/>
@@ -1317,7 +1317,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#PhylumQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumQuality -->
 
     <owl:Class rdf:about="#PhylumQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1327,7 +1327,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#PlantPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PlantPopulation -->
 
     <owl:Class rdf:about="#PlantPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1346,7 +1346,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#Primate -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Primate -->
 
     <owl:Class rdf:about="#Primate">
         <owl:equivalentClass>
@@ -1365,7 +1365,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#PrimatePopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PrimatePopulation -->
 
     <owl:Class rdf:about="#PrimatePopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1383,7 +1383,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#ProtistPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ProtistPopulation -->
 
     <owl:Class rdf:about="#ProtistPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1400,7 +1400,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SpeciesCandidaAlbicansQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesCandidaAlbicansQuality -->
 
     <owl:Class rdf:about="#SpeciesCandidaAlbicansQuality">
         <rdfs:subClassOf rdf:resource="#GenusCandidaQuality"/>
@@ -1409,7 +1409,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SpeciesDrosophilaMelanogasterQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesDrosophilaMelanogasterQuality -->
 
     <owl:Class rdf:about="#SpeciesDrosophilaMelanogasterQuality">
         <rdfs:subClassOf rdf:resource="#GenusDrosophilaQuality"/>
@@ -1418,7 +1418,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SpeciesElephasMaximusQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesElephasMaximusQuality -->
 
     <owl:Class rdf:about="#SpeciesElephasMaximusQuality">
         <rdfs:subClassOf rdf:resource="#GenusElephasQuality"/>
@@ -1427,7 +1427,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SpeciesEscherichiaColiQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesEscherichiaColiQuality -->
 
     <owl:Class rdf:about="#SpeciesEscherichiaColiQuality">
         <rdfs:subClassOf rdf:resource="#GenusEscherichiaQuality"/>
@@ -1436,7 +1436,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SpeciesHomoSapiensQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesHomoSapiensQuality -->
 
     <owl:Class rdf:about="#SpeciesHomoSapiensQuality">
         <rdfs:subClassOf rdf:resource="#GenusHomoQuality"/>
@@ -1445,7 +1445,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SpeciesQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesQuality -->
 
     <owl:Class rdf:about="#SpeciesQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1455,7 +1455,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SpeciesSaccharomycesCerevisiaeQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesSaccharomycesCerevisiaeQuality -->
 
     <owl:Class rdf:about="#SpeciesSaccharomycesCerevisiaeQuality">
         <rdfs:subClassOf rdf:resource="#GenusSaccharomycesQuality"/>
@@ -1464,7 +1464,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SpeciesSimiaTroglodytesQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesSimiaTroglodytesQuality -->
 
     <owl:Class rdf:about="#SpeciesSimiaTroglodytesQuality">
         <rdfs:subClassOf rdf:resource="#GenusPanQuality"/>
@@ -1473,7 +1473,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SubclassQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubclassQuality -->
 
     <owl:Class rdf:about="#SubclassQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1483,7 +1483,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SubfamilyDrosophilinaeQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubfamilyDrosophilinaeQuality -->
 
     <owl:Class rdf:about="#SubfamilyDrosophilinaeQuality">
         <rdfs:subClassOf rdf:resource="#FamilyDrosophilidaeQuality"/>
@@ -1492,7 +1492,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SubfamilyQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubfamilyQuality -->
 
     <owl:Class rdf:about="#SubfamilyQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1502,7 +1502,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SubkingdomQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubkingdomQuality -->
 
     <owl:Class rdf:about="#SubkingdomQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1512,7 +1512,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SuborderQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SuborderQuality -->
 
     <owl:Class rdf:about="#SuborderQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1522,7 +1522,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SubphylumQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubphylumQuality -->
 
     <owl:Class rdf:about="#SubphylumQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1532,7 +1532,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SubphylumSaccharomycotinaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubphylumSaccharomycotinaQuality -->
 
     <owl:Class rdf:about="#SubphylumSaccharomycotinaQuality">
         <rdfs:subClassOf rdf:resource="#PhylumAscomycotaQuality"/>
@@ -1541,7 +1541,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SubphylumVertebrataQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubphylumVertebrataQuality -->
 
     <owl:Class rdf:about="#SubphylumVertebrataQuality">
         <rdfs:subClassOf rdf:resource="#PhylumChordataQuality"/>
@@ -1550,7 +1550,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SuperfamilyElephantoideaQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SuperfamilyElephantoideaQuality -->
 
     <owl:Class rdf:about="#SuperfamilyElephantoideaQuality">
         <rdfs:subClassOf rdf:resource="#OrderProboscideaQuality"/>
@@ -1559,7 +1559,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#SuperfamilyQuality -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SuperfamilyQuality -->
 
     <owl:Class rdf:about="#SuperfamilyQuality">
         <rdfs:subClassOf rdf:resource="&biotop;TaxonQuality"/>
@@ -1569,7 +1569,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#Vertebrate -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Vertebrate -->
 
     <owl:Class rdf:about="#Vertebrate">
         <owl:equivalentClass>
@@ -1588,7 +1588,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#VertebratePopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#VertebratePopulation -->
 
     <owl:Class rdf:about="#VertebratePopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1604,7 +1604,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#VirusPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#VirusPopulation -->
 
     <owl:Class rdf:about="#VirusPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1619,7 +1619,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#YeastPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#YeastPopulation -->
 
     <owl:Class rdf:about="#YeastPopulation">
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
@@ -1633,7 +1633,7 @@
     
 
 
-    <!-- http://purl.org/biotop/taxdemo/dev#_testOrganism -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#_testOrganism -->
 
     <owl:Class rdf:about="#_testOrganism">
         <rdfs:subClassOf rdf:resource="&biotop;Organism"/>

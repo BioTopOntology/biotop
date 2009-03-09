@@ -2,7 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY biotop "http://localhost/biotop.owl#" >
+    <!ENTITY biotop "http://purl.org/biotop/1.0/biotop.owl#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -13,9 +13,9 @@
 ]>
 
 
-<rdf:RDF xmlns="http://localhost/biotop.owl#"
-     xml:base="http://localhost/biotop.owl"
-     xmlns:biotop="http://localhost/biotop.owl#"
+<rdf:RDF xmlns="http://purl.org/biotop/1.0/biotop.owl#"
+     xml:base="http://purl.org/biotop/1.0/biotop.owl"
+     xmlns:biotop="http://purl.org/biotop/1.0/biotop.owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
@@ -74,7 +74,7 @@ by Stefan Schulz</skos:historyNote>
     
 
 
-    <!-- http://localhost/biotop.owl#abstractPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#abstractPartOf -->
 
     <owl:ObjectProperty rdf:about="#abstractPartOf">
         <rdfs:label
@@ -85,7 +85,7 @@ by Stefan Schulz</skos:historyNote>
     
 
 
-    <!-- http://localhost/biotop.owl#adjacentTo -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#adjacentTo -->
 
     <owl:ObjectProperty rdf:about="#adjacentTo">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -116,7 +116,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#agentIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#agentIn -->
 
     <owl:ObjectProperty rdf:about="#agentIn">
         <rdfs:label rdf:datatype="&xsd;string">agent in</rdfs:label>
@@ -127,7 +127,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#attachedTo -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#attachedTo -->
 
     <owl:ObjectProperty rdf:about="#attachedTo">
         <rdfs:label>attached to</rdfs:label>
@@ -139,7 +139,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#boundedBy -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#boundedBy -->
 
     <owl:ObjectProperty rdf:about="#boundedBy">
         <rdfs:label
@@ -158,7 +158,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#bounds -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#bounds -->
 
     <owl:ObjectProperty rdf:about="#bounds">
         <rdfs:label
@@ -177,7 +177,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#branchOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#branchOf -->
 
     <owl:ObjectProperty rdf:about="#branchOf">
         <rdfs:label>branch of</rdfs:label>
@@ -189,7 +189,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#componentPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
         <rdfs:label
@@ -205,7 +205,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#connectedTo -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#connectedTo -->
 
     <owl:ObjectProperty rdf:about="#connectedTo">
         <rdfs:label
@@ -233,7 +233,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#containedIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#containedIn -->
 
     <owl:ObjectProperty rdf:about="#containedIn">
         <rdfs:label
@@ -248,7 +248,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#contains -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#contains -->
 
     <owl:ObjectProperty rdf:about="#contains">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -263,7 +263,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#contiguousWith -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#contiguousWith -->
 
     <owl:ObjectProperty rdf:about="#contiguousWith">
         <rdfs:label>contiguous with</rdfs:label>
@@ -293,7 +293,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#continuousWith -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#continuousWith -->
 
     <owl:ObjectProperty rdf:about="#continuousWith">
         <rdfs:label>continuous with</rdfs:label>
@@ -305,7 +305,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#coocurringWith -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#coocurringWith -->
 
     <owl:ObjectProperty rdf:about="#coocurringWith">
         <rdfs:label
@@ -315,7 +315,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#derivedInto -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#derivedInto -->
 
     <owl:ObjectProperty rdf:about="#derivedInto">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -326,7 +326,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#derivesFrom -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#derivesFrom -->
 
     <owl:ObjectProperty rdf:about="#derivesFrom">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -339,7 +339,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#disconnectedFrom -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#disconnectedFrom -->
 
     <owl:ObjectProperty rdf:about="#disconnectedFrom">
         <rdfs:label
@@ -370,7 +370,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#encodes -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#encodes -->
 
     <owl:ObjectProperty rdf:about="#encodes">
         <rdfs:label>encodes</rdfs:label>
@@ -379,7 +379,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#featureOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#featureOf -->
 
     <owl:ObjectProperty rdf:about="#featureOf">
         <rdfs:label>feature of</rdfs:label>
@@ -387,7 +387,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#granularPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#granularPartOf -->
 
     <owl:ObjectProperty rdf:about="#granularPartOf">
         <rdfs:label
@@ -403,7 +403,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#hasAbstractPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasAbstractPart -->
 
     <owl:ObjectProperty rdf:about="#hasAbstractPart">
         <rdfs:label
@@ -414,7 +414,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#hasAgent -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasAgent -->
 
     <owl:ObjectProperty rdf:about="#hasAgent">
         <rdfs:label rdf:datatype="&xsd;string">has agent</rdfs:label>
@@ -427,7 +427,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#hasBranch -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasBranch -->
 
     <owl:ObjectProperty rdf:about="#hasBranch">
         <rdfs:label>has branch</rdfs:label>
@@ -439,7 +439,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#hasComponentPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="#hasComponentPart">
         <rdfs:label
@@ -451,7 +451,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#hasFeature -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasFeature -->
 
     <owl:ObjectProperty rdf:about="#hasFeature">
         <rdfs:label>has feature</rdfs:label>
@@ -459,7 +459,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#hasGranularPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="#hasGranularPart">
         <rdfs:label
@@ -473,7 +473,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://localhost/biotop.owl#hasInherence -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasInherence -->
 
     <owl:ObjectProperty rdf:about="#hasInherence">
         <rdfs:label>bearer of</rdfs:label>
@@ -507,7 +507,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasLocus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasLocus -->
 
     <owl:ObjectProperty rdf:about="#hasLocus">
         <rdfs:label>has locus</rdfs:label>
@@ -535,7 +535,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasMember -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasMember -->
 
     <owl:ObjectProperty rdf:about="#hasMember">
         <rdfs:label>has member</rdfs:label>
@@ -544,7 +544,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasOriginalPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasOriginalPart -->
 
     <owl:ObjectProperty rdf:about="#hasOriginalPart">
         <rdfs:label
@@ -558,7 +558,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPart -->
 
     <owl:ObjectProperty rdf:about="#hasPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -574,7 +574,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasParticipant -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasParticipant -->
 
     <owl:ObjectProperty rdf:about="#hasParticipant">
         <rdfs:label rdf:datatype="&xsd;string">has participant</rdfs:label>
@@ -605,7 +605,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasPatient -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPatient -->
 
     <owl:ObjectProperty rdf:about="#hasPatient">
         <rdfs:label>has patient</rdfs:label>
@@ -614,7 +614,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasProcessualPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProcessualPart -->
 
     <owl:ObjectProperty rdf:about="#hasProcessualPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -629,7 +629,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasProperPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProperPart -->
 
     <owl:ObjectProperty rdf:about="#hasProperPart">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -642,7 +642,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasRealization -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasRealization -->
 
     <owl:ObjectProperty rdf:about="#hasRealization">
         <rdfs:label>has realization</rdfs:label>
@@ -661,7 +661,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#hasResult -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasResult -->
 
     <owl:ObjectProperty rdf:about="#hasResult">
         <rdfs:label>has result</rdfs:label>
@@ -679,7 +679,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#inheresIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#inheresIn -->
 
     <owl:ObjectProperty rdf:about="#inheresIn">
         <rdfs:label>inheres in</rdfs:label>
@@ -713,7 +713,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#interconnects -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#interconnects -->
 
     <owl:ObjectProperty rdf:about="#interconnects">
         <rdfs:label
@@ -741,7 +741,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#locatedIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#locatedIn -->
 
     <owl:ObjectProperty rdf:about="#locatedIn">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -777,7 +777,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#locationOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#locationOf -->
 
     <owl:ObjectProperty rdf:about="#locationOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -813,7 +813,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#locusOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#locusOf -->
 
     <owl:ObjectProperty rdf:about="#locusOf">
         <rdfs:label
@@ -841,7 +841,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#memberOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#memberOf -->
 
     <owl:ObjectProperty rdf:about="#memberOf">
         <rdfs:label>member of</rdfs:label>
@@ -850,7 +850,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#originalPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#originalPartOf -->
 
     <owl:ObjectProperty rdf:about="#originalPartOf">
         <rdfs:label
@@ -864,7 +864,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#partOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#partOf -->
 
     <owl:ObjectProperty rdf:about="#partOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -880,7 +880,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#participatesIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#participatesIn -->
 
     <owl:ObjectProperty rdf:about="#participatesIn">
         <rdfs:label rdf:datatype="&xsd;string">participates in</rdfs:label>
@@ -909,7 +909,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#patientIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#patientIn -->
 
     <owl:ObjectProperty rdf:about="#patientIn">
         <rdfs:label>patient in</rdfs:label>
@@ -918,7 +918,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#precededBy -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#precededBy -->
 
     <owl:ObjectProperty rdf:about="#precededBy">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -947,7 +947,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#precedes -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#precedes -->
 
     <owl:ObjectProperty rdf:about="#precedes">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -974,7 +974,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#processualPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#processualPartOf -->
 
     <owl:ObjectProperty rdf:about="#processualPartOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -989,7 +989,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#properPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#properPartOf -->
 
     <owl:ObjectProperty rdf:about="#properPartOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -1004,7 +1004,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#qualityLocated -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#qualityLocated -->
 
     <owl:ObjectProperty rdf:about="#qualityLocated">
         <rdfs:label>quality located</rdfs:label>
@@ -1014,7 +1014,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#qualityLocationOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#qualityLocationOf -->
 
     <owl:ObjectProperty rdf:about="#qualityLocationOf">
         <rdfs:label
@@ -1025,7 +1025,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ramificationOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ramificationOf -->
 
     <owl:ObjectProperty rdf:about="#ramificationOf">
         <rdfs:label>ramification of</rdfs:label>
@@ -1037,7 +1037,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ramifies -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ramifies -->
 
     <owl:ObjectProperty rdf:about="#ramifies">
         <rdfs:label>ramifies</rdfs:label>
@@ -1049,7 +1049,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#realizationOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#realizationOf -->
 
     <owl:ObjectProperty rdf:about="#realizationOf">
         <rdfs:label>realization of</rdfs:label>
@@ -1068,7 +1068,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#resultsIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#resultsIn -->
 
     <owl:ObjectProperty rdf:about="#resultsIn">
         <rdfs:label>results in</rdfs:label>
@@ -1086,7 +1086,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#spatiallyRelated -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#spatiallyRelated -->
 
     <owl:ObjectProperty rdf:about="#spatiallyRelated">
         <rdfs:label
@@ -1095,7 +1095,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#surrounds -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#surrounds -->
 
     <owl:ObjectProperty rdf:about="#surrounds">
         <rdfs:label
@@ -1125,7 +1125,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#temporallyRelatedTo -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#temporallyRelatedTo -->
 
     <owl:ObjectProperty rdf:about="#temporallyRelatedTo">
         <rdfs:label
@@ -1136,7 +1136,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#touches -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#touches -->
 
     <owl:ObjectProperty rdf:about="#touches">
         <rdfs:label>touches</rdfs:label>
@@ -1166,7 +1166,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#traverses -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#traverses -->
 
     <owl:ObjectProperty rdf:about="#traverses">
         <rdfs:label
@@ -1207,7 +1207,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AcquiredAbnormalStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AcquiredAbnormalStructure -->
 
     <owl:Class rdf:about="#AcquiredAbnormalStructure">
         <rdfs:label
@@ -1218,7 +1218,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AcquiredPathologicalCondition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AcquiredPathologicalCondition -->
 
     <owl:Class rdf:about="#AcquiredPathologicalCondition">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -1230,7 +1230,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AcquiredPathologicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AcquiredPathologicalState -->
 
     <owl:Class rdf:about="#AcquiredPathologicalState">
         <rdfs:label
@@ -1260,7 +1260,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Action -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Action -->
 
     <owl:Class rdf:about="#Action">
         <rdfs:label>action</rdfs:label>
@@ -1291,7 +1291,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AdultOrganism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AdultOrganism -->
 
     <owl:Class rdf:about="#AdultOrganism">
         <rdfs:label>adult organism</rdfs:label>
@@ -1323,7 +1323,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AdultRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AdultRegion -->
 
     <owl:Class rdf:about="#AdultRegion">
         <rdfs:label>adult quality</rdfs:label>
@@ -1332,7 +1332,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Affecting -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Affecting -->
 
     <owl:Class rdf:about="#Affecting">
         <rdfs:label>affecting</rdfs:label>
@@ -1343,7 +1343,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AgeQuality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AgeQuality -->
 
     <owl:Class rdf:about="#AgeQuality">
         <rdfs:label>age quality</rdfs:label>
@@ -1352,7 +1352,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Alga -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Alga -->
 
     <owl:Class rdf:about="#Alga">
         <rdfs:label>alga</rdfs:label>
@@ -1361,7 +1361,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AminoAcidMonomer -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidMonomer -->
 
     <owl:Class rdf:about="#AminoAcidMonomer">
         <rdfs:label
@@ -1385,7 +1385,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AminoAcidOrPeptide -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidOrPeptide -->
 
     <owl:Class rdf:about="#AminoAcidOrPeptide">
         <rdfs:label
@@ -1395,7 +1395,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AminoAcidSequence -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidSequence -->
 
     <owl:Class rdf:about="#AminoAcidSequence">
         <rdfs:label
@@ -1427,7 +1427,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AminoAcidSequenceInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidSequenceInformation -->
 
     <owl:Class rdf:about="#AminoAcidSequenceInformation">
         <rdfs:label
@@ -1447,7 +1447,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Amphibian -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Amphibian -->
 
     <owl:Class rdf:about="#Amphibian">
         <rdfs:label>amphibian</rdfs:label>
@@ -1456,7 +1456,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Analyzing -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Analyzing -->
 
     <owl:Class rdf:about="#Analyzing">
         <rdfs:label>analyzing</rdfs:label>
@@ -1465,7 +1465,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AnimalCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AnimalCell -->
 
     <owl:Class rdf:about="#AnimalCell">
         <rdfs:label>animal cell</rdfs:label>
@@ -1495,7 +1495,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AnimalExcludingHuman -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AnimalExcludingHuman -->
 
     <owl:Class rdf:about="#AnimalExcludingHuman">
         <rdfs:label
@@ -1514,7 +1514,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AnimalIncludingHuman -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AnimalIncludingHuman -->
 
     <owl:Class rdf:about="#AnimalIncludingHuman">
         <rdfs:label>animal</rdfs:label>
@@ -1541,7 +1541,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AnimalLanguage -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AnimalLanguage -->
 
     <owl:Class rdf:about="#AnimalLanguage">
         <rdfs:label>animal language</rdfs:label>
@@ -1550,7 +1550,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AnimalPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AnimalPopulation -->
 
     <owl:Class rdf:about="#AnimalPopulation">
         <rdfs:label
@@ -1566,7 +1566,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#AntibioticRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AntibioticRole -->
 
     <owl:Class rdf:about="#AntibioticRole">
         <rdfs:label>antibiotic role</rdfs:label>
@@ -1575,7 +1575,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ArchaebacterialCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ArchaebacterialCell -->
 
     <owl:Class rdf:about="#ArchaebacterialCell">
         <rdfs:label
@@ -1608,7 +1608,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ArtefactRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ArtefactRole -->
 
     <owl:Class rdf:about="#ArtefactRole">
         <rdfs:label rdf:datatype="&xsd;string">artefact role</rdfs:label>
@@ -1619,7 +1619,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Arthropod -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Arthropod -->
 
     <owl:Class rdf:about="#Arthropod">
         <rdfs:label>arthropod</rdfs:label>
@@ -1649,7 +1649,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ArthropodPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ArthropodPopulation -->
 
     <owl:Class rdf:about="#ArthropodPopulation">
         <rdfs:label
@@ -1665,7 +1665,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Atom -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Atom -->
 
     <owl:Class rdf:about="#Atom">
         <rdfs:label>atom</rdfs:label>
@@ -1676,7 +1676,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BacteriaPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BacteriaPopulation -->
 
     <owl:Class rdf:about="#BacteriaPopulation">
         <rdfs:label
@@ -1692,7 +1692,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BacterialCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BacterialCell -->
 
     <owl:Class rdf:about="#BacterialCell">
         <rdfs:label>bacterial cell</rdfs:label>
@@ -1724,7 +1724,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BacterialColony -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BacterialColony -->
 
     <owl:Class rdf:about="#BacterialColony">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -1750,7 +1750,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BakersYeastCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BakersYeastCell -->
 
     <owl:Class rdf:about="#BakersYeastCell">
         <rdfs:label
@@ -1782,7 +1782,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BakersYeastPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BakersYeastPopulation -->
 
     <owl:Class rdf:about="#BakersYeastPopulation">
         <rdfs:label
@@ -1798,7 +1798,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Behavior -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Behavior -->
 
     <owl:Class rdf:about="#Behavior">
         <rdfs:label>behavior</rdfs:label>
@@ -1809,7 +1809,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BioMolecularProcess -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BioMolecularProcess -->
 
     <owl:Class rdf:about="#BioMolecularProcess">
         <rdfs:label
@@ -1831,7 +1831,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BioMolecularSequenceInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BioMolecularSequenceInformation -->
 
     <owl:Class rdf:about="#BioMolecularSequenceInformation">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -1847,7 +1847,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BioMolecularSequenceStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BioMolecularSequenceStructure -->
 
     <owl:Class rdf:about="#BioMolecularSequenceStructure">
         <rdfs:label
@@ -1874,7 +1874,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalAction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalAction -->
 
     <owl:Class rdf:about="#BiologicalAction">
         <rdfs:label
@@ -1902,7 +1902,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalBoundary -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalBoundary -->
 
     <owl:Class rdf:about="#BiologicalBoundary">
         <rdfs:label
@@ -1925,7 +1925,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalColony -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalColony -->
 
     <owl:Class rdf:about="#BiologicalColony">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -1937,7 +1937,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalFunction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalFunction -->
 
     <owl:Class rdf:about="#BiologicalFunction">
         <rdfs:label
@@ -1957,7 +1957,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalProcessualEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalProcessualEntity -->
 
     <owl:Class rdf:about="#BiologicalProcessualEntity">
         <rdfs:label
@@ -1997,7 +1997,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalSpace -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalSpace -->
 
     <owl:Class rdf:about="#BiologicalSpace">
         <rdfs:label
@@ -2017,7 +2017,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BiologicalSystemRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiologicalSystemRole -->
 
     <owl:Class rdf:about="#BiologicalSystemRole">
         <rdfs:label
@@ -2029,7 +2029,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BiomedicalMaterialRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BiomedicalMaterialRole -->
 
     <owl:Class rdf:about="#BiomedicalMaterialRole">
         <rdfs:label
@@ -2042,7 +2042,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Biomolecule -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Biomolecule -->
 
     <owl:Class rdf:about="#Biomolecule">
         <rdfs:label>biomolecule</rdfs:label>
@@ -2071,7 +2071,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Bird -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Bird -->
 
     <owl:Class rdf:about="#Bird">
         <rdfs:label>bird</rdfs:label>
@@ -2080,7 +2080,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BodyLiquid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BodyLiquid -->
 
     <owl:Class rdf:about="#BodyLiquid">
         <rdfs:label>body fluid</rdfs:label>
@@ -2127,7 +2127,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#BodySystem -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#BodySystem -->
 
     <owl:Class rdf:about="#BodySystem">
         <rdfs:label>body system</rdfs:label>
@@ -2138,7 +2138,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CandidaAlbicansCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CandidaAlbicansCell -->
 
     <owl:Class rdf:about="#CandidaAlbicansCell">
         <rdfs:label
@@ -2170,7 +2170,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CandidaAlbicansPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CandidaAlbicansPopulation -->
 
     <owl:Class rdf:about="#CandidaAlbicansPopulation">
         <rdfs:label
@@ -2186,7 +2186,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CanonicalProcessualEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CanonicalProcessualEntity -->
 
     <owl:Class rdf:about="#CanonicalProcessualEntity">
         <rdfs:label
@@ -2217,7 +2217,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CanonicalRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CanonicalRegion -->
 
     <owl:Class rdf:about="#CanonicalRegion">
         <rdfs:label
@@ -2229,7 +2229,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CanonicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CanonicalState -->
 
     <owl:Class rdf:about="#CanonicalState">
         <rdfs:label>canonical state</rdfs:label>
@@ -2260,7 +2260,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Canonicity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Canonicity -->
 
     <owl:Class rdf:about="#Canonicity">
         <rdfs:label>canonicity</rdfs:label>
@@ -2281,7 +2281,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CanonicityRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CanonicityRegion -->
 
     <owl:Class rdf:about="#CanonicityRegion">
         <rdfs:label
@@ -2291,7 +2291,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Carbohydrate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Carbohydrate -->
 
     <owl:Class rdf:about="#Carbohydrate">
         <rdfs:label>carbohydrate</rdfs:label>
@@ -2300,7 +2300,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CarbohydrateMonomer -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CarbohydrateMonomer -->
 
     <owl:Class rdf:about="#CarbohydrateMonomer">
         <rdfs:label
@@ -2318,7 +2318,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CarbohydrateSequenceInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CarbohydrateSequenceInformation -->
 
     <owl:Class rdf:about="#CarbohydrateSequenceInformation">
         <rdfs:label
@@ -2338,7 +2338,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CatalyticRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CatalyticRole -->
 
     <owl:Class rdf:about="#CatalyticRole">
         <rdfs:label>catalytic role</rdfs:label>
@@ -2349,7 +2349,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CategorizationSystem -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CategorizationSystem -->
 
     <owl:Class rdf:about="#CategorizationSystem">
         <rdfs:label
@@ -2359,7 +2359,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Causing -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Causing -->
 
     <owl:Class rdf:about="#Causing">
         <rdfs:label>causing</rdfs:label>
@@ -2368,7 +2368,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Cell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Cell -->
 
     <owl:Class rdf:about="#Cell">
         <rdfs:label>cell</rdfs:label>
@@ -2403,7 +2403,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CellByLocusPartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CellByLocusPartition -->
 
     <owl:Class rdf:about="#CellByLocusPartition">
         <rdfs:label>|| (by locus)</rdfs:label>
@@ -2414,7 +2414,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CellByTaxonPartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CellByTaxonPartition -->
 
     <owl:Class rdf:about="#CellByTaxonPartition">
         <rdfs:label>|| (by taxon)</rdfs:label>
@@ -2425,7 +2425,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CellByTypePartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CellByTypePartition -->
 
     <owl:Class rdf:about="#CellByTypePartition">
         <rdfs:label>|| (by type)</rdfs:label>
@@ -2436,7 +2436,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CellInVivo -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CellInVivo -->
 
     <owl:Class rdf:about="#CellInVivo">
         <rdfs:label>cell in vivo</rdfs:label>
@@ -2459,7 +2459,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CellMembrane -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CellMembrane -->
 
     <owl:Class rdf:about="#CellMembrane">
         <rdfs:label>cell membrane</rdfs:label>
@@ -2492,7 +2492,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CellNucleus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CellNucleus -->
 
     <owl:Class rdf:about="#CellNucleus">
         <rdfs:label>cell nucleus</rdfs:label>
@@ -2501,7 +2501,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CellularComponent -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CellularComponent -->
 
     <owl:Class rdf:about="#CellularComponent">
         <rdfs:label
@@ -2529,7 +2529,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ChainOfCarbohydrateMonomers -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ChainOfCarbohydrateMonomers -->
 
     <owl:Class rdf:about="#ChainOfCarbohydrateMonomers">
         <rdfs:label
@@ -2551,7 +2551,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ChainOfNucleotideMonomers -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ChainOfNucleotideMonomers -->
 
     <owl:Class rdf:about="#ChainOfNucleotideMonomers">
         <rdfs:label
@@ -2567,7 +2567,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ChemicalRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ChemicalRole -->
 
     <owl:Class rdf:about="#ChemicalRole">
         <rdfs:label>chemical role</rdfs:label>
@@ -2578,7 +2578,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ChildRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ChildRole -->
 
     <owl:Class rdf:about="#ChildRole">
         <rdfs:label>child role</rdfs:label>
@@ -2587,7 +2587,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ChlamydiaCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ChlamydiaCell -->
 
     <owl:Class rdf:about="#ChlamydiaCell">
         <rdfs:label>chlamydia cell</rdfs:label>
@@ -2596,7 +2596,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Chromosome -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Chromosome -->
 
     <owl:Class rdf:about="#Chromosome">
         <rdfs:label>chromosome</rdfs:label>
@@ -2613,7 +2613,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ClassGammaProteobacteriaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ClassGammaProteobacteriaRegion -->
 
     <owl:Class rdf:about="#ClassGammaProteobacteriaRegion">
         <rdfs:label
@@ -2623,7 +2623,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ClassInsectaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ClassInsectaRegion -->
 
     <owl:Class rdf:about="#ClassInsectaRegion">
         <rdfs:label
@@ -2633,7 +2633,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ClassMammaliaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ClassMammaliaRegion -->
 
     <owl:Class rdf:about="#ClassMammaliaRegion">
         <rdfs:label
@@ -2643,7 +2643,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ClassSaccharomycetesRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ClassSaccharomycetesRegion -->
 
     <owl:Class rdf:about="#ClassSaccharomycetesRegion">
         <rdfs:label
@@ -2653,7 +2653,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CollectiveMaterialEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="#CollectiveMaterialEntity">
         <rdfs:label
@@ -2677,7 +2677,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Complicating -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Complicating -->
 
     <owl:Class rdf:about="#Complicating">
         <rdfs:label>complicating</rdfs:label>
@@ -2688,7 +2688,7 @@ Formerly &quot;has inherence&quot;.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CompoundOfCollectiveMaterialEntities -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="#CompoundOfCollectiveMaterialEntities">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -2715,7 +2715,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CongenitalAbnormalStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CongenitalAbnormalStructure -->
 
     <owl:Class rdf:about="#CongenitalAbnormalStructure">
         <rdfs:label
@@ -2725,7 +2725,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CongenitalPathologicalCondition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CongenitalPathologicalCondition -->
 
     <owl:Class rdf:about="#CongenitalPathologicalCondition">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -2737,7 +2737,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#CongenitalPathologicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CongenitalPathologicalState -->
 
     <owl:Class rdf:about="#CongenitalPathologicalState">
         <rdfs:label
@@ -2767,7 +2767,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Cytoplasm -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Cytoplasm -->
 
     <owl:Class rdf:about="#Cytoplasm">
         <rdfs:label>cytoplasm</rdfs:label>
@@ -2800,7 +2800,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#DNA -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#DNA -->
 
     <owl:Class rdf:about="#DNA">
         <rdfs:label>DNA chain</rdfs:label>
@@ -2812,7 +2812,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#DevelopmentalQuality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#DevelopmentalQuality -->
 
     <owl:Class rdf:about="#DevelopmentalQuality">
         <rdfs:label
@@ -2824,7 +2824,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#DevelopmentalRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#DevelopmentalRegion -->
 
     <owl:Class rdf:about="#DevelopmentalRegion">
         <rdfs:label
@@ -2834,7 +2834,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#DigitalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#DigitalEntity -->
 
     <owl:Class rdf:about="#DigitalEntity">
         <rdfs:label rdf:datatype="&xsd;string">digital entity</rdfs:label>
@@ -2844,7 +2844,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Disrupting -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Disrupting -->
 
     <owl:Class rdf:about="#Disrupting">
         <rdfs:label>disrupting</rdfs:label>
@@ -2869,7 +2869,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#DrugRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#DrugRole -->
 
     <owl:Class rdf:about="#DrugRole">
         <rdfs:label rdf:datatype="&xsd;string">drug role</rdfs:label>
@@ -2880,7 +2880,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Dysfunction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Dysfunction -->
 
     <owl:Class rdf:about="#Dysfunction">
         <rdfs:label>dysfunction</rdfs:label>
@@ -2909,7 +2909,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EColiPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EColiPopulation -->
 
     <owl:Class rdf:about="#EColiPopulation">
         <rdfs:label
@@ -2925,7 +2925,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EducatorRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EducatorRole -->
 
     <owl:Class rdf:about="#EducatorRole">
         <rdfs:label>educator role</rdfs:label>
@@ -2936,7 +2936,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Eicosanoid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Eicosanoid -->
 
     <owl:Class rdf:about="#Eicosanoid">
         <rdfs:label>eicosanoid</rdfs:label>
@@ -2947,7 +2947,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Electron -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Electron -->
 
     <owl:Class rdf:about="#Electron">
         <rdfs:label>electron</rdfs:label>
@@ -2958,7 +2958,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EmbryonicOrganism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EmbryonicOrganism -->
 
     <owl:Class rdf:about="#EmbryonicOrganism">
         <rdfs:label
@@ -2990,7 +2990,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EmbryonicRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EmbryonicRegion -->
 
     <owl:Class rdf:about="#EmbryonicRegion">
         <rdfs:subClassOf rdf:resource="#DevelopmentalRegion"/>
@@ -2998,7 +2998,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EmbryonicStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EmbryonicStructure -->
 
     <owl:Class rdf:about="#EmbryonicStructure">
         <rdfs:label
@@ -3043,7 +3043,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EntireCarbohydrateMonomer -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EntireCarbohydrateMonomer -->
 
     <owl:Class rdf:about="#EntireCarbohydrateMonomer">
         <rdfs:label
@@ -3067,7 +3067,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EntireMolecularEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EntireMolecularEntity -->
 
     <owl:Class rdf:about="#EntireMolecularEntity">
         <rdfs:label
@@ -3094,7 +3094,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EntireNucleicAcidMolecule -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EntireNucleicAcidMolecule -->
 
     <owl:Class rdf:about="#EntireNucleicAcidMolecule">
         <rdfs:label
@@ -3126,7 +3126,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EntireProteinMolecule -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EntireProteinMolecule -->
 
     <owl:Class rdf:about="#EntireProteinMolecule">
         <rdfs:label
@@ -3150,7 +3150,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EnzymeRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EnzymeRole -->
 
     <owl:Class rdf:about="#EnzymeRole">
         <rdfs:label>enzyme role</rdfs:label>
@@ -3178,7 +3178,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Epithelial_Cell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Epithelial_Cell -->
 
     <owl:Class rdf:about="#Epithelial_Cell">
         <rdfs:label>epithelial cell</rdfs:label>
@@ -3187,7 +3187,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EscherichiaColiCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EscherichiaColiCell -->
 
     <owl:Class rdf:about="#EscherichiaColiCell">
         <rdfs:label
@@ -3217,7 +3217,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Eukaryote -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Eukaryote -->
 
     <owl:Class rdf:about="#Eukaryote">
         <rdfs:label>eukaryote</rdfs:label>
@@ -3228,7 +3228,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#EukaryotePopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#EukaryotePopulation -->
 
     <owl:Class rdf:about="#EukaryotePopulation">
         <rdfs:label
@@ -3244,7 +3244,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ExaminationResultRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ExaminationResultRole -->
 
     <owl:Class rdf:about="#ExaminationResultRole">
         <rdfs:label
@@ -3257,7 +3257,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FamilyDrosophilidaeRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FamilyDrosophilidaeRegion -->
 
     <owl:Class rdf:about="#FamilyDrosophilidaeRegion">
         <rdfs:label
@@ -3267,7 +3267,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FamilyEnterobacteriaceaeRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FamilyEnterobacteriaceaeRegion -->
 
     <owl:Class rdf:about="#FamilyEnterobacteriaceaeRegion">
         <rdfs:label
@@ -3277,7 +3277,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FamilyHominidaeRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FamilyHominidaeRegion -->
 
     <owl:Class rdf:about="#FamilyHominidaeRegion">
         <rdfs:label
@@ -3287,7 +3287,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FamilyOfIndividualOrganisms -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FamilyOfIndividualOrganisms -->
 
     <owl:Class rdf:about="#FamilyOfIndividualOrganisms">
         <rdfs:label
@@ -3297,7 +3297,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FamilyRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FamilyRole -->
 
     <owl:Class rdf:about="#FamilyRole">
         <rdfs:label>family role</rdfs:label>
@@ -3319,7 +3319,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FamilySaccharomycetaceaeRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FamilySaccharomycetaceaeRegion -->
 
     <owl:Class rdf:about="#FamilySaccharomycetaceaeRegion">
         <rdfs:label
@@ -3329,7 +3329,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FattyAcid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FattyAcid -->
 
     <owl:Class rdf:about="#FattyAcid">
         <rdfs:label rdf:datatype="&xsd;string">fatty acid</rdfs:label>
@@ -3346,7 +3346,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FindingRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FindingRole -->
 
     <owl:Class rdf:about="#FindingRole">
         <rdfs:label rdf:datatype="&xsd;string">finding role</rdfs:label>
@@ -3357,7 +3357,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Fish -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Fish -->
 
     <owl:Class rdf:about="#Fish">
         <rdfs:label>fish</rdfs:label>
@@ -3366,7 +3366,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FoodRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FoodRole -->
 
     <owl:Class rdf:about="#FoodRole">
         <rdfs:label rdf:datatype="&xsd;string">food role</rdfs:label>
@@ -3377,7 +3377,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FruitFly -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FruitFly -->
 
     <owl:Class rdf:about="#FruitFly">
         <rdfs:label>fruit fly</rdfs:label>
@@ -3404,7 +3404,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FruitFlyPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FruitFlyPopulation -->
 
     <owl:Class rdf:about="#FruitFlyPopulation">
         <rdfs:label
@@ -3420,7 +3420,7 @@ Old name: compound of collections</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Function -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Function -->
 
     <owl:Class rdf:about="#Function">
         <rdfs:label rdf:datatype="&xsd;string">function</rdfs:label>
@@ -3438,7 +3438,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Fungus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Fungus -->
 
     <owl:Class rdf:about="#Fungus">
         <rdfs:label>fungus</rdfs:label>
@@ -3471,7 +3471,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#FungusPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FungusPopulation -->
 
     <owl:Class rdf:about="#FungusPopulation">
         <rdfs:label
@@ -3487,7 +3487,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Gene -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Gene -->
 
     <owl:Class rdf:about="#Gene">
         <rdfs:label>gene</rdfs:label>
@@ -3504,7 +3504,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GeneInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GeneInformation -->
 
     <owl:Class rdf:about="#GeneInformation">
         <rdfs:label
@@ -3516,7 +3516,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GeneRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GeneRegion -->
 
     <owl:Class rdf:about="#GeneRegion">
         <rdfs:label>gene region</rdfs:label>
@@ -3531,7 +3531,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Genome -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Genome -->
 
     <owl:Class rdf:about="#Genome">
         <rdfs:label>genome</rdfs:label>
@@ -3548,7 +3548,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GenomeInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GenomeInformation -->
 
     <owl:Class rdf:about="#GenomeInformation">
         <rdfs:label
@@ -3566,7 +3566,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GenusCandidaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GenusCandidaRegion -->
 
     <owl:Class rdf:about="#GenusCandidaRegion">
         <rdfs:label
@@ -3576,7 +3576,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GenusDrosophilaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GenusDrosophilaRegion -->
 
     <owl:Class rdf:about="#GenusDrosophilaRegion">
         <rdfs:label
@@ -3586,7 +3586,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GenusEscherichiaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GenusEscherichiaRegion -->
 
     <owl:Class rdf:about="#GenusEscherichiaRegion">
         <rdfs:label
@@ -3596,7 +3596,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GenusHomoRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GenusHomoRegion -->
 
     <owl:Class rdf:about="#GenusHomoRegion">
         <rdfs:label
@@ -3606,7 +3606,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GenusSaccharomycesRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GenusSaccharomycesRegion -->
 
     <owl:Class rdf:about="#GenusSaccharomycesRegion">
         <rdfs:label
@@ -3616,7 +3616,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GeographicEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GeographicEntity -->
 
     <owl:Class rdf:about="#GeographicEntity">
         <rdfs:label
@@ -3626,7 +3626,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Government -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Government -->
 
     <owl:Class rdf:about="#Government">
         <rdfs:label>government</rdfs:label>
@@ -3635,7 +3635,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GreatApe -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GreatApe -->
 
     <owl:Class rdf:about="#GreatApe">
         <rdfs:label>great ape</rdfs:label>
@@ -3661,7 +3661,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GreatApePopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GreatApePopulation -->
 
     <owl:Class rdf:about="#GreatApePopulation">
         <rdfs:label
@@ -3677,7 +3677,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GroupInteraction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GroupInteraction -->
 
     <owl:Class rdf:about="#GroupInteraction">
         <rdfs:label
@@ -3703,7 +3703,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#GrowingProcess -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#GrowingProcess -->
 
     <owl:Class rdf:about="#GrowingProcess">
         <rdfs:label>growing process</rdfs:label>
@@ -3712,7 +3712,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#HealthProfessionalRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HealthProfessionalRole -->
 
     <owl:Class rdf:about="#HealthProfessionalRole">
         <rdfs:label
@@ -3722,7 +3722,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#HealthRelatedRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HealthRelatedRole -->
 
     <owl:Class rdf:about="#HealthRelatedRole">
         <rdfs:label
@@ -3734,7 +3734,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#HeterocyclicBase -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HeterocyclicBase -->
 
     <owl:Class rdf:about="#HeterocyclicBase">
         <rdfs:label
@@ -3752,7 +3752,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#HormoneRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HormoneRole -->
 
     <owl:Class rdf:about="#HormoneRole">
         <rdfs:label>hormone role</rdfs:label>
@@ -3763,7 +3763,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Human -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Human -->
 
     <owl:Class rdf:about="#Human">
         <rdfs:label>human</rdfs:label>
@@ -3788,7 +3788,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#HumanAction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HumanAction -->
 
     <owl:Class rdf:about="#HumanAction">
         <rdfs:label>human action</rdfs:label>
@@ -3813,7 +3813,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#HumanEpithelialCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HumanEpithelialCell -->
 
     <owl:Class rdf:about="#HumanEpithelialCell">
         <rdfs:label
@@ -3848,7 +3848,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#HumanLanguage -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HumanLanguage -->
 
     <owl:Class rdf:about="#HumanLanguage">
         <rdfs:label>human language</rdfs:label>
@@ -3857,7 +3857,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#HumanPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HumanPopulation -->
 
     <owl:Class rdf:about="#HumanPopulation">
         <rdfs:label
@@ -3873,7 +3873,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#IllFormedBiologicalStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#IllFormedBiologicalStructure -->
 
     <owl:Class rdf:about="#IllFormedBiologicalStructure">
         <rdfs:label
@@ -3905,7 +3905,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ImmaterialNonphysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmaterialNonphysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialNonphysicalEntity">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -3936,7 +3936,7 @@ kinds of contexts that it is made for.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ImmaterialPhysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmaterialPhysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialPhysicalEntity">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -3958,7 +3958,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ImmaterialPhysicalEntityPartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmaterialPhysicalEntityPartition -->
 
     <owl:Class rdf:about="#ImmaterialPhysicalEntityPartition">
         <rdfs:label
@@ -3968,7 +3968,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ImmaterialThreeDimensionalPhysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmaterialThreeDimensionalPhysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialThreeDimensionalPhysicalEntity">
         <rdfs:label
@@ -3984,7 +3984,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ImmunologicRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmunologicRole -->
 
     <owl:Class rdf:about="#ImmunologicRole">
         <rdfs:label
@@ -3996,7 +3996,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Indicating -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Indicating -->
 
     <owl:Class rdf:about="#Indicating">
         <rdfs:label>indicating</rdfs:label>
@@ -4005,7 +4005,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#IndicatorRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#IndicatorRole -->
 
     <owl:Class rdf:about="#IndicatorRole">
         <rdfs:label>indicator role</rdfs:label>
@@ -4016,7 +4016,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#IndividualBehavior -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#IndividualBehavior -->
 
     <owl:Class rdf:about="#IndividualBehavior">
         <rdfs:label
@@ -4043,7 +4043,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#InformationEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#InformationEntity -->
 
     <owl:Class rdf:about="#InformationEntity">
         <rdfs:label
@@ -4055,7 +4055,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#InorganicMolecularEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#InorganicMolecularEntity -->
 
     <owl:Class rdf:about="#InorganicMolecularEntity">
         <rdfs:label
@@ -4068,7 +4068,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Insect -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Insect -->
 
     <owl:Class rdf:about="#Insect">
         <rdfs:label>insect</rdfs:label>
@@ -4094,7 +4094,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#InsectPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#InsectPopulation -->
 
     <owl:Class rdf:about="#InsectPopulation">
         <rdfs:label
@@ -4110,7 +4110,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#IntellectualProduct -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#IntellectualProduct -->
 
     <owl:Class rdf:about="#IntellectualProduct">
         <rdfs:label
@@ -4120,7 +4120,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Interacting -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Interacting -->
 
     <owl:Class rdf:about="#Interacting">
         <rdfs:label>interacting</rdfs:label>
@@ -4138,7 +4138,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#IntraCellularProcess -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#IntraCellularProcess -->
 
     <owl:Class rdf:about="#IntraCellularProcess">
         <rdfs:label
@@ -4160,7 +4160,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Invertebrate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Invertebrate -->
 
     <owl:Class rdf:about="#Invertebrate">
         <rdfs:label>invertebrate</rdfs:label>
@@ -4169,7 +4169,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#JuvenileOrganism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#JuvenileOrganism -->
 
     <owl:Class rdf:about="#JuvenileOrganism">
         <rdfs:label
@@ -4200,7 +4200,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#JuvenileRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#JuvenileRegion -->
 
     <owl:Class rdf:about="#JuvenileRegion">
         <rdfs:label>juvenile region</rdfs:label>
@@ -4209,7 +4209,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#KingdomAnimaliaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#KingdomAnimaliaRegion -->
 
     <owl:Class rdf:about="#KingdomAnimaliaRegion">
         <rdfs:label
@@ -4219,7 +4219,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#KingdomArchaeaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#KingdomArchaeaRegion -->
 
     <owl:Class rdf:about="#KingdomArchaeaRegion">
         <rdfs:label
@@ -4229,7 +4229,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#KingdomBacteriaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#KingdomBacteriaRegion -->
 
     <owl:Class rdf:about="#KingdomBacteriaRegion">
         <rdfs:label
@@ -4239,7 +4239,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#KingdomChromistaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#KingdomChromistaRegion -->
 
     <owl:Class rdf:about="#KingdomChromistaRegion">
         <rdfs:label
@@ -4249,7 +4249,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#KingdomFungiRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#KingdomFungiRegion -->
 
     <owl:Class rdf:about="#KingdomFungiRegion">
         <rdfs:label
@@ -4259,7 +4259,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#KingdomPlantaeRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#KingdomPlantaeRegion -->
 
     <owl:Class rdf:about="#KingdomPlantaeRegion">
         <rdfs:label
@@ -4269,7 +4269,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#KingdomProtozoaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#KingdomProtozoaRegion -->
 
     <owl:Class rdf:about="#KingdomProtozoaRegion">
         <rdfs:label
@@ -4279,7 +4279,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#KingdomVirusesRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#KingdomVirusesRegion -->
 
     <owl:Class rdf:about="#KingdomVirusesRegion">
         <rdfs:label
@@ -4289,7 +4289,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Language -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Language -->
 
     <owl:Class rdf:about="#Language">
         <rdfs:label>language</rdfs:label>
@@ -4298,7 +4298,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#LanguagePartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#LanguagePartition -->
 
     <owl:Class rdf:about="#LanguagePartition">
         <rdfs:label>|| (by user)</rdfs:label>
@@ -4307,7 +4307,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#LegalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#LegalEntity -->
 
     <owl:Class rdf:about="#LegalEntity">
         <rdfs:label>legal entity</rdfs:label>
@@ -4329,7 +4329,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Lipid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Lipid -->
 
     <owl:Class rdf:about="#Lipid">
         <rdfs:label>lipid</rdfs:label>
@@ -4346,7 +4346,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MachineAction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MachineAction -->
 
     <owl:Class rdf:about="#MachineAction">
         <rdfs:label>machine action</rdfs:label>
@@ -4395,7 +4395,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MachineLanguage -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MachineLanguage -->
 
     <owl:Class rdf:about="#MachineLanguage">
         <rdfs:label
@@ -4405,7 +4405,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Mammal -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Mammal -->
 
     <owl:Class rdf:about="#Mammal">
         <rdfs:label>mammal</rdfs:label>
@@ -4431,7 +4431,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MammalPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MammalPopulation -->
 
     <owl:Class rdf:about="#MammalPopulation">
         <rdfs:label
@@ -4447,7 +4447,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ManagingCare -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ManagingCare -->
 
     <owl:Class rdf:about="#ManagingCare">
         <rdfs:label>managing care</rdfs:label>
@@ -4473,7 +4473,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MaterialEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MaterialEntity -->
 
     <owl:Class rdf:about="#MaterialEntity">
         <rdfs:label rdf:datatype="&xsd;string">material entity</rdfs:label>
@@ -4497,7 +4497,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MaterialEntityBySizePartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MaterialEntityBySizePartition -->
 
     <owl:Class rdf:about="#MaterialEntityBySizePartition">
         <rdfs:label
@@ -4509,7 +4509,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Measure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Measure -->
 
     <owl:Class rdf:about="#Measure">
         <rdfs:label>measure</rdfs:label>
@@ -4518,7 +4518,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Measuring -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Measuring -->
 
     <owl:Class rdf:about="#Measuring">
         <rdfs:label>measuring</rdfs:label>
@@ -4527,7 +4527,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Mind -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Mind -->
 
     <owl:Class rdf:about="#Mind">
         <rdfs:label>mind</rdfs:label>
@@ -4536,7 +4536,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#ModifiedCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ModifiedCell -->
 
     <owl:Class rdf:about="#ModifiedCell">
         <rdfs:label>modified cell</rdfs:label>
@@ -4563,7 +4563,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MolecularEntityByGranularityPartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MolecularEntityByGranularityPartition -->
 
     <owl:Class rdf:about="#MolecularEntityByGranularityPartition">
         <rdfs:label
@@ -4575,7 +4575,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MolecularEntityByOrganicInorganic -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MolecularEntityByOrganicInorganic -->
 
     <owl:Class rdf:about="#MolecularEntityByOrganicInorganic">
         <rdfs:label
@@ -4587,7 +4587,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MolecularFunction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MolecularFunction -->
 
     <owl:Class rdf:about="#MolecularFunction">
         <rdfs:label
@@ -4609,7 +4609,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MolecularResidue -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MolecularResidue -->
 
     <owl:Class rdf:about="#MolecularResidue">
         <rdfs:label
@@ -4625,7 +4625,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MoleculeComplex -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MoleculeComplex -->
 
     <owl:Class rdf:about="#MoleculeComplex">
         <rdfs:label
@@ -4643,7 +4643,7 @@ Old name: immaterial anatomical entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MonoMolecularEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MonoMolecularEntity -->
 
     <owl:Class rdf:about="#MonoMolecularEntity">
         <rdfs:label
@@ -4663,7 +4663,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Monomer -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Monomer -->
 
     <owl:Class rdf:about="#Monomer">
         <rdfs:label>monomer</rdfs:label>
@@ -4676,7 +4676,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#MulticellularOrganism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MulticellularOrganism -->
 
     <owl:Class rdf:about="#MulticellularOrganism">
         <rdfs:label
@@ -4702,7 +4702,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NeoplasticProcess -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NeoplasticProcess -->
 
     <owl:Class rdf:about="#NeoplasticProcess">
         <rdfs:label
@@ -4732,7 +4732,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NeuroreactiveRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NeuroreactiveRole -->
 
     <owl:Class rdf:about="#NeuroreactiveRole">
         <rdfs:label
@@ -4744,7 +4744,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Neutron -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Neutron -->
 
     <owl:Class rdf:about="#Neutron">
         <rdfs:label>neutron</rdfs:label>
@@ -4755,7 +4755,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NonSteroidLipid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NonSteroidLipid -->
 
     <owl:Class rdf:about="#NonSteroidLipid">
         <rdfs:label
@@ -4767,7 +4767,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NoncanonicalProcessualEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NoncanonicalProcessualEntity -->
 
     <owl:Class rdf:about="#NoncanonicalProcessualEntity">
         <rdfs:label
@@ -4797,7 +4797,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NoncanonicalRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NoncanonicalRegion -->
 
     <owl:Class rdf:about="#NoncanonicalRegion">
         <rdfs:label
@@ -4809,7 +4809,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NoncanonicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NoncanonicalState -->
 
     <owl:Class rdf:about="#NoncanonicalState">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -4840,7 +4840,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NucleicAcid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcid -->
 
     <owl:Class rdf:about="#NucleicAcid">
         <rdfs:label>nucleic acid</rdfs:label>
@@ -4863,7 +4863,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NucleicAcidNucleotideOrNucleoside -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcidNucleotideOrNucleoside -->
 
     <owl:Class rdf:about="#NucleicAcidNucleotideOrNucleoside">
         <rdfs:label
@@ -4873,7 +4873,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NucleicAcidRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcidRegion -->
 
     <owl:Class rdf:about="#NucleicAcidRegion">
         <rdfs:label
@@ -4893,7 +4893,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Nucleoside -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Nucleoside -->
 
     <owl:Class rdf:about="#Nucleoside">
         <rdfs:label>nucleoside</rdfs:label>
@@ -4908,7 +4908,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Nucleotide -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Nucleotide -->
 
     <owl:Class rdf:about="#Nucleotide">
         <rdfs:label>nucleotide</rdfs:label>
@@ -4925,7 +4925,7 @@ Old name: molecular entity</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#NucleotideSequenceInformation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleotideSequenceInformation -->
 
     <owl:Class rdf:about="#NucleotideSequenceInformation">
         <rdfs:label
@@ -4951,7 +4951,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#NurseRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NurseRole -->
 
     <owl:Class rdf:about="#NurseRole">
         <rdfs:label>nurse role</rdfs:label>
@@ -4963,7 +4963,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OccupationalRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OccupationalRole -->
 
     <owl:Class rdf:about="#OccupationalRole">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -4975,7 +4975,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OligoOrPolymer -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OligoOrPolymer -->
 
     <owl:Class rdf:about="#OligoOrPolymer">
         <rdfs:label
@@ -5000,7 +5000,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OneDimensionalBoundary -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OneDimensionalBoundary -->
 
     <owl:Class rdf:about="#OneDimensionalBoundary">
         <rdfs:label
@@ -5016,7 +5016,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OneDimensionalPhysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OneDimensionalPhysicalEntity -->
 
     <owl:Class rdf:about="#OneDimensionalPhysicalEntity">
         <rdfs:label
@@ -5026,7 +5026,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrderDipteraRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrderDipteraRegion -->
 
     <owl:Class rdf:about="#OrderDipteraRegion">
         <rdfs:label
@@ -5036,7 +5036,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrderEnterobacterialesRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrderEnterobacterialesRegion -->
 
     <owl:Class rdf:about="#OrderEnterobacterialesRegion">
         <rdfs:label
@@ -5046,7 +5046,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrderPrimatesRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrderPrimatesRegion -->
 
     <owl:Class rdf:about="#OrderPrimatesRegion">
         <rdfs:label
@@ -5056,7 +5056,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrderSaccharomycetalesRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrderSaccharomycetalesRegion -->
 
     <owl:Class rdf:about="#OrderSaccharomycetalesRegion">
         <rdfs:label
@@ -5066,7 +5066,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#Organ -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Organ -->
 
     <owl:Class rdf:about="#Organ">
         <rdfs:label>organ</rdfs:label>
@@ -5077,7 +5077,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrganicMolecularEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganicMolecularEntity -->
 
     <owl:Class rdf:about="#OrganicMolecularEntity">
         <rdfs:label
@@ -5089,7 +5089,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrganicMolecularEntityPartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganicMolecularEntityPartition -->
 
     <owl:Class rdf:about="#OrganicMolecularEntityPartition">
         <rdfs:label>|| (by type)</rdfs:label>
@@ -5100,7 +5100,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#Organism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Organism -->
 
     <owl:Class rdf:about="#Organism">
         <rdfs:label>organism</rdfs:label>
@@ -5111,7 +5111,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrganismAction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganismAction -->
 
     <owl:Class rdf:about="#OrganismAction">
         <rdfs:label>organism action</rdfs:label>
@@ -5136,7 +5136,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrganismByDevelopmentalStage -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganismByDevelopmentalStage -->
 
     <owl:Class rdf:about="#OrganismByDevelopmentalStage">
         <rdfs:label
@@ -5148,7 +5148,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrganismInteraction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganismInteraction -->
 
     <owl:Class rdf:about="#OrganismInteraction">
         <rdfs:label
@@ -5164,7 +5164,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#OrganismPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganismPart -->
 
     <owl:Class rdf:about="#OrganismPart">
         <rdfs:label>organism part</rdfs:label>
@@ -5198,7 +5198,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#Organization -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Organization -->
 
     <owl:Class rdf:about="#Organization">
         <rdfs:label>organization</rdfs:label>
@@ -5207,7 +5207,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#ParentRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ParentRole -->
 
     <owl:Class rdf:about="#ParentRole">
         <rdfs:label>parent role</rdfs:label>
@@ -5216,7 +5216,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#PathologicalCondition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PathologicalCondition -->
 
     <owl:Class rdf:about="#PathologicalCondition">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -5256,7 +5256,7 @@ removed for performance and due to the fact that such information may exists ind
     
 
 
-    <!-- http://localhost/biotop.owl#PathologicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PathologicalState -->
 
     <owl:Class rdf:about="#PathologicalState">
         <rdfs:label
@@ -5304,7 +5304,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Peptide -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Peptide -->
 
     <owl:Class rdf:about="#Peptide">
         <rdfs:label>peptide</rdfs:label>
@@ -5321,7 +5321,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Phosphate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Phosphate -->
 
     <owl:Class rdf:about="#Phosphate">
         <rdfs:label>phosphate</rdfs:label>
@@ -5332,7 +5332,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhylumArthropodaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhylumArthropodaRegion -->
 
     <owl:Class rdf:about="#PhylumArthropodaRegion">
         <rdfs:label
@@ -5343,7 +5343,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhylumAscomycotaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhylumAscomycotaRegion -->
 
     <owl:Class rdf:about="#PhylumAscomycotaRegion">
         <rdfs:label
@@ -5353,7 +5353,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhylumChordataRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhylumChordataRegion -->
 
     <owl:Class rdf:about="#PhylumChordataRegion">
         <rdfs:label
@@ -5363,7 +5363,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhylumProteobacteriaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhylumProteobacteriaRegion -->
 
     <owl:Class rdf:about="#PhylumProteobacteriaRegion">
         <rdfs:label
@@ -5373,7 +5373,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhysicalBoundary -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicalBoundary -->
 
     <owl:Class rdf:about="#PhysicalBoundary">
         <rdfs:label
@@ -5398,7 +5398,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhysicalBoundaryPartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicalBoundaryPartition -->
 
     <owl:Class rdf:about="#PhysicalBoundaryPartition">
         <rdfs:label
@@ -5410,7 +5410,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhysicalForce -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicalForce -->
 
     <owl:Class rdf:about="#PhysicalForce">
         <rdfs:label>physical force</rdfs:label>
@@ -5419,7 +5419,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhysicalMass -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicalMass -->
 
     <owl:Class rdf:about="#PhysicalMass">
         <rdfs:label rdf:datatype="&xsd;string">physical mass</rdfs:label>
@@ -5442,7 +5442,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhysicalState -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicalState -->
 
     <owl:Class rdf:about="#PhysicalState">
         <rdfs:label rdf:datatype="&xsd;string">physical state</rdfs:label>
@@ -5467,7 +5467,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhysicalVolume -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicalVolume -->
 
     <owl:Class rdf:about="#PhysicalVolume">
         <rdfs:label rdf:datatype="&xsd;string">physical volume</rdfs:label>
@@ -5478,7 +5478,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PhysicianRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicianRole -->
 
     <owl:Class rdf:about="#PhysicianRole">
         <rdfs:label>physician role</rdfs:label>
@@ -5489,7 +5489,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Plan -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Plan -->
 
     <owl:Class rdf:about="#Plan">
         <rdfs:label rdf:datatype="&xsd;string">plan</rdfs:label>
@@ -5499,7 +5499,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Plant -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Plant -->
 
     <owl:Class rdf:about="#Plant">
         <rdfs:label>plant</rdfs:label>
@@ -5530,7 +5530,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PlantPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PlantPopulation -->
 
     <owl:Class rdf:about="#PlantPopulation">
         <rdfs:label
@@ -5546,7 +5546,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PluralityOfOrganisms -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PluralityOfOrganisms -->
 
     <owl:Class rdf:about="#PluralityOfOrganisms">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -5578,7 +5578,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PoisonRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PoisonRole -->
 
     <owl:Class rdf:about="#PoisonRole">
         <rdfs:label rdf:datatype="&xsd;string">poison role</rdfs:label>
@@ -5589,7 +5589,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PolyMolecularCompositeEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PolyMolecularCompositeEntity -->
 
     <owl:Class rdf:about="#PolyMolecularCompositeEntity">
         <rdfs:label
@@ -5607,7 +5607,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Population -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Population -->
 
     <owl:Class rdf:about="#Population">
         <rdfs:label rdf:datatype="&xsd;string">population</rdfs:label>
@@ -5618,7 +5618,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PortionOfHeterogenousLiquid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PortionOfHeterogenousLiquid -->
 
     <owl:Class rdf:about="#PortionOfHeterogenousLiquid">
         <rdfs:label
@@ -5630,7 +5630,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PortionOfHeterogenousSolid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PortionOfHeterogenousSolid -->
 
     <owl:Class rdf:about="#PortionOfHeterogenousSolid">
         <rdfs:label
@@ -5642,7 +5642,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PortionOfHomogenousMatter -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PortionOfHomogenousMatter -->
 
     <owl:Class rdf:about="#PortionOfHomogenousMatter">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -5680,7 +5680,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PreventionAction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PreventionAction -->
 
     <owl:Class rdf:about="#PreventionAction">
         <rdfs:label
@@ -5705,7 +5705,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PreventiveRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PreventiveRole -->
 
     <owl:Class rdf:about="#PreventiveRole">
         <rdfs:label>preventive role</rdfs:label>
@@ -5716,7 +5716,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Primate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Primate -->
 
     <owl:Class rdf:about="#Primate">
         <rdfs:label>primate</rdfs:label>
@@ -5742,7 +5742,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#PrimatePopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PrimatePopulation -->
 
     <owl:Class rdf:about="#PrimatePopulation">
         <rdfs:label
@@ -5758,7 +5758,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ProcessualEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProcessualEntity -->
 
     <owl:Class rdf:about="#ProcessualEntity">
         <rdfs:label rdf:datatype="&xsd;string">process</rdfs:label>
@@ -5768,7 +5768,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Producing -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Producing -->
 
     <owl:Class rdf:about="#Producing">
         <rdfs:label>producing</rdfs:label>
@@ -5777,7 +5777,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Prokaryote -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Prokaryote -->
 
     <owl:Class rdf:about="#Prokaryote">
         <rdfs:label>prokaryote</rdfs:label>
@@ -5788,7 +5788,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ProteinComplex -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProteinComplex -->
 
     <owl:Class rdf:about="#ProteinComplex">
         <rdfs:label>protein complex</rdfs:label>
@@ -5820,7 +5820,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ProteinDomain -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProteinDomain -->
 
     <owl:Class rdf:about="#ProteinDomain">
         <rdfs:label>protein domain</rdfs:label>
@@ -5837,7 +5837,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ProteinFunction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProteinFunction -->
 
     <owl:Class rdf:about="#ProteinFunction">
         <rdfs:label
@@ -5859,7 +5859,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ProteinSubstructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProteinSubstructure -->
 
     <owl:Class rdf:about="#ProteinSubstructure">
         <rdfs:label
@@ -5877,7 +5877,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ProteinSubunit -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProteinSubunit -->
 
     <owl:Class rdf:about="#ProteinSubunit">
         <rdfs:label>protein subunit</rdfs:label>
@@ -5888,7 +5888,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Protist -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Protist -->
 
     <owl:Class rdf:about="#Protist">
         <rdfs:label>protist</rdfs:label>
@@ -5899,7 +5899,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ProtistPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProtistPopulation -->
 
     <owl:Class rdf:about="#ProtistPopulation">
         <rdfs:label
@@ -5915,7 +5915,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Proton -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Proton -->
 
     <owl:Class rdf:about="#Proton">
         <rdfs:label>proton</rdfs:label>
@@ -5926,7 +5926,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Quality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Quality -->
 
     <owl:Class rdf:about="#Quality">
         <rdfs:label rdf:datatype="&xsd;string">quality</rdfs:label>
@@ -5938,7 +5938,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#QualityRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#QualityRegion -->
 
     <owl:Class rdf:about="#QualityRegion">
         <rdfs:label>quality region</rdfs:label>
@@ -5946,7 +5946,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#RNA -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#RNA -->
 
     <owl:Class rdf:about="#RNA">
         <rdfs:label>RNA chain</rdfs:label>
@@ -5957,7 +5957,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ReagentRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ReagentRole -->
 
     <owl:Class rdf:about="#ReagentRole">
         <rdfs:label>reagent role</rdfs:label>
@@ -5968,7 +5968,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ReceptorRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ReceptorRole -->
 
     <owl:Class rdf:about="#ReceptorRole">
         <rdfs:label>receptor role</rdfs:label>
@@ -5979,7 +5979,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#RegulationOrLaw -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#RegulationOrLaw -->
 
     <owl:Class rdf:about="#RegulationOrLaw">
         <rdfs:label
@@ -5989,7 +5989,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#RegulatoryBody -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#RegulatoryBody -->
 
     <owl:Class rdf:about="#RegulatoryBody">
         <rdfs:label>regulatory body</rdfs:label>
@@ -5998,7 +5998,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Reptile -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Reptile -->
 
     <owl:Class rdf:about="#Reptile">
         <rdfs:label>reptile</rdfs:label>
@@ -6007,7 +6007,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#ResearcherRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ResearcherRole -->
 
     <owl:Class rdf:about="#ResearcherRole">
         <rdfs:label>researcher role</rdfs:label>
@@ -6016,7 +6016,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#RickettsiaCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#RickettsiaCell -->
 
     <owl:Class rdf:about="#RickettsiaCell">
         <rdfs:label>rickettsia cell</rdfs:label>
@@ -6025,7 +6025,7 @@ See disease role etc.</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Role -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Role -->
 
     <owl:Class rdf:about="#Role">
         <rdfs:label rdf:datatype="&xsd;string">role</rdfs:label>
@@ -6038,7 +6038,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SiblingRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SiblingRole -->
 
     <owl:Class rdf:about="#SiblingRole">
         <rdfs:label>sibling role</rdfs:label>
@@ -6047,7 +6047,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SignOrSymptomRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SignOrSymptomRole -->
 
     <owl:Class rdf:about="#SignOrSymptomRole">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -6059,7 +6059,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SignallingRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SignallingRole -->
 
     <owl:Class rdf:about="#SignallingRole">
         <rdfs:label rdf:datatype="&xsd;string">signalling role</rdfs:label>
@@ -6076,7 +6076,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SocialAction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SocialAction -->
 
     <owl:Class rdf:about="#SocialAction">
         <rdfs:label>social action</rdfs:label>
@@ -6098,7 +6098,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SocialBehavior -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SocialBehavior -->
 
     <owl:Class rdf:about="#SocialBehavior">
         <rdfs:label>social behavior</rdfs:label>
@@ -6119,7 +6119,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SpatialReferenceRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpatialReferenceRole -->
 
     <owl:Class rdf:about="#SpatialReferenceRole">
         <rdfs:label
@@ -6131,7 +6131,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SpatialRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpatialRegion -->
 
     <owl:Class rdf:about="#SpatialRegion">
         <rdfs:label rdf:datatype="&xsd;string">spatial region</rdfs:label>
@@ -6141,7 +6141,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SpeciesCandidaAlbicansRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpeciesCandidaAlbicansRegion -->
 
     <owl:Class rdf:about="#SpeciesCandidaAlbicansRegion">
         <rdfs:label
@@ -6151,7 +6151,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SpeciesDrosophilaMelanogasterRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpeciesDrosophilaMelanogasterRegion -->
 
     <owl:Class rdf:about="#SpeciesDrosophilaMelanogasterRegion">
         <rdfs:label
@@ -6161,7 +6161,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SpeciesEscherichiaColiRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpeciesEscherichiaColiRegion -->
 
     <owl:Class rdf:about="#SpeciesEscherichiaColiRegion">
         <rdfs:label
@@ -6171,7 +6171,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SpeciesHomoSapiensRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpeciesHomoSapiensRegion -->
 
     <owl:Class rdf:about="#SpeciesHomoSapiensRegion">
         <rdfs:label
@@ -6181,7 +6181,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#SpeciesSaccharomycesCerevisiaeRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpeciesSaccharomycesCerevisiaeRegion -->
 
     <owl:Class rdf:about="#SpeciesSaccharomycesCerevisiaeRegion">
         <rdfs:label
@@ -6191,7 +6191,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#State -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#State -->
 
     <owl:Class rdf:about="#State">
         <rdfs:label rdf:datatype="&xsd;string">state</rdfs:label>
@@ -6216,7 +6216,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#Steroid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Steroid -->
 
     <owl:Class rdf:about="#Steroid">
         <rdfs:label>steroid</rdfs:label>
@@ -6227,7 +6227,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#StructuredBiologicalCompoundByCanonicity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#StructuredBiologicalCompoundByCanonicity -->
 
     <owl:Class rdf:about="#StructuredBiologicalCompoundByCanonicity">
         <rdfs:label
@@ -6237,7 +6237,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#StructuredBiologicalCompoundByGranularityPartition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#StructuredBiologicalCompoundByGranularityPartition -->
 
     <owl:Class rdf:about="#StructuredBiologicalCompoundByGranularityPartition">
         <rdfs:label
@@ -6249,7 +6249,7 @@ contexts.</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#StructuredBiologicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#StructuredBiologicalEntity -->
 
     <owl:Class rdf:about="#StructuredBiologicalEntity">
         <rdfs:label
@@ -6268,7 +6268,7 @@ Old name: anatomical structure</skos:definition>
     
 
 
-    <!-- http://localhost/biotop.owl#StructuredNonbiologicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#StructuredNonbiologicalEntity -->
 
     <owl:Class rdf:about="#StructuredNonbiologicalEntity">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -6291,7 +6291,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#SubatomicParticle -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubatomicParticle -->
 
     <owl:Class rdf:about="#SubatomicParticle">
         <rdfs:label
@@ -6302,7 +6302,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#SubatomicParticleByCharge -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubatomicParticleByCharge -->
 
     <owl:Class rdf:about="#SubatomicParticleByCharge">
         <rdfs:label>|| (by charge)</rdfs:label>
@@ -6313,7 +6313,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#SubfamilyDrosophilinaeRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubfamilyDrosophilinaeRegion -->
 
     <owl:Class rdf:about="#SubfamilyDrosophilinaeRegion">
         <rdfs:label
@@ -6323,7 +6323,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#SubjectOfCareRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubjectOfCareRole -->
 
     <owl:Class rdf:about="#SubjectOfCareRole">
         <rdfs:label
@@ -6333,7 +6333,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#SubmolecularGroup -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubmolecularGroup -->
 
     <owl:Class rdf:about="#SubmolecularGroup">
         <rdfs:label>moiety</rdfs:label>
@@ -6364,7 +6364,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#SubphylumSaccharomycotinaRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubphylumSaccharomycotinaRegion -->
 
     <owl:Class rdf:about="#SubphylumSaccharomycotinaRegion">
         <rdfs:label
@@ -6374,7 +6374,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#SubphylumVertebrataRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubphylumVertebrataRegion -->
 
     <owl:Class rdf:about="#SubphylumVertebrataRegion">
         <rdfs:label
@@ -6384,7 +6384,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#SubstanceInteraction -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SubstanceInteraction -->
 
     <owl:Class rdf:about="#SubstanceInteraction">
         <rdfs:label
@@ -6418,7 +6418,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#Syncytium -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Syncytium -->
 
     <owl:Class rdf:about="#Syncytium">
         <rdfs:label>syncytium</rdfs:label>
@@ -6445,7 +6445,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     
 
 
-    <!-- http://localhost/biotop.owl#TaxonQuality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TaxonQuality -->
 
     <owl:Class rdf:about="#TaxonQuality">
         <rdfs:label rdf:datatype="&xsd;string">taxon quality</rdfs:label>
@@ -6460,7 +6460,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TaxonRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TaxonRegion -->
 
     <owl:Class rdf:about="#TaxonRegion">
         <rdfs:label rdf:datatype="&xsd;string">taxon region</rdfs:label>
@@ -6469,7 +6469,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TemporalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TemporalEntity -->
 
     <owl:Class rdf:about="#TemporalEntity">
         <rdfs:label rdf:datatype="&xsd;string">temporal entity</rdfs:label>
@@ -6479,7 +6479,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TherapeuticRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TherapeuticRole -->
 
     <owl:Class rdf:about="#TherapeuticRole">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -6492,7 +6492,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Tissue -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Tissue -->
 
     <owl:Class rdf:about="#Tissue">
         <rdfs:label>tissue</rdfs:label>
@@ -6539,7 +6539,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TissueProcess -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TissueProcess -->
 
     <owl:Class rdf:about="#TissueProcess">
         <rdfs:label>tissue process</rdfs:label>
@@ -6558,7 +6558,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Treating -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Treating -->
 
     <owl:Class rdf:about="#Treating">
         <rdfs:label>treating</rdfs:label>
@@ -6575,7 +6575,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TreatingCondition -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TreatingCondition -->
 
     <owl:Class rdf:about="#TreatingCondition">
         <rdfs:label
@@ -6607,7 +6607,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TreatingPerson -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TreatingPerson -->
 
     <owl:Class rdf:about="#TreatingPerson">
         <rdfs:label>treating person</rdfs:label>
@@ -6643,7 +6643,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TwoDimensionalBiologicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TwoDimensionalBiologicalEntity -->
 
     <owl:Class rdf:about="#TwoDimensionalBiologicalEntity">
         <rdfs:label
@@ -6683,7 +6683,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TwoDimensionalBoundary -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TwoDimensionalBoundary -->
 
     <owl:Class rdf:about="#TwoDimensionalBoundary">
         <rdfs:label
@@ -6706,7 +6706,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#TwoDimensionalPhysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TwoDimensionalPhysicalEntity -->
 
     <owl:Class rdf:about="#TwoDimensionalPhysicalEntity">
         <rdfs:label
@@ -6716,7 +6716,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#UnicellularOrganism -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#UnicellularOrganism -->
 
     <owl:Class rdf:about="#UnicellularOrganism">
         <rdfs:label rdf:datatype="&xsd;string"
@@ -6749,7 +6749,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Using -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Using -->
 
     <owl:Class rdf:about="#Using">
         <rdfs:label>using</rdfs:label>
@@ -6758,7 +6758,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Vertebrate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Vertebrate -->
 
     <owl:Class rdf:about="#Vertebrate">
         <rdfs:label>vertebrate</rdfs:label>
@@ -6788,7 +6788,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#VertebratePopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#VertebratePopulation -->
 
     <owl:Class rdf:about="#VertebratePopulation">
         <rdfs:label
@@ -6804,7 +6804,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#Virus -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Virus -->
 
     <owl:Class rdf:about="#Virus">
         <rdfs:label>virus</rdfs:label>
@@ -6830,7 +6830,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#VirusPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#VirusPopulation -->
 
     <owl:Class rdf:about="#VirusPopulation">
         <rdfs:label
@@ -6846,7 +6846,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#VitaminRole -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#VitaminRole -->
 
     <owl:Class rdf:about="#VitaminRole">
         <rdfs:label rdf:datatype="&xsd;string">vitamin role</rdfs:label>
@@ -6857,7 +6857,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#WaterMolecule -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#WaterMolecule -->
 
     <owl:Class rdf:about="#WaterMolecule">
         <rdfs:label>water molecule</rdfs:label>
@@ -6866,7 +6866,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#WellFormedBiologicalStructure -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#WellFormedBiologicalStructure -->
 
     <owl:Class rdf:about="#WellFormedBiologicalStructure">
         <rdfs:label
@@ -6897,7 +6897,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#YeastCell -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#YeastCell -->
 
     <owl:Class rdf:about="#YeastCell">
         <rdfs:label rdf:datatype="&xsd;string">yeast cell</rdfs:label>
@@ -6938,7 +6938,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     
 
 
-    <!-- http://localhost/biotop.owl#YeastPopulation -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#YeastPopulation -->
 
     <owl:Class rdf:about="#YeastPopulation">
         <rdfs:label
