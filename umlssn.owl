@@ -2,10 +2,11 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY biotop "http://purl.org/biotop/1.0/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
-    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY sn "http://purl.org/biotop/1.0/umlssn.owl#" >
@@ -13,11 +14,12 @@
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/biotop/1.0/umlssn.owl#"
-     xml:base="http://purl.org/biotop/1.0/umlssn.owl"
+<rdf:RDF xmlns="&biotop;umlssn.owl#"
+     xml:base="&biotop;umlssn.owl"
+     xmlns:biotop="http://purl.org/biotop/1.0/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:sn="http://purl.org/biotop/1.0/umlssn.owl#"
+     xmlns:sn="&biotop;umlssn.owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -25,42 +27,25 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
-        <skos:editorialNote></skos:editorialNote>
-        <skos:note></skos:note>
-        <dc:type></dc:type>
+        <dc:description
+            >UMLS Semantic Network</dc:description>
         <dc:identifier
             >http://purl.org/biotop/1.0/umlssn.owl</dc:identifier>
-        <dc:subject></dc:subject>
-        <skos:altLabel></skos:altLabel>
-        <skos:historyNote></skos:historyNote>
-        <dc:format
-            >application/rdf+xml</dc:format>
-        <skos:hiddenLabel></skos:hiddenLabel>
-        <dc:creator>Martin Boeker</dc:creator>
-        <owl:versionInfo>1.0</owl:versionInfo>
-        <skos:prefLabel></skos:prefLabel>
-        <dc:creator
-            >Elena Beisswanger</dc:creator>
-        <skos:example></skos:example>
-        <dc:creator>Stefan Schulz</dc:creator>
-        <dc:rights></dc:rights>
+        <dc:title>UMLSSN</dc:title>
+        <dc:source
+            >Unified Medical Language System Semantic Network
+
+http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
         <dc:publisher
             >Institute for Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
-        <skos:changeNote></skos:changeNote>
-        <dc:source
-            >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
-        <dc:source
-            >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
-        <skos:scopeNote></skos:scopeNote>
-        <dc:title>UMLSSN</dc:title>
+        <dc:creator>Stefan Schulz</dc:creator>
         <dc:creator
-            >Holger Stenzhorn</dc:creator>
+            >Elena Beisswanger</dc:creator>
         <dc:relation></dc:relation>
-        <dc:coverage></dc:coverage>
-        <dc:source
-            >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
-        <skos:definition></skos:definition>
-        <dc:description></dc:description>
+        <dc:format
+            >application/rdf+xml</dc:format>
+        <dc:rights></dc:rights>
+        <owl:versionInfo>1.0</owl:versionInfo>
         <dc:language>en</dc:language>
     </owl:Ontology>
     
@@ -74,7 +59,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    <owl:AnnotationProperty rdf:about="&dc;relation"/>
+    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
+    <owl:AnnotationProperty rdf:about="&dc;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
     
 
 
@@ -112,9 +108,65 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:DatatypeProperty rdf:about="&skos;altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+    <owl:DatatypeProperty rdf:about="&skos;changeNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:DatatypeProperty rdf:about="&skos;definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
+
+    <owl:DatatypeProperty rdf:about="&skos;editorialNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:DatatypeProperty rdf:about="&skos;example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:DatatypeProperty rdf:about="&skos;hiddenLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+    <owl:DatatypeProperty rdf:about="&skos;historyNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:DatatypeProperty rdf:about="&skos;note"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
-    <owl:DatatypeProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel">
+        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:DatatypeProperty rdf:about="&skos;scopeNote"/>
     
 
 
@@ -2350,6 +2402,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <skos:prefLabel>brings_about</skos:prefLabel>
     </owl:Class>
     
 
@@ -2793,6 +2846,8 @@
 
     <owl:Class rdf:about="#conceptual_part_of">
         <rdfs:subClassOf rdf:resource="#conceptually_related_to"/>
+        <skos:prefLabel
+            >conceptual_part_of</skos:prefLabel>
     </owl:Class>
     
 
@@ -2819,6 +2874,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <skos:prefLabel
+            >conceptually_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -3734,6 +3791,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <skos:prefLabel
+            >functionally_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -4029,6 +4088,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <skos:prefLabel>issue_in</skos:prefLabel>
     </owl:Class>
     
 
@@ -5331,6 +5391,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <skos:prefLabel
+            >physically_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -6130,6 +6192,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <skos:prefLabel
+            >spatially_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -6329,6 +6393,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <skos:prefLabel
+            >temporally_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -6637,76 +6703,22 @@
     
 
 
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#brings_about -->
+    <!-- http://purl.org/biotop/1.0/umlssn.owl -->
 
-    <rdf:Description rdf:about="#brings_about">
-        <skos:prefLabel>brings_about</skos:prefLabel>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#conceptual_part_of -->
-
-    <rdf:Description rdf:about="#conceptual_part_of">
-        <skos:prefLabel
-            >conceptual_part_of</skos:prefLabel>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#conceptually_related_to -->
-
-    <rdf:Description rdf:about="#conceptually_related_to">
-        <skos:prefLabel
-            >conceptually_related_to</skos:prefLabel>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#functionally_related_to -->
-
-    <rdf:Description rdf:about="#functionally_related_to">
-        <skos:prefLabel
-            >functionally_related_to</skos:prefLabel>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#issue_in -->
-
-    <rdf:Description rdf:about="#issue_in">
-        <skos:prefLabel>issue_in</skos:prefLabel>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#physically_related_to -->
-
-    <rdf:Description rdf:about="#physically_related_to">
-        <skos:prefLabel
-            >physically_related_to</skos:prefLabel>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#spatially_related_to -->
-
-    <rdf:Description rdf:about="#spatially_related_to">
-        <skos:prefLabel
-            >spatially_related_to</skos:prefLabel>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#temporally_related_to -->
-
-    <rdf:Description rdf:about="#temporally_related_to">
-        <skos:prefLabel
-            >temporally_related_to</skos:prefLabel>
+    <rdf:Description rdf:about="">
+        <skos:definition></skos:definition>
+        <skos:editorialNote></skos:editorialNote>
+        <skos:note></skos:note>
+        <skos:altLabel></skos:altLabel>
+        <skos:example></skos:example>
+        <skos:scopeNote></skos:scopeNote>
+        <skos:changeNote></skos:changeNote>
+        <skos:hiddenLabel></skos:hiddenLabel>
+        <skos:historyNote></skos:historyNote>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.974) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.913) http://owlapi.sourceforge.net -->
 
