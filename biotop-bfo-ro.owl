@@ -2,7 +2,6 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY bt "http://purl.org/biotop/1.0/biotop.owl#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -12,6 +11,7 @@
     <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY bt "http://purl.org/biotop/1.0/biotop.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
@@ -31,43 +31,42 @@
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
-        <dc:creator>Stefan Schulz</dc:creator>
-        <dc:publisher
-            >Institute for Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
-        <skos:changeNote></skos:changeNote>
-        <dc:format
-            >application/rdf+xml</dc:format>
-        <skos:historyNote></skos:historyNote>
-        <skos:scopeNote></skos:scopeNote>
-        <dc:type></dc:type>
-        <skos:note></skos:note>
-        <skos:editorialNote></skos:editorialNote>
-        <skos:hiddenLabel></skos:hiddenLabel>
-        <dc:subject></dc:subject>
-        <dc:title>BioTop BFO RO</dc:title>
-        <dc:source
-            >Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
-        <dc:creator>Martin Boeker</dc:creator>
-        <dc:coverage></dc:coverage>
-        <dc:creator
-            >Holger Stenzhorn</dc:creator>
-        <dc:description></dc:description>
-        <skos:definition></skos:definition>
         <dc:source
             >Holger Stenzhorn, Stefan Schulz and Elena Beisswanger: &quot;Towards a Top-Domain Ontology for Linking Biomedical Ontologies&quot; (in Proceedings of the 12th World Congress on Health (Medical) Informatics (Medinfo 2007), Brisbane, Australia, August 2007)</dc:source>
+        <dc:relation></dc:relation>
+        <dc:publisher
+            >Institute for Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
         <owl:versionInfo>1.0</owl:versionInfo>
+        <skos:prefLabel></skos:prefLabel>
+        <dc:title>BioTop BFO RO</dc:title>
+        <dc:description
+            >BioTop - BFO (Basic Formal Ontology) - RO (OBO Relation Ontology) Bridge</dc:description>
+        <skos:changeNote></skos:changeNote>
+        <dc:language>en</dc:language>
+        <skos:altLabel></skos:altLabel>
+        <dc:creator>Stefan Schulz</dc:creator>
         <dc:identifier
             >http://purl.org/biotop/1.0/biotop-bfo-ro.owl</dc:identifier>
-        <dc:language>en</dc:language>
-        <skos:prefLabel></skos:prefLabel>
-        <skos:altLabel></skos:altLabel>
-        <dc:relation></dc:relation>
-        <dc:creator
-            >Elena Beisswanger</dc:creator>
-        <dc:rights></dc:rights>
         <skos:example></skos:example>
+        <skos:scopeNote></skos:scopeNote>
+        <skos:note></skos:note>
+        <dc:type></dc:type>
+        <skos:historyNote></skos:historyNote>
+        <dc:coverage></dc:coverage>
+        <dc:creator>Martin Boeker</dc:creator>
+        <dc:subject></dc:subject>
+        <skos:definition></skos:definition>
         <dc:source
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
+        <dc:creator
+            >Elena Beisswanger</dc:creator>
+        <dc:creator
+            >Holger Stenzhorn</dc:creator>
+        <skos:hiddenLabel></skos:hiddenLabel>
+        <dc:format
+            >application/rdf+xml</dc:format>
+        <skos:editorialNote></skos:editorialNote>
+        <dc:rights></dc:rights>
         <owl:imports rdf:resource="http://purl.org/biotop/1.0/biotop.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
@@ -82,8 +81,8 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&skos;scopeNote"/>
     <owl:AnnotationProperty rdf:about="&dc;coverage"/>
+    <owl:AnnotationProperty rdf:about="&skos;scopeNote"/>
     <owl:AnnotationProperty rdf:about="&skos;definition"/>
     <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&skos;hiddenLabel"/>
@@ -101,9 +100,9 @@
     <owl:AnnotationProperty rdf:about="&dc;rights"/>
     <owl:AnnotationProperty rdf:about="&skos;note"/>
     <owl:AnnotationProperty rdf:about="&dc;relation"/>
-    <owl:AnnotationProperty rdf:about="&skos;example"/>
-    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
     <owl:AnnotationProperty rdf:about="&dc;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
+    <owl:AnnotationProperty rdf:about="&skos;example"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
     <owl:AnnotationProperty rdf:about="&dc;subject"/>
     
