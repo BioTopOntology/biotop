@@ -3,12 +3,14 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY biotop "http://purl.org/biotop/1.0/biotop.owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY sn "http://purl.org/biotop/1.0/umlssn.owl#" >
+    <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
     <!ENTITY biotop-umlssn "http://purl.org/biotop/1.0/biotop-umlssn.owl#" >
 ]>
 
@@ -16,13 +18,15 @@
 <rdf:RDF xmlns="http://purl.org/biotop/1.0/biotop-umlssn.owl"
      xml:base="http://purl.org/biotop/1.0/biotop-umlssn.owl"
      xmlns:biotop="http://purl.org/biotop/1.0/biotop.owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:sn="http://purl.org/biotop/1.0/umlssn.owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:biotop-umlssn="http://purl.org/biotop/1.0/biotop-umlssn.owl#">
+     xmlns:biotop-umlssn="http://purl.org/biotop/1.0/biotop-umlssn.owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="">
         <dc:date rdf:datatype="&xsd;date"></dc:date>
         <skos:editorialNote></skos:editorialNote>
