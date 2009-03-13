@@ -74,8 +74,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
 
     <owl:AnnotationProperty rdf:about="&skos;scopeNote"/>
     <owl:AnnotationProperty rdf:about="&dc;coverage"/>
-    <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&skos;hiddenLabel"/>
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
     <owl:AnnotationProperty rdf:about="&dc;source"/>
@@ -111,704 +111,162 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#adjacentTo -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#adjacentTo -->
 
-    <owl:ObjectProperty rdf:about="#adjacentTo">
-        <rdfs:label>adjacent_to</rdfs:label>
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
+    <owl:ObjectProperty rdf:about="&biotop;adjacentTo">
         <owl:equivalentProperty rdf:resource="&ro;adjacent_to"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#agentIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#containedIn -->
 
-    <owl:ObjectProperty rdf:about="#agentIn">
-        <rdfs:label>agent_in</rdfs:label>
-        <rdfs:comment
-            >inverseOf hasAgent</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#participatesIn"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#attachedTo -->
-
-    <owl:ObjectProperty rdf:about="#attachedTo">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#contiguousWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#branchOf -->
-
-    <owl:ObjectProperty rdf:about="#branchOf">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#attachedTo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#componentPartOf -->
-
-    <owl:ObjectProperty rdf:about="#componentPartOf">
-        <skos:definition
-            >Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</skos:definition>
-        <rdfs:comment
-            >inverse of hasComponent.</rdfs:comment>
-        <rdfs:comment
-            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#connectedTo -->
-
-    <owl:ObjectProperty rdf:about="#connectedTo">
-        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#containedIn -->
-
-    <owl:ObjectProperty rdf:about="#containedIn">
-        <rdfs:label>contained_in</rdfs:label>
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:comment
-            >inverseOf contains</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
+    <owl:ObjectProperty rdf:about="&biotop;containedIn">
         <owl:equivalentProperty rdf:resource="&ro;contained_in"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#contains -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#contains -->
 
-    <owl:ObjectProperty rdf:about="#contains">
-        <rdfs:label>contains</rdfs:label>
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:comment
-            >inverseOf containedIn</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#locationOf"/>
+    <owl:ObjectProperty rdf:about="&biotop;contains">
         <owl:equivalentProperty rdf:resource="&ro;contains"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#contiguousWith -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#derivedInto -->
 
-    <owl:ObjectProperty rdf:about="#contiguousWith">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#adjacentTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#continuousWith -->
-
-    <owl:ObjectProperty rdf:about="#continuousWith">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#contiguousWith"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#derivedInto -->
-
-    <owl:ObjectProperty rdf:about="#derivedInto">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>derived_into</rdfs:label>
-        <rdfs:comment
-            >inverseOf derivesFrom</rdfs:comment>
+    <owl:ObjectProperty rdf:about="&biotop;derivedInto">
         <owl:equivalentProperty rdf:resource="&ro;derived_into"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#derivesFrom -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#derivesFrom -->
 
-    <owl:ObjectProperty rdf:about="#derivesFrom">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>derives_from</rdfs:label>
-        <rdfs:comment
-            >inverseOf derivedInto</rdfs:comment>
-        <rdfs:comment
-            >Derivation is a relation holding between non-identicals. More precisely, it holds between distinct material continuants when one succeeds the other across a temporal divide in such a way that at least a biologically significant portion of the matter of the earlier continuant is inherited by the later. Thus we will have axioms to the effect that from c derivesFrom c1 we can infer that c and c1 are not identical and that there is some instant of time t such that c1 exists only prior to and c only subsequent to t. We will also be able to infer that the spatial region occupied by c as it begins to exist at t overlaps with the spatial region occupied by c1 as it ceases to exist in the same instant.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="&biotop;derivesFrom">
         <owl:equivalentProperty rdf:resource="&ro;derives_from"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#disconnectedFrom -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasInherence -->
 
-    <owl:ObjectProperty rdf:about="#disconnectedFrom">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#encodedBy -->
-
-    <owl:ObjectProperty rdf:about="#encodedBy"/>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#encodes -->
-
-    <owl:ObjectProperty rdf:about="#encodes"/>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#granularPartOf -->
-
-    <owl:ObjectProperty rdf:about="#granularPartOf">
-        <rdfs:label
-            >Formerly grainOf</rdfs:label>
-        <skos:definition
-            >Granular parts are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</skos:definition>
-        <rdfs:comment
-            >Inverse relation to hasGranularPart</rdfs:comment>
-        <rdfs:comment
-            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasAgent -->
-
-    <owl:ObjectProperty rdf:about="#hasAgent">
-        <rdfs:label>has_agent</rdfs:label>
-        <rdfs:comment
-            >inverseOf agentIn</rdfs:comment>
-        <rdfs:comment
-            >As for hasParticipant, but with the additional condition that the component instance is causally active in the relevant process</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#hasParticipant"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasBranch -->
-
-    <owl:ObjectProperty rdf:about="#hasBranch">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#attachedTo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasComponentPart -->
-
-    <owl:ObjectProperty rdf:about="#hasComponentPart">
-        <rdfs:comment
-            >inverse of componentOf.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasGranularPart -->
-
-    <owl:ObjectProperty rdf:about="#hasGranularPart">
-        <rdfs:comment
-            >inverse of granularPartOf.</rdfs:comment>
-        <rdfs:comment
-            >Previous label: hasGrain</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#hasProperPart"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasInherence -->
-
-    <owl:ObjectProperty rdf:about="#hasInherence">
-        <rdfs:comment
-            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <skos:definition
-            >Inverse relation of inheresIn. Relates an independent continuant to a dependent one (e.g. quality, state, function, or disposition)</skos:definition>
+    <owl:ObjectProperty rdf:about="&biotop;hasInherence">
         <owl:equivalentProperty rdf:resource="&dolce;has-quality"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPart -->
 
-    <owl:ObjectProperty rdf:about="#hasPart">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>has_part</rdfs:label>
-        <rdfs:comment
-            >inverseOf partOf</rdfs:comment>
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#locationOf"/>
+    <owl:ObjectProperty rdf:about="&biotop;hasPart">
         <owl:equivalentProperty rdf:resource="&dolce;part"/>
         <owl:equivalentProperty rdf:resource="&ro;has_part"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasParticipant -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasParticipant -->
 
-    <owl:ObjectProperty rdf:about="#hasParticipant">
-        <rdfs:label>has_participant</rdfs:label>
-        <skos:definition
-            >HasParticipant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane hasParticipant this particular sample of hemoglobin at this particular time.</skos:definition>
-        <rdfs:comment
-            >inverseOf participatesIn</rdfs:comment>
+    <owl:ObjectProperty rdf:about="&biotop;hasParticipant">
         <owl:equivalentProperty rdf:resource="&dolce;participant"/>
         <owl:equivalentProperty rdf:resource="&ro;has_participant"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasPatient -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProperPart -->
 
-    <owl:ObjectProperty rdf:about="#hasPatient">
-        <rdfs:subPropertyOf rdf:resource="#hasParticipant"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasProperPart -->
-
-    <owl:ObjectProperty rdf:about="#hasProperPart">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>has_proper_part</rdfs:label>
-        <rdfs:comment
-            >inverseOf properPartOf</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#hasPart"/>
+    <owl:ObjectProperty rdf:about="&biotop;hasProperPart">
         <owl:equivalentProperty rdf:resource="&dolce;proper-part"/>
         <owl:equivalentProperty rdf:resource="&ro;has_proper_part"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#hasRealization -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#inheresIn -->
 
-    <owl:ObjectProperty rdf:about="#hasRealization">
-        <rdfs:comment
-            >inverser of realizationOf</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#inheresIn -->
-
-    <owl:ObjectProperty rdf:about="#inheresIn">
-        <rdfs:comment
-            >inverse of hasInherent</rdfs:comment>
-        <rdfs:comment
-            >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <skos:definition
-            >inheresIn relates a dependent continuant (a state, quality, property, function, disposition) with the independent continuant it depends on.</skos:definition>
+    <owl:ObjectProperty rdf:about="&biotop;inheresIn">
         <owl:equivalentProperty rdf:resource="&dolce;inherent-in"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#interconnects -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#locatedIn -->
 
-    <owl:ObjectProperty rdf:about="#interconnects">
-        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#locatedIn -->
-
-    <owl:ObjectProperty rdf:about="#locatedIn">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>located_in</rdfs:label>
-        <rdfs:comment
-            >inverseOf locationOf</rdfs:comment>
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
+    <owl:ObjectProperty rdf:about="&biotop;locatedIn">
         <owl:equivalentProperty rdf:resource="&dolce;generic-location"/>
         <owl:equivalentProperty rdf:resource="&ro;located_in"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#locationOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#locationOf -->
 
-    <owl:ObjectProperty rdf:about="#locationOf">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>location_of</rdfs:label>
-        <rdfs:comment
-            >inverseOf locatedIn</rdfs:comment>
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
+    <owl:ObjectProperty rdf:about="&biotop;locationOf">
         <owl:equivalentProperty rdf:resource="&dolce;generic-location-of"/>
         <owl:equivalentProperty rdf:resource="&ro;location_of"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#partOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#partOf -->
 
-    <owl:ObjectProperty rdf:about="#partOf">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>part_of</rdfs:label>
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:comment
-            >inverseOf hasPart</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#locatedIn"/>
+    <owl:ObjectProperty rdf:about="&biotop;partOf">
         <owl:equivalentProperty rdf:resource="&dolce;part-of"/>
         <owl:equivalentProperty rdf:resource="&ro;part_of"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#participatesIn -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#participatesIn -->
 
-    <owl:ObjectProperty rdf:about="#participatesIn">
-        <rdfs:label>participates_in</rdfs:label>
-        <rdfs:comment
-            >inverseOf hasParticipant</rdfs:comment>
+    <owl:ObjectProperty rdf:about="&biotop;participatesIn">
         <owl:equivalentProperty rdf:resource="&dolce;participant-in"/>
         <owl:equivalentProperty rdf:resource="&ro;participates_in"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#precededBy -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#precededBy -->
 
-    <owl:ObjectProperty rdf:about="#precededBy">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>preceded_by</rdfs:label>
-        <skos:definition
-            >p precededBy p&#39; if and only if: given any process p at a time t, there is some process p&#39; at time t&#39;, and t&#39; is earlier than t.</skos:definition>
-        <rdfs:comment
-            >inverseOf precedes</rdfs:comment>
+    <owl:ObjectProperty rdf:about="&biotop;precededBy">
         <owl:equivalentProperty rdf:resource="&ro;preceded_by"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#precedes -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#precedes -->
 
-    <owl:ObjectProperty rdf:about="#precedes">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>precedes</rdfs:label>
-        <rdfs:comment
-            >inverseOf precededBy</rdfs:comment>
+    <owl:ObjectProperty rdf:about="&biotop;precedes">
         <owl:equivalentProperty rdf:resource="&ro;precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#properPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#properPartOf -->
 
-    <owl:ObjectProperty rdf:about="#properPartOf">
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label>proper_part_of</rdfs:label>
-        <rdfs:comment
-            >As for partOf, with the additional constraint that subject and object are distinct</rdfs:comment>
-        <rdfs:comment
-            >inverseOf hasProperPart</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="#partOf"/>
+    <owl:ObjectProperty rdf:about="&biotop;properPartOf">
         <owl:equivalentProperty rdf:resource="&dolce;proper-part-of"/>
         <owl:equivalentProperty rdf:resource="&ro;proper_part_of"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#qualityLocated -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#qualityLocated -->
 
-    <owl:ObjectProperty rdf:about="#qualityLocated">
+    <owl:ObjectProperty rdf:about="&biotop;qualityLocated">
         <owl:equivalentProperty rdf:resource="&dolce;q-location"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#qualityLocationOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#qualityLocationOf -->
 
-    <owl:ObjectProperty rdf:about="#qualityLocationOf">
+    <owl:ObjectProperty rdf:about="&biotop;qualityLocationOf">
         <owl:equivalentProperty rdf:resource="&dolce;q-location-of"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#ramificationOf -->
-
-    <owl:ObjectProperty rdf:about="#ramificationOf">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#attachedTo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#ramifies -->
-
-    <owl:ObjectProperty rdf:about="#ramifies">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#attachedTo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#realizationOf -->
-
-    <owl:ObjectProperty rdf:about="#realizationOf">
-        <skos:definition
-            >Something that occurs can be the realization of a function</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#spatiallyRelated -->
-
-    <owl:ObjectProperty rdf:about="#spatiallyRelated"/>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#surrounds -->
-
-    <owl:ObjectProperty rdf:about="#surrounds">
-        <skos:definition
-            >loosely defined relation: establishing boundaries, enclosing, confining, enclosing, circumscribing</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#touches -->
-
-    <owl:ObjectProperty rdf:about="#touches">
-        <dc:source
-            >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
-Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
-        <rdfs:subPropertyOf rdf:resource="#adjacentTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#traverses -->
-
-    <owl:ObjectProperty rdf:about="#traverses">
-        <skos:definition
-            >crossing over and crossing through</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1001,25 +459,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2008/05/skos#synonym -->
-
-    <owl:AnnotationProperty rdf:about="&skos;synonym">
-        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1028,58 +467,47 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-  
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#Function -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Function -->
 
     <owl:Class rdf:about="&biotop;Function">
-        
         <rdfs:subClassOf rdf:resource="&dolce;quality"/>
     </owl:Class>
     
 
 
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#ImmaterialNonphysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmaterialNonphysicalEntity -->
 
     <owl:Class rdf:about="&biotop;ImmaterialNonphysicalEntity">
-        
         <rdfs:subClassOf rdf:resource="&dolce;non-physical-endurant"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#ImmaterialPhysicalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ImmaterialPhysicalEntity -->
 
     <owl:Class rdf:about="&biotop;ImmaterialPhysicalEntity">
-        
         <rdfs:subClassOf rdf:resource="&dolce;physical-endurant"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#MaterialEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#MaterialEntity -->
 
     <owl:Class rdf:about="&biotop;MaterialEntity">
-        
- 
         <rdfs:subClassOf rdf:resource="&dolce;physical-object"/>
-  
     </owl:Class>
     
 
 
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#PhysicalBoundary -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PhysicalBoundary -->
 
     <owl:Class rdf:about="&biotop;PhysicalBoundary">
         <rdfs:subClassOf rdf:resource="&dolce;feature"/>
- 
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#ProcessualEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#ProcessualEntity -->
 
     <owl:Class rdf:about="&biotop;ProcessualEntity">
         <rdfs:subClassOf rdf:resource="&dolce;process"/>
@@ -1087,8 +515,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#Quality -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Quality -->
 
     <owl:Class rdf:about="&biotop;Quality">
         <rdfs:subClassOf>
@@ -1104,7 +531,7 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#QualityRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#QualityRegion -->
 
     <owl:Class rdf:about="&biotop;QualityRegion">
         <rdfs:subClassOf>
@@ -1120,42 +547,41 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#Role -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#Role -->
 
     <owl:Class rdf:about="&biotop;Role">
-
         <rdfs:subClassOf rdf:resource="&dolce;quality"/>
- 
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#SpatialRegion -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#SpatialRegion -->
 
     <owl:Class rdf:about="&biotop;SpatialRegion">
-
         <rdfs:subClassOf rdf:resource="&dolce;space-region"/>
- 
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#StateOfBeing -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#State -->
 
-    <owl:Class rdf:about="&biotop;StateOfBeing">
-
+    <owl:Class rdf:about="&biotop;State">
         <rdfs:subClassOf rdf:resource="&dolce;state"/>
- 
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-dolce-ro.owl#TemporalEntity -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#TemporalEntity -->
 
     <owl:Class rdf:about="&biotop;TemporalEntity">
-
-        <rdfs:subClassOf rdf:resource="&dolce;perdurant"/>
-
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dolce;spatio-temporal-region"/>
+                    <rdf:Description rdf:about="&dolce;temporal-region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1181,12 +607,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical-endurant -->
 
     <owl:Class rdf:about="&dolce;non-physical-endurant"/>
-    
-
-
-    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant -->
-
-    <owl:Class rdf:about="&dolce;perdurant"/>
     
 
 
@@ -1232,6 +652,12 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     
 
 
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#spatio-temporal-region -->
+
+    <owl:Class rdf:about="&dolce;spatio-temporal-region"/>
+    
+
+
     <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#state -->
 
     <owl:Class rdf:about="&dolce;state"/>
@@ -1247,12 +673,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
     <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporal-region -->
 
     <owl:Class rdf:about="&dolce;temporal-region"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#Thing -->
-
-    <owl:Class rdf:about="&owl;Thing"/>
 </rdf:RDF>
 
 
