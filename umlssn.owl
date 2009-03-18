@@ -9,7 +9,7 @@
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY sn "http://purl.org/biotop/1.0/umlssn.owl#" >
+    <!ENTITY umlssn "http://purl.org/biotop/1.0/umlssn.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
@@ -19,8 +19,8 @@
      xmlns:biotop="http://purl.org/biotop/1.0/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:sn="&biotop;umlssn.owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:umlssn="&biotop;umlssn.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -39,7 +39,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
         <dc:publisher
             >Institute for Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
         <dc:creator>Stefan Schulz</dc:creator>
-        <dc:creator>Elena Beisswanger</dc:creator>
+        <dc:creator
+            >Elena Beisswanger</dc:creator>
         <dc:relation></dc:relation>
         <dc:format
             >application/rdf+xml</dc:format>
@@ -538,6 +539,14 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
         <rdfs:label
             >Congenital_Abnormality</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Anatomical_Abnormality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#Constraint -->
+
+    <owl:Class rdf:about="#Constraint">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     
 
@@ -1475,8 +1484,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#adjacent_to -->
 
     <owl:Class rdf:about="#adjacent_to">
-        <rdfs:subClassOf rdf:resource="#spatially_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#adjacent_to_body_location_or_region"/>
@@ -1487,7 +1495,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#adjacent_to_tissue"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -1658,8 +1667,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#affects -->
 
     <owl:Class rdf:about="#affects">
-        <rdfs:subClassOf rdf:resource="#functionally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#affects_anatomical_abnormality"/>
@@ -1686,7 +1694,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#treats"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -2103,15 +2112,19 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#assesses_effect_of -->
 
     <owl:Class rdf:about="#assesses_effect_of">
-        <rdfs:subClassOf rdf:resource="#analyzes"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#assesses_effect_of_diagnostic_procedure"/>
-                    <rdf:Description rdf:about="#assesses_effect_of_laboratory_procedure"/>
-                </owl:unionOf>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#analyzes"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#assesses_effect_of_diagnostic_procedure"/>
+                            <rdf:Description rdf:about="#assesses_effect_of_laboratory_procedure"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -2170,8 +2183,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#associated_with -->
 
     <owl:Class rdf:about="#associated_with">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#associated_with_anatomical_abnormality"/>
@@ -2187,7 +2199,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#temporally_related_to"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -2392,15 +2405,15 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#brings_about -->
 
     <owl:Class rdf:about="#brings_about">
-        <rdfs:subClassOf rdf:resource="#functionally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#causes"/>
                     <rdf:Description rdf:about="#produces"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
         <skos:prefLabel>brings_about</skos:prefLabel>
     </owl:Class>
     
@@ -2409,15 +2422,15 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#carries_out -->
 
     <owl:Class rdf:about="#carries_out">
-        <rdfs:subClassOf rdf:resource="#performs"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#carries_out_gene_or_genome"/>
                     <rdf:Description rdf:about="#carries_out_organization"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -2469,15 +2482,15 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#causes -->
 
     <owl:Class rdf:about="#causes">
-        <rdfs:subClassOf rdf:resource="#brings_about"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#causes_PATHOLOGICAL_ORGANISM"/>
                     <rdf:Description rdf:about="#causes_manufactured_object_or_substance"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -2554,8 +2567,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#co-occurs_with -->
 
     <owl:Class rdf:about="#co-occurs_with">
-        <rdfs:subClassOf rdf:resource="#temporally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#co-occurs_with_acquired_abnormality"/>
@@ -2566,7 +2578,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#co-occurs_with_physiologic_function"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -2714,8 +2727,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#complicates -->
 
     <owl:Class rdf:about="#complicates">
-        <rdfs:subClassOf rdf:resource="#affects"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#complicates_HARMFUL_NOUN"/>
@@ -2724,7 +2736,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#complicates_therapeutic_or_preventive_procedure"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -2854,8 +2867,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#conceptually_related_to -->
 
     <owl:Class rdf:about="#conceptually_related_to">
-        <rdfs:subClassOf rdf:resource="#associated_with"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#analyzes"/>
@@ -2872,7 +2884,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#property_of"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
         <skos:prefLabel
             >conceptually_related_to</skos:prefLabel>
     </owl:Class>
@@ -2882,8 +2895,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#connected_to -->
 
     <owl:Class rdf:about="#connected_to">
-        <rdfs:subClassOf rdf:resource="#physically_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#connected_to_body_location_or_region"/>
@@ -2891,7 +2903,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#connected_to_body_space_or_junction"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -2974,8 +2987,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#consists_of -->
 
     <owl:Class rdf:about="#consists_of">
-        <rdfs:subClassOf rdf:resource="#physically_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#consists_of_amino_acid__peptide__or_protein"/>
@@ -2986,7 +2998,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#consists_of_tissue"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -3140,8 +3153,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#contains -->
 
     <owl:Class rdf:about="#contains">
-        <rdfs:subClassOf rdf:resource="#physically_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#contains_STRUCTURE"/>
@@ -3149,7 +3161,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#contains_drug_delivery_device"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -3238,8 +3251,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#degree_of -->
 
     <owl:Class rdf:about="#degree_of">
-        <rdfs:subClassOf rdf:resource="#conceptually_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#degree_of_organ_or_tissue_function"/>
@@ -3249,7 +3261,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#degree_of_sign_or_symptom"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -3389,8 +3402,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#developmental_form_of -->
 
     <owl:Class rdf:about="#developmental_form_of">
-        <rdfs:subClassOf rdf:resource="#conceptually_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#developmental_form_of_body_part__organ__or_organ_component"/>
@@ -3399,7 +3411,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#developmental_form_of_tissue"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -3511,8 +3524,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#diagnoses -->
 
     <owl:Class rdf:about="#diagnoses">
-        <rdfs:subClassOf rdf:resource="#conceptually_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#diagnoses_PROCEDURE"/>
@@ -3521,7 +3533,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#diagnoses_sign_or_symptom"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -3679,15 +3692,15 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#evaluation_of -->
 
     <owl:Class rdf:about="#evaluation_of">
-        <rdfs:subClassOf rdf:resource="#conceptually_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#evaluation_of_finding"/>
                     <rdf:Description rdf:about="#evaluation_of_qualitative_concept"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -3775,8 +3788,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#functionally_related_to -->
 
     <owl:Class rdf:about="#functionally_related_to">
-        <rdfs:subClassOf rdf:resource="#associated_with"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#affects"/>
@@ -3789,7 +3801,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#uses"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
         <skos:prefLabel
             >functionally_related_to</skos:prefLabel>
     </owl:Class>
@@ -3799,15 +3812,15 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#indicates -->
 
     <owl:Class rdf:about="#indicates">
-        <rdfs:subClassOf rdf:resource="#functionally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#indicates_immunologic_factor"/>
                     <rdf:Description rdf:about="#indicates_laboratory_or_test_result"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -3898,8 +3911,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#interacts -->
 
     <owl:Class rdf:about="#interacts">
-        <rdfs:subClassOf rdf:resource="#affects"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#interacts_with_chemical"/>
@@ -3907,7 +3919,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#interacts_with_organism"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -3981,8 +3994,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#interconnects -->
 
     <owl:Class rdf:about="#interconnects">
-        <rdfs:subClassOf rdf:resource="#physically_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#Body_Part__Organ__or_Organ_Component"/>
@@ -3991,7 +4003,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#interconnects_embryonic_structure"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -4095,8 +4108,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#location_of -->
 
     <owl:Class rdf:about="#location_of">
-        <rdfs:subClassOf rdf:resource="#spatially_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#location_of_CELL__CELL_COMPONENT__OR_TISSUE"/>
@@ -4111,7 +4123,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#location_of_organization"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -4417,8 +4430,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#manages -->
 
     <owl:Class rdf:about="#manages">
-        <rdfs:subClassOf rdf:resource="#affects"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#manages_health_care_related_organization"/>
@@ -4426,7 +4438,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#manages_self_help_or_relief_organization"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -4486,8 +4499,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#manifestation_of -->
 
     <owl:Class rdf:about="#manifestation_of">
-        <rdfs:subClassOf rdf:resource="#functionally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#manifestation_of_anatomical_abnormality"/>
@@ -4497,7 +4509,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#manifestation_of_pathologic_function"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -4671,8 +4684,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#measurement_of -->
 
     <owl:Class rdf:about="#measurement_of">
-        <rdfs:subClassOf rdf:resource="#conceptually_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#measurement_of_laboratory_or_test_result"/>
@@ -4680,7 +4692,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#measurement_of_quantitative_concept"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -4809,8 +4822,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#method_of -->
 
     <owl:Class rdf:about="#method_of">
-        <rdfs:subClassOf rdf:resource="#conceptually_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#method_of_diagnostic_procedure"/>
@@ -4821,7 +4833,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#method_of_therapeutic_or_preventive_procedure"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -4984,8 +4997,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#occurs_in -->
 
     <owl:Class rdf:about="#occurs_in">
-        <rdfs:subClassOf rdf:resource="#functionally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#occurs_in_DISEASE"/>
@@ -4995,7 +5007,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#process_of"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -5107,8 +5120,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#part_of -->
 
     <owl:Class rdf:about="#part_of">
-        <rdfs:subClassOf rdf:resource="#physically_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#part_of_CELL_COMPONENT_OR_GENE_OR_GENOME"/>
@@ -5121,7 +5133,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#part_of_tissue"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -5358,8 +5371,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#performs -->
 
     <owl:Class rdf:about="#performs">
-        <rdfs:subClassOf rdf:resource="#functionally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#carries_out"/>
@@ -5367,7 +5379,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#practices"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -5375,8 +5388,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#physically_related_to -->
 
     <owl:Class rdf:about="#physically_related_to">
-        <rdfs:subClassOf rdf:resource="#associated_with"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#branch_of"/>
@@ -5389,7 +5401,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#tributary_of"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
         <skos:prefLabel
             >physically_related_to</skos:prefLabel>
     </owl:Class>
@@ -5421,8 +5434,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#precedes -->
 
     <owl:Class rdf:about="#precedes">
-        <rdfs:subClassOf rdf:resource="#temporally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#precedes_diagnostic_procedure"/>
@@ -5430,7 +5442,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#precedes_physiologic_function"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -5504,8 +5517,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#prevents -->
 
     <owl:Class rdf:about="#prevents">
-        <rdfs:subClassOf rdf:resource="#affects"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#prevents_medical_device"/>
@@ -5513,7 +5525,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#prevents_therapeutic_or_preventive_device"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -5594,7 +5607,16 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#process_of -->
 
     <owl:Class rdf:about="#process_of">
-        <rdfs:subClassOf rdf:resource="#occurs_in"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#process_of_biologic_function"/>
+                    <rdf:Description rdf:about="#process_of_individual_behavior"/>
+                    <rdf:Description rdf:about="#process_of_natural_phenomenon_or_process"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -5668,8 +5690,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#produces -->
 
     <owl:Class rdf:about="#produces">
-        <rdfs:subClassOf rdf:resource="#brings_about"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#produces_biologic_function"/>
@@ -5681,7 +5702,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#produces_organization"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -5872,8 +5894,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#property_of -->
 
     <owl:Class rdf:about="#property_of">
-        <rdfs:subClassOf rdf:resource="#conceptually_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#property_of_amino_acid_sequence"/>
@@ -5882,7 +5903,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#property_of_organism_attribute"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -5992,8 +6014,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#result_of -->
 
     <owl:Class rdf:about="#result_of">
-        <rdfs:subClassOf rdf:resource="#functionally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#result_of_ACQUIRED_ABNORMALITY_OR_MENTAL_PROCESS"/>
@@ -6004,7 +6025,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#result_of_phenomenon_or_process"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -6180,8 +6202,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#spatially_related_to -->
 
     <owl:Class rdf:about="#spatially_related_to">
-        <rdfs:subClassOf rdf:resource="#associated_with"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#adjacent_to"/>
@@ -6190,7 +6211,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#traverses"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
         <skos:prefLabel
             >spatially_related_to</skos:prefLabel>
     </owl:Class>
@@ -6200,8 +6222,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#surrounds -->
 
     <owl:Class rdf:about="#surrounds">
-        <rdfs:subClassOf rdf:resource="#spatially_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#surrounds_body_part__organ__or_organ_component"/>
@@ -6212,7 +6233,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#surrounds_tissue"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -6383,15 +6405,15 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#temporally_related_to -->
 
     <owl:Class rdf:about="#temporally_related_to">
-        <rdfs:subClassOf rdf:resource="#associated_with"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#co-occurs_with"/>
                     <rdf:Description rdf:about="#precedes"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
         <skos:prefLabel
             >temporally_related_to</skos:prefLabel>
     </owl:Class>
@@ -6401,15 +6423,15 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#traverses -->
 
     <owl:Class rdf:about="#traverses">
-        <rdfs:subClassOf rdf:resource="#spatially_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#traverses_body_location_or_region"/>
                     <rdf:Description rdf:about="#traverses_body_part__organ__or_organ_component"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -6461,15 +6483,15 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#treats -->
 
     <owl:Class rdf:about="#treats">
-        <rdfs:subClassOf rdf:resource="#affects"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#treats_MEDICINE"/>
                     <rdf:Description rdf:about="#treats_professional_or_occupational_group"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
@@ -6560,8 +6582,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#uses -->
 
     <owl:Class rdf:about="#uses">
-        <rdfs:subClassOf rdf:resource="#functionally_related_to"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#uses_diagnostic_procedure"/>
@@ -6570,7 +6591,8 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                     <rdf:Description rdf:about="#uses_therapeutic_or_preventive_procedure"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Constraint"/>
     </owl:Class>
     
 
