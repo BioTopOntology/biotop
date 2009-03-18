@@ -1082,9 +1082,7 @@ Forthcoming in Bioinformatics</dc:source>
 
     <!-- http://purl.org/biotop/1.0/biotop.owl#Plant -->
 
-    <owl:Class rdf:about="&biotop2;biotop.owl#Plant">
-        <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#Plant"/>
-    </owl:Class>
+    <owl:Class rdf:about="&biotop2;biotop.owl#Plant"/>
     
 
 
@@ -3115,6 +3113,14 @@ Forthcoming in Bioinformatics</dc:source>
 
     <owl:Class rdf:about="&biotop2;umlssn.owl#Plant">
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T002"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop2;biotop.owl#Alga"/>
+                    <rdf:Description rdf:about="&biotop2;biotop.owl#Plant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
