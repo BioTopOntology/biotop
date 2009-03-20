@@ -482,6 +482,12 @@ Forthcoming in Bioinformatics</dc:source>
     
 
 
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AmountOfSubstance -->
+
+    <owl:Class rdf:about="&biotop2;biotop.owl#AmountOfSubstance"/>
+    
+
+
     <!-- http://purl.org/biotop/1.0/biotop.owl#Amphibian -->
 
     <owl:Class rdf:about="&biotop2;biotop.owl#Amphibian">
@@ -1764,8 +1770,9 @@ Forthcoming in Bioinformatics</dc:source>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop2;biotop.owl#AmountOfSubstance"/>
+                    <rdf:Description rdf:about="&biotop2;biotop.owl#Atom"/>
                     <rdf:Description rdf:about="&biotop2;biotop.owl#MonoMolecularEntity"/>
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#PortionOfHomogenousMatter"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
