@@ -356,85 +356,11 @@ Forthcoming in Bioinformatics</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-umlssn.owl#new_bodyp_bodyp -->
-
-    <owl:Class rdf:about="#new_bodyp_bodyp">
-        <rdfs:label>new_bodyp_bodyp</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&biotop2;umlssn.owl#associated_with"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop2;umlssn.owl#hasDomain"/>
-                        <owl:someValuesFrom rdf:resource="&biotop2;umlssn.owl#Body_Part__Organ__or_Organ_Component"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop2;umlssn.owl#hasRange"/>
-                        <owl:someValuesFrom rdf:resource="&biotop2;umlssn.owl#Body_Part__Organ__or_Organ_Component"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-umlssn.owl#new_cellc_orgchem -->
-
-    <owl:Class rdf:about="#new_cellc_orgchem">
-        <rdfs:label
-            >new_cellc_orgchem</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&biotop2;umlssn.owl#associated_with"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop2;umlssn.owl#hasDomain"/>
-                        <owl:someValuesFrom rdf:resource="&biotop2;umlssn.owl#Cell_Component"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop2;umlssn.owl#hasRange"/>
-                        <owl:someValuesFrom rdf:resource="&biotop2;umlssn.owl#Organic_Chemical"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop-umlssn.owl#new_mam_mam -->
-
-    <owl:Class rdf:about="#new_mam_mam">
-        <rdfs:label>new_mam_mam</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&biotop2;umlssn.owl#associated_with"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop2;umlssn.owl#hasDomain"/>
-                        <owl:someValuesFrom rdf:resource="&biotop2;umlssn.owl#Mammal"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop2;umlssn.owl#hasRange"/>
-                        <owl:someValuesFrom rdf:resource="&biotop2;umlssn.owl#Mammal"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/biotop/1.0/biotop.owl#AcquiredAbnormalStructure -->
 
-    <owl:Class rdf:about="&biotop2;biotop.owl#AcquiredAbnormalStructure"/>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop.owl#AcquiredPathologicalState -->
-
-    <owl:Class rdf:about="&biotop2;biotop.owl#AcquiredPathologicalState"/>
+    <owl:Class rdf:about="&biotop2;biotop.owl#AcquiredAbnormalStructure">
+        <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#Acquired_Abnormality"/>
+    </owl:Class>
     
 
 
@@ -688,13 +614,9 @@ Forthcoming in Bioinformatics</dc:source>
 
     <!-- http://purl.org/biotop/1.0/biotop.owl#CongenitalAbnormalStructure -->
 
-    <owl:Class rdf:about="&biotop2;biotop.owl#CongenitalAbnormalStructure"/>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop.owl#CongenitalPathologicalState -->
-
-    <owl:Class rdf:about="&biotop2;biotop.owl#CongenitalPathologicalState"/>
+    <owl:Class rdf:about="&biotop2;biotop.owl#CongenitalAbnormalStructure">
+        <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#Congenital_Abnormality"/>
+    </owl:Class>
     
 
 
@@ -834,6 +756,12 @@ Forthcoming in Bioinformatics</dc:source>
     
 
 
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HumanAction -->
+
+    <owl:Class rdf:about="&biotop2;biotop.owl#HumanAction"/>
+    
+
+
     <!-- http://purl.org/biotop/1.0/biotop.owl#HumanLanguage -->
 
     <owl:Class rdf:about="&biotop2;biotop.owl#HumanLanguage">
@@ -844,7 +772,9 @@ Forthcoming in Bioinformatics</dc:source>
 
     <!-- http://purl.org/biotop/1.0/biotop.owl#IllFormedBiologicalStructure -->
 
-    <owl:Class rdf:about="&biotop2;biotop.owl#IllFormedBiologicalStructure"/>
+    <owl:Class rdf:about="&biotop2;biotop.owl#IllFormedBiologicalStructure">
+        <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#Anatomical_Abnormality"/>
+    </owl:Class>
     
 
 
@@ -992,12 +922,6 @@ Forthcoming in Bioinformatics</dc:source>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#NoncanonicalState -->
-
-    <owl:Class rdf:about="&biotop2;biotop.owl#NoncanonicalState"/>
-    
-
-
     <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcid -->
 
     <owl:Class rdf:about="&biotop2;biotop.owl#NucleicAcid"/>
@@ -1089,6 +1013,14 @@ Forthcoming in Bioinformatics</dc:source>
     <!-- http://purl.org/biotop/1.0/biotop.owl#Plant -->
 
     <owl:Class rdf:about="&biotop2;biotop.owl#Plant"/>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PluralityOfOrganisms -->
+
+    <owl:Class rdf:about="&biotop2;biotop.owl#PluralityOfOrganisms">
+        <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#Group"/>
+    </owl:Class>
     
 
 
@@ -1308,14 +1240,6 @@ Forthcoming in Bioinformatics</dc:source>
 
     <owl:Class rdf:about="&biotop2;umlssn.owl#Acquired_Abnormality">
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T020"/>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#AcquiredAbnormalStructure"/>
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#AcquiredPathologicalState"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1391,14 +1315,6 @@ Forthcoming in Bioinformatics</dc:source>
 
     <owl:Class rdf:about="&biotop2;umlssn.owl#Anatomical_Abnormality">
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T190"/>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#IllFormedBiologicalStructure"/>
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#NoncanonicalState"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1412,7 +1328,6 @@ Forthcoming in Bioinformatics</dc:source>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop2;biotop.owl#Gene"/>
                     <rdf:Description rdf:about="&biotop2;biotop.owl#Genome"/>
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#State"/>
                     <rdf:Description rdf:about="&biotop2;biotop.owl#StructuredBiologicalEntity"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1499,10 +1414,21 @@ Forthcoming in Bioinformatics</dc:source>
     <owl:Class rdf:about="&biotop2;umlssn.owl#Biologically_Active_Substance">
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T123"/>
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasInherence"/>
-                <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#BiologicalSystemRole"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#CompoundOfCollectiveMaterialEntities"/>
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#MonoMolecularEntity"/>
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#PortionOfHomogenousMatter"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasInherence"/>
+                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#BiologicalSystemRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -1544,16 +1470,18 @@ Forthcoming in Bioinformatics</dc:source>
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T029"/>
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasLocus"/>
-                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#MulticellularOrganism"/>
-                    </owl:Restriction>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#ImmaterialPhysicalEntity"/>
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#MaterialEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&biotop2;biotop.owl#locatedIn"/>
                         <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#MulticellularOrganism"/>
                     </owl:Restriction>
-                </owl:unionOf>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
@@ -1806,6 +1734,27 @@ Forthcoming in Bioinformatics</dc:source>
 
     <owl:Class rdf:about="&biotop2;umlssn.owl#Clinical_Attribute">
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T201"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop2;biotop.owl#Quality"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#inheresIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop2;biotop.owl#Organism"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasInherence"/>
+                                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#SubjectOfCareRole"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1879,14 +1828,6 @@ Forthcoming in Bioinformatics</dc:source>
 
     <owl:Class rdf:about="&biotop2;umlssn.owl#Congenital_Abnormality">
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T019"/>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#CongenitalAbnormalStructure"/>
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#CongenitalPathologicalState"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1895,6 +1836,17 @@ Forthcoming in Bioinformatics</dc:source>
 
     <owl:Class rdf:about="&biotop2;umlssn.owl#Daily_or_Recreational_Activity">
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T056"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop2;biotop.owl#HumanAction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasAgent"/>
+                        <owl:allValuesFrom rdf:resource="&biotop2;biotop.owl#Human"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2105,10 +2057,46 @@ Forthcoming in Bioinformatics</dc:source>
     <owl:Class rdf:about="&biotop2;umlssn.owl#Finding">
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T033"/>
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasInherence"/>
-                <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#FindingRole"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#ProcessualEntity"/>
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#State"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasParticipant"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&biotop2;biotop.owl#Organism"/>
+                                            <rdf:Description rdf:about="&biotop2;biotop.owl#OrganismPart"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop2;biotop.owl#inheresIn"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&biotop2;biotop.owl#Organism"/>
+                                            <rdf:Description rdf:about="&biotop2;biotop.owl#OrganismPart"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasInherence"/>
+                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#FindingRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
     
@@ -2294,10 +2282,18 @@ Forthcoming in Bioinformatics</dc:source>
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T102"/>
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#Quality"/>
-                    <rdf:Description rdf:about="&biotop2;biotop.owl#Role"/>
-                </owl:unionOf>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#Quality"/>
+                            <rdf:Description rdf:about="&biotop2;biotop.owl#Role"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#inheresIn"/>
+                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#Population"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
@@ -2876,36 +2872,13 @@ Forthcoming in Bioinformatics</dc:source>
         <owl:equivalentClass rdf:resource="&biotop2;umlssn.owl#T032"/>
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#featureOf"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&biotop2;biotop.owl#Organism"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#properPartOf"/>
-                                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#Organism"/>
-                                    </owl:Restriction>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop2;biotop.owl#Quality"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&biotop2;biotop.owl#inheresIn"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&biotop2;biotop.owl#Organism"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#properPartOf"/>
-                                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#Organism"/>
-                                    </owl:Restriction>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#Organism"/>
                     </owl:Restriction>
-                </owl:unionOf>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
@@ -3694,7 +3667,19 @@ Forthcoming in Bioinformatics</dc:source>
 
     <!-- http://purl.org/biotop/1.0/umlssn.owl#T058 -->
 
-    <owl:Class rdf:about="&biotop2;umlssn.owl#T058"/>
+    <owl:Class rdf:about="&biotop2;umlssn.owl#T058">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop2;biotop.owl#Action"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop2;biotop.owl#hasInherence"/>
+                        <owl:someValuesFrom rdf:resource="&biotop2;biotop.owl#HealthRelatedRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -4220,12 +4205,6 @@ Forthcoming in Bioinformatics</dc:source>
     <!-- http://purl.org/biotop/1.0/umlssn.owl#affects -->
 
     <owl:Class rdf:about="&biotop2;umlssn.owl#affects"/>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/umlssn.owl#associated_with -->
-
-    <owl:Class rdf:about="&biotop2;umlssn.owl#associated_with"/>
     
 
 
