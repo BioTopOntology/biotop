@@ -158,9 +158,7 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
 
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
-    <owl:AnnotationProperty rdf:about="&skos;prefLabel">
-        <rdf:type rdf:resource="&owl;DatatypeProperty"/>
-    </owl:AnnotationProperty>
+    <owl:DatatypeProperty rdf:about="&skos;prefLabel"/>
     
 
 
@@ -697,6 +695,14 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
 
     <owl:Class rdf:about="#Event">
         <rdfs:label>Event</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Activity"/>
+                    <rdf:Description rdf:about="#Phenomenon_or_Process"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -2630,7 +2636,6 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Constraint"/>
-        <skos:prefLabel>brings_about</skos:prefLabel>
     </owl:Class>
     
 
@@ -3154,8 +3159,6 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <skos:prefLabel
-            >conceptual_part_of</skos:prefLabel>
     </owl:Class>
     
 
@@ -3512,8 +3515,6 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Constraint"/>
-        <skos:prefLabel
-            >conceptually_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -4549,8 +4550,6 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Constraint"/>
-        <skos:prefLabel
-            >functionally_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -4885,7 +4884,6 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <skos:prefLabel>issue_in</skos:prefLabel>
     </owl:Class>
     
 
@@ -6357,8 +6355,6 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Constraint"/>
-        <skos:prefLabel
-            >physically_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -7275,8 +7271,6 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Constraint"/>
-        <skos:prefLabel
-            >spatially_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -7500,8 +7494,6 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Constraint"/>
-        <skos:prefLabel
-            >temporally_related_to</skos:prefLabel>
     </owl:Class>
     
 
@@ -7859,9 +7851,79 @@ http://www.nlm.nih.gov/pubs/factsheets/umlssemn.html</dc:source>
         <skos:hiddenLabel></skos:hiddenLabel>
         <skos:historyNote></skos:historyNote>
     </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#brings_about -->
+
+    <rdf:Description rdf:about="#brings_about">
+        <skos:prefLabel>brings_about</skos:prefLabel>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#conceptual_part_of -->
+
+    <rdf:Description rdf:about="#conceptual_part_of">
+        <skos:prefLabel
+            >conceptual_part_of</skos:prefLabel>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#conceptually_related_to -->
+
+    <rdf:Description rdf:about="#conceptually_related_to">
+        <skos:prefLabel
+            >conceptually_related_to</skos:prefLabel>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#functionally_related_to -->
+
+    <rdf:Description rdf:about="#functionally_related_to">
+        <skos:prefLabel
+            >functionally_related_to</skos:prefLabel>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#issue_in -->
+
+    <rdf:Description rdf:about="#issue_in">
+        <skos:prefLabel>issue_in</skos:prefLabel>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#physically_related_to -->
+
+    <rdf:Description rdf:about="#physically_related_to">
+        <skos:prefLabel
+            >physically_related_to</skos:prefLabel>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#spatially_related_to -->
+
+    <rdf:Description rdf:about="#spatially_related_to">
+        <skos:prefLabel
+            >spatially_related_to</skos:prefLabel>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/umlssn.owl#temporally_related_to -->
+
+    <rdf:Description rdf:about="#temporally_related_to">
+        <skos:prefLabel
+            >temporally_related_to</skos:prefLabel>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.913) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1042) http://owlapi.sourceforge.net -->
 
