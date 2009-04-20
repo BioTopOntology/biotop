@@ -3072,15 +3072,6 @@
       <owl:Class rdf:about="#T150"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="T010">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="T008"/>
-    </rdfs:subClassOf>
-    <rdfs:comment xml:lang="en">An animal which has a spinal column.</rdfs:comment>
-    <sn:treeNumber>A1.1.7.2</sn:treeNumber>
-    <rdfs:label xml:lang="en">Vertebrate</rdfs:label>
-    <sn:snRecordType>STY</sn:snRecordType>
-  </owl:Class>
   <owl:Class rdf:about="#T134_T203_T200">
     <rdfs:label xml:lang="en">contains with domain Drug Delivery Device and range Clinical Drug</rdfs:label>
     <rdfs:subClassOf>
@@ -3098,6 +3089,15 @@
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#T134"/>
+  </owl:Class>
+  <owl:Class rdf:ID="T010">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="T008"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An animal which has a spinal column.</rdfs:comment>
+    <sn:treeNumber>A1.1.7.2</sn:treeNumber>
+    <rdfs:label xml:lang="en">Vertebrate</rdfs:label>
+    <sn:snRecordType>STY</sn:snRecordType>
   </owl:Class>
   <owl:Class rdf:ID="T191">
     <rdfs:subClassOf>
@@ -5984,6 +5984,18 @@
     <rdfs:subClassOf rdf:resource="#T176"/>
   </owl:Class>
   <owl:Class rdf:ID="T199">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <owl:Class rdf:ID="T199_T023_T023"/>
+            </rdf:first>
+          </rdf:List>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#T132"/>
     </rdfs:subClassOf>
@@ -7104,6 +7116,16 @@
     <rdfs:subClassOf rdf:resource="#T160"/>
   </owl:Class>
   <owl:Class rdf:about="#T198">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:resource="#T198_T023_T023"/>
+          </rdf:List>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#T132"/>
     </rdfs:subClassOf>
@@ -7330,6 +7352,18 @@
     <sn:snRecordType>STY</sn:snRecordType>
   </owl:Class>
   <owl:Class rdf:ID="T178">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <owl:Class rdf:ID="T178_T031_T024"/>
+            </rdf:first>
+          </rdf:List>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#T158"/>
     </rdfs:subClassOf>
@@ -7375,6 +7409,16 @@
     <rdfs:subClassOf rdf:resource="#T173"/>
   </owl:Class>
   <owl:Class rdf:about="#T202">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:resource="#T202_T167_T200"/>
+          </rdf:List>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#T132"/>
     </rdfs:subClassOf>
@@ -9359,7 +9403,7 @@
       <owl:Class rdf:about="#T150"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="T199_T023_T023">
+  <owl:Class rdf:about="#T199_T023_T023">
     <rdfs:label xml:lang="en">tributary_of with domain Body Part, Organ, or Organ Component and range Body Part, Organ, or Organ Component</rdfs:label>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -9861,6 +9905,26 @@
               </owl:Restriction>
               <owl:Restriction>
                 <owl:someValuesFrom>
+                  <owl:Class rdf:about="#T004"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="#hasRange"/>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:complementOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:complementOf>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="#T041"/>
+                <owl:onProperty rdf:resource="#hasDomain"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
                   <owl:Class rdf:about="#T007"/>
                 </owl:someValuesFrom>
                 <owl:onProperty rdf:resource="#hasRange"/>
@@ -9898,53 +9962,7 @@
           <owl:Class>
             <owl:intersectionOf rdf:parseType="Collection">
               <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class rdf:about="#T048"/>
-                </owl:someValuesFrom>
-                <owl:onProperty rdf:resource="#hasDomain"/>
-              </owl:Restriction>
-              <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class rdf:about="#T005"/>
-                </owl:someValuesFrom>
-                <owl:onProperty rdf:resource="#hasRange"/>
-              </owl:Restriction>
-            </owl:intersectionOf>
-          </owl:Class>
-        </owl:complementOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:complementOf>
-          <owl:Class>
-            <owl:intersectionOf rdf:parseType="Collection">
-              <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class rdf:about="#T048"/>
-                </owl:someValuesFrom>
-                <owl:onProperty rdf:resource="#hasDomain"/>
-              </owl:Restriction>
-              <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class rdf:about="#T006"/>
-                </owl:someValuesFrom>
-                <owl:onProperty rdf:resource="#hasRange"/>
-              </owl:Restriction>
-            </owl:intersectionOf>
-          </owl:Class>
-        </owl:complementOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:complementOf>
-          <owl:Class>
-            <owl:intersectionOf rdf:parseType="Collection">
-              <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class rdf:about="#T048"/>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="#T041"/>
                 <owl:onProperty rdf:resource="#hasDomain"/>
               </owl:Restriction>
               <owl:Restriction>
@@ -9959,6 +9977,9 @@
       </owl:Class>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
+      <owl:Class rdf:about="#T152"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class>
         <owl:complementOf>
           <owl:Class>
@@ -9998,26 +10019,7 @@
         </owl:complementOf>
       </owl:Class>
     </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:complementOf>
-          <owl:Class>
-            <owl:intersectionOf rdf:parseType="Collection">
-              <owl:Restriction>
-                <owl:someValuesFrom rdf:resource="#T041"/>
-                <owl:onProperty rdf:resource="#hasDomain"/>
-              </owl:Restriction>
-              <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class rdf:about="#T002"/>
-                </owl:someValuesFrom>
-                <owl:onProperty rdf:resource="#hasRange"/>
-              </owl:Restriction>
-            </owl:intersectionOf>
-          </owl:Class>
-        </owl:complementOf>
-      </owl:Class>
-    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Action, function, or state of.</rdfs:comment>
     <rdfs:subClassOf>
       <owl:Class>
         <owl:complementOf>
@@ -10027,30 +10029,6 @@
                 <owl:someValuesFrom>
                   <owl:Class rdf:about="#T048"/>
                 </owl:someValuesFrom>
-                <owl:onProperty rdf:resource="#hasDomain"/>
-              </owl:Restriction>
-              <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class rdf:about="#T002"/>
-                </owl:someValuesFrom>
-                <owl:onProperty rdf:resource="#hasRange"/>
-              </owl:Restriction>
-            </owl:intersectionOf>
-          </owl:Class>
-        </owl:complementOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#T152"/>
-    </rdfs:subClassOf>
-    <rdfs:comment xml:lang="en">Action, function, or state of.</rdfs:comment>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:complementOf>
-          <owl:Class>
-            <owl:intersectionOf rdf:parseType="Collection">
-              <owl:Restriction>
-                <owl:someValuesFrom rdf:resource="#T041"/>
                 <owl:onProperty rdf:resource="#hasDomain"/>
               </owl:Restriction>
               <owl:Restriction>
@@ -10071,12 +10049,14 @@
           <owl:Class>
             <owl:intersectionOf rdf:parseType="Collection">
               <owl:Restriction>
-                <owl:someValuesFrom rdf:resource="#T041"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#T048"/>
+                </owl:someValuesFrom>
                 <owl:onProperty rdf:resource="#hasDomain"/>
               </owl:Restriction>
               <owl:Restriction>
                 <owl:someValuesFrom>
-                  <owl:Class rdf:about="#T004"/>
+                  <owl:Class rdf:about="#T002"/>
                 </owl:someValuesFrom>
                 <owl:onProperty rdf:resource="#hasRange"/>
               </owl:Restriction>
@@ -10086,7 +10066,71 @@
       </owl:Class>
     </rdfs:subClassOf>
     <rdfs:label xml:lang="en">process_of</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:complementOf>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="#T041"/>
+                <owl:onProperty rdf:resource="#hasDomain"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#T002"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="#hasRange"/>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:complementOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:complementOf>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#T048"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="#hasDomain"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#T006"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="#hasRange"/>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:complementOf>
+      </owl:Class>
+    </rdfs:subClassOf>
     <sn:treeNumber>R3.4.1</sn:treeNumber>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:complementOf>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#T048"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="#hasDomain"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#T005"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="#hasRange"/>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:complementOf>
+      </owl:Class>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#T135_T029_T029">
     <rdfs:label xml:lang="en">location_of with domain Body Location or Region and range Body Location or Region</rdfs:label>
@@ -11665,7 +11709,7 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#T144"/>
   </owl:Class>
-  <owl:Class rdf:ID="T178_T031_T024">
+  <owl:Class rdf:about="#T178_T031_T024">
     <rdfs:label xml:lang="en">derivative_of with domain Body Substance and range Tissue</rdfs:label>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -11782,6 +11826,16 @@
     <sn:snRecordType>STY</sn:snRecordType>
   </owl:Class>
   <owl:Class rdf:about="#T143">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:resource="#T143_T097_T090"/>
+          </rdf:List>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
     <rdfs:subClassOf rdf:resource="#T188"/>
     <rdfs:comment xml:lang="en">Performs habitually or customarily.</rdfs:comment>
     <sn:treeNumber>R3.3.3</sn:treeNumber>
