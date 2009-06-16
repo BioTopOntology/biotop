@@ -5,12 +5,11 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ru-meta "http://purl.org/imbi/ru-meta.owl#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY biotop "http://purl.org/biotop/1.0/biotop.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY ru-meta "http://purl.org/imbi/ru-meta.owl#" >
-
 ]>
 
 
@@ -34,6 +33,8 @@
 March 31, 2009
 Stefan Schulz / Elena Beiswanger</owl:versionInfo>
         <dc:creator>Stefan Schulz</dc:creator>
+        <dc:subject
+            >Biology, Medicine </dc:subject>
         <dc:description
             >Upper-Level ontology for Biology and Medicine. Compatible with BFO, DOLCE, and the UMLS Semantic Network (mapping files available)</dc:description>
         <dc:source
@@ -45,8 +46,6 @@ Stefan Schulz / Elena Beiswanger</owl:versionInfo>
         <dc:title>BioTop</dc:title>
         <dc:source
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
-        <dc:subject
-            >Biology, Medicine</dc:subject>
         <dc:identifier
             >http://purl.org/biotop/1.0/biotop.owl</dc:identifier>
         <dc:language>en</dc:language>
@@ -64,18 +63,18 @@ Stefan Schulz / Elena Beiswanger</owl:versionInfo>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:AnnotationProperty rdf:about="&ru-meta;definition"/>
     <owl:AnnotationProperty rdf:about="&dc;title"/>
-    <owl:AnnotationProperty rdf:about="&dc;format"/>
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&ru-meta;synonym"/>
     <owl:AnnotationProperty rdf:about="&dc;source"/>
     <owl:AnnotationProperty rdf:about="&dc;identifier"/>
     <owl:AnnotationProperty rdf:about="&dc;publisher"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
     <owl:AnnotationProperty rdf:about="&dc;subject"/>
-    <owl:AnnotationProperty rdf:about="&ru-meta;definition"/>
-    <owl:AnnotationProperty rdf:about="&ru-meta;synonym"/>
-
+    
 
 
     <!-- 
@@ -109,15 +108,6 @@ Stefan Schulz / Elena Beiswanger</owl:versionInfo>
             >Cf. Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -127,6 +117,15 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -211,7 +210,8 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
             >component part of</rdfs:label>
         <rdfs:comment
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <ru-meta:definition>Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</ru-meta:definition>
+        <ru-meta:definition
+            >Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</ru-meta:definition>
         <rdfs:comment
             >inverse of hasComponent.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
@@ -392,7 +392,8 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
         <rdfs:comment
             >Inverse relation to hasGranularPart</rdfs:comment>
-        <ru-meta:definition>Granular parts are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</ru-meta:definition>
+        <ru-meta:definition
+            >Granular parts are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
     </owl:ObjectProperty>
     
@@ -474,7 +475,8 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:label>bearer of</rdfs:label>
         <rdfs:comment
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <ru-meta:definition>Inverse relation of inheresIn. Relates an independent continuant to a dependent one (e.g. quality, state, function, or disposition)
+        <ru-meta:definition
+            >Inverse relation of inheresIn. Relates an independent continuant to a dependent one (e.g. quality, state, function, or disposition)
 
 Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:range>
@@ -497,6 +499,14 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:comment
             >where some processual entity takes place</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ProcessualEntity"/>
+                    <rdf:Description rdf:about="#State"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -506,14 +516,6 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ProcessualEntity"/>
-                    <rdf:Description rdf:about="#State"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -532,7 +534,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:ObjectProperty rdf:about="#hasOriginalPart">
         <rdfs:label
             >has original part</rdfs:label>
-        <ru-meta:definition>A is a historical part of B iff A is not a proper part of B now but A was a proper part of B at the time A came into existence.</ru-meta:definition>
+        <ru-meta:definition
+            >A is a historical part of B iff A is not a proper part of B now but A was a proper part of B at the time A came into existence.</ru-meta:definition>
         <rdfs:range rdf:resource="#MaterialEntity"/>
         <rdfs:domain rdf:resource="#MaterialEntity"/>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
@@ -560,9 +563,10 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
 
     <owl:ObjectProperty rdf:about="#hasParticipant">
         <rdfs:label>has participant</rdfs:label>
+        <ru-meta:definition
+            >HasParticipant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane hasParticipant this particular sample of hemoglobin at this particular time.</ru-meta:definition>
         <rdfs:comment
             >inverseOf participatesIn</rdfs:comment>
-        <ru-meta:definition>HasParticipant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane hasParticipant this particular sample of hemoglobin at this particular time.</ru-meta:definition>
     </owl:ObjectProperty>
     
 
@@ -582,7 +586,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label
             >has processual part</rdfs:label>
-        <ru-meta:definition>mereological relation between processes</ru-meta:definition>
+        <ru-meta:definition
+            >mereological relation between processes</ru-meta:definition>
         <rdfs:range rdf:resource="#ProcessualEntity"/>
         <rdfs:domain rdf:resource="#ProcessualEntity"/>
         <rdfs:subPropertyOf rdf:resource="#temporallyRelatedTo"/>
@@ -630,7 +635,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
             >inverse of hasInherence</rdfs:comment>
         <rdfs:comment
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <ru-meta:definition>inheresIn relates a dependent continuant (a state, quality, property, function, disposition) with the independent continuant it depends on.</ru-meta:definition>
+        <ru-meta:definition
+            >inheresIn relates a dependent continuant (a state, quality, property, function, disposition) with the independent continuant it depends on.</ru-meta:definition>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -650,15 +656,6 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:label
             >physically interconnects</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -668,6 +665,15 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -766,7 +772,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:ObjectProperty rdf:about="#originalPartOf">
         <rdfs:label
             >original part of</rdfs:label>
-        <ru-meta:definition>A is a historical part of B iff A is not a proper part of B now but A was a proper part of B at the time A came into existence.</ru-meta:definition>
+        <ru-meta:definition
+            >A is a historical part of B iff A is not a proper part of B now but A was a proper part of B at the time A came into existence.</ru-meta:definition>
         <rdfs:domain rdf:resource="#MaterialEntity"/>
         <rdfs:range rdf:resource="#MaterialEntity"/>
         <rdfs:subPropertyOf rdf:resource="#spatiallyRelated"/>
@@ -814,7 +821,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:ObjectProperty rdf:about="#precededBy">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label>preceded by</rdfs:label>
-        <ru-meta:definition>p precededBy p&#39; if and only if: given any process p at a time t, there is some process p&#39; at time t&#39;, and t&#39; is earlier than t.</ru-meta:definition>
+        <ru-meta:definition
+            >p precededBy p&#39; if and only if: given any process p at a time t, there is some process p&#39; at time t&#39;, and t&#39; is earlier than t.</ru-meta:definition>
         <rdfs:comment
             >inverseOf precedes</rdfs:comment>
         <rdfs:domain>
@@ -870,7 +878,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label
             >processual part of</rdfs:label>
-        <ru-meta:definition>mereological relation between processes</ru-meta:definition>
+        <ru-meta:definition
+            >mereological relation between processes</ru-meta:definition>
         <rdfs:domain rdf:resource="#ProcessualEntity"/>
         <rdfs:range rdf:resource="#ProcessualEntity"/>
         <rdfs:subPropertyOf rdf:resource="#temporallyRelatedTo"/>
@@ -942,7 +951,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
 
     <owl:ObjectProperty rdf:about="#realizationOf">
         <rdfs:label>realization of</rdfs:label>
-        <ru-meta:definition>Something that occurs can be the realization of a function</ru-meta:definition>
+        <ru-meta:definition
+            >Something that occurs can be the realization of a function</ru-meta:definition>
         <rdfs:range rdf:resource="#Function"/>
         <rdfs:domain>
             <owl:Class>
@@ -970,17 +980,9 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:ObjectProperty rdf:about="#surrounds">
         <rdfs:label
             >physically surrounds</rdfs:label>
-        <ru-meta:definition>loosely defined relation: establishing boundaries, enclosing, confining, enclosing, circumscribing</ru-meta:definition>
+        <ru-meta:definition
+            >loosely defined relation: establishing boundaries, enclosing, confining, enclosing, circumscribing</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -990,6 +992,15 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1013,15 +1024,6 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
             >Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 			Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="#adjacentTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-                    <rdf:Description rdf:about="#MaterialEntity"/>
-                    <rdf:Description rdf:about="#SpatialRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1031,6 +1033,15 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="#MaterialEntity"/>
+                    <rdf:Description rdf:about="#SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1040,7 +1051,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:ObjectProperty rdf:about="#traverses">
         <rdfs:label
             >physically traverses</rdfs:label>
-        <ru-meta:definition>crossing over and crossing through</ru-meta:definition>
+        <ru-meta:definition
+            >crossing over and crossing through</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
         <rdfs:domain>
             <owl:Class>
@@ -1092,7 +1104,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:label
             >acquired pathological region</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PathologicalCondition"/>
-        <ru-meta:definition>Ill-formed state of a biological entity,acquired after birth [steschu 20071010]</ru-meta:definition>
+        <ru-meta:definition
+            >Ill-formed state of a biological entity,acquired after birth [steschu 20071010]</ru-meta:definition>
     </owl:Class>
     
 
@@ -1152,7 +1165,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>An action is a processual entity that that is promoted by an agent, having a clear role distinction between agent and patient</ru-meta:definition>
+        <ru-meta:definition
+            >An action is a processual entity that that is promoted by an agent, having a clear role distinction between agent and patient</ru-meta:definition>
     </owl:Class>
     
 
@@ -1203,7 +1217,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:Class rdf:about="#Affecting">
         <rdfs:label>affecting</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Action"/>
-        <ru-meta:definition>Producing a direct effect on</ru-meta:definition>
+        <ru-meta:definition
+            >Producing a direct effect on</ru-meta:definition>
     </owl:Class>
     
 
@@ -1242,7 +1257,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <owl:disjointWith rdf:resource="#Peptide"/>
         <rdfs:comment
             >In chemistry, an amino acid is any molecule that contains both amine and carboxyl functional groups. However, in biochemistry, this more general term is frequently used to refer to alpha amino acids (amino acids in which the amino and carboxylate functionalities are attached to the same carbon, called ?&#8211;carbon). Amino Acids have at least one amino and one carboxy group. Those having two carboxy groups have only one amino group and vice versa.</rdfs:comment>
-        <ru-meta:definition>Amino Acids molecules or residues (residues as in peptide bonds)</ru-meta:definition>
+        <ru-meta:definition
+            >Amino Acids molecules or residues (residues as in peptide bonds)</ru-meta:definition>
         <rdfs:comment
             >(QCR) ro:hasPart some CarbonHydrogenSubstructure and ((hasComponent myx 2 CarboxyGroup) and (hasComponent min 1 CarboxyGroup) and (hasComponent exactly 1 AminoGroup)) or ((hasComponent max 2 AminoGroup) and (hasComponent min 1 AminoGroup) and (hasComponent exactly 1 CarboxyGroup))</rdfs:comment>
     </owl:Class>
@@ -1285,7 +1301,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#AminoAcidSequenceInformation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Chain of amino acids, joined by peptide bonds. Folded or unfolded.</ru-meta:definition>
+        <ru-meta:definition
+            >Chain of amino acids, joined by peptide bonds. Folded or unfolded.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1453,7 +1470,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Multicellular organisms of the kingdom Animalia</ru-meta:definition>
+        <ru-meta:definition
+            >Multicellular organisms of the kingdom Animalia</ru-meta:definition>
     </owl:Class>
     
 
@@ -1524,7 +1542,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:Class rdf:about="#ArtefactRole">
         <rdfs:label>artefact role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Role"/>
-        <ru-meta:definition>The role an entity plays when it has been artificially produced. [steschu 20071010]</ru-meta:definition>
+        <ru-meta:definition
+            >The role an entity plays when it has been artificially produced. [steschu 20071010]</ru-meta:definition>
     </owl:Class>
     
 
@@ -1577,7 +1596,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:label>atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntityBySizePartition"/>
         <owl:disjointWith rdf:resource="#PluralityOfOrganisms"/>
-        <ru-meta:definition>Basic building block of molecules. Particle of discrete types. Biologically important atoms are C, N, H, O, P, S, Na, Ca, K, Mg, Cl, J, Fe, Co, Zn ,... Atoms may be electrically neutral or ionic.</ru-meta:definition>
+        <ru-meta:definition
+            >Basic building block of molecules. Particle of discrete types. Biologically important atoms are C, N, H, O, P, S, Na, Ca, K, Mg, Cl, J, Fe, Co, Zn ,... Atoms may be electrically neutral or ionic.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1644,7 +1664,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Cluster of bacteria, usually cultured from a single cell.</ru-meta:definition>
+        <ru-meta:definition
+            >Cluster of bacteria, usually cultured from a single cell.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1699,7 +1720,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:Class rdf:about="#Behavior">
         <rdfs:label>behavior</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Action"/>
-        <ru-meta:definition>An (often habitual) action of an organism that is the realization of some disposition</ru-meta:definition>
+        <ru-meta:definition
+            >An (often habitual) action of an organism that is the realization of some disposition</ru-meta:definition>
     </owl:Class>
     
 
@@ -1720,7 +1742,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Process occuring on molecular level. It has exclusivly subclasses of MolecularEntity as participants.</ru-meta:definition>
+        <ru-meta:definition
+            >Process occuring on molecular level. It has exclusivly subclasses of MolecularEntity as participants.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1731,9 +1754,10 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:label
             >bio molecular sequence information</rdfs:label>
         <rdfs:subClassOf rdf:resource="#InformationEntity"/>
+        <ru-meta:definition
+            >Sequence as an entity of information. The same sequence can inhere in different biopolymers. Sequence information can be theoretical, therefore a &quot;real&quot; sequence is not implied.</ru-meta:definition>
         <rdfs:comment
             >Sequence as an entity of information. The same sequence can inhere in different biopolymers. Sequence information can be theoretical, therefore a &quot;real&quot; sequence is not implied.</rdfs:comment>
-        <ru-meta:definition>Sequence as an entity of information. The same sequence can inhere in different biopolymers. Sequence information can be theoretical, therefore a &quot;real&quot; sequence is not implied.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1759,7 +1783,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#BioMolecularSequenceInformation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>chain (segment) of similar monomers such as proteins or nucleotides</ru-meta:definition>
+        <ru-meta:definition
+            >chain (segment) of similar monomers such as proteins or nucleotides</ru-meta:definition>
     </owl:Class>
     
 
@@ -1786,7 +1811,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#Action"/>
-        <ru-meta:definition>Action that has some biological structure as agent</ru-meta:definition>
+        <ru-meta:definition
+            >Action that has some biological structure as agent</ru-meta:definition>
     </owl:Class>
     
 
@@ -1820,7 +1846,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:label
             >biological colony</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PluralityOfOrganisms"/>
-        <ru-meta:definition>Plurality of several individual organisms living closely together, usually for mutual benefit</ru-meta:definition>
+        <ru-meta:definition
+            >Plurality of several individual organisms living closely together, usually for mutual benefit</ru-meta:definition>
     </owl:Class>
     
 
@@ -1879,7 +1906,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Process specific for biological systems.</ru-meta:definition>
+        <ru-meta:definition
+            >Process specific for biological systems.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1914,7 +1942,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:label
             >biological system role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Role"/>
-        <ru-meta:definition>A role specific to biological processes</ru-meta:definition>
+        <ru-meta:definition
+            >A role specific to biological processes</ru-meta:definition>
     </owl:Class>
     
 
@@ -1926,7 +1955,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
             >biomedical material role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#TherapeuticRole"/>
         <owl:disjointWith rdf:resource="#DrugRole"/>
-        <ru-meta:definition>Role of Non-drug material used for therapeutic Purpose</ru-meta:definition>
+        <ru-meta:definition
+            >Role of Non-drug material used for therapeutic Purpose</ru-meta:definition>
     </owl:Class>
     
 
@@ -1954,7 +1984,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Monomolecular entity that stems from some organism</ru-meta:definition>
+        <ru-meta:definition
+            >Monomolecular entity that stems from some organism</ru-meta:definition>
     </owl:Class>
     
 
@@ -1985,6 +2016,17 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:label>body fluid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousLiquid"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -2009,18 +2051,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <ru-meta:definition>Suspension and / or solution of biomolecules, ions, bigger particles in Water.</ru-meta:definition>
+        <ru-meta:definition
+            >Suspension and / or solution of biomolecules, ions, bigger particles in Water.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2040,7 +2072,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <rdfs:label>body system</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganismPart"/>
         <owl:disjointWith rdf:resource="#Organ"/>
-        <ru-meta:definition>Mereological sum of heterogeneous body components that constitute a functional unity</ru-meta:definition>
+        <ru-meta:definition
+            >Mereological sum of heterogeneous body components that constitute a functional unity</ru-meta:definition>
     </owl:Class>
     
 
@@ -2178,7 +2211,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>The condition of an entity (state, process, function, object) in terms of being well or ill-formed or behaving</ru-meta:definition>
+        <ru-meta:definition
+            >The condition of an entity (state, process, function, object) in terms of being well or ill-formed or behaving</ru-meta:definition>
     </owl:Class>
     
 
@@ -2245,7 +2279,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:Class rdf:about="#CatalyticRole">
         <rdfs:label>catalytic role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
-        <ru-meta:definition>The role a substance plays in accelerating a chemical reaction</ru-meta:definition>
+        <ru-meta:definition
+            >The role a substance plays in accelerating a chemical reaction</ru-meta:definition>
     </owl:Class>
     
 
@@ -2298,7 +2333,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         <owl:disjointWith rdf:resource="#CellularComponent"/>
         <owl:disjointWith rdf:resource="#OrganismPart"/>
         <owl:disjointWith rdf:resource="#Syncytium"/>
-        <ru-meta:definition>Constituting unit of an organism. The boundary between cell, syncytium and subcellular fragments such as platelets is problematic. Hence no full definition possible.</ru-meta:definition>
+        <ru-meta:definition
+            >Constituting unit of an organism. The boundary between cell, syncytium and subcellular fragments such as platelets is problematic. Hence no full definition possible.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2353,7 +2389,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
             </owl:Class>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#ModifiedCell"/>
-        <ru-meta:definition>Living cell that is not removed from a living system</ru-meta:definition>
+        <ru-meta:definition
+            >Living cell that is not removed from a living system</ru-meta:definition>
     </owl:Class>
     
 
@@ -2369,7 +2406,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Peptide"/>
+                        <owl:someValuesFrom rdf:resource="#Lipid"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -2380,12 +2417,13 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Lipid"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Semipermeable lipid bilayer found in all cells.[1] It contains a wide variety of biological molecules, primarily proteins and lipids, which are involved in a vast array of cellular processes, and also serves as the attachment point for both the intracellular cytoskeleton and, if present, the cell wall.</ru-meta:definition>
+        <ru-meta:definition
+            >Semipermeable lipid bilayer found in all cells.[1] It contains a wide variety of biological molecules, primarily proteins and lipids, which are involved in a vast array of cellular processes, and also serves as the attachment point for both the intracellular cytoskeleton and, if present, the cell wall.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2421,7 +2459,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#OrganismPart"/>
         <owl:disjointWith rdf:resource="#Syncytium"/>
-        <ru-meta:definition>Components which only can be formed inside living cells but which may survive their host cell.</ru-meta:definition>
+        <ru-meta:definition
+            >Components which only can be formed inside living cells but which may survive their host cell.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2469,7 +2508,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:Class rdf:about="#ChemicalRole">
         <rdfs:label>chemical role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Role"/>
-        <ru-meta:definition>Any role performed by a chemical substance.</ru-meta:definition>
+        <ru-meta:definition
+            >Any role performed by a chemical substance.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2504,7 +2544,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#EntireNucleicAcidMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Organized form of DNA in cells, containing one very long, continuous piece of DNA, which contains many genes, regulatory elements and other intervening nucleotide sequences. Includes also the DNA-bound proteins which serve to package and manage the DNA.</ru-meta:definition>
+        <ru-meta:definition
+            >Organized form of DNA in cells, containing one very long, continuous piece of DNA, which contains many genes, regulatory elements and other intervening nucleotide sequences. Includes also the DNA-bound proteins which serve to package and manage the DNA.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2567,7 +2608,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
         </owl:equivalentClass>
         <rdfs:comment
             >The fuzzyness of this class is due to the &quot;same sort&quot; criterion.</rdfs:comment>
-        <ru-meta:definition>Mereological Sum of multiple grains of the same sort without clear identity and unity criteria.</ru-meta:definition>
+        <ru-meta:definition
+            >Mereological Sum of multiple grains of the same sort without clear identity and unity criteria.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2577,7 +2619,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <owl:Class rdf:about="#Complicating">
         <rdfs:label>complicating</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Affecting"/>
-        <ru-meta:definition>causes to become more severe</ru-meta:definition>
+        <ru-meta:definition
+            >causes to become more severe</ru-meta:definition>
     </owl:Class>
     
 
@@ -2603,7 +2646,8 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
             </owl:Class>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="#PluralityOfOrganisms"/>
-        <ru-meta:definition>Composition of different kinds of collections without clear unity and identity criteria.
+        <ru-meta:definition
+            >Composition of different kinds of collections without clear unity and identity criteria.
 Old name: compound of collections</ru-meta:definition>
     </owl:Class>
     
@@ -2625,7 +2669,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >congenital pathological region</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PathologicalCondition"/>
-        <ru-meta:definition>Ill-formed state of a biological entity, present from birth [steschu 20071010]</ru-meta:definition>
+        <ru-meta:definition
+            >Ill-formed state of a biological entity, present from birth [steschu 20071010]</ru-meta:definition>
     </owl:Class>
     
 
@@ -2671,7 +2716,7 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
+                        <owl:someValuesFrom rdf:resource="#Peptide"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -2682,12 +2727,13 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="#Peptide"/>
+                        <owl:someValuesFrom rdf:resource="#WaterMolecule"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Gelatinous, semi-transparent fluid that fills most cells. E</ru-meta:definition>
+        <ru-meta:definition
+            >Gelatinous, semi-transparent fluid that fills most cells. E</ru-meta:definition>
     </owl:Class>
     
 
@@ -2698,7 +2744,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label>DNA chain</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChainOfNucleotideMonomers"/>
         <owl:disjointWith rdf:resource="#RNA"/>
-        <ru-meta:definition>A DNA is a complex, high-molecular-weight biochemical macromolecule composed of deoxyribonumcleotide chains that convey genetic information. Any kind of NucleicAcid that is composed of Deoxyribonucleotides is here defined as DNA.</ru-meta:definition>
+        <ru-meta:definition
+            >A DNA is a complex, high-molecular-weight biochemical macromolecule composed of deoxyribonumcleotide chains that convey genetic information. Any kind of NucleicAcid that is composed of Deoxyribonucleotides is here defined as DNA.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2709,7 +2756,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >developmental quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Quality"/>
-        <ru-meta:definition>Ontogenetic stage</ru-meta:definition>
+        <ru-meta:definition
+            >Ontogenetic stage</ru-meta:definition>
     </owl:Class>
     
 
@@ -2753,7 +2801,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Producing a negative effect on</ru-meta:definition>
+        <ru-meta:definition
+            >Producing a negative effect on</ru-meta:definition>
     </owl:Class>
     
 
@@ -2763,7 +2812,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#DrugRole">
         <rdfs:label>drug role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#TherapeuticRole"/>
-        <ru-meta:definition>The role of a chemical of biological entity of being deliberately used in virtue of its expected positive impact on a dysfunctional biological system</ru-meta:definition>
+        <ru-meta:definition
+            >The role of a chemical of biological entity of being deliberately used in virtue of its expected positive impact on a dysfunctional biological system</ru-meta:definition>
     </owl:Class>
     
 
@@ -2818,7 +2868,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#EducatorRole">
         <rdfs:label>educator role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OccupationalRole"/>
-        <ru-meta:definition>The role a person plays that is occupied by educational activities</ru-meta:definition>
+        <ru-meta:definition
+            >The role a person plays that is occupied by educational activities</ru-meta:definition>
     </owl:Class>
     
 
@@ -2828,7 +2879,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Eicosanoid">
         <rdfs:label>eicosanoid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <ru-meta:definition>An oxygenated metabolite from polyunsaturated 20 carbon fatty acids including lipoxygenase and cyclooxygenase products and their synthetic analogs. This includes the prostaglandins and thromboxanes. (UMLS SN)</ru-meta:definition>
+        <ru-meta:definition
+            >An oxygenated metabolite from polyunsaturated 20 carbon fatty acids including lipoxygenase and cyclooxygenase products and their synthetic analogs. This includes the prostaglandins and thromboxanes. (UMLS SN)</ru-meta:definition>
     </owl:Class>
     
 
@@ -2838,7 +2890,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Electron">
         <rdfs:label>electron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticleByCharge"/>
-        <ru-meta:definition>Negatively Charged Particle</ru-meta:definition>
+        <ru-meta:definition
+            >Negatively Charged Particle</ru-meta:definition>
     </owl:Class>
     
 
@@ -2924,7 +2977,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>An embryo or any structure derived from it. There may be structures derived from an embryo that are no longer considered embryonic ones, hence no full definition.</ru-meta:definition>
+        <ru-meta:definition
+            >An embryo or any structure derived from it. There may be structures derived from an embryo that are no longer considered embryonic ones, hence no full definition.</ru-meta:definition>
     </owl:Class>
     
 
@@ -2974,7 +3028,8 @@ Old name: compound of collections</ru-meta:definition>
             </owl:Class>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="#MolecularResidue"/>
-        <ru-meta:definition>Separately distinguishable molecular structure, neither part of nor attached to any other molecular structure. Atoms are not considered molecular structures. The hierarchy of entire entities mirrors the hierarchy of structures.</ru-meta:definition>
+        <ru-meta:definition
+            >Separately distinguishable molecular structure, neither part of nor attached to any other molecular structure. Atoms are not considered molecular structures. The hierarchy of entire entities mirrors the hierarchy of structures.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3027,7 +3082,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>Amino Acid Polymer longer than 100 monomers.</ru-meta:definition>
+        <ru-meta:definition
+            >Amino Acid Polymer longer than 100 monomers.</ru-meta:definition>
         <rdfs:comment
             >(QCR) Peptide and hasComponent min 101 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity)</rdfs:comment>
     </owl:Class>
@@ -3102,7 +3158,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Eukaryote">
         <rdfs:label>eukaryote</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganismByTaxonPartition"/>
-        <ru-meta:definition>An eukaryote is an organism with a complex cell or cells, in which the genetic material is organized into a membrane-bound nucleus or nuclei. Most Eukaryots are multicellular, haowever, there are some which are always unicellular (protists, some fungi) but there are also unicellular developmental stages (zygotes) of plants and animals.</ru-meta:definition>
+        <ru-meta:definition
+            >An eukaryote is an organism with a complex cell or cells, in which the genetic material is organized into a membrane-bound nucleus or nuclei. Most Eukaryots are multicellular, haowever, there are some which are always unicellular (protists, some fungi) but there are also unicellular developmental stages (zygotes) of plants and animals.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3130,7 +3187,8 @@ Old name: compound of collections</ru-meta:definition>
             >examination result role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#FindingRole"/>
         <owl:disjointWith rdf:resource="#SignOrSymptomRole"/>
-        <ru-meta:definition>The role a measurement plays if it has been produced in the context of the quantitative assessment of a biological system</ru-meta:definition>
+        <ru-meta:definition
+            >The role a measurement plays if it has been produced in the context of the quantitative assessment of a biological system</ru-meta:definition>
     </owl:Class>
     
 
@@ -3218,7 +3276,8 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#SubmolecularGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Carboxylic acid often with a long unbranched aliphatic tail.</ru-meta:definition>
+        <ru-meta:definition
+            >Carboxylic acid often with a long unbranched aliphatic tail.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3228,7 +3287,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#FindingRole">
         <rdfs:label>finding role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
-        <ru-meta:definition>The role that may inhere in any biological structure, state, or process that is of reportable interest in a diagnostic process.</ru-meta:definition>
+        <ru-meta:definition
+            >The role that may inhere in any biological structure, state, or process that is of reportable interest in a diagnostic process.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3247,7 +3307,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#FoodRole">
         <rdfs:label>food role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
-        <ru-meta:definition>The role of an entity components of which are used for supplying energy and vital substrates to a biological system</ru-meta:definition>
+        <ru-meta:definition
+            >The role of an entity components of which are used for supplying energy and vital substrates to a biological system</ru-meta:definition>
     </owl:Class>
     
 
@@ -3305,7 +3366,8 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:allValuesFrom rdf:resource="#ProcessualEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>A realizable entity the manifestation of which is an essentialy end-directed activity of a
+        <ru-meta:definition
+            >A function is a realizable entity the manifestation of which is an essentialy end-directed activity of a
 continuant entity in virtue of that continuant entity being a specific kind of entity in the kind or
 kinds of contexts that it is made for.</ru-meta:definition>
     </owl:Class>
@@ -3337,9 +3399,10 @@ kinds of contexts that it is made for.</ru-meta:definition>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <ru-meta:definition
+            >Heterotrophic organisms characterized by a chitinous cell wall.</ru-meta:definition>
         <rdfs:comment
             >On fungus organisms</rdfs:comment>
-        <ru-meta:definition>Heterotrophic organisms characterized by a chitinous cell wall.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3383,7 +3446,8 @@ kinds of contexts that it is made for.</ru-meta:definition>
         <rdfs:label
             >gene information</rdfs:label>
         <rdfs:subClassOf rdf:resource="#NucleotideSequenceInformation"/>
-        <ru-meta:definition>Information that resides on a gene.</ru-meta:definition>
+        <ru-meta:definition
+            >Information that resides on a gene.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3432,7 +3496,8 @@ kinds of contexts that it is made for.</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#GeneInformation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>The totality of hereditary information of an organism</ru-meta:definition>
+        <ru-meta:definition
+            >The totality of hereditary information of an organism</ru-meta:definition>
     </owl:Class>
     
 
@@ -3599,7 +3664,8 @@ kinds of contexts that it is made for.</ru-meta:definition>
         <rdfs:label
             >health related role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Role"/>
-        <ru-meta:definition>A role an entity plays as an actor or participant in processes that assess or influence the health status of an organism.</ru-meta:definition>
+        <ru-meta:definition
+            >A role an entity plays as an actor or participant in processes that assess or influence the health status of an organism.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3616,7 +3682,8 @@ kinds of contexts that it is made for.</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#SubmolecularGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Organic compounds that contain a ring structure containing N as proton receptor. Important parts of DNA and RNA molecules.</ru-meta:definition>
+        <ru-meta:definition
+            >Organic compounds that contain a ring structure containing N as proton receptor. Important parts of DNA and RNA molecules.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3626,7 +3693,8 @@ kinds of contexts that it is made for.</ru-meta:definition>
     <owl:Class rdf:about="#HormoneRole">
         <rdfs:label>hormone role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
-        <ru-meta:definition>The role a biologically active substance plays when it participates in the transmission of messages across a certain distance in an organism.</ru-meta:definition>
+        <ru-meta:definition
+            >The role a biologically active substance plays when it participates in the transmission of messages across a certain distance in an organism.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3802,7 +3870,8 @@ kinds of contexts that it is made for.</ru-meta:definition>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>Continuant entity that has neither a mass nor a volume and which do not inhere in other entities</ru-meta:definition>
+        <ru-meta:definition
+            >Continuant entity that has neither a mass nor a volume and which do not inhere in other entities</ru-meta:definition>
     </owl:Class>
     
 
@@ -3822,7 +3891,8 @@ kinds of contexts that it is made for.</ru-meta:definition>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>Physical spaces that have a threedimensional spatial dimension but no mass.
+        <ru-meta:definition
+            >Physical spaces that have a threedimensional spatial dimension but no mass.
 Old name: immaterial anatomical entity</ru-meta:definition>
     </owl:Class>
     
@@ -3860,7 +3930,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         <rdfs:label
             >immunologic role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#BiologicalSystemRole"/>
-        <ru-meta:definition>A role that is played by any biological entity in virtue of the defense of an organism against infective agents</ru-meta:definition>
+        <ru-meta:definition
+            >A role that is played by any biological entity in virtue of the defense of an organism against infective agents</ru-meta:definition>
     </owl:Class>
     
 
@@ -3879,7 +3950,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
     <owl:Class rdf:about="#IndicatorRole">
         <rdfs:label>indicator role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
-        <ru-meta:definition>A role a chemical plays for measuring or analyzing other chemical processes</ru-meta:definition>
+        <ru-meta:definition
+            >A role a chemical plays for measuring or analyzing other chemical processes</ru-meta:definition>
     </owl:Class>
     
 
@@ -3905,7 +3977,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
             </owl:Class>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="#SocialBehavior"/>
-        <ru-meta:definition>Behavior of an individual organism</ru-meta:definition>
+        <ru-meta:definition
+            >Behavior of an individual organism</ru-meta:definition>
     </owl:Class>
     
 
@@ -3916,7 +3989,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         <rdfs:label
             >information entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ImmaterialNonphysicalEntity"/>
-        <ru-meta:definition>Piece of information (not necessarily human) , as it exists independently of any potential material carrier.</ru-meta:definition>
+        <ru-meta:definition
+            >Piece of information (not necessarily human) , as it exists independently of any potential material carrier.</ru-meta:definition>
     </owl:Class>
     
 
@@ -3928,7 +4002,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
             >inorganic molecular entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularEntityByOrganicInorganic"/>
         <owl:disjointWith rdf:resource="#OrganicMolecularEntity"/>
-        <ru-meta:definition>Substances which do not include carbon and its derivatives as their principal elements. However, carbides, carbonates, cyanides, cyanates and carbon disulfide are included in this class.</ru-meta:definition>
+        <ru-meta:definition
+            >Substances which do not include carbon and its derivatives as their principal elements. However, carbides, carbonates, cyanides, cyanates and carbon disulfide are included in this class.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4019,7 +4094,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Process occuring in a cell.</ru-meta:definition>
+        <ru-meta:definition
+            >Process occuring in a cell.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4205,7 +4281,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#SubmolecularGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Fat-soluble (lipophilic), naturally-occurring molecule.</ru-meta:definition>
+        <ru-meta:definition
+            >Fat-soluble (lipophilic), naturally-occurring molecule.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4253,7 +4330,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>An action performed by a machine. A machine is here seen as a non-biological artifact.</ru-meta:definition>
+        <ru-meta:definition
+            >An action performed by a machine. A machine is here seen as a non-biological artifact.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4354,7 +4432,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>A material object that has a mass and a volume.  Material Independent Continuants may have Immaterial Independent Continuants as parts (e.g. Heart and Heart Ventricle)</ru-meta:definition>
+        <ru-meta:definition
+            >A material object that has a mass and a volume.  Material Independent Continuants may have Immaterial Independent Continuants as parts (e.g. Heart and Heart Ventricle)</ru-meta:definition>
     </owl:Class>
     
 
@@ -4419,7 +4498,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>Cells that grow and replicate continuously outside the living organism.</ru-meta:definition>
+        <ru-meta:definition
+            >Cells that grow and replicate continuously outside the living organism.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4464,7 +4544,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Inherent function of a molecule.</ru-meta:definition>
+        <ru-meta:definition
+            >Inherent function of a molecule.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4497,7 +4578,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#EntireMolecularEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Particle that consists of entire molecules.</ru-meta:definition>
+        <ru-meta:definition
+            >Particle that consists of entire molecules.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4515,7 +4597,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#PluralityOfOrganisms"/>
-        <ru-meta:definition>A molecular entity is a self connected compound of two atoms or more which exhibit at least one covalent bound. Molecular entities can be isolated molecules or parts of molecules (groups, residue). They may be electrically neutral or not.
+        <ru-meta:definition
+            >A molecular entity is a self connected compound of two atoms or more which exhibit at least one covalent bound. Molecular entities can be isolated molecules or parts of molecules (groups, residue). They may be electrically neutral or not.
  In biological systems molecular  entities generally occur in very high quantities. In text, references to chemicals are often ambiguous. When we state &quot;water has a molecular weight of 18&quot; we refer to single water molecules. However, saying that &quot;water has a density of 1kg/dm&#179;&quot; under certain conditions then we make a statement about pluralities of water molecules each of which has water molecules as &quot;grains&quot;
 Old name: molecular entity</ru-meta:definition>
     </owl:Class>
@@ -4529,7 +4612,8 @@ Old name: molecular entity</ru-meta:definition>
         <rdfs:subClassOf rdf:resource="#MolecularEntityByGranularityPartition"/>
         <owl:disjointWith rdf:resource="#OligoOrPolymer"/>
         <owl:disjointWith rdf:resource="#SubmolecularGroup"/>
-        <ru-meta:definition>Monomers can be described as constituted by molecularl groups. They are not repetitive and can constitute the building blocks of Polymers.</ru-meta:definition>
+        <ru-meta:definition
+            >Monomers can be described as constituted by molecularl groups. They are not repetitive and can constitute the building blocks of Polymers.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4554,7 +4638,8 @@ Old name: molecular entity</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Organisms that are composed by more than one cell.</ru-meta:definition>
+        <ru-meta:definition
+            >Organisms that are composed by more than one cell.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4595,7 +4680,8 @@ Old name: molecular entity</ru-meta:definition>
         <rdfs:label
             >neuroreactive role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
-        <ru-meta:definition>A role a molecule plays if it acts as a neurotransmitter</ru-meta:definition>
+        <ru-meta:definition
+            >A role a molecule plays if it acts as a neurotransmitter</ru-meta:definition>
     </owl:Class>
     
 
@@ -4605,7 +4691,8 @@ Old name: molecular entity</ru-meta:definition>
     <owl:Class rdf:about="#Neutron">
         <rdfs:label>neutron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticleByCharge"/>
-        <ru-meta:synonym>Neutral Particle</ru-meta:synonym>
+        <ru-meta:synonym
+            >Neutral Particle</ru-meta:synonym>
     </owl:Class>
     
 
@@ -4616,7 +4703,8 @@ Old name: molecular entity</ru-meta:definition>
         <rdfs:label
             >non steroid lipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <ru-meta:definition>Lipids that have aliphatic chains and no steroid rings</ru-meta:definition>
+        <ru-meta:definition
+            >Lipids that have aliphatic chains and no steroid rings</ru-meta:definition>
     </owl:Class>
     
 
@@ -4710,7 +4798,8 @@ Old name: molecular entity</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#Nucleotide"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>A nucleic acid is a complex, high-molecular-weight biochemical macromolecule composed of nucleotide chains that convey genetic information.</ru-meta:definition>
+        <ru-meta:definition
+            >A nucleic acid is a complex, high-molecular-weight biochemical macromolecule composed of nucleotide chains that convey genetic information.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4809,7 +4898,8 @@ removed for performance and due to the fact that such information may exists ind
         <rdfs:label>nurse role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HealthProfessionalRole"/>
         <owl:disjointWith rdf:resource="#PhysicianRole"/>
-        <ru-meta:definition>The role a nurse plays</ru-meta:definition>
+        <ru-meta:definition
+            >The role a nurse plays</ru-meta:definition>
     </owl:Class>
     
 
@@ -4820,7 +4910,8 @@ removed for performance and due to the fact that such information may exists ind
         <rdfs:label
             >occupational role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Role"/>
-        <ru-meta:definition>The role that determines the occupation that characterizes the daily life of a human being or animal.</ru-meta:definition>
+        <ru-meta:definition
+            >The role that determines the occupation that characterizes the daily life of a human being or animal.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4844,7 +4935,8 @@ removed for performance and due to the fact that such information may exists ind
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#SubmolecularGroup"/>
-        <ru-meta:definition>A OligoOrPolymer macromolecular structure is a molecule of moderate to high relative molecular mass, the structure of which essentially comprises the multiple repetition (n &gt;= 2) of units derived from molecules of low relative molecular mass.</ru-meta:definition>
+        <ru-meta:definition
+            >A OligoOrPolymer macromolecular structure is a molecule of moderate to high relative molecular mass, the structure of which essentially comprises the multiple repetition (n &gt;= 2) of units derived from molecules of low relative molecular mass.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4920,7 +5012,8 @@ removed for performance and due to the fact that such information may exists ind
     <owl:Class rdf:about="#Organ">
         <rdfs:label>organ</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganismPart"/>
-        <ru-meta:definition>Macroscopic, well delimited, functionally and structurally characterized part of an organism. Exact criteria of what an organ is do not exist.</ru-meta:definition>
+        <ru-meta:definition
+            >Macroscopic, well delimited, functionally and structurally characterized part of an organism. Exact criteria of what an organ is do not exist.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4965,7 +5058,8 @@ removed for performance and due to the fact that such information may exists ind
         <rdfs:label
             >organic molecular entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularEntityByOrganicInorganic"/>
-        <ru-meta:definition>Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</ru-meta:definition>
+        <ru-meta:definition
+            >Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</ru-meta:definition>
     </owl:Class>
     
 
@@ -4986,7 +5080,8 @@ removed for performance and due to the fact that such information may exists ind
     <owl:Class rdf:about="#Organism">
         <rdfs:label>organism</rdfs:label>
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
-        <ru-meta:definition>Living complex biological system which functions as a stable whole. In contrast to colonial organisms their components generally cannot survive on their own. We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a unicellular organism and the cell it is made of. &quot;Colonial Organism&quot; are not considered Organisms. We here include viruses into the category of organisms.</ru-meta:definition>
+        <ru-meta:definition
+            >Living complex biological system which functions as a stable whole. In contrast to colonial organisms their components generally cannot survive on their own. We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a unicellular organism and the cell it is made of. &quot;Colonial Organism&quot; are not considered Organisms. We here include viruses into the category of organisms.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5084,7 +5179,8 @@ removed for performance and due to the fact that such information may exists ind
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalCompoundByGranularityPartition"/>
         <owl:disjointWith rdf:resource="#Syncytium"/>
-        <ru-meta:definition>A well defined and circumscribed subdivision of an organism, not any arbitrary part. Macroscopic organism parts may be delimited mainly by natural boundaries but always exhibit at least small regions of fiat boundaries. An organism part may derive from an organism, i.e. it may continue to exist even when the organism does not exist any longer.</ru-meta:definition>
+        <ru-meta:definition
+            >A well defined and circumscribed subdivision of an organism, not any arbitrary part. Macroscopic organism parts may be delimited mainly by natural boundaries but always exhibit at least small regions of fiat boundaries. An organism part may derive from an organism, i.e. it may continue to exist even when the organism does not exist any longer.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5141,7 +5237,8 @@ removed for performance and due to the fact that such information may exists ind
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>state of an organism or an organism part requiring therapeutic or palliative intervention</ru-meta:definition>
+        <ru-meta:definition
+            >state of an organism or an organism part requiring therapeutic or palliative intervention</ru-meta:definition>
     </owl:Class>
     
 
@@ -5216,7 +5313,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#Phosphate">
         <rdfs:label>phosphate</rdfs:label>
         <rdfs:subClassOf rdf:resource="#InorganicMolecularEntity"/>
-        <ru-meta:definition>Phosphate is a salt of phosphoric acid or a functional group on organic compounds.</ru-meta:definition>
+        <ru-meta:definition
+            >Phosphate is a salt of phosphoric acid or a functional group on organic compounds.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5281,7 +5379,8 @@ See disease role etc.</rdfs:comment>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#ImmaterialPhysicalEntity"/>
-        <ru-meta:definition>A independent physical entity that bounds or demarcates some other physical entity. Commonly viewed as a lower-dimensional part, the the notion of physical boundary here also encompasses ill-delimited spaces that fulfill the same function, e.g. biological joints.</ru-meta:definition>
+        <ru-meta:definition
+            >A independent physical entity that bounds or demarcates some other physical entity. Commonly viewed as a lower-dimensional part, the the notion of physical boundary here also encompasses ill-delimited spaces that fulfill the same function, e.g. biological joints.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5315,16 +5414,17 @@ See disease role etc.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Mass (gravity independent) - not weight. Measured in g, kg, ...</ru-meta:definition>
+        <ru-meta:definition
+            >Mass (gravity independent) - not weight. Measured in g, kg, ...</ru-meta:definition>
     </owl:Class>
     
 
@@ -5337,18 +5437,19 @@ See disease role etc.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="#MaterialEntity"/>
+                <owl:allValuesFrom rdf:resource="#MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
             >former name: StateOfAggregation</rdfs:comment>
-        <ru-meta:definition>Quality of being solid, liquid, gaseous, ...  [steschu20080127]</ru-meta:definition>
+        <ru-meta:definition
+            >Quality of being solid, liquid, gaseous, ...  [steschu20080127]</ru-meta:definition>
     </owl:Class>
     
 
@@ -5358,7 +5459,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#PhysicalVolume">
         <rdfs:label>physical volume</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Quality"/>
-        <ru-meta:definition>Volume of three-dimensional objects</ru-meta:definition>
+        <ru-meta:definition
+            >Volume of three-dimensional objects</ru-meta:definition>
     </owl:Class>
     
 
@@ -5368,7 +5470,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#PhysicianRole">
         <rdfs:label>physician role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HealthProfessionalRole"/>
-        <ru-meta:definition>The role a physician plays</ru-meta:definition>
+        <ru-meta:definition
+            >The role a physician plays</ru-meta:definition>
     </owl:Class>
     
 
@@ -5404,7 +5507,8 @@ See disease role etc.</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Organism of the kingdom Plantae.</ru-meta:definition>
+        <ru-meta:definition
+            >Organism of the kingdom Plantae.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5454,7 +5558,8 @@ See disease role etc.</rdfs:comment>
         <owl:disjointWith rdf:resource="#PolyMolecularCompositeEntity"/>
         <owl:disjointWith rdf:resource="#PortionOfHomogenousMatter"/>
         <owl:disjointWith rdf:resource="#SubatomicParticle"/>
-        <ru-meta:definition>The mereological sum of two or more organisms. Not constrained by any additional criterion.  [steschu20080127]</ru-meta:definition>
+        <ru-meta:definition
+            >The mereological sum of two or more organisms. Not constrained by any additional criterion.  [steschu20080127]</ru-meta:definition>
     </owl:Class>
     
 
@@ -5464,7 +5569,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#PoisonRole">
         <rdfs:label>poison role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
-        <ru-meta:definition>The role of a substance of mixture of substance of a defined amount thereof to be toxic to (parts of) biological organisms</ru-meta:definition>
+        <ru-meta:definition
+            >The role of a substance of mixture of substance of a defined amount thereof to be toxic to (parts of) biological organisms</ru-meta:definition>
     </owl:Class>
     
 
@@ -5481,7 +5587,8 @@ See disease role etc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#EntireMolecularEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>An object which contains several molecules, has direct parts (components) of different types and which changes its ontological nature if subdivided. It must have clear unity and identity criteria.</ru-meta:definition>
+        <ru-meta:definition
+            >An object which contains several molecules, has direct parts (components) of different types and which changes its ontological nature if subdivided. It must have clear unity and identity criteria.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5491,7 +5598,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#Population">
         <rdfs:label>population</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PluralityOfOrganisms"/>
-        <ru-meta:definition>Collection of Organisms of a defined taxon living in a given geographic area. In contrast to the &quot;official&quot; definition (&quot;same species&quot;) this definition is broader and corresponds better to the use of the term in some contexts (e.g. &quot;mixed population of 2 species&quot;)</ru-meta:definition>
+        <ru-meta:definition
+            >Collection of Organisms of a defined taxon living in a given geographic area. In contrast to the &quot;official&quot; definition (&quot;same species&quot;) this definition is broader and corresponds better to the use of the term in some contexts (e.g. &quot;mixed population of 2 species&quot;)</ru-meta:definition>
     </owl:Class>
     
 
@@ -5502,7 +5610,8 @@ See disease role etc.</rdfs:comment>
         <rdfs:label
             >portion of heterogenous liquid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CompoundOfCollectiveMaterialEntities"/>
-        <ru-meta:definition>Liquid constituted by different kinds of collectives, e.g. aqueous NaCl solution</ru-meta:definition>
+        <ru-meta:definition
+            >Liquid constituted by different kinds of collectives, e.g. aqueous NaCl solution</ru-meta:definition>
     </owl:Class>
     
 
@@ -5513,7 +5622,8 @@ See disease role etc.</rdfs:comment>
         <rdfs:label
             >portion of heterogenous solid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CompoundOfCollectiveMaterialEntities"/>
-        <ru-meta:definition>Solid constituted by different kinds of collectives, e.g. a NaCl crystal, granite</ru-meta:definition>
+        <ru-meta:definition
+            >Solid constituted by different kinds of collectives, e.g. a NaCl crystal, granite</ru-meta:definition>
     </owl:Class>
     
 
@@ -5527,19 +5637,6 @@ See disease role etc.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#Atom"/>
-                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -5550,7 +5647,21 @@ See disease role etc.</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Composition of granular components of the same kind.</ru-meta:definition>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGranularPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Atom"/>
+                            <rdf:Description rdf:about="#MonoMolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ru-meta:definition
+            >Composition of granular components of the same kind.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5574,7 +5685,8 @@ See disease role etc.</rdfs:comment>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Hinders a  process or the realization of a  function. As the second argument represents sth non-existent, it cannot be expressed in FOL. Hence the special status of this class. (Cf. Condovardi et al. &quot;Preventing Existence, FOIS 2001)</ru-meta:definition>
+        <ru-meta:definition
+            >Hinders a  process or the realization of a  function. As the second argument represents sth non-existent, it cannot be expressed in FOL. Hence the special status of this class. (Cf. Condovardi et al. &quot;Preventing Existence, FOIS 2001)</ru-meta:definition>
     </owl:Class>
     
 
@@ -5584,7 +5696,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#PreventiveRole">
         <rdfs:label>preventive role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
-        <ru-meta:definition>The role an action plays if it is intended to protect an organism against negative external influences.</ru-meta:definition>
+        <ru-meta:definition
+            >The role an action plays if it is intended to protect an organism against negative external influences.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5639,7 +5752,8 @@ See disease role etc.</rdfs:comment>
 
     <owl:Class rdf:about="#ProcessualEntity">
         <rdfs:label>process</rdfs:label>
-        <ru-meta:definition>An Occurrent entity consisting of a characteristic spatial shape inhering in some arrangement of other occurrent entities. Processual contexts are characteristically entities at or in which other occurrent entities can be located or occur.</ru-meta:definition>
+        <ru-meta:definition
+            >An Occurrent entity consisting of a characteristic spatial shape inhering in some arrangement of other occurrent entities. Processual contexts are characteristically entities at or in which other occurrent entities can be located or occur.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5658,7 +5772,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#Prokaryote">
         <rdfs:label>prokaryote</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganismByTaxonPartition"/>
-        <ru-meta:definition>Cell lacking membrane enclosed organells</ru-meta:definition>
+        <ru-meta:definition
+            >Cell lacking membrane enclosed organells</ru-meta:definition>
     </owl:Class>
     
 
@@ -5689,7 +5804,8 @@ See disease role etc.</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#MoleculeComplex"/>
-        <ru-meta:definition>Mostly only proteins but composition with other molecules possible (e.g. Fe -&gt; Hemoglobin) or also lipoproteins</ru-meta:definition>
+        <ru-meta:definition
+            >Mostly only proteins but composition with other molecules possible (e.g. Fe -&gt; Hemoglobin) or also lipoproteins</ru-meta:definition>
     </owl:Class>
     
 
@@ -5705,7 +5821,8 @@ See disease role etc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#EntireProteinMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Structural domain is the smallest element of protein tertiary structure that is self-stabilizing and often folds independently of the rest of the amino acid chain. It may contain one or more structural motives (ProteinSubstructure). A protein domain typically has its own function, the overall function of the protein results from the composition of the functions of all of its structural domains.</ru-meta:definition>
+        <ru-meta:definition
+            >Structural domain is the smallest element of protein tertiary structure that is self-stabilizing and often folds independently of the rest of the amino acid chain. It may contain one or more structural motives (ProteinSubstructure). A protein domain typically has its own function, the overall function of the protein results from the composition of the functions of all of its structural domains.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5726,7 +5843,8 @@ See disease role etc.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Inherent Function of a protein or a part of it.</ru-meta:definition>
+        <ru-meta:definition
+            >Inherent Function of a protein or a part of it.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5743,7 +5861,8 @@ See disease role etc.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="#EntireProteinMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>A secondary substructure of a protein (protein Motif)</ru-meta:definition>
+        <ru-meta:definition
+            >A secondary substructure of a protein (protein Motif)</ru-meta:definition>
     </owl:Class>
     
 
@@ -5753,7 +5872,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#ProteinSubunit">
         <rdfs:label>protein subunit</rdfs:label>
         <rdfs:subClassOf rdf:resource="#EntireProteinMolecule"/>
-        <ru-meta:definition>A protein molecule that assembles with other protein molecules to form a protein complex. May have its own function. However, most proteinsubunits do not gain functionality until associated with the other subunits.</ru-meta:definition>
+        <ru-meta:definition
+            >A protein molecule that assembles with other protein molecules to form a protein complex. May have its own function. However, most proteinsubunits do not gain functionality until associated with the other subunits.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5763,7 +5883,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#Protist">
         <rdfs:label>protist</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Eukaryote"/>
-        <ru-meta:definition>Organisms of the kingdom Protista</ru-meta:definition>
+        <ru-meta:definition
+            >Organisms of the kingdom Protista</ru-meta:definition>
     </owl:Class>
     
 
@@ -5789,7 +5910,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#Proton">
         <rdfs:label>proton</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticleByCharge"/>
-        <ru-meta:definition>Positively Charged Particle</ru-meta:definition>
+        <ru-meta:definition
+            >Positively Charged Particle</ru-meta:definition>
     </owl:Class>
     
 
@@ -5798,7 +5920,8 @@ See disease role etc.</rdfs:comment>
 
     <owl:Class rdf:about="#Quality">
         <rdfs:label>quality</rdfs:label>
-        <ru-meta:definition>A specifically dependent continuant 
+        <ru-meta:definition
+            >A specifically dependent continuant 
 			[snap:SpecificallyDependentContinuant] that is exhibited if it inheres in 
 			an entity or entities at all (a categorical property).</ru-meta:definition>
     </owl:Class>
@@ -5818,7 +5941,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#RNA">
         <rdfs:label>RNA chain</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChainOfNucleotideMonomers"/>
-        <ru-meta:definition>any kind of NucleicAcid that is composed of Ribonucleotides which are not Deoxyribonucleotides</ru-meta:definition>
+        <ru-meta:definition
+            >any kind of NucleicAcid that is composed of Ribonucleotides which are not Deoxyribonucleotides</ru-meta:definition>
     </owl:Class>
     
 
@@ -5828,7 +5952,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#ReagentRole">
         <rdfs:label>reagent role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChemicalRole"/>
-        <ru-meta:definition>A role a chemical plays as participant in a chemical reation</ru-meta:definition>
+        <ru-meta:definition
+            >A role a chemical plays as participant in a chemical reation</ru-meta:definition>
     </owl:Class>
     
 
@@ -5838,7 +5963,8 @@ See disease role etc.</rdfs:comment>
     <owl:Class rdf:about="#ReceptorRole">
         <rdfs:label>receptor role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SignallingRole"/>
-        <ru-meta:definition>The role a (membrane) protein or protein complex plays in acting as a receptor.</ru-meta:definition>
+        <ru-meta:definition
+            >The role a (membrane) protein or protein complex plays in acting as a receptor.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5893,7 +6019,8 @@ See disease role etc.</rdfs:comment>
 
     <owl:Class rdf:about="#Role">
         <rdfs:label>role</rdfs:label>
-        <ru-meta:definition>A realizable entity the manifestation of which brings about some result or end that is not
+        <ru-meta:definition
+            >A realizable entity the manifestation of which brings about some result or end that is not
 essential to a continuant entity in virtue of the kind of thing that it is, but that can be served or
 participated in by that kind of continuant entity in some kinds of natural, social or institutional
 contexts.</ru-meta:definition>
@@ -5916,7 +6043,8 @@ contexts.</ru-meta:definition>
         <rdfs:label
             >sign or symptom role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#FindingRole"/>
-        <ru-meta:definition>A role that can inhere in states, processes, or even in certain independent continuants (e.g. in a deformity). This a role is ascribed to an entity in a diagnostic process where the symptom is suspected to indicate a second state or process)</ru-meta:definition>
+        <ru-meta:definition
+            >A role that can inhere in states, processes, or even in certain independent continuants (e.g. in a deformity). This a role is ascribed to an entity in a diagnostic process where the symptom is suspected to indicate a second state or process)</ru-meta:definition>
     </owl:Class>
     
 
@@ -5932,7 +6060,8 @@ contexts.</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#MonoMolecularEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>The role of a biological entity that participates in a biological signalling process.</ru-meta:definition>
+        <ru-meta:definition
+            >The role of a biological entity that participates in a biological signalling process.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5974,7 +6103,8 @@ contexts.</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Behaviour of a group of organisms</ru-meta:definition>
+        <ru-meta:definition
+            >Behaviour of a group of organisms</ru-meta:definition>
     </owl:Class>
     
 
@@ -5985,7 +6115,8 @@ contexts.</ru-meta:definition>
         <rdfs:label
             >spatial reference role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Role"/>
-        <ru-meta:definition>The role attributed to a - mainly fiat - part of an object that is the site of some process or the location of some object of interest.</ru-meta:definition>
+        <ru-meta:definition
+            >The role attributed to a - mainly fiat - part of an object that is the site of some process or the location of some object of interest.</ru-meta:definition>
     </owl:Class>
     
 
@@ -5994,7 +6125,8 @@ contexts.</ru-meta:definition>
 
     <owl:Class rdf:about="#SpatialRegion">
         <rdfs:label>spatial region</rdfs:label>
-        <ru-meta:definition>An independent continuant entity that is neither a bearer of qualities nor inheres in any other entity (snap:SpatialRegion)</ru-meta:definition>
+        <ru-meta:definition
+            >An independent continuant entity that is neither a bearer of qualities nor inheres in any other entity (snap:SpatialRegion)</ru-meta:definition>
     </owl:Class>
     
 
@@ -6079,7 +6211,8 @@ contexts.</ru-meta:definition>
     <owl:Class rdf:about="#Steroid">
         <rdfs:label>steroid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <ru-meta:definition>One of a group of polycyclic, 17-carbon-atom, fused-ring compounds occurring both in natural and synthetic forms. Included here are naturally occurring and synthetic steroids, bufanolides, cardanolides, homosteroids, norsteroids, and secosteroids. (UMLS SN)</ru-meta:definition>
+        <ru-meta:definition
+            >One of a group of polycyclic, 17-carbon-atom, fused-ring compounds occurring both in natural and synthetic forms. Included here are naturally occurring and synthetic steroids, bufanolides, cardanolides, homosteroids, norsteroids, and secosteroids. (UMLS SN)</ru-meta:definition>
     </owl:Class>
     
 
@@ -6118,7 +6251,8 @@ contexts.</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#TaxonQuality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Corresponds to FMA anatomical structure but extends to any kind of orgnaism: Material anatomical entity which is generated by coordinated expression of the organism&#39;s own genes that guide its morphogenesis; has inherent 3D shape; its parts are connected and spatially related to one another in patterns determined by coordinated gene expression. Examples: heart, right ventricle, mitral valve, myocardium, endothelium, lymphocyte, fibroblast, thorax, cardiovascular system, hemoglobin, T cell receptor.
+        <ru-meta:definition
+            >Corresponds to FMA anatomical structure but extends to any kind of orgnaism: Material anatomical entity which is generated by coordinated expression of the organism&#39;s own genes that guide its morphogenesis; has inherent 3D shape; its parts are connected and spatially related to one another in patterns determined by coordinated gene expression. Examples: heart, right ventricle, mitral valve, myocardium, endothelium, lymphocyte, fibroblast, thorax, cardiovascular system, hemoglobin, T cell receptor.
 Old name: anatomical structure</ru-meta:definition>
     </owl:Class>
     
@@ -6140,7 +6274,8 @@ Old name: anatomical structure</ru-meta:definition>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>All those things that are not identified by belonging to any biological species
+        <ru-meta:definition
+            >All those things that are not identified by belonging to any biological species
 Borderline cases are artifacts that use biological substance (a table, a cloth, a house, a meal ...) A criterion to draw the boundary is whether or not the species affiliation has some structural or functional implication.</ru-meta:definition>
     </owl:Class>
     
@@ -6194,11 +6329,6 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
         <rdfs:label>moiety</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularEntityByGranularityPartition"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf rdf:resource="#EntireMolecularEntity"/>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#componentPartOf"/>
                 <owl:someValuesFrom>
@@ -6207,6 +6337,11 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="#EntireMolecularEntity"/>
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
@@ -6309,7 +6444,8 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
             >removed for performance reasons:
 inheresIn some (rol:hasPart some NucleicAcid)
 inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
-        <ru-meta:definition>The quality of one or more biological organisms, as well as of parts of organism of partaining to a biological taxon. [steschu20080127]</ru-meta:definition>
+        <ru-meta:definition
+            >The quality of one or more biological organisms, as well as of parts of organism of partaining to a biological taxon. [steschu20080127]</ru-meta:definition>
     </owl:Class>
     
 
@@ -6327,7 +6463,8 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
 
     <owl:Class rdf:about="#TemporalEntity">
         <rdfs:label>temporal entity</rdfs:label>
-        <ru-meta:definition>Occurrent that is not a processual entity. It corresponds to the disjunction of span:TemporalRegion and span:SpatiotemporalRegion</ru-meta:definition>
+        <ru-meta:definition
+            >Occurrent that is not a processual entity. It corresponds to the disjunction of span:TemporalRegion and span:SpatiotemporalRegion</ru-meta:definition>
     </owl:Class>
     
 
@@ -6338,7 +6475,8 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         <rdfs:label
             >therapeutic role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HealthRelatedRole"/>
-        <ru-meta:definition>1. The role of a continuant participating in a process with an expected positive impact on a dysfunctional biological system.
+        <ru-meta:definition
+            >1. The role of a continuant participating in a process with an expected positive impact on a dysfunctional biological system.
 2. The role of a process with an expected positive impact on a dysfunctional biological system.</ru-meta:definition>
     </owl:Class>
     
@@ -6385,7 +6523,8 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>Aggregate of an arbitrary number of congeneric cells (cells with identical specialized characteristics), embedded into an amount of matter (matrix) that work together to perform a specific function.</ru-meta:definition>
+        <ru-meta:definition
+            >Aggregate of an arbitrary number of congeneric cells (cells with identical specialized characteristics), embedded into an amount of matter (matrix) that work together to perform a specific function.</ru-meta:definition>
     </owl:Class>
     
 
@@ -6434,22 +6573,22 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#Affecting"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasAgent"/>
+                <owl:onProperty rdf:resource="#hasPatient"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasInherence"/>
-                        <owl:someValuesFrom rdf:resource="#TherapeuticRole"/>
+                        <owl:onProperty rdf:resource="#participatesIn"/>
+                        <owl:someValuesFrom rdf:resource="#NoncanonicalState"/>
                     </owl:Restriction>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasPatient"/>
+                <owl:onProperty rdf:resource="#hasAgent"/>
                 <owl:allValuesFrom>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="#participatesIn"/>
-                        <owl:someValuesFrom rdf:resource="#NoncanonicalState"/>
+                        <owl:onProperty rdf:resource="#hasInherence"/>
+                        <owl:someValuesFrom rdf:resource="#TherapeuticRole"/>
                     </owl:Restriction>
                 </owl:allValuesFrom>
             </owl:Restriction>
@@ -6607,7 +6746,8 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Organisms that (always or in certain initial stages) consist of a single cell. We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a monocellular organism and the cell it is made of.</ru-meta:definition>
+        <ru-meta:definition
+            >Organisms that (always or in certain initial stages) consist of a single cell. We conceive organisms in a material sense. Therefore we do not assume any ontological difference between a monocellular organism and the cell it is made of.</ru-meta:definition>
     </owl:Class>
     
 
@@ -6687,7 +6827,8 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
                 </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>Sub-microscopic agent that requires a host cell to grow and reproduce. Viruses resemble other organisms in that they possess genes, and can evolve in infected cells by natural selection.  We therefore classify viruses as organisms, although there is an open debate.</ru-meta:definition>
+        <ru-meta:definition
+            >Sub-microscopic agent that requires a host cell to grow and reproduce. Viruses resemble other organisms in that they possess genes, and can evolve in infected cells by natural selection.  We therefore classify viruses as organisms, although there is an open debate.</ru-meta:definition>
     </owl:Class>
     
 
@@ -6713,7 +6854,8 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <owl:Class rdf:about="#VitaminRole">
         <rdfs:label>vitamin role</rdfs:label>
         <rdfs:subClassOf rdf:resource="#BiologicalSystemRole"/>
-        <ru-meta:definition>The role a certain substance can play in an organism. Vitamins are organic compounds that are essential to an organism for metabolic reactions. They are not food. Vitamin does not include essential fatty acids or essential amino acids</ru-meta:definition>
+        <ru-meta:definition
+            >The role a certain substance can play in an organism. Vitamins are organic compounds that are essential to an organism for metabolic reactions. They are not food. Vitamin does not include essential fatty acids or essential amino acids</ru-meta:definition>
     </owl:Class>
     
 
@@ -6764,18 +6906,10 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
         <rdfs:label>yeast cell</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Fungus"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasComponentPart"/>
-                        <owl:someValuesFrom rdf:resource="#CellMembrane"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="#hasComponentPart"/>
-                        <owl:someValuesFrom rdf:resource="#CellularComponent"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperPart"/>
+                <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6788,10 +6922,18 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasProperPart"/>
-                <owl:someValuesFrom rdf:resource="#Cytoplasm"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasComponentPart"/>
+                        <owl:someValuesFrom rdf:resource="#CellMembrane"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasComponentPart"/>
+                        <owl:someValuesFrom rdf:resource="#CellularComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment
             >Unicellular Fungi.</rdfs:comment>
@@ -6826,11 +6968,65 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Alga"/>
+            <rdf:Description rdf:about="#AnimalIncludingHuman"/>
+            <rdf:Description rdf:about="#Plant"/>
+            <rdf:Description rdf:about="#Protist"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#CellMembrane"/>
+            <rdf:Description rdf:about="#CellNucleus"/>
+            <rdf:Description rdf:about="#Cytoplasm"/>
+            <rdf:Description rdf:about="#Genome"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Electron"/>
+            <rdf:Description rdf:about="#Neutron"/>
+            <rdf:Description rdf:about="#Proton"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="#Amphibian"/>
             <rdf:Description rdf:about="#Bird"/>
             <rdf:Description rdf:about="#Fish"/>
             <rdf:Description rdf:about="#Mammal"/>
             <rdf:Description rdf:about="#Reptile"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#EducatorRole"/>
+            <rdf:Description rdf:about="#HealthProfessionalRole"/>
+            <rdf:Description rdf:about="#ResearcherRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#ChildRole"/>
+            <rdf:Description rdf:about="#ParentRole"/>
+            <rdf:Description rdf:about="#SiblingRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#ArtefactRole"/>
+            <rdf:Description rdf:about="#BiologicalSystemRole"/>
+            <rdf:Description rdf:about="#ChemicalRole"/>
+            <rdf:Description rdf:about="#FamilyRole"/>
+            <rdf:Description rdf:about="#HealthRelatedRole"/>
+            <rdf:Description rdf:about="#OccupationalRole"/>
+            <rdf:Description rdf:about="#SpatialReferenceRole"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -6849,13 +7045,120 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#ArtefactRole"/>
-            <rdf:Description rdf:about="#BiologicalSystemRole"/>
-            <rdf:Description rdf:about="#ChemicalRole"/>
-            <rdf:Description rdf:about="#FamilyRole"/>
-            <rdf:Description rdf:about="#HealthRelatedRole"/>
-            <rdf:Description rdf:about="#OccupationalRole"/>
-            <rdf:Description rdf:about="#SpatialReferenceRole"/>
+            <rdf:Description rdf:about="#ImmunologicRole"/>
+            <rdf:Description rdf:about="#SignallingRole"/>
+            <rdf:Description rdf:about="#VitaminRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#FindingRole"/>
+            <rdf:Description rdf:about="#FoodRole"/>
+            <rdf:Description rdf:about="#PoisonRole"/>
+            <rdf:Description rdf:about="#PreventiveRole"/>
+            <rdf:Description rdf:about="#TherapeuticRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#HormoneRole"/>
+            <rdf:Description rdf:about="#NeuroreactiveRole"/>
+            <rdf:Description rdf:about="#ReceptorRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AgeQuality"/>
+            <rdf:Description rdf:about="#Canonicity"/>
+            <rdf:Description rdf:about="#DevelopmentalQuality"/>
+            <rdf:Description rdf:about="#PhysicalForce"/>
+            <rdf:Description rdf:about="#PhysicalMass"/>
+            <rdf:Description rdf:about="#PhysicalState"/>
+            <rdf:Description rdf:about="#PhysicalVolume"/>
+            <rdf:Description rdf:about="#TaxonQuality"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Function"/>
+            <rdf:Description rdf:about="#ImmaterialNonphysicalEntity"/>
+            <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
+            <rdf:Description rdf:about="#ProcessualEntity"/>
+            <rdf:Description rdf:about="#Quality"/>
+            <rdf:Description rdf:about="#QualityRegion"/>
+            <rdf:Description rdf:about="#Role"/>
+            <rdf:Description rdf:about="#SpatialRegion"/>
+            <rdf:Description rdf:about="#State"/>
+            <rdf:Description rdf:about="#TemporalEntity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Alga"/>
+            <rdf:Description rdf:about="#AnimalIncludingHuman"/>
+            <rdf:Description rdf:about="#Fungus"/>
+            <rdf:Description rdf:about="#Plant"/>
+            <rdf:Description rdf:about="#Protist"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Eicosanoid"/>
+            <rdf:Description rdf:about="#NonSteroidLipid"/>
+            <rdf:Description rdf:about="#Steroid"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#FindingRole"/>
+            <rdf:Description rdf:about="#FoodRole"/>
+            <rdf:Description rdf:about="#PoisonRole"/>
+            <rdf:Description rdf:about="#PreventiveRole"/>
+            <rdf:Description rdf:about="#SubjectOfCareRole"/>
+            <rdf:Description rdf:about="#TherapeuticRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#NucleicAcid"/>
+            <rdf:Description rdf:about="#Nucleoside"/>
+            <rdf:Description rdf:about="#Nucleotide"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Eukaryote"/>
+            <rdf:Description rdf:about="#Prokaryote"/>
+            <rdf:Description rdf:about="#Virus"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AminoAcidOrPeptide"/>
+            <rdf:Description rdf:about="#Carbohydrate"/>
+            <rdf:Description rdf:about="#FattyAcid"/>
+            <rdf:Description rdf:about="#HeterocyclicBase"/>
+            <rdf:Description rdf:about="#Lipid"/>
+            <rdf:Description rdf:about="#NucleicAcidNucleotideOrNucleoside"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Atom"/>
+            <rdf:Description rdf:about="#MonoMolecularEntity"/>
+            <rdf:Description rdf:about="#PolyMolecularCompositeEntity"/>
+            <rdf:Description rdf:about="#SubatomicParticle"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -6877,31 +7180,9 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#ChildRole"/>
-            <rdf:Description rdf:about="#ParentRole"/>
-            <rdf:Description rdf:about="#SiblingRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#FindingRole"/>
-            <rdf:Description rdf:about="#FoodRole"/>
-            <rdf:Description rdf:about="#PoisonRole"/>
-            <rdf:Description rdf:about="#PreventiveRole"/>
-            <rdf:Description rdf:about="#SubjectOfCareRole"/>
-            <rdf:Description rdf:about="#TherapeuticRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#AminoAcidOrPeptide"/>
-            <rdf:Description rdf:about="#Carbohydrate"/>
-            <rdf:Description rdf:about="#FattyAcid"/>
-            <rdf:Description rdf:about="#HeterocyclicBase"/>
-            <rdf:Description rdf:about="#Lipid"/>
-            <rdf:Description rdf:about="#NucleicAcidNucleotideOrNucleoside"/>
+            <rdf:Description rdf:about="#CatalyticRole"/>
+            <rdf:Description rdf:about="#IndicatorRole"/>
+            <rdf:Description rdf:about="#ReagentRole"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -6915,141 +7196,6 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#CellMembrane"/>
-            <rdf:Description rdf:about="#CellNucleus"/>
-            <rdf:Description rdf:about="#Cytoplasm"/>
-            <rdf:Description rdf:about="#Genome"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#Atom"/>
-            <rdf:Description rdf:about="#MonoMolecularEntity"/>
-            <rdf:Description rdf:about="#PolyMolecularCompositeEntity"/>
-            <rdf:Description rdf:about="#SubatomicParticle"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#Eukaryote"/>
-            <rdf:Description rdf:about="#Prokaryote"/>
-            <rdf:Description rdf:about="#Virus"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#Alga"/>
-            <rdf:Description rdf:about="#AnimalIncludingHuman"/>
-            <rdf:Description rdf:about="#Fungus"/>
-            <rdf:Description rdf:about="#Plant"/>
-            <rdf:Description rdf:about="#Protist"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#FindingRole"/>
-            <rdf:Description rdf:about="#FoodRole"/>
-            <rdf:Description rdf:about="#PoisonRole"/>
-            <rdf:Description rdf:about="#PreventiveRole"/>
-            <rdf:Description rdf:about="#TherapeuticRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#AgeQuality"/>
-            <rdf:Description rdf:about="#Canonicity"/>
-            <rdf:Description rdf:about="#DevelopmentalQuality"/>
-            <rdf:Description rdf:about="#PhysicalForce"/>
-            <rdf:Description rdf:about="#PhysicalMass"/>
-            <rdf:Description rdf:about="#PhysicalState"/>
-            <rdf:Description rdf:about="#PhysicalVolume"/>
-            <rdf:Description rdf:about="#TaxonQuality"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#CatalyticRole"/>
-            <rdf:Description rdf:about="#IndicatorRole"/>
-            <rdf:Description rdf:about="#ReagentRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#Alga"/>
-            <rdf:Description rdf:about="#AnimalIncludingHuman"/>
-            <rdf:Description rdf:about="#Plant"/>
-            <rdf:Description rdf:about="#Protist"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#AgeQuality"/>
-            <rdf:Description rdf:about="#DevelopmentalQuality"/>
-            <rdf:Description rdf:about="#PhysicalForce"/>
-            <rdf:Description rdf:about="#PhysicalMass"/>
-            <rdf:Description rdf:about="#PhysicalState"/>
-            <rdf:Description rdf:about="#PhysicalVolume"/>
-            <rdf:Description rdf:about="#TaxonQuality"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#NucleicAcid"/>
-            <rdf:Description rdf:about="#Nucleoside"/>
-            <rdf:Description rdf:about="#Nucleotide"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#EducatorRole"/>
-            <rdf:Description rdf:about="#HealthProfessionalRole"/>
-            <rdf:Description rdf:about="#ResearcherRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#HormoneRole"/>
-            <rdf:Description rdf:about="#NeuroreactiveRole"/>
-            <rdf:Description rdf:about="#ReceptorRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#ImmunologicRole"/>
-            <rdf:Description rdf:about="#SignallingRole"/>
-            <rdf:Description rdf:about="#VitaminRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#Function"/>
-            <rdf:Description rdf:about="#ImmaterialNonphysicalEntity"/>
-            <rdf:Description rdf:about="#ImmaterialPhysicalEntity"/>
-            <rdf:Description rdf:about="#ProcessualEntity"/>
-            <rdf:Description rdf:about="#Quality"/>
-            <rdf:Description rdf:about="#QualityRegion"/>
-            <rdf:Description rdf:about="#Role"/>
-            <rdf:Description rdf:about="#SpatialRegion"/>
-            <rdf:Description rdf:about="#State"/>
-            <rdf:Description rdf:about="#TemporalEntity"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="#CanonicityRegion"/>
             <rdf:Description rdf:about="#DevelopmentalRegion"/>
             <rdf:Description rdf:about="#TaxonRegion"/>
@@ -7058,22 +7204,18 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#Eicosanoid"/>
-            <rdf:Description rdf:about="#NonSteroidLipid"/>
-            <rdf:Description rdf:about="#Steroid"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="#Electron"/>
-            <rdf:Description rdf:about="#Neutron"/>
-            <rdf:Description rdf:about="#Proton"/>
+            <rdf:Description rdf:about="#AgeQuality"/>
+            <rdf:Description rdf:about="#DevelopmentalQuality"/>
+            <rdf:Description rdf:about="#PhysicalForce"/>
+            <rdf:Description rdf:about="#PhysicalMass"/>
+            <rdf:Description rdf:about="#PhysicalState"/>
+            <rdf:Description rdf:about="#PhysicalVolume"/>
+            <rdf:Description rdf:about="#TaxonQuality"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.974) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
 
