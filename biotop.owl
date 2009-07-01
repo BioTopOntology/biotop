@@ -1102,7 +1102,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
 
     <owl:Class rdf:about="#AcquiredPathologicalCondition">
         <rdfs:label
-            >acquired pathological region</rdfs:label>
+            >acquired pathological condition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PathologicalCondition"/>
         <ru-meta:definition
             >Ill-formed state of a biological entity,acquired after birth [steschu 20071010]</ru-meta:definition>
@@ -1206,7 +1206,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#AdultRegion -->
 
     <owl:Class rdf:about="#AdultRegion">
-        <rdfs:label>adult quality</rdfs:label>
+        <rdfs:label>adult region</rdfs:label>
         <rdfs:subClassOf rdf:resource="#DevelopmentalRegion"/>
     </owl:Class>
     
@@ -1448,7 +1448,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#AnimalIncludingHuman -->
 
     <owl:Class rdf:about="#AnimalIncludingHuman">
-        <rdfs:label>animal</rdfs:label>
+        <rdfs:label>animal including human</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Eukaryote"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1762,7 +1762,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
 
     <owl:Class rdf:about="#BioMolecularProcess">
         <rdfs:label
-            >molecular process</rdfs:label>
+            >bio molecular process</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1798,7 +1798,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
 
     <owl:Class rdf:about="#BioMolecularSequenceStructure">
         <rdfs:label
-            >bio molecular sequence</rdfs:label>
+            >bio molecular sequence structure</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1908,7 +1908,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
 
     <owl:Class rdf:about="#BiologicalProcessualEntity">
         <rdfs:label
-            >biological process</rdfs:label>
+            >biological processual entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2045,7 +2045,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#BodyLiquid -->
 
     <owl:Class rdf:about="#BodyLiquid">
-        <rdfs:label>body fluid</rdfs:label>
+        <rdfs:label>body liquid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHeterogenousLiquid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2166,7 +2166,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
 
     <owl:Class rdf:about="#CanonicalProcessualEntity">
         <rdfs:label
-            >canonical process</rdfs:label>
+            >canonical processual entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2382,7 +2382,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#CellByLocusPartition -->
 
     <owl:Class rdf:about="#CellByLocusPartition">
-        <rdfs:label>|| (by locus)</rdfs:label>
+        <rdfs:label>cell by locus partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:comment
             >disjoint partition: cell by locus</rdfs:comment>
@@ -2393,7 +2393,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#CellByTaxonPartition -->
 
     <owl:Class rdf:about="#CellByTaxonPartition">
-        <rdfs:label>|| (by taxon)</rdfs:label>
+        <rdfs:label>cell by taxon partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:comment
             >disjoint partition: cell by taxon</rdfs:comment>
@@ -2404,7 +2404,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#CellByTypePartition -->
 
     <owl:Class rdf:about="#CellByTypePartition">
-        <rdfs:label>|| (by type)</rdfs:label>
+        <rdfs:label>cell by type partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Cell"/>
         <rdfs:comment
             >disjoint partition: by cell type</rdfs:comment>
@@ -2531,7 +2531,7 @@ Formerly &quot;has inherence&quot;.</ru-meta:definition>
 
     <owl:Class rdf:about="#ChainOfNucleotideMonomers">
         <rdfs:label
-            >chain of nucleotides</rdfs:label>
+            >chain of nucleotide monomers</rdfs:label>
         <rdfs:subClassOf rdf:resource="#NucleicAcid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2707,7 +2707,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#CongenitalPathologicalCondition">
         <rdfs:label
-            >congenital pathological region</rdfs:label>
+            >congenital pathological condition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PathologicalCondition"/>
         <ru-meta:definition
             >Ill-formed state of a biological entity, present from birth [steschu 20071010]</ru-meta:definition>
@@ -2781,7 +2781,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#DNA -->
 
     <owl:Class rdf:about="#DNA">
-        <rdfs:label>DNA chain</rdfs:label>
+        <rdfs:label>DNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChainOfNucleotideMonomers"/>
         <owl:disjointWith rdf:resource="#RNA"/>
         <ru-meta:definition
@@ -3627,7 +3627,7 @@ The manifestation of a function is an essentialy end-directed activity of anothe
 
     <owl:Class rdf:about="#GeographicEntity">
         <rdfs:label
-            >two dimensional geographic region</rdfs:label>
+            >geographic entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#TwoDimensionalPhysicalEntity"/>
     </owl:Class>
     
@@ -3989,7 +3989,7 @@ Old name: immaterial anatomical entity</ru-meta:definition>
 
     <owl:Class rdf:about="#ImmaterialPhysicalEntityPartition">
         <rdfs:label
-            >|| (by dimension)</rdfs:label>
+            >immaterial physical entity partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ImmaterialPhysicalEntity"/>
     </owl:Class>
     
@@ -4337,7 +4337,7 @@ Old name: immaterial anatomical entity</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#LanguagePartition -->
 
     <owl:Class rdf:about="#LanguagePartition">
-        <rdfs:label>|| (by user)</rdfs:label>
+        <rdfs:label>language partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Language"/>
     </owl:Class>
     
@@ -4545,7 +4545,7 @@ Old name: immaterial anatomical entity</ru-meta:definition>
 
     <owl:Class rdf:about="#MaterialEntityBySizePartition">
         <rdfs:label
-            >|| (by granularity)</rdfs:label>
+            >material entity by size partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <rdfs:comment
             >disjoint partition: material entity by granularity</rdfs:comment>
@@ -4611,7 +4611,7 @@ Old name: immaterial anatomical entity</ru-meta:definition>
 
     <owl:Class rdf:about="#MolecularEntityByGranularityPartition">
         <rdfs:label
-            >|| (by granularity)</rdfs:label>
+            >molecular entity by granularity partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
         <rdfs:comment
             >disjoint partition: molecular entity by granularity</rdfs:comment>
@@ -4623,7 +4623,7 @@ Old name: immaterial anatomical entity</ru-meta:definition>
 
     <owl:Class rdf:about="#MolecularEntityByOrganicInorganic">
         <rdfs:label
-            >|| (by organicity)</rdfs:label>
+            >molecular entity by organic inorganic</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MonoMolecularEntity"/>
         <rdfs:comment
             >disjoint partition: molecular entity according to the classical organic / inorganic distinction</rdfs:comment>
@@ -4691,7 +4691,7 @@ Old name: immaterial anatomical entity</ru-meta:definition>
 
     <owl:Class rdf:about="#MonoMolecularEntity">
         <rdfs:label
-            >molecular entity</rdfs:label>
+            >mono molecular entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntityBySizePartition"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4816,7 +4816,7 @@ Old name: molecular entity</ru-meta:definition>
 
     <owl:Class rdf:about="#NoncanonicalProcessualEntity">
         <rdfs:label
-            >noncanonical process</rdfs:label>
+            >noncanonical processual entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -5170,7 +5170,7 @@ removed for performance and due to the fact that such information may exists ind
     <!-- http://purl.org/biotop/1.0/biotop.owl#OrganicMolecularEntityPartition -->
 
     <owl:Class rdf:about="#OrganicMolecularEntityPartition">
-        <rdfs:label>|| (by type)</rdfs:label>
+        <rdfs:label>organic molecular entity partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecularEntity"/>
         <rdfs:comment
             >disjoint partition: organic molecules divided by structural criteria</rdfs:comment>
@@ -5218,7 +5218,7 @@ removed for performance and due to the fact that such information may exists ind
 
     <owl:Class rdf:about="#OrganismByDevelopmentalStage">
         <rdfs:label
-            >|| (by development)</rdfs:label>
+            >organism by developmental stage</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Organism"/>
         <rdfs:comment
             >disjoint partition: by developmental stage</rdfs:comment>
@@ -5229,7 +5229,7 @@ removed for performance and due to the fact that such information may exists ind
     <!-- http://purl.org/biotop/1.0/biotop.owl#OrganismByTaxonPartition -->
 
     <owl:Class rdf:about="#OrganismByTaxonPartition">
-        <rdfs:label>||(by taxon)</rdfs:label>
+        <rdfs:label>organism by taxon partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Organism"/>
         <rdfs:comment
             >disjoint partition by taxon</rdfs:comment>
@@ -5256,7 +5256,6 @@ removed for performance and due to the fact that such information may exists ind
     <!-- http://purl.org/biotop/1.0/biotop.owl#OrganismPart -->
 
     <owl:Class rdf:about="#OrganismPart">
-        <rdfs:label>body part</rdfs:label>
         <rdfs:label>organism part</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -5492,7 +5491,7 @@ See disease role etc.</rdfs:comment>
 
     <owl:Class rdf:about="#PhysicalBoundaryPartition">
         <rdfs:label
-            >|| (by dimension)</rdfs:label>
+            >physical boundary partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
         <rdfs:comment
             >disjoint partition</rdfs:comment>
@@ -5743,7 +5742,7 @@ See disease role etc.</rdfs:comment>
 
     <owl:Class rdf:about="#PortionOfHomogenousMatter">
         <rdfs:label
-            >homogenous cohesive collection</rdfs:label>
+            >portion of homogenous matter</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CollectiveMaterialEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5870,7 +5869,7 @@ See disease role etc.</rdfs:comment>
     <!-- http://purl.org/biotop/1.0/biotop.owl#ProcessualEntity -->
 
     <owl:Class rdf:about="#ProcessualEntity">
-        <rdfs:label>process</rdfs:label>
+        <rdfs:label>processual entity</rdfs:label>
         <ru-meta:definition
             >A process entity has temporal parts (i.e. there is no time in which all parts of a process are simultaneously present). 
 Processes have physical entities as participants.</ru-meta:definition>
@@ -6067,7 +6066,7 @@ Processes have physical entities as participants.</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/biotop.owl#RNA -->
 
     <owl:Class rdf:about="#RNA">
-        <rdfs:label>RNA chain</rdfs:label>
+        <rdfs:label>RNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ChainOfNucleotideMonomers"/>
         <ru-meta:definition
             >any kind of NucleicAcid that is composed of Ribonucleotides which are not Deoxyribonucleotides</ru-meta:definition>
@@ -6347,7 +6346,7 @@ contexts.</ru-meta:definition>
 
     <owl:Class rdf:about="#StructuredBiologicalCompoundByCanonicity">
         <rdfs:label
-            >|| (by canonicity)</rdfs:label>
+            >structured biological compound by canonicity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
     </owl:Class>
     
@@ -6357,7 +6356,7 @@ contexts.</ru-meta:definition>
 
     <owl:Class rdf:about="#StructuredBiologicalCompoundByGranularityPartition">
         <rdfs:label
-            >|| (by granularity)</rdfs:label>
+            >structured biological compound by granularity partition</rdfs:label>
         <rdfs:subClassOf rdf:resource="#StructuredBiologicalEntity"/>
         <rdfs:comment
             >disjoint partition: structured biological compound by granularity</rdfs:comment>
@@ -6369,7 +6368,7 @@ contexts.</ru-meta:definition>
 
     <owl:Class rdf:about="#StructuredBiologicalEntity">
         <rdfs:label
-            >structured biological compound</rdfs:label>
+            >structured biological entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PolyMolecularCompositeEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6421,7 +6420,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     <!-- http://purl.org/biotop/1.0/biotop.owl#SubatomicParticleByCharge -->
 
     <owl:Class rdf:about="#SubatomicParticleByCharge">
-        <rdfs:label>|| (by charge)</rdfs:label>
+        <rdfs:label>subatomic particle by charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
         <rdfs:comment
             >disjoint partition: subatomic particle by electric charge</rdfs:comment>
@@ -6452,7 +6451,7 @@ Borderline cases are artifacts that use biological substance (a table, a cloth, 
     <!-- http://purl.org/biotop/1.0/biotop.owl#SubmolecularGroup -->
 
     <owl:Class rdf:about="#SubmolecularGroup">
-        <rdfs:label>moiety</rdfs:label>
+        <rdfs:label>submolecular group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularEntityByGranularityPartition"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6763,7 +6762,7 @@ inheresIn only  (rol:hasPart some NucleicAcid)</rdfs:comment>
 
     <owl:Class rdf:about="#TwoDimensionalBiologicalEntity">
         <rdfs:label
-            >two dimensional biologic entity</rdfs:label>
+            >two dimensional biological entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">

@@ -211,7 +211,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#AcyclicAliphaticHydrocarbon -->
 
     <owl:Class rdf:about="#AcyclicAliphaticHydrocarbon">
-        <rdfs:label>aliphatic chain</rdfs:label>
+        <rdfs:label>acyclic aliphatic hydrocarbon</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
         <ru-meta:definition>Hydrocarbon without rings.</ru-meta:definition>
     </owl:Class>
@@ -221,7 +221,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Adenin-9-yl_group -->
 
     <owl:Class rdf:about="#Adenin-9-yl_group">
-        <rdfs:label>adenine</rdfs:label>
+        <rdfs:label>adenin-9-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PurineGroup"/>
         <rdfs:comment>C5H5N5</rdfs:comment>
     </owl:Class>
@@ -232,7 +232,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
 
     <owl:Class rdf:about="#AminoAcidChain">
         <rdfs:label
-            >amino acid sequence</rdfs:label>
+            >amino acid chain</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -258,7 +258,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
 
     <owl:Class rdf:about="#AminoAcidMolecule">
         <rdfs:label
-            >amino acid monomer</rdfs:label>
+            >amino acid molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -294,6 +294,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#AminoAcidResidue -->
 
     <owl:Class rdf:about="#AminoAcidResidue">
+        <rdfs:label>amino acid residue</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Residue"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -378,7 +379,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#BackbonePhosphateUnit -->
 
     <owl:Class rdf:about="#BackbonePhosphateUnit">
-        <rdfs:label>phosphate</rdfs:label>
+        <rdfs:label>backbone phosphate unit</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -413,6 +414,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#BackbonePhosphateUnitBoundary -->
 
     <owl:Class rdf:about="#BackbonePhosphateUnitBoundary">
+        <rdfs:label>backbone phosphate unit boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
     </owl:Class>
     
@@ -542,6 +544,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#CarbonylGroup -->
 
     <owl:Class rdf:about="#CarbonylGroup">
+        <rdfs:label>carbonyl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#FunctionalGroup"/>
     </owl:Class>
     
@@ -646,7 +649,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#CyclicAliphaticHydrocarbon">
         <rdfs:label
-            >cyclic aliphatic</rdfs:label>
+            >cyclic aliphatic hydrocarbon</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
         <ru-meta:definition>Hydrocarbon with rings which are not aromatic rings (Cyclohexan)</ru-meta:definition>
     </owl:Class>
@@ -656,7 +659,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Cytosin-1-yl_group -->
 
     <owl:Class rdf:about="#Cytosin-1-yl_group">
-        <rdfs:label>cytosine</rdfs:label>
+        <rdfs:label>cytosin-1-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
         <ru-meta:synonym>C4H5N3O</ru-meta:synonym>
     </owl:Class>
@@ -676,8 +679,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#DNAMolecule -->
 
     <owl:Class rdf:about="#DNAMolecule">
-        <rdfs:label>DNA</rdfs:label>
-        <rdfs:label>DNA sequence</rdfs:label>
+        <rdfs:label>DNA molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#NucleicAcidMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -703,6 +705,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Deoxyribonucleotide -->
 
     <owl:Class rdf:about="#Deoxyribonucleotide">
+        <rdfs:label>deoxyribonucleotide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Nucleotide"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -718,7 +721,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#DeoxyribonucleotideResidue">
         <rdfs:label
-            >deoxyribonucleotide</rdfs:label>
+            >deoxyribonucleotide residue</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -757,6 +760,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Deoxyribose -->
 
     <owl:Class rdf:about="#Deoxyribose">
+        <rdfs:label>deoxyribose</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Pentose"/>
     </owl:Class>
     
@@ -765,7 +769,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#DeoxyriboseRing -->
 
     <owl:Class rdf:about="#DeoxyriboseRing">
-        <rdfs:label>deoxyribose</rdfs:label>
+        <rdfs:label>deoxyribose ring</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SugarRing"/>
     </owl:Class>
     
@@ -774,6 +778,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Eicosanoid -->
 
     <owl:Class rdf:about="#Eicosanoid">
+        <rdfs:label>eicosanoid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
         <ru-meta:definition>An oxygenated metabolite from polyunsaturated 20 carbon fatty acids including lipoxygenase and cyclooxygenase products and their synthetic analogs. This includes the prostaglandins and thromboxanes. (UMLS SN)</ru-meta:definition>
     </owl:Class>
@@ -850,6 +855,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Glycolipid -->
 
     <owl:Class rdf:about="#Glycolipid">
+        <rdfs:label>glycolipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
     </owl:Class>
     
@@ -858,6 +864,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#GlycosideBoundary -->
 
     <owl:Class rdf:about="#GlycosideBoundary">
+        <rdfs:label>glycoside boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
     </owl:Class>
     
@@ -866,7 +873,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Guanin-9-yl_group -->
 
     <owl:Class rdf:about="#Guanin-9-yl_group">
-        <rdfs:label>guanine</rdfs:label>
+        <rdfs:label>guanin-9-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PurineGroup"/>
         <ru-meta:synonym>C5H5N5O</ru-meta:synonym>
     </owl:Class>
@@ -877,7 +884,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#HeterocyclicBaseGroup">
         <rdfs:label
-            >heterocyclic base</rdfs:label>
+            >heterocyclic base group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -1011,7 +1018,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#InorganicMolecule">
         <rdfs:label
-            >inorganic molecular entity</rdfs:label>
+            >inorganic molecule</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1070,6 +1077,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#MolecularPartBoundary -->
 
     <owl:Class rdf:about="#MolecularPartBoundary">
+        <rdfs:label>molecular part boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1085,7 +1093,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Molecule -->
 
     <owl:Class rdf:about="#Molecule">
-        <rdfs:label>molecular</rdfs:label>
+        <rdfs:label>molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1104,6 +1112,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#MoleculeBoundary -->
 
     <owl:Class rdf:about="#MoleculeBoundary">
+        <rdfs:label>molecule boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
     </owl:Class>
     
@@ -1112,6 +1121,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#MoleculeComplex -->
 
     <owl:Class rdf:about="#MoleculeComplex">
+        <rdfs:label>molecule complex</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1177,11 +1187,11 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleicAcidMolecule -->
 
     <owl:Class rdf:about="#NucleicAcidMolecule">
-        <rdfs:label
-            >sequence of nucleotides</rdfs:label>
-        <rdfs:label>nucleic acid</rdfs:label>
-        <rdfs:label
-            >nucleotide sequence</rdfs:label>
+        <rdfs:label>nucleic acid molecule</rdfs:label>
+        <ru-meta:synonym
+            >sequence of nucleotides</ru-meta:synonym>
+        <ru-meta:synonym
+            >nucleotide sequence</ru-meta:synonym>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1207,6 +1217,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleosidylGroup -->
 
     <owl:Class rdf:about="#NucleosidylGroup">
+        <rdfs:label
+            >nucleosidyl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1227,6 +1239,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Nucleotide -->
 
     <owl:Class rdf:about="#Nucleotide">
+        <rdfs:label>nucleotide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1259,7 +1272,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleotideResidue -->
 
     <owl:Class rdf:about="#NucleotideResidue">
-        <rdfs:label>nucleotide</rdfs:label>
+        <rdfs:label>nucleotide residue</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Residue"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1284,8 +1297,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Oligomer -->
 
     <owl:Class rdf:about="#Oligomer">
-        <rdfs:label
-            >oligo or polymer</rdfs:label>
+        <rdfs:label>oligomer</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1311,7 +1323,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#OligopeptideMolecule">
         <rdfs:label
-            >entire oligopeptide molecule</rdfs:label>
+            >oligopeptide molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Peptide"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1348,7 +1360,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#OrganicMolecule">
         <rdfs:label
-            >organic molecular entity</rdfs:label>
+            >organic molecule</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1417,6 +1429,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#PeptideBoundary -->
 
     <owl:Class rdf:about="#PeptideBoundary">
+        <rdfs:label>peptide boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
     </owl:Class>
     
@@ -1425,6 +1438,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#PhosphateGroup -->
 
     <owl:Class rdf:about="#PhosphateGroup">
+        <rdfs:label>Phosphate Group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#FunctionalGroup"/>
     </owl:Class>
     
@@ -1433,6 +1447,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Phospholipid -->
 
     <owl:Class rdf:about="#Phospholipid">
+        <rdfs:label>Phospholipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
     </owl:Class>
     
@@ -1450,6 +1465,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#PhysicalBoundary -->
 
     <owl:Class rdf:about="#PhysicalBoundary">
+        <rdfs:label>physical boundary</rdfs:label>
         <ru-meta:definition>A independent continuant entity that bounds or demarcates some other continuant entity. Commonly viewed as a lower-dimensional part, the the notion of physical boundary here also encompasses ill-delimited spaces that fulfill the same function, e.g. biological joints.</ru-meta:definition>
     </owl:Class>
     
@@ -1458,6 +1474,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Polymer -->
 
     <owl:Class rdf:about="#Polymer">
+        <rdfs:label>polymer</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1482,7 +1499,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#PolypeptideMolecule">
         <rdfs:label
-            >entire polypeptide molecule</rdfs:label>
+            >polypeptide molecule</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1564,7 +1581,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#PortionOfHomogeneousMatter">
         <rdfs:label
-            >homogenous cohesive collection</rdfs:label>
+            >portion of homogeneous matter</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CollectiveMaterialEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1655,7 +1672,7 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#ProteinMolecule">
         <rdfs:label
-            >entire protein molecule</rdfs:label>
+            >protein molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PolypeptideMolecule"/>
         <ru-meta:definition>Amino Acid Polymer longer than 100 monomers.</ru-meta:definition>
         <rdfs:comment
@@ -1710,6 +1727,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#PurineGroup -->
 
     <owl:Class rdf:about="#PurineGroup">
+        <rdfs:label>purine group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HeterocyclicBaseGroup"/>
     </owl:Class>
     
@@ -1718,6 +1736,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#PyrimidineGroup -->
 
     <owl:Class rdf:about="#PyrimidineGroup">
+        <rdfs:label>pyrimidine group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HeterocyclicBaseGroup"/>
     </owl:Class>
     
@@ -1726,8 +1745,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#RNAMolecule -->
 
     <owl:Class rdf:about="#RNAMolecule">
-        <rdfs:label>RNA</rdfs:label>
-        <rdfs:label>RNA sequence</rdfs:label>
+        <rdfs:label>RNA molecule</rdfs:label>
+        <ru-meta:synonym>RNA sequence</ru-meta:synonym>
         <rdfs:subClassOf rdf:resource="#NucleicAcidMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1771,6 +1790,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Residue -->
 
     <owl:Class rdf:about="#Residue">
+        <rdfs:label>residue</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
     </owl:Class>
     
@@ -1779,6 +1799,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Ribonucleotide -->
 
     <owl:Class rdf:about="#Ribonucleotide">
+        <rdfs:label>ribonucleotide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Nucleotide"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1793,7 +1814,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#RibonucleotideResidue -->
 
     <owl:Class rdf:about="#RibonucleotideResidue">
-        <rdfs:label>ribonucleotide</rdfs:label>
+        <rdfs:label>ribonucleotide residue</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1832,6 +1853,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Ribose -->
 
     <owl:Class rdf:about="#Ribose">
+        <rdfs:label>ribose</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Pentose"/>
     </owl:Class>
     
@@ -1840,7 +1862,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#RiboseRing -->
 
     <owl:Class rdf:about="#RiboseRing">
-        <rdfs:label>ribose</rdfs:label>
+        <rdfs:label>ribose ring</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SugarRing"/>
     </owl:Class>
     
@@ -1849,6 +1871,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#SaccharideResidue -->
 
     <owl:Class rdf:about="#SaccharideResidue">
+        <rdfs:label>saccharide residue</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Residue"/>
     </owl:Class>
     
@@ -1889,6 +1912,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#SugarRing -->
 
     <owl:Class rdf:about="#SugarRing">
+        <rdfs:label>sugar ring</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
     </owl:Class>
     
@@ -1906,7 +1930,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Thymin-1-yl_group -->
 
     <owl:Class rdf:about="#Thymin-1-yl_group">
-        <rdfs:label>thymin</rdfs:label>
+        <rdfs:label>thymin-1-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
         <ru-meta:synonym>C5H6N2O2</ru-meta:synonym>
     </owl:Class>
@@ -1916,7 +1940,7 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Uracil-1-yl_group -->
 
     <owl:Class rdf:about="#Uracil-1-yl_group">
-        <rdfs:label>uracil</rdfs:label>
+        <rdfs:label>uracil-1-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
         <ru-meta:synonym>C4H4N2O2</ru-meta:synonym>
     </owl:Class>
