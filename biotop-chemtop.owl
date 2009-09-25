@@ -116,35 +116,63 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPhysicalPart -->
 
-    <owl:ObjectProperty rdf:about="&biotop;hasPart">
+    <owl:ObjectProperty rdf:about="&biotop;hasPhysicalPart">
         <owl:equivalentProperty rdf:resource="&chemtop;hasPart"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProperPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProperPhysicalPart -->
 
-    <owl:ObjectProperty rdf:about="&biotop;hasProperPart">
+    <owl:ObjectProperty rdf:about="&biotop;hasProperPhysicalPart">
         <owl:equivalentProperty rdf:resource="&chemtop;hasProperPart"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#partOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicalPartOf -->
 
-    <owl:ObjectProperty rdf:about="&biotop;partOf">
+    <owl:ObjectProperty rdf:about="&biotop;physicalPartOf">
         <owl:equivalentProperty rdf:resource="&chemtop;partOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#properPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicallyBoundedBy -->
 
-    <owl:ObjectProperty rdf:about="&biotop;properPartOf">
+    <owl:ObjectProperty rdf:about="&biotop;physicallyBoundedBy">
+        <owl:equivalentProperty rdf:resource="&chemtop;boundedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicallyBounds -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyBounds">
+        <owl:equivalentProperty rdf:resource="&chemtop;boundaryOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#properPhysicalPartOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;properPhysicalPartOf">
         <owl:equivalentProperty rdf:resource="&chemtop;properPartOf"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#boundaryOf -->
+
+    <owl:ObjectProperty rdf:about="&chemtop;boundaryOf"/>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/chemtop.owl#boundedBy -->
+
+    <owl:ObjectProperty rdf:about="&chemtop;boundedBy"/>
     
 
 
@@ -223,9 +251,9 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidMonomer -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidMoleculeOrResidue -->
 
-    <owl:Class rdf:about="&biotop;AminoAcidMonomer">
+    <owl:Class rdf:about="&biotop;AminoAcidMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;AminoAcidMonomer"/>
     </owl:Class>
     
@@ -239,9 +267,9 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Carbohydrate -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#CarbohydrateMoleculeOrResidue -->
 
-    <owl:Class rdf:about="&biotop;Carbohydrate">
+    <owl:Class rdf:about="&biotop;CarbohydrateMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;Carbohydrate"/>
     </owl:Class>
     
@@ -263,9 +291,9 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#DNA -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#DNAChain -->
 
-    <owl:Class rdf:about="&biotop;DNA">
+    <owl:Class rdf:about="&biotop;DNAChain">
         <owl:equivalentClass rdf:resource="&chemtop;DNA"/>
     </owl:Class>
     
@@ -311,9 +339,9 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#FattyAcid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#FattyAcidMoleculeOrResidue -->
 
-    <owl:Class rdf:about="&biotop;FattyAcid">
+    <owl:Class rdf:about="&biotop;FattyAcidMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;FattyAcid"/>
     </owl:Class>
     
@@ -335,9 +363,9 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#HeterocyclicBase -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#HeterocyclicBaseMoleculeOrResidue -->
 
-    <owl:Class rdf:about="&biotop;HeterocyclicBase">
+    <owl:Class rdf:about="&biotop;HeterocyclicBaseMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;HeterocyclicBase"/>
     </owl:Class>
     
@@ -351,9 +379,9 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Lipid -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#LipidMoleculeOrResidue -->
 
-    <owl:Class rdf:about="&biotop;Lipid">
+    <owl:Class rdf:about="&biotop;LipidMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;Lipid"/>
     </owl:Class>
     
@@ -399,14 +427,6 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcid -->
-
-    <owl:Class rdf:about="&biotop;NucleicAcid">
-        <owl:equivalentClass rdf:resource="&chemtop;NucleicAcid"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcidRegion -->
 
     <owl:Class rdf:about="&biotop;NucleicAcidRegion">
@@ -415,17 +435,25 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Nucleoside -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcidStructure -->
 
-    <owl:Class rdf:about="&biotop;Nucleoside">
+    <owl:Class rdf:about="&biotop;NucleicAcidStructure">
+        <owl:equivalentClass rdf:resource="&chemtop;NucleicAcid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleosideMolecule -->
+
+    <owl:Class rdf:about="&biotop;NucleosideMolecule">
         <owl:equivalentClass rdf:resource="&chemtop;Nucleoside"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Nucleotide -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleotideMolecule -->
 
-    <owl:Class rdf:about="&biotop;Nucleotide">
+    <owl:Class rdf:about="&biotop;NucleotideMolecule">
         <owl:equivalentClass rdf:resource="&chemtop;Nucleotide"/>
     </owl:Class>
     
@@ -447,9 +475,9 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Peptide -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#PeptideStructure -->
 
-    <owl:Class rdf:about="&biotop;Peptide">
+    <owl:Class rdf:about="&biotop;PeptideStructure">
         <owl:equivalentClass rdf:resource="&chemtop;Peptide"/>
     </owl:Class>
     
@@ -511,9 +539,9 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#RNA -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#RNAChain -->
 
-    <owl:Class rdf:about="&biotop;RNA">
+    <owl:Class rdf:about="&biotop;RNAChain">
         <owl:equivalentClass rdf:resource="&chemtop;RNA"/>
     </owl:Class>
     
@@ -790,5 +818,5 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.974) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
 

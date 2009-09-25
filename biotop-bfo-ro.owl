@@ -97,34 +97,10 @@
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#adjacentTo -->
-
-    <owl:ObjectProperty rdf:about="&biotop;adjacentTo">
-        <owl:equivalentProperty rdf:resource="&ro;adjacent_to"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/biotop/1.0/biotop.owl#agentIn -->
 
     <owl:ObjectProperty rdf:about="&biotop;agentIn">
         <owl:equivalentProperty rdf:resource="&ro;agent_in"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop.owl#containedIn -->
-
-    <owl:ObjectProperty rdf:about="&biotop;containedIn">
-        <owl:equivalentProperty rdf:resource="&ro;contained_in"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop.owl#contains -->
-
-    <owl:ObjectProperty rdf:about="&biotop;contains">
-        <owl:equivalentProperty rdf:resource="&ro;contains"/>
     </owl:ObjectProperty>
     
 
@@ -153,14 +129,6 @@
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPart -->
-
-    <owl:ObjectProperty rdf:about="&biotop;hasPart">
-        <owl:equivalentProperty rdf:resource="&ro;has_part"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/biotop/1.0/biotop.owl#hasParticipant -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasParticipant">
@@ -169,34 +137,18 @@
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProperPart -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPhysicalPart -->
 
-    <owl:ObjectProperty rdf:about="&biotop;hasProperPart">
+    <owl:ObjectProperty rdf:about="&biotop;hasPhysicalPart">
+        <owl:equivalentProperty rdf:resource="&ro;has_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProperPhysicalPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasProperPhysicalPart">
         <owl:equivalentProperty rdf:resource="&ro;has_proper_part"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop.owl#locatedIn -->
-
-    <owl:ObjectProperty rdf:about="&biotop;locatedIn">
-        <owl:equivalentProperty rdf:resource="&ro;located_in"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop.owl#locationOf -->
-
-    <owl:ObjectProperty rdf:about="&biotop;locationOf">
-        <owl:equivalentProperty rdf:resource="&ro;location_of"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/biotop/1.0/biotop.owl#partOf -->
-
-    <owl:ObjectProperty rdf:about="&biotop;partOf">
-        <owl:equivalentProperty rdf:resource="&ro;part_of"/>
     </owl:ObjectProperty>
     
 
@@ -205,6 +157,54 @@
 
     <owl:ObjectProperty rdf:about="&biotop;participatesIn">
         <owl:equivalentProperty rdf:resource="&ro;participates_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicalLocationOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicalLocationOf">
+        <owl:equivalentProperty rdf:resource="&ro;location_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicalPartOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicalPartOf">
+        <owl:equivalentProperty rdf:resource="&ro;part_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicallyAdjacentTo -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyAdjacentTo">
+        <owl:equivalentProperty rdf:resource="&ro;adjacent_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicallyContainedIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyContainedIn">
+        <owl:equivalentProperty rdf:resource="&ro;contained_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicallyContains -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyContains">
+        <owl:equivalentProperty rdf:resource="&ro;contains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/1.0/biotop.owl#physicallyLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyLocatedIn">
+        <owl:equivalentProperty rdf:resource="&ro;located_in"/>
     </owl:ObjectProperty>
     
 
@@ -225,9 +225,9 @@
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#properPartOf -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#properPhysicalPartOf -->
 
-    <owl:ObjectProperty rdf:about="&biotop;properPartOf">
+    <owl:ObjectProperty rdf:about="&biotop;properPhysicalPartOf">
         <owl:equivalentProperty rdf:resource="&ro;proper_part_of"/>
     </owl:ObjectProperty>
     
@@ -357,7 +357,14 @@
     <!-- http://purl.org/biotop/1.0/biotop.owl#Function -->
 
     <owl:Class rdf:about="&biotop;Function">
-        <rdfs:subClassOf rdf:resource="&snap;Function"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&snap;Disposition"/>
+                    <rdf:Description rdf:about="&snap;Function"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -586,5 +593,5 @@
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.974) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1090) http://owlapi.sourceforge.net -->
 

@@ -81,9 +81,9 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasInherence -->
+    <!-- http://purl.org/biotop/1.0/biotop.owl#bearerOf -->
 
-    <owl:ObjectProperty rdf:about="&biotop;hasInherence"/>
+    <owl:ObjectProperty rdf:about="&biotop;bearerOf"/>
     
 
 
@@ -103,7 +103,7 @@ To be linked to BioTop</dc:description>
     <owl:Class rdf:about="&biotop;Animal">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                 <owl:someValuesFrom rdf:resource="#KingdomAnimaliaQuality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -119,7 +119,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Prokaryote"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#KingdomArchaeaQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -137,7 +137,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Prokaryote"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#KingdomBacteriaQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -167,7 +167,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Eukaryote"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#KingdomFungiQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -203,7 +203,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Eukaryote"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#KingdomPlantaeQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -258,7 +258,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Cell"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#KingdomAnimaliaQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -285,7 +285,7 @@ To be linked to BioTop</dc:description>
         <owl:disjointWith rdf:resource="#BakersYeastPopulation"/>
         <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
         <owl:disjointWith rdf:resource="#ChimpanzeePopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
+        <owl:disjointWith rdf:resource="-1"/>
         <owl:disjointWith rdf:resource="#ElephantPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
@@ -313,7 +313,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#PhylumArthropodaQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -340,7 +340,7 @@ To be linked to BioTop</dc:description>
         <owl:disjointWith rdf:resource="#BakersYeastPopulation"/>
         <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
         <owl:disjointWith rdf:resource="#ChimpanzeePopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
+        <owl:disjointWith rdf:resource="-1"/>
         <owl:disjointWith rdf:resource="#ElephantPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
@@ -368,7 +368,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#SpeciesElephasMaximusQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -395,7 +395,7 @@ To be linked to BioTop</dc:description>
         <owl:disjointWith rdf:resource="#BakersYeastPopulation"/>
         <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
         <owl:disjointWith rdf:resource="#ChimpanzeePopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
+        <owl:disjointWith rdf:resource="-1"/>
         <owl:disjointWith rdf:resource="#ElephantPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
@@ -428,7 +428,7 @@ To be linked to BioTop</dc:description>
         <owl:disjointWith rdf:resource="#BakersYeastPopulation"/>
         <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
         <owl:disjointWith rdf:resource="#ChimpanzeePopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
+        <owl:disjointWith rdf:resource="-1"/>
         <owl:disjointWith rdf:resource="#ElephantPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
@@ -456,7 +456,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;YeastCell"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#SpeciesSaccharomycesCerevisiaeQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -481,7 +481,7 @@ To be linked to BioTop</dc:description>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#CandidaAlbicansPopulation"/>
         <owl:disjointWith rdf:resource="#ChimpanzeePopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
+        <owl:disjointWith rdf:resource="-1"/>
         <owl:disjointWith rdf:resource="#ElephantPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
@@ -509,7 +509,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;YeastCell"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#SpeciesCandidaAlbicansQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -533,7 +533,7 @@ To be linked to BioTop</dc:description>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#ChimpanzeePopulation"/>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
+        <owl:disjointWith rdf:resource="-1"/>
         <owl:disjointWith rdf:resource="#ElephantPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
@@ -561,7 +561,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#SpeciesSimiaTroglodytesQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -583,7 +583,7 @@ To be linked to BioTop</dc:description>
                 <owl:someValuesFrom rdf:resource="#Chimpanzee"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="#EColiPopulation"/>
+        <owl:disjointWith rdf:resource="-1"/>
         <owl:disjointWith rdf:resource="#ElephantPopulation"/>
         <owl:disjointWith rdf:resource="#EukaryotePopulation"/>
         <owl:disjointWith rdf:resource="#FruitFlyPopulation"/>
@@ -653,9 +653,9 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#EColiPopulation -->
+    <!-- http://purl.org/biotop/1.0/taxdemo.owl#EscherichiaColiPopulation -->
 
-    <owl:Class rdf:about="#EColiPopulation">
+    <owl:Class rdf:about="-1">
         <rdfs:label>e coli population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&biotop;Population"/>
         <rdfs:subClassOf>
@@ -691,7 +691,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#FamilyElephantidaeQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -739,7 +739,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;BacterialCell"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#SpeciesEscherichiaColiQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -846,7 +846,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#SpeciesDrosophilaMelanogasterQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -999,7 +999,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#FamilyHominidaeQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1043,7 +1043,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#Leukocyte"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#SpeciesHomoSapiensQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1085,7 +1085,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#ClassInsectaQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1219,7 +1219,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#ClassMammaliaQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1392,7 +1392,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#OrderPrimatesQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1636,7 +1636,7 @@ To be linked to BioTop</dc:description>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotop;Animal"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&biotop;hasInherence"/>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
                         <owl:someValuesFrom rdf:resource="#SubphylumVertebrataQuality"/>
                     </owl:Restriction>
                 </owl:intersectionOf>

@@ -5,11 +5,11 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ru-meta "http://purl.org/imbi/ru-meta.owl#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY chemtop "http://purl.org/biotop/1.0/chemtop.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY ru-meta "http://purl.org/imbi/ru-meta.owl#" >
 ]>
 
 
@@ -57,15 +57,15 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:AnnotationProperty rdf:about="&ru-meta;definition"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&ru-meta;synonym"/>
     <owl:AnnotationProperty rdf:about="&dc;source"/>
     <owl:AnnotationProperty rdf:about="&dc;publisher"/>
     <owl:AnnotationProperty rdf:about="&dc;identifier"/>
-    <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
-    <owl:AnnotationProperty rdf:about="&dc;creator"/>
-    <owl:AnnotationProperty rdf:about="&dc;format"/>
-    <owl:AnnotationProperty rdf:about="&ru-meta;definition"/>
-    <owl:AnnotationProperty rdf:about="&ru-meta;synonym"/>
     
 
 
@@ -98,7 +98,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="#componentPartOf">
-        <ru-meta:definition>Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</ru-meta:definition>
+        <ru-meta:definition
+            >Components are those (first-order) parts which partition a compound. The whole is exactly the mereological sum of its components. A loss of a component affects the sortality of the compound (e.g. a complete vs. a defective organism). In many cases, the choice of what is a component of a compound is arbitrary, because there are several ways to divide a whole into parts. Components should be - at least - partly bona fide parts. The use of this relation also requires the commitment to an underlying granularity level. So could we consider the codons (base triples) as the components of a DNA molecule but also the single nucleotides. Note that components of a compound may also be portions of matter.</ru-meta:definition>
         <rdfs:comment
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
         <rdfs:comment
@@ -108,18 +109,13 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#condensesTo -->
-
-    <owl:ObjectProperty rdf:about="#condensesTo"/>
-    
-
-
     <!-- http://purl.org/biotop/1.0/chemtop.owl#granularPart -->
 
     <owl:ObjectProperty rdf:about="#granularPart">
+        <ru-meta:definition
+            >Grains are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</ru-meta:definition>
         <rdfs:comment
             >For performance reasons, inverse relations are not encoded as such in OWL.</rdfs:comment>
-        <ru-meta:definition>Grains are the constitutent parts of Pluralities. They are of the same sort. Generally pluralities have a high number of grains. The loss of a grain has no effect on the sortality of the identity of the plurality.</ru-meta:definition>
         <rdfs:comment
             >Inverse relation to hasGranularPart.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="#properPartOf"/>
@@ -211,9 +207,11 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#AcyclicAliphaticHydrocarbon -->
 
     <owl:Class rdf:about="#AcyclicAliphaticHydrocarbon">
-        <rdfs:label>acyclic aliphatic hydrocarbon</rdfs:label>
+        <rdfs:label
+            >acyclic aliphatic hydrocarbon</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
-        <ru-meta:definition>Hydrocarbon without rings.</ru-meta:definition>
+        <ru-meta:definition
+            >Hydrocarbon without rings.</ru-meta:definition>
     </owl:Class>
     
 
@@ -221,7 +219,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Adenin-9-yl_group -->
 
     <owl:Class rdf:about="#Adenin-9-yl_group">
-        <rdfs:label>adenin-9-yl group</rdfs:label>
+        <rdfs:label
+            >adenin-9-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PurineGroup"/>
         <rdfs:comment>C5H5N5</rdfs:comment>
     </owl:Class>
@@ -248,8 +247,10 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
-        <ru-meta:synonym>AminoAcidSequence</ru-meta:synonym>
-        <ru-meta:definition>Chain of amino acids, joined by peptide bonds. Folded or unfolded.</ru-meta:definition>
+        <ru-meta:definition
+            >Chain of amino acids, joined by peptide bonds. Folded or unfolded.</ru-meta:definition>
+        <ru-meta:synonym
+            >AminoAcidSequence</ru-meta:synonym>
     </owl:Class>
     
 
@@ -262,18 +263,6 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#CarboxyGroup"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#condensesTo"/>
-                <owl:someValuesFrom rdf:resource="#AminoAcidResidue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasPart"/>
                 <owl:someValuesFrom rdf:resource="#CarbonHydrogenSubstructure"/>
             </owl:Restriction>
@@ -284,9 +273,16 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
                 <owl:someValuesFrom rdf:resource="#AminoGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#CarboxyGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment
             >(QCR) ro:hasPart some CarbonHydrogenSubstructure and ((hasComponentPart myx 2 CarboxyGroup) and (hasComponentPart min 1 CarboxyGroup) and (hasComponentPart exactly 1 AminoGroup)) or ((hasComponentPart max 2 AminoGroup) and (hasComponentPart min 1 AminoGroup) and (hasComponentPart exactly 1 CarboxyGroup))</rdfs:comment>
-        <ru-meta:definition>In chemistry, an amino acid is any molecule that contains both amine and carboxyl functional groups. However, in biochemistry, this more general term is frequently used to refer to alpha amino acids (amino acids in which the amino and carboxylate functionalities are attached to the same carbon, called &#945;&#8211;carbon). Amino Acids have at least one amino and one carboxy group. Those having two carboxy groups have only one amino group and vice versa.</ru-meta:definition>
+        <ru-meta:definition
+            >In chemistry, an amino acid is any molecule that contains both amine and carboxyl functional groups. However, in biochemistry, this more general term is frequently used to refer to alpha amino acids (amino acids in which the amino and carboxylate functionalities are attached to the same carbon, called &#945;&#8211;carbon). Amino Acids have at least one amino and one carboxy group. Those having two carboxy groups have only one amino group and vice versa.</ru-meta:definition>
     </owl:Class>
     
 
@@ -294,7 +290,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#AminoAcidResidue -->
 
     <owl:Class rdf:about="#AminoAcidResidue">
-        <rdfs:label>amino acid residue</rdfs:label>
+        <rdfs:label
+            >amino acid residue</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Residue"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -338,7 +335,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         </rdfs:subClassOf>
         <rdfs:comment
             >(QCR) hasComponentPart exactly 1 NitrogenAtom and hasComponentPart max 3 HydrogenAtom and hasComponentPart min 1 HydrogenAtom and hasComponentPart only (NitrogenAtom or HydrogenAtom)</rdfs:comment>
-        <ru-meta:definition>Amines are organic compounds and a type of functional group that contain nitrogen as the key atom. Isolated neutral or kationic amino group or amino group forming a peptide bond. NH2 or NH3+</ru-meta:definition>
+        <ru-meta:definition
+            >Amines are organic compounds and a type of functional group that contain nitrogen as the key atom. Isolated neutral or kationic amino group or amino group forming a peptide bond. NH2 or NH3+</ru-meta:definition>
     </owl:Class>
     
 
@@ -349,7 +347,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:label
             >aromatic hydrocarbon</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
-        <ru-meta:definition>Hydrocarbons which contain aromatic rings (benzene, naphtalin, toluene)</ru-meta:definition>
+        <ru-meta:definition
+            >Hydrocarbons which contain aromatic rings (benzene, naphtalin, toluene)</ru-meta:definition>
     </owl:Class>
     
 
@@ -371,7 +370,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
                 <owl:allValuesFrom rdf:resource="#SubatomicParticle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Basic building block of molecules. Particle of discrete types. Biologically important atoms are C, N, H, O, P, S, Na, Ca, K, Mg, Cl, J, Fe, Co, Zn ,... Atoms may be electrically neutral or ionic.</ru-meta:definition>
+        <ru-meta:definition
+            >Basic building block of molecules. Particle of discrete types. Biologically important atoms are C, N, H, O, P, S, Na, Ca, K, Mg, Cl, J, Fe, Co, Zn ,... Atoms may be electrically neutral or ionic.</ru-meta:definition>
     </owl:Class>
     
 
@@ -379,7 +379,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#BackbonePhosphateUnit -->
 
     <owl:Class rdf:about="#BackbonePhosphateUnit">
-        <rdfs:label>backbone phosphate unit</rdfs:label>
+        <rdfs:label
+            >backbone phosphate unit</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -406,7 +407,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>A backbone phosphate unit consists of a phosphorus atom bound to two oxygene atoms +++</ru-meta:definition>
+        <ru-meta:definition
+            >A backbone phosphate unit consists of a phosphorus atom bound to two oxygene atoms +++</ru-meta:definition>
     </owl:Class>
     
 
@@ -414,7 +416,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#BackbonePhosphateUnitBoundary -->
 
     <owl:Class rdf:about="#BackbonePhosphateUnitBoundary">
-        <rdfs:label>backbone phosphate unit boundary</rdfs:label>
+        <rdfs:label
+            >backbone phosphate unit boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
     </owl:Class>
     
@@ -436,7 +439,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:subClassOf rdf:resource="#CarbonChain"/>
         <rdfs:comment
             >(QCR) hasComponentPart exactly 5 CarbonAtom</rdfs:comment>
-        <ru-meta:definition>Backbone of Pentoses.</ru-meta:definition>
+        <ru-meta:definition
+            >Backbone of Pentoses.</ru-meta:definition>
     </owl:Class>
     
 
@@ -448,7 +452,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:subClassOf rdf:resource="#CarbonChain"/>
         <rdfs:comment
             >(QCR) hasComponentPart exactly 6 CarbonAtom</rdfs:comment>
-        <ru-meta:definition>Backbone of Hexoses.</ru-meta:definition>
+        <ru-meta:definition
+            >Backbone of Hexoses.</ru-meta:definition>
     </owl:Class>
     
 
@@ -512,7 +517,14 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#CarbonAtom"/>
+                            <rdf:Description rdf:about="#HydrogenAtom"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -524,19 +536,13 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#CarbonAtom"/>
-                            <rdf:Description rdf:about="#HydrogenAtom"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Part of a molecule constituted by a (1-3 valued) carbon hydrogen bound. Traditional (fiat) criterion for distinguishing organic from inorganic compounds. Excludes certain carbon compounds such as HCN, CO2, traditionally considered inorganic. (Could be enhanced by carbon tetrahalogen, traditionally considered organic compounds but irrelevant for biology)</ru-meta:definition>
         <rdfs:comment
             >(QCR) hasComponentPart exactly 1 CarbonAtom and hasComponentPart exactly 1 HydrogenAtom and hasComponentPart only (CarbonAtom or HydrogenAtom)</rdfs:comment>
+        <ru-meta:definition
+            >Part of a molecule constituted by a (1-3 valued) carbon hydrogen bound. Traditional (fiat) criterion for distinguishing organic from inorganic compounds. Excludes certain carbon compounds such as HCN, CO2, traditionally considered inorganic. (Could be enhanced by carbon tetrahalogen, traditionally considered organic compounds but irrelevant for biology)</ru-meta:definition>
     </owl:Class>
     
 
@@ -558,6 +564,18 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -572,19 +590,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:someValuesFrom rdf:resource="#CarbonAtom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -599,9 +605,10 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     <owl:Class rdf:about="#ChromosomalDNA">
         <rdfs:label>chromosomal DNA</rdfs:label>
         <rdfs:subClassOf rdf:resource="#DNAMolecule"/>
+        <ru-meta:definition
+            >Single large macromolecule of DNA that in its coiled form represents a chromosome</ru-meta:definition>
         <owl:versionInfo
             >TODO: Discuss whether only complete DNA molecules can be ChromosomalDNA.</owl:versionInfo>
-        <ru-meta:definition>Single large macromolecule of DNA that in its coiled form represents a chromosome</ru-meta:definition>
     </owl:Class>
     
 
@@ -616,7 +623,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
         <rdfs:comment
             >The fuzzyness of this class is due to the &quot;same sort&quot; criterion.</rdfs:comment>
-        <ru-meta:definition>Mereological Sum of multiple grains of the same sort without clear identity and unity criteria.</ru-meta:definition>
+        <ru-meta:definition
+            >Mereological Sum of multiple grains of the same sort without clear identity and unity criteria.</ru-meta:definition>
     </owl:Class>
     
 
@@ -639,7 +647,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
                 <owl:someValuesFrom rdf:resource="#CollectiveMaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Composition of different kinds of collections without clear unity and identity criteria.
+        <ru-meta:definition
+            >Composition of different kinds of collections without clear unity and identity criteria.
 Old name: compound of collections</ru-meta:definition>
     </owl:Class>
     
@@ -651,7 +660,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >cyclic aliphatic hydrocarbon</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
-        <ru-meta:definition>Hydrocarbon with rings which are not aromatic rings (Cyclohexan)</ru-meta:definition>
+        <ru-meta:definition
+            >Hydrocarbon with rings which are not aromatic rings (Cyclohexan)</ru-meta:definition>
     </owl:Class>
     
 
@@ -659,7 +669,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Cytosin-1-yl_group -->
 
     <owl:Class rdf:about="#Cytosin-1-yl_group">
-        <rdfs:label>cytosin-1-yl group</rdfs:label>
+        <rdfs:label
+            >cytosin-1-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
         <ru-meta:synonym>C4H5N3O</ru-meta:synonym>
     </owl:Class>
@@ -671,7 +682,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#DNAFragment">
         <rdfs:label>DNA fragment</rdfs:label>
         <rdfs:subClassOf rdf:resource="#DNAMolecule"/>
-        <ru-meta:definition>Any other kind of DNA that is a whole Molecule, i.e. not part of a larger piece of DNA</ru-meta:definition>
+        <ru-meta:definition
+            >Any other kind of DNA that is a whole Molecule, i.e. not part of a larger piece of DNA</ru-meta:definition>
     </owl:Class>
     
 
@@ -687,7 +699,8 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#DeoxyribonucleotideResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>A DNA is a complex, high-molecular-weight biochemical macromolecule composed of deoxyribonumcleotide chains that convey genetic information. Any kind of NucleicAcid that is composed of Deoxyribonucleotides is here defined as DNA.</ru-meta:definition>
+        <ru-meta:definition
+            >A DNA is a complex, high-molecular-weight biochemical macromolecule composed of deoxyribonumcleotide chains that convey genetic information. Any kind of NucleicAcid that is composed of Deoxyribonucleotides is here defined as DNA.</ru-meta:definition>
     </owl:Class>
     
 
@@ -697,7 +710,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#DNARegion">
         <rdfs:label>DNA region</rdfs:label>
         <rdfs:subClassOf rdf:resource="#NucleicAcidRegion"/>
-        <ru-meta:definition>Any properPartOf an EntireDNAMolecule that as only desoxyribonucleotides as components.</ru-meta:definition>
+        <ru-meta:definition
+            >Any properPartOf an EntireDNAMolecule that as only desoxyribonucleotides as components.</ru-meta:definition>
     </owl:Class>
     
 
@@ -705,14 +719,9 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Deoxyribonucleotide -->
 
     <owl:Class rdf:about="#Deoxyribonucleotide">
-        <rdfs:label>deoxyribonucleotide</rdfs:label>
+        <rdfs:label
+            >deoxyribonucleotide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Nucleotide"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#condensesTo"/>
-                <owl:someValuesFrom rdf:resource="#DeoxyribonucleotideResidue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -769,7 +778,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#DeoxyriboseRing -->
 
     <owl:Class rdf:about="#DeoxyriboseRing">
-        <rdfs:label>deoxyribose ring</rdfs:label>
+        <rdfs:label
+            >deoxyribose ring</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SugarRing"/>
     </owl:Class>
     
@@ -780,7 +790,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Eicosanoid">
         <rdfs:label>eicosanoid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <ru-meta:definition>An oxygenated metabolite from polyunsaturated 20 carbon fatty acids including lipoxygenase and cyclooxygenase products and their synthetic analogs. This includes the prostaglandins and thromboxanes. (UMLS SN)</ru-meta:definition>
+        <ru-meta:definition
+            >An oxygenated metabolite from polyunsaturated 20 carbon fatty acids including lipoxygenase and cyclooxygenase products and their synthetic analogs. This includes the prostaglandins and thromboxanes. (UMLS SN)</ru-meta:definition>
     </owl:Class>
     
 
@@ -790,7 +801,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Electron">
         <rdfs:label>electron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
-        <ru-meta:definition>Negatively Charged Particle</ru-meta:definition>
+        <ru-meta:definition
+            >Negatively Charged Particle</ru-meta:definition>
     </owl:Class>
     
 
@@ -827,7 +839,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>Carboxylic acid often with a long unbranched aliphatic tail.</ru-meta:definition>
+        <ru-meta:definition
+            >Carboxylic acid often with a long unbranched aliphatic tail.</ru-meta:definition>
     </owl:Class>
     
 
@@ -838,7 +851,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >functional group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularGroup"/>
-        <ru-meta:definition>Functional groups are specific groups of atoms within molecules that are responsible for the characteristic chemical reactions of those molecules.</ru-meta:definition>
+        <ru-meta:definition
+            >Functional groups are specific groups of atoms within molecules that are responsible for the characteristic chemical reactions of those molecules.</ru-meta:definition>
     </owl:Class>
     
 
@@ -864,7 +878,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#GlycosideBoundary -->
 
     <owl:Class rdf:about="#GlycosideBoundary">
-        <rdfs:label>glycoside boundary</rdfs:label>
+        <rdfs:label
+            >glycoside boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
     </owl:Class>
     
@@ -873,7 +888,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Guanin-9-yl_group -->
 
     <owl:Class rdf:about="#Guanin-9-yl_group">
-        <rdfs:label>guanin-9-yl group</rdfs:label>
+        <rdfs:label
+            >guanin-9-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PurineGroup"/>
         <ru-meta:synonym>C5H5N5O</ru-meta:synonym>
     </owl:Class>
@@ -904,7 +920,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <ru-meta:definition>Organic compounds that contain a ring structure containing N as proton receptor. Important parts of DNA and RNA molecules.</ru-meta:definition>
+        <ru-meta:definition
+            >Organic compounds that contain a ring structure containing N as proton receptor. Important parts of DNA and RNA molecules.</ru-meta:definition>
     </owl:Class>
     
 
@@ -917,13 +934,13 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
-                <owl:someValuesFrom rdf:resource="#CarbonHydrogenSubstructure"/>
+                <owl:someValuesFrom rdf:resource="#HydroxyGroup"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
-                <owl:someValuesFrom rdf:resource="#HydroxyGroup"/>
+                <owl:someValuesFrom rdf:resource="#CarbonHydrogenSubstructure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -963,7 +980,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Compounds consisting of carbon and hydrogen only.</ru-meta:definition>
+        <ru-meta:definition
+            >Compounds consisting of carbon and hydrogen only.</ru-meta:definition>
     </owl:Class>
     
 
@@ -985,13 +1003,13 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
+                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
+                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1034,7 +1052,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Substances which do not include carbon and its derivatives as their principal elements. However, carbides, carbonates, cyanides, cyanates and carbon disulfide are included in this class.</ru-meta:definition>
+        <ru-meta:definition
+            >Substances which do not include carbon and its derivatives as their principal elements. However, carbides, carbonates, cyanides, cyanates and carbon disulfide are included in this class.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1044,7 +1063,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Lipid">
         <rdfs:label>lipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
-        <ru-meta:definition>Fat-soluble (lipophilic), naturally-occurring molecule.</ru-meta:definition>
+        <ru-meta:definition
+            >Fat-soluble (lipophilic), naturally-occurring molecule.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1060,7 +1080,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#MolecularGroup">
         <rdfs:label>molecular group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPart"/>
-        <ru-meta:definition>Linked collection of atoms within a molcular entity. They cannot exist by themselves.</ru-meta:definition>
+        <ru-meta:definition
+            >Linked collection of atoms within a molcular entity. They cannot exist by themselves.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1077,7 +1098,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#MolecularPartBoundary -->
 
     <owl:Class rdf:about="#MolecularPartBoundary">
-        <rdfs:label>molecular part boundary</rdfs:label>
+        <rdfs:label
+            >molecular part boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1085,7 +1107,8 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#MolecularPart"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>An independent continuant [snap:IndependentContinuant] that is a lower dimensional part of a molecule, normally a closed two-dimensional surface. Boundaries are those privileged parts of molecular parts that exist where two molecular parts meet. Typically molecular part boundaries are located between bound atoms .</ru-meta:definition>
+        <ru-meta:definition
+            >An independent continuant [snap:IndependentContinuant] that is a lower dimensional part of a molecule, normally a closed two-dimensional surface. Boundaries are those privileged parts of molecular parts that exist where two molecular parts meet. Typically molecular part boundaries are located between bound atoms .</ru-meta:definition>
     </owl:Class>
     
 
@@ -1102,7 +1125,8 @@ Old name: compound of collections</ru-meta:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="#MoleculeComplex"/>
-        <ru-meta:definition>A molecular entity is a self connected compound of two atoms or more which exhibit at least one covalent bound. Molecular entities can be 
+        <ru-meta:definition
+            >A molecular entity is a self connected compound of two atoms or more which exhibit at least one covalent bound. Molecular entities can be 
 
  Separately distinguishable molecular structure, neither part of nor attached to any other molecular structure. Atoms are not considered molecular structures.</ru-meta:definition>
     </owl:Class>
@@ -1112,7 +1136,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#MoleculeBoundary -->
 
     <owl:Class rdf:about="#MoleculeBoundary">
-        <rdfs:label>molecule boundary</rdfs:label>
+        <rdfs:label
+            >molecule boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PhysicalBoundary"/>
     </owl:Class>
     
@@ -1121,7 +1146,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#MoleculeComplex -->
 
     <owl:Class rdf:about="#MoleculeComplex">
-        <rdfs:label>molecule complex</rdfs:label>
+        <rdfs:label
+            >molecule complex</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1134,7 +1160,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>An object which contains several molecules, has direct parts (components) of different types and which changes its ontological nature if subdivided. It must have clear unity and identity criteria.</ru-meta:definition>
+        <ru-meta:definition
+            >An object which contains several molecules, has direct parts (components) of different types and which changes its ontological nature if subdivided. It must have clear unity and identity criteria.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1144,12 +1171,6 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Monosaccharide">
         <rdfs:label>monosaccharide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#condensesTo"/>
-                <owl:someValuesFrom rdf:resource="#SaccharideResidue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1159,7 +1180,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Neutron">
         <rdfs:label>neutron</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
-        <ru-meta:definition>Neutral Particle</ru-meta:definition>
+        <ru-meta:definition
+            >Neutral Particle</ru-meta:definition>
     </owl:Class>
     
 
@@ -1179,7 +1201,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >non steroid lipid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <ru-meta:definition>Lipids that have aliphatic chains and no steroid rings</ru-meta:definition>
+        <ru-meta:definition
+            >Lipids that have aliphatic chains and no steroid rings</ru-meta:definition>
     </owl:Class>
     
 
@@ -1187,11 +1210,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleicAcidMolecule -->
 
     <owl:Class rdf:about="#NucleicAcidMolecule">
-        <rdfs:label>nucleic acid molecule</rdfs:label>
-        <ru-meta:synonym
-            >sequence of nucleotides</ru-meta:synonym>
-        <ru-meta:synonym
-            >nucleotide sequence</ru-meta:synonym>
+        <rdfs:label
+            >nucleic acid molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#OrganicMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1199,7 +1219,12 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#NucleotideResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>A nucleic acid is a complex, high-molecular-weight biochemical macromolecule composed of nucleotide chains that convey genetic information.</ru-meta:definition>
+        <ru-meta:definition
+            >A nucleic acid is a complex, high-molecular-weight biochemical macromolecule composed of nucleotide chains that convey genetic information.</ru-meta:definition>
+        <ru-meta:synonym
+            >sequence of nucleotides</ru-meta:synonym>
+        <ru-meta:synonym
+            >nucleotide sequence</ru-meta:synonym>
     </owl:Class>
     
 
@@ -1249,20 +1274,14 @@ Old name: compound of collections</ru-meta:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#condensesTo"/>
-                <owl:someValuesFrom rdf:resource="#NucleotideResidue"/>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#SugarRing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
                 <owl:someValuesFrom rdf:resource="#HeterocyclicBaseGroup"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#SugarRing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1272,7 +1291,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleotideResidue -->
 
     <owl:Class rdf:about="#NucleotideResidue">
-        <rdfs:label>nucleotide residue</rdfs:label>
+        <rdfs:label
+            >nucleotide residue</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Residue"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1314,7 +1334,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>A Oligomer is a molecule of low relative molecular mass of which the components can be fully specified. The components are all of the same kind, e.g. amino acid residues or nucleotide residues.</ru-meta:definition>
+        <ru-meta:definition
+            >A Oligomer is a molecule of low relative molecular mass of which the components can be fully specified. The components are all of the same kind, e.g. amino acid residues or nucleotide residues.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1328,19 +1349,20 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:onClass rdf:resource="#AminoAcidResidue"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:allValuesFrom rdf:resource="#AminoAcidResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:allValuesFrom rdf:resource="#AminoAcidResidue"/>
+                <owl:onClass rdf:resource="#AminoAcidResidue"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <ru-meta:definition
+            >Amino Acid Polymer up to 10 monomers.</ru-meta:definition>
         <rdfs:comment
             >(QCR) hasComponentPart max 10 AminoAcidMonomer</rdfs:comment>
-        <ru-meta:definition>Amino Acid Polymer up to 10 monomers.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1372,7 +1394,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</ru-meta:definition>
+        <ru-meta:definition
+            >Substances containing carbon and its derivatives as their prinicipal elements, usually combined with itself and with atoms of one or more other element such as hydrogen, oxygen, nitrogen, sulfur, phosphorus, chlorine or fluorine. They exist in either carbon chain or carbon ring form. Excludes carbides, carbonates and carbon oxides.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1429,7 +1452,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#PeptideBoundary -->
 
     <owl:Class rdf:about="#PeptideBoundary">
-        <rdfs:label>peptide boundary</rdfs:label>
+        <rdfs:label
+            >peptide boundary</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularPartBoundary"/>
     </owl:Class>
     
@@ -1465,8 +1489,10 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#PhysicalBoundary -->
 
     <owl:Class rdf:about="#PhysicalBoundary">
-        <rdfs:label>physical boundary</rdfs:label>
-        <ru-meta:definition>A independent continuant entity that bounds or demarcates some other continuant entity. Commonly viewed as a lower-dimensional part, the the notion of physical boundary here also encompasses ill-delimited spaces that fulfill the same function, e.g. biological joints.</ru-meta:definition>
+        <rdfs:label
+            >physical boundary</rdfs:label>
+        <ru-meta:definition
+            >A independent continuant entity that bounds or demarcates some other continuant entity. Commonly viewed as a lower-dimensional part, the the notion of physical boundary here also encompasses ill-delimited spaces that fulfill the same function, e.g. biological joints.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1516,9 +1542,10 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Amino Acid Polymer from 11 to 100 monomers.</ru-meta:definition>
         <rdfs:comment
             >(QCR) Peptide and hasComponentPart min 11 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity) and hasComponentPart only AminoAcidMonomer and hasComponentPart max 100 AminoAcidMonomer</rdfs:comment>
+        <ru-meta:definition
+            >Amino Acid Polymer from 11 to 100 monomers.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1540,7 +1567,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >portion of heterogenous liquid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CompoundOfCollectiveMaterialEntities"/>
-        <ru-meta:definition>Liquid constituted by different kinds of collectives, e.g. aqueous NaCl solution</ru-meta:definition>
+        <ru-meta:definition
+            >Liquid constituted by different kinds of collectives, e.g. aqueous NaCl solution</ru-meta:definition>
     </owl:Class>
     
 
@@ -1551,7 +1579,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >portion of heterogenous solid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#CompoundOfCollectiveMaterialEntities"/>
-        <ru-meta:definition>Solid constituted by different kinds of collectives, e.g. a NaCl crystal, granite</ru-meta:definition>
+        <ru-meta:definition
+            >Solid constituted by different kinds of collectives, e.g. a NaCl crystal, granite</ru-meta:definition>
     </owl:Class>
     
 
@@ -1561,7 +1590,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#PortionOfHomogeneousGas">
         <rdfs:label>portion of gas</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHomogeneousMatter"/>
-        <ru-meta:definition>Non-connected Molecules in gaseous state</ru-meta:definition>
+        <ru-meta:definition
+            >Non-connected Molecules in gaseous state</ru-meta:definition>
     </owl:Class>
     
 
@@ -1572,7 +1602,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >portion of homogenous liquid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHomogeneousMatter"/>
-        <ru-meta:definition>Pure liquid consisting only of one kind of particles, e.g. H2O, liquid Hg, ...</ru-meta:definition>
+        <ru-meta:definition
+            >Pure liquid consisting only of one kind of particles, e.g. H2O, liquid Hg, ...</ru-meta:definition>
     </owl:Class>
     
 
@@ -1586,19 +1617,6 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasGranularPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="#Atom"/>
-                            <rdf:Description rdf:about="#Molecule"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasGranularPart"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -1609,7 +1627,21 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Composition of granular components of the same kind.</ru-meta:definition>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasGranularPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Atom"/>
+                            <rdf:Description rdf:about="#Molecule"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ru-meta:definition
+            >Composition of granular components of the same kind.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1620,7 +1652,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >portion of homogenous solid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PortionOfHomogeneousMatter"/>
-        <ru-meta:definition>Pure solid consisting only of one kind of particles, e.g. a piece of metal</ru-meta:definition>
+        <ru-meta:definition
+            >Pure solid consisting only of one kind of particles, e.g. a piece of metal</ru-meta:definition>
     </owl:Class>
     
 
@@ -1641,7 +1674,8 @@ Old name: compound of collections</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <ru-meta:definition>Mostly only proteins but composition with other molecules possible (e.g. Fe -&gt; Hemoglobin)</ru-meta:definition>
+        <ru-meta:definition
+            >Mostly only proteins but composition with other molecules possible (e.g. Fe -&gt; Hemoglobin)</ru-meta:definition>
     </owl:Class>
     
 
@@ -1663,7 +1697,8 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#ProteinMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Structural domain is the smallest element of protein tertiary structure that is self-stabilizing and often folds independently of the rest of the amino acid chain. It may contain one or more structural motives (ProteinSubstructure). A protein domain typically has its own function, the overall function of the protein results from the composition of the functions of all of its structural domains.</ru-meta:definition>
+        <ru-meta:definition
+            >Structural domain is the smallest element of protein tertiary structure that is self-stabilizing and often folds independently of the rest of the amino acid chain. It may contain one or more structural motives (ProteinSubstructure). A protein domain typically has its own function, the overall function of the protein results from the composition of the functions of all of its structural domains.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1674,7 +1709,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >protein molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PolypeptideMolecule"/>
-        <ru-meta:definition>Amino Acid Polymer longer than 100 monomers.</ru-meta:definition>
+        <ru-meta:definition
+            >Amino Acid Polymer longer than 100 monomers.</ru-meta:definition>
         <rdfs:comment
             >(QCR) Peptide and hasComponentPart min 101 AminoAcidMonomer and not (ro:properPartOf some MolecularEntity)</rdfs:comment>
     </owl:Class>
@@ -1699,7 +1735,8 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#ProteinMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>A secondary substructure of a protein (protein Motif)</ru-meta:definition>
+        <ru-meta:definition
+            >A secondary substructure of a protein (protein Motif)</ru-meta:definition>
     </owl:Class>
     
 
@@ -1709,7 +1746,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#ProteinSubunit">
         <rdfs:label>protein subunit</rdfs:label>
         <rdfs:subClassOf rdf:resource="#ProteinMolecule"/>
-        <ru-meta:definition>A protein molecule that assembles with other protein molecules to form a protein complex. May have its own function. However, most proteinsubunits do not gain functionality until associated with the other subunits.</ru-meta:definition>
+        <ru-meta:definition
+            >A protein molecule that assembles with other protein molecules to form a protein complex. May have its own function. However, most proteinsubunits do not gain functionality until associated with the other subunits.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1719,7 +1757,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Proton">
         <rdfs:label>proton</rdfs:label>
         <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
-        <ru-meta:definition>Positively Charged Particle</ru-meta:definition>
+        <ru-meta:definition
+            >Positively Charged Particle</ru-meta:definition>
     </owl:Class>
     
 
@@ -1736,7 +1775,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#PyrimidineGroup -->
 
     <owl:Class rdf:about="#PyrimidineGroup">
-        <rdfs:label>pyrimidine group</rdfs:label>
+        <rdfs:label
+            >pyrimidine group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#HeterocyclicBaseGroup"/>
     </owl:Class>
     
@@ -1746,7 +1786,6 @@ Old name: compound of collections</ru-meta:definition>
 
     <owl:Class rdf:about="#RNAMolecule">
         <rdfs:label>RNA molecule</rdfs:label>
-        <ru-meta:synonym>RNA sequence</ru-meta:synonym>
         <rdfs:subClassOf rdf:resource="#NucleicAcidMolecule"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1754,7 +1793,9 @@ Old name: compound of collections</ru-meta:definition>
                 <owl:someValuesFrom rdf:resource="#RibonucleotideResidue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <ru-meta:definition>Any kind of NucleicAcid that is composed of Ribonucleotides which are not Deoxyribonucleotides</ru-meta:definition>
+        <ru-meta:synonym>RNA sequence</ru-meta:synonym>
+        <ru-meta:definition
+            >Any kind of NucleicAcid that is composed of Ribonucleotides which are not Deoxyribonucleotides</ru-meta:definition>
     </owl:Class>
     
 
@@ -1782,7 +1823,8 @@ Old name: compound of collections</ru-meta:definition>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="#NucleicAcidRegion"/>
-        <ru-meta:definition>Any properPartOf an EntireRNAMolecule that as only ribonucleotides as components.</ru-meta:definition>
+        <ru-meta:definition
+            >Any properPartOf an EntireRNAMolecule that as only ribonucleotides as components.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1801,12 +1843,6 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Ribonucleotide">
         <rdfs:label>ribonucleotide</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Nucleotide"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#condensesTo"/>
-                <owl:someValuesFrom rdf:resource="#RibonucleotideResidue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1814,7 +1850,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#RibonucleotideResidue -->
 
     <owl:Class rdf:about="#RibonucleotideResidue">
-        <rdfs:label>ribonucleotide residue</rdfs:label>
+        <rdfs:label
+            >ribonucleotide residue</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1871,7 +1908,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#SaccharideResidue -->
 
     <owl:Class rdf:about="#SaccharideResidue">
-        <rdfs:label>saccharide residue</rdfs:label>
+        <rdfs:label
+            >saccharide residue</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Residue"/>
     </owl:Class>
     
@@ -1882,7 +1920,8 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#Steroid">
         <rdfs:label>steroid</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Lipid"/>
-        <ru-meta:definition>Terpenoid lipid characterized by a carbon skeleton with four fused rings.</ru-meta:definition>
+        <ru-meta:definition
+            >Terpenoid lipid characterized by a carbon skeleton with four fused rings.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1893,7 +1932,8 @@ Old name: compound of collections</ru-meta:definition>
         <rdfs:label
             >structural group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#MolecularGroup"/>
-        <ru-meta:definition>Structural groups are specific constellations of atoms within molecules which are relevant for the classification of those compounds, e.g. Pentoses have a 5-C-Chain, Hexoses have a 6-C-Chain.</ru-meta:definition>
+        <ru-meta:definition
+            >Structural groups are specific constellations of atoms within molecules which are relevant for the classification of those compounds, e.g. Pentoses have a 5-C-Chain, Hexoses have a 6-C-Chain.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1930,7 +1970,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Thymin-1-yl_group -->
 
     <owl:Class rdf:about="#Thymin-1-yl_group">
-        <rdfs:label>thymin-1-yl group</rdfs:label>
+        <rdfs:label
+            >thymin-1-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
         <ru-meta:synonym>C5H6N2O2</ru-meta:synonym>
     </owl:Class>
@@ -1940,7 +1981,8 @@ Old name: compound of collections</ru-meta:definition>
     <!-- http://purl.org/biotop/1.0/chemtop.owl#Uracil-1-yl_group -->
 
     <owl:Class rdf:about="#Uracil-1-yl_group">
-        <rdfs:label>uracil-1-yl group</rdfs:label>
+        <rdfs:label
+            >uracil-1-yl group</rdfs:label>
         <rdfs:subClassOf rdf:resource="#PyrimidineGroup"/>
         <ru-meta:synonym>C4H4N2O2</ru-meta:synonym>
     </owl:Class>
@@ -1952,18 +1994,6 @@ Old name: compound of collections</ru-meta:definition>
     <owl:Class rdf:about="#WaterMolecule">
         <rdfs:label>water molecule</rdfs:label>
         <rdfs:subClassOf rdf:resource="#InorganicMolecule"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasComponentPart"/>
@@ -1981,6 +2011,18 @@ Old name: compound of collections</ru-meta:definition>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasProperPart"/>
                 <owl:someValuesFrom rdf:resource="#HydroxyGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#OxygenAtom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="#HydrogenAtom"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2015,5 +2057,5 @@ Old name: compound of collections</ru-meta:definition>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.974) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
 
