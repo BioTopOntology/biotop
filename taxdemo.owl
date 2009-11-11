@@ -7,25 +7,25 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY biotop "http://purl.org/biotop/1.0/biotop.owl#" >
-    <!ENTITY taxdemo "http://purl.org/biotop/1.0/taxdemo.owl#" >
+    <!ENTITY biotop "http://purl.org/biotop/biotop.owl#" >
+    <!ENTITY taxdemo "http://purl.org/biotop/taxdemo.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/biotop/1.0/taxdemo.owl#"
-     xml:base="http://purl.org/biotop/1.0/taxdemo.owl"
+<rdf:RDF xmlns="http://purl.org/biotop/taxdemo.owl#"
+     xml:base="http://purl.org/biotop/taxdemo.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:biotop="http://purl.org/biotop/1.0/biotop.owl#"
+     xmlns:biotop="http://purl.org/biotop/biotop.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:taxdemo="http://purl.org/biotop/1.0/taxdemo.owl#">
+     xmlns:taxdemo="http://purl.org/biotop/taxdemo.owl#">
     <owl:Ontology rdf:about="">
         <dc:identifier
-            >http://purl.org/biotop/1.0/taxdemo.owl</dc:identifier>
+            >http://purl.org/biotop/taxdemo.owl</dc:identifier>
         <dc:title>TaxDemo</dc:title>
         <dc:creator>Martin Boeker</dc:creator>
         <dc:source
@@ -41,7 +41,7 @@ Bioinformatics 2008 24(13):i313-i321; doi:10.1093/bioinformatics/btn158</dc:sour
         <dc:description
             >Demonstration ontology about representing biological taxa. 
 To be linked to BioTop</dc:description>
-        <owl:imports rdf:resource="http://purl.org/biotop/1.0/biotop.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/biotop.owl"/>
     </owl:Ontology>
     
 
@@ -75,13 +75,13 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasGrain -->
+    <!-- http://purl.org/biotop/biotop.owl#hasGrain -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasGrain"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#bearerOf -->
+    <!-- http://purl.org/biotop/biotop.owl#bearerOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;bearerOf"/>
     
@@ -98,7 +98,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Animal -->
+    <!-- http://purl.org/biotop/biotop.owl#Animal -->
 
     <owl:Class rdf:about="&biotop;Animal">
         <rdfs:subClassOf>
@@ -111,7 +111,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#ArchaebacterialCell -->
+    <!-- http://purl.org/biotop/biotop.owl#ArchaebacterialCell -->
 
     <owl:Class rdf:about="&biotop;ArchaebacterialCell">
         <owl:equivalentClass>
@@ -129,7 +129,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#BacterialCell -->
+    <!-- http://purl.org/biotop/biotop.owl#BacterialCell -->
 
     <owl:Class rdf:about="&biotop;BacterialCell">
         <owl:equivalentClass>
@@ -147,19 +147,19 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Cell -->
+    <!-- http://purl.org/biotop/biotop.owl#Cell -->
 
     <owl:Class rdf:about="&biotop;Cell"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Eukaryote -->
+    <!-- http://purl.org/biotop/biotop.owl#Eukaryote -->
 
     <owl:Class rdf:about="&biotop;Eukaryote"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Fungus -->
+    <!-- http://purl.org/biotop/biotop.owl#Fungus -->
 
     <owl:Class rdf:about="&biotop;Fungus">
         <owl:equivalentClass>
@@ -179,7 +179,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Human -->
+    <!-- http://purl.org/biotop/biotop.owl#Human -->
 
     <owl:Class rdf:about="&biotop;Human">
         <rdfs:subClassOf rdf:resource="&biotop;Animal"/>
@@ -189,13 +189,13 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Organism -->
+    <!-- http://purl.org/biotop/biotop.owl#Organism -->
 
     <owl:Class rdf:about="&biotop;Organism"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Plant -->
+    <!-- http://purl.org/biotop/biotop.owl#Plant -->
 
     <owl:Class rdf:about="&biotop;Plant">
         <owl:equivalentClass>
@@ -213,43 +213,43 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Population -->
+    <!-- http://purl.org/biotop/biotop.owl#Population -->
 
     <owl:Class rdf:about="&biotop;Population"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Prokaryote -->
+    <!-- http://purl.org/biotop/biotop.owl#Prokaryote -->
 
     <owl:Class rdf:about="&biotop;Prokaryote"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Protist -->
+    <!-- http://purl.org/biotop/biotop.owl#Protist -->
 
     <owl:Class rdf:about="&biotop;Protist"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#TaxonQuality -->
+    <!-- http://purl.org/biotop/biotop.owl#TaxonQuality -->
 
     <owl:Class rdf:about="&biotop;TaxonQuality"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Virus -->
+    <!-- http://purl.org/biotop/biotop.owl#Virus -->
 
     <owl:Class rdf:about="&biotop;Virus"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#YeastCell -->
+    <!-- http://purl.org/biotop/biotop.owl#YeastCell -->
 
     <owl:Class rdf:about="&biotop;YeastCell"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#AnimalCell -->
+    <!-- http://purl.org/biotop/taxdemo.owl#AnimalCell -->
 
     <owl:Class rdf:about="#AnimalCell">
         <rdfs:label>animal cell</rdfs:label>
@@ -268,7 +268,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#AnimalPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#AnimalPopulation -->
 
     <owl:Class rdf:about="#AnimalPopulation">
         <rdfs:label>animal population</rdfs:label>
@@ -304,7 +304,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Arthropod -->
+    <!-- http://purl.org/biotop/taxdemo.owl#Arthropod -->
 
     <owl:Class rdf:about="#Arthropod">
         <rdfs:label>arthropod</rdfs:label>
@@ -324,7 +324,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ArthropodPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ArthropodPopulation -->
 
     <owl:Class rdf:about="#ArthropodPopulation">
         <rdfs:label>arthropod Population</rdfs:label>
@@ -359,7 +359,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#AsianElephant -->
+    <!-- http://purl.org/biotop/taxdemo.owl#AsianElephant -->
 
     <owl:Class rdf:about="#AsianElephant">
         <rdfs:label>asian elephant</rdfs:label>
@@ -380,7 +380,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#AsianElephantPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#AsianElephantPopulation -->
 
     <owl:Class rdf:about="#AsianElephantPopulation">
         <rdfs:label>asian elephant population</rdfs:label>	
@@ -414,7 +414,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#BacteriaPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#BacteriaPopulation -->
 
     <owl:Class rdf:about="#BacteriaPopulation">
         <rdfs:label>bacteria elephant</rdfs:label>
@@ -447,7 +447,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#BakersYeastCell -->
+    <!-- http://purl.org/biotop/taxdemo.owl#BakersYeastCell -->
 
     <owl:Class rdf:about="#BakersYeastCell">
         <rdfs:label>bakers yeast cell</rdfs:label>
@@ -468,7 +468,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#BakersYeastPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#BakersYeastPopulation -->
 
     <owl:Class rdf:about="#BakersYeastPopulation">
         <rdfs:label>bakers yeast population</rdfs:label>
@@ -500,7 +500,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#CandidaAlbicansCell -->
+    <!-- http://purl.org/biotop/taxdemo.owl#CandidaAlbicansCell -->
 
     <owl:Class rdf:about="#CandidaAlbicansCell">
         <rdfs:label>candida albicans cell</rdfs:label>
@@ -521,7 +521,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#CandidaAlbicansPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#CandidaAlbicansPopulation -->
 
     <owl:Class rdf:about="#CandidaAlbicansPopulation">
         <rdfs:label>candida albicans population</rdfs:label>
@@ -552,7 +552,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Chimpanzee -->
+    <!-- http://purl.org/biotop/taxdemo.owl#Chimpanzee -->
 
     <owl:Class rdf:about="#Chimpanzee">
         <rdfs:label>chimpanzee</rdfs:label>
@@ -572,7 +572,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ChimpanzeePopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ChimpanzeePopulation -->
 
     <owl:Class rdf:about="#ChimpanzeePopulation">
         <rdfs:label>chimpanzee population</rdfs:label>
@@ -602,7 +602,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassGammaProteobacteriaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ClassGammaProteobacteriaQuality -->
 
     <owl:Class rdf:about="#ClassGammaProteobacteriaQuality">
         <rdfs:label>class gamma proteobacteria quality</rdfs:label>
@@ -612,7 +612,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassInsectaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ClassInsectaQuality -->
 
     <owl:Class rdf:about="#ClassInsectaQuality">
         <rdfs:label>class insecta quality</rdfs:label>
@@ -622,7 +622,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassMammaliaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ClassMammaliaQuality -->
 
     <owl:Class rdf:about="#ClassMammaliaQuality">
         <rdfs:label>class mammalia quality</rdfs:label>
@@ -632,7 +632,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ClassQuality -->
 
     <owl:Class rdf:about="#ClassQuality">
         <rdfs:label>class quality</rdfs:label>
@@ -643,7 +643,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ClassSaccharomycetesQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ClassSaccharomycetesQuality -->
 
     <owl:Class rdf:about="#ClassSaccharomycetesQuality">
         <rdfs:label>class saccharomycetes quality</rdfs:label>
@@ -653,7 +653,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#EscherichiaColiPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#EscherichiaColiPopulation -->
 
     <owl:Class rdf:about="-1">
         <rdfs:label>e coli population</rdfs:label>
@@ -682,7 +682,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Elephant -->
+    <!-- http://purl.org/biotop/taxdemo.owl#Elephant -->
 
     <owl:Class rdf:about="#Elephant">
         <rdfs:label>elephant</rdfs:label>
@@ -702,7 +702,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ElephantPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ElephantPopulation -->
 
     <owl:Class rdf:about="#ElephantPopulation">
         <rdfs:label>elephant population</rdfs:label>
@@ -730,7 +730,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#EscherichiaColiCell -->
+    <!-- http://purl.org/biotop/taxdemo.owl#EscherichiaColiCell -->
 
     <owl:Class rdf:about="#EscherichiaColiCell">
         <rdfs:label>escherichia coli cell</rdfs:label>
@@ -749,7 +749,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#EukaryotePopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#EukaryotePopulation -->
 
     <owl:Class rdf:about="#EukaryotePopulation">
         <rdfs:label>eukaryote population</rdfs:label>
@@ -776,7 +776,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyDrosophilidaeQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FamilyDrosophilidaeQuality -->
 
     <owl:Class rdf:about="#FamilyDrosophilidaeQuality">
         <rdfs:label>family drosophilidae quality</rdfs:label>
@@ -786,7 +786,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyElephantidaeQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FamilyElephantidaeQuality -->
 
     <owl:Class rdf:about="#FamilyElephantidaeQuality">
         <rdfs:label>family elephantidae quality</rdfs:label>
@@ -796,7 +796,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyEnterobacteriaceaeQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FamilyEnterobacteriaceaeQuality -->
 
     <owl:Class rdf:about="#FamilyEnterobacteriaceaeQuality">
         <rdfs:label>family enterobacteriaceae quality</rdfs:label>
@@ -806,7 +806,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyHominidaeQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FamilyHominidaeQuality -->
 
     <owl:Class rdf:about="#FamilyHominidaeQuality">
         <rdfs:label>family hominidae quality</rdfs:label>
@@ -816,7 +816,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilyQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FamilyQuality -->
 
     <owl:Class rdf:about="#FamilyQuality">
         <rdfs:label>family quality</rdfs:label>
@@ -827,7 +827,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FamilySaccharomycetaceaeQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FamilySaccharomycetaceaeQuality -->
 
     <owl:Class rdf:about="#FamilySaccharomycetaceaeQuality">
         <rdfs:label>family saccharomycetaceae quality</rdfs:label>
@@ -837,7 +837,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FruitFly -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FruitFly -->
 
     <owl:Class rdf:about="#FruitFly">
         <rdfs:label>fruit fly</rdfs:label>
@@ -858,7 +858,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FruitFlyPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FruitFlyPopulation -->
 
     <owl:Class rdf:about="#FruitFlyPopulation">
         <rdfs:label>fruit fly population</rdfs:label>
@@ -884,7 +884,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#FungusPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#FungusPopulation -->
 
     <owl:Class rdf:about="#FungusPopulation">
         <rdfs:label>fungus population</rdfs:label>
@@ -909,7 +909,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusCandidaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GenusCandidaQuality -->
 
     <owl:Class rdf:about="#GenusCandidaQuality">
         <rdfs:label>genus candida quality</rdfs:label>
@@ -919,7 +919,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusDrosophilaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GenusDrosophilaQuality -->
 
     <owl:Class rdf:about="#GenusDrosophilaQuality">
         <rdfs:label>genus drosophila quality</rdfs:label>
@@ -929,7 +929,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusElephasQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GenusElephasQuality -->
 
     <owl:Class rdf:about="#GenusElephasQuality">
         <rdfs:label>genus elephas quality</rdfs:label>
@@ -939,7 +939,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusEscherichiaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GenusEscherichiaQuality -->
 
     <owl:Class rdf:about="#GenusEscherichiaQuality">
         <rdfs:label>genus escherichia quality</rdfs:label>
@@ -949,7 +949,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusHomoQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GenusHomoQuality -->
 
     <owl:Class rdf:about="#GenusHomoQuality">
         <rdfs:label>genus homo quality</rdfs:label>
@@ -959,7 +959,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusPanQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GenusPanQuality -->
 
     <owl:Class rdf:about="#GenusPanQuality">
         <rdfs:label>genus pan quality</rdfs:label>
@@ -969,7 +969,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GenusQuality -->
 
     <owl:Class rdf:about="#GenusQuality">
         <rdfs:label>genus quality</rdfs:label>
@@ -980,7 +980,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GenusSaccharomycesQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GenusSaccharomycesQuality -->
 
     <owl:Class rdf:about="#GenusSaccharomycesQuality">
         <rdfs:label>genus saccharomyces quality</rdfs:label>
@@ -990,7 +990,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GreatApe -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GreatApe -->
 
     <owl:Class rdf:about="#GreatApe">
         <rdfs:label>great ape</rdfs:label>
@@ -1010,7 +1010,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#GreatApePopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#GreatApePopulation -->
 
     <owl:Class rdf:about="#GreatApePopulation">
         <rdfs:label>great ape population</rdfs:label>
@@ -1034,7 +1034,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#HumanLeukocyte -->
+    <!-- http://purl.org/biotop/taxdemo.owl#HumanLeukocyte -->
 
     <owl:Class rdf:about="#HumanLeukocyte">
         <rdfs:label>human leukocyte</rdfs:label>
@@ -1053,7 +1053,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#HumanPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#HumanPopulation -->
 
     <owl:Class rdf:about="#HumanPopulation">
         <rdfs:label>human population</rdfs:label>
@@ -1076,7 +1076,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Insect -->
+    <!-- http://purl.org/biotop/taxdemo.owl#Insect -->
 
     <owl:Class rdf:about="#Insect">
         <rdfs:label>insect</rdfs:label>
@@ -1096,7 +1096,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#InsectPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#InsectPopulation -->
 
     <owl:Class rdf:about="#InsectPopulation">
         <rdfs:label>insect population</rdfs:label>
@@ -1118,7 +1118,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomAnimaliaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomAnimaliaQuality -->
 
     <owl:Class rdf:about="#KingdomAnimaliaQuality">
         <rdfs:label>kingdom animalia quality</rdfs:label>
@@ -1127,7 +1127,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomArchaeaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomArchaeaQuality -->
 
     <owl:Class rdf:about="#KingdomArchaeaQuality">
         <rdfs:label>kingdom archaea quality</rdfs:label>
@@ -1136,7 +1136,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomBacteriaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomBacteriaQuality -->
 
     <owl:Class rdf:about="#KingdomBacteriaQuality">
         <rdfs:label>kingdom bacteria quality</rdfs:label>
@@ -1145,7 +1145,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomChromistaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomChromistaQuality -->
 
     <owl:Class rdf:about="#KingdomChromistaQuality">
         <rdfs:label>kingdom chromista quality</rdfs:label>
@@ -1154,7 +1154,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomFungiQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomFungiQuality -->
 
     <owl:Class rdf:about="#KingdomFungiQuality">
         <rdfs:label>kingdom fungi quality</rdfs:label>
@@ -1163,7 +1163,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomPlantaeQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomPlantaeQuality -->
 
     <owl:Class rdf:about="#KingdomPlantaeQuality">
         <rdfs:label>kingdom plantae quality</rdfs:label>
@@ -1172,7 +1172,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomProtozoaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomProtozoaQuality -->
 
     <owl:Class rdf:about="#KingdomProtozoaQuality">
         <rdfs:label>kingdom protozoa quality</rdfs:label>
@@ -1181,7 +1181,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomQuality -->
 
     <owl:Class rdf:about="#KingdomQuality">
         <rdfs:label>kingdom quality</rdfs:label>
@@ -1192,7 +1192,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#KingdomVirusesQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#KingdomVirusesQuality -->
 
     <owl:Class rdf:about="#KingdomVirusesQuality">
         <rdfs:label>kingdom viruses quality</rdfs:label>
@@ -1201,7 +1201,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Leukocyte -->
+    <!-- http://purl.org/biotop/taxdemo.owl#Leukocyte -->
 
     <owl:Class rdf:about="#Leukocyte">
         <rdfs:label>leukocyte</rdfs:label>
@@ -1210,7 +1210,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Mammal -->
+    <!-- http://purl.org/biotop/taxdemo.owl#Mammal -->
 
     <owl:Class rdf:about="#Mammal">
         <rdfs:label>mammal</rdfs:label>
@@ -1230,7 +1230,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#MammalPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#MammalPopulation -->
 
     <owl:Class rdf:about="#MammalPopulation">
         <rdfs:label>mammal population</rdfs:label>
@@ -1251,7 +1251,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderDipteraQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#OrderDipteraQuality -->
 
     <owl:Class rdf:about="#OrderDipteraQuality">
         <rdfs:label>order diptera quality</rdfs:label>
@@ -1261,7 +1261,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderEnterobacterialesQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#OrderEnterobacterialesQuality -->
 
     <owl:Class rdf:about="#OrderEnterobacterialesQuality">
         <rdfs:label>order enterobacteriales quality</rdfs:label>
@@ -1271,7 +1271,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderPrimatesQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#OrderPrimatesQuality -->
 
     <owl:Class rdf:about="#OrderPrimatesQuality">
         <rdfs:label>order primates quality</rdfs:label>
@@ -1281,7 +1281,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderProboscideaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#OrderProboscideaQuality -->
 
     <owl:Class rdf:about="#OrderProboscideaQuality">
         <rdfs:label>order proboscidea quality</rdfs:label>
@@ -1291,7 +1291,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#OrderQuality -->
 
     <owl:Class rdf:about="#OrderQuality">
         <rdfs:label>order quality</rdfs:label>
@@ -1302,7 +1302,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#OrderSaccharomycetalesQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#OrderSaccharomycetalesQuality -->
 
     <owl:Class rdf:about="#OrderSaccharomycetalesQuality">
         <rdfs:label>order saccharomycetales quality</rdfs:label>
@@ -1312,7 +1312,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumArthropodaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#PhylumArthropodaQuality -->
 
     <owl:Class rdf:about="#PhylumArthropodaQuality">
         <rdfs:label>phylum arthropoda quality</rdfs:label>
@@ -1322,7 +1322,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumAscomycotaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#PhylumAscomycotaQuality -->
 
     <owl:Class rdf:about="#PhylumAscomycotaQuality">
         <rdfs:label>phylum ascomycota quality</rdfs:label>
@@ -1332,7 +1332,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumChordataQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#PhylumChordataQuality -->
 
     <owl:Class rdf:about="#PhylumChordataQuality">
         <rdfs:label>phylum chordata quality</rdfs:label>
@@ -1342,7 +1342,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumProteobacteriaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#PhylumProteobacteriaQuality -->
 
     <owl:Class rdf:about="#PhylumProteobacteriaQuality">
         <rdfs:label>phylum proteobacteria quality</rdfs:label>
@@ -1352,7 +1352,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PhylumQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#PhylumQuality -->
 
     <owl:Class rdf:about="#PhylumQuality">
         <rdfs:label>phylum quality</rdfs:label>
@@ -1363,7 +1363,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PlantPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#PlantPopulation -->
 
     <owl:Class rdf:about="#PlantPopulation">
         <rdfs:label>plant population</rdfs:label>
@@ -1383,7 +1383,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Primate -->
+    <!-- http://purl.org/biotop/taxdemo.owl#Primate -->
 
     <owl:Class rdf:about="#Primate">
         <rdfs:label>primate</rdfs:label>
@@ -1403,7 +1403,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#PrimatePopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#PrimatePopulation -->
 
     <owl:Class rdf:about="#PrimatePopulation">
         <rdfs:label>primate population</rdfs:label>
@@ -1422,7 +1422,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#ProtistPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#ProtistPopulation -->
 
     <owl:Class rdf:about="#ProtistPopulation">
         <rdfs:label>protist population</rdfs:label>
@@ -1440,7 +1440,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesCandidaAlbicansQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SpeciesCandidaAlbicansQuality -->
 
     <owl:Class rdf:about="#SpeciesCandidaAlbicansQuality">
         <rdfs:label>species candida albicans quality</rdfs:label>
@@ -1450,7 +1450,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesDrosophilaMelanogasterQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SpeciesDrosophilaMelanogasterQuality -->
 
     <owl:Class rdf:about="#SpeciesDrosophilaMelanogasterQuality">
         <rdfs:label>species drosophila melanogaster quality</rdfs:label>
@@ -1460,7 +1460,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesElephasMaximusQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SpeciesElephasMaximusQuality -->
 
     <owl:Class rdf:about="#SpeciesElephasMaximusQuality">
         <rdfs:label>species elephas maximus quality</rdfs:label>
@@ -1470,7 +1470,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesEscherichiaColiQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SpeciesEscherichiaColiQuality -->
 
     <owl:Class rdf:about="#SpeciesEscherichiaColiQuality">
         <rdfs:label>species escherichia coli quality</rdfs:label>
@@ -1480,7 +1480,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesHomoSapiensQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SpeciesHomoSapiensQuality -->
 
     <owl:Class rdf:about="#SpeciesHomoSapiensQuality">
         <rdfs:label>species homo sapiens quality</rdfs:label>
@@ -1490,7 +1490,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SpeciesQuality -->
 
     <owl:Class rdf:about="#SpeciesQuality">
         <rdfs:label>species quality</rdfs:label>
@@ -1501,7 +1501,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesSaccharomycesCerevisiaeQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SpeciesSaccharomycesCerevisiaeQuality -->
 
     <owl:Class rdf:about="#SpeciesSaccharomycesCerevisiaeQuality">
         <rdfs:label>species saccharomyces cerevisiae quality</rdfs:label>
@@ -1511,7 +1511,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SpeciesSimiaTroglodytesQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SpeciesSimiaTroglodytesQuality -->
 
     <owl:Class rdf:about="#SpeciesSimiaTroglodytesQuality">
         <rdfs:label>species simia troglodytes quality</rdfs:label>
@@ -1521,7 +1521,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubclassQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SubclassQuality -->
 
     <owl:Class rdf:about="#SubclassQuality">
         <rdfs:label>subclass quality</rdfs:label>
@@ -1532,7 +1532,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubfamilyDrosophilinaeQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SubfamilyDrosophilinaeQuality -->
 
     <owl:Class rdf:about="#SubfamilyDrosophilinaeQuality">
         <rdfs:label>subfamily drosophilinae quality</rdfs:label>
@@ -1542,7 +1542,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubfamilyQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SubfamilyQuality -->
 
     <owl:Class rdf:about="#SubfamilyQuality">
         <rdfs:label>subfamily quality</rdfs:label>
@@ -1553,7 +1553,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubkingdomQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SubkingdomQuality -->
 
     <owl:Class rdf:about="#SubkingdomQuality">
         <rdfs:label>subkingdom quality</rdfs:label>
@@ -1564,7 +1564,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SuborderQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SuborderQuality -->
 
     <owl:Class rdf:about="#SuborderQuality">
         <rdfs:label>suborder quality</rdfs:label>
@@ -1575,7 +1575,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubphylumQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SubphylumQuality -->
 
     <owl:Class rdf:about="#SubphylumQuality">
         <rdfs:label>subphylum quality</rdfs:label>
@@ -1586,7 +1586,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubphylumSaccharomycotinaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SubphylumSaccharomycotinaQuality -->
 
     <owl:Class rdf:about="#SubphylumSaccharomycotinaQuality">
         <rdfs:label>subphylum saccharomycotina quality</rdfs:label>
@@ -1596,7 +1596,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SubphylumVertebrataQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SubphylumVertebrataQuality -->
 
     <owl:Class rdf:about="#SubphylumVertebrataQuality">
         <rdfs:label>subphylum vertebrata quality</rdfs:label>
@@ -1606,7 +1606,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SuperfamilyElephantoideaQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SuperfamilyElephantoideaQuality -->
 
     <owl:Class rdf:about="#SuperfamilyElephantoideaQuality">
         <rdfs:label>superfamily elephantoidea quality</rdfs:label>
@@ -1616,7 +1616,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#SuperfamilyQuality -->
+    <!-- http://purl.org/biotop/taxdemo.owl#SuperfamilyQuality -->
 
     <owl:Class rdf:about="#SuperfamilyQuality">
         <rdfs:label>superfamily quality</rdfs:label>
@@ -1627,7 +1627,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#Vertebrate -->
+    <!-- http://purl.org/biotop/taxdemo.owl#Vertebrate -->
 
     <owl:Class rdf:about="#Vertebrate">
         <rdfs:label>vertebrate</rdfs:label>
@@ -1647,7 +1647,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#VertebratePopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#VertebratePopulation -->
 
     <owl:Class rdf:about="#VertebratePopulation">
         <rdfs:label>vertebrate population</rdfs:label>
@@ -1664,7 +1664,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#VirusPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#VirusPopulation -->
 
     <owl:Class rdf:about="#VirusPopulation">
         <rdfs:label>virus population</rdfs:label>
@@ -1680,7 +1680,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#YeastPopulation -->
+    <!-- http://purl.org/biotop/taxdemo.owl#YeastPopulation -->
 
     <owl:Class rdf:about="#YeastPopulation">
         <rdfs:label>yeast population</rdfs:label>
@@ -1695,7 +1695,7 @@ To be linked to BioTop</dc:description>
     
 
 
-    <!-- http://purl.org/biotop/1.0/taxdemo.owl#_testOrganism -->
+    <!-- http://purl.org/biotop/taxdemo.owl#_testOrganism -->
 
     <owl:Class rdf:about="#_testOrganism">
         <rdfs:label>_test organism</rdfs:label>

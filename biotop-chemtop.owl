@@ -7,24 +7,24 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY biotop "http://purl.org/biotop/1.0/biotop.owl#" >
-    <!ENTITY chemtop "http://purl.org/biotop/1.0/chemtop.owl#" >
+    <!ENTITY biotop "http://purl.org/biotop/biotop.owl#" >
+    <!ENTITY chemtop "http://purl.org/biotop/chemtop.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY biotop-chemtop "http://purl.org/biotop/1.0/biotop-chemtop.owl#" >
+    <!ENTITY biotop-chemtop "http://purl.org/biotop/biotop-chemtop.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/biotop/1.0/biotop-chemtop.owl#"
-     xml:base="http://purl.org/biotop/1.0/biotop-chemtop.owl"
+<rdf:RDF xmlns="http://purl.org/biotop/biotop-chemtop.owl#"
+     xml:base="http://purl.org/biotop/biotop-chemtop.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:biotop="http://purl.org/biotop/1.0/biotop.owl#"
+     xmlns:biotop="http://purl.org/biotop/biotop.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:chemtop="http://purl.org/biotop/1.0/chemtop.owl#"
+     xmlns:chemtop="http://purl.org/biotop/chemtop.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:biotop-chemtop="http://purl.org/biotop/1.0/biotop-chemtop.owl#">
+     xmlns:biotop-chemtop="http://purl.org/biotop/biotop-chemtop.owl#">
     <owl:Ontology rdf:about="">
         <dc:format
             >application/rdf+xml</dc:format>
@@ -40,7 +40,7 @@
 March 11, 2009 by Stefan Schulz</owl:versionInfo>
         <dc:type></dc:type>
         <dc:identifier
-            >http://purl.org/biotop/1.0/biotop.owl</dc:identifier>
+            >http://purl.org/biotop/biotop.owl</dc:identifier>
         <dc:creator
             >Elena Beisswanger</dc:creator>
         <dc:creator>Stefan Schulz</dc:creator>
@@ -48,8 +48,8 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
             >Institute of Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
         <dc:source
             >Stefan Schulz, Elena Beisswanger, Joachim Wermter and Udo Hahn: &quot;Towards an Upper Level Ontology for Molecular Biology&quot; (in Proceedings of the International Conference on Formal Ontology in Information Systems (FOIS 2006), Baltimore, USA, November 2006)</dc:source>
-        <owl:imports rdf:resource="http://purl.org/biotop/1.0/biotop.owl"/>
-        <owl:imports rdf:resource="http://purl.org/biotop/1.0/chemtop.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/biotop.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/chemtop.owl"/>
     </owl:Ontology>
     
 
@@ -84,7 +84,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#componentPartOf -->
+    <!-- http://purl.org/biotop/biotop.owl#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;componentPartOf">
         <owl:equivalentProperty rdf:resource="&chemtop;componentPartOf"/>
@@ -92,7 +92,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#granularPartOf -->
+    <!-- http://purl.org/biotop/biotop.owl#granularPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;granularPartOf">
         <owl:equivalentProperty rdf:resource="&chemtop;granularPartOf"/>
@@ -100,7 +100,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasComponentPart -->
+    <!-- http://purl.org/biotop/biotop.owl#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasComponentPart">
         <owl:equivalentProperty rdf:resource="&chemtop;hasComponentPart"/>
@@ -108,7 +108,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasGranularPart -->
+    <!-- http://purl.org/biotop/biotop.owl#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasGranularPart">
         <owl:equivalentProperty rdf:resource="&chemtop;hasGranularPart"/>
@@ -116,7 +116,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasPhysicalPart -->
+    <!-- http://purl.org/biotop/biotop.owl#hasPhysicalPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasPhysicalPart">
         <owl:equivalentProperty rdf:resource="&chemtop;hasPart"/>
@@ -124,7 +124,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#hasProperPhysicalPart -->
+    <!-- http://purl.org/biotop/biotop.owl#hasProperPhysicalPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasProperPhysicalPart">
         <owl:equivalentProperty rdf:resource="&chemtop;hasProperPart"/>
@@ -132,7 +132,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#physicalPartOf -->
+    <!-- http://purl.org/biotop/biotop.owl#physicalPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;physicalPartOf">
         <owl:equivalentProperty rdf:resource="&chemtop;partOf"/>
@@ -140,7 +140,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#physicallyBoundedBy -->
+    <!-- http://purl.org/biotop/biotop.owl#physicallyBoundedBy -->
 
     <owl:ObjectProperty rdf:about="&biotop;physicallyBoundedBy">
         <owl:equivalentProperty rdf:resource="&chemtop;boundedBy"/>
@@ -148,7 +148,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#physicallyBounds -->
+    <!-- http://purl.org/biotop/biotop.owl#physicallyBounds -->
 
     <owl:ObjectProperty rdf:about="&biotop;physicallyBounds">
         <owl:equivalentProperty rdf:resource="&chemtop;boundaryOf"/>
@@ -156,7 +156,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#properPhysicalPartOf -->
+    <!-- http://purl.org/biotop/biotop.owl#properPhysicalPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;properPhysicalPartOf">
         <owl:equivalentProperty rdf:resource="&chemtop;properPartOf"/>
@@ -164,61 +164,61 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#boundaryOf -->
+    <!-- http://purl.org/biotop/chemtop.owl#boundaryOf -->
 
     <owl:ObjectProperty rdf:about="&chemtop;boundaryOf"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#boundedBy -->
+    <!-- http://purl.org/biotop/chemtop.owl#boundedBy -->
 
     <owl:ObjectProperty rdf:about="&chemtop;boundedBy"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#componentPartOf -->
+    <!-- http://purl.org/biotop/chemtop.owl#componentPartOf -->
 
     <owl:ObjectProperty rdf:about="&chemtop;componentPartOf"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#granularPartOf -->
+    <!-- http://purl.org/biotop/chemtop.owl#granularPartOf -->
 
     <owl:ObjectProperty rdf:about="&chemtop;granularPartOf"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#hasComponentPart -->
+    <!-- http://purl.org/biotop/chemtop.owl#hasComponentPart -->
 
     <owl:ObjectProperty rdf:about="&chemtop;hasComponentPart"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#hasGranularPart -->
+    <!-- http://purl.org/biotop/chemtop.owl#hasGranularPart -->
 
     <owl:ObjectProperty rdf:about="&chemtop;hasGranularPart"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#hasPart -->
+    <!-- http://purl.org/biotop/chemtop.owl#hasPart -->
 
     <owl:ObjectProperty rdf:about="&chemtop;hasPart"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#hasProperPart -->
+    <!-- http://purl.org/biotop/chemtop.owl#hasProperPart -->
 
     <owl:ObjectProperty rdf:about="&chemtop;hasProperPart"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#partOf -->
+    <!-- http://purl.org/biotop/chemtop.owl#partOf -->
 
     <owl:ObjectProperty rdf:about="&chemtop;partOf"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#properPartOf -->
+    <!-- http://purl.org/biotop/chemtop.owl#properPartOf -->
 
     <owl:ObjectProperty rdf:about="&chemtop;properPartOf"/>
     
@@ -235,7 +235,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-chemtop.owl#ImmaterialPhysicalEntity -->
+    <!-- http://purl.org/biotop/biotop-chemtop.owl#ImmaterialPhysicalEntity -->
 
     <owl:Class rdf:about="#ImmaterialPhysicalEntity">
         <owl:equivalentClass rdf:resource="&chemtop;PhysicalBoundary"/>
@@ -243,7 +243,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop-chemtop.owl#MaterialEntity -->
+    <!-- http://purl.org/biotop/biotop-chemtop.owl#MaterialEntity -->
 
     <owl:Class rdf:about="#MaterialEntity">
         <owl:equivalentClass rdf:resource="&chemtop;MaterialEntity"/>
@@ -251,7 +251,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#AminoAcidMoleculeOrResidue -->
+    <!-- http://purl.org/biotop/biotop.owl#AminoAcidMoleculeOrResidue -->
 
     <owl:Class rdf:about="&biotop;AminoAcidMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;AminoAcidMonomer"/>
@@ -259,7 +259,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Atom -->
+    <!-- http://purl.org/biotop/biotop.owl#Atom -->
 
     <owl:Class rdf:about="&biotop;Atom">
         <owl:equivalentClass rdf:resource="&chemtop;Atom"/>
@@ -267,7 +267,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#CarbohydrateMoleculeOrResidue -->
+    <!-- http://purl.org/biotop/biotop.owl#CarbohydrateMoleculeOrResidue -->
 
     <owl:Class rdf:about="&biotop;CarbohydrateMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;Carbohydrate"/>
@@ -275,7 +275,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#CollectiveMaterialEntity -->
+    <!-- http://purl.org/biotop/biotop.owl#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="&biotop;CollectiveMaterialEntity">
         <owl:equivalentClass rdf:resource="&chemtop;CollectiveMaterialEntity"/>
@@ -283,7 +283,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#CompoundOfCollectiveMaterialEntities -->
+    <!-- http://purl.org/biotop/biotop.owl#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="&biotop;CompoundOfCollectiveMaterialEntities">
         <owl:equivalentClass rdf:resource="&chemtop;CompoundOfCollectiveMaterialEntities"/>
@@ -291,7 +291,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#DNAChain -->
+    <!-- http://purl.org/biotop/biotop.owl#DNAChain -->
 
     <owl:Class rdf:about="&biotop;DNAChain">
         <owl:equivalentClass rdf:resource="&chemtop;DNA"/>
@@ -299,7 +299,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Eicosanoid -->
+    <!-- http://purl.org/biotop/biotop.owl#Eicosanoid -->
 
     <owl:Class rdf:about="&biotop;Eicosanoid">
         <owl:equivalentClass rdf:resource="&chemtop;Eicosanoid"/>
@@ -307,7 +307,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Electron -->
+    <!-- http://purl.org/biotop/biotop.owl#Electron -->
 
     <owl:Class rdf:about="&biotop;Electron">
         <owl:equivalentClass rdf:resource="&chemtop;Electron"/>
@@ -315,7 +315,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#EntireMolecularEntity -->
+    <!-- http://purl.org/biotop/biotop.owl#EntireMolecularEntity -->
 
     <owl:Class rdf:about="&biotop;EntireMolecularEntity">
         <owl:equivalentClass rdf:resource="&chemtop;EntireMolecularEntity"/>
@@ -323,7 +323,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#EntireNucleicAcidMolecule -->
+    <!-- http://purl.org/biotop/biotop.owl#EntireNucleicAcidMolecule -->
 
     <owl:Class rdf:about="&biotop;EntireNucleicAcidMolecule">
         <owl:equivalentClass rdf:resource="&chemtop;EntireNucleicAcidMolecule"/>
@@ -331,7 +331,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#EntireProteinMolecule -->
+    <!-- http://purl.org/biotop/biotop.owl#EntireProteinMolecule -->
 
     <owl:Class rdf:about="&biotop;EntireProteinMolecule">
         <owl:equivalentClass rdf:resource="&chemtop;EntireProteinMolecule"/>
@@ -339,7 +339,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#FattyAcidMoleculeOrResidue -->
+    <!-- http://purl.org/biotop/biotop.owl#FattyAcidMoleculeOrResidue -->
 
     <owl:Class rdf:about="&biotop;FattyAcidMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;FattyAcid"/>
@@ -347,7 +347,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Gene -->
+    <!-- http://purl.org/biotop/biotop.owl#Gene -->
 
     <owl:Class rdf:about="&biotop;Gene">
         <owl:equivalentClass rdf:resource="&chemtop;Gene"/>
@@ -355,7 +355,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#GeneRegion -->
+    <!-- http://purl.org/biotop/biotop.owl#GeneRegion -->
 
     <owl:Class rdf:about="&biotop;GeneRegion">
         <owl:equivalentClass rdf:resource="&chemtop;GeneRegion"/>
@@ -363,7 +363,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#HeterocyclicBaseMoleculeOrResidue -->
+    <!-- http://purl.org/biotop/biotop.owl#HeterocyclicBaseMoleculeOrResidue -->
 
     <owl:Class rdf:about="&biotop;HeterocyclicBaseMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;HeterocyclicBase"/>
@@ -371,7 +371,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#InorganicMolecularEntity -->
+    <!-- http://purl.org/biotop/biotop.owl#InorganicMolecularEntity -->
 
     <owl:Class rdf:about="&biotop;InorganicMolecularEntity">
         <owl:equivalentClass rdf:resource="&chemtop;InorganicMolecularEntity"/>
@@ -379,7 +379,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#LipidMoleculeOrResidue -->
+    <!-- http://purl.org/biotop/biotop.owl#LipidMoleculeOrResidue -->
 
     <owl:Class rdf:about="&biotop;LipidMoleculeOrResidue">
         <owl:equivalentClass rdf:resource="&chemtop;Lipid"/>
@@ -387,7 +387,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#MaterialEntity -->
+    <!-- http://purl.org/biotop/biotop.owl#MaterialEntity -->
 
     <owl:Class rdf:about="&biotop;MaterialEntity">
         <owl:equivalentClass rdf:resource="&chemtop;MaterialEntity"/>
@@ -395,7 +395,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#MonoMolecularEntity -->
+    <!-- http://purl.org/biotop/biotop.owl#MonoMolecularEntity -->
 
     <owl:Class rdf:about="&biotop;MonoMolecularEntity">
         <owl:equivalentClass rdf:resource="&chemtop;MonoMolecularEntity"/>
@@ -403,7 +403,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Monomer -->
+    <!-- http://purl.org/biotop/biotop.owl#Monomer -->
 
     <owl:Class rdf:about="&biotop;Monomer">
         <owl:equivalentClass rdf:resource="&chemtop;Monomer"/>
@@ -411,7 +411,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Neutron -->
+    <!-- http://purl.org/biotop/biotop.owl#Neutron -->
 
     <owl:Class rdf:about="&biotop;Neutron">
         <owl:equivalentClass rdf:resource="&chemtop;Neutron"/>
@@ -419,7 +419,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#NonSteroidLipid -->
+    <!-- http://purl.org/biotop/biotop.owl#NonSteroidLipid -->
 
     <owl:Class rdf:about="&biotop;NonSteroidLipid">
         <owl:equivalentClass rdf:resource="&chemtop;NonSteroidLipid"/>
@@ -427,7 +427,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcidRegion -->
+    <!-- http://purl.org/biotop/biotop.owl#NucleicAcidRegion -->
 
     <owl:Class rdf:about="&biotop;NucleicAcidRegion">
         <owl:equivalentClass rdf:resource="&chemtop;NucleicAcidRegion"/>
@@ -435,7 +435,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleicAcidStructure -->
+    <!-- http://purl.org/biotop/biotop.owl#NucleicAcidStructure -->
 
     <owl:Class rdf:about="&biotop;NucleicAcidStructure">
         <owl:equivalentClass rdf:resource="&chemtop;NucleicAcid"/>
@@ -443,7 +443,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleosideMolecule -->
+    <!-- http://purl.org/biotop/biotop.owl#NucleosideMolecule -->
 
     <owl:Class rdf:about="&biotop;NucleosideMolecule">
         <owl:equivalentClass rdf:resource="&chemtop;Nucleoside"/>
@@ -451,7 +451,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#NucleotideMolecule -->
+    <!-- http://purl.org/biotop/biotop.owl#NucleotideMolecule -->
 
     <owl:Class rdf:about="&biotop;NucleotideMolecule">
         <owl:equivalentClass rdf:resource="&chemtop;Nucleotide"/>
@@ -459,7 +459,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#OligoOrPolymer -->
+    <!-- http://purl.org/biotop/biotop.owl#OligoOrPolymer -->
 
     <owl:Class rdf:about="&biotop;OligoOrPolymer">
         <owl:equivalentClass rdf:resource="&chemtop;OligoOrPolymer"/>
@@ -467,7 +467,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#OrganicMolecularEntity -->
+    <!-- http://purl.org/biotop/biotop.owl#OrganicMolecularEntity -->
 
     <owl:Class rdf:about="&biotop;OrganicMolecularEntity">
         <owl:equivalentClass rdf:resource="&chemtop;OrganicMolecularEntity"/>
@@ -475,7 +475,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#PeptideStructure -->
+    <!-- http://purl.org/biotop/biotop.owl#PeptideStructure -->
 
     <owl:Class rdf:about="&biotop;PeptideStructure">
         <owl:equivalentClass rdf:resource="&chemtop;Peptide"/>
@@ -483,7 +483,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Phosphate -->
+    <!-- http://purl.org/biotop/biotop.owl#Phosphate -->
 
     <owl:Class rdf:about="&biotop;Phosphate">
         <owl:equivalentClass rdf:resource="&chemtop;Phosphate"/>
@@ -491,7 +491,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#PortionOfHeterogenousLiquid -->
+    <!-- http://purl.org/biotop/biotop.owl#PortionOfHeterogenousLiquid -->
 
     <owl:Class rdf:about="&biotop;PortionOfHeterogenousLiquid">
         <owl:equivalentClass rdf:resource="&chemtop;PortionOfHeterogenousLiquid"/>
@@ -499,7 +499,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#PortionOfHeterogenousSolid -->
+    <!-- http://purl.org/biotop/biotop.owl#PortionOfHeterogenousSolid -->
 
     <owl:Class rdf:about="&biotop;PortionOfHeterogenousSolid">
         <owl:equivalentClass rdf:resource="&chemtop;PortionOfHeterogenousSolid"/>
@@ -507,7 +507,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#PortionOfHomogenousMatter -->
+    <!-- http://purl.org/biotop/biotop.owl#PortionOfHomogenousMatter -->
 
     <owl:Class rdf:about="&biotop;PortionOfHomogenousMatter">
         <owl:equivalentClass rdf:resource="&chemtop;PortionOfHomogenousMatter"/>
@@ -515,7 +515,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#ProteinDomain -->
+    <!-- http://purl.org/biotop/biotop.owl#ProteinDomain -->
 
     <owl:Class rdf:about="&biotop;ProteinDomain">
         <owl:equivalentClass rdf:resource="&chemtop;ProteinDomain"/>
@@ -523,7 +523,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#ProteinSubstructure -->
+    <!-- http://purl.org/biotop/biotop.owl#ProteinSubstructure -->
 
     <owl:Class rdf:about="&biotop;ProteinSubstructure">
         <owl:equivalentClass rdf:resource="&chemtop;ProteinSubstructure"/>
@@ -531,7 +531,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#ProteinSubunit -->
+    <!-- http://purl.org/biotop/biotop.owl#ProteinSubunit -->
 
     <owl:Class rdf:about="&biotop;ProteinSubunit">
         <owl:equivalentClass rdf:resource="&chemtop;ProteinSubunit"/>
@@ -539,7 +539,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#RNAChain -->
+    <!-- http://purl.org/biotop/biotop.owl#RNAChain -->
 
     <owl:Class rdf:about="&biotop;RNAChain">
         <owl:equivalentClass rdf:resource="&chemtop;RNA"/>
@@ -547,7 +547,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#Steroid -->
+    <!-- http://purl.org/biotop/biotop.owl#Steroid -->
 
     <owl:Class rdf:about="&biotop;Steroid">
         <owl:equivalentClass rdf:resource="&chemtop;Steroid"/>
@@ -555,7 +555,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#SubatomicParticle -->
+    <!-- http://purl.org/biotop/biotop.owl#SubatomicParticle -->
 
     <owl:Class rdf:about="&biotop;SubatomicParticle">
         <owl:equivalentClass rdf:resource="&chemtop;SubatomicParticle"/>
@@ -563,7 +563,7 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/biotop.owl#WaterMolecule -->
+    <!-- http://purl.org/biotop/biotop.owl#WaterMolecule -->
 
     <owl:Class rdf:about="&biotop;WaterMolecule">
         <owl:equivalentClass rdf:resource="&chemtop;WaterMolecule"/>
@@ -571,247 +571,247 @@ March 11, 2009 by Stefan Schulz</owl:versionInfo>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#AminoAcidMonomer -->
+    <!-- http://purl.org/biotop/chemtop.owl#AminoAcidMonomer -->
 
     <owl:Class rdf:about="&chemtop;AminoAcidMonomer"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Atom -->
+    <!-- http://purl.org/biotop/chemtop.owl#Atom -->
 
     <owl:Class rdf:about="&chemtop;Atom"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Carbohydrate -->
+    <!-- http://purl.org/biotop/chemtop.owl#Carbohydrate -->
 
     <owl:Class rdf:about="&chemtop;Carbohydrate"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#CollectiveMaterialEntity -->
+    <!-- http://purl.org/biotop/chemtop.owl#CollectiveMaterialEntity -->
 
     <owl:Class rdf:about="&chemtop;CollectiveMaterialEntity"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#CompoundOfCollectiveMaterialEntities -->
+    <!-- http://purl.org/biotop/chemtop.owl#CompoundOfCollectiveMaterialEntities -->
 
     <owl:Class rdf:about="&chemtop;CompoundOfCollectiveMaterialEntities"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#DNA -->
+    <!-- http://purl.org/biotop/chemtop.owl#DNA -->
 
     <owl:Class rdf:about="&chemtop;DNA"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Eicosanoid -->
+    <!-- http://purl.org/biotop/chemtop.owl#Eicosanoid -->
 
     <owl:Class rdf:about="&chemtop;Eicosanoid"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Electron -->
+    <!-- http://purl.org/biotop/chemtop.owl#Electron -->
 
     <owl:Class rdf:about="&chemtop;Electron"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#EntireMolecularEntity -->
+    <!-- http://purl.org/biotop/chemtop.owl#EntireMolecularEntity -->
 
     <owl:Class rdf:about="&chemtop;EntireMolecularEntity"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#EntireNucleicAcidMolecule -->
+    <!-- http://purl.org/biotop/chemtop.owl#EntireNucleicAcidMolecule -->
 
     <owl:Class rdf:about="&chemtop;EntireNucleicAcidMolecule"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#EntireProteinMolecule -->
+    <!-- http://purl.org/biotop/chemtop.owl#EntireProteinMolecule -->
 
     <owl:Class rdf:about="&chemtop;EntireProteinMolecule"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#FattyAcid -->
+    <!-- http://purl.org/biotop/chemtop.owl#FattyAcid -->
 
     <owl:Class rdf:about="&chemtop;FattyAcid"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Gene -->
+    <!-- http://purl.org/biotop/chemtop.owl#Gene -->
 
     <owl:Class rdf:about="&chemtop;Gene"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#GeneRegion -->
+    <!-- http://purl.org/biotop/chemtop.owl#GeneRegion -->
 
     <owl:Class rdf:about="&chemtop;GeneRegion"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#HeterocyclicBase -->
+    <!-- http://purl.org/biotop/chemtop.owl#HeterocyclicBase -->
 
     <owl:Class rdf:about="&chemtop;HeterocyclicBase"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#InorganicMolecularEntity -->
+    <!-- http://purl.org/biotop/chemtop.owl#InorganicMolecularEntity -->
 
     <owl:Class rdf:about="&chemtop;InorganicMolecularEntity"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Lipid -->
+    <!-- http://purl.org/biotop/chemtop.owl#Lipid -->
 
     <owl:Class rdf:about="&chemtop;Lipid"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#MaterialEntity -->
+    <!-- http://purl.org/biotop/chemtop.owl#MaterialEntity -->
 
     <owl:Class rdf:about="&chemtop;MaterialEntity"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#MonoMolecularEntity -->
+    <!-- http://purl.org/biotop/chemtop.owl#MonoMolecularEntity -->
 
     <owl:Class rdf:about="&chemtop;MonoMolecularEntity"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Monomer -->
+    <!-- http://purl.org/biotop/chemtop.owl#Monomer -->
 
     <owl:Class rdf:about="&chemtop;Monomer"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Neutron -->
+    <!-- http://purl.org/biotop/chemtop.owl#Neutron -->
 
     <owl:Class rdf:about="&chemtop;Neutron"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#NonSteroidLipid -->
+    <!-- http://purl.org/biotop/chemtop.owl#NonSteroidLipid -->
 
     <owl:Class rdf:about="&chemtop;NonSteroidLipid"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleicAcid -->
+    <!-- http://purl.org/biotop/chemtop.owl#NucleicAcid -->
 
     <owl:Class rdf:about="&chemtop;NucleicAcid"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#NucleicAcidRegion -->
+    <!-- http://purl.org/biotop/chemtop.owl#NucleicAcidRegion -->
 
     <owl:Class rdf:about="&chemtop;NucleicAcidRegion"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Nucleoside -->
+    <!-- http://purl.org/biotop/chemtop.owl#Nucleoside -->
 
     <owl:Class rdf:about="&chemtop;Nucleoside"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Nucleotide -->
+    <!-- http://purl.org/biotop/chemtop.owl#Nucleotide -->
 
     <owl:Class rdf:about="&chemtop;Nucleotide"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#OligoOrPolymer -->
+    <!-- http://purl.org/biotop/chemtop.owl#OligoOrPolymer -->
 
     <owl:Class rdf:about="&chemtop;OligoOrPolymer"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#OrganicMolecularEntity -->
+    <!-- http://purl.org/biotop/chemtop.owl#OrganicMolecularEntity -->
 
     <owl:Class rdf:about="&chemtop;OrganicMolecularEntity"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Peptide -->
+    <!-- http://purl.org/biotop/chemtop.owl#Peptide -->
 
     <owl:Class rdf:about="&chemtop;Peptide"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Phosphate -->
+    <!-- http://purl.org/biotop/chemtop.owl#Phosphate -->
 
     <owl:Class rdf:about="&chemtop;Phosphate"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#PhysicalBoundary -->
+    <!-- http://purl.org/biotop/chemtop.owl#PhysicalBoundary -->
 
     <owl:Class rdf:about="&chemtop;PhysicalBoundary"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHeterogenousLiquid -->
+    <!-- http://purl.org/biotop/chemtop.owl#PortionOfHeterogenousLiquid -->
 
     <owl:Class rdf:about="&chemtop;PortionOfHeterogenousLiquid"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHeterogenousSolid -->
+    <!-- http://purl.org/biotop/chemtop.owl#PortionOfHeterogenousSolid -->
 
     <owl:Class rdf:about="&chemtop;PortionOfHeterogenousSolid"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#PortionOfHomogenousMatter -->
+    <!-- http://purl.org/biotop/chemtop.owl#PortionOfHomogenousMatter -->
 
     <owl:Class rdf:about="&chemtop;PortionOfHomogenousMatter"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#ProteinDomain -->
+    <!-- http://purl.org/biotop/chemtop.owl#ProteinDomain -->
 
     <owl:Class rdf:about="&chemtop;ProteinDomain"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#ProteinSubstructure -->
+    <!-- http://purl.org/biotop/chemtop.owl#ProteinSubstructure -->
 
     <owl:Class rdf:about="&chemtop;ProteinSubstructure"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#ProteinSubunit -->
+    <!-- http://purl.org/biotop/chemtop.owl#ProteinSubunit -->
 
     <owl:Class rdf:about="&chemtop;ProteinSubunit"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#RNA -->
+    <!-- http://purl.org/biotop/chemtop.owl#RNA -->
 
     <owl:Class rdf:about="&chemtop;RNA"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#Steroid -->
+    <!-- http://purl.org/biotop/chemtop.owl#Steroid -->
 
     <owl:Class rdf:about="&chemtop;Steroid"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#SubatomicParticle -->
+    <!-- http://purl.org/biotop/chemtop.owl#SubatomicParticle -->
 
     <owl:Class rdf:about="&chemtop;SubatomicParticle"/>
     
 
 
-    <!-- http://purl.org/biotop/1.0/chemtop.owl#WaterMolecule -->
+    <!-- http://purl.org/biotop/chemtop.owl#WaterMolecule -->
 
     <owl:Class rdf:about="&chemtop;WaterMolecule"/>
 </rdf:RDF>
