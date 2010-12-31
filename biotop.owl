@@ -43,7 +43,7 @@ my $buffer;my @zeilen;my @rules;
 #! by Stefan Schulz, 2009/09/25
 #! First argument: owl file
 
-open(DAT0, $ARGV[0]) || die &quot;Please specify an owl file from which you want to remove the inverse relation axioms.\n&quot;;
+open(DAT0, $ARGV[0]) || die &quot; Please specify an owl file from which you want to remove the inverse relation axioms.\n&quot;;
 while(&lt;DAT0&gt;){push(@zeilen,$_)}close(DAT0);
 #! Write text file into buffer
 for(my $i = 0;$i &lt; @zeilen;$i++){$buffer = $buffer . $zeilen[$i]};
