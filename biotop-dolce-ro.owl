@@ -30,15 +30,14 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2008/05/skos#">
     <owl:Ontology rdf:about="http://purl.org/biotop/biotop-dolce-ro.owl">
+        <owl:versionInfo>Last modification 
+May 25th, 2011 by Stefan Schulz</owl:versionInfo>
         <dc:creator>Holger Stenzhorn</dc:creator>
+        <dc:identifier>20110525</dc:identifier>
         <dc:creator>Stefan Schulz</dc:creator>
         <dc:publisher>Institute for Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
         <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
-        <dc:identifier>20100611</dc:identifier>
         <dc:subject>Biology and Medicine</dc:subject>
-        <owl:versionInfo>Last modification 
-
-June 11, 2010 by Stefan Schulz</owl:versionInfo>
         <dc:source>Stefan Schulz, Elena Beisswanger, Udo Hahn, Joachim Wermter, Holger Stenzhorn and Anand Kumar: &quot;From GENIA to BioTop - Towards a top-level Ontology for Biology&quot; (in Proceedings of the American Medical Informatics Association Annual Conference (AMIA 2006), Washington, November 2006)</dc:source>
         <dc:description>Brigdging File: DOLCE, RO (OBO Relation Ontology), BioTop (Upper-level Ontology for Biology and Medicine)</dc:description>
         <dc:creator>Elena Beisswanger</dc:creator>
@@ -79,11 +78,11 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
     <owl:AnnotationProperty rdf:about="&dc;coverage"/>
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;identifier"/>
-    <owl:AnnotationProperty rdf:about="&dc;date"/>
     <owl:AnnotationProperty rdf:about="&skos;hiddenLabel"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
     <owl:AnnotationProperty rdf:about="&skos;historyNote"/>
-    <owl:AnnotationProperty rdf:about="&skos;synonym"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&skos;synonym"/>
     <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&dc;rights"/>
     
@@ -135,7 +134,6 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/biotop.owl#hasPhysicalPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasPhysicalPart">
-        <owl:equivalentProperty rdf:resource="&dolce;part"/>
         <owl:equivalentProperty rdf:resource="&ro;has_part"/>
     </owl:ObjectProperty>
     
@@ -144,7 +142,6 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/biotop.owl#hasProperPhysicalPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasProperPhysicalPart">
-        <owl:equivalentProperty rdf:resource="&dolce;proper-part"/>
         <owl:equivalentProperty rdf:resource="&ro;has_proper_part"/>
     </owl:ObjectProperty>
     
@@ -178,7 +175,6 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/biotop.owl#physicalPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;physicalPartOf">
-        <owl:equivalentProperty rdf:resource="&dolce;part-of"/>
         <owl:equivalentProperty rdf:resource="&ro;part_of"/>
     </owl:ObjectProperty>
     
@@ -236,7 +232,6 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
     <!-- http://purl.org/biotop/biotop.owl#properPhysicalPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;properPhysicalPartOf">
-        <owl:equivalentProperty rdf:resource="&dolce;proper-part-of"/>
         <owl:equivalentProperty rdf:resource="&ro;proper_part_of"/>
     </owl:ObjectProperty>
     
@@ -288,17 +283,13 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
 
     <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part -->
 
-    <owl:ObjectProperty rdf:about="&dolce;part">
-        <owl:equivalentProperty rdf:resource="&ro;has_part"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&dolce;part"/>
     
 
 
     <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part-of -->
 
-    <owl:ObjectProperty rdf:about="&dolce;part-of">
-        <owl:equivalentProperty rdf:resource="&ro;part_of"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&dolce;part-of"/>
     
 
 
@@ -324,16 +315,13 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
 
     <owl:ObjectProperty rdf:about="&dolce;proper-part">
         <rdfs:subPropertyOf rdf:resource="&dolce;temporary-part"/>
-        <owl:equivalentProperty rdf:resource="&ro;has_proper_part"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#proper-part-of -->
 
-    <owl:ObjectProperty rdf:about="&dolce;proper-part-of">
-        <owl:equivalentProperty rdf:resource="&ro;proper_part_of"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&dolce;proper-part-of"/>
     
 
 
@@ -387,7 +375,9 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
 
-    <owl:ObjectProperty rdf:about="&ro;has_part"/>
+    <owl:ObjectProperty rdf:about="&ro;has_part">
+        <rdfs:subPropertyOf rdf:resource="&dolce;part"/>
+    </owl:ObjectProperty>
     
 
 
@@ -399,7 +389,9 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_proper_part -->
 
-    <owl:ObjectProperty rdf:about="&ro;has_proper_part"/>
+    <owl:ObjectProperty rdf:about="&ro;has_proper_part">
+        <rdfs:subPropertyOf rdf:resource="&dolce;part"/>
+    </owl:ObjectProperty>
     
 
 
@@ -417,7 +409,9 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
 
     <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
 
-    <owl:ObjectProperty rdf:about="&ro;part_of"/>
+    <owl:ObjectProperty rdf:about="&ro;part_of">
+        <rdfs:subPropertyOf rdf:resource="&dolce;part-of"/>
+    </owl:ObjectProperty>
     
 
 
@@ -441,7 +435,9 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
 
     <!-- http://www.obofoundry.org/ro/ro.owl#proper_part_of -->
 
-    <owl:ObjectProperty rdf:about="&ro;proper_part_of"/>
+    <owl:ObjectProperty rdf:about="&ro;proper_part_of">
+        <rdfs:subPropertyOf rdf:resource="&dolce;proper-part-of"/>
+    </owl:ObjectProperty>
     
 
 
@@ -479,27 +475,45 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
     
 
 
+    <!-- http://purl.org/biotop/biotop.owl#ImmaterialObject -->
+
+    <rdf:Description rdf:about="&biotop;ImmaterialObject">
+        <rdfs:subClassOf rdf:resource="&dolce;physical-endurant"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/biotop/biotop.owl#ImmaterialPhysicalEntity -->
 
-    <owl:Class rdf:about="&biotop;ImmaterialPhysicalEntity">
-        <rdfs:subClassOf rdf:resource="&dolce;physical-endurant"/>
-    </owl:Class>
+    <owl:Class rdf:about="&biotop;ImmaterialPhysicalEntity"/>
     
 
 
     <!-- http://purl.org/biotop/biotop.owl#MaterialEntity -->
 
-    <owl:Class rdf:about="&biotop;MaterialEntity">
+    <owl:Class rdf:about="&biotop;MaterialEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MaterialObject -->
+
+    <rdf:Description rdf:about="&biotop;MaterialObject">
         <rdfs:subClassOf rdf:resource="&dolce;physical-object"/>
-    </owl:Class>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Particular -->
+
+    <rdf:Description rdf:about="&biotop;Particular">
+        <owl:equivalentClass rdf:resource="&dolce;particular"/>
+    </rdf:Description>
     
 
 
     <!-- http://purl.org/biotop/biotop.owl#ParticularEntity -->
 
-    <owl:Class rdf:about="&biotop;ParticularEntity">
-        <owl:equivalentClass rdf:resource="&dolce;particular"/>
-    </owl:Class>
+    <owl:Class rdf:about="&biotop;ParticularEntity"/>
     
 
 
@@ -659,5 +673,5 @@ June 11, 2010 by Stefan Schulz</owl:versionInfo>
 
 
 
-<!-- Generated by the OWL API (version 3.0.0.1413) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.2.1785) http://owlapi.sourceforge.net -->
 

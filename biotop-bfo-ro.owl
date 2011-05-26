@@ -57,11 +57,11 @@
      -->
 
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
-    <owl:AnnotationProperty rdf:about="&dc;relation"/>
     <owl:AnnotationProperty rdf:about="&dc;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dc;relation"/>
     <owl:AnnotationProperty rdf:about="&dc;subject"/>
-    <owl:AnnotationProperty rdf:about="&dc;coverage"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;coverage"/>
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
     <owl:AnnotationProperty rdf:about="&dc;type"/>
@@ -128,15 +128,23 @@
     <!-- http://purl.org/biotop/biotop.owl#hasPhysicalPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasPhysicalPart">
-        <owl:equivalentProperty rdf:resource="&ro;has_part"/>
+        <rdfs:subPropertyOf rdf:resource="&ro;has_part"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasProcessualPart -->
+
+    <rdf:Description rdf:about="&biotop;hasProcessualPart">
+        <rdfs:subPropertyOf rdf:resource="&ro;has_proper_part"/>
+    </rdf:Description>
     
 
 
     <!-- http://purl.org/biotop/biotop.owl#hasProperPhysicalPart -->
 
     <owl:ObjectProperty rdf:about="&biotop;hasProperPhysicalPart">
-        <owl:equivalentProperty rdf:resource="&ro;has_proper_part"/>
+        <rdfs:subPropertyOf rdf:resource="&ro;has_proper_part"/>
     </owl:ObjectProperty>
     
 
@@ -160,7 +168,7 @@
     <!-- http://purl.org/biotop/biotop.owl#physicalPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;physicalPartOf">
-        <owl:equivalentProperty rdf:resource="&ro;part_of"/>
+        <rdfs:subPropertyOf rdf:resource="&ro;part_of"/>
     </owl:ObjectProperty>
     
 
@@ -213,10 +221,18 @@
     
 
 
+    <!-- http://purl.org/biotop/biotop.owl#processualPartOf -->
+
+    <rdf:Description rdf:about="&biotop;processualPartOf">
+        <rdfs:subPropertyOf rdf:resource="&ro;proper_part_of"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/biotop/biotop.owl#properPhysicalPartOf -->
 
     <owl:ObjectProperty rdf:about="&biotop;properPhysicalPartOf">
-        <owl:equivalentProperty rdf:resource="&ro;proper_part_of"/>
+        <rdfs:subPropertyOf rdf:resource="&ro;proper_part_of"/>
     </owl:ObjectProperty>
     
 
@@ -373,11 +389,25 @@
     
 
 
+    <!-- http://purl.org/biotop/biotop.owl#ImmaterialObject -->
+
+    <rdf:Description rdf:about="&biotop;ImmaterialObject">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&snap;ObjectBoundary"/>
+                    <rdf:Description rdf:about="&snap;Site"/>
+                    <rdf:Description rdf:about="&snap;SpatialRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/biotop/biotop.owl#ImmaterialPhysicalEntity -->
 
-    <owl:Class rdf:about="&biotop;ImmaterialPhysicalEntity">
-        <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
-    </owl:Class>
+    <owl:Class rdf:about="&biotop;ImmaterialPhysicalEntity"/>
     
 
 
@@ -385,22 +415,35 @@
 
     <rdf:Description rdf:about="&biotop;InformationObject">
         <rdfs:subClassOf rdf:resource="&biotop;Particular"/>
-        <rdfs:subClassOf rdf:resource="&snap;GenericallyDependentContinuant"/>
     </rdf:Description>
     
 
 
     <!-- http://purl.org/biotop/biotop.owl#MaterialEntity -->
 
-    <owl:Class rdf:about="&biotop;MaterialEntity">
-        <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
-    </owl:Class>
+    <owl:Class rdf:about="&biotop;MaterialEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MaterialObject -->
+
+    <rdf:Description rdf:about="&biotop;MaterialObject">
+        <owl:equivalentClass rdf:resource="&snap;MaterialEntity"/>
+    </rdf:Description>
     
 
 
     <!-- http://purl.org/biotop/biotop.owl#ParticularEntity -->
 
     <owl:Class rdf:about="&biotop;ParticularEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Process -->
+
+    <rdf:Description rdf:about="&biotop;Process">
+        <owl:equivalentClass rdf:resource="&span;ProcessualEntity"/>
+    </rdf:Description>
     
 
 
@@ -426,7 +469,7 @@
     <!-- http://purl.org/biotop/biotop.owl#Quality -->
 
     <owl:Class rdf:about="&biotop;Quality">
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <owl:equivalentClass rdf:resource="&snap;Quality"/>
     </owl:Class>
     
 
@@ -434,7 +477,7 @@
     <!-- http://purl.org/biotop/biotop.owl#Role -->
 
     <owl:Class rdf:about="&biotop;Role">
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <owl:equivalentClass rdf:resource="&snap;Role"/>
     </owl:Class>
     
 
@@ -460,6 +503,14 @@
     <!-- http://purl.org/biotop/biotop.owl#TemporalEntity -->
 
     <owl:Class rdf:about="&biotop;TemporalEntity">
+        <rdfs:subClassOf rdf:resource="&span;Occurrent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Time -->
+
+    <rdf:Description rdf:about="&biotop;Time">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -468,8 +519,7 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&span;Occurrent"/>
-    </owl:Class>
+    </rdf:Description>
     
 
 
@@ -510,6 +560,12 @@
     <!-- http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant -->
 
     <owl:Class rdf:about="&snap;IndependentContinuant"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+
+    <rdf:Description rdf:about="&snap;MaterialEntity"/>
     
 
 
@@ -610,5 +666,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.2.1785) http://owlapi.sourceforge.net -->
 
