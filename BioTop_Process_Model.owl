@@ -7,7 +7,6 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY biotoplite "http://purl.org/biotop/biotoplite.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY Ontology1309792330129 "http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#" >
 ]>
 
 
@@ -17,7 +16,6 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:Ontology1309792330129="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#"
      xmlns:biotoplite="http://purl.org/biotop/biotoplite.owl#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl">
         <owl:imports rdf:resource="http://purl.org/biotop/biotoplite.owl"/>
@@ -38,7 +36,7 @@
 
     <!-- http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Abandoned -->
 
-    <owl:Class rdf:about="&Ontology1309792330129;Action_A_Abandoned">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Abandoned">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -47,7 +45,7 @@
                         <owl:complementOf>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&biotoplite;realizationOf"/>
-                                <owl:someValuesFrom rdf:resource="&Ontology1309792330129;Plan_A"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Plan_A"/>
                             </owl:Restriction>
                         </owl:complementOf>
                     </owl:Class>
@@ -56,7 +54,7 @@
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&biotoplite;abstractPartOf"/>
-                                <owl:someValuesFrom rdf:resource="&Ontology1309792330129;Plan_A"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Plan_A"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
@@ -70,14 +68,14 @@
 
     <!-- http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Completed -->
 
-    <owl:Class rdf:about="&Ontology1309792330129;Action_A_Completed">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Completed">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotoplite;Action"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&biotoplite;realizationOf"/>
-                        <owl:someValuesFrom rdf:resource="&Ontology1309792330129;Plan_A"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Plan_A"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -89,7 +87,7 @@
 
     <!-- http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Implemented -->
 
-    <owl:Class rdf:about="&Ontology1309792330129;Action_A_Implemented">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Implemented">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -99,7 +97,7 @@
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&biotoplite;abstractPartOf"/>
-                                <owl:someValuesFrom rdf:resource="&Ontology1309792330129;Plan_A"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Plan_A"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
@@ -113,33 +111,41 @@
 
     <!-- http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Suspended -->
 
-    <owl:Class rdf:about="&Ontology1309792330129;Action_A_Suspended">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Suspended">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&Ontology1309792330129;Action_A_Implemented"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Implemented"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&biotoplite;hasProcessQuality"/>
-                        <owl:someValuesFrom rdf:resource="&Ontology1309792330129;SuspendedProcessQuality"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Inactive"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&Ontology1309792330129;Action_A_Implemented"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Implemented"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Inactive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Inactive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#ProcessQuality"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Plan_A -->
 
-    <owl:Class rdf:about="&Ontology1309792330129;Plan_A">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Plan_A">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&biotoplite;Plan"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&biotoplite;hasRealization"/>
-                        <owl:allValuesFrom rdf:resource="&Ontology1309792330129;Action_A_Completed"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#Action_A_Completed"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -151,7 +157,7 @@
 
     <!-- http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#ProcessQuality -->
 
-    <owl:Class rdf:about="&Ontology1309792330129;ProcessQuality">
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#ProcessQuality">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -164,14 +170,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&biotoplite;Quality"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2011/6/Ontology1309792330129.owl#SuspendedProcessQuality -->
-
-    <owl:Class rdf:about="&Ontology1309792330129;SuspendedProcessQuality">
-        <rdfs:subClassOf rdf:resource="&Ontology1309792330129;ProcessQuality"/>
     </owl:Class>
 </rdf:RDF>
 
