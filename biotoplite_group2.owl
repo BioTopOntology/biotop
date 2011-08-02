@@ -278,7 +278,6 @@ Derivation is a relation holding between non-identicals. More precisely, it hold
         <ru-meta:definition>A participant of a process, with the additional condition that the component instance is causally active in the relevant process.
 
 The latter is the reason that it has also the relation causedBy as an additional parent.</ru-meta:definition>
-        <rdfs:domain rdf:resource="http://purl.org/biotop/biotoplite.owl#Process"/>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotoplite.owl#agentIn"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#causedBy"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#hasParticipant"/>
@@ -360,7 +359,6 @@ and
 constitutes (one of) the main result(s) of the process
 
 </ru-meta:definition>
-        <rdfs:domain rdf:resource="http://purl.org/biotop/biotoplite.owl#Process"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#hasParticipant"/>
     </owl:ObjectProperty>
     
@@ -371,7 +369,6 @@ constitutes (one of) the main result(s) of the process
     <owl:ObjectProperty rdf:about="http://purl.org/biotop/biotoplite.owl#hasParticipant">
         <rdfs:label>has participant</rdfs:label>
         <ru-meta:definition>HasParticipant is a primitive instance-level relation between a process and a continuant which participates in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane hasParticipant this particular sample of hemoglobin.  </ru-meta:definition>
-        <rdfs:domain rdf:resource="http://purl.org/biotop/biotoplite.owl#Process"/>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotoplite.owl#participatesIn"/>
     </owl:ObjectProperty>
     
@@ -382,7 +379,6 @@ constitutes (one of) the main result(s) of the process
     <owl:ObjectProperty rdf:about="http://purl.org/biotop/biotoplite.owl#hasPatient">
         <rdfs:label>has patient</rdfs:label>
         <ru-meta:definition>A process having a passive participant. </ru-meta:definition>
-        <rdfs:domain rdf:resource="http://purl.org/biotop/biotoplite.owl#Process"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#hasParticipant"/>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotoplite.owl#patientIn"/>
     </owl:ObjectProperty>
