@@ -28,16 +28,16 @@ See related articles at:
 
 http://www.google.com/search?q=Schulz+BioTop+site:www.ncbi.nlm.nih.gov/pmc/articles+ontology+OR+ontologies</dc:description>
         <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
+        <dc:identifier>20120129</dc:identifier>
         <dc:title>BioTopLite</dc:title>
         <dc:creator>Stefan Schulz, Martin Boeker, Elena Beisswanger, Holger Stenzhorn, Djamila Raufie, Daniel Schober, Udo Hahn</dc:creator>
         <dc:subject>Biology, Medicine</dc:subject>
         <dc:subject>An experimental top level ontology for biology and medicine. Lite Version</dc:subject>
-        <owl:versionInfo>Last modification
-July 1, 2011 by Stefan Schulz</owl:versionInfo>
-        <dc:identifier>20110525</dc:identifier>
         <dc:publisher>Institute of Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
         <dc:format>application/rdf+xml</dc:format>
         <dc:description>Upper-Level ontology for Biology and Medicine. Compatible with BFO, DOLCE, and the UMLS Semantic Network (mapping files available)</dc:description>
+        <owl:versionInfo>Last modification
+January 29, 2011 by Stefan Schulz</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -52,15 +52,15 @@ July 1, 2011 by Stefan Schulz</owl:versionInfo>
 
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
     <owl:AnnotationProperty rdf:about="&dc;publisher"/>
-    <owl:AnnotationProperty rdf:about="&owl;priorVersion"/>
     <owl:AnnotationProperty rdf:about="&ru-meta;synonym"/>
+    <owl:AnnotationProperty rdf:about="&owl;priorVersion"/>
     <owl:AnnotationProperty rdf:about="&ru-meta;definition"/>
     <owl:AnnotationProperty rdf:about="&dc;subject"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;identifier"/>
     <owl:AnnotationProperty rdf:about="&dc;source"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
@@ -153,14 +153,6 @@ Example: A physician is the agent in a opeeration process; a solvent is the agen
 Example: a color inheres in a paint, the ability to fly inheres in a bird, or a pdf file inheres in a USB stick.</ru-meta:definition>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#locusOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -171,6 +163,14 @@ Example: a color inheres in a paint, the ability to fly inheres in a bird, or a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -643,14 +643,6 @@ For processes there are the relations &quot;hasProcessualPart&quot; and &quot;pr
 
 Examples: my thumb is a proper physical part of my hand, this keyboard is a proper physical part of my computer.</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#locusOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -659,6 +651,14 @@ Examples: my thumb is a proper physical part of my hand, this keyboard is a prop
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -856,14 +856,6 @@ Example: A prey is the patient in a hunting process; a solute is the patient in 
 
 Examples: see subrelations</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#physicallyConnectedTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -872,6 +864,14 @@ Examples: see subrelations</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -928,14 +928,6 @@ Example: the surface of my liver physically bounds my liver. </ru-meta:definitio
 
 Example: France is connected to Germany, my optic nerve is connected to my eyeball.</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#spatiallyRelatedTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -944,6 +936,14 @@ Example: France is connected to Germany, my optic nerve is connected to my eyeba
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -958,14 +958,6 @@ Example: France is connected to Germany, my optic nerve is connected to my eyeba
 Example: fecundation preceeds embryonic development.</ru-meta:definition>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotoplite.owl#precedes"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#temporallyRelatedTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Process"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Time"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -974,6 +966,14 @@ Example: fecundation preceeds embryonic development.</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Process"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Time"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1061,14 +1061,6 @@ For processes there are the relations &quot;hasProcessualPart&quot; and &quot;pr
 Examples: my thumb is a proper physical part of my hand, this keyboard is a proper physical part of my computer.</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotoplite.owl#hasLocus"/>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotoplite.owl#hasProperPhysicalPart"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1077,6 +1069,14 @@ Examples: my thumb is a proper physical part of my hand, this keyboard is a prop
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1178,15 +1178,6 @@ Example: the disposition of a bird to fly (which exists even when it does not fl
         <ru-meta:definition>The temporal arrangement of processes, events, durations and temporal measurements.
 
 temporallyRelatedTo is meant as an organizing parent. It should not be asserted.</ru-meta:definition>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Process"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Quality"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Time"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1196,6 +1187,15 @@ temporallyRelatedTo is meant as an organizing parent. It should not be asserted.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Process"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Quality"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Time"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1245,19 +1245,6 @@ temporallyRelatedTo is meant as an organizing parent. It should not be asserted.
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasGranularPart"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Atom"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MonoMolecularEntity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasGranularPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -1266,6 +1253,19 @@ temporallyRelatedTo is meant as an organizing parent. It should not be asserted.
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasGranularPart"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Atom"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MonoMolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.org/biotop/biotoplite.owl#PluralityOfOrganisms"/>
@@ -1450,12 +1450,6 @@ Practically all naturally occurring substances are of this sort. The different c
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotoplite.owl#Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasRealization"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -1465,6 +1459,12 @@ Practically all naturally occurring substances are of this sort. The different c
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasRealization"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>A disposition is a realizable entity. 
@@ -1503,12 +1503,6 @@ In BFO &quot;Disposition&quot; and &quot;Function&quot; are siblings, in BioTop 
         <rdfs:label>immaterial object</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotoplite.owl#Particular"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasProperPhysicalPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -1517,6 +1511,12 @@ In BFO &quot;Disposition&quot; and &quot;Function&quot; are siblings, in BioTop 
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasProperPhysicalPart"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1585,7 +1585,6 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <owl:priorVersion>information entity</owl:priorVersion>
         <ru-meta:definition>Piece of information (not necessarily human) , as it exists independently of any potential material carrier.</ru-meta:definition>
     </owl:Class>
     
@@ -1677,7 +1676,9 @@ This is not the case with a classical molecule. </ru-meta:definition>
     <!-- http://purl.org/biotop/biotoplite.owl#ObjectQuality -->
 
     <owl:Class rdf:about="http://purl.org/biotop/biotoplite.owl#ObjectQuality">
+        <rdfs:label>object quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotoplite.owl#Quality"/>
+        <ru-meta:definition>quality that inheres in an object</ru-meta:definition>
     </owl:Class>
     
 
@@ -1782,19 +1783,6 @@ However, BioTop does not claim that all of its classes are the extension of univ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -1803,6 +1791,19 @@ However, BioTop does not claim that all of its classes are the extension of univ
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>physical length (e.g. in meters)</ru-meta:definition>
@@ -1818,13 +1819,13 @@ However, BioTop does not claim that all of its classes are the extension of univ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Mass (gravity independent) - not weight. Measured in g, kg, ...</ru-meta:definition>
@@ -1840,19 +1841,6 @@ However, BioTop does not claim that all of its classes are the extension of univ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -1861,6 +1849,19 @@ However, BioTop does not claim that all of its classes are the extension of univ
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#inheresIn"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Volume of three-dimensional objects - third potency of length</ru-meta:definition>
@@ -1880,7 +1881,6 @@ However, BioTop does not claim that all of its classes are the extension of univ
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>A plan is a series of steps to be carried out in order to achiev a goal. Plans can only be realized by processes</ru-meta:definition>
-        <rdfs:comment>(OBI 344)</rdfs:comment>
     </owl:Class>
     
 
@@ -1928,6 +1928,12 @@ However, BioTop does not claim that all of its classes are the extension of univ
         <rdfs:label>process</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotoplite.owl#Particular"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -1940,12 +1946,6 @@ However, BioTop does not claim that all of its classes are the extension of univ
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#hasParticipant"/>
-                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <owl:priorVersion>processual entity</owl:priorVersion>
         <ru-meta:definition>Process is in BioTop the generic subsumer of anything that &quot;occurs&quot;. 
@@ -1962,7 +1962,9 @@ Processes have physical or informational entities as participants.</ru-meta:defi
     <!-- http://purl.org/biotop/biotoplite.owl#ProcessQuality -->
 
     <owl:Class rdf:about="http://purl.org/biotop/biotoplite.owl#ProcessQuality">
+        <rdfs:label>process quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotoplite.owl#Quality"/>
+        <ru-meta:definition>quality that inheres in a process</ru-meta:definition>
     </owl:Class>
     
 
@@ -2047,13 +2049,13 @@ Old name: anatomical structure</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#qualityLocated"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#TaxonValueRegion"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#TaxonValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#qualityLocated"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#TaxonValueRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#TaxonValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>The quality of one or more biological organisms, as well as of parts of organism of partaining to a biological taxon. [steschu20080127]</ru-meta:definition>
@@ -2118,13 +2120,13 @@ Old name: anatomical structure</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#qualityLocationOf"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#Quality"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#Quality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotoplite.owl#qualityLocationOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#Quality"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotoplite.owl#Quality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>A value region is an abstract region in which (non quantitative) values of qualities are located.</ru-meta:definition>
@@ -2173,14 +2175,6 @@ Old name: anatomical structure</ru-meta:definition>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#OneDimensionalPhysicalEntity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#TwoDimensionalPhysicalEntity"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Canonicity"/>
             <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#PhysicalForce"/>
             <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#PhysicalLength"/>
@@ -2192,9 +2186,9 @@ Old name: anatomical structure</ru-meta:definition>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Atom"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MonoMolecularEntity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#PolyMolecularCompositeEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#OneDimensionalPhysicalEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#TwoDimensionalPhysicalEntity"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2206,9 +2200,17 @@ Old name: anatomical structure</ru-meta:definition>
             <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Wave"/>
         </owl:members>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#Atom"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#MonoMolecularEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotoplite.owl#PolyMolecularCompositeEntity"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
