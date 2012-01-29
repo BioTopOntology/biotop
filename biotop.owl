@@ -20,6 +20,9 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:ru-meta="http://purl.org/imbi/ru-meta.owl#">
     <owl:Ontology rdf:about="http://purl.org/biotop/biotop.owl">
+        <dc:publisher>Institute of Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany
+
+Institute of Medical Informatics, Statistics and Documentation, Medical University of Graz, Auenbruggerplatz 2/V , 8036 Graz (Austria)</dc:publisher>
         <dc:description>BioTop Website:
 http://purl.org/biotop
 
@@ -30,13 +33,12 @@ http://www.google.com/search?q=Schulz+BioTop+site:www.ncbi.nlm.nih.gov/pmc/artic
         <dc:subject>Biology, Medicine</dc:subject>
         <dc:title>BioTop</dc:title>
         <dc:description>Upper-Level ontology for Biology and Medicine. Compatible with BFO, DOLCE, and the UMLS Semantic Network (mapping files available)</dc:description>
-        <dc:identifier>http://purl.org/biotop/biotop.owl</dc:identifier>
         <owl:versionInfo>Last modification
-May 24, 2011 by Stefan Schulz</owl:versionInfo>
+Jan 29, 2012 by Stefan Schulz</owl:versionInfo>
+        <dc:identifier>http://purl.org/biotop/biotop.owl</dc:identifier>
         <dc:format>application/rdf+xml</dc:format>
-        <dc:identifier>20110711</dc:identifier>
-        <dc:publisher>Institute of Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
         <dc:subject>An experimental top level ontology for biology and medicine.</dc:subject>
+        <dc:identifier>20120129</dc:identifier>
         <rdfs:comment xml:lang="zeilen;$i++){$buffer = $buffer . $zeilen[$i]};   $buffer =~ s/&lt;owl:inverseof.*\/&gt;//g;  open(out, &quot;&gt;$argv[0]&quot;) or die &quot;writing error&quot;;     print out $buffer; close(out);">This version contains inverse relation axioms. These may have an impact on the performance. 
 To remove them use the perl script:
 
@@ -67,15 +69,15 @@ for(my $i = 0;$i &lt; </rdfs:comment>
 
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
     <owl:AnnotationProperty rdf:about="&dc;publisher"/>
-    <owl:AnnotationProperty rdf:about="&owl;priorVersion"/>
     <owl:AnnotationProperty rdf:about="&ru-meta;synonym"/>
+    <owl:AnnotationProperty rdf:about="&owl;priorVersion"/>
     <owl:AnnotationProperty rdf:about="&ru-meta;definition"/>
     <owl:AnnotationProperty rdf:about="&dc;subject"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&dc;identifier"/>
     <owl:AnnotationProperty rdf:about="&dc;source"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
@@ -205,6 +207,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</ru-meta:definition>
 Example: a color inheres in a paint, the ability to fly inheres in a bird, or a pdf file inheres in a USB stick.</ru-meta:definition>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotop.owl#inheresIn"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#locusOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -215,14 +225,6 @@ Example: a color inheres in a paint, the ability to fly inheres in a bird, or a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -236,14 +238,6 @@ Schulz S, Hahn U. Towards the ontological foundations of symbolic biological the
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#attachedTo"/>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotop.owl#hasBranch"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -252,6 +246,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -321,14 +323,6 @@ Examples: my liver is a component of my organism, a carboxy group is a component
 
  </ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#physicallyAdjacentTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -337,6 +331,14 @@ Examples: my liver is a component of my organism, a carboxy group is a component
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -563,14 +565,6 @@ Example: A physician is the agent in a opeeration process; a solvent is the agen
 Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#attachedTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -579,6 +573,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -843,14 +845,6 @@ Note that for abstract entities like information artefacts there is a separate r
 
 For processes there are the relations &quot;hasProcessualPart&quot; and &quot;processualPartOf&quot;</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#physicalLocationOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -859,6 +853,14 @@ For processes there are the relations &quot;hasProcessualPart&quot; and &quot;pr
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -989,6 +991,14 @@ Example: the disposition of a bird to fly (which exists even when it does not fl
 
 Example: a color inheres in a paint, the ability to fly inheres in a bird, or a pdf file inheres in a USB stick.</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#hasLocus"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -999,14 +1009,6 @@ Example: a color inheres in a paint, the ability to fly inheres in a bird, or a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1032,14 +1034,6 @@ See property chains: a participant of a process at a given time is located where
 
 Example: A heart pumping process is located in a heart. </ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#spatiallyRelatedTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1053,6 +1047,14 @@ Example: A heart pumping process is located in a heart. </ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1229,14 +1231,6 @@ Note that for abstract entities like information artefacts there is a separate r
 For processes there are the relations &quot;hasProcessualPart&quot; and &quot;processualPartOf&quot;</ru-meta:definition>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotop.owl#hasPhysicalPart"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#physicallyLocatedIn"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1245,6 +1239,14 @@ For processes there are the relations &quot;hasProcessualPart&quot; and &quot;pr
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1330,14 +1332,6 @@ Example: the surface of my liver physically bounds my liver. </ru-meta:definitio
 
 Example: France is connected to Germany, my optic nerve is connected to my eyeball.</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#spatiallyRelatedTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1346,6 +1340,14 @@ Example: France is connected to Germany, my optic nerve is connected to my eyeba
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1444,14 +1446,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</ru-meta:definition>
     <owl:ObjectProperty rdf:about="http://purl.org/biotop/biotop.owl#physicallyInterconnects">
         <rdfs:label>physically interconnects</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#physicallyConnectedTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1460,6 +1454,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1477,14 +1479,6 @@ Examples: my thumb is physically located in my hand, food is located in my stoma
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#hasLocus"/>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotop.owl#physicalLocationOf"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#physicallyConnectedTo"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1493,6 +1487,14 @@ Examples: my thumb is physically located in my hand, food is located in my stoma
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1572,14 +1574,6 @@ Examples: my thumb is physically located in my hand, food is located in my stoma
 Example: fecundation preceeds embryonic development.</ru-meta:definition>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotop.owl#precedes"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#temporallyRelatedTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Process"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Time"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1588,6 +1582,14 @@ Example: fecundation preceeds embryonic development.</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Process"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Time"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1601,14 +1603,6 @@ Example: fecundation preceeds embryonic development.</ru-meta:definition>
 
 Example: fecundation preceeds embryonic development.</ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#temporallyRelatedTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Process"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Time"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1617,6 +1611,14 @@ Example: fecundation preceeds embryonic development.</ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Process"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Time"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1691,14 +1693,6 @@ For processes there are the relations &quot;hasProcessualPart&quot; and &quot;pr
 Examples: my thumb is a proper physical part of my hand, this keyboard is a proper physical part of my computer.</ru-meta:definition>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotop.owl#hasProperPhysicalPart"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#physicalPartOf"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1707,6 +1701,14 @@ Examples: my thumb is a proper physical part of my hand, this keyboard is a prop
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1750,14 +1752,6 @@ Example: &quot;Color&quot; as quality may be refined as &quot;Red Color&quot;. I
 			Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#DEPRECATED_RELATION"/>
         <owl:inverseOf rdf:resource="http://purl.org/biotop/biotop.owl#ramifies"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1766,6 +1760,14 @@ Example: &quot;Color&quot; as quality may be refined as &quot;Red Color&quot;. I
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1777,14 +1779,6 @@ Example: &quot;Color&quot; as quality may be refined as &quot;Red Color&quot;. I
         <dc:source>Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 			Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118</dc:source>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#DEPRECATED_RELATION"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1793,6 +1787,14 @@ Example: &quot;Color&quot; as quality may be refined as &quot;Red Color&quot;. I
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1897,14 +1899,6 @@ temporallyRelatedTo is meant as an organizing parent. It should not be asserted.
 Schulz S, Hahn U. Towards the ontological foundations of symbolic biological theories.
 Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118 </ru-meta:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/biotop.owl#physicallyAdjacentTo"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1913,6 +1907,14 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118 </ru-meta:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -2264,19 +2266,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118 </ru-meta:definition>
         <rdfs:label>amount of pure substance</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#CollectiveMaterialEntity"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Atom"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MonoMolecularEntity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -2297,6 +2286,19 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118 </ru-meta:definition>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Atom"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MonoMolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.org/biotop/biotop.owl#PluralityOfOrganisms"/>
@@ -2885,13 +2887,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118 </ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#BiologicalSizeValueRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#BiologicalSizeValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#BiologicalSizeValueRegion"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#BiologicalSizeValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>quality of being visible with or without microscope</ru-meta:definition>
@@ -3001,17 +3003,6 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118 </ru-meta:definition>
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#WaterMolecule"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasComponentPart"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
                         <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#MonoMolecularEntity"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
@@ -3021,6 +3012,17 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118 </ru-meta:definition>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#originatesFrom"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#LivingOrganism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasComponentPart"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#WaterMolecule"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Suspension and / or solution of biomolecules, ions, bigger particles in Water.</ru-meta:definition>
@@ -3172,13 +3174,13 @@ Artif Intell Med. 2007 Mar;39(3):237-50. PMID: 17321118 </ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#CanonicityValueRegion"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#CanonicityValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#CanonicityValueRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#CanonicityValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>The condition of an entity (state, process, function, object) in terms of being well or ill-formed or behaving</ru-meta:definition>
@@ -3700,7 +3702,7 @@ Practically all naturally occurring substances are of this sort. The different c
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#WaterMolecule"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#PeptideStructure"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -3711,7 +3713,7 @@ Practically all naturally occurring substances are of this sort. The different c
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#PeptideStructure"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#WaterMolecule"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -3787,13 +3789,13 @@ Practically all naturally occurring substances are of this sort. The different c
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#DevelopmentalValueRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#DevelopmentalValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#DevelopmentalValueRegion"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#DevelopmentalValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Ontogenetic stage</ru-meta:definition>
@@ -4045,12 +4047,6 @@ Its manifestation is a process its bearer is involved in virtue of the bearer&#3
     <owl:Class rdf:about="http://purl.org/biotop/biotop.owl#EntireNucleicAcidMolecule">
         <rdfs:label>entire nucleic acid molecule</rdfs:label>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#Monomer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleicAcidStructure"/>
@@ -4064,6 +4060,12 @@ Its manifestation is a process its bearer is involved in virtue of the bearer&#3
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#Monomer"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>not (properPartOf some MonoMolecularEntity)  REMOVED</rdfs:comment>
     </owl:Class>
@@ -5492,6 +5494,12 @@ Name &quot;event&quot; deprecated
         <rdfs:label>living body</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#Body"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#participatesIn"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#BiologicalLife"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#LivingOrganism"/>
@@ -5501,12 +5509,6 @@ Name &quot;event&quot; deprecated
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#participatesIn"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#BiologicalLife"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Entirety of the biological structure that constitutes a living organism</ru-meta:definition>
     </owl:Class>
@@ -5881,6 +5883,12 @@ Ontologically irrelevant partitioning node. Used for improving ontology housekee
         <rdfs:label>modified cell</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#CellByLocusPartition"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#derivesFrom"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#CellInVivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
@@ -5889,12 +5897,6 @@ Ontologically irrelevant partitioning node. Used for improving ontology housekee
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#derivesFrom"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#CellInVivo"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Cells that grow and replicate continuously outside the living organism.</ru-meta:definition>
     </owl:Class>
@@ -6232,13 +6234,13 @@ This is not the case with a classical molecule. </ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasComponentPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#NucleotideMolecule"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#NucleotideMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#NucleotideMolecule"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#NucleotideMolecule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>A nucleic acid is a complex, high-molecular-weight biochemical macromolecule composed of nucleotide chains that convey genetic information.</ru-meta:definition>
@@ -6306,6 +6308,12 @@ This is not the case with a classical molecule. </ru-meta:definition>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#ValueRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#inheresIn"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -6315,12 +6323,6 @@ This is not the case with a classical molecule. </ru-meta:definition>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#ValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.org/biotop/biotop.owl#ProcessQuality"/>
@@ -7046,19 +7048,6 @@ See disease role etc.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#inheresIn"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#inheresIn"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -7067,6 +7056,19 @@ See disease role etc.</rdfs:comment>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#inheresIn"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>physical length (e.g. in meters)</ru-meta:definition>
@@ -7119,13 +7121,13 @@ See disease role etc.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#inheresIn"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#MaterialObject"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>former name: StateOfAggregation</rdfs:comment>
@@ -7294,6 +7296,12 @@ See disease role etc.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#CollectiveMaterialEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#bearerOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#TaxonQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#LivingOrganism"/>
             </owl:Restriction>
@@ -7302,12 +7310,6 @@ See disease role etc.</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasGranularPart"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#LivingOrganism"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#bearerOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#TaxonQuality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Collection of two or more organisms of the same sort.  </ru-meta:definition>
@@ -8076,13 +8078,13 @@ contexts.</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#StateOfMatterValueRegion"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#StateOfMatterValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#qualityLocated"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#StateOfMatterValueRegion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#StateOfMatterValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>States of matter are the distinct forms that different phases of matter take on.</ru-meta:definition>
@@ -8846,16 +8848,6 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
         <rdfs:label>virus</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#OrganismByTaxonPartition"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasProperPhysicalPart"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#Cell"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#bearerOf"/>
                 <owl:someValuesFrom>
@@ -8869,6 +8861,16 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf rdf:resource="http://purl.org/biotop/biotop.owl#Cell"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasProperPhysicalPart"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#Cell"/>
+                    </owl:Restriction>
+                </owl:complementOf>
             </owl:Class>
         </rdfs:subClassOf>
         <ru-meta:definition>Sub-microscopic agent that requires a host cell to grow and reproduce. Viruses resemble other organisms in that they possess genes, and can evolve in infected cells by natural selection.  We therefore classify viruses as organisms, although there is an open debate.</ru-meta:definition>
@@ -8967,6 +8969,16 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#Fungus"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasProperPhysicalPart"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://purl.org/biotop/biotop.owl#Cell"/>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#bearerOf"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
@@ -8980,16 +8992,6 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasProperPhysicalPart"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/biotop/biotop.owl#Cytoplasm"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/biotop.owl#hasProperPhysicalPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.org/biotop/biotop.owl#Cell"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -9052,9 +9054,11 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AdultValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#EmbryonicValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#JuvenileValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Amphibian"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Bird"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Fish"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Mammal"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Reptile"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9063,81 +9067,6 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
             <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
             <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#OneDimensionalPhysicalEntity"/>
             <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TwoDimensionalPhysicalEntity"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Eicosanoid"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NonSteroidLipid"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Steroid"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ArtefactRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#BiologicalSystemRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ChemicalRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FamilyRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#HealthRelatedRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#OccupationalRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SpatialReferenceRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AnimalLanguage"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#HumanLanguage"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MachineLanguage"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AminoAcidOrPeptideMoleculeOrStructure"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CarbohydrateMoleculeOrResidue"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FattyAcidMoleculeOrResidue"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#HeterocyclicBaseMoleculeOrResidue"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#LipidMoleculeOrResidue"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleicAcidNucleotideOrNucleosideMoleculeOrResidue"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#BiologicalSizeValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CanonicityValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#DevelopmentalValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#StateOfMatterValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TaxonValueRegion"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CatalyticRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#IndicatorRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ReagentRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Alga"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AnimalIncludingHuman"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Plant"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Protist"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CellMembrane"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CellNucleus"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Cytoplasm"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Genome"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9157,11 +9086,18 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Amphibian"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Bird"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Fish"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Mammal"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Reptile"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleicAcidStructure"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleosideMolecule"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleotideMolecule"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CellMembrane"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CellNucleus"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Cytoplasm"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Genome"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9175,9 +9111,72 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleicAcidStructure"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleosideMolecule"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleotideMolecule"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AdultValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#EmbryonicValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#JuvenileValueRegion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#GroupInteraction"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#OrganismInteraction"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SubstanceInteraction"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AgeQuality"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#BiologicalSize"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Canonicity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#DevelopmentalQuality"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalForce"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalLength"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalMass"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalState"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalVolume"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#StateOfMatter"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TaxonQuality"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomAnimaliaValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomArchaeaValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomBacteriaValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomChromistaValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomFungiValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomPlantaeValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomProtozoaValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomVirusesValueRegion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AnimalLanguage"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#HumanLanguage"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#MachineLanguage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#EducatorRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#HealthProfessionalRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ResearcherRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#BiologicalSizeValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CanonicityValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#DevelopmentalValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#StateOfMatterValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TaxonValueRegion"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9186,6 +9185,17 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
             <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Eukaryote"/>
             <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Prokaryote"/>
             <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Virus"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FindingRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FoodRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PoisonRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PreventiveRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SubjectOfCareRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TherapeuticRole"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9200,11 +9210,9 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FindingRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FoodRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PoisonRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PreventiveRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TherapeuticRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#BodySystem"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Organ"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#OrganPart"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9228,36 +9236,26 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FindingRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FoodRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PoisonRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PreventiveRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SubjectOfCareRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TherapeuticRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CatalyticRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#IndicatorRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ReagentRole"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#BodySystem"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Organ"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#OrganPart"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Alga"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AnimalIncludingHuman"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Plant"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Protist"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmunologicRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SignallingRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#VitaminRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#GroupInteraction"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#OrganismInteraction"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SubstanceInteraction"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Eicosanoid"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NonSteroidLipid"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Steroid"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9271,14 +9269,42 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomAnimaliaValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomArchaeaValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomBacteriaValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomChromistaValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomFungiValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomPlantaeValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomProtozoaValueRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#KingdomVirusesValueRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AminoAcidOrPeptideMoleculeOrStructure"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#CarbohydrateMoleculeOrResidue"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FattyAcidMoleculeOrResidue"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#HeterocyclicBaseMoleculeOrResidue"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#LipidMoleculeOrResidue"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#NucleicAcidNucleotideOrNucleosideMoleculeOrResidue"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FindingRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FoodRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PoisonRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PreventiveRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TherapeuticRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ArtefactRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#BiologicalSystemRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ChemicalRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#FamilyRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#HealthRelatedRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#OccupationalRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SpatialReferenceRole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ImmunologicRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SignallingRole"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#VitaminRole"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -9297,33 +9323,9 @@ ontologically irrelevant node: disjoint partition: subatomic entity by charge</r
             <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#SolidValueRegion"/>
         </owl:members>
     </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#EducatorRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#HealthProfessionalRole"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#ResearcherRole"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#AgeQuality"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#BiologicalSize"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#Canonicity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#DevelopmentalQuality"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalForce"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalLength"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalMass"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalState"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#PhysicalVolume"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#StateOfMatter"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/biotop.owl#TaxonQuality"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
