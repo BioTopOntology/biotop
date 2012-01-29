@@ -1,0 +1,3610 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY biotop "http://purl.org/biotop/biotop.owl#" >
+    <!ENTITY umlssn "http://purl.org/biotop/umlssn.owl#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/biotop/biotop-umlssn.owl#"
+     xml:base="http://purl.org/biotop/biotop-umlssn.owl"
+     xmlns:biotop="http://purl.org/biotop/biotop.owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:umlssn="http://purl.org/biotop/umlssn.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.org/biotop/biotop-umlssn.owl">
+        <dc:subject>Biology and Medicine</dc:subject>
+        <dc:source>See project website at 
+http://purl.org/biotop</dc:source>
+        <dc:source>Stefan Schulz, Erik M. van Mulligen, L&#225;szl&#243; van den Hoek, Olivier Bodenreider, Elena Beisswanger, Alignment of the UMLS Semantic Network with BioTop. Methodology and Assessment.
+Forthcoming in Bioinformatics</dc:source>
+        <dc:description>Map between BioTop  and the UMLS Semantic Network</dc:description>
+        <dc:identifier>20100611</dc:identifier>
+        <dc:creator>Stefan Schulz</dc:creator>
+        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
+        <owl:versionInfo>Last modification
+June 11, 2010
+Stefan Schulz </owl:versionInfo>
+        <dc:title>BioTop UMLSSN</dc:title>
+        <dc:format>application/rdf+xml</dc:format>
+        <dc:title>Map between the BioTop  domain upper ontology and a OWL version of the UMLS Semantic Network</dc:title>
+        <dc:publisher>Institute of Medical Biometry and Medical Informatics, University Medical Center Freiburg, Stefan-Meier-Strasse 26, 79104 Freiburg, Germany</dc:publisher>
+        <dc:identifier>http://purl.org/biotop/biotop-umlssn.owl</dc:identifier>
+        <dc:creator>L&#225;szl&#243; van der Hoek</dc:creator>
+        <owl:imports rdf:resource="http://purl.org/biotop/biotop.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/umlssn.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
+    <owl:AnnotationProperty rdf:about="&dc;subject"/>
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#bearerOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;bearerOf"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#cooccurringWith -->
+
+    <owl:ObjectProperty rdf:about="&biotop;cooccurringWith"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#derivesFrom -->
+
+    <owl:ObjectProperty rdf:about="&biotop;derivesFrom"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasAgent">
+        <owl:equivalentProperty rdf:resource="&umlssn;hasDomain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasComponentPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasComponentPart"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasGranularPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasGranularPart"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasLocus -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasLocus"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasMember -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasMember"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasParticipant"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasPatient -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasPatient">
+        <owl:equivalentProperty rdf:resource="&umlssn;hasRange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasPhysicalPart -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasPhysicalPart"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#hasProcessQuality -->
+
+    <owl:ObjectProperty rdf:about="&biotop;hasProcessQuality"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#inheresIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;inheresIn"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#locusOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;locusOf"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#outcomeOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;outcomeOf"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#patientIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;patientIn"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#physicalPartOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicalPartOf"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#physicallyAdjacentTo -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyAdjacentTo"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#physicallyConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyConnectedTo"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#physicallyContains -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyContains"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#physicallyLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyLocatedIn"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#physicallySurrounds -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallySurrounds"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#physicallyTraverses -->
+
+    <owl:ObjectProperty rdf:about="&biotop;physicallyTraverses"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#processQualityOf -->
+
+    <owl:ObjectProperty rdf:about="&biotop;processQualityOf"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#qualityLocated -->
+
+    <owl:ObjectProperty rdf:about="&biotop;qualityLocated"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#hasDomain -->
+
+    <owl:ObjectProperty rdf:about="&umlssn;hasDomain"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#hasRange -->
+
+    <owl:ObjectProperty rdf:about="&umlssn;hasRange"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/biotop-umlssn.owl#StrictAssociation -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/biotop-umlssn.owl#StrictAssociation">
+        <rdfs:label>strict association</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T132"/>
+                    <rdf:Description rdf:about="&umlssn;T136"/>
+                    <rdf:Description rdf:about="&umlssn;T139"/>
+                    <rdf:Description rdf:about="&umlssn;T158"/>
+                    <rdf:Description rdf:about="&umlssn;T189"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#AcquiredAbnormalStructure -->
+
+    <owl:Class rdf:about="&biotop;AcquiredAbnormalStructure">
+        <owl:equivalentClass rdf:resource="&umlssn;T020"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Action -->
+
+    <owl:Class rdf:about="&biotop;Action"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Affecting -->
+
+    <owl:Class rdf:about="&biotop;Affecting">
+        <owl:equivalentClass rdf:resource="&umlssn;T151"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#AgeQuality -->
+
+    <owl:Class rdf:about="&biotop;AgeQuality"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Alga -->
+
+    <owl:Class rdf:about="&biotop;Alga">
+        <owl:equivalentClass rdf:resource="&umlssn;T003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#AminoAcidMoleculeOrResidue -->
+
+    <owl:Class rdf:about="&biotop;AminoAcidMoleculeOrResidue"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#AminoAcidSequenceInformation -->
+
+    <owl:Class rdf:about="&biotop;AminoAcidSequenceInformation"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#AmountOfPureSubstance -->
+
+    <owl:Class rdf:about="&biotop;AmountOfPureSubstance"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Amphibian -->
+
+    <owl:Class rdf:about="&biotop;Amphibian">
+        <owl:equivalentClass rdf:resource="&umlssn;T011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#AnimalIncludingHuman -->
+
+    <owl:Class rdf:about="&biotop;AnimalIncludingHuman">
+        <owl:equivalentClass rdf:resource="&umlssn;T008"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#AntibioticRole -->
+
+    <owl:Class rdf:about="&biotop;AntibioticRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ArchaebacterialCell -->
+
+    <owl:Class rdf:about="&biotop;ArchaebacterialCell">
+        <owl:equivalentClass rdf:resource="&umlssn;T194"/>
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ArtefactRole -->
+
+    <owl:Class rdf:about="&biotop;ArtefactRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Atom -->
+
+    <owl:Class rdf:about="&biotop;Atom">
+        <owl:equivalentClass rdf:resource="&umlssn;T196"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#BacterialCell -->
+
+    <owl:Class rdf:about="&biotop;BacterialCell">
+        <owl:equivalentClass rdf:resource="&umlssn;T007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Behavior -->
+
+    <owl:Class rdf:about="&biotop;Behavior">
+        <owl:equivalentClass rdf:resource="&umlssn;T053"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#BioMolecularSequenceStructure -->
+
+    <owl:Class rdf:about="&biotop;BioMolecularSequenceStructure">
+        <owl:equivalentClass rdf:resource="&umlssn;T085"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#BiologicalBoundary -->
+
+    <owl:Class rdf:about="&biotop;BiologicalBoundary"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#BiologicalSpace -->
+
+    <owl:Class rdf:about="&biotop;BiologicalSpace"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#BiologicalSystemRole -->
+
+    <owl:Class rdf:about="&biotop;BiologicalSystemRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#BiomedicalMaterialRole -->
+
+    <owl:Class rdf:about="&biotop;BiomedicalMaterialRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Biomolecule -->
+
+    <owl:Class rdf:about="&biotop;Biomolecule"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Bird -->
+
+    <owl:Class rdf:about="&biotop;Bird">
+        <owl:equivalentClass rdf:resource="&umlssn;T012"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#BodyLiquid -->
+
+    <owl:Class rdf:about="&biotop;BodyLiquid"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#BodySystem -->
+
+    <owl:Class rdf:about="&biotop;BodySystem">
+        <owl:equivalentClass rdf:resource="&umlssn;T022"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CanonicalValueRegion -->
+
+    <owl:Class rdf:about="&biotop;CanonicalValueRegion"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Canonicity -->
+
+    <owl:Class rdf:about="&biotop;Canonicity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CarbohydrateMoleculeOrResidue -->
+
+    <owl:Class rdf:about="&biotop;CarbohydrateMoleculeOrResidue">
+        <owl:equivalentClass rdf:resource="&umlssn;T118"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CarbohydrateSequenceInformation -->
+
+    <owl:Class rdf:about="&biotop;CarbohydrateSequenceInformation"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CategorizationSystem -->
+
+    <owl:Class rdf:about="&biotop;CategorizationSystem">
+        <owl:equivalentClass rdf:resource="&umlssn;T185"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Causing -->
+
+    <owl:Class rdf:about="&biotop;Causing">
+        <owl:equivalentClass rdf:resource="&umlssn;T147"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Cell -->
+
+    <owl:Class rdf:about="&biotop;Cell">
+        <owl:equivalentClass rdf:resource="&umlssn;T025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CellularComponent -->
+
+    <owl:Class rdf:about="&biotop;CellularComponent">
+        <owl:equivalentClass rdf:resource="&umlssn;T026"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CentralNervousSystem -->
+
+    <owl:Class rdf:about="&biotop;CentralNervousSystem"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ChainOfCarbohydrateMonomers -->
+
+    <owl:Class rdf:about="&biotop;ChainOfCarbohydrateMonomers">
+        <owl:equivalentClass rdf:resource="&umlssn;T088"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ChainOfNucleotideMonomers -->
+
+    <owl:Class rdf:about="&biotop;ChainOfNucleotideMonomers">
+        <owl:equivalentClass rdf:resource="&umlssn;T086"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ChlamydiaCell -->
+
+    <owl:Class rdf:about="&biotop;ChlamydiaCell"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CollectiveMaterialEntity -->
+
+    <owl:Class rdf:about="&biotop;CollectiveMaterialEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Complicating -->
+
+    <owl:Class rdf:about="&biotop;Complicating">
+        <owl:equivalentClass rdf:resource="&umlssn;T149"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CompoundOfCollectiveMaterialEntities -->
+
+    <owl:Class rdf:about="&biotop;CompoundOfCollectiveMaterialEntities"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#CongenitalAbnormalStructure -->
+
+    <owl:Class rdf:about="&biotop;CongenitalAbnormalStructure">
+        <owl:equivalentClass rdf:resource="&umlssn;T019"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Disposition -->
+
+    <owl:Class rdf:about="&biotop;Disposition"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Disrupting -->
+
+    <owl:Class rdf:about="&biotop;Disrupting">
+        <owl:equivalentClass rdf:resource="&umlssn;T146"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#DrugRole -->
+
+    <owl:Class rdf:about="&biotop;DrugRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#EducatorRole -->
+
+    <owl:Class rdf:about="&biotop;EducatorRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Eicosanoid -->
+
+    <owl:Class rdf:about="&biotop;Eicosanoid">
+        <owl:equivalentClass rdf:resource="&umlssn;T111"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#EmbryonicStructure -->
+
+    <owl:Class rdf:about="&biotop;EmbryonicStructure">
+        <owl:equivalentClass rdf:resource="&umlssn;T018"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#EnzymeRole -->
+
+    <owl:Class rdf:about="&biotop;EnzymeRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#FamilyRole -->
+
+    <owl:Class rdf:about="&biotop;FamilyRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#FindingRole -->
+
+    <owl:Class rdf:about="&biotop;FindingRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Fish -->
+
+    <owl:Class rdf:about="&biotop;Fish">
+        <owl:equivalentClass rdf:resource="&umlssn;T013"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#FoodRole -->
+
+    <owl:Class rdf:about="&biotop;FoodRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Function -->
+
+    <owl:Class rdf:about="&biotop;Function"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Fungus -->
+
+    <owl:Class rdf:about="&biotop;Fungus">
+        <owl:equivalentClass rdf:resource="&umlssn;T004"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Gene -->
+
+    <owl:Class rdf:about="&biotop;Gene"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#GeneRegion -->
+
+    <owl:Class rdf:about="&biotop;GeneRegion"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#GeneticInformation -->
+
+    <owl:Class rdf:about="&biotop;GeneticInformation"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Genome -->
+
+    <owl:Class rdf:about="&biotop;Genome"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#GeographicEntity -->
+
+    <owl:Class rdf:about="&biotop;GeographicEntity">
+        <owl:equivalentClass rdf:resource="&umlssn;T083"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Government -->
+
+    <owl:Class rdf:about="&biotop;Government"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#HealthProfessionalRole -->
+
+    <owl:Class rdf:about="&biotop;HealthProfessionalRole">
+        <owl:equivalentClass rdf:resource="&umlssn;T091"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#HealthRelatedRole -->
+
+    <owl:Class rdf:about="&biotop;HealthRelatedRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#HormoneRole -->
+
+    <owl:Class rdf:about="&biotop;HormoneRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Human -->
+
+    <owl:Class rdf:about="&biotop;Human">
+        <owl:equivalentClass rdf:resource="&umlssn;T016"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#HumanAction -->
+
+    <owl:Class rdf:about="&biotop;HumanAction"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#HumanLanguage -->
+
+    <owl:Class rdf:about="&biotop;HumanLanguage">
+        <owl:equivalentClass rdf:resource="&umlssn;T171"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Hurting -->
+
+    <owl:Class rdf:about="&biotop;Hurting"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ImmaterialNonphysicalEntity -->
+
+    <owl:Class rdf:about="&biotop;ImmaterialNonphysicalEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ImmaterialPhysicalEntity -->
+
+    <owl:Class rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ImmunologicRole -->
+
+    <owl:Class rdf:about="&biotop;ImmunologicRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Indicating -->
+
+    <owl:Class rdf:about="&biotop;Indicating">
+        <owl:equivalentClass rdf:resource="&umlssn;T156"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#IndividualBehavior -->
+
+    <owl:Class rdf:about="&biotop;IndividualBehavior">
+        <owl:equivalentClass rdf:resource="&umlssn;T055"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#InformationEntity -->
+
+    <owl:Class rdf:about="&biotop;InformationEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#InorganicMolecularEntity -->
+
+    <owl:Class rdf:about="&biotop;InorganicMolecularEntity">
+        <owl:equivalentClass rdf:resource="&umlssn;T197"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#IntellectualProduct -->
+
+    <owl:Class rdf:about="&biotop;IntellectualProduct">
+        <owl:equivalentClass rdf:resource="&umlssn;T170"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Interacting -->
+
+    <owl:Class rdf:about="&biotop;Interacting">
+        <owl:equivalentClass rdf:resource="&umlssn;interacts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Invertebrate -->
+
+    <owl:Class rdf:about="&biotop;Invertebrate">
+        <owl:equivalentClass rdf:resource="&umlssn;T009"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#LegalEntity -->
+
+    <owl:Class rdf:about="&biotop;LegalEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#LipidMoleculeOrResidue -->
+
+    <owl:Class rdf:about="&biotop;LipidMoleculeOrResidue">
+        <owl:equivalentClass rdf:resource="&umlssn;T119"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#LivingOrganism -->
+
+    <owl:Class rdf:about="&biotop;LivingOrganism"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MachineAction -->
+
+    <owl:Class rdf:about="&biotop;MachineAction">
+        <owl:equivalentClass rdf:resource="&umlssn;T066"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Mammal -->
+
+    <owl:Class rdf:about="&biotop;Mammal">
+        <owl:equivalentClass rdf:resource="&umlssn;T015"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ManagingCare -->
+
+    <owl:Class rdf:about="&biotop;ManagingCare">
+        <owl:equivalentClass rdf:resource="&umlssn;T153"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MaterialEntity -->
+
+    <owl:Class rdf:about="&biotop;MaterialEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Measure -->
+
+    <owl:Class rdf:about="&biotop;Measure">
+        <owl:equivalentClass rdf:resource="&umlssn;T081"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MeasuringAction -->
+
+    <owl:Class rdf:about="&biotop;MeasuringAction">
+        <rdfs:subClassOf rdf:resource="&biotop;Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MentalFunction -->
+
+    <owl:Class rdf:about="&biotop;MentalFunction"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MentalProcess -->
+
+    <owl:Class rdf:about="&biotop;MentalProcess">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;OrganismProcess"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasParticipant"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;CentralNervousSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MonoMolecularEntity -->
+
+    <owl:Class rdf:about="&biotop;MonoMolecularEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#MulticellularOrganism -->
+
+    <owl:Class rdf:about="&biotop;MulticellularOrganism"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#NeuroreactiveRole -->
+
+    <owl:Class rdf:about="&biotop;NeuroreactiveRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#NoncanonicalValueRegion -->
+
+    <owl:Class rdf:about="&biotop;NoncanonicalValueRegion"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#NucleicAcidStructure -->
+
+    <owl:Class rdf:about="&biotop;NucleicAcidStructure"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#NucleosideMolecule -->
+
+    <owl:Class rdf:about="&biotop;NucleosideMolecule"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#NucleotideMolecule -->
+
+    <owl:Class rdf:about="&biotop;NucleotideMolecule"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#OccupationalRole -->
+
+    <owl:Class rdf:about="&biotop;OccupationalRole">
+        <owl:equivalentClass rdf:resource="&umlssn;T090"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Organ -->
+
+    <owl:Class rdf:about="&biotop;Organ"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#OrganicMolecularEntity -->
+
+    <owl:Class rdf:about="&biotop;OrganicMolecularEntity">
+        <owl:equivalentClass rdf:resource="&umlssn;T109"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Organism -->
+
+    <owl:Class rdf:about="&biotop;Organism">
+        <owl:equivalentClass rdf:resource="&umlssn;T001"/>
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#OrganismPart -->
+
+    <owl:Class rdf:about="&biotop;OrganismPart"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#OrganismProcess -->
+
+    <owl:Class rdf:about="&biotop;OrganismProcess"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Organization -->
+
+    <owl:Class rdf:about="&biotop;Organization">
+        <owl:equivalentClass rdf:resource="&umlssn;T092"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PathologicalCondition -->
+
+    <owl:Class rdf:about="&biotop;PathologicalCondition"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PathologicalDisposition -->
+
+    <owl:Class rdf:about="&biotop;PathologicalDisposition"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PathologicalProcess -->
+
+    <owl:Class rdf:about="&biotop;PathologicalProcess"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PeptideStructure -->
+
+    <owl:Class rdf:about="&biotop;PeptideStructure"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Phosphate -->
+
+    <owl:Class rdf:about="&biotop;Phosphate"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Plant -->
+
+    <owl:Class rdf:about="&biotop;Plant"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PluralityOfOrganisms -->
+
+    <owl:Class rdf:about="&biotop;PluralityOfOrganisms"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PoisonRole -->
+
+    <owl:Class rdf:about="&biotop;PoisonRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Poisoning -->
+
+    <owl:Class rdf:about="&biotop;Poisoning"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PolyMolecularCompositeEntity -->
+
+    <owl:Class rdf:about="&biotop;PolyMolecularCompositeEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Population -->
+
+    <owl:Class rdf:about="&biotop;Population">
+        <owl:equivalentClass rdf:resource="&umlssn;T098"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PortionOfHeterogenousSolid -->
+
+    <owl:Class rdf:about="&biotop;PortionOfHeterogenousSolid"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PortionOfHomogenousMatter -->
+
+    <owl:Class rdf:about="&biotop;PortionOfHomogenousMatter"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#PreventionAction -->
+
+    <owl:Class rdf:about="&biotop;PreventionAction">
+        <owl:equivalentClass rdf:resource="&umlssn;T148"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ProcessualEntity -->
+
+    <owl:Class rdf:about="&biotop;ProcessualEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Producing -->
+
+    <owl:Class rdf:about="&biotop;Producing">
+        <owl:equivalentClass rdf:resource="&umlssn;T144"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Quality -->
+
+    <owl:Class rdf:about="&biotop;Quality">
+        <owl:equivalentClass rdf:resource="&umlssn;T080"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ReceptorRole -->
+
+    <owl:Class rdf:about="&biotop;ReceptorRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#RegulationOrLaw -->
+
+    <owl:Class rdf:about="&biotop;RegulationOrLaw">
+        <owl:equivalentClass rdf:resource="&umlssn;T089"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#RegulatoryBody -->
+
+    <owl:Class rdf:about="&biotop;RegulatoryBody"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Reptile -->
+
+    <owl:Class rdf:about="&biotop;Reptile">
+        <owl:equivalentClass rdf:resource="&umlssn;T014"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#ResearcherRole -->
+
+    <owl:Class rdf:about="&biotop;ResearcherRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#RickettsiaCell -->
+
+    <owl:Class rdf:about="&biotop;RickettsiaCell"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Role -->
+
+    <owl:Class rdf:about="&biotop;Role"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#SignOrSymptomRole -->
+
+    <owl:Class rdf:about="&biotop;SignOrSymptomRole">
+        <rdfs:subClassOf rdf:resource="&biotop;FindingRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#SocialBehavior -->
+
+    <owl:Class rdf:about="&biotop;SocialBehavior">
+        <owl:equivalentClass rdf:resource="&umlssn;T054"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#SpatialRegion -->
+
+    <owl:Class rdf:about="&biotop;SpatialRegion">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Steroid -->
+
+    <owl:Class rdf:about="&biotop;Steroid">
+        <owl:equivalentClass rdf:resource="&umlssn;T110"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#StructuredBiologicalEntity -->
+
+    <owl:Class rdf:about="&biotop;StructuredBiologicalEntity"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#SubjectOfCareRole -->
+
+    <owl:Class rdf:about="&biotop;SubjectOfCareRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#TemporalEntity -->
+
+    <owl:Class rdf:about="&biotop;TemporalEntity">
+        <owl:equivalentClass rdf:resource="&umlssn;T079"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Tissue -->
+
+    <owl:Class rdf:about="&biotop;Tissue">
+        <owl:equivalentClass rdf:resource="&umlssn;T024"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Treating -->
+
+    <owl:Class rdf:about="&biotop;Treating">
+        <owl:equivalentClass rdf:resource="&umlssn;T154"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#UsingAction -->
+
+    <owl:Class rdf:about="&biotop;UsingAction">
+        <owl:equivalentClass rdf:resource="&umlssn;T155"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Vertebrate -->
+
+    <owl:Class rdf:about="&biotop;Vertebrate">
+        <owl:equivalentClass rdf:resource="&umlssn;T010"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#Virus -->
+
+    <owl:Class rdf:about="&biotop;Virus">
+        <owl:equivalentClass rdf:resource="&umlssn;T005"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#VitaminRole -->
+
+    <owl:Class rdf:about="&biotop;VitaminRole"/>
+    
+
+
+    <!-- http://purl.org/biotop/biotop.owl#condition -->
+
+    <owl:Class rdf:about="&biotop;condition"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T001 -->
+
+    <owl:Class rdf:about="&umlssn;T001">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;patientIn"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Producing"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&umlssn;T073"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T002 -->
+
+    <owl:Class rdf:about="&umlssn;T002">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Alga"/>
+                    <rdf:Description rdf:about="&biotop;Plant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T003 -->
+
+    <owl:Class rdf:about="&umlssn;T003">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T004 -->
+
+    <owl:Class rdf:about="&umlssn;T004">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T005 -->
+
+    <owl:Class rdf:about="&umlssn;T005">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T006 -->
+
+    <owl:Class rdf:about="&umlssn;T006">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;ChlamydiaCell"/>
+                    <rdf:Description rdf:about="&biotop;RickettsiaCell"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T007 -->
+
+    <owl:Class rdf:about="&umlssn;T007">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T008 -->
+
+    <owl:Class rdf:about="&umlssn;T008">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T009 -->
+
+    <owl:Class rdf:about="&umlssn;T009">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T010 -->
+
+    <owl:Class rdf:about="&umlssn;T010">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T011 -->
+
+    <owl:Class rdf:about="&umlssn;T011">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T012 -->
+
+    <owl:Class rdf:about="&umlssn;T012">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T013 -->
+
+    <owl:Class rdf:about="&umlssn;T013">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T014 -->
+
+    <owl:Class rdf:about="&umlssn;T014">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T015 -->
+
+    <owl:Class rdf:about="&umlssn;T015">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T016 -->
+
+    <owl:Class rdf:about="&umlssn;T016">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T017 -->
+
+    <owl:Class rdf:about="&umlssn;T017">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T018"/>
+                    <rdf:Description rdf:about="&umlssn;T021"/>
+                    <rdf:Description rdf:about="&umlssn;T190"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="&umlssn;T073"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T018 -->
+
+    <owl:Class rdf:about="&umlssn;T018">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T019 -->
+
+    <owl:Class rdf:about="&umlssn;T019">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T020 -->
+
+    <owl:Class rdf:about="&umlssn;T020">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T021 -->
+
+    <owl:Class rdf:about="&umlssn;T021">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Cell"/>
+                    <rdf:Description rdf:about="&biotop;CellularComponent"/>
+                    <rdf:Description rdf:about="&biotop;Gene"/>
+                    <rdf:Description rdf:about="&biotop;Genome"/>
+                    <rdf:Description rdf:about="&biotop;OrganismPart"/>
+                    <rdf:Description rdf:about="&biotop;Tissue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T022 -->
+
+    <owl:Class rdf:about="&umlssn;T022">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+        <rdfs:subClassOf rdf:resource="&umlssn;T169"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T023 -->
+
+    <owl:Class rdf:about="&umlssn;T023">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;OrganismPart"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&biotop;BodySystem"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T024 -->
+
+    <owl:Class rdf:about="&umlssn;T024">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T025 -->
+
+    <owl:Class rdf:about="&umlssn;T025">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T026 -->
+
+    <owl:Class rdf:about="&umlssn;T026">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T028 -->
+
+    <owl:Class rdf:about="&umlssn;T028">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Gene"/>
+                    <rdf:Description rdf:about="&biotop;Genome"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T029 -->
+
+    <owl:Class rdf:about="&umlssn;T029">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;physicallyLocatedIn"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;MulticellularOrganism"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;physicallyLocatedIn"/>
+                        <owl:allValuesFrom rdf:resource="&biotop;StructuredBiologicalEntity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T030 -->
+
+    <owl:Class rdf:about="&umlssn;T030">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;BiologicalBoundary"/>
+                    <rdf:Description rdf:about="&biotop;BiologicalSpace"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;ImmaterialPhysicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T031 -->
+
+    <owl:Class rdf:about="&umlssn;T031">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;BodyLiquid"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;PortionOfHeterogenousSolid"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&biotop;derivesFrom"/>
+                                        <owl:someValuesFrom rdf:resource="&biotop;Organism"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&biotop;physicalPartOf"/>
+                                        <owl:someValuesFrom rdf:resource="&biotop;Organism"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T032 -->
+
+    <owl:Class rdf:about="&umlssn;T032">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Quality"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;inheresIn"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Organism"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T033 -->
+
+    <owl:Class rdf:about="&umlssn;T033">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;Disposition"/>
+                            <rdf:Description rdf:about="&biotop;ProcessualEntity"/>
+                            <rdf:Description rdf:about="&umlssn;T017"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;FindingRole"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;processQualityOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;FindingRole"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;StructuredBiologicalEntity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T034 -->
+
+    <owl:Class rdf:about="&umlssn;T034">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;condition"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                        <owl:someValuesFrom rdf:resource="&biotop;SignOrSymptomRole"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;processQualityOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;SignOrSymptomRole"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;FindingRole"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;processQualityOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;FindingRole"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;StructuredBiologicalEntity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T037 -->
+
+    <owl:Class rdf:about="&umlssn;T037">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Hurting"/>
+                    <rdf:Description rdf:about="&biotop;Poisoning"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T038 -->
+
+    <owl:Class rdf:about="&umlssn;T038">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;Disposition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;inheresIn"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&biotop;Biomolecule"/>
+                                            <rdf:Description rdf:about="&biotop;StructuredBiologicalEntity"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;ProcessualEntity"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;hasParticipant"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&biotop;Biomolecule"/>
+                                                    <rdf:Description rdf:about="&biotop;StructuredBiologicalEntity"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:complementOf rdf:resource="&biotop;Human"/>
+                                            </owl:Class>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T039 -->
+
+    <owl:Class rdf:about="&umlssn;T039">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T038"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&umlssn;T046"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T040 -->
+
+    <owl:Class rdf:about="&umlssn;T040">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T039"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;LivingOrganism"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T041 -->
+
+    <owl:Class rdf:about="&umlssn;T041">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;MentalFunction"/>
+                    <rdf:Description rdf:about="&biotop;MentalProcess"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T042 -->
+
+    <owl:Class rdf:about="&umlssn;T042">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T039"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;Organ"/>
+                                    <rdf:Description rdf:about="&biotop;Tissue"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T043 -->
+
+    <owl:Class rdf:about="&umlssn;T043">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T039"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Cell"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T044 -->
+
+    <owl:Class rdf:about="&umlssn;T044">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T039"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Biomolecule"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T045 -->
+
+    <owl:Class rdf:about="&umlssn;T045">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;Disposition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;inheresIn"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&biotop;Gene"/>
+                                            <rdf:Description rdf:about="&biotop;Genome"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;ProcessualEntity"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;hasParticipant"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&biotop;Gene"/>
+                                            <rdf:Description rdf:about="&biotop;Genome"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T046 -->
+
+    <owl:Class rdf:about="&umlssn;T046">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;PathologicalDisposition"/>
+                    <rdf:Description rdf:about="&biotop;PathologicalProcess"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;PathologicalCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T047 -->
+
+    <owl:Class rdf:about="&umlssn;T047">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;PathologicalDisposition"/>
+                    <rdf:Description rdf:about="&biotop;PathologicalProcess"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T048 -->
+
+    <owl:Class rdf:about="&umlssn;T048">
+        <rdfs:subClassOf rdf:resource="&biotop;PathologicalCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                <owl:someValuesFrom rdf:resource="&biotop;CentralNervousSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T049 -->
+
+    <owl:Class rdf:about="&umlssn;T049">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;PathologicalDisposition"/>
+                            <rdf:Description rdf:about="&biotop;PathologicalProcess"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;Cell"/>
+                                    <rdf:Description rdf:about="&biotop;MonoMolecularEntity"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;PathologicalCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T051 -->
+
+    <owl:Class rdf:about="&umlssn;T051">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T052"/>
+                    <rdf:Description rdf:about="&umlssn;T067"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T052 -->
+
+    <owl:Class rdf:about="&umlssn;T052">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T053"/>
+                    <rdf:Description rdf:about="&umlssn;T056"/>
+                    <rdf:Description rdf:about="&umlssn;T057"/>
+                    <rdf:Description rdf:about="&umlssn;T066"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T053 -->
+
+    <owl:Class rdf:about="&umlssn;T053">
+        <rdfs:subClassOf rdf:resource="&biotop;Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T054 -->
+
+    <owl:Class rdf:about="&umlssn;T054">
+        <rdfs:subClassOf rdf:resource="&biotop;Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T055 -->
+
+    <owl:Class rdf:about="&umlssn;T055">
+        <rdfs:subClassOf rdf:resource="&biotop;Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T056 -->
+
+    <owl:Class rdf:about="&umlssn;T056">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;HumanAction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasAgent"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Human"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T057 -->
+
+    <owl:Class rdf:about="&umlssn;T057">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T058"/>
+                    <rdf:Description rdf:about="&umlssn;T062"/>
+                    <rdf:Description rdf:about="&umlssn;T064"/>
+                    <rdf:Description rdf:about="&umlssn;T065"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T058 -->
+
+    <owl:Class rdf:about="&umlssn;T058"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T059 -->
+
+    <owl:Class rdf:about="&umlssn;T059"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T060 -->
+
+    <owl:Class rdf:about="&umlssn;T060">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T059"/>
+                    <rdf:Description rdf:about="&umlssn;T060"/>
+                    <rdf:Description rdf:about="&umlssn;T061"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T061 -->
+
+    <owl:Class rdf:about="&umlssn;T061"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T062 -->
+
+    <owl:Class rdf:about="&umlssn;T062">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Action"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasAgent"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;ResearcherRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T064 -->
+
+    <owl:Class rdf:about="&umlssn;T064">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Action"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasAgent"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;Government"/>
+                                    <rdf:Description rdf:about="&biotop;RegulatoryBody"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T065 -->
+
+    <owl:Class rdf:about="&umlssn;T065">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Action"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasAgent"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;EducatorRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T066 -->
+
+    <owl:Class rdf:about="&umlssn;T066">
+        <rdfs:subClassOf rdf:resource="&biotop;Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T067 -->
+
+    <owl:Class rdf:about="&umlssn;T067">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T037"/>
+                    <rdf:Description rdf:about="&umlssn;T068"/>
+                    <rdf:Description rdf:about="&umlssn;T070"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T068 -->
+
+    <owl:Class rdf:about="&umlssn;T068">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;Disposition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;inheresIn"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;Human"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;ProcessualEntity"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;hasAgent"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;Human"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T069 -->
+
+    <owl:Class rdf:about="&umlssn;T069">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;ProcessualEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasAgent"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Human"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasPatient"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;GeographicEntity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T070 -->
+
+    <owl:Class rdf:about="&umlssn;T070">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;condition"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;hasAgent"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;Human"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T073 -->
+
+    <owl:Class rdf:about="&umlssn;T073">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;PolyMolecularCompositeEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;ArtefactRole"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;patientIn"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Producing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T075 -->
+
+    <owl:Class rdf:about="&umlssn;T075">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;PolyMolecularCompositeEntity"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;ArtefactRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T079 -->
+
+    <owl:Class rdf:about="&umlssn;T079"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T080 -->
+
+    <owl:Class rdf:about="&umlssn;T080"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T081 -->
+
+    <owl:Class rdf:about="&umlssn;T081">
+        <rdfs:subClassOf rdf:resource="&biotop;ImmaterialNonphysicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T083 -->
+
+    <owl:Class rdf:about="&umlssn;T083"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T085 -->
+
+    <owl:Class rdf:about="&umlssn;T085"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T086 -->
+
+    <owl:Class rdf:about="&umlssn;T086"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T087 -->
+
+    <owl:Class rdf:about="&umlssn;T087"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T088 -->
+
+    <owl:Class rdf:about="&umlssn;T088"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T089 -->
+
+    <owl:Class rdf:about="&umlssn;T089">
+        <rdfs:subClassOf rdf:resource="&biotop;LegalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T090 -->
+
+    <owl:Class rdf:about="&umlssn;T090">
+        <rdfs:subClassOf rdf:resource="&biotop;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T091 -->
+
+    <owl:Class rdf:about="&umlssn;T091">
+        <rdfs:subClassOf rdf:resource="&biotop;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T092 -->
+
+    <owl:Class rdf:about="&umlssn;T092">
+        <rdfs:subClassOf rdf:resource="&biotop;LegalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T093 -->
+
+    <owl:Class rdf:about="&umlssn;T093">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasMember"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;HealthRelatedRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T094 -->
+
+    <owl:Class rdf:about="&umlssn;T094">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasMember"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;OccupationalRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T095 -->
+
+    <owl:Class rdf:about="&umlssn;T095">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasMember"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;SubjectOfCareRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasMember"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;SubjectOfCareRole"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T096 -->
+
+    <owl:Class rdf:about="&umlssn;T096">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;PluralityOfOrganisms"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&biotop;Organism"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T097 -->
+
+    <owl:Class rdf:about="&umlssn;T097">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Population"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasGranularPart"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;Human"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                        <owl:someValuesFrom rdf:resource="&biotop;OccupationalRole"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T098 -->
+
+    <owl:Class rdf:about="&umlssn;T098">
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T099 -->
+
+    <owl:Class rdf:about="&umlssn;T099">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T096"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;FamilyRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T100 -->
+
+    <owl:Class rdf:about="&umlssn;T100">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;PluralityOfOrganisms"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasGranularPart"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;AgeQuality"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T101 -->
+
+    <owl:Class rdf:about="&umlssn;T101">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Population"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasGranularPart"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;SubjectOfCareRole"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T102 -->
+
+    <owl:Class rdf:about="&umlssn;T102">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;Quality"/>
+                            <rdf:Description rdf:about="&biotop;Role"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;inheresIn"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;PluralityOfOrganisms"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;inheresIn"/>
+                        <owl:allValuesFrom rdf:resource="&biotop;PluralityOfOrganisms"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T103 -->
+
+    <owl:Class rdf:about="&umlssn;T103">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&biotop;PolyMolecularCompositeEntity"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;hasGranularPart"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;PolyMolecularCompositeEntity"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T109 -->
+
+    <owl:Class rdf:about="&umlssn;T109">
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T110 -->
+
+    <owl:Class rdf:about="&umlssn;T110">
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T111 -->
+
+    <owl:Class rdf:about="&umlssn;T111">
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T114 -->
+
+    <owl:Class rdf:about="&umlssn;T114">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;NucleicAcidStructure"/>
+                    <rdf:Description rdf:about="&biotop;NucleosideMolecule"/>
+                    <rdf:Description rdf:about="&biotop;NucleotideMolecule"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T115 -->
+
+    <owl:Class rdf:about="&umlssn;T115">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&umlssn;T109"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasComponentPart"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;Phosphate"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T116 -->
+
+    <owl:Class rdf:about="&umlssn;T116">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;AminoAcidMoleculeOrResidue"/>
+                    <rdf:Description rdf:about="&biotop;PeptideStructure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T118 -->
+
+    <owl:Class rdf:about="&umlssn;T118">
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T119 -->
+
+    <owl:Class rdf:about="&umlssn;T119">
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T121 -->
+
+    <owl:Class rdf:about="&umlssn;T121">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;Atom"/>
+                            <rdf:Description rdf:about="&biotop;CollectiveMaterialEntity"/>
+                            <rdf:Description rdf:about="&biotop;MonoMolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;DrugRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T122 -->
+
+    <owl:Class rdf:about="&umlssn;T122">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;BiomedicalMaterialRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T123 -->
+
+    <owl:Class rdf:about="&umlssn;T123">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&biotop;AmountOfPureSubstance"/>
+                            <rdf:Description rdf:about="&biotop;CompoundOfCollectiveMaterialEntities"/>
+                            <rdf:Description rdf:about="&biotop;MonoMolecularEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;BiologicalSystemRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T124 -->
+
+    <owl:Class rdf:about="&umlssn;T124">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;NeuroreactiveRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T125 -->
+
+    <owl:Class rdf:about="&umlssn;T125">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;HormoneRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T126 -->
+
+    <owl:Class rdf:about="&umlssn;T126">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;EnzymeRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T127 -->
+
+    <owl:Class rdf:about="&umlssn;T127">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;VitaminRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T129 -->
+
+    <owl:Class rdf:about="&umlssn;T129">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;ImmunologicRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T131 -->
+
+    <owl:Class rdf:about="&umlssn;T131">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;PoisonRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T132 -->
+
+    <owl:Class rdf:about="&umlssn;T132"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T133 -->
+
+    <owl:Class rdf:about="&umlssn;T133">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;physicalPartOf"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                            <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&umlssn;hasRange"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;hasPhysicalPart"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                            <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T134 -->
+
+    <owl:Class rdf:about="&umlssn;T134">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasPhysicalPart"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T135 -->
+
+    <owl:Class rdf:about="&umlssn;T135">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&umlssn;hasRange"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;physicallyLocatedIn"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                            <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T136 -->
+
+    <owl:Class rdf:about="&umlssn;T136"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T137 -->
+
+    <owl:Class rdf:about="&umlssn;T137">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;ProcessualEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;cooccurringWith"/>
+                        <owl:allValuesFrom rdf:resource="&biotop;ProcessualEntity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T139 -->
+
+    <owl:Class rdf:about="&umlssn;T139"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T144 -->
+
+    <owl:Class rdf:about="&umlssn;T144">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T146 -->
+
+    <owl:Class rdf:about="&umlssn;T146">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T147 -->
+
+    <owl:Class rdf:about="&umlssn;T147">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T148 -->
+
+    <owl:Class rdf:about="&umlssn;T148">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T149 -->
+
+    <owl:Class rdf:about="&umlssn;T149">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T151 -->
+
+    <owl:Class rdf:about="&umlssn;T151">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T153 -->
+
+    <owl:Class rdf:about="&umlssn;T153">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T154 -->
+
+    <owl:Class rdf:about="&umlssn;T154">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T155 -->
+
+    <owl:Class rdf:about="&umlssn;T155">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T156 -->
+
+    <owl:Class rdf:about="&umlssn;T156">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T158 -->
+
+    <owl:Class rdf:about="&umlssn;T158"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T162 -->
+
+    <owl:Class rdf:about="&umlssn;T162">
+        <rdfs:subClassOf rdf:resource="&biotop;MeasuringAction"/>
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T167 -->
+
+    <owl:Class rdf:about="&umlssn;T167">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;AmountOfPureSubstance"/>
+                    <rdf:Description rdf:about="&biotop;CompoundOfCollectiveMaterialEntities"/>
+                    <rdf:Description rdf:about="&biotop;MonoMolecularEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T168 -->
+
+    <owl:Class rdf:about="&umlssn;T168">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;FoodRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T169 -->
+
+    <owl:Class rdf:about="&umlssn;T169"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T170 -->
+
+    <owl:Class rdf:about="&umlssn;T170">
+        <rdfs:subClassOf rdf:resource="&biotop;ImmaterialNonphysicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T171 -->
+
+    <owl:Class rdf:about="&umlssn;T171">
+        <rdfs:subClassOf rdf:resource="&biotop;ImmaterialNonphysicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T172 -->
+
+    <owl:Class rdf:about="&umlssn;T172">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasPhysicalPart"/>
+                        <owl:allValuesFrom rdf:resource="&biotop;MaterialEntity"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T173 -->
+
+    <owl:Class rdf:about="&umlssn;T173">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;physicallyAdjacentTo"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                    <rdf:Description rdf:about="&biotop;SpatialRegion"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T174 -->
+
+    <owl:Class rdf:about="&umlssn;T174">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;physicallyConnectedTo"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                    <rdf:Description rdf:about="&biotop;SpatialRegion"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T175 -->
+
+    <owl:Class rdf:about="&umlssn;T175">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;physicallyConnectedTo"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                    <rdf:Description rdf:about="&biotop;SpatialRegion"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T176 -->
+
+    <owl:Class rdf:about="&umlssn;T176">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;physicallySurrounds"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T177 -->
+
+    <owl:Class rdf:about="&umlssn;T177">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;physicallyTraverses"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;ImmaterialPhysicalEntity"/>
+                                    <rdf:Description rdf:about="&biotop;MaterialEntity"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T179 -->
+
+    <owl:Class rdf:about="&umlssn;T179">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlssn;hasDomain"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;derivesFrom"/>
+                        <owl:allValuesFrom rdf:resource="&biotop;StructuredBiologicalEntity"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T184 -->
+
+    <owl:Class rdf:about="&umlssn;T184">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;condition"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;SignOrSymptomRole"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&biotop;processQualityOf"/>
+                                <owl:someValuesFrom rdf:resource="&biotop;SignOrSymptomRole"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;hasLocus"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;LivingOrganism"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T185 -->
+
+    <owl:Class rdf:about="&umlssn;T185">
+        <rdfs:subClassOf rdf:resource="&biotop;ImmaterialNonphysicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T188 -->
+
+    <owl:Class rdf:about="&umlssn;T188">
+        <rdfs:subClassOf rdf:resource="&biotop;Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T189 -->
+
+    <owl:Class rdf:about="&umlssn;T189"/>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T190 -->
+
+    <owl:Class rdf:about="&umlssn;T190">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;OrganismPart"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;Canonicity"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&biotop;qualityLocated"/>
+                                        <owl:someValuesFrom rdf:resource="&biotop;NoncanonicalValueRegion"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T192 -->
+
+    <owl:Class rdf:about="&umlssn;T192">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;ReceptorRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T194 -->
+
+    <owl:Class rdf:about="&umlssn;T194">
+        <rdfs:subClassOf rdf:resource="&biotop;StructuredBiologicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T195 -->
+
+    <owl:Class rdf:about="&umlssn;T195">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                <owl:someValuesFrom rdf:resource="&biotop;AntibioticRole"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T196 -->
+
+    <owl:Class rdf:about="&umlssn;T196">
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T197 -->
+
+    <owl:Class rdf:about="&umlssn;T197">
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T199_T023_T023 -->
+
+    <owl:Class rdf:about="&umlssn;T199_T023_T023">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T200 -->
+
+    <owl:Class rdf:about="&umlssn;T200">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;PolyMolecularCompositeEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;ArtefactRole"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;DrugRole"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T201 -->
+
+    <owl:Class rdf:about="&umlssn;T201">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&biotop;Quality"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;inheresIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&biotop;Organism"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                                        <owl:someValuesFrom rdf:resource="&biotop;SubjectOfCareRole"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#T203 -->
+
+    <owl:Class rdf:about="&umlssn;T203">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biotop;physicallyContains"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&biotop;bearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&biotop;DrugRole"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&biotop;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/umlssn.owl#interacts -->
+
+    <owl:Class rdf:about="&umlssn;interacts">
+        <rdfs:subClassOf rdf:resource="&biotop;ProcessualEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1413) http://owlapi.sourceforge.net -->
+
