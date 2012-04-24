@@ -39,20 +39,7 @@ Jan 29, 2012 by Stefan Schulz</owl:versionInfo>
         <dc:format>application/rdf+xml</dc:format>
         <dc:subject>An experimental top level ontology for biology and medicine.</dc:subject>
         <dc:identifier>20120129</dc:identifier>
-        <rdfs:comment xml:lang="zeilen;$i++){$buffer = $buffer . $zeilen[$i]};   $buffer =~ s/&lt;owl:inverseof.*\/&gt;//g;  open(out, &quot;&gt;$argv[0]&quot;) or die &quot;writing error&quot;;     print out $buffer; close(out);">This version contains inverse relation axioms. These may have an impact on the performance. 
-To remove them use the perl script:
-
-#!/usr/bin/perl
-my $buffer;my @zeilen;my @rules;
-
-#! RemoveInverses.pl
-#! by Stefan Schulz, 2009/09/25
-#! First argument: owl file
-
-open(DAT0, $ARGV[0]) || die &quot; Please specify an owl file from which you want to remove the inverse relation axioms.\n&quot;;
-while(&lt;DAT0&gt;){push(@zeilen,$_)}close(DAT0);
-#! Write text file into buffer
-for(my $i = 0;$i &lt; </rdfs:comment>
+        
         <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
         <dc:creator>Stefan Schulz, Martin Boeker, Elena Beisswanger, Holger Stenzhorn, Djamila Raufie, Daniel Schober, Udo Hahn</dc:creator>
     </owl:Ontology>
