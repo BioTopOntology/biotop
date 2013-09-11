@@ -20,6 +20,9 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:ru-meta="http://purl.org/imbi/ru-meta.owl#">
     <owl:Ontology rdf:about="http://purl.org/biotop/btl2.owl">
+        <dc:identifier>20130910</dc:identifier>
+        <owl:versionInfo>Last modification
+20130910 by Stefan Schulz</owl:versionInfo>
         <dc:publisher>Institute of Medical Informatics, Statistics and Documentation, Medical University of Graz, Austria</dc:publisher>
         <dc:description>BioTop Website:
 http://purl.org/biotop
@@ -31,11 +34,8 @@ http://www.google.com/search?q=Schulz+BioTop+site:www.ncbi.nlm.nih.gov/pmc/artic
         <dc:subject>An experimental top level ontology for biology and medicine. Lite Version</dc:subject>
         <dc:title>BioTopLite</dc:title>
         <dc:subject>Biology, Medicine</dc:subject>
-        <dc:identifier>20130710</dc:identifier>
         <dc:creator>Stefan Schulz, Martin Boeker, Daniel Schober, Elena Beisswanger, Holger Stenzhorn, Ludger Jansen, Udo Hahn</dc:creator>
         <dc:format>application/rdf+xml</dc:format>
-        <owl:versionInfo>Last modification
-20130710 by Stefan Schulz</owl:versionInfo>
         <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
         <dc:description>Upper-Level ontology for Biology and Medicine. Compatible with BFO, DOLCE, and the UMLS Semantic Network (mapping files available)</dc:description>
     </owl:Ontology>
@@ -52,15 +52,15 @@ http://www.google.com/search?q=Schulz+BioTop+site:www.ncbi.nlm.nih.gov/pmc/artic
 
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
     <owl:AnnotationProperty rdf:about="&dc;publisher"/>
-    <owl:AnnotationProperty rdf:about="&ru-meta;synonym"/>
     <owl:AnnotationProperty rdf:about="&owl;priorVersion"/>
+    <owl:AnnotationProperty rdf:about="&ru-meta;synonym"/>
     <owl:AnnotationProperty rdf:about="&ru-meta;definition"/>
     <owl:AnnotationProperty rdf:about="&dc;subject"/>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&dc;identifier"/>
     <owl:AnnotationProperty rdf:about="&dc;source"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
@@ -618,6 +618,7 @@ Example: The inflammation of a sinus is represented by the word &apos;Sinusitis&
 
     <owl:ObjectProperty rdf:about="&owl;topObjectProperty">
         <rdfs:label>top object property</rdfs:label>
+        <rdfs:comment>The hierarchy of object properties is assumed to be exhaustive. In case the inclusion of new object properties is considered, it should be analyzed whether they can be expressed by the existing ones or whether they can be expressed as subclassed of process</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -788,7 +789,7 @@ Example: The inflammation of a sinus is represented by the word &apos;Sinusitis&
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasGranularPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment></rdfs:comment>
@@ -891,19 +892,7 @@ Practically all naturally occurring substances are of this sort. The different c
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Disposition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -923,8 +912,20 @@ Practically all naturally occurring substances are of this sort. The different c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Disposition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>A disposition is a realizable entity. 
@@ -939,8 +940,19 @@ Its manifestation is a process its bearer is involved in virtue of the bearer&ap
         <rdfs:label>entity at some time</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isReferredToAtTime"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -948,17 +960,6 @@ Its manifestation is a process its bearer is involved in virtue of the bearer&ap
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isReferredToAtTime"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
-            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -985,18 +986,24 @@ Its manifestation is a process its bearer is involved in virtue of the bearer&ap
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isReferredToAtTime"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>An entity at some time (temporally qualified continuant) is the temporal snapshot of a temporally extended object:
-
 
 It is not an ontologically relevant category. Used for mitigating the problem of non-temporalized (binary) relations in OWL. 
 
@@ -1026,6 +1033,12 @@ An instance of a temporally qualified entity requires having a timestamp. </ru-m
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
             </owl:Restriction>
@@ -1034,12 +1047,6 @@ An instance of a temporally qualified entity requires having a timestamp. </ru-m
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Function"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1056,7 +1063,8 @@ For biological objects, which developed by evolution, the definition of function
 http://www.slideserve.com/presentation/103450/The-Canonical-Life). 
 
 In BFO &quot;Disposition&quot; and &quot;Function&quot; are siblings, in BioTop Function is more specific.
- </ru-meta:definition>
+ 
+However, function and disposition are not disjoint, so that functions can be dispositions in certain cases.</ru-meta:definition>
     </owl:Class>
     
 
@@ -1068,25 +1076,6 @@ In BFO &quot;Disposition&quot; and &quot;Function&quot; are siblings, in BioTop 
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#OneDimensionalPhysicalEntity"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TwoDimensionalPhysicalEntity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -1096,6 +1085,12 @@ In BFO &quot;Disposition&quot; and &quot;Function&quot; are siblings, in BioTop 
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1118,38 +1113,16 @@ In BFO &quot;Disposition&quot; and &quot;Function&quot; are siblings, in BioTop 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#OneDimensionalPhysicalEntity"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TwoDimensionalPhysicalEntity"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalMass"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1168,9 +1141,44 @@ In BFO &quot;Disposition&quot; and &quot;Function&quot; are siblings, in BioTop 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
             </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalMass"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <ru-meta:definition>Physical spaces that have a threedimensional spatial dimension but no mass.
 Old name: immaterial anatomical entity</ru-meta:definition>
@@ -1184,6 +1192,12 @@ Old name: immaterial anatomical entity</ru-meta:definition>
     <owl:Class rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity">
         <rdfs:label>immaterial three dimensional physical entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
@@ -1210,12 +1224,6 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <ru-meta:definition>three-dimensional space</ru-meta:definition>
     </owl:Class>
     
@@ -1228,66 +1236,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalVolume"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#InformationObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Function"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ObjectQuality"/>
-                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1302,14 +1252,72 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#InformationObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalVolume"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Function"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ObjectQuality"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isIncludedIn"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Piece of information (not necessarily human) , as it exists independently of any potential material carrier.</ru-meta:definition>
@@ -1345,6 +1353,12 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isLifeOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isLifeOf"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -1354,12 +1368,6 @@ Old name: immaterial anatomical entity</ru-meta:definition>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isLifeOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>The whole process which is characterized by the existence of a physical or information entity. E.g. the life process of an organism perdures as long as this entity exists. 
@@ -1381,13 +1389,19 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
                 <owl:allValuesFrom>
                     <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
-                        </owl:intersectionOf>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Function"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
+                        </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
@@ -1410,8 +1424,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasGranularPart"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1422,20 +1436,8 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasGranularPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasComponentPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TwoDimensionalPhysicalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1459,8 +1461,14 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TwoDimensionalPhysicalEntity"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasLife"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasComponentPart"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1471,19 +1479,19 @@ Old name: immaterial anatomical entity</ru-meta:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
                 <owl:allValuesFrom>
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Function"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
-                        </owl:unionOf>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
+                        </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
@@ -1580,6 +1588,22 @@ This is not the case with a classical molecule. </ru-meta:definition>
 
     <owl:Class rdf:about="http://purl.org/biotop/btl2.owl#Particular">
         <rdfs:label>particular</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Function"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ValueRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isRepresentedBy"/>
@@ -1739,46 +1763,7 @@ However, BioTop does not claim that all of its classes are the extension of univ
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PointInTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasParticipant"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ProcessQuality"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1790,8 +1775,8 @@ However, BioTop does not claim that all of its classes are the extension of univ
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1824,8 +1809,47 @@ However, BioTop does not claim that all of its classes are the extension of univ
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PointInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ProcessQuality"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Process is in BioTop the generic subsumer of anything that &quot;occurs&quot;. 
@@ -1848,13 +1872,13 @@ Processes have physical or informational entities as participants.</ru-meta:defi
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>quality that inheres in a process</ru-meta:definition>
@@ -1869,26 +1893,14 @@ Processes have physical or informational entities as participants.</ru-meta:defi
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#ValueRegion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1904,6 +1916,18 @@ Processes have physical or informational entities as participants.</ru-meta:defi
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#ValueRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1933,6 +1957,24 @@ Processes have physical or informational entities as participants.</ru-meta:defi
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -1948,26 +1990,8 @@ Processes have physical or informational entities as participants.</ru-meta:defi
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>A role is a realizable entity the manifestation of which brings about some result or end that is not essential to its bearer in virtue of the kind of thing that it is, but that can be served or participated in by that kind of continuant entity in some kinds of natural, social or institutional
@@ -1983,12 +2007,6 @@ contexts.</ru-meta:definition>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasCondition"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Condition"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
             </owl:Restriction>
@@ -1997,6 +2015,12 @@ contexts.</ru-meta:definition>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasCondition"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasCondition"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Condition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>A situation is a part of an entity`s life, in which a certain condition is fully present</ru-meta:definition>
@@ -2067,51 +2091,13 @@ Old name: anatomical structure</ru-meta:definition>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#precedes"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPrecededBy"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PointInTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isProjectionOf"/>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPrecededBy"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -2130,6 +2116,44 @@ Old name: anatomical structure</ru-meta:definition>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasBoundary"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PointInTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#precedes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isProjectionOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ru-meta:definition>Point or interval on the time axis</ru-meta:definition>
@@ -2171,6 +2195,12 @@ Old name: anatomical structure</ru-meta:definition>
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#atSomeTime"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
             </owl:Restriction>
@@ -2178,12 +2208,6 @@ Old name: anatomical structure</ru-meta:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isProjectionOf"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#includes"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2227,149 +2251,6 @@ Old name: anatomical structure</ru-meta:definition>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Atom"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MonoMolecularEntity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PolyMolecularCompositeEntity"/>
-        </owl:members>
-    </rdf:Description>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalMass"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Function"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ValueRegion"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#OneDimensionalPhysicalEntity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TwoDimensionalPhysicalEntity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Wave"/>
-        </owl:members>
-    </rdf:Description>
-    <owl:Class>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#causes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:unionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
-            </owl:Restriction>
-        </owl:unionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Atom"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MonoMolecularEntity"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ValueRegion"/>
-        </owl:members>
-    </rdf:Description>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasComponentPart"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalVolume"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
-        </owl:intersectionOf>
-    </owl:Class>
     <owl:Class>
         <rdfs:subClassOf>
             <owl:Class>
@@ -2396,66 +2277,6 @@ Old name: anatomical structure</ru-meta:definition>
     </owl:Class>
     <owl:Class>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#ValueRegion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalVolume"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TaxonQuality"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PluralityOfOrganisms"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TaxonQuality"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#StructuredBiologicalEntity"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasGranularPart"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#CollectiveMaterialEntity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
-        </owl:intersectionOf>
-    </owl:Class>
-    <owl:Class>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
@@ -2478,6 +2299,194 @@ Old name: anatomical structure</ru-meta:definition>
             <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ObjectQuality"/>
         </owl:intersectionOf>
     </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Atom"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MonoMolecularEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PolyMolecularCompositeEntity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#OneDimensionalPhysicalEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TwoDimensionalPhysicalEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Wave"/>
+        </owl:members>
+    </rdf:Description>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TaxonQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PluralityOfOrganisms"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasGranularPart"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#CollectiveMaterialEntity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#TaxonQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#StructuredBiologicalEntity"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalVolume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Function"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ValueRegion"/>
+        </owl:members>
+    </rdf:Description>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalMass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#causes"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:unionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+            </owl:Restriction>
+        </owl:unionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#projectsOnto"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#ValueRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasComponentPart"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Atom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MonoMolecularEntity"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Canonicity"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PhysicalForce"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PhysicalLength"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PhysicalMass"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PhysicalVolume"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TaxonQuality"/>
+        </owl:members>
+    </rdf:Description>
     <owl:Class>
         <rdfs:subClassOf>
             <owl:Class>
@@ -2502,15 +2511,30 @@ Old name: anatomical structure</ru-meta:definition>
             </owl:Class>
         </owl:intersectionOf>
     </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#PhysicalVolume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#EntityAtSomeTime"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+        </owl:intersectionOf>
+    </owl:Class>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Canonicity"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PhysicalForce"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PhysicalLength"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PhysicalMass"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PhysicalVolume"/>
-            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TaxonQuality"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ValueRegion"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
