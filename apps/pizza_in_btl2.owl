@@ -502,10 +502,6 @@
             <ObjectComplementOf>
                 <Class IRI="#VegetarianPizza"/>
             </ObjectComplementOf>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
-                <Class IRI="#MeatTopping"/>
-            </ObjectMinCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -642,58 +638,15 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#VegetarianPizzaEquivalent1"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Pizza"/>
-            <ObjectUnionOf>
-                <ObjectComplementOf>
-                    <Class IRI="#MeatTopping"/>
-                </ObjectComplementOf>
-                <ObjectAllValuesFrom>
-                    <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
-                    <Class IRI="#VegetarianTopping"/>
-                </ObjectAllValuesFrom>
-            </ObjectUnionOf>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#VegetarianPizzaEquivalent2"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Pizza"/>
-            <ObjectUnionOf>
-                <ObjectComplementOf>
-                    <ObjectUnionOf>
-                        <Class IRI="#FishTopping"/>
-                        <Class IRI="#MeatTopping"/>
-                    </ObjectUnionOf>
-                </ObjectComplementOf>
-                <ObjectAllValuesFrom>
-                    <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
-                    <ObjectUnionOf>
-                        <Class IRI="#CheeseTopping"/>
-                        <Class IRI="#FruitTopping"/>
-                        <Class IRI="#HerbSpiceTopping"/>
-                        <Class IRI="#NutTopping"/>
-                        <Class IRI="#SauceTopping"/>
-                        <Class IRI="#VegetableTopping"/>
-                    </ObjectUnionOf>
-                </ObjectAllValuesFrom>
-            </ObjectUnionOf>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#VegetarianTopping"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#PizzaTopping"/>
-            <ObjectUnionOf>
-                <Class IRI="#CheeseTopping"/>
-                <Class IRI="#FruitTopping"/>
-                <Class IRI="#HerbSpiceTopping"/>
-                <Class IRI="#NutTopping"/>
-                <Class IRI="#SauceTopping"/>
-                <Class IRI="#VegetableTopping"/>
-            </ObjectUnionOf>
-        </ObjectIntersectionOf>
+        <ObjectUnionOf>
+            <Class IRI="#CheeseTopping"/>
+            <Class IRI="#FruitTopping"/>
+            <Class IRI="#HerbSpiceTopping"/>
+            <Class IRI="#NutTopping"/>
+            <Class IRI="#SauceTopping"/>
+            <Class IRI="#VegetableTopping"/>
+        </ObjectUnionOf>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#American"/>
@@ -1401,7 +1354,7 @@
         <Class IRI="#IceCream"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
-            <Class IRI="#FruitTopping"/>
+            <Class IRI="#IceCreamTopping"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1524,18 +1477,6 @@
     <SubClassOf>
         <Class IRI="#MeatTopping"/>
         <Class IRI="#PizzaTopping"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MeatTopping"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
-            <ObjectComplementOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty abbreviatedIRI="btl2:isComponentPartOf"/>
-                    <Class IRI="#VegetarianPizza"/>
-                </ObjectSomeValuesFrom>
-            </ObjectComplementOf>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MeatyPizza"/>
@@ -1880,10 +1821,6 @@
     <SubClassOf>
         <Class IRI="#PizzaBase"/>
         <Class IRI="#Food"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PizzaRecipe"/>
-        <Class IRI="#recipe"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PizzaTopping"/>
@@ -2410,15 +2347,12 @@
         <Class IRI="#Pizza"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#VegetarianPizzaEquivalent1"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
-            <Class IRI="#PizzaBase"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#VegetarianPizzaEquivalent2"/>
         <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VegetarianTopping"/>
+        <Class IRI="#PizzaTopping"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Veneziana"/>
@@ -3050,10 +2984,6 @@
     <DisjointClasses>
         <Class IRI="#CheeseTopping"/>
         <Class IRI="#SauceTopping"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#CheeseTopping"/>
-        <Class IRI="#VegetableTopping"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#ChickenTopping"/>
@@ -4085,13 +4015,6 @@
         <Class IRI="#Country"/>
         <NamedIndividual IRI="#Italy"/>
     </ClassAssertion>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#America"/>
-        <NamedIndividual IRI="#England"/>
-        <NamedIndividual IRI="#France"/>
-        <NamedIndividual IRI="#Germany"/>
-        <NamedIndividual IRI="#Italy"/>
-    </DifferentIndividuals>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#American</IRI>
@@ -4153,6 +4076,11 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">MargheritaPizza</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MeatTopping</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">&apos;has component part&apos; only (not (&apos;is component part of&apos; some VegetarianPizza))</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Mushroom</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">MushroomPizza</Literal>
@@ -4206,7 +4134,28 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#VegetarianPizzaEquivalent1</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Pizza
+ and ((not (MeatTopping))
+ or (&apos;has component part&apos; only VegetarianTopping))</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VegetarianPizzaEquivalent1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pizza
  and (hasComponentPart only VegetarianTopping)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VegetarianPizzaEquivalent2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pizza
+ and ((not (FishTopping
+ or MeatTopping))
+ or (&apos;has component part&apos; only 
+    (CheeseTopping
+     or FruitTopping
+     or HerbSpiceTopping
+     or NutTopping
+     or SauceTopping
+     or VegetableTopping)))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
