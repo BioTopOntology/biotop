@@ -1,0 +1,4154 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/2/Ontology1332940014416.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2012/2/Ontology1332940014416.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="btl2" IRI="http://purl.org/biotop/btl2.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/biotop/btl2.owl</Import>
+    <Declaration>
+        <Class abbreviatedIRI="btl2:Action"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="btl2:ImmaterialThreeDimensionalPhysicalEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="btl2:MaterialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="btl2:ObjectQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="btl2:Plan"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="btl2:PolyMolecularCompositeEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#American"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AmericanHot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AmericanPizzaRecipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnchoviesTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArtichokeTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AsparagusTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BananaSplitIceCream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cajun"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CajunSpiceTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaperTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capricciosa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Caprina"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CheeseTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CheeseVegetableTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CheeseyPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChickenTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CreamTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CreatingRecipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeepPanBase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fiorentina"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FishTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Food"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FourCheesesTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FourSeasons"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FruitTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FruttiDiMare"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GarlicTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Giardiniera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GoatsCheeseTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GorgonzolaTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GreenPepperTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HamTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HerbSpiceTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HotGreenPepperTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HotSpicedBeefTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceCream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceCreamTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InterestingPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ItalianPizzaRecipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JalapenoPepperTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LaReine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeekTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaraschinoCherryTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Margherita"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeatTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeatyPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mild"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MixedSeafoodTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MozzarellaTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mushroom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MushroomTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NamedPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Napoletana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonVegetarianPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NutSplintTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NutTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OliveTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OnionTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParmaHamTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parmense"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParmesanTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PeperonataTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PeperoniSausageTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PepperTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PetitPoisTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PineKernels"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PizzaBase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PizzaRecipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PizzaTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PolloAdAstra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrawnsTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PreparingFoodAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PreparingPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrinceCarlo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuattroFormaggi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RealItalienPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RedOnionTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RocketTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rosa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RosemaryTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SauceIceCreamTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SauceTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siciliana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SlicedTomatoTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SloppyGiuseppe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Soho"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpicinessQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpicyPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpicyPizzaEquivalent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpicyTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpinachTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrawberrySauceTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SultanaTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SundriedTomatoTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SweetPepperTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SweetPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThinAndCrispyBase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThinAndCrispyPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TobascoPepperSauce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TomatoTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnclosedPizza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VegetableTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VegetarianPizzaEquivalent1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VegetarianPizzaEquivalent2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VegetarianTopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Veneziana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#recipe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:derivesFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:hasOutcome"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:hasRealization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:includes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:isComponentPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:isIncludedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#America"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#England"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Germany"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Italy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AmericanPizzaRecipe"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PizzaRecipe"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#CreatingRecipe"/>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="btl2:isIncludedIn"/>
+                        <NamedIndividual IRI="#America"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CheeseyPizza"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#CheeseTopping"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#InterestingPizza"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PizzaTopping"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ItalianPizzaRecipe"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PizzaRecipe"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#CreatingRecipe"/>
+                    <ObjectHasValue>
+                        <ObjectProperty abbreviatedIRI="btl2:isIncludedIn"/>
+                        <NamedIndividual IRI="#Italy"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MeatyPizza"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MeatTopping"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PizzaRecipe"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#recipe"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasRealization"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="btl2:Action"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="btl2:hasOutcome"/>
+                        <Class IRI="#Pizza"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PreparingPizza"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PreparingFoodAction"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasOutcome"/>
+                <Class IRI="#Pizza"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RealItalienPizza"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#PreparingPizza"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                        <Class IRI="#ItalianPizzaRecipe"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpicinessQuality"/>
+        <ObjectUnionOf>
+            <Class IRI="#Hot"/>
+            <Class IRI="#Medium"/>
+            <Class IRI="#Mild"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpicyPizza"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#SpicyTopping"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpicyPizzaEquivalent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#PizzaTopping"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+                        <Class IRI="#Hot"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpicyTopping"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PizzaTopping"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+                <Class IRI="#Hot"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SweetPizza"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#FruitTopping"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ThinAndCrispyPizza"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#ThinAndCrispyBase"/>
+                    <ObjectComplementOf>
+                        <Class IRI="#PizzaBase"/>
+                    </ObjectComplementOf>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VegetarianPizzaEquivalent1"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectUnionOf>
+                <ObjectComplementOf>
+                    <Class IRI="#MeatTopping"/>
+                </ObjectComplementOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                    <Class IRI="#VegetarianTopping"/>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VegetarianPizzaEquivalent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Pizza"/>
+            <ObjectUnionOf>
+                <ObjectComplementOf>
+                    <ObjectUnionOf>
+                        <Class IRI="#FishTopping"/>
+                        <Class IRI="#MeatTopping"/>
+                    </ObjectUnionOf>
+                </ObjectComplementOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                    <ObjectUnionOf>
+                        <Class IRI="#CheeseTopping"/>
+                        <Class IRI="#FruitTopping"/>
+                        <Class IRI="#HerbSpiceTopping"/>
+                        <Class IRI="#NutTopping"/>
+                        <Class IRI="#SauceTopping"/>
+                        <Class IRI="#VegetableTopping"/>
+                    </ObjectUnionOf>
+                </ObjectAllValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VegetarianTopping"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PizzaTopping"/>
+            <ObjectUnionOf>
+                <Class IRI="#CheeseTopping"/>
+                <Class IRI="#FruitTopping"/>
+                <Class IRI="#HerbSpiceTopping"/>
+                <Class IRI="#NutTopping"/>
+                <Class IRI="#SauceTopping"/>
+                <Class IRI="#VegetableTopping"/>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#American"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#American"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#PeperoniSausageTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PeperoniSausageTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#American"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#PreparingPizza"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                    <Class IRI="#AmericanPizzaRecipe"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#American"/>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmericanHot"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#HotGreenPepperTopping"/>
+                    <Class IRI="#JalapenoPepperTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#PeperoniSausageTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#HotGreenPepperTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#JalapenoPepperTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PeperoniSausageTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmericanHot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#PreparingPizza"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                    <Class IRI="#AmericanPizzaRecipe"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmericanHot"/>
+        <ObjectExactCardinality cardinality="5">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnchoviesTopping"/>
+        <Class IRI="#FishTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArtichokeTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AsparagusTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BananaSplitIceCream"/>
+        <Class IRI="#IceCream"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BananaSplitIceCream"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#CreamTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BananaSplitIceCream"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#MaraschinoCherryTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BananaSplitIceCream"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#NutSplintTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BananaSplitIceCream"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#StrawberrySauceTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cajun"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#OnionTopping"/>
+                    <Class IRI="#PeperonataTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#PrawnsTopping"/>
+                    <Class IRI="#TobascoPepperSauce"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OnionTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PeperonataTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PrawnsTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TobascoPepperSauce"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cajun"/>
+        <ObjectExactCardinality cardinality="6">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CajunSpiceTopping"/>
+        <Class IRI="#HerbSpiceTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CajunSpiceTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaperTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capricciosa"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AnchoviesTopping"/>
+                    <Class IRI="#CaperTopping"/>
+                    <Class IRI="#HamTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#PeperonataTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#AnchoviesTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#CaperTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#HamTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PeperonataTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capricciosa"/>
+        <ObjectExactCardinality cardinality="7">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caprina"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#GoatsCheeseTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#SundriedTomatoTopping"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#GoatsCheeseTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#SundriedTomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caprina"/>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CheeseTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CheeseVegetableTopping"/>
+        <Class IRI="#CheeseTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CheeseVegetableTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CheeseyPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChickenTopping"/>
+        <Class IRI="#MeatTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChickenTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class abbreviatedIRI="btl2:ImmaterialThreeDimensionalPhysicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreamTopping"/>
+        <Class IRI="#IceCreamTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CreatingRecipe"/>
+        <Class abbreviatedIRI="btl2:Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeepPanBase"/>
+        <Class IRI="#PizzaBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiorentina"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#GarlicTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#ParmesanTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#SpinachTopping"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#GarlicTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#ParmesanTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#SpinachTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fiorentina"/>
+        <ObjectExactCardinality cardinality="6">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FishTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FishTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Food"/>
+        <Class abbreviatedIRI="btl2:PolyMolecularCompositeEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FourCheesesTopping"/>
+        <Class IRI="#CheeseTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FourCheesesTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FourSeasons"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AnchoviesTopping"/>
+                    <Class IRI="#CaperTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#MushroomTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#PeperoniSausageTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#AnchoviesTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#CaperTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MushroomTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PeperoniSausageTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FourSeasons"/>
+        <ObjectExactCardinality cardinality="7">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FruitTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FruttiDiMare"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#GarlicTopping"/>
+                    <Class IRI="#MixedSeafoodTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#GarlicTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MixedSeafoodTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FruttiDiMare"/>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GarlicTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Giardiniera"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#LeekTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#MushroomTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#PeperonataTopping"/>
+                    <Class IRI="#PetitPoisTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#SlicedTomatoTopping"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#LeekTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MushroomTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PeperonataTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PetitPoisTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#SlicedTomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Giardiniera"/>
+        <ObjectExactCardinality cardinality="7">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GoatsCheeseTopping"/>
+        <Class IRI="#CheeseTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GoatsCheeseTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GorgonzolaTopping"/>
+        <Class IRI="#CheeseTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GorgonzolaTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GorgonzolaTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#PreparingFoodAction"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                    <Class IRI="#ItalianPizzaRecipe"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreenPepperTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HamTopping"/>
+        <Class IRI="#MeatTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HerbSpiceTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hot"/>
+        <Class IRI="#SpicinessQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HotGreenPepperTopping"/>
+        <Class IRI="#GreenPepperTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HotGreenPepperTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HotSpicedBeefTopping"/>
+        <Class IRI="#MeatTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HotSpicedBeefTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCream"/>
+        <Class IRI="#Food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCream"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#FruitTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCreamTopping"/>
+        <Class IRI="#Food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InterestingPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ItalianPizzaRecipe"/>
+        <Class IRI="#PizzaRecipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JalapenoPepperTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JalapenoPepperTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LaReine"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#HamTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#MushroomTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#HamTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MushroomTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LaReine"/>
+        <ObjectExactCardinality cardinality="5">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeekTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaraschinoCherryTopping"/>
+        <Class IRI="#IceCreamTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Margherita"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Margherita"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeatTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeatyPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medium"/>
+        <Class IRI="#SpicinessQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mild"/>
+        <Class IRI="#SpicinessQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MixedSeafoodTopping"/>
+        <Class IRI="#FishTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MozzarellaTopping"/>
+        <Class IRI="#CheeseTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MozzarellaTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MozzarellaTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#PreparingFoodAction"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                    <Class IRI="#ItalianPizzaRecipe"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mushroom"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#MushroomTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MushroomTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mushroom"/>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MushroomTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MushroomTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Napoletana"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AnchoviesTopping"/>
+                    <Class IRI="#CaperTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#AnchoviesTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#CaperTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Napoletana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#PreparingPizza"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                    <Class IRI="#ItalianPizzaRecipe"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Napoletana"/>
+        <ObjectExactCardinality cardinality="5">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonVegetarianPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NutSplintTopping"/>
+        <Class IRI="#IceCreamTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NutTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NutTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OliveTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OliveTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OnionTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OnionTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ParmaHamTopping"/>
+        <Class IRI="#HamTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ParmaHamTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parmense"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AsparagusTopping"/>
+                    <Class IRI="#HamTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#ParmesanTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#AsparagusTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#HamTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#ParmesanTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parmense"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#PreparingPizza"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                    <Class IRI="#ItalianPizzaRecipe"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parmense"/>
+        <ObjectExactCardinality cardinality="5">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ParmesanTopping"/>
+        <Class IRI="#CheeseTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ParmesanTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ParmesanTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#PreparingFoodAction"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                    <Class IRI="#ItalianPizzaRecipe"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeperonataTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeperonataTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeperoniSausageTopping"/>
+        <Class IRI="#MeatTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeperoniSausageTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PepperTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PetitPoisTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PetitPoisTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PineKernels"/>
+        <Class IRI="#NutTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pizza"/>
+        <Class IRI="#Food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaBase"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PizzaBase"/>
+        <Class IRI="#Food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PizzaRecipe"/>
+        <Class IRI="#recipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PizzaTopping"/>
+        <Class IRI="#Food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PolloAdAstra"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CajunSpiceTopping"/>
+                    <Class IRI="#ChickenTopping"/>
+                    <Class IRI="#GarlicTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#RedOnionTopping"/>
+                    <Class IRI="#SweetPepperTopping"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#CajunSpiceTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#ChickenTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#GarlicTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#RedOnionTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#SweetPepperTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PolloAdAstra"/>
+        <ObjectExactCardinality cardinality="7">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrawnsTopping"/>
+        <Class IRI="#FishTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PreparingFoodAction"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="btl2:Action"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasOutcome"/>
+                <Class IRI="#Food"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrinceCarlo"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrinceCarlo"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#LeekTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#ParmesanTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#RosemaryTopping"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#LeekTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#ParmesanTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#RosemaryTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrinceCarlo"/>
+        <ObjectExactCardinality cardinality="5">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuattroFormaggi"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuattroFormaggi"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#FourCheesesTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#FourCheesesTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuattroFormaggi"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RealItalienPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RealItalienPizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#ThinAndCrispyBase"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RedOnionTopping"/>
+        <Class IRI="#OnionTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RocketTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RocketTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rosa"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rosa"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#GorgonzolaTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#GorgonzolaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rosa"/>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RosemaryTopping"/>
+        <Class IRI="#HerbSpiceTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RosemaryTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SauceIceCreamTopping"/>
+        <Class IRI="#IceCreamTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SauceTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siciliana"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siciliana"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AnchoviesTopping"/>
+                    <Class IRI="#ArtichokeTopping"/>
+                    <Class IRI="#GarlicTopping"/>
+                    <Class IRI="#HamTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#AnchoviesTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#ArtichokeTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#GarlicTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#HamTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siciliana"/>
+        <ObjectExactCardinality cardinality="7">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SlicedTomatoTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SlicedTomatoTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SloppyGiuseppe"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SloppyGiuseppe"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#GreenPepperTopping"/>
+                    <Class IRI="#HotSpicedBeefTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#OnionTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#GreenPepperTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#HotSpicedBeefTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OnionTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SloppyGiuseppe"/>
+        <ObjectExactCardinality cardinality="5">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soho"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soho"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#GarlicTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#ParmesanTopping"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#RocketTopping"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#GarlicTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#ParmesanTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#RocketTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soho"/>
+        <ObjectExactCardinality cardinality="6">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpicinessQuality"/>
+        <Class abbreviatedIRI="btl2:ObjectQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpicyPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpicyPizzaEquivalent"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpicyTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpinachTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpinachTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StrawberrySauceTopping"/>
+        <Class IRI="#SauceIceCreamTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SultanaTopping"/>
+        <Class IRI="#FruitTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SultanaTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SundriedTomatoTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SundriedTomatoTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SweetPepperTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SweetPepperTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SweetPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThinAndCrispyBase"/>
+        <Class IRI="#PizzaBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThinAndCrispyPizza"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TobascoPepperSauce"/>
+        <Class IRI="#SauceTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TobascoPepperSauce"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TomatoTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TomatoTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isBearerOf"/>
+            <Class IRI="#Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnclosedPizza"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnclosedPizza"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#MozzarellaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VegetableTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VegetarianPizzaEquivalent1"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VegetarianPizzaEquivalent1"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaBase"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VegetarianPizzaEquivalent2"/>
+        <Class IRI="#Pizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Veneziana"/>
+        <Class IRI="#NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Veneziana"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <ObjectUnionOf>
+                    <Class IRI="#CaperTopping"/>
+                    <Class IRI="#MozzarellaTopping"/>
+                    <Class IRI="#OliveTopping"/>
+                    <Class IRI="#OnionTopping"/>
+                    <Class IRI="#PineKernels"/>
+                    <Class IRI="#PizzaBase"/>
+                    <Class IRI="#SultanaTopping"/>
+                    <Class IRI="#TomatoTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#CaperTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#MozzarellaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OliveTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#OnionTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#PineKernels"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#SultanaTopping"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+                <Class IRI="#TomatoTopping"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Veneziana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="btl2:isOutcomeOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#PreparingPizza"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="btl2:isRealizationOf"/>
+                    <Class IRI="#ItalianPizzaRecipe"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Veneziana"/>
+        <ObjectExactCardinality cardinality="7">
+            <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
+            <Class IRI="#PizzaTopping"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#recipe"/>
+        <Class abbreviatedIRI="btl2:Plan"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Cajun"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Capricciosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Caprina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Fiorentina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#FourSeasons"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#American"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Cajun"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Capricciosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Caprina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Fiorentina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#FourSeasons"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmericanHot"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AnchoviesTopping"/>
+        <Class IRI="#MixedSeafoodTopping"/>
+        <Class IRI="#PrawnsTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#CaperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#GarlicTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#LeekTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#OliveTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#OnionTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArtichokeTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#CaperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#GarlicTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#LeekTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#OliveTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#OnionTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AsparagusTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Capricciosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Caprina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Fiorentina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#FourSeasons"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cajun"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CajunSpiceTopping"/>
+        <Class IRI="#RosemaryTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#GarlicTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#LeekTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#OliveTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#OnionTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CaperTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Caprina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Fiorentina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#FourSeasons"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Capricciosa"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Fiorentina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#FourSeasons"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Caprina"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CheeseTopping"/>
+        <Class IRI="#FishTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CheeseTopping"/>
+        <Class IRI="#FruitTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CheeseTopping"/>
+        <Class IRI="#HerbSpiceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CheeseTopping"/>
+        <Class IRI="#MeatTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CheeseTopping"/>
+        <Class IRI="#NutTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CheeseTopping"/>
+        <Class IRI="#SauceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ChickenTopping"/>
+        <Class IRI="#HamTopping"/>
+        <Class IRI="#HotSpicedBeefTopping"/>
+        <Class IRI="#PeperoniSausageTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DeepPanBase"/>
+        <Class IRI="#ThinAndCrispyBase"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#FourSeasons"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fiorentina"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FishTopping"/>
+        <Class IRI="#FruitTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FishTopping"/>
+        <Class IRI="#HerbSpiceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FishTopping"/>
+        <Class IRI="#MeatTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FishTopping"/>
+        <Class IRI="#NutTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FishTopping"/>
+        <Class IRI="#SauceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FishTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourCheesesTopping"/>
+        <Class IRI="#GoatsCheeseTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourCheesesTopping"/>
+        <Class IRI="#GorgonzolaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourCheesesTopping"/>
+        <Class IRI="#MozzarellaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourCheesesTopping"/>
+        <Class IRI="#ParmesanTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FourSeasons"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruitTopping"/>
+        <Class IRI="#HerbSpiceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruitTopping"/>
+        <Class IRI="#MeatTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruitTopping"/>
+        <Class IRI="#NutTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruitTopping"/>
+        <Class IRI="#SauceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruitTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FruttiDiMare"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#LeekTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#OliveTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#OnionTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GarlicTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Giardiniera"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GoatsCheeseTopping"/>
+        <Class IRI="#GorgonzolaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GoatsCheeseTopping"/>
+        <Class IRI="#MozzarellaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GoatsCheeseTopping"/>
+        <Class IRI="#ParmesanTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GorgonzolaTopping"/>
+        <Class IRI="#MozzarellaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GorgonzolaTopping"/>
+        <Class IRI="#ParmesanTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GreenPepperTopping"/>
+        <Class IRI="#JalapenoPepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GreenPepperTopping"/>
+        <Class IRI="#PeperonataTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GreenPepperTopping"/>
+        <Class IRI="#SweetPepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HerbSpiceTopping"/>
+        <Class IRI="#MeatTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HerbSpiceTopping"/>
+        <Class IRI="#NutTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HerbSpiceTopping"/>
+        <Class IRI="#SauceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HerbSpiceTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Hot"/>
+        <Class IRI="#Medium"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Hot"/>
+        <Class IRI="#Mild"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IceCream"/>
+        <Class IRI="#IceCreamTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IceCream"/>
+        <Class IRI="#Pizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IceCream"/>
+        <Class IRI="#PizzaBase"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IceCream"/>
+        <Class IRI="#PizzaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IceCreamTopping"/>
+        <Class IRI="#Pizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IceCreamTopping"/>
+        <Class IRI="#PizzaBase"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#IceCreamTopping"/>
+        <Class IRI="#PizzaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#JalapenoPepperTopping"/>
+        <Class IRI="#PeperonataTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#JalapenoPepperTopping"/>
+        <Class IRI="#SweetPepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LaReine"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#OliveTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#OnionTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LeekTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Margherita"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MeatTopping"/>
+        <Class IRI="#NutTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MeatTopping"/>
+        <Class IRI="#SauceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MeatTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Medium"/>
+        <Class IRI="#Mild"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MozzarellaTopping"/>
+        <Class IRI="#ParmesanTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mushroom"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MushroomTopping"/>
+        <Class IRI="#OliveTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MushroomTopping"/>
+        <Class IRI="#OnionTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MushroomTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MushroomTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MushroomTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MushroomTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MushroomTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Napoletana"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NutTopping"/>
+        <Class IRI="#SauceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NutTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OliveTopping"/>
+        <Class IRI="#OnionTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OliveTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OliveTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OliveTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OliveTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OliveTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OnionTopping"/>
+        <Class IRI="#PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OnionTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OnionTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OnionTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#OnionTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Parmense"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PeperonataTopping"/>
+        <Class IRI="#SweetPepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PepperTopping"/>
+        <Class IRI="#PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PepperTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PepperTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PepperTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PetitPoisTopping"/>
+        <Class IRI="#RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PetitPoisTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PetitPoisTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Pizza"/>
+        <Class IRI="#PizzaBase"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Pizza"/>
+        <Class IRI="#PizzaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PizzaBase"/>
+        <Class IRI="#PizzaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PolloAdAstra"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PrinceCarlo"/>
+        <Class IRI="#QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PrinceCarlo"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PrinceCarlo"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PrinceCarlo"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PrinceCarlo"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PrinceCarlo"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PrinceCarlo"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#QuattroFormaggi"/>
+        <Class IRI="#Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#QuattroFormaggi"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#QuattroFormaggi"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#QuattroFormaggi"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#QuattroFormaggi"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#QuattroFormaggi"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#RocketTopping"/>
+        <Class IRI="#SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#RocketTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Rosa"/>
+        <Class IRI="#Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Rosa"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Rosa"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Rosa"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Rosa"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SauceTopping"/>
+        <Class IRI="#VegetableTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Siciliana"/>
+        <Class IRI="#SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Siciliana"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Siciliana"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Siciliana"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SlicedTomatoTopping"/>
+        <Class IRI="#SundriedTomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SloppyGiuseppe"/>
+        <Class IRI="#Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SloppyGiuseppe"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SloppyGiuseppe"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Soho"/>
+        <Class IRI="#UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Soho"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SpinachTopping"/>
+        <Class IRI="#TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#UnclosedPizza"/>
+        <Class IRI="#Veneziana"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#America"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#England"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Germany"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#America"/>
+        <NamedIndividual IRI="#England"/>
+        <NamedIndividual IRI="#France"/>
+        <NamedIndividual IRI="#Germany"/>
+        <NamedIndividual IRI="#Italy"/>
+    </DifferentIndividuals>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#American</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AmericanPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AmericanHot</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AmericanHotPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cajun</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CajunPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Capricciosa</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CapricciosaPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Caprina</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CaprinaPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fiorentina</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FiorentinaPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FourSeasons</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FourSeasonsPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FruttiDiMare</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FruttiDiMarePizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Giardiniera</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">GiardinieraPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LaReine</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">LaReinePizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Margherita</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">MargheritaPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mushroom</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">MushroomPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Napoletana</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">NapoletanaPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Parmense</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ParmesanCheeseyPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PolloAdAstra</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PolloAdAstraPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PrinceCarlo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PrinceCarloPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#QuattroFormaggi</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">QuattroFormaggiPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rosa</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RosePizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Siciliana</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SicilianaPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SloppyGiuseppe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SloppyGiuseppePizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Soho</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SohoPizza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VegetarianPizzaEquivalent1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pizza
+ and (hasComponentPart only VegetarianTopping)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Veneziana</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">VenezianaPizza</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
