@@ -311,6 +311,9 @@
         <Class IRI="#RealItalianPizza"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Recipe"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#RedOnionTopping"/>
     </Declaration>
     <Declaration>
@@ -387,9 +390,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#VegetarianTopping"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#recipe"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="btl2:derivesFrom"/>
@@ -1228,7 +1228,7 @@
     <EquivalentClasses>
         <Class IRI="#PizzaRecipe"/>
         <ObjectIntersectionOf>
-            <Class IRI="#recipe"/>
+            <Class IRI="#Recipe"/>
             <ObjectAllValuesFrom>
                 <ObjectProperty abbreviatedIRI="btl2:hasRealization"/>
                 <ObjectIntersectionOf>
@@ -2116,7 +2116,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PizzaRecipe"/>
-        <Class IRI="#recipe"/>
+        <Class IRI="#Recipe"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PizzaSoho"/>
@@ -2157,6 +2157,10 @@
             <ObjectProperty abbreviatedIRI="btl2:hasComponentPart"/>
             <Class IRI="#ThinAndCrispyBase"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recipe"/>
+        <Class abbreviatedIRI="btl2:Plan"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RedOnionTopping"/>
@@ -2327,10 +2331,6 @@
     <SubClassOf>
         <Class IRI="#VegetarianPizza3"/>
         <Class IRI="#Pizza"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#recipe"/>
-        <Class abbreviatedIRI="btl2:Plan"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#AmountOfFish"/>
@@ -2510,6 +2510,12 @@
         <Class IRI="#HamTopping"/>
         <Class IRI="#HotSpicedBeefTopping"/>
         <Class IRI="#PeperoniSausageTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CreamTopping"/>
+        <Class IRI="#MaraschinoCherryTopping"/>
+        <Class IRI="#NutSplintTopping"/>
+        <Class IRI="#SauceIceCreamTopping"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DeepPanBase"/>
