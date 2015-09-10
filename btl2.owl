@@ -22,15 +22,16 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.org/biotop/btl2.owl">
+        <dc:date>September 9, 2015</dc:date>
         <dc:format>application/rdf+xml</dc:format>
         <dc:contributor>Martin Boeker</dc:contributor>
-        <dc:date>March 8, 2015</dc:date>
         <dc:identifier>http://purl.org/biotop/btl2.owl</dc:identifier>
         <dc:contributor>Elena Beisswanger</dc:contributor>
         <dc:contributor>Gustavo Uribe</dc:contributor>
         <dc:contributor>Daniel Schober</dc:contributor>
         <dc:publisher>Institute for Medical Informatics, Statistics and Documentation, Medical University of Graz, Austria</dc:publisher>
         <dc:language>en</dc:language>
+        <dc:contributor>Filipe Santana da Silva</dc:contributor>
         <dc:contributor>Udo Hahn</dc:contributor>
         <dc:source>http://purl.org/biotop</dc:source>
         <dc:title>BioTopLite2</dc:title>
@@ -758,6 +759,12 @@ Example: The inflammation of a sinus is represented by the word &apos;Sinusitis&
         <rdfs:subClassOf rdf:resource="&btl2;Quality"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
+                <owl:allValuesFrom rdf:resource="&btl2;CanonicityValueRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;isIncludedIn"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -769,12 +776,6 @@ Example: The inflammation of a sinus is represented by the word &apos;Sinusitis&
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
-                <owl:allValuesFrom rdf:resource="&btl2;CanonicityValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>The condition of an entity in terms of being well or ill-formed or behaving</skos:definition>
@@ -951,22 +952,14 @@ Practically all naturally occurring substances are of this sort. The different c
         <rdfs:subClassOf rdf:resource="&btl2;Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;inheresIn"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
-                            <rdf:Description rdf:about="&btl2;InformationObject"/>
-                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Disposition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Disposition"/>
+                <owl:onProperty rdf:resource="&btl2;hasRealization"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -977,8 +970,16 @@ Practically all naturally occurring substances are of this sort. The different c
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasRealization"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+                <owl:onProperty rdf:resource="&btl2;inheresIn"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
+                            <rdf:Description rdf:about="&btl2;InformationObject"/>
+                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1006,7 +1007,13 @@ Its manifestation is a process its bearer is involved in virtue of the bearer&ap
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
+                <owl:onProperty rdf:resource="&btl2;hasRealization"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
                 <owl:allValuesFrom rdf:resource="&btl2;Function"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1026,13 +1033,7 @@ Its manifestation is a process its bearer is involved in virtue of the bearer&ap
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasRealization"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
                 <owl:allValuesFrom rdf:resource="&btl2;Function"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1057,15 +1058,20 @@ However, function and disposition are not disjoint, so that functions can be dis
         <rdfs:subClassOf rdf:resource="&btl2;Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasBoundary"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;OneDimensionalPhysicalEntity"/>
-                            <rdf:Description rdf:about="&btl2;TwoDimensionalPhysicalEntity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="&btl2;isParticipantIn"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
+                <owl:allValuesFrom rdf:resource="&btl2;ImmaterialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasLife"/>
+                <owl:someValuesFrom rdf:resource="&btl2;Life"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1073,6 +1079,41 @@ However, function and disposition are not disjoint, so that functions can be dis
                 <owl:onProperty rdf:resource="&btl2;hasLife"/>
                 <owl:allValuesFrom rdf:resource="&btl2;Life"/>
             </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:allValuesFrom rdf:resource="&btl2;ImmaterialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
+                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
+                <owl:someValuesFrom rdf:resource="&btl2;PhysicalVolume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&btl2;PhysicalMass"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1090,53 +1131,13 @@ However, function and disposition are not disjoint, so that functions can be dis
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
-                        <owl:someValuesFrom rdf:resource="&btl2;PhysicalMass"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
-                <owl:someValuesFrom rdf:resource="&btl2;PhysicalVolume"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isParticipantIn"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
-                <owl:allValuesFrom rdf:resource="&btl2;ImmaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasLife"/>
-                <owl:someValuesFrom rdf:resource="&btl2;Life"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
-                <owl:allValuesFrom rdf:resource="&btl2;ImmaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
+                <owl:onProperty rdf:resource="&btl2;hasBoundary"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
-                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
+                            <rdf:Description rdf:about="&btl2;OneDimensionalPhysicalEntity"/>
+                            <rdf:Description rdf:about="&btl2;TwoDimensionalPhysicalEntity"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -1156,19 +1157,6 @@ Old name: immaterial anatomical entity</skos:definition>
         <rdfs:subClassOf rdf:resource="&btl2;ImmaterialObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isProjectionOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;ImmaterialThreeDimensionalPhysicalEntity"/>
-                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
                 <owl:allValuesFrom rdf:resource="&btl2;ImmaterialThreeDimensionalPhysicalEntity"/>
             </owl:Restriction>
@@ -1186,6 +1174,19 @@ Old name: immaterial anatomical entity</skos:definition>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isProjectionOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;ImmaterialThreeDimensionalPhysicalEntity"/>
+                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition>three-dimensional space</skos:definition>
     </owl:Class>
     
@@ -1198,53 +1199,8 @@ Old name: immaterial anatomical entity</skos:definition>
         <rdfs:subClassOf rdf:resource="&btl2;Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="&btl2;InformationObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasLife"/>
-                <owl:someValuesFrom rdf:resource="&btl2;Life"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
                 <owl:allValuesFrom rdf:resource="&btl2;InformationObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&btl2;Disposition"/>
-                    <rdf:Description rdf:about="&btl2;Function"/>
-                    <rdf:Description rdf:about="&btl2;InformationObject"/>
-                    <rdf:Description rdf:about="&btl2;ObjectQuality"/>
-                    <rdf:Description rdf:about="&btl2;Role"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasRealization"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
-                        <owl:someValuesFrom rdf:resource="&btl2;PhysicalVolume"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;inheresIn"/>
-                <owl:someValuesFrom rdf:resource="&btl2;MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1262,12 +1218,13 @@ Old name: immaterial anatomical entity</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
-                        <owl:someValuesFrom rdf:resource="&btl2;PhysicalMass"/>
-                    </owl:Restriction>
-                </owl:complementOf>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&btl2;Disposition"/>
+                    <rdf:Description rdf:about="&btl2;Function"/>
+                    <rdf:Description rdf:about="&btl2;InformationObject"/>
+                    <rdf:Description rdf:about="&btl2;ObjectQuality"/>
+                    <rdf:Description rdf:about="&btl2;Role"/>
+                </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1278,13 +1235,57 @@ Old name: immaterial anatomical entity</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;inheresIn"/>
+                <owl:someValuesFrom rdf:resource="&btl2;MaterialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&btl2;PhysicalVolume"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
+                        <owl:someValuesFrom rdf:resource="&btl2;PhysicalMass"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isParticipantIn"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;hasLife"/>
                 <owl:allValuesFrom rdf:resource="&btl2;Life"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isParticipantIn"/>
+                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
+                <owl:allValuesFrom rdf:resource="&btl2;InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasLife"/>
+                <owl:someValuesFrom rdf:resource="&btl2;Life"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasRealization"/>
                 <owl:allValuesFrom rdf:resource="&btl2;Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1351,24 +1352,6 @@ Old name: immaterial anatomical entity</skos:definition>
         <rdfs:subClassOf rdf:resource="&btl2;Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isParticipantIn"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasLife"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Life"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasLife"/>
-                <owl:someValuesFrom rdf:resource="&btl2;Life"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;hasPart"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -1382,26 +1365,14 @@ Old name: immaterial anatomical entity</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
-                <owl:someValuesFrom rdf:resource="&btl2;SubAtomicParticle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
-                <owl:allValuesFrom rdf:resource="&btl2;MaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
-                <owl:someValuesFrom rdf:resource="&btl2;MaterialObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
                 <owl:allValuesFrom rdf:resource="&btl2;ImmaterialThreeDimensionalPhysicalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasBoundary"/>
+                <owl:allValuesFrom rdf:resource="&btl2;TwoDimensionalPhysicalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1422,14 +1393,38 @@ Old name: immaterial anatomical entity</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasGranularPart"/>
+                <owl:onProperty rdf:resource="&btl2;hasLife"/>
+                <owl:someValuesFrom rdf:resource="&btl2;Life"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
+                <owl:someValuesFrom rdf:resource="&btl2;ImmaterialThreeDimensionalPhysicalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
                 <owl:allValuesFrom rdf:resource="&btl2;MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasBoundary"/>
-                <owl:allValuesFrom rdf:resource="&btl2;TwoDimensionalPhysicalEntity"/>
+                <owl:onProperty rdf:resource="&btl2;hasLife"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Life"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isParticipantIn"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:someValuesFrom rdf:resource="&btl2;SubAtomicParticle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1440,14 +1435,20 @@ Old name: immaterial anatomical entity</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:someValuesFrom rdf:resource="&btl2;MaterialObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
                 <owl:someValuesFrom rdf:resource="&btl2;PhysicalMass"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
-                <owl:someValuesFrom rdf:resource="&btl2;ImmaterialThreeDimensionalPhysicalEntity"/>
+                <owl:onProperty rdf:resource="&btl2;hasGranularPart"/>
+                <owl:allValuesFrom rdf:resource="&btl2;MaterialObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>A material object that has exactly one mass and one volume at a time.  Material objects may have Immaterial nonphysical entities as parts (e.g. Heart and Heart Ventricle). </skos:definition>
@@ -1508,12 +1509,6 @@ This is not the case with a classical molecule. </skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
-                <owl:allValuesFrom rdf:resource="&btl2;ObjectQuality"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&btl2;Quality"/>
@@ -1530,6 +1525,12 @@ This is not the case with a classical molecule. </skos:definition>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
+                <owl:allValuesFrom rdf:resource="&btl2;ObjectQuality"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&btl2;ProcessQuality"/>
         <skos:definition>quality that inheres in an object</skos:definition>
@@ -1574,20 +1575,14 @@ This is not the case with a classical molecule. </skos:definition>
         <rdfs:label>particular at some time</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isIncludedIn"/>
-                <owl:someValuesFrom rdf:resource="&btl2;universe"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isReferredToAtTime"/>
-                <owl:someValuesFrom rdf:resource="&btl2;TemporalRegion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;isReferredToAtTime"/>
                 <owl:allValuesFrom rdf:resource="&btl2;TemporalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isIncludedIn"/>
+                <owl:someValuesFrom rdf:resource="&btl2;universe"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1605,6 +1600,12 @@ This is not the case with a classical molecule. </skos:definition>
                     <rdf:Description rdf:about="&btl2;ValueRegion"/>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isReferredToAtTime"/>
+                <owl:someValuesFrom rdf:resource="&btl2;TemporalRegion"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>From an universalist point of view most BioTop classes can be considered the extension of universals. 
 
@@ -1746,12 +1747,13 @@ All particulars are in a temporal context.</skos:definition>
         <rdfs:subClassOf rdf:resource="&btl2;Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isPrecededBy"/>
+                <owl:onProperty rdf:resource="&btl2;hasParticipant"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;Process"/>
-                            <rdf:Description rdf:about="&btl2;TemporalRegion"/>
+                            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
+                            <rdf:Description rdf:about="&btl2;InformationObject"/>
+                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -1772,24 +1774,8 @@ All particulars are in a temporal context.</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isCausedBy"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;Disposition"/>
-                            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
-                            <rdf:Description rdf:about="&btl2;InformationObject"/>
-                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
-                            <rdf:Description rdf:about="&btl2;Process"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
+                <owl:allValuesFrom rdf:resource="&btl2;TemporalRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1800,21 +1786,6 @@ All particulars are in a temporal context.</skos:definition>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&btl2;Process"/>
                             <rdf:Description rdf:about="&btl2;TemporalRegion"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isRealizationOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;Disposition"/>
-                            <rdf:Description rdf:about="&btl2;Function"/>
-                            <rdf:Description rdf:about="&btl2;InformationObject"/>
-                            <rdf:Description rdf:about="&btl2;Role"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -1834,8 +1805,30 @@ All particulars are in a temporal context.</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+                <owl:onProperty rdf:resource="&btl2;isRealizationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;Disposition"/>
+                            <rdf:Description rdf:about="&btl2;Function"/>
+                            <rdf:Description rdf:about="&btl2;InformationObject"/>
+                            <rdf:Description rdf:about="&btl2;Role"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isPrecededBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;Process"/>
+                            <rdf:Description rdf:about="&btl2;TemporalRegion"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1846,19 +1839,27 @@ All particulars are in a temporal context.</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
-                <owl:allValuesFrom rdf:resource="&btl2;TemporalRegion"/>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasParticipant"/>
+                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isCausedBy"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;Disposition"/>
                             <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
                             <rdf:Description rdf:about="&btl2;InformationObject"/>
                             <rdf:Description rdf:about="&btl2;MaterialObject"/>
+                            <rdf:Description rdf:about="&btl2;Process"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -1884,13 +1885,13 @@ Processes have physical or informational entities as participants.</skos:definit
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;inheresIn"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+                <owl:someValuesFrom rdf:resource="&btl2;Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;inheresIn"/>
-                <owl:someValuesFrom rdf:resource="&btl2;Process"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>quality that inheres in a process</skos:definition>
@@ -1903,6 +1904,21 @@ Processes have physical or informational entities as participants.</skos:definit
     <owl:Class rdf:about="&btl2;Quality">
         <rdfs:label>quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="&btl2;Particular"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;inheresIn"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
+                            <rdf:Description rdf:about="&btl2;InformationObject"/>
+                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
+                            <rdf:Description rdf:about="&btl2;Process"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;isIncludedIn"/>
@@ -1920,8 +1936,20 @@ Processes have physical or informational entities as participants.</skos:definit
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;isPartOf"/>
                 <owl:allValuesFrom rdf:resource="&btl2;Quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
+                <owl:allValuesFrom rdf:resource="&btl2;ValueRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1944,33 +1972,6 @@ Processes have physical or informational entities as participants.</skos:definit
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;projectsOnto"/>
-                <owl:allValuesFrom rdf:resource="&btl2;ValueRegion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Quality"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;inheresIn"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
-                            <rdf:Description rdf:about="&btl2;InformationObject"/>
-                            <rdf:Description rdf:about="&btl2;MaterialObject"/>
-                            <rdf:Description rdf:about="&btl2;Process"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <skos:definition>A quality is a dependent entity that is exhibited if it inheres in some other entity or entities at all.</skos:definition>
     </owl:Class>
     
@@ -1983,6 +1984,24 @@ Processes have physical or informational entities as participants.</skos:definit
         <rdfs:subClassOf rdf:resource="&btl2;Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasRealization"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;inheresIn"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -1998,25 +2017,7 @@ Processes have physical or informational entities as participants.</skos:definit
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasRealization"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;atSomeTime"/>
                 <owl:allValuesFrom rdf:resource="&btl2;Role"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2033,8 +2034,8 @@ contexts.</skos:definition>
         <rdfs:subClassOf rdf:resource="&btl2;Process"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasCondition"/>
-                <owl:allValuesFrom rdf:resource="&btl2;Condition"/>
+                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
+                <owl:someValuesFrom rdf:resource="&btl2;Life"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2045,8 +2046,8 @@ contexts.</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
-                <owl:someValuesFrom rdf:resource="&btl2;Life"/>
+                <owl:onProperty rdf:resource="&btl2;hasCondition"/>
+                <owl:allValuesFrom rdf:resource="&btl2;Condition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>A situation is a part of an entity`s life, in which a certain condition is fully present</skos:definition>
@@ -2142,20 +2143,13 @@ Old name: anatomical structure</skos:definition>
         <rdfs:subClassOf rdf:resource="&btl2;Particular"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;precedes"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;Process"/>
-                            <rdf:Description rdf:about="&btl2;TemporalRegion"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="&btl2;hasBoundary"/>
+                <owl:allValuesFrom rdf:resource="&btl2;PointInTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
                 <owl:allValuesFrom rdf:resource="&btl2;TemporalRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2174,6 +2168,12 @@ Old name: anatomical structure</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;hasPart"/>
+                <owl:allValuesFrom rdf:resource="&btl2;TemporalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;isProjectionOf"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -2187,14 +2187,15 @@ Old name: anatomical structure</skos:definition>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="&btl2;TemporalRegion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;hasBoundary"/>
-                <owl:allValuesFrom rdf:resource="&btl2;PointInTime"/>
+                <owl:onProperty rdf:resource="&btl2;precedes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;Process"/>
+                            <rdf:Description rdf:about="&btl2;TemporalRegion"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:priorVersion>temporal entity, time</owl:priorVersion>
@@ -2296,43 +2297,8 @@ Due toe the particle wave dualism a wave can be ascribed a mass</skos:definition
      -->
 
     <owl:Restriction>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&btl2;Process"/>
-                    <rdf:Description rdf:about="&btl2;ProcessQuality"/>
-                    <rdf:Description rdf:about="&btl2;TemporalRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <owl:onProperty rdf:resource="&btl2;isPrecededBy"/>
-        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
-                    <rdf:Description rdf:about="&btl2;InformationObject"/>
-                    <rdf:Description rdf:about="&btl2;MaterialObject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <owl:onProperty rdf:resource="&btl2;isParticipantIn"/>
-        <owl:someValuesFrom rdf:resource="&btl2;Process"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&btl2;Disposition"/>
-                    <rdf:Description rdf:about="&btl2;Function"/>
-                    <rdf:Description rdf:about="&btl2;Plan"/>
-                    <rdf:Description rdf:about="&btl2;Role"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <owl:onProperty rdf:resource="&btl2;hasRealization"/>
+        <rdfs:subClassOf rdf:resource="&btl2;Process"/>
+        <owl:onProperty rdf:resource="&btl2;hasParticipant"/>
         <owl:someValuesFrom rdf:resource="&owl;Thing"/>
     </owl:Restriction>
     <owl:Restriction>
@@ -2347,6 +2313,63 @@ Due toe the particle wave dualism a wave can be ascribed a mass</skos:definition
             </owl:Class>
         </rdfs:subClassOf>
         <owl:onProperty rdf:resource="&btl2;isBearerOf"/>
+        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+    </owl:Restriction>
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="&owl;Nothing"/>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&btl2;PolyMolecularCompositeEntity"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&btl2;Atom"/>
+                            <rdf:Description rdf:about="&btl2;MonoMolecularEntity"/>
+                            <rdf:Description rdf:about="&btl2;SubAtomicParticle"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&btl2;Canonicity"/>
+            <rdf:Description rdf:about="&btl2;PhysicalForce"/>
+            <rdf:Description rdf:about="&btl2;PhysicalLength"/>
+            <rdf:Description rdf:about="&btl2;PhysicalMass"/>
+            <rdf:Description rdf:about="&btl2;PhysicalVolume"/>
+            <rdf:Description rdf:about="&btl2;TaxonQuality"/>
+        </owl:members>
+    </rdf:Description>
+    <owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&btl2;Process"/>
+                    <rdf:Description rdf:about="&btl2;ProcessQuality"/>
+                    <rdf:Description rdf:about="&btl2;TemporalRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:onProperty rdf:resource="&btl2;precedes"/>
+        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&btl2;Disposition"/>
+                    <rdf:Description rdf:about="&btl2;Function"/>
+                    <rdf:Description rdf:about="&btl2;InformationObject"/>
+                    <rdf:Description rdf:about="&btl2;Quality"/>
+                    <rdf:Description rdf:about="&btl2;Role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:onProperty rdf:resource="&btl2;inheresIn"/>
         <owl:someValuesFrom rdf:resource="&owl;Thing"/>
     </owl:Restriction>
     <owl:Restriction>
@@ -2372,15 +2395,98 @@ Due toe the particle wave dualism a wave can be ascribed a mass</skos:definition
             </owl:Restriction>
         </owl:unionOf>
     </owl:Class>
+    <owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
+                    <rdf:Description rdf:about="&btl2;InformationObject"/>
+                    <rdf:Description rdf:about="&btl2;MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:onProperty rdf:resource="&btl2;isParticipantIn"/>
+        <owl:someValuesFrom rdf:resource="&btl2;Process"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
+                    <rdf:Description rdf:about="&btl2;TemporalRegion"/>
+                    <rdf:Description rdf:about="&btl2;ValueRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:onProperty rdf:resource="&btl2;isProjectionOf"/>
+        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+    </owl:Restriction>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&btl2;Canonicity"/>
-            <rdf:Description rdf:about="&btl2;PhysicalForce"/>
-            <rdf:Description rdf:about="&btl2;PhysicalLength"/>
-            <rdf:Description rdf:about="&btl2;PhysicalMass"/>
-            <rdf:Description rdf:about="&btl2;PhysicalVolume"/>
-            <rdf:Description rdf:about="&btl2;TaxonQuality"/>
+            <rdf:Description rdf:about="&btl2;CollectiveMaterialEntity"/>
+            <rdf:Description rdf:about="&btl2;Compound"/>
+            <rdf:Description rdf:about="&btl2;SubAtomicParticle"/>
+            <rdf:Description rdf:about="&btl2;Wave"/>
+            <rdf:Description rdf:about="&btl2;universe"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&btl2;ImmaterialThreeDimensionalPhysicalEntity"/>
+            <rdf:Description rdf:about="&btl2;OneDimensionalPhysicalEntity"/>
+            <rdf:Description rdf:about="&btl2;TwoDimensionalPhysicalEntity"/>
+            <rdf:Description rdf:about="&btl2;Wave"/>
+        </owl:members>
+    </rdf:Description>
+    <owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&btl2;Disposition"/>
+                    <rdf:Description rdf:about="&btl2;Function"/>
+                    <rdf:Description rdf:about="&btl2;Plan"/>
+                    <rdf:Description rdf:about="&btl2;Role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:onProperty rdf:resource="&btl2;hasRealization"/>
+        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&btl2;Function"/>
+            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
+            <rdf:Description rdf:about="&btl2;InformationObject"/>
+            <rdf:Description rdf:about="&btl2;MaterialObject"/>
+            <rdf:Description rdf:about="&btl2;Process"/>
+            <rdf:Description rdf:about="&btl2;Quality"/>
+            <rdf:Description rdf:about="&btl2;Role"/>
+            <rdf:Description rdf:about="&btl2;TemporalRegion"/>
+            <rdf:Description rdf:about="&btl2;ValueRegion"/>
+        </owl:members>
+    </rdf:Description>
+    <owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&btl2;Process"/>
+                    <rdf:Description rdf:about="&btl2;ProcessQuality"/>
+                    <rdf:Description rdf:about="&btl2;TemporalRegion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:onProperty rdf:resource="&btl2;isPrecededBy"/>
+        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&btl2;Atom"/>
+            <rdf:Description rdf:about="&btl2;MonoMolecularEntity"/>
+            <rdf:Description rdf:about="&btl2;PolyMolecularCompositeEntity"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2397,111 +2503,6 @@ Due toe the particle wave dualism a wave can be ascribed a mass</skos:definition
             <rdf:Description rdf:about="&btl2;ValueRegion"/>
         </owl:members>
     </rdf:Description>
-    <owl:Restriction>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&btl2;Disposition"/>
-                    <rdf:Description rdf:about="&btl2;Function"/>
-                    <rdf:Description rdf:about="&btl2;InformationObject"/>
-                    <rdf:Description rdf:about="&btl2;Quality"/>
-                    <rdf:Description rdf:about="&btl2;Role"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <owl:onProperty rdf:resource="&btl2;inheresIn"/>
-        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <rdfs:subClassOf rdf:resource="&btl2;Process"/>
-        <owl:onProperty rdf:resource="&btl2;hasParticipant"/>
-        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-    </owl:Restriction>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&btl2;Atom"/>
-            <rdf:Description rdf:about="&btl2;MonoMolecularEntity"/>
-            <rdf:Description rdf:about="&btl2;PolyMolecularCompositeEntity"/>
-        </owl:members>
-    </rdf:Description>
-    <owl:Class>
-        <rdfs:subClassOf rdf:resource="&owl;Nothing"/>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="&btl2;PolyMolecularCompositeEntity"/>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&btl2;isPartOf"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&btl2;Atom"/>
-                            <rdf:Description rdf:about="&btl2;MonoMolecularEntity"/>
-                            <rdf:Description rdf:about="&btl2;SubAtomicParticle"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:intersectionOf>
-    </owl:Class>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&btl2;ImmaterialThreeDimensionalPhysicalEntity"/>
-            <rdf:Description rdf:about="&btl2;OneDimensionalPhysicalEntity"/>
-            <rdf:Description rdf:about="&btl2;TwoDimensionalPhysicalEntity"/>
-            <rdf:Description rdf:about="&btl2;Wave"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&btl2;Function"/>
-            <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
-            <rdf:Description rdf:about="&btl2;InformationObject"/>
-            <rdf:Description rdf:about="&btl2;MaterialObject"/>
-            <rdf:Description rdf:about="&btl2;Process"/>
-            <rdf:Description rdf:about="&btl2;Quality"/>
-            <rdf:Description rdf:about="&btl2;Role"/>
-            <rdf:Description rdf:about="&btl2;TemporalRegion"/>
-            <rdf:Description rdf:about="&btl2;ValueRegion"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&btl2;CollectiveMaterialEntity"/>
-            <rdf:Description rdf:about="&btl2;Compound"/>
-            <rdf:Description rdf:about="&btl2;SubAtomicParticle"/>
-            <rdf:Description rdf:about="&btl2;Wave"/>
-            <rdf:Description rdf:about="&btl2;universe"/>
-        </owl:members>
-    </rdf:Description>
-    <owl:Restriction>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&btl2;Process"/>
-                    <rdf:Description rdf:about="&btl2;ProcessQuality"/>
-                    <rdf:Description rdf:about="&btl2;TemporalRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <owl:onProperty rdf:resource="&btl2;precedes"/>
-        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&btl2;ImmaterialObject"/>
-                    <rdf:Description rdf:about="&btl2;TemporalRegion"/>
-                    <rdf:Description rdf:about="&btl2;ValueRegion"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <owl:onProperty rdf:resource="&btl2;isProjectionOf"/>
-        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
-    </owl:Restriction>
 </rdf:RDF>
 
 
