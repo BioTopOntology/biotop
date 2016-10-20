@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/schulzs/ontologies/2016/9/untitled-ontology-119#"
+     xml:base="http://www.semanticweb.org/schulzs/ontologies/2016/9/untitled-ontology-119"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/schulzs/ontologies/2016/9/untitled-ontology-119">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/btl2.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000008 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000008">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#ObjectQuality"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#Role"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000035 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#InstantaneousProcess"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000038 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000038">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#TimeInterval"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000144 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000144">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#ProcessQuality"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000148 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000148">
+        <owl:equivalentClass rdf:resource="http://purl.org/biotop/btl2.owl#PointInTime"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#Disposition -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#Function -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Function">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#ImmaterialObject -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialThreeDimensionalPhysicalEntity">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#InformationObject -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#InstantaneousProcess -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InstantaneousProcess"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#MaterialObject -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#ObjectQuality -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ObjectQuality"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#OneDimensionalPhysicalEntity -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#OneDimensionalPhysicalEntity">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000026"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#PointInTime -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#PointInTime"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#Process -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#ProcessQuality -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ProcessQuality"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#Quality -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Quality">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000144"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ObjectQuality"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#Role -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Role"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#TemporalRegion -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TemporalRegion"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#TimeInterval -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TimeInterval"/>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#TwoDimensionalPhysicalEntity -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#TwoDimensionalPhysicalEntity">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000009"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#ValueRegion -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ValueRegion">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#ZeroDimensionalPhysicalEntity -->
+
+    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ZeroDimensionalPhysicalEntity">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000018"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
