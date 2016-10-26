@@ -1128,7 +1128,7 @@ However, function and disposition are not disjoint, so that functions can be dis
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&btl2;isPartOf"/>
-                <owl:someValuesFrom rdf:resource="&btl2;universe"/>
+                <owl:someValuesFrom rdf:resource="&btl2;Universe"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2314,10 +2314,10 @@ Due toe the particle wave dualism a wave can be ascribed a mass</skos:definition
     
 
 
-    <!-- http://purl.org/biotop/btl2.owl#universe -->
+    <!-- http://purl.org/biotop/btl2.owl#Universe -->
 
-    <owl:Class rdf:about="&btl2;universe">
-        <rdfs:subClassOf rdf:resource="&btl2;MaterialObject"/>
+    <owl:Class rdf:about="&btl2;Universe">
+        <rdfs:subClassOf rdf:resource="&btl2;PolyMolecularCompositeEntity"/>
     </owl:Class>
     
 
@@ -2482,7 +2482,7 @@ Due toe the particle wave dualism a wave can be ascribed a mass</skos:definition
             <rdf:Description rdf:about="&btl2;Compound"/>
             <rdf:Description rdf:about="&btl2;SubAtomicParticle"/>
             <rdf:Description rdf:about="&btl2;Wave"/>
-            <rdf:Description rdf:about="&btl2;universe"/>
+            <rdf:Description rdf:about="&btl2;Universe"/>
         </owl:members>
     </rdf:Description>
     <owl:Restriction>
