@@ -1,0 +1,1644 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/biotop/orsb.owl#"
+     xml:base="http://purl.org/biotop/orsb.owl"
+     xmlns:btl22="http://purl.org/biotop/btl2.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:orsb="http://purl.org/biotop/orsb.owl#"
+     xmlns:btl2="http://purl.org/biotop/btl2.owl"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://purl.org/biotop/orsb.owl">
+        <owl:imports rdf:resource="http://www.semanticweb.org/schulzs/ontologies/2016/9/untitled-ontology-119"/>
+        <owl:imports rdf:resource="http://purl.org/biotop/btl2.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#isUniquelyRepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/biotop/orsb.owl#isUniquelyRepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/biotop/btl2.owl#isRepresentedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/biotop/orsb.owl#hasValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/btl2.owl#Universe -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/btl2.owl#Universe"/>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#AbrahamHuman -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#AbrahamHuman">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isRepresentedBy"/>
+                <owl:hasValue rdf:resource="http://purl.org/biotop/orsb.owl#AbrahamCharacter"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Agnostic -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Agnostic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Human"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#God"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#DisbeliefProposition"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                        <owl:allValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#God"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Angel -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Angel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Ascribing -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Ascribing">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Action"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasAgent"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#AuthorRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPatient"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#Narrating"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Atheist -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Atheist">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#DisbeliefProposition"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                        <owl:allValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#God"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#AuthorRole -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#AuthorRole">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#NarratorRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Authoring -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Authoring">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Process"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasAgent"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#AuthorRole"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasOutcome"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#Narrative"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Narrating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#B -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#B">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
+        <rdfs:comment>Placeholder for whatsoever class-like expression that can be referred to by a belief proposition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#BeliefDisposition -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#BeliefDisposition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Disposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#BeliefProposition -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Proposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#BeliefThatAllSoulsAreImmortal -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#BeliefThatAllSoulsAreImmortal">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefDisposition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#DisbeliefProposition"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                                <owl:allValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Soul"/>
+                                                            <owl:Class>
+                                                                <owl:complementOf rdf:resource="http://purl.org/biotop/orsb.owl#ImmortalContinuant"/>
+                                                            </owl:Class>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:allValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#BeliefThatImmortalSoulsExist -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#BeliefThatImmortalSoulsExist">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefDisposition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                                <owl:allValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#ImmortalContinuant"/>
+                                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Soul"/>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:allValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#BeliefThatSomeGodExists -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#BeliefThatSomeGodExists">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefDisposition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#God"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Belief_B -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Belief_B">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefDisposition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#inheresIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#B"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Cancer -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Cancer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#HealthCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#CancerDiagnosis -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#CancerDiagnosis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Diagnosis"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Cancer"/>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="http://purl.org/biotop/orsb.owl#HealthCondition"/>
+                                    </owl:Class>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Diagnosis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#CausalIntervention -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#CausalIntervention">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#CessationOfExistence -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#CessationOfExistence">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Character -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Character">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#InformationObject"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#Narrative"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Organism"/>
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Christianism -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Christianism">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Religion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasPart"/>
+                                <owl:hasValue rdf:resource="http://purl.org/biotop/orsb.owl#ChristianGodCharacter"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Creating -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Creating">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#CausalIntervention"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Deist -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Deist">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                        <owl:allValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#God"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Creating"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasOutcome"/>
+                                                                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Universe"/>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                                                        <owl:allValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:unionOf rdf:parseType="Collection">
+                                                                    <owl:Class>
+                                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Creating"/>
+                                                                            <owl:Restriction>
+                                                                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasOutcome"/>
+                                                                                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Universe"/>
+                                                                            </owl:Restriction>
+                                                                        </owl:intersectionOf>
+                                                                    </owl:Class>
+                                                                    <owl:Class>
+                                                                        <owl:complementOf rdf:resource="http://purl.org/biotop/orsb.owl#CausalIntervention"/>
+                                                                    </owl:Class>
+                                                                </owl:unionOf>
+                                                            </owl:Class>
+                                                        </owl:allValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:allValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#DeistGod -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#DeistGod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#God"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Creating"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasOutcome"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Universe"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Creating"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasOutcome"/>
+                                                <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Universe"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="http://purl.org/biotop/orsb.owl#CausalIntervention"/>
+                                    </owl:Class>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#God"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Deity -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Deity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Demigod -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Demigod">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Devil -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Devil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Diagnosis -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Diagnosis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#DisbeliefProposition -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#DisbeliefProposition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Proposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Doctrine -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Doctrine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Dying -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Dying">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#CessationOfExistence"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#StructuredBiologicalEntity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#CessationOfExistence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Evil -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Evil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#FatherRole -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#FatherRole">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#FemaleQuality -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#FemaleQuality">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#GenderQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#GenderQuality -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#GenderQuality">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Ghost -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Ghost">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#God -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#God">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Deity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#GodCharacter -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#GodCharacter">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Good -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Good">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#HealthCondition -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#HealthCondition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Human -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Human">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#ImmortalContinuant -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#ImmortalContinuant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Disposition"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasRealization"/>
+                                                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#Dying"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isParticipantIn"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Life"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#MaleQuality -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#MaleQuality">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#GenderQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Marrying -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Marrying">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#MarsMission -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#MarsMission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Travelling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#MarsMissionPlan -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#MarsMissionPlan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#Plan"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#MarsMission"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasParticipant"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#Human"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Plan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#MonotheisticGod -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#MonotheisticGod">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#God"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Name -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Name">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Narrating -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Narrating">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Action"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasAgent"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#NarratorRole"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Narrative -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Narrative">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#InformationObject"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isOutcomeOf"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#Authoring"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#NarratorRole -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#NarratorRole">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Personhood -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Personhood">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Proposition -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Proposition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Religion -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Religion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Doctrine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#ReligiousText -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#ReligiousText">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Narrative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#SonRole -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#SonRole">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Soul -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Soul">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Spirit -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Spirit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#SupernaturalContinuant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Supernatural -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Supernatural">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#SupernaturalContinuant -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#SupernaturalContinuant">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Particular"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#ImmaterialObject"/>
+                    <rdf:Description rdf:about="http://purl.org/biotop/btl2.owl#MaterialObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Theist -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Theist">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                        <owl:allValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#God"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#CausalIntervention"/>
+                                                                    <owl:Class>
+                                                                        <owl:complementOf rdf:resource="http://purl.org/biotop/orsb.owl#Creating"/>
+                                                                    </owl:Class>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Creating"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasOutcome"/>
+                                                                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Universe"/>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:allValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#TheistGod -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#TheistGod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#God"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#CausalIntervention"/>
+                                    <owl:Class>
+                                        <owl:complementOf rdf:resource="http://purl.org/biotop/orsb.owl#Creating"/>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Creating"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasOutcome"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/btl2.owl#Universe"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/orsb.owl#God"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Travelling -->
+
+    <owl:Class rdf:about="http://purl.org/biotop/orsb.owl#Travelling">
+        <rdfs:subClassOf rdf:resource="http://purl.org/biotop/btl2.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#AbrahamCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#AbrahamCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Human"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isAgentIn"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#Marrying"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#MaleQuality"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Name"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasValue"/>
+                                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abraham</owl:hasValue>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <btl22:isPartOf rdf:resource="http://purl.org/biotop/orsb.owl#TheBookGenesis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#AllahCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#AllahCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#AphroditeCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#AphroditeCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#ApolloCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#ApolloCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#AthenaCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#AthenaCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#BrahmaCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#BrahmaCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#BuddhaCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#BuddhaCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#CerberusCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#CerberusCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+        <btl22:isPartOf rdf:resource="http://purl.org/biotop/orsb.owl#DivinaCommedia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#ChristianGodCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#ChristianGodCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#ChristianGodFatherCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#ChristianGodFatherCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#DanteAlighieri -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#DanteAlighieri"/>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#DionysosCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#DionysosCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#DivinaCommedia -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#DivinaCommedia">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isOutcomeOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Authoring"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#hasAgent"/>
+                                <owl:hasValue rdf:resource="http://purl.org/biotop/orsb.owl#DanteAlighieri"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#GaneshaCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#GaneshaCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#GospelOfJohn -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#GospelOfJohn">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Hadith -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#Hadith">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#HolySpiritCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#HolySpiritCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#HolyTrinityCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#HolyTrinityCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#IsaacCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#IsaacCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#JahweCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#JahweCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#JesusCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#JesusCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#JesusChristCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#JesusChristCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#JosephSmithCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#JosephSmithCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#KaliCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#KaliCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#KrishnaCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#KrishnaCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#MaryMotherOfJesusCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#MaryMotherOfJesusCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#MosesCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#MosesCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#MuhammadCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#MuhammadCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#NewTestamentDevilCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#NewTestamentDevilCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#PrometheusCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#PrometheusCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Quran -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#Quran">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#SaintJohnBaptistCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#SaintJohnBaptistCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#SaintPaulCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#SaintPaulCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#ShivaCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#ShivaCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Sutras -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#Sutras">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#TheBookGenesis -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#TheBookGenesis">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#TheBookMormon -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#TheBookMormon">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#TheHolyBible -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#TheHolyBible">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#TheNewTestament -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#TheNewTestament">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#TheOldTestament -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#TheOldTestament">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#Vedas -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#Vedas">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#ReligiousText"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#VishnuCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#VishnuCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#ZarathustraCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#ZarathustraCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/biotop/orsb.owl#ZeusCharacter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/biotop/orsb.owl#ZeusCharacter">
+        <rdf:type rdf:resource="http://purl.org/biotop/orsb.owl#GodCharacter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#BeliefThatAllSoulsAreImmortal"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#DisbeliefProposition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Soul"/>
+                                            <owl:Class>
+                                                <owl:complementOf rdf:resource="http://purl.org/biotop/orsb.owl#ImmortalContinuant"/>
+                                            </owl:Class>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#BeliefThatImmortalSoulsExist"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#ImmortalContinuant"/>
+                                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#Soul"/>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+        <owl:someValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#BeliefThatSomeGodExists"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#isBearerOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/biotop/orsb.owl#BeliefProposition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/biotop/btl2.owl#represents"/>
+                                <owl:allValuesFrom rdf:resource="http://purl.org/biotop/orsb.owl#God"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
